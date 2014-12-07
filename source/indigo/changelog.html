@@ -1,0 +1,601 @@
+<h1 id="indigo-changelog">Indigo Changelog</h1>
+
+<h2 id="indigo-1111">Indigo 1.1.11</h2>
+
+<p><em>2 July 2013</em></p>
+
+<p><strong>Detailed release notes are available <a href="TODO:indigo-doc">on a separate page</a></strong></p>
+
+<p>Since this version we switched to a new documentation system based on <a href="http://sphinx-doc.org/">Sphinx</a></p>
+
+<p>All further changes in the documentation will be done there.</p>
+
+<h2 id="indigo-1110">Indigo 1.1.10</h2>
+
+<p><em>19 April 2013</em></p>
+
+<p>This release has two major additions: </p>
+
+<ol>
+<li>
+<p>We started to support Mono and provide a .NET version that runs on Linux and Mac OS X. This was done with help of developers from Royal Society of Chemistry (<a href="http://www.rsc.org">http://www.rsc.org</a>) who also helped us to localize and fix several stability issues in our .NET version.</p>
+</li>
+<li>
+<p>Indigo now understand aromatic rings with external double bonds such as O=C1C=CC=CC=C1. To enable this mode you have to set "aromaticity-model" option to "generic" (while default version is "basic").</p>
+</li>
+</ol>
+
+<p>All changes:</p>
+
+<ul>
+<li>Mono support: now we provide .NET modules for Windows, Linux, Mac OS X, and a universal bundle that works on all the specified platforms. Thanks to Dimitry Ivanov for various suggestions: <a href="https://groups.google.com/d/msg/indigo-dev/ObLkSecXrOw/g2RGOojqjosJ">https://groups.google.com/d/msg/indigo-dev/ObLkSecXrOw/g2RGOojqjosJ</a></li>
+<li>Indigo Renderer automatically selects output format based on the file extension. It is not necessary to specify "render-output-format" option if you are rendering into a file.</li>
+<li>Original hydrogens are not folded during molecule transformations. Thanks to Ken for the bug report: <a href="https://groups.google.com/d/msg/indigo-bugs/359gCN9OrMg/fKoMt5kS9XcJ">https://groups.google.com/d/msg/indigo-bugs/359gCN9OrMg/fKoMt5kS9XcJ</a></li>
+<li>Either cis/trans bond marked is preserved during molfile loading even if substitutes are collinear. Again thanks to Ken for the suggestion: <a href="https://groups.google.com/d/msg/indigo-bugs/oszcYWrwctI/3t2XuonNAaYJ">https://groups.google.com/d/msg/indigo-bugs/oszcYWrwctI/3t2XuonNAaYJ</a></li>
+<li>Indigo Renderer now has additional options for partial image size specification. These options are: "render-image-width", "render-image-height", "render-image-max-width", "render-image-max-height"</li>
+<li>Fixed an issue in the SMILES loader module that set invalid number of implicit hydrogens: <a href="https://groups.google.com/d/msg/indigo-bugs/i7g3hoSXxhI/XaXsEOVJ8_cJ">https://groups.google.com/d/msg/indigo-bugs/i7g3hoSXxhI/XaXsEOVJ8_cJ</a></li>
+<li>Generic aromaticity model that can be enabled by "aromaticity-model" option. Thanks to Daniel for pushing us to implement this functionality.</li>
+<li>Another aromaticity option for find any kekulize configuration if Indigo cannot dearomatize a structure. For example Indigo cannot dearomatize the structure c1ccc2c(ccc2)cc1, because there are no bonds configuration such that the structure is aromatic. But you can try to find approximate kekulize configuration if you specify option "dearomatize-verification" to "false".</li>
+<li>Indigo now uses dearomatization module to find number of hydrogens in aromatic rings in the IndigoObject.canonicalSmiles() method. If hydrogens configuration is ambiguous then Indigo throws an exception about this.</li>
+<li>Additional "unique-dearomatization" option. If this option is set to true Indigo will throw an exception of dearomatization configuration is ambiguous (that means that canonical SMILES cannot be generated): <a href="https://groups.google.com/d/msg/indigo-bugs/WIH8bWQpVHs/Z8VLlXR2U28J">https://groups.google.com/d/msg/indigo-bugs/WIH8bWQpVHs/Z8VLlXR2U28J</a></li>
+<li>IndigoInchi.loadMolecule can now load molecules from InChI Aux infromation. Thanks to Nico: <a href="http://tech.knime.org/forum/indigo/inchi-conversion-into-2d-structure#comment-28514">http://tech.knime.org/forum/indigo/inchi-conversion-into-2d-structure#comment-28514</a></li>
+<li>Indigo Renderer doesn't have a dependency on the new GLIBC any more. This dependency prevented loading of Indigo Renderer on CentOS 5.9 and less.</li>
+<li>Minor changes in Java and C# bindings: expandAbbreviations method has been add, typo in countDataSGroups has been fixed</li>
+<li>New method to get stereocenter pyramid. Thanks to Daniel for the feature request: <a href="https://groups.google.com/d/msg/indigo-dev/z0a1QwRMrx4/0s-KEtPBB_EJ">https://groups.google.com/d/msg/indigo-dev/z0a1QwRMrx4/0s-KEtPBB_EJ</a></li>
+<li>Fingerprints computation now works 30% faster.</li>
+<li>All stereocenter exceptions now includes also atom index: <a href="https://groups.google.com/d/msg/indigo-bugs/nZOmFCEsNqk/S92lgH5zjvwJ">https://groups.google.com/d/msg/indigo-bugs/nZOmFCEsNqk/S92lgH5zjvwJ</a></li>
+</ul>
+
+<h2 id="indigo-119">Indigo 1.1.9</h2>
+
+<p><em>25 March 2013</em></p>
+
+<p>New features:</p>
+
+<ul>
+<li>Single atoms are encoded into Indigo fingerprint. In the previous versions we enumerated subgraphs starting from 2 atoms.</li>
+<li>new method IndigoObject.resetSymmetricStereocenters to clear stereocenters that are not real stereocenters like in <code>CC[C@@H](CN)CC</code></li>
+</ul>
+
+<p>Changes:</p>
+
+<ul>
+<li>Implicit hydrogens are rendered better if they are on the bottom of an aromatic ring</li>
+<li>Missing dependency file msvcp100.dll is loaded automatically. </li>
+<li>Smiles saver doesn't throw exception about implicit hydrogens if they are not saving in SMILES</li>
+<li>Workaround for a clang 3.2 compiler bug that caused incorrect similarity values on Mac OS X platforms</li>
+</ul>
+
+<h2 id="indigo-118">Indigo 1.1.8</h2>
+
+<p><em>10 March 2013</em></p>
+
+<p>New features:</p>
+
+<ul>
+<li>For superatoms IndigoObject.name() returns superatom label</li>
+<li>New method indigoExpandAbbreviations in the Indigo C interface. Bindings for Java, C# will be ready soon.</li>
+<li>Single record in SDF file is limited to 100Mb to prevent accident out-of-memory exceptions when loading non-SDF files.</li>
+<li>Indigo compact molecule and reaction format is compatible with previous versions. KNIME workflows that are using Indigo nodes will work fine with previously saved workflows.</li>
+<li>Indigo.loadMolecule reads molecule properties from SDF file too. Karen Karapetyan: <a href="https://groups.google.com/d/msg/indigo-general/-2aYCKW8nSs/xteR7sFtsKIJ">https://groups.google.com/d/msg/indigo-general/-2aYCKW8nSs/xteR7sFtsKIJ</a></li>
+</ul>
+
+<p>Fixed:</p>
+
+<ul>
+<li>Issues with transformations. Thanks to Karen Karapetyan for various bug reports!</li>
+<li>Exception on invalid options in the InChI plugin</li>
+<li>Issues with long multiline in molfile data s-groups</li>
+<li>Aromaticity matcher issue. Thanks to James Davidson for the bug report: <a href="https://groups.google.com/d/topic/indigo-general/yhTfm6XsKTM/discussion">https://groups.google.com/d/topic/indigo-general/yhTfm6XsKTM/discussion</a></li>
+<li>Atom-to-atom mapping timeout issue</li>
+<li>File handlers leak in indigo.iterateSDFile method in case of empty file</li>
+</ul>
+
+<h2 id="indigo-117">Indigo 1.1.7</h2>
+
+<p><em>24 December 2012</em></p>
+
+<p>New features:</p>
+
+<ul>
+<li>stack usage has been significantly reduced. Almost all the test works find under 256Kb stack limit, meaning that everything should work in .NET and Java environment without any additional settings. Problem appeared in using Indigo in WCF service in IIS. </li>
+<li>initial implementation of <code>indigoNormalize</code> method in Indigo API. It removed hydrogens and neutralize [N+][O-] into N=O. Other transformation are coming soon and suggestions are welcome.</li>
+<li>new similarity methods <code>normalized-edit</code> to return an approximate measure of changes that needs to be applied to convert one molecule into another. Used in Imago testing framework to measure recognition quality based on reference files.</li>
+<li>reaction catalysts serialization</li>
+<li>layout method flips a molecule to ensure that that first atom is right to the last one: <a href="https://groups.google.com/d/msg/indigo-general/EBOc2BT1_N0/Gl-2ZpVmUQcJ">https://groups.google.com/d/msg/indigo-general/EBOc2BT1_N0/Gl-2ZpVmUQcJ</a></li>
+<li>query molfile saver outputs a number of implicit hydrogens</li>
+</ul>
+
+<p>Fixed:</p>
+
+<ul>
+<li>substructure matcher throws an exception if molecule has invalid valences: <a href="https://groups.google.com/d/msg/indigo-bugs/IoFmqShx6nE/FinoBUtK-RsJ">https://groups.google.com/d/msg/indigo-bugs/IoFmqShx6nE/FinoBUtK-RsJ</a></li>
+<li>aromatization method throws an exception if molecule has invalid valences: <a href="https://groups.google.com/d/msg/indigo-general/MlBa6Wc31L8/03i5Yfe0FP4J">https://groups.google.com/d/msg/indigo-general/MlBa6Wc31L8/03i5Yfe0FP4J</a></li>
+<li>molecule dearomatization with radicals doesn't work</li>
+<li>several issues in reaction product enumerator</li>
+<li>layout issue: <a href="https://groups.google.com/d/msg/indigo-dev/zWzfGTqMKKw/Fvak2zeYXyoJ">https://groups.google.com/d/msg/indigo-dev/zWzfGTqMKKw/Fvak2zeYXyoJ</a></li>
+<li>another issue with molecule R-groups layout </li>
+<li>issue with saving a molfile with R-site with index 32 causing high memory consumption. Additional internal check has been added to prohibit unexpectedly large memory allocations (that usually means bug)</li>
+<li>regression in the R-group label method for an R-site without any number</li>
+<li>bug in the highlightedTarget method if a molecule has been changed before</li>
+<li>SVG multithreaded rending has been disabled due to the potential issue with Cairo libraries. Need to update Cairo libraries to check if problem still appear.</li>
+<li>issue with tautomer substructure matching for the aromatic compounds</li>
+<li>molecule aromatization method doesn't affect R-group fragments</li>
+</ul>
+
+<h2 id="indigo-116">Indigo 1.1.6</h2>
+
+<p><em>15 October 2012 (no public announcement)</em></p>
+
+<ul>
+<li>option to preserve atom and bond ordering during serialization process. Used in KNIME: <a href="http://tech.knime.org/forum/indigo/indigo-bug-in-handling-sdfs">http://tech.knime.org/forum/indigo/indigo-bug-in-handling-sdfs</a></li>
+<li>reaction product enumerator handles larger class of transformations</li>
+<li>option <code>smarts</code> for indigo-depict to draw SMARTS</li>
+</ul>
+
+<h2 id="indigo-115">Indigo 1.1.5</h2>
+
+<p><em>28 September 2012</em></p>
+
+<p>New features:</p>
+
+<ul>
+<li>Rutherfordium isotopes atomic weights added</li>
+<li>Additional check for an invalid stereocenter when an angle between bonds is small.<br>
+Thanks to Karen: <a href="https://groups.google.com/d/msg/indigo-general/zYHfZs9V72Q/lB_KHfMxmi8J">https://groups.google.com/d/msg/indigo-general/zYHfZs9V72Q/lB_KHfMxmi8J</a></li>
+<li>Options passed to the InChI plugin are being automatically corrected independent of OS. You can use both '-' and '/' prefixes on all the systems.<br>
+Look more at <a href="api/index.html#options">http://ggasoftware.com/opensource/indigo/api#options</a><br>
+Thanks to Karen for the suggestion: <a href="https://groups.google.com/d/msg/indigo-general/XxPC2EuT0-g/7kNUasWWpz0J">https://groups.google.com/d/msg/indigo-general/XxPC2EuT0-g/7kNUasWWpz0J</a></li>
+<li>Build scripts now work with Visual Studio 2012</li>
+<li>Cross-like layout of atom with four bonds for molecules like CCS(=O)(=O)CC</li>
+</ul>
+
+<p>Fixed:</p>
+
+<ul>
+<li>Isotope values in the InChI -&gt; Molecule conversion method are being shifted by 10000</li>
+<li>Issues in the Reaction Product Enumerator and the Transformation algorithm causing less correct results to appear</li>
+<li>Exceptions during Molecule -&gt; InChI conversion on Mac OS X if a molecule is passed in an aromatic form that cannot be dearomatized</li>
+</ul>
+
+<h2 id="indigo-114">Indigo 1.1.4</h2>
+
+<p><em>13 September 2012</em></p>
+
+<ul>
+<li>Allene stereocenters detection algorithm is not throwing exception in case there are not atom coordinates</li>
+<li>Aromatic [si] can be loaded from SMILES</li>
+<li>Dearomatization improvements for B, Si, P atoms. There was an issue that the dearomatization method didn't work with the molecule CB1OB(C)OB(C)O1 if it was loaded from SMILES in aromatic form.</li>
+</ul>
+
+<p>New methods:</p>
+
+<ul>
+<li>setExplicitValence.</li>
+<li>radical, setRadical. This methods returns and accepts Indigo.SINGLET, Indigo.DOUBLET or Indigo.TRIPLET radicals.</li>
+</ul>
+
+<p>Thanks to Ferenc for suggestions to add these methods: <a href="https://groups.google.com/d/msg/indigo-general/NBqNZ4Ik4-Y/goMuQxL9ZkEJ">https://groups.google.com/d/msg/indigo-general/NBqNZ4Ik4-Y/goMuQxL9ZkEJ</a></p>
+
+<h2 id="indigo-113">Indigo 1.1.3</h2>
+
+<p><em>23 August 2012</em></p>
+
+<ul>
+<li>JNA has been updated to 3.4.1. This fixed an issue with permissions for the temporary directory.<br>
+Thanks to Ingo: <a href="http://tech.knime.org/forum/indigo/bundle-could-not-be-activated">http://tech.knime.org/forum/indigo/bundle-could-not-be-activated</a></li>
+<li>Transformation method automatically calls a layout algorithm if necessary.</li>
+<li>Minor bug in the reaction exact matching algorithm has been fixed.</li>
+<li>Improvements in the layout of the atoms with four bonds attached.</li>
+<li>GrossFormula now uses Hill notation: <a href="https://groups.google.com/d/msg/indigo-general/ntLPh-vz_P4/EQr-prG3gUEJ">https://groups.google.com/d/msg/indigo-general/ntLPh-vz_P4/EQr-prG3gUEJ</a></li>
+<li>Improvements in the SMARTS saving procedure.</li>
+<li>Molfile saver now correctly saves query bond topology constraints, unsaturation flag, and atom ring bond count constraint.</li>
+<li>Issues with rendering query bond topology constraints and atom ring bond count constraint have been fixed.</li>
+<li>Data SGroups with absolute coordinates are treated as relative for the layout procedure.</li>
+<li>SRU unit in the molfile now has a label.</li>
+<li>Issues causing infinite loop due to the numeric errors in the layout algorithm have been fixed.</li>
+<li>Issue with loading a molecule with 3D coordinates has been fixed.<br>
+Thanks to Colin Batchelor: <a href="https://groups.google.com/d/msg/indigo-bugs/rDsAJeDdNPo/Ca7RusLj8xYJ">https://groups.google.com/d/msg/indigo-bugs/rDsAJeDdNPo/Ca7RusLj8xYJ</a></li>
+<li>Allene centers now are recognized if the angle between double bonds are greater than 165 degrees.</li>
+</ul>
+
+<h2 id="indigo-112">Indigo 1.1.2</h2>
+
+<p><em>10 July 2012</em></p>
+
+<ul>
+<li>Layout algorithm now doesn't apply Fischer projection for atoms with 4 bonds. For example, now the CC(C)(C)C(C)(C)C(C)(C)C(C)(C)C molecule is cleaned up in a zigzag way.</li>
+<li>Bug with a missing stereocenter in the transformation and reaction product enumeration algorithms has been fixed:  <a href="https://groups.google.com/d/msg/indigo-general/NkZ-g3EeuTg/FjqVjU4ZrYcJ">https://groups.google.com/d/msg/indigo-general/NkZ-g3EeuTg/FjqVjU4ZrYcJ</a></li>
+<li>Layout algorithm for molecules with R-groups has been fixed.</li>
+</ul>
+
+<h2 id="indigo-111">Indigo 1.1.1</h2>
+
+<p><em>18 June 2012</em></p>
+
+<ul>
+<li>symmetryClasses methods was added. Now the molecule object has a method symmetryClasses() that returns an array with a symmetry class ID for each atom.<br>
+Thanks to Karen for the suggestion: <a href="https://groups.google.com/d/msg/indigo-general/vR9BSWR87e8/PqpiQaE4SfgJ">https://groups.google.com/d/msg/indigo-general/vR9BSWR87e8/PqpiQaE4SfgJ</a></li>
+<li>Query molecules can now have a highlighting constraint on atoms and bonds to match only (un)highlighted target atoms or bonds. Here is an exmaple: query.getAtom(0).addConstraint("highlighting", "true").<br>
+Again thanks to Karen: <a href="https://groups.google.com/d/msg/indigo-general/J1RR9b0x2NM/Z_XOB9jQNw8J">https://groups.google.com/d/msg/indigo-general/J1RR9b0x2NM/Z_XOB9jQNw8J</a></li>
+</ul>
+
+<h2 id="indigo-11">Indigo 1.1</h2>
+
+<p><em>07 June 2012</em></p>
+
+<ul>
+<li>ChemDiff and Legio now supports the Indigo 1.1 version, installation scripts were fixed.</li>
+</ul>
+
+<h2 id="indigo-11-release-candidate-3">Indigo 1.1 Release Candidate 3</h2>
+
+<p><em>17 May 2012</em></p>
+
+<ul>
+<li>Aromatic Te can be read from SMILES as [te]. Thanks to Andrew Dalke: <a href="http://groups.google.com/d/msg/indigo-general/MlBa6Wc31L8/03i5Yfe0FP4J">http://groups.google.com/d/msg/indigo-general/MlBa6Wc31L8/03i5Yfe0FP4J</a></li>
+<li>Improvements in atom-to-atom mapping algorithm.</li>
+</ul>
+
+<h2 id="indigo-11-release-candidate-2">Indigo 1.1 Release Candidate 2</h2>
+
+<p><em>05 May 2012</em></p>
+
+<p>Fixed:</p>
+
+<ul>
+<li>Molecule with generic s-groups serialization</li>
+<li>Missed IndigoRenderer within Java bundle</li>
+</ul>
+
+<h2 id="indigo-11-release-candidate">Indigo 1.1 Release Candidate</h2>
+
+<p><em>30 April 2012</em></p>
+
+<p>Highlights:</p>
+
+<ul>
+<li>
+<p>InChI stereochemistry layer is supported both for loading and saving molecules. The only difference 
+with the standard utility occurs when stereochemistry is defined not in a proper way. Allenes and 
+cumulenes are not supported yet.</p>
+</li>
+<li>
+<p>new RGroup-Decomposition API was added: createDecomposer(), addDecomposition(), decomposeMolecule(), iterateDecompositions()<br>
+See more details at <a href="http://groups.google.com/group/indigo-general/browse_thread/thread/75281df2f70ec1a">http://groups.google.com/group/indigo-general/browse_thread/thread/75281df2f70ec1a</a>
+Thanks to Gerhard: <a href="http://groups.google.com/group/indigo-general/browse_thread/thread/c1dbc67ece5f78b0">http://groups.google.com/group/indigo-general/browse_thread/thread/c1dbc67ece5f78b0</a>,<br>
+Mederich: <a href="http://groups.google.com/group/indigo-general/browse_thread/thread/6d77029359364dd8">http://groups.google.com/group/indigo-general/browse_thread/thread/6d77029359364dd8</a>, and<br>
+Simon: <a href="http://tech.knime.org/forum/indigo/r-group-decomposer">http://tech.knime.org/forum/indigo/r-group-decomposer</a></p>
+</li>
+<li>
+<p>We completely switched to CMake project configurations.</p>
+</li>
+</ul>
+
+<p>Changes:</p>
+
+<ul>
+<li>AAM new algorithm heuristic was implemented for disconnected reactant and product molecules.</li>
+<li>correctReactingCenters() method was added for reactions. It highlights bond reacting centers according to AAM.<br>
+Thanks to James: <a href="http://tech.knime.org/forum/indigo/reaction-automapper-bond-highlighting">http://tech.knime.org/forum/indigo/reaction-automapper-bond-highlighting</a></li>
+<li>"timeout" option is used for MCS computation.</li>
+</ul>
+
+<p>Fixes:</p>
+
+<ul>
+<li>The bug with aam for query reactions was fixed</li>
+<li>The bug with aam timeout was fixed.<br>
+Thanks to Daniel: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/1cc5b9dffd740240">http://groups.google.com/group/indigo-bugs/browse_thread/thread/1cc5b9dffd740240</a></li>
+<li>clearStereocenters() method now resets bond directions. After calling this method molecule is saved into Molfile format without tetrahedral bond directions.</li>
+<li>Exception during saving Molfile with pseudoatoms within aromatic rings</li>
+<li>Exception when loading a molecule from Molfile with 3D coordinates with invalid valences during automatic stereocenters detection.</li>
+<li>Some other issues.</li>
+</ul>
+
+<h2 id="indigo-11beta10">Indigo 1.1-beta10</h2>
+
+<p><em>29 March 2012</em></p>
+
+<p>Changes:</p>
+
+<ul>
+<li>IndigoObject is Java now have dispose() method to dispose Indigo object before garbage collection.</li>
+<li>Molfile atom lists now support pseudoatoms</li>
+<li>Global timeout for all the most time consuming operations: substructure search, canonical smiles generation and etc. Option is called "timeout" and corresponts to milliseconds.</li>
+<li>explicit hydrogen near Nitrogen is handled correctly to calculate cis-trans and tetrahedral stereo configuration.</li>
+<li>InChI plugin now have "version" methods to return an actual InChI implementation version</li>
+<li>Arial font is used on Linux systems to render molecules. Previously this font was used only on Windows and Mac OS X, and rendered images on Windows and Linux were different.</li>
+<li>"deco-ignore-errors" option was added. Now there are no exceptions like 'no embeddings obtained' during the RGroup Decomposition if the flag set true. Exception is raised only for the end getters (e.g. decomposedMoleculeWithRGroups())</li>
+<li>"deco-save-ap-bond-orders" option was added. Within the option output molecule RGroup attachment points are saved as pseudo atoms (named 'AP1', 'AP2' etc). Therefore, the option allows to save initial bond orders.<br>
+Thanks to Mederich: <a href="http://groups.google.com/group/indigo-general/browse_thread/thread/c4bca8b97ca54a87">http://groups.google.com/group/indigo-general/browse_thread/thread/c4bca8b97ca54a87</a></li>
+<li>bug with the time hang was fixed for AAM.<br>
+Thanks to Daniel: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/1cc5b9dffd740240">http://groups.google.com/group/indigo-bugs/browse_thread/thread/1cc5b9dffd740240</a></li>
+<li>minor bug fixes in AAM</li>
+<li>minor bug fixes in RGroup Decomposition</li>
+</ul>
+
+<p>Fixed:</p>
+
+<ul>
+<li>automatic 2D coordinates generation procedure (layout) changes molecule components position if they have fixed atoms</li>
+<li>cycle enumeration fixed.<br>
+Thanks to Casey: <a href="https://groups.google.com/d/msg/indigo-general/UPkiBz1e-_o/WMtKB9RGE-UJ">https://groups.google.com/d/msg/indigo-general/UPkiBz1e-_o/WMtKB9RGE-UJ</a></li>
+<li>memory leak in the InChI computation procedure.<br>
+Thanks to Hinnerk: <a href="https://groups.google.com/d/msg/indigo-bugs/Fvr4l8CQvAQ/r_HYDxumALAJ">https://groups.google.com/d/msg/indigo-bugs/Fvr4l8CQvAQ/r_HYDxumALAJ</a></li>
+<li>different minor exception when loading a molecule from a molfile</li>
+<li>different minor exception when rendering a molecule</li>
+</ul>
+
+<h2 id="indigo-11beta9">Indigo 1.1-beta9</h2>
+
+<p><em>25 February 2012</em></p>
+
+<p>Changes:</p>
+
+<ul>
+<li>if a molecule contains only R-group #2 then empty R-rgroup #1 is not rendered any more.</li>
+<li>molecules with bad valences and charges can be serialized now</li>
+<li>timeout option was added for AAM. A new option was added named "aam-timeout". The integer parameter (time in milliseconds) corresponds for the AAM algorithm working time. The automap method returns a current state solution for a reaction when time is over. Thanks to Daniel: <a href="http://groups.google.com/group/indigo-dev/browse_thread/thread/4430412b9864f3fd">http://groups.google.com/group/indigo-dev/browse_thread/thread/4430412b9864f3fd</a></li>
+<li>default layout call was added for the deconvolultion scaffold getter (decomposedMoleculeScaffold())</li>
+<li>empty RGroup handling (one single bond) was implemented for deco.</li>
+<li>minor bug fixes in AAM</li>
+<li>minor bug fixes in RGroup Decomposition</li>
+</ul>
+
+<p>Fixed:</p>
+
+<ul>
+<li>incorrect empty R-Group logic loading from molfile</li>
+<li>incorrect attachmement points loading from molfile if the number of attachments points is greater then 2</li>
+<li>memory leak in reaction substructure matcher.</li>
+<li>infinite loop in reaction substructure matcher.<br>
+Thanks to fab for the bug report for both issues: <a href="http://tech.knime.org/forum/indigo/error-in-loop">http://tech.knime.org/forum/indigo/error-in-loop</a></li>
+<li>invalid stereo configuration when atom are being changed.<br>
+Thank to Lionel for the bug report: <a href="http://tech.knime.org/forum/indigo/changes-in-molecule-properties-node">http://tech.knime.org/forum/indigo/changes-in-molecule-properties-node</a></li>
+<li>bug with AAM not respecting atom type.<br>
+Thanks to Daniel: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/9448f08ab596b74e">http://groups.google.com/group/indigo-bugs/browse_thread/thread/9448f08ab596b74e</a></li>
+</ul>
+
+<h2 id="indigo-11beta8">Indigo 1.1-beta8</h2>
+
+<p><em>29 January 2012</em></p>
+
+<p>We have released our first version of InChI plugin that allows to load InChI strings and generate InChI and InChIKey for molecules (this version discards stereoinformation, but we are working on it). The plugin is statically linked with the official InChI library and can be loaded on demand, as it is done with IndigoRenderer plugin.</p>
+
+<p>Usage example :</p>
+
+<pre><code>IndigoInchi inchi = new IndigoInchi(indigo);
+IndigoObject molecule = indigo.loadMolecule("InChI=1S/C3H9NO/c1-3(5)2-4/h3,5H,2,4H2,1H3");
+String inchi_string = indigo.getInchi(molecule);
+</code></pre>
+
+<p>New methods and functionallity:</p>
+
+<ul>
+<li>InChI support! (without stereochemistry yet)</li>
+<li>mapMolecule(queryReactoinMolecule) to retrieve mapped molecule for the query reaction for the reaction substrcuture match object</li>
+<li>getMolecule(index) to get the reaction molecule</li>
+<li>
+<p>QueryMolecules can now be constructed with the following methods:</p>
+<ol>
+<li>addAtom, resetAtom methods for the QueryMolecule now parses arbitrary SMARTS</li>
+<li>addBond method for QueryMolecule</li>
+<li>atom.addConstraintOr method has been added</li>
+<li>a lot of query atom constraints: atomic-number, charge, isotope, radical, valence, connectivity, total-bond-order, hygrogens, substituents, ring, smallest-ring, ring-bonds, rsite-mask</li>
+</ol>
+</li>
+</ul>
+
+<p>Fixed: </p>
+
+<ul>
+<li>Issue with loading molecule attachment points if the bond orders are not marked.</li>
+<li>Better handling of molecules with invalid valence: canonical SMILES, unfoldHydrogens, invalid stereocenters detection. Thanks to Mederich for the bug report: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/8f1ac4c1bfcbc346">http://groups.google.com/group/indigo-bugs/browse_thread/thread/8f1ac4c1bfcbc346</a></li>
+<li>Molecule serialization with more than 8 R-groups. Thanks to James Davidson for the bug report: <a href="http://tech.knime.org/forum/indigo/changes-to-scaffold-finder-node">http://tech.knime.org/forum/indigo/changes-to-scaffold-finder-node</a></li>
+</ul>
+
+<h2 id="indigo-11beta7">Indigo 1.1-beta7</h2>
+
+<p><em>29 December 2011</em></p>
+
+<p>Changelog:</p>
+
+<ul>
+<li>Fixed bug: render-grid-title-offset options is not initialized.</li>
+<li>Fixed bug: all images are rendered as grid, after grid has been rendered.</li>
+<li>Possible memory issue in IndigoRenderer for Java has been fixed.</li>
+</ul>
+
+<h2 id="indigo-11beta6">Indigo 1.1-beta6</h2>
+
+<p><em>12 December 2011</em></p>
+
+<p>New functionality:</p>
+
+<ul>
+<li>
+<p>Indigo.transform(reaction, molecule) method for transformation a molecule according  to a rule, specified with a reaction.<br>
+   Examples are available here: <a href="concepts/transformation.html">http://ggasoftware.com/opensource/indigo/concepts/transformation</a></p>
+</li>
+<li>
+<p>New IndigoObject methods for working with reaction atom-to-atom mapping: atomMappingNumber, setAtomMappingNumber, clearAAM</p>
+</li>
+<li>
+<p>New IndigoObject methods for working with attachment points: iterateAttachmentPoints, countAttachmentPoints, clearAttachmentPoints.<br>
+   See <a href="api/index.html#attachment-points">http://ggasoftware.com/opensource/indigo/api#attachment-points</a> for more details</p>
+</li>
+<li>
+<p>Other new IndigoObject methods with documentation has been added: changeStereocenterType, addStereocenter, reactingCenter, setReactingCenter, loadSmartsFromFile, loadReactionSmartsFromFile, getSuperatom, getDataSGroup, description, decomposedMoleculeHighlighted, getSubmolecule, addSuperatom</p>
+</li>
+<li>
+<p>Smiles saver might throw an exception on a molecule with explicit hydrogens.<br>
+   Thanks to Colin Batchelor: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/35b240fb402e35c3">http://groups.google.com/group/indigo-bugs/browse_thread/thread/35b240fb402e35c3</a></p>
+</li>
+</ul>
+
+<p>Changelog:</p>
+
+<ul>
+<li>
+<p>Improvements in the automatic atom-to-atom assignment.<br>
+   Thanks to Ernst-Georg Schmid: <a href="http://groups.google.com/group/indigo-general/browse_thread/thread/ffe48381a01f7d24">http://groups.google.com/group/indigo-general/browse_thread/thread/ffe48381a01f7d24</a>
+   And to Daniel Lowe:
+<a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/11373837ba65acd">http://groups.google.com/group/indigo-bugs/browse_thread/thread/11373837ba65acd</a></p>
+</li>
+<li>
+<p>Improvements in the molecule decomposition algorithm.</p>
+</li>
+<li>
+<p>Python 2.4 support.</p>
+</li>
+<li>
+<p>A lot of bugs has been fixed due to some internal inconsistency in explicit hydrogens handing for cis-trans bonds:</p>
+<ul>
+<li>Substructure matcher result can be incorrect for matching query molecule with cis-trans bonds.</li>
+<li>Substructure matcher result can be incorrect in case of explicit hydrogens for cis-trans bonds in the target molecule.</li>
+<li>If a molecule has explicit hydrogens near cis-trans bonds, after been unserialized cis-trans configuration might flip.</li>
+<li>Canonical SMILES may also produce different results for a molecule with explicit hydrogens and without them.<br>
+</li>
+</ul>
+</li>
+<li>
+<p>Better stability of Indigo Java wrapper<br>
+</p>
+</li>
+<li>
+<p>Better rendering of a SMARTS query molecules</p>
+</li>
+<li>
+<p>Indigo now informs with an exception that both cis- and trans- specification in the SMARTS expression is not supported yet. For example, such SMARTS is not supported yet: <code>*/,\[R]=;@[R]/,\*</code></p>
+</li>
+<li>
+<p>Fixed issue with saving query molecules in Molfile format with the atom lists.<br>
+   Thanks to Francesca: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/b17b468049caf57a">http://groups.google.com/group/indigo-bugs/browse_thread/thread/b17b468049caf57a</a></p>
+</li>
+<li>
+<p>unfoldHydrogens how works with reaction properly.</p>
+</li>
+<li>
+<p>Some fixes of the dearomation algorithm bug arisen during tautomer substructure matching.</p>
+</li>
+<li>
+<p>Better support of sgroups in Molfile</p>
+</li>
+<li>
+<p>Highlighting is taken into account for the computation of canonical SMILES</p>
+</li>
+<li>
+<p>Indigo.countHydrogens method doesn't throw an exception is case of existence of R-groups and pseudoatoms.</p>
+</li>
+<li>
+<p>Fixed some issues with loading and saving of polymer repetition in SMILES</p>
+</li>
+<li>
+<p>SGroups and R-sites are saving during serialization/unserilization.<br>
+   Thanks to Hinnerk Rey: <a href="http://groups.google.com/group/indigo-general/browse_thread/thread/1d9bda07b8ac299d">http://groups.google.com/group/indigo-general/browse_thread/thread/1d9bda07b8ac299d</a></p>
+</li>
+<li>
+<p>Faster matching of SMARTS queries with unspecified bonds. This change also improves efficiency for our fingerprints for query molecules.</p>
+</li>
+<li>
+<p>Substructure matching counter now property counts queries with explicit hydrogens, like N-[#1].<br>
+   Thanks to James Davidson for this bug report: <a href="http://tech.knime.org/forum/indigo/substructure-match-counter-question">http://tech.knime.org/forum/indigo/substructure-match-counter-question</a></p>
+</li>
+<li>
+<p>Stereocenter parities are now saved into molfile.<br>
+   Thanks to Lionel: <a href="http://tech.knime.org/forum/indigo/chirality-flags">http://tech.knime.org/forum/indigo/chirality-flags</a></p>
+</li>
+<li>
+<p>R-group iterator now skips R-groups that are empty.</p>
+</li>
+<li>
+<p>Molfile loader now accepts left- and right-bounded atom labels.<br>
+   Thanks to Ernst-Georg Schmid: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/1d2b8a01af98949">http://groups.google.com/group/indigo-bugs/browse_thread/thread/1d2b8a01af98949</a></p>
+</li>
+<li>renderGridToBuffer method now support null value as the second parameter.<br>
+   Thanks to Mederich: <a href="http://groups.google.com/group/indigo-general/browse_thread/thread/b995c53227cf3352">http://groups.google.com/group/indigo-general/browse_thread/thread/b995c53227cf3352</a></li>
+</ul>
+
+<h2 id="indigo-11beta5">Indigo 1.1-beta5</h2>
+
+<p><em>11 August 2011</em></p>
+
+<p>New functionality:</p>
+
+<ul>
+<li>
+<p>Methods for specifing reacting centers on bonds: reaction.reactingCenter(bond), reaction.setReactingCenter(bond, mask)<br>
+    All reacting centers types are describes in Indigo namespace for Java and Python, and in ReactingCenter enum for C#.<br>
+    Code examples can be found in this thread: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/11373837ba65acd">http://groups.google.com/group/indigo-bugs/browse_thread/thread/11373837ba65acd</a></p>
+</li>
+<li>
+<p>Method to add stereocenter at atom: atom.addStereocenter(type, atom_index1, atom_index2, atom_index3, atom_index4). Last parameter is optional.<br>
+    Code examples can be found in this thread: <a href="http://groups.google.com/group/indigo-dev/browse_thread/thread/a164eddce485f053">http://groups.google.com/group/indigo-dev/browse_thread/thread/a164eddce485f053</a></p>
+</li>
+</ul>
+
+<p>Note: this new methods have preliminary interface, and interface may be changed in the next version.</p>
+
+<p>Fixed:</p>
+
+<ul>
+<li>Molecule to Smiles conversion with explicit hydrogens connected to cis-trans bonds.<br>
+    Thanks to Colin Batchelor: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/35b240fb402e35c3">http://groups.google.com/group/indigo-bugs/browse_thread/thread/35b240fb402e35c3</a></li>
+</ul>
+
+<h2 id="indigo-11beta4">Indigo 1.1-beta4</h2>
+
+<p><em>29 July 2011</em></p>
+
+<p>New functionality:</p>
+
+<ul>
+<li>New methods for Indigo: resetAtom, setRSite, isHighlighted for atoms.<br>
+    Code example: atom.resetAtom("N"), atom.setRSite("R1, R3"), atom.isHighlighted()</li>
+<li>Reaction product enumerator now supports recursive SMARTS</li>
+</ul>
+
+<p>Fixed:</p>
+
+<ul>
+<li>Exception during Indigo for Java and Indigo for Python initialization on Mac OS X Lion 10.7</li>
+<li>Different AAM issues. Thanks to Daniel Lowe: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/11373837ba65acd">http://groups.google.com/group/indigo-bugs/browse_thread/thread/11373837ba65acd</a></li>
+<li>Exception when calling hasCoord and hasZCoord on a reaction object</li>
+<li>Reaction product enumerator exception when monomers have no name</li>
+</ul>
+
+<h2 id="indigo-11alpha3">Indigo 1.1-alpha3</h2>
+
+<p><em>7 July 2011</em></p>
+
+<p>New functionality since Indigo-1.0.0 stable version:</p>
+
+<ul>
+<li>atomMappingNumber and setAtomMappingNumber methods for atoms to
+    retrieve and change atom-to-atom numbers. New clearAAM method to
+    clear atom-to-atom mapping information. Thanks to Daniel Lowe
+    for pointing out that this functionality is missing. Code
+    examples can be found in this thread: <a href="http://groups.google.com/group/indigo-general/browse_thread/thread/d8a413a88b9da834">http://groups.google.com/group/indigo-general/browse_thread/thread/d8a413a88b9da834</a></li>
+<li>addRSite method for adding R-site atoms to the molecule. This
+    method is similar to addAtom.<br>
+    Code example: atom = mol.addRSite("R1")</li>
+</ul>
+
+<p>Fixed:</p>
+
+<ul>
+<li>foldHydrogens on [H][H] and molecules with isotopic
+    hydrogens ([2H]C). Thanks to Daniel Lowe: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/2a8416c875aa8fb">http://groups.google.com/group/indigo-bugs/browse_thread/thread/2a8416c875aa8fb</a></li>
+<li>Reaction layout for reactions with empty reactants</li>
+<li>Saving molecule with s-group into molfile format</li>
+<li>Substructure matcher with special query with recursive smarts
+    beginning with hydrogen</li>
+<li>Unbounded memory usage during reaction automapping.
+    Thanks to Daniel Lowe again: <a href="http://groups.google.com/group/indigo-bugs/browse_thread/thread/e6a5e0430032e1a6/9dc36a81491283d0">http://groups.google.com/group/indigo-bugs/browse_thread/thread/e6a5e0430032e1a6/9dc36a81491283d0</a></li>
+<li>Indigo Python API module loading on Mac OS X from different
+    directories might cause error messages</li>
+<li>Reaction substructure match throws an exception in some cases
+    when these is no pair of AAM numbers. For example, reactant
+    has AAM number while product hasn't it.</li>
+</ul>

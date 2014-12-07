@@ -1,0 +1,232 @@
+<h1 id="options">Options</h1>
+
+<h2 id="inputoutput">Input/Output</h2>
+
+<table>
+
+<tr><th>Option</th><th>Type</th><th>Description</th><th>Default</th></tr>
+<tr><td align="left"><code>ignore-stereochemistry-errors</code></td><td>boolean</td>
+<td align="left">When reading a Molfile/Rxnfile with incorrectly marked stereobonds, ignore them rather than raise an error.</td>
+<td>false</td></tr>
+<tr><td align="left"><code>ignore-noncritical-query-features</code></td><td>boolean</td>
+<td align="left">When true, the "bond topology", "stereo care", "ring bond count", and "unsaturation" specifications are ignored when a non-query molecule is being loaded. Otherwise, an error is raised.</td>
+<td>false</td></tr>
+<tr><td align="left"><code>treat-x-as-pseudoatom</code></td><td>boolean</td>
+<td align="left">Treat 'X' atoms in Molfiles/Rxnfiles as pseudoatoms, rather than "any halogen" query atoms.</td>
+<td>false</td></tr>
+<tr><td align="left"><code>skip-3d-chirality</code></td><td>boolean</td>
+<td align="left">Do not calculate chirality of 3D input structures.</td>
+<td>false</td></tr>
+<tr><td align="left"><code>molfile-saving-mode</code></td><td>string</td>
+<td align="left"><ul><li><code>2000</code>: force saving Molfiles and Rxnfiles to v2000 format, not regarding if there are features that can not be represented in v2000.</li><li><code>3000</code>: force saving Molfiles and Rxnfiles to v3000 format, not regarding if there are features that can not be represented in v2000.</li><li><code>auto</code>: detect if saving to v3000 is really needed, and then save to v3000. Otherwise, save to v2000.</li></ul></td>
+<td><code>auto</code></td></tr>
+<tr><td align="left"><code>molfile-saving-no-chiral</code></td><td>boolean</td>
+<td align="left">Do no write the "Chiral" flag when saving Molfiles and Rxnfiles</td><td>false</td></tr>
+<tr><td align="left"><code>molfile-saving-skip-date</code></td><td>boolean</td>
+<td align="left">Do no write the current date into Molfiles, Rxnfiles and RDFiles</td><td>false</td></tr>
+<tr><td align="left"><code>smiles-saving-write-name</code></td><td>boolean</td>
+<td align="left">Write names when saving via generic saver interface in SMILES mode</td><td>false</td></tr>
+</table>
+
+
+<h2 id="rendering">Rendering</h2>
+
+<p></p>
+<table markdown="true">
+<tr><th>Option</th><th>Type</th><th>Description</th><th>Default</th></tr>
+<tr><td align="left"><code>render-output-format</code></td><td>string</td>
+<td align="left">Obligatory. <code>png</code>, <code>svg</code>, <code>pdf</code> are allowed. On Windows, <code>emf</code> is also allowed.</td>
+<td>-</td></tr>
+<tr><td align="left"><code>render-bond-length</code></td><td>integer</td>
+<td align="left">Desired average bond length in pixels. The actual average bond length may be less if the <code>render-image-size</code> option is set. To reset this setting, you can set its value to -1.</td>
+<td>100</td></tr>
+<tr><td align="left"><code>render-image-size</code></td><td>size</td>
+<td align="left">Width and height of target image. If not set, is calculated automatically according to <code>render-bond-length</code>. To reset this setting, you can set the values of width and height to -1.</td>
+<td>-</td></tr>
+<tr><td align="left"><code>render-margins</code></td><td>size</td>
+<td align="left">Horizontal and vertical margins around the image, in pixels.</td>
+<td>0x0</td></tr>
+<tr><td align="left"><code>render-base-color</code></td><td>color</td>
+<td align="left">The default color for atoms and bonds.</td>
+<td>black</td></tr>
+<tr><td align="left"><code>render-background-color</code></td><td>color</td>
+<td align="left">Background color.</td>
+<td>transparent</td></tr>
+<tr><td align="left"><code>render-label-mode</code></td><td>string</td>
+<td align="left"><ul><li><code>all</code>: show all atoms</li><li><code>terminal-hetero</code>: show heteroatoms, terminal atoms, atoms with radical, charge, isotope, explicit valence, and atoms having two adjacent bonds in a line</li><li><code>hetero</code>: the same as <code>terminal-hetero</code>, but without terminal atoms</li><li><code>none</code>: hide all labels, show only bonds</li></ul></td>
+<td><code>terminal-hetero</code></td></tr>
+<tr><td align="left"><code>render-highlighted-atoms-visible</code></td><td>boolean</td>
+<td align="left">Always show labels of highlighted atoms.</td>
+<td>false</td></tr>
+<tr><td align="left"><code>render-implicit-hydrogens-visible</code></td><td>boolean</td>
+<td align="left">Show implicit hydrogens on visible atoms.</td>
+<td>true</td></tr>
+<tr><td align="left"><code>render-superatom-mode</code></td><td>string</td>
+<td align="left"><ul><li><code>expand</code>: render expanded superatoms</li><li><code>collapse</code>: render just the superatoms' names</li></ul></td>
+<td><code>expand</code></td></tr>
+<tr><td align="left"><code>render-coloring</code></td><td>boolean</td>
+<td align="left">Turn on atom coloring, e.g. nitrogen is blue, oxygen is red, etc.</td>
+<td>false</td></tr>
+<tr><td align="left"><code>render-highlight-thickness-enabled</code></td><td>boolean</td>
+<td align="left">Enable highlighting with thick bonds and bold atom labels.</td>
+<td>false</td></tr>
+<tr><td align="left"><code>render-highlight-color-enabled</code></td><td>boolean</td>
+<td align="left">Enable highlighting with color.</td>
+<td>true</td></tr>
+<tr><td align="left"><code>render-highlight-color</code></td><td>color</td>
+<td align="left">The color to be used for highlighting.</td>
+<td>red</td></tr>
+<tr><td align="left"><code>render-data-sgroup-color</code></td><td>color</td>
+<td align="left">Color of data SGroup labels.</td>
+<td>black</td></tr>
+<tr><td align="left"><code>render-aam-color</code></td><td>color</td>
+<td align="left">Atom-by-atom mapping indices color in reactions.</td>
+<td>black</td></tr>
+<tr><td align="left"><code>render-stereo-style</code></td><td>string</td>
+<td align="left"><ul><li><code>old</code>: Only display the "Chiral" sign when appropriate.</li>
+<li><code>ext</code>: Display "abs", "and", "or" labels near each stereocenter.</li><li><code>none</code>: Hide all the information about the stereogroups.</li></ul></td>
+<td><code>old</code></td></tr>
+<tr><td align="left"><code>render-relative-thickness</code></td><td>float</td>
+<td align="left">Set the thickness of a bond to X/30 of the average bond length.</td>
+<td>1.0</td></tr>
+<tr><td align="left"><code>render-catalysts-placement</code></td><td>string</td>
+<td align="left"><ul><li><code>above</code>: place reaction catalysts above the reaction arrow</li><li><code>above-and-below</code>: place reaction calalysts above and below the reaction arrow</li></ul></td>
+<td><code>above-and-below</code></td></tr>
+<tr><td align="left"><code>render-comment</code></td><td>string</td>
+<td align="left">Put a single-line comment at the top or bottom of the image. If the image size is set explicitly, it must not be smaller than the size of the comment bounding box.</td>
+<td>-</td></tr>
+<tr><td align="left"><code>render-comment-position</code></td><td>string</td>
+<td align="left"><code>top</code> or <code>bottom</code>.</td>
+<td><code>bottom</code></td></tr>
+<tr><td align="left"><code>render-comment-offset</code></td><td>integer</td>
+<td align="left">Vertical space (in pixels) between the comment and the rendered structure or reaction.</td>
+<td>0</td></tr>
+<tr><td align="left"><code>render-comment-alignment</code></td><td>float</td>
+<td align="left">0 is for alignment to the left, 1 is for the alignment to the right, 0.5 is for centering the comment. Note that this setting has no effect if comment is larger than the molecule/reaction rendered.</td>
+<td>0.5</td></tr>
+<tr><td align="left"><code>render-comment-font-size</code></td><td>integer</td>
+<td align="left">Font size for the comment in absolute units, roughly equal to the height in pixels.</td>
+<td>20</td></tr>
+<tr><td align="left"><code>render-comment-color</code></td><td>color</td>
+<td align="left">Color to use for the comment.</td>
+<td>black</td></tr>
+<tr><td align="left"><code>render-atom-ids-visible</code></td><td>boolean</td>
+<td align="left">Show atom numbers (for debugging purposes only).</td>
+<td>false</td></tr>
+<tr><td align="left"><code>render-bond-ids-visible</code></td><td>boolean</td>
+<td align="left">Show bond numbers (for debugging purposes only).</td>
+<td>false</td></tr>
+<tr><td align="left"><code>render-atom-bond-ids-from-one</code></td><td>boolean</td>
+<td align="left">Show atom and bond numbers starting from one, not from zero.</td>
+<td>false</td></tr>
+</table>
+
+<h2 id="rendering-in-grid">Rendering in Grid</h2>
+
+<p></p>
+<table markdown="true">
+<tr><th>Option</th><th>Type</th><th>Description</th><th>Default</th></tr>
+<tr><td align="left"><code>render-grid-margins</code></td><td>size</td>
+<td align="left">Horizontal and vertical margins around the grid cell, in pixels.</td>
+<td>0, 0</td></tr>
+<tr><td align="left"><code>render-grid-title-property</code></td><td>string</td>
+<td align="left">The name of the molecule's property that defines the title that is put under each molecule. If not defined, no titles are shown. The special value "^NAME" means to use the molecule's name as its title.</td>
+<td>-</td></tr>
+<tr><td align="left"><code>render-grid-title-alignment</code></td><td>float</td>
+<td align="left">0 is for alignment to the left, 1 is for the alignment to the right, 0.5 is for centering the title. Note that this setting has no effect if the title is larger than the molecule rendered.</td>
+<td>0.5</td></tr>
+<tr><td align="left"><code>render-grid-title-font-size</code></td><td>integer</td>
+<td align="left">Font size for the title in absolute units, roughly equal to the height in pixels.</td>
+<td>20</td></tr>
+<tr><td align="left"><code>render-grid-title-offset</code></td><td>integer</td>
+<td align="left">Vertical space (in pixels) between the title and the rendered structure.</td>
+<td>0</td></tr>
+</table>
+
+<h2 id="fingerprinting">Fingerprinting</h2>
+
+<p></p>
+<table markdown="true">
+<tr><th>Option</th><th>Type</th><th>Description</th><th>Default</th></tr>
+<tr><td align="left"><code>fp-ord-qwords</code></td><td>int</td>
+<td align="left">Size of "ordinary" part of a fingerprint, in 8-byte blocks.</td>
+<td>25</td></tr>
+<tr><td align="left"><code>fp-sim-qwords</code></td><td>int</td>
+<td align="left">Size of "similarity" part of a fingerprint, in 8-byte blocks.</td>
+<td>8</td></tr>
+<tr><td align="left"><code>fp-any-qwords</code></td><td>int</td>
+<td align="left">Size of "any" part of a fingerprint, in 8-byte blocks.</td>
+<td>15</td></tr>
+<tr><td align="left"><code>fp-tau-qwords</code></td><td>int</td>
+<td align="left">Size of "tautomer" part of a fingerprint, in 8-byte blocks.</td>
+<td>10</td></tr>
+<tr><td align="left"><code>fp-ext-enabled</code></td><td>boolean</td>
+<td align="left">Sets whether to include or not 3-byte "EXT" part of the fingerprint.</td>
+<td>true</td></tr>
+</table>
+
+<h2 id="layout">Layout</h2>
+
+<p></p>
+<table markdown="true">
+<tr><th>Option</th><th>Type</th><th>Description</th><th>Default</th></tr>
+<tr><td align="left"><code>layout-max-iterations</code></td><td>int</td>
+<td align="left">The maximum number of iterations allowed for the layout procedure to run (the number is internally multiplied by 10000). If the limit is reached, an exception is thrown. Zero value means no limit.</td>
+<td>0</td></tr>
+</table>
+
+<h2 id="substructure-matching">Substructure Matching</h2>
+
+<p></p>
+<table markdown="true">
+<tr><th>Option</th><th>Type</th><th>Description</th><th>Default</th></tr>
+<tr><td align="left"><code>embedding-uniqueness</code></td><td>string</td>
+<td align="left">Defines how the uniqueness of a substructure match is determined when counting or iterating unique matches.<ul><li><code>atoms</code>: by atoms; "CCC" matches "C1CC1" once</li><li><code>bonds</code>: by bonds, "CCC" matches "C1CC1" three times</li><li><code>none</code>: no test for uniqueness; "CCC" matches "C1CC1" six times</li></ul></td>
+<td><code>atoms</code></td></tr>
+<tr><td align="left"><code>max-embeddings</code></td><td>int</td>
+<td align="left">The maximum number of embeddings allowed to enumerate when counting all embeddings. If the limit is reached, an exception is thrown. Zero value means no limit.</td>
+<td>10000</td></tr>
+</table>
+
+<h2 id="rgroup-deconvolution">R-Group Deconvolution</h2>
+
+<p></p>
+<table markdown="true">
+<tr><th>Option</th><th>Type</th><th>Description</th><th>Default</th></tr>
+<tr><td align="left"><code>deconvolution-aromatization</code></td><td>boolean</td>
+<td align="left">Aromatize input molecules.</td>
+<td>true</td></tr>
+</table>
+
+<h2 id="reaction-products-enumeration">Reaction Products Enumeration</h2>
+
+<table>
+
+<tr><th>Option</th><th>Type</th><th>Description</th><th>Default</th></tr>
+<tr><td align="left"><code>rpe-multistep-reactions</code></td><td>boolean</td>
+<td align="left">Enable multistep reactions.</td>
+<td>false</td></tr>
+<tr><td align="left"><code>rpe-mode</code></td><td>string</td>
+<td align="left"><ul><li><code>grid</code>: different sets of monomers react in different tubes</li><li><code>one-tube</code>: reactions take place in one tube</li></ul></td>
+<td>grid</td></tr>
+<tr><td align="left"><code>rpe-self-reaction</code></td><td>boolean</td>
+<td align="left">Enable intramolecular reactions, where one molecule of monomers can play role of two (or more) reactants.</td>
+<td>false</td></tr>
+<tr><td align="left"><code>rpe-max-depth</code></td><td>integer</td>
+<td align="left">Maximum level of representing product like a monomer (works only with <code>rpe-multistep-reactions</code> enabled).</td>
+<td>2</td></tr>
+<tr><td align="left"><code>rpe-max-products-count</code></td><td>integer</td>
+<td align="left">Maximum amount of generated products.</td>
+<td>1000</td></tr>
+</table>
+
+
+<h2 id="inchi">InChI</h2>
+
+<p></p>
+<table markdown="true">
+<tr><th>Option</th><th>Type</th><th>Description</th><th>Default</th></tr>
+<tr><td align="left"><code>inchi-options</code></td><td>string</td>
+<td align="left">Options supported by the official InChI plugin: /NEWPSOFF /DoNotAddH /SNon /SRel /SRac /SUCF /ChiralFlagON /ChiralFlagOFF /SUU /SLUUD /FixedH /RecMet /KET /15T.</td>
+<td>-</td></tr>
+</table>

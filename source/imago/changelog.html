@@ -1,0 +1,50 @@
+<h1 id="changelog">Changelog</h1>
+
+<h2 id="imago-ocr-20">Imago OCR 2.0</h2>
+
+<p><em>22 February 2013</em></p>
+
+<ul>
+<li>Recognition quality:<ul>
+<li>Added adaptive preliminary filters designed for recognition of low-quality scans or even photos;</li>
+<li>Recognition rate is significantly improved due to usage of highly-adaptive methods instead of strict criterias;</li>
+<li>Restriction constants and recognition parameters are moved into configurable clusters, so the better recognition rate can be achieved on various non-typical image sets using machine learning approach;</li>
+<li>Machine learning tool is embedded in <a href="imago_console.html">console application</a>, added ability to quickly check recognition rate on specified collection;</li>
+</ul>
+</li>
+<li>Chemical features:<ul>
+<li>Chemical feature set is extended: bridged bonds, query features, R-groups are handled properly;</li>
+<li>Superatom labels validation logic introduced which greatly increases recognition probability of complex superatom labels;</li>
+<li>Abbreviation expansion support added;</li>
+</ul>
+</li>
+<li>Improved interoperability:<ul>
+<li>Added support of various popular image formats: <code>JPG</code>, <code>BMP</code>, <code>DIB</code>, <code>TIFF</code>, <code>PBM</code>, <code>RAS</code> and others;</li>
+<li>Implemented the new logging system which produces nice human-readable reports;</li>
+<li>Replaced characters recognition system, the new one supports user-defined fonts;</li>
+<li>Updated API and <a href="java.html">Java</a> / <a href="c/index.html">C</a> wrappers;</li>
+<li>Updated build system, reduced dependencies list;</li>
+<li>Fixed a lot of bugs, overall stability is significantly improved, decreased memory consumption. </li>
+</ul>
+</li>
+</ul>
+
+<h2 id="imago-ocr-10">Imago OCR 1.0</h2>
+
+<p><em>28 March 2011</em></p>
+
+<ul>
+<li>Recognizable Molecule Features<ul>
+<li>Single, double, triple bonds;</li>
+<li>Atom labels, subscripts, isotopes, charges;</li>
+<li>Superatoms;</li>
+<li>Rings;</li>
+<li>Stereochemistry (up- and down-bonds);</li>
+</ul>
+</li>
+<li>Supported PNG image format;</li>
+<li>Implemented characters recognition system based on Fourier Descriptors;</li>
+<li>Java and C wrappers introduced;</li>
+<li>Ego, a Java GUI application introduced</li>
+<li>Improved techniques are used for molecular graph extraction.</li>
+</ul>

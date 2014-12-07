@@ -1,0 +1,562 @@
+<h1 id="user-manual-postgresql">User Manual: PostgreSQL</h1>
+
+<h2 id="basics">Basics</h2>
+
+<h3 id="data-representation">Data representation</h3>
+
+<p>Bingo supports Daylight SMILES with some ChemAxon extensions and MDL (Symyx) Molfile/Rxnfile formats both in the text 
+and binary representation.
+Please look at the corresponding section of 
+<a href="user-manual-oracle.html#data-representation">Bingo User Manual for Oracle</a> for details.</p>
+
+<h3 id="storage">Storage</h3>
+
+<p>Suppose you have a table with a <code>text</code>, <code>varchar</code> or <code>bytea</code> column containing a Molfiles/Rxnfiles
+or SMILES with molecules or reactions. </p>
+
+<p>Once you have prepared your table, you can execute <code>CheckMolecule</code> or <code>CheckReaction</code> to ensure that all 
+the records are valid. These functions return not null string with invalid records corresponding error messages. All molecules 
+or reactions that are in this table will be excluded from the chemical index. You can update these molecules later 
+after indexing.</p>
+
+<p>After you have prepared and checked your table, you can execute <code>Create Index</code> to make
+Bingo search procedures available for you table. The more records the table contains, the longer it takes to
+create an index.</p>
+
+<h3 id="queries">Queries</h3>
+
+<p>You can specify the query molecule as a <code>varchar</code> string containing a Molfile (including various query
+features), a SMILES, or a SMARTS string. For reaction queries, use Rxnfiles, reaction SMILES, or reaction SMARTS.</p>
+
+<h2 id="molecules">Molecules</h2>
+
+<h3 id="creating-an-index">Creating an Index</h3>
+
+<p>The following command creates the index for text column:</p>
+
+<pre><code>create index $index on $table using bingo_idx ($column bingo.molecule)
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molecules in the column <code>$column</code>.</li>
+<li><code>$index</code> is the name of the new index. </li>
+</ul>
+
+<p>The following command creates the index for bytea (binary) column:</p>
+
+<pre><code>create index $index on $table using bingo_idx ($bcolumn bingo.bmolecule)
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molecules in the binary column <code>$bcolumn</code>.</li>
+<li><code>$index</code> is the name of the new index. </li>
+</ul>
+
+<h3 id="updating-and-dropping-index">Updating and Dropping Index</h3>
+
+<p>You can add, remove, or edit records in the table after the index is created. Adding records does not slow
+down the queries, i.e. the performance will be the same as if you had indexed the whole table at once. No re-
+indexing is required after adding the records.</p>
+
+<p>After you delete, you must call <code>autovacuum</code> utility functions to clean up the index.</p>
+
+<h3 id="substructure-search">Substructure Search</h3>
+
+<p>The general form of substructure search query is as follows:</p>
+
+<pre><code>select * from $table where $column @ ('$query', '$parameters')::bingo.sub
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molecules in the column <code>$column</code>. </li>
+<li><code>$query</code> is a <code>text</code> string containing the query molfile or SMILES. </li>
+<li><code>$parameters</code> is a <code>varchar</code> string that can be empty or contain some options to pass to Bingo search engine.</li>
+</ul>
+
+<p>Please see the corresponding section of
+<a href="user-manual-oracle.html#substructure-search">Bingo User Manual for Oracle</a> to learn the rules of Bingo substructure matching (including Resonance search, Conformation search,
+Affine transformation search), and various query features available.</p>
+
+<h3 id="smarts-search">SMARTS Search</h3>
+
+<p>The syntax of SMARTS expression search is similar to the ordinary substructure search:</p>
+
+<pre><code>select * from $table where $column @ ('$query', '$parameters')::bingo.smarts
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molecules in the column <code>$column</code>. </li>
+<li><code>$query</code> is a <code>text</code> string containing the query molfile or SMILES. </li>
+<li><code>$parameters</code> is a <code>varchar</code> string that can be empty or contain some options to pass to Bingo search engine.</li>
+</ul>
+
+<p>Please see the corresponding section of
+<a href="user-manual-oracle.html#smarts-search">Bingo User Manual for Oracle</a> to learn the rules of SMARTS matching in Bingo.</p>
+
+<h3 id="exact-search">Exact Search</h3>
+
+<p>The general form of exact search query is as follows:</p>
+
+<pre><code>select * from $table where $column @ ('$query', '$parameters')::bingo.exact
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molecules in the column <code>$column</code>. </li>
+<li><code>$query</code> is a <code>text</code> string containing the query molfile or SMILES. </li>
+<li><code>$parameters</code> is a <code>varchar</code> string that can be empty or contain some options to pass to Bingo search engine.</li>
+</ul>
+
+<p>Please see the corresponding section of <a href="user-manual-oracle.html#exact-search">Bingo User Manual for Oracle</a> to
+learn the rules of Bingo exact matching and various flags available for <code>$parameters</code> string.</p>
+
+<h3 id="tautomer-search">Tautomer Search</h3>
+
+<p>Tautomer search is implemented within Substructure and Exact search functions, and requires <code>TAU</code> flag to be
+specified in <code>$parameters</code> string. Please see the corresponding section of <a href="user-manual-oracle.html#tautomer-search">Bingo User Manual for
+Oracle</a> to  learn the rules of Bingo exact and substructure tautomer
+matching.</p>
+
+<h4 id="customizing-the-rules">Customizing the Rules</h4>
+
+<p>Your database (to which you have installed Bingo) contains a table called <code>bingo.bingo_tau_config</code>. By default
+it contains 3 records with predefined rules. You can add, remove, or update the defined rules. Please see the
+corresponding section of <a href="user-manual-oracle.html#tautomer-search">Bingo User Manual for Oracle</a> to  learn the
+format of the tautomer matching rules.</p>
+
+<h3 id="similarity-search">Similarity Search</h3>
+
+<p>The general form of similarity search query is as follows:</p>
+
+<pre><code>select * from $table where $column @ ($bottom, $top, '$query', '$metric')::bingo.sim
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molecules in the column <code>$column</code>. </li>
+<li><code>$query</code> is a <code>text</code> string containing the query molfile or SMILES. </li>
+<li><code>$metric</code> is a <code>varchar</code> string defining the metric to use: <code>Tanimoto</code>, <code>Tversky</code>, or <code>Euclid-sub</code>.</li>
+<li><code>$bottom</code> and <code>$top</code> are real numbers that specify bottom and top limits of the required similarity, respectively.</li>
+</ul>
+
+<p>By default, the bottom limit is zero and the top limit is 1, which is the maximum possible value
+of similarity. You can specify <code>null</code> in place of <code>$bottom</code> or <code>$top</code> to disable the lower or upper bound. In
+most cases, you may want to cancel the upper bound:</p>
+
+<pre><code>select * from $table where $column @ (0.8, null, '$query', 'Tanimoto')::bingo.sim
+</code></pre>
+
+<p>Please see the corresponding section of <a href="user-manual-oracle.html#similarity-search">Bingo User Manual for Oracle</a> to
+learn more about the metrics.</p>
+
+<h3 id="gross-formula-search">Gross Formula Search</h3>
+
+<p>The general form of gross formula search query is as follows:</p>
+
+<pre><code>select * from $table where $column @ ('$query', '$parameters')::bingo.gross
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molecules in the column <code>$column</code>. </li>
+<li><code>$query</code> is a <code>text</code> string which looks like &#8221;&gt;= Cl6&#8221;, &#8221;? C4 H4 O&#8221;, or &#8221;= C6 H6&#8221;.</li>
+<li><code>$parameters</code> is a <code>varchar</code> string that can be empty or contain some options to pass to Bingo search engine.</li>
+</ul>
+
+<p>Please see the corresponding section of the <a href="user-manual-oracle.html#gross-formula-search">Bingo User Manual for Oracle</a> to see some examples.</p>
+
+<h3 id="molecular-weight-search">Molecular Weight Search</h3>
+
+<p>The general form of molecular weight query is as follows:</p>
+
+<pre><code>select bingo.getWeight('$molecule', '$mass_type')
+</code></pre>
+
+<p>To use the bingo index the search query is:</p>
+
+<pre><code>select * from $table where $column &gt; '$bottom'::bingo.mass AND $column &lt; '$top'::bingo.mass
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molecules in the column <code>$column</code>. </li>
+<li><code>$bottom</code> and <code>$top</code> are numbers that specify the range to which the molecular weight of the resulting molecules must belong.</li>
+</ul>
+
+<h3 id="format-conversion">Format Conversion</h3>
+
+<p>You can convert a molecule to SMILES string using the function:</p>
+
+<pre><code>select bingo.SMILES('$molecule');
+</code></pre>
+
+<p>You can convert a molecule to Molfile using the function:</p>
+
+<pre><code>select bingo.Molfile('$molecule');
+</code></pre>
+
+<p>The automatic layout procedure is performed to calculate the 2D coordinates of the resulting molecule.</p>
+
+<p>You can convert a molecule to CML format using the function:</p>
+
+<pre><code>select bingo.CML('$molecule');
+</code></pre>
+
+<ul>
+<li>$molecule is a <code>text</code> string or <code>bytea</code> containing the query molfile or SMILES. </li>
+</ul>
+
+<h3 id="conversion-to-binary-format">Conversion to Binary Format</h3>
+
+<p>The <code>bingo.CompactMolecule()</code> operator can be used for converting Molfiles and SMILES to the internal binary format. The operator works equally well with <code>text</code> and <code>bytea</code> operands. The operator always returns
+the <code>bytea</code> result.</p>
+
+<pre><code>select bingo.CompactMolecule($molfile, $xyz);
+
+select bingo.CompactMolecule($smiles, $xyz);
+
+select bingo.CompactMolecule($column, $xyz) FROM $table;
+</code></pre>
+
+<p>The <code>$xyz</code> parameter must be 0 or 1. If it is 1, the positions of atoms are saved to the binary format. If it is zero, the positions are skipped.</p>
+
+<h4 id="canonical-smiles-computation">Canonical SMILES computation</h4>
+
+<p>You can use the function:</p>
+
+<pre><code>select bingo.CanSMILES('$molecule')
+</code></pre>
+
+<p>to generate canonical SMILES strings for molecules represented as Molfiles or SMILES strings. Please see the corresponding section of <a href="user-manual-oracle.html#canonical-smiles">Bingo User Manual for Oracle</a> to learn the benefits of Bingo canonical SMILES format.</p>
+
+<h3 id="molecule-fingerprints">Molecule Fingerprints</h3>
+
+<p>You can generate a molecule fingerprint via <code>bingo.Fingeprint</code> function. The syntax is the same as for Bingo for Oracle, and it is described <a href="user-manual-oracle.html#molecule-fingerprints">in this section</a>.</p>
+
+<h3 id="inchi-and-inchikey">InChI and InChIKey</h3>
+
+<p>You can use <code>bingo.InChI</code> and <code>bingo.InChIKey</code> function to get InChI and InChIKey strings. The syntax is the same as for Bingo for Oracle, and it is described <a href="user-manual-oracle.html#inchi-and-inchikey">in this section</a>.</p>
+
+<h2 id="reactions">Reactions</h2>
+
+<h3 id="creating-an-index-1">Creating an Index</h3>
+
+<p>The following command creates the index for text columns:</p>
+
+<pre><code>create index $index on $table using bingo_idx ($column bingo.reaction)
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing chemical reaction data in the column <code>$column</code>.</li>
+<li><code>$index</code> is the name of the new index. </li>
+</ul>
+
+<p>The following command creates the index for bytea (binary) columns:</p>
+
+<pre><code>create index $index on $table using bingo_idx ($bcolumn bingo.breaction)
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing chemical reaction data in the binary column <code>$bcolumn</code>.</li>
+<li><code>$index</code> is the name of the new index. </li>
+</ul>
+
+<h3 id="reaction-substructure-search">Reaction Substructure Search</h3>
+
+<p>The general form of reaction substructure search query is as follows:</p>
+
+<pre><code>select * from $table where $column @ ('$query', '$parameters')::bingo.rsub
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing chemical reaction data in the column <code>$column</code>.</li>
+<li><code>$query</code> is a <code>text</code> string containing the query Rxnfile or reaction SMILES. </li>
+<li><code>$parameters</code> is a <code>varchar</code> string that can be empty or contain some options to pass to Bingo search engine.</li>
+</ul>
+
+<p>Please see the corresponding section of
+<a href="user-manual-oracle.html#substructure-search-1">Bingo User Manual for Oracle</a> to learn the rules of Bingo reaction substructure matching and various query features available.</p>
+
+<h3 id="reaction-smarts-search">Reaction SMARTS Search</h3>
+
+<p>The syntax of SMARTS expression search is similar to the ordinary substructure search:</p>
+
+<pre><code>select * from $table where $column @ ('$query', '$parameters')::bingo.rsmarts
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing chemical reaction data in the column <code>$column</code>.</li>
+<li><code>$query</code> is a <code>text</code> string containing the query Rxnfile or reaction SMILES. </li>
+<li><code>$parameters</code> is a <code>varchar</code> string that can be empty or contain some options to pass to Bingo search engine.</li>
+</ul>
+
+<p>Please see the corresponding section of
+<a href="user-manual-oracle.html#smarts-search-1">Bingo User Manual for Oracle</a> to learn the rules of SMARTS matching in Bingo.</p>
+
+<h3 id="reaction-exact-search">Reaction Exact Search</h3>
+
+<p>The general form of exact search query is as follows:</p>
+
+<pre><code>select * from $table where $column @ ('$query', '$parameters')::bingo.rexact
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing chemical reaction data in the column <code>$column</code>.</li>
+<li><code>$query</code> is a <code>text</code> string containing the query Rxnfile or reaction SMILES. </li>
+<li><code>$parameters</code> is a <code>varchar</code> string that can be empty or contain some options to pass to Bingo search engine.</li>
+</ul>
+
+<p>Please see the corresponding section of <a href="user-manual-oracle.html#exact-search-1">Bingo User Manual for Oracle</a> to
+learn the rules of Bingo exact matching and various flags available for <code>$parameters</code> string.</p>
+
+<h3 id="automatic-atomtoatom-mapping">Automatic Atom-to-Atom mapping</h3>
+
+<p>You can compute reaction AAM by calling the function:</p>
+
+<pre><code>select bingo.AAM('$reaction', '$strategy');
+</code></pre>
+
+<ul>
+<li><code>$reaction</code> is a <code>text</code> string containing reaction SMILES or Rxnfile. </li>
+<li><code>$strategy</code> is a <code>varchar</code> string defining the strategy to use: <code>CLEAR</code>, <code>DISCARD</code>, <code>ALTER</code> or <code>KEEP</code>.</li>
+<li>The return value is an Rxnfile. In case the given reaction is represented as a reaction SMILES, the automatic reaction layout is performed.</li>
+</ul>
+
+<p>The corresponding section of
+<a href="user-manual-oracle.html#automatic-atom-to-atom-mapping">Bingo User Manual for Oracle</a> describes the allowable values of the <code>$strategy</code> parameter and shows some examples.</p>
+
+<h3 id="format-conversion-1">Format Conversion</h3>
+
+<p>You can convert a reaction to reaction SMILES string using the function:</p>
+
+<pre><code>select bingo.RSMILES('$reaction')
+</code></pre>
+
+<p>You can convert a reaction SMILES string to Rxnfile using the function:</p>
+
+<pre><code>select bingo.Rxnfile('$reaction');
+</code></pre>
+
+<p>The automatic layout procedure is performed to calculate the 2D coordinates of the resulting reaction.</p>
+
+<p>You can convert a reaction to a reaction CML using the function:</p>
+
+<pre><code>select bingo.RCML('$reaction');
+</code></pre>
+
+<ul>
+<li><code>$reaction</code> is a <code>text</code> string containing reaction SMILES or Rxnfile. </li>
+</ul>
+
+<h3 id="conversion-to-binary-format-1">Conversion to binary format</h3>
+
+<p>The <code>Bingo.CompactReaction()</code> operator can be used for converting Rxnfiles and reaction SMILES to internal binary format. The operator works equally well with <code>text</code> and <code>bytea</code> operands. The operator always returns the <code>bytea</code> result.</p>
+
+<pre><code>SELECT Bingo.CompactReaction($rxnfile, $xyz) ;
+
+SELECT Bingo.CompactReaction($rsmiles, $xyz)L;
+
+SELECT Bingo.CompactReaction($column, $xyz) FROM $table;
+</code></pre>
+
+<p>The <code>$xyz</code> parameter must be 0 or 1. If it is 1, the positions of atoms are saved to the binary format. If it is zero, the positions are skipped.</p>
+
+<h3 id="reaction-fingerprints">Reaction Fingerprints</h3>
+
+<p>You can generate a reaction fingerprint via <code>bingo.RFingeprint</code> function. The syntax is the same as for Bingo for Oracle, and it is described <a href="user-manual-oracle.html#reaction-fingerprints">in this section</a>.</p>
+
+<h2 id="importing-and-exporting-data">Importing and Exporting Data</h2>
+
+<h3 id="importing-sdfiles-rdfiles-and-smiles">Importing SDFiles, RDFiles and SMILES</h3>
+
+<p>You can import a molecule or reaction table from an SDF file. You can also import SDF fields corresponding to
+each record in the SDF file. Prior to importing, you have to create the table manually:</p>
+
+<pre><code>create table $table ($id int, $column text, ...);
+select bingo.ImportSDF ('$table', '$column', '$sdf_id $id[, $other_columns]', '$filename.sdf[.gz]');
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molfiles in <code>$column</code></li>
+<li><code>$id</code> is another column of the table, containing unique integer identifiers, which are read from <code>$sdf_id</code>
+    field of the SDF file.</li>
+<li><code>$other_columns</code> is the comma-separated list of space-separated 'property-column' pairs that are to be
+    imported. Each given SDF property is mapped to the given table column. You can specify an empty string if
+    there are no properties to import.</li>
+<li>$filename is the location of the resulting file on the <em>server filesystem</em>.</li>
+</ul>
+
+<p>A simple example of importing the
+<a href="http://dtp.nci.nih.gov/docs/3d_database/Structural_information/structural_data.html">NCI</a> 2D compound
+database would be the following:</p>
+
+<pre><code>create table nci (nsc int, molfile text);
+select bingo.ImportSDF('nci', 'molfile', 'nsc nsc', 'C:/Users/Administrator/july2008_2d.sdf');
+</code></pre>
+
+<p>Importing RDF files is done with <code>ImportRDF()</code> function the same way as SDF files:</p>
+
+<pre><code>create table $table ($id int, $column text, ...);
+select bingo.ImportRDF ('$table', '$column', '$rdf_id $id[, $other_columns]', '$filename.rdf[.gz]');
+</code></pre>
+
+<p>Importing multi-line molecule or reaction SMILES file is done the similar way with the <code>ImportSMILES()</code>
+function:</p>
+
+<pre><code>select bingo.ImportSMILES('$table', '$column', '$id', '$filename');
+</code></pre>
+
+<ul>
+<li><code>$table</code>, <code>$column</code>, and <code>$filename</code> have the usual meaning</li>
+<li><code>$id</code> is the column where molecule and reaction identifiers go. The identifier within SMILES string is
+    anything that goes after the molecule or reaction, separated by space. It is allowed to pass an empty
+    string or NULL as the <code>$id</code> parameter, if there are no identifiers in the SMILES file subject to import.</li>
+</ul>
+
+<p><strong>Note:</strong> When you import the file contents to a table, the old table contents are not removed. Thus, you can
+import multiple files into the same table.</p>
+
+<h3 id="exporting-sdfiles-and-rdfiles">Exporting SDFiles and RDFiles</h3>
+
+<p>You can export a molecule table to a SDF file. You can also export table fields corresponding to
+each record in the SDF file:</p>
+
+<pre><code>create table $table ($id int, $column text, ...);
+...
+select bingo.ExportSDF ('$table', '$column', '$id[, $other_columns]', '$filename.sdf');
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molfiles in <code>$column</code></li>
+<li><code>$id</code> is another column of the table, containing unique integer identifiers, which are written to <code>$id</code>
+    field of the SDF file.</li>
+<li><code>$other_columns</code> is the comma-separated list of space-separated 'property-column' pairs that are to be
+    imported. Each given SDF property is mapped to the given table column. You can specify an empty string if
+    there are no properties to export.</li>
+<li>$filename is the location of the resulting file on the <em>server filesystem</em>.</li>
+</ul>
+
+<p>A simple example of exporting the
+<a href="http://dtp.nci.nih.gov/docs/3d_database/Structural_information/structural_data.html">NCI</a> 2D compound
+database would be the following:</p>
+
+<pre><code>create table nci (nsc int, molfile text);
+...
+select bingo.ExportSDF('nci', 'molfile', 'nsc', 'C:/Users/Administrator/july2008_2d.sdf');
+</code></pre>
+
+<p>Exporting RDF files is done with <code>ExportRDF()</code> function the same way as SDF files:</p>
+
+<pre><code>create table $table ($id int, $column text, ...);
+...
+select bingo.ExportRDF ('$table', '$column', '$id[, $other_columns]', '$filename.rdf');
+</code></pre>
+
+<h2 id="utility-functions">Utility functions</h2>
+
+<h3 id="extracting-names">Extracting Names</h3>
+
+<p><code>bingo.Name</code> function extracts the molecule or reaction name from Molfile, Rxnfile, or SMILES string.</p>
+
+<pre><code>select bingo.Name(molfile) from mytable;
+
+select bingo.Name('c1ccc2ccccc2c1 Naphthalene');
+</code></pre>
+
+<h3 id="calculating-molecule-properties">Calculating Molecule Properties</h3>
+
+<p><code>bingo.getMass</code> function returns the molecular weight of the given molecule, represented as a Molfile or SMILES
+string. It has an additional parameter which defines the 'kind' of the resulting molecular mass value.</p>
+
+<ul>
+<li><code>Bingo.getMass($molecule, '</code> is a short for <code>Bingo.getWeight($molecule, 'molecular-weight')</code>.</li>
+<li><code>Bingo.getWeight($molecule, 'molecular-weight')</code> returns the molecular weight.</li>
+<li><code>Bingo.getWeight($molecule, 'most-abundant-mass')</code> returns the <a href="http://en.wikipedia.org/wiki/Mass%20%28mass%20spectrometry%29#Most%20abundant%20mass#Most%20abundant%20mass">most abundant
+    mass</a>,
+    which is calculated using most likely isotopic composition for a single random molecule.</li>
+<li><code>Bingo.getWeight($molecule, 'monoisotopic-mass')</code> returns the <a href="http://en.wikipedia.org/wiki/Monoisotopic_mass">monoisotopic
+    mass</a>, which is calculated using the most abundant isotope
+    of each element.</li>
+</ul>
+
+<p>Here are some examples of using the <code>Bingo.getMass()</code> operator:</p>
+
+<pre><code>select bingo.getMass('C1C=CC=CC=1', '');
+
+select bingo.getWeight(molfile, 'most-abundant-mass') from mytable;
+</code></pre>
+
+<p>Similarly, <code>bingo.Gross()</code> function returns the gross formula of the given molecule</p>
+
+<pre><code>select bingo.Gross('C1C=CC=CC=1');
+
+select bingo.Gross(molfile) from mytable;
+</code></pre>
+
+<h3 id="checking-for-correctness">Checking for Correctness</h3>
+
+<p>You can use the <code>bingo.CheckMolecule()</code> function to check that molecules are presented in acceptable form. If
+the molecule has some problems (unsupported format, exceeded valence, incorrect stereochemistry), the
+functions returns a string with the description of the problem. Is the molecule is represented with a correct
+Molfile or SMILES string, the function returns <code>null</code>.</p>
+
+<pre><code>select bingo.CheckMolecule($molecule);
+
+select $table.*, bingo.CheckMolecule($column) from $table where bingo.CheckMolecule($column) is not null;
+</code></pre>
+
+<p>Similarly, you can check reactions for correctness with the <code>bingo.CheckReaction()</code> function:</p>
+
+<pre><code>select bingo.CheckReaction($reaction);
+
+select $table.*, bingo.CheckReaction($column) from $table where bingo.CheckReaction($column) is not null;
+</code></pre>
+
+<h3 id="reading-files-on-server">Reading Files on Server</h3>
+
+<p>The <code>Bingo.FileToText()</code> function accepts a text file path and loads a file from the server file system
+to PostgreSQL text.</p>
+
+<pre><code>select bingo.FileToText($path);
+</code></pre>
+
+<p>Usually you may want to load the query molecule in the following way:</p>
+
+<pre><code>select * form $table where $column @ (bingo.FileToText($path), '')::bingo.sub;
+</code></pre>
+
+<p>The <code>Bingo.FileToBlob()</code> function accepts a text file path and loads a file from the server file system
+to PostgreSQL bytea.</p>
+
+<pre><code>select bingo.FileToBlob($path);
+</code></pre>
+
+<h2 id="permissions-management">Permissions management</h2>
+
+<p>Let the schema name <strong>bingo</strong> was specified during installation of the Bingo cartridge. Let the user <strong>test_user</strong> is going to create the bingo index on a table. There are two objects user will work with to create the bingo index. </p>
+
+<ul>
+<li>Schema <strong>bingo</strong>. All procedures and functions are signed by a certificate that is mapped to this schema.</li>
+<li>Two configuration tables <strong>bingo.bingo_config</strong> and <strong>bingo.bingo_tau_config</strong> with all the index parameters</li>
+</ul>
+
+<p>So for precise permissions management you need:</p>
+
+<ul>
+<li>For Bingo index creation your need to grant user <strong>test_user</strong> usage permissions on the schema <strong>bingo</strong></li>
+<li>Add permission to read table <strong>bingo.bingo_config</strong> and <strong>bingo.bingo_tau_config</strong></li>
+</ul>
+
+<h3 id="set-permissions-for-building-the-index">Set permissions for building the index</h3>
+
+<pre><code>grant usage on schema bingo to test_user;
+grant select on table bingo.bingo_config to test_user;
+grant select on table bingo.bingo_tau_config to test_user;
+</code></pre>
+
+<h2 id="maintenance">Maintenance</h2>
+
+<h3 id="obtaining-bingo-version-number">Obtaining Bingo Version Number</h3>
+
+<pre><code>select bingo.GetVersion();
+</code></pre>
+
+<h3 id="viewing-the-log-file">Viewing the Log File</h3>
+
+<p>All operation of Bingo is logged into the PostgreSQL native LOG. All error and warning messages (not necessarily visible in SQL session) are logged. Some performance measures of the SQL queries are written to the log as well.</p>

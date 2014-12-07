@@ -1,0 +1,257 @@
+<h1 id="installation-manual-postgresql">Installation Manual: PostgreSQL</h1>
+
+<h2 id="system-requirements">System Requirements</h2>
+
+<h3 id="operating-systems">Operating Systems</h3>
+
+<ul>
+<li>Windows 2000/XP/2003/Vista/2008 (32-bit and 64-bit)</li>
+<li>Linux (all modern distributions, 32-bit and 64-bit)</li>
+<li>Mac OS X (10.5 Leopard and 10.6 Snow Leopard 64 bit)</li>
+</ul>
+
+<h3 id="database-servers">Database Servers</h3>
+
+<ul>
+<li>PostreSQL 9.0, 9.1, 9.2</li>
+</ul>
+
+<h3 id="tested-configurations">Tested Configurations</h3>
+
+<p>Bingo has been successfully tested on the following configurations:</p>
+
+<table>
+<thead>
+<tr>
+<th>Bingo Version</th>
+<th>Database</th>
+<th>Operating System</th>
+<th>Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">32-bit</td>
+<td align="right">PostgreSQL 9.0.5 (32-bit)</td>
+<td align="center">Linux: Ubuntu 10.04</td>
+<td align="center">Intel x86</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="right">PostgreSQL 9.0.4 (64-bit)</td>
+<td align="center">Linux: Debian sid</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="right">PostgreSQL 9.1.2 (64-bit)</td>
+<td align="center">Linux: Debian sid</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">32-bit</td>
+<td align="right">PostgreSQL 9.0.5 (32-bit)</td>
+<td align="center">Windows 7 Enterprise</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="right">PostgreSQL 9.0.5 (64-bit)</td>
+<td align="center">Windows 7 Enterprise</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="right">PostgreSQL 9.1.2 (64-bit)</td>
+<td align="center">Windows 7 Enterprise</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">32/64 universal</td>
+<td align="right">PostgreSQL 9.0.5(Mac OS X)</td>
+<td align="right">Mac OS X 10.6 (Snow Leopard)</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">32/64 universal</td>
+<td align="right">PostgreSQL 9.1.2(Mac OS X)</td>
+<td align="right">Mac OS X 10.6 (Snow Leopard)</td>
+<td align="center">Intel x86-64</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="installation-prerequisites">Installation Prerequisites</h2>
+
+<h3 id="all-systems">All Systems</h3>
+
+<p>The shared buffer parameter in the PostgreSQL database configuration file (postgresql.conf) should be increased. For the optimal performance GGA recommends to increase the value . </p>
+
+<pre><code>shared_buffers=64MB
+</code></pre>
+
+<p>The Bingo engine uses a simplified query planner (cost estimation) algorithm. GGA recommends to disable the BITMAP scan plan type for a database. This plan type can affect LIMIT and OFFSET queries, since the bitmap index scan will search through all the table, and it will take a lot of time regardless of the LIMIT parameter. To disable the bitmap scan use the following query:</p>
+
+<pre><code>set enable_bitmapscan=off;
+</code></pre>
+
+<p>This parameter is a database parameter, so it can be modified once (e.g. after a database creating). The parameter should be disabled for the LIMIT queries to work properly. <br>
+</p>
+
+<h3 id="linux">Linux</h3>
+
+<p>The Bingo engine requires a lot of shared memory. 
+For linux systems GGA recommends to change kernel.shmmax and kernel.shmall</p>
+
+<p>Add the following line to <code>/etc/sysctl.conf</code> file:</p>
+
+<pre><code>kernel.shmmax=&lt;value&gt;
+kernel.shmall=&lt;value&gt;
+</code></pre>
+
+<p>The recommended value is appr. 50% of the RAM (in bytes)</p>
+
+<p>Execute (with the root privilegies)</p>
+
+<pre><code> sysctl -p /etc/sysctl.conf
+</code></pre>
+
+<h2 id="installation-procedure">Installation Procedure</h2>
+
+<h3 id="all-systems-1">All Systems</h3>
+
+<p>Download and unzip the cartridge archive. The Bingo library is located in the 'bin' directory (bingo_postgres.dll for WINDOWS, or bingo_postgres.so for LINUX, or bingo_postgres.dylib for MacOSX). The Bingo library is built with specific PostgreSQL headers, so there is no need to run the building procedure. You can simply run the pre-generated SQL script with specified path to the Bingo library. </p>
+
+<ol>
+<li>
+<p>Copy the library file to a desired directory. The library can be copied into the PostgreSQL package directory (<code>{POSTGRES_HOME}/lib</code> by default). In the second case the <code>-pglibdir</code> option should be added to the SQL-gen script (see the full options list below)</p>
+</li>
+<li>
+<p>Run SQL-gen script (specific for an OS). The script generates two SQL scripts:</p>
+<p>bingo_install.sql</p>
+<p>bingo_uninstall.sql</p>
+</li>
+</ol>
+
+<p>The <code>bingo_install.sql</code> installs all the functions and procedures related to the Bingo cartridge. </p>
+
+<ol>
+<li>
+<p>Execute the script from the database. Usually it can be done by the following command:</p>
+<p>psql -U $admin -d $database -f bingo_install.sql</p>
+</li>
+</ol>
+
+<p>There are several important notes below.</p>
+
+<p><strong>Note:</strong> The installation can be done only to an existing database.</p>
+
+<p><strong>Note:</strong> You must have an admin role to install bingo cartridge on your database.</p>
+
+<p><strong>Note:</strong> The installation script creates a new schema (usually <code>bingo</code>),with the default tablespace. Please consider, that the specifying schema  will be deleted while calling the uninstall script, thus the installer checks for a schema name and will raise an error if a schema already exists.</p>
+
+<p><strong>Note:</strong> You cannot install Bingo on top of the existing installation. You have to drop the cartridge schema
+(usually <code>bingo</code>) of the existing installation.</p>
+
+<p><strong>Note:</strong> You cannot install Bingo on a different PostgreSQL version, say, if you have PostgreSQL 9.1 and the Bingo library for the version 9.0 then you can get unexpected crashes.</p>
+
+<h3 id="linux-1">Linux</h3>
+
+<p>Run the <code>bingo-pg-install.sh</code> file located in the root folder of the Bingo installation file set. The help
+message from the script is the following:</p>
+
+<pre><code>Usage: bingo-pg-install.sh [parameters]
+Parameters:
+-?, -help
+  Print this help message
+-libdir path
+  Target directory with the installed bingo_postgres.so (defaut {CURRENT_DIR}/bin/).
+-schema name
+  Postgres schema name (default "bingo").
+-pglibdir
+  Use postgreSQL $libdir option (default "false")
+  Notice: bingo_postgres.so must be placed in the package library directory
+-y
+  Process default options (default "false")
+</code></pre>
+
+<p>Execute bingo_install.sql for your database.</p>
+
+<h3 id="windows">Windows</h3>
+
+<p>Run the <code>bingo-pg-install.bat</code> file located in the root folder of the Bingo installation file set. The help
+message from the script is the following:</p>
+
+<pre><code>Usage: bingo-pg-install.bat [parameters]
+Parameters:
+-?, -help
+  Print this help message
+-libdir path
+  Target directory with the installed bingo_postgres.dll (defaut {CURRENT_DIR}/bin/).
+-schema name
+  Postgres schema name (default "bingo").
+-pglibdir
+  Use postgreSQL $libdir option (default "false")
+  Notice: bingo_postgres.dll must be placed in the package library directory
+-y
+  Process default options (default "false")
+</code></pre>
+
+<p>Execute bingo_install.sql for your database.</p>
+
+<h3 id="mac-os-x">Mac OS X</h3>
+
+<p>Run the <code>bingo-pg-install.sh</code> file located in the root folder of the Bingo installation file set. The help
+message from the script is the following:</p>
+
+<pre><code>Usage: bingo-pg-install.sh [parameters]
+Parameters:
+-?, -help
+  Print this help message
+-libdir path
+  Target directory with the installed bingo_postgres.dylib (defaut {CURRENT_DIR}/bin/).
+-schema name
+  Postgres schema name (default "bingo").
+-pglibdir
+  Use postgreSQL $libdir option (default "false")
+  Notice: bingo_postgres.dylib must be placed in the package library directory
+-y
+  Process default options (default "false")
+</code></pre>
+
+<p>Execute bingo_install.sql for your database.</p>
+
+<h3 id="examples">Examples</h3>
+
+<p>For the most simple installation, the defaults are taken: <code>CURRENT_DIR/bin</code> directory for binary, <code>bingo</code> for the schema name, <code>test</code> for the database name and <code>postgres</code> for the admin user.</p>
+
+<pre><code>bingo-pg-install.sh
+psql -U postgres -d test -f bingo_install.sql
+</code></pre>
+
+<p>If you have copied the library to the directory '/home/myself/':</p>
+
+<pre><code>bingo-pg-install.sh -libdir /home/myself
+psql -U postgres -d test -f bingo_install.sql
+</code></pre>
+
+<p>If you have copied the library to the Postges package directory '/usr/lib/postgresql/9.0/lib/' and want to create another <code>bingo2</code> schema for storing the procedures :</p>
+
+<pre><code>bingo-pg-install.sh -pglibdir -schema bingo2
+psql -U postgres -d test -f bingo_install.sql
+</code></pre>
+
+<h3 id="checking-the-installation">Checking the Installation</h3>
+
+<p>To check that the shared library file is loaded properly by Postgres, you can try this simple query:</p>
+
+<pre><code>SELECT Bingo.GetVersion();
+</code></pre>
+
+<h2 id="uninstalling-the-cartridge">Uninstalling the Cartridge</h2>
+
+<p>To uninstall the cartridge, you must:</p>
+
+<ol>
+<li>Execute bingo_uninstall.sql (generated on the installation step) for your database.</li>
+</ol>

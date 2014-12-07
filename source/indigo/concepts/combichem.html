@@ -1,0 +1,435 @@
+<h1 id="reaction-enumeration-examples">Reaction Enumeration Examples</h1>
+
+<h3 id="peptide-bond-formation">Peptide Bond Formation</h3>
+
+<table>
+<thead>
+<tr>
+<th>Reaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_rxn.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Monomers were divided into two groups: acids and amines.</p>
+
+<p><strong>Acids:</strong></p>
+
+<table>
+<tbody>
+<tr>
+<th>A:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_acids_1.svg"></td>
+<th>B:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_acids_2.svg"></td>
+<th>C:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_acids_3.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Amines:</strong></p>
+
+<table>
+<tbody>
+<tr>
+<th>X:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_amines_1.svg"></td>
+<th>Y:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_amines_2.svg"></td>
+<th>Z:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_amines_3.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Without the specification any additional options, Legio generates six products. Legio tries to perform specified
+reactions for each monomer from both the first group (acids) and the second group (amines):</p>
+
+<table>
+<tbody>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+<tr>
+<th>X</th>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_am_prod_1.svg"></td>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_am_prod_4.svg"></td>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_am_prod_7.svg"></td>
+</tr>
+<tr>
+<th>Y</th>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_am_prod_2.svg"></td>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_am_prod_5.svg"></td>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_am_prod_8.svg"></td>
+</tr>
+<tr>
+<th>Z</th>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_am_prod_3.svg"></td>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_am_prod_6.svg"></td>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_am_prod_9.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>You can see that all the stereochemistry configurations are preserved during the reaction.</p>
+
+<p>When the &#8220;all reactions&#8221; mode is specified,  products can  take place in another
+reaction too, but only with original monomers or their products.  So with such options, three additional
+products are generated:</p>
+
+<table>
+<tbody>
+<tr>
+<th>B + X + X:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_prod_all_10.svg"></td>
+</tr>
+<tr>
+<th>B + Y + Y:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_prod_all_11.svg"></td>
+</tr>
+<tr>
+<th>B + Z + Z:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_prod_all_12.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>When the &#8220;one tube&#8221; mode is specified, any monomers and their products can make another reaction. With this  mode,
+it is imagined that all monomers are in one tube. Another three products are generated:</p>
+
+<table>
+<tbody>
+<tr>
+<th>B + X + Y:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_prod_all_one_11.svg"></td>
+</tr>
+<tr>
+<th>B + X + Z:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_prod_all_one_12.svg"></td>
+</tr>
+<tr>
+<th>B + Y + Z:</th>
+<td><img alt="" src="../../assets/indigo/concepts/legio_am_prod_all_one_14.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="reactants-matching">Reactants Matching</h3>
+
+<p>When the reaction does not have any R-group atoms, matching of reactants to monomers is done according to substructure search rules.</p>
+
+<table>
+<thead>
+<tr>
+<th>Reaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cisd_rxn.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Monomers:</strong></p>
+
+<table>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cisd_diene9.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cisd_dienophile9.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Products:</strong></p>
+
+<table>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cisd_prod_1.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cisd_prod_2.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="multistep-reactions">Multistep Reactions</h3>
+
+<p>Legio can enumerate products appearing in the multistep reactions when existing 
+monomers or produced products can take place in the reaction.</p>
+
+<table>
+<thead>
+<tr>
+<th>Reaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_mult_rxn.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Monomers:</strong></p>
+
+<table>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_mult_accl.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_mult_glucose.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Products:</strong></p>
+
+<table>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_mult_prod_19.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_mult_prod_31.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="generation-modes">Generation Modes</h3>
+
+<p>Legio supports two generation modes for multistep reactions.  In the "grid mode", only one monomer from each group can react. 
+This can be represented as a matrix where the columns correspond to the first group and the rows correspond 
+to the second group. The reaction is performed in each cell. In the "one tube" mode, all of the monomers are in the same tube.</p>
+
+<table>
+<thead>
+<tr>
+<th>Reaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_modes_rxn.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Monomers:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_modes_mon_1.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_modes_mon_2.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>X</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_modes_symm.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>When the "grid mode" is on, each product can react with monomers from the same cell and with other products, formed earlier in this cell. For example:</p>
+
+<table>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_modes_prod_all_5.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_modes_prod_all_18.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_modes_prod_all_6.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_modes_prod_all_25.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>When the "one tube" mode is active, all of the products and monomers are contained in one tube and can react together. Legio generates the following new products:</p>
+
+<table>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_modes_prod_all_one_17.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_modes_prod_all_one_37.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="intramolecular-interactions">Intramolecular Interactions</h3>
+
+<table>
+<thead>
+<tr>
+<th>Reaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_intr_rxn.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Monomer</th>
+<th>Product</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_intr_mon.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_intr_prod_1.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="tetrahedral-stereochemistry">Tetrahedral Stereochemistry</h3>
+
+<table>
+<thead>
+<tr>
+<th>Reaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_sc_rxn.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Monomers</th>
+<th>Products</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_sc_mon_1.svg"></td>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_sc_prod_1.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_sc_mon_2.svg"></td>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_sc_prod_2.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_sc_mon_3.svg"></td>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_sc_prod_3.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_sc_mon_4.svg"></td>
+<td align="center">no product</td>
+</tr>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_sc_mon_5.svg"></td>
+<td align="center"><img alt="" src="../../assets/indigo/concepts/legio_sc_prod_4.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="cistrans-stereochemistry">Cis-trans stereochemistry</h3>
+
+<table>
+<thead>
+<tr>
+<th>Reaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cs_rxn.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Monomers</th>
+<th>Products</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cs_mon_1.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cs_prod_1.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cs_mon_2.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cs_prod_2.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cs_mon_3.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_cs_prod_3.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>The third example shows that stereochemistry configuration modifications are dependent.</p>
+
+<h3 id="functional-groups-with-2-connections">Functional Groups with 2 Connections</h3>
+
+<table>
+<thead>
+<tr>
+<th>Reaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_peps_rxn.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Monomers:</strong></p>
+
+<table>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_peps_glycine.svg"></td>
+<td><img alt="" src="../../assets/indigo/concepts/legio_peps_lysine.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Products:</strong></p>
+
+<table>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_peps_prod_1.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_peps_prod_2.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../../assets/indigo/concepts/legio_peps_prod_3.svg"></td>
+</tr>
+</tbody>
+</table>
