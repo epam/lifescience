@@ -68,7 +68,7 @@ Input/Output
 |                    |                    |    v3000.          |                    |
 |                    |                    |    Otherwise, save |                    |
 |                    |                    |    to v2000.       |                    |
-                                                                                   
+|                    |                    |                    |                    |
 +--------------------+--------------------+--------------------+--------------------+
 | ``molfile-saving-n | boolean            | Do no write the    | false              |
 | o-chiral``         |                    | "Chiral" flag when |                    |
@@ -164,7 +164,7 @@ Rendering
 |                    |                    | -  ``none``: hide  |                    |
 |                    |                    |    all labels,     |                    |
 |                    |                    |    show only bonds |                    |
-                                                                                   
+|                    |                    |                    |                    |
 +--------------------+--------------------+--------------------+--------------------+
 | ``render-highlight | boolean            | Always show labels | false              |
 | ed-atoms-visible`` |                    | of highlighted     |                    |
@@ -181,7 +181,7 @@ Rendering
 |                    |                    |    render just the |                    |
 |                    |                    |    superatoms'     |                    |
 |                    |                    |    names           |                    |
-                                                                                   
+|                    |                    |                    |                    |
 +--------------------+--------------------+--------------------+--------------------+
 | ``render-coloring` | boolean            | Turn on atom       | false              |
 | `                  |                    | coloring, e.g.     |                    |
@@ -226,7 +226,7 @@ Rendering
 |                    |                    |    information     |                    |
 |                    |                    |    about the       |                    |
 |                    |                    |    stereogroups.   |                    |
-                                                                                   
+|                    |                    |                    |                    |
 +--------------------+--------------------+--------------------+--------------------+
 | ``render-relative- | float              | Set the thickness  | 1.0                |
 | thickness``        |                    | of a bond to X/30  |                    |
@@ -244,7 +244,7 @@ Rendering
 |                    |                    |    calalysts above |                    |
 |                    |                    |    and below the   |                    |
 |                    |                    |    reaction arrow  |                    |
-                                                                                   
+|                    |                    |                    |                    |
 +--------------------+--------------------+--------------------+--------------------+
 | ``render-comment`` | string             | Put a single-line  | -                  |
 |                    |                    | comment at the top |                    |
@@ -376,7 +376,7 @@ Substructure Matching
 |                    |                    |    "CCC" matches   |                    |
 |                    |                    |    "C1CC1" six     |                    |
 |                    |                    |    times           |                    |
-                                                                                   
+|                    |                    |                    |                    |
 +--------------------+--------------------+--------------------+--------------------+
 | ``max-embeddings`` | int                | The maximum number | 10000              |
 |                    |                    | of embeddings      |                    |
@@ -417,7 +417,7 @@ Reaction Products Enumeration
 |                    |                    |    reactions take  |                    |
 |                    |                    |    place in one    |                    |
 |                    |                    |    tube            |                    |
-                                                                                   
+|                    |                    |                    |                    |
 +--------------------+--------------------+--------------------+--------------------+
 | ``rpe-self-reactio | boolean            | Enable             | false              |
 | n``                |                    | intramolecular     |                    |
@@ -449,4 +449,3 @@ InChI
 +=====================+==========+====================================================================================================================================================================+===========+
 | ``inchi-options``   | string   | Options supported by the official InChI plugin: /NEWPSOFF /DoNotAddH /SNon /SRel /SRac /SUCF /ChiralFlagON /ChiralFlagOFF /SUU /SLUUD /FixedH /RecMet /KET /15T.   | -         |
 +---------------------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+
-
