@@ -1,6 +1,22 @@
 Open-Source Initiative
 ======================
 
+.. toctree::
+    :titlesonly:
+    :includehidden:
+    :maxdepth: 4
+
+    Bingo <bingo/index>
+    Ketcher <ketcher/index>
+    Indigo Toolkit <indigo/index>
+    Indigo ELN <indigo/eln/index>
+    Imago OCR <imago/index>
+    Parso <parso>
+    Selenium Framework <selenium>
+    resources
+    Downloads <download/index>
+    contact
+
 | We have extensive experience and expertise in developing organic
 chemistry software products for use in pharmaceutical companies,
 research institutes, and universities. At the same time, we have been

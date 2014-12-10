@@ -1,6 +1,12 @@
 Download Indigo Toolkit
 =======================
 
+.. toctree::
+    :hidden:
+
+    previous
+    dev
+
 Indigo 1.1.12
 -------------
 

@@ -1,6 +1,13 @@
 Ketcher
 =======
 
+.. toctree::
+    :hidden:
+
+    editing-tips
+    developers-manual
+    help
+
 Overview
 --------
 

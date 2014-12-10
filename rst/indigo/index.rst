@@ -1,6 +1,19 @@
 Indigo Toolkit
 ==============
 
+.. toctree::
+    :hidden:
+
+    Concepts <concepts/index>
+    API <api/index>
+    knime
+    legio
+    indigo-depict
+    indigo-cano
+    indigo-deco
+    chemdiff
+    changelog
+
 Overview
 --------
 
@@ -184,4 +197,3 @@ You may need the commercial license if you want to:
 
 -  Receive ongoing support and maintenance
 -  Include Indigo as component in your proprietary software product
-

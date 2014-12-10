@@ -1,6 +1,18 @@
 Imago OCR
 =========
 
+.. toctree::
+    :hidden:
+
+    examples
+    report
+    imago-gui
+    imago_console
+    c
+    java
+    dependencies
+    changelog
+
 Overview
 --------
 

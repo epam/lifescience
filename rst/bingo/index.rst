@@ -1,6 +1,19 @@
 Bingo
 =====
 
+.. toctree::
+    :hidden:
+
+    building-from-source
+    installation-manual-oracle
+    installation-manual-sqlserver
+    installation-manual-postgres
+    performance-tips-oracle
+    user-manual-oracle
+    user-manual-sqlserver
+    user-manual-postgres
+    changelog
+
 Overview
 --------
 
@@ -182,4 +195,3 @@ You may need the commercial license if you want to:
 -  Include Bingo as a component in your proprietary software product
 -  Use Bingo with Oracle licensed not with OTN Developer License, or
    with MS SQL Server Enterprise Edition
-

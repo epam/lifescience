@@ -1,6 +1,12 @@
 API
 ===
 
+.. toctree::
+    :hidden:
+
+    c
+    options
+
 **`New documentation (work in progress) <TODO:indigo-doc>`__**
 
 Overview
@@ -1088,7 +1094,7 @@ Java:
     {
        System.out.println("data sgroup " + dsg.index());
        for (IndigoObject atom : dsg.iterateAtoms())
-          System.out.println("  atom " + atom.index());  
+          System.out.println("  atom " + atom.index());
     }
 
 C#:
@@ -1374,7 +1380,7 @@ In C#, the "using" statement can make the job easier:
 
     using (IndigoObject f = indigo.writeFile("test.sdf"))
     {
-      f.sdfAppend(mol);  
+      f.sdfAppend(mol);
     }
 
 In Python, the "with" syntax serves the same purpose:
@@ -1699,7 +1705,7 @@ Python:
     if not match:
        match = indigo.exactMatch(mol1, mol2) # eqiuvalent to ALL
     if not match:
-       match = indigo.exactMatch(mol1, mol2, "ALL -STE") # equivalent to "ELE MAS FRA"  
+       match = indigo.exactMatch(mol1, mol2, "ALL -STE") # equivalent to "ELE MAS FRA"
     if not match:
        match = indigo.exactMatch(mol1, mol2, "NONE")
 
@@ -2308,7 +2314,7 @@ Java:
 
       if (scaf != null) {
         System.out.println("max scaffold: " + scaf.smiles());
-        for(IndigoObject scaffold: scaf.allScaffolds().iterateArray()) 
+        for(IndigoObject scaffold: scaf.allScaffolds().iterateArray())
            System.out.println("current scaffold: " + scaffold.smiles());
       }
 
@@ -2325,7 +2331,7 @@ C#:
 
       if (scaf != null) {
         System.Console.WriteLine("max scaffold: " + scaf.smiles());
-        for(IndigoObject scaffold: scaf.allScaffolds().iterateArray()) 
+        for(IndigoObject scaffold: scaf.allScaffolds().iterateArray())
            System.Console.WriteLine("current scaffold: " + scaffold.smiles());
       }
 
@@ -2696,4 +2702,3 @@ One can use both ``-`` and ``/`` prefix for them:
 ::
 
     indigo.setOption("inchi-options", "-DoNotAddH /SUU -SLUUD")
-

@@ -8,20 +8,21 @@ To learn more about GGA's extensive expertise and our broad range of
 service offerings, please contact us at the following locations. We look
 forward to speaking with you about your company's specific needs.
 
-| Cambridge, MA, USA Location:
-|  GGA Software Services LLC
-|  One Mifflin Place
-|  Cambridge, MA 02138, USA
-|  Tel: +1-617-491-5100
-|  Fax: +1-617-491-0932
-|  Email: info@ggasoftware.com
-|  Saint Petersburg, Russia Location:
-|  GGA Software Services
-|  41, Nab. Chernoy rechki
-|  197342, Saint Petersburg, Russia
-|  Tel: +7-812-702-6706
-|  Fax: +7-812-702-6708
-|  E-mail: info@ggasoftware.com
+ |  Cambridge, MA, USA Location:
+ |  GGA Software Services LLC
+ |  One Mifflin Place
+ |  Cambridge, MA 02138, USA
+ |  Tel: +1-617-491-5100
+ |  Fax: +1-617-491-0932
+ |  Email: info@ggasoftware.com
+
+ |  Saint Petersburg, Russia Location:
+ |  GGA Software Services
+ |  41, Nab. Chernoy rechki
+ |  197342, Saint Petersburg, Russia
+ |  Tel: +7-812-702-6706
+ |  Fax: +7-812-702-6708
+ |  E-mail: info@ggasoftware.com
 
 Feedback on Open-source Software
 --------------------------------
@@ -54,4 +55,3 @@ you want to:
    product
 -  Use Bingo with Oracle that is licensed with a license other than the
    OTN Developer License, or with MS SQL Server Enterprise Edition
-

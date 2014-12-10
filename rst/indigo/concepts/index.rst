@@ -1,6 +1,13 @@
 Concepts
 ========
 
+.. toctree::
+    :hidden:
+
+    deco
+    combichem
+    transformation
+
 File Formats
 ------------
 
