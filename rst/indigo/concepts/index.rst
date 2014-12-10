@@ -2,7 +2,8 @@ Concepts
 ========
 
 .. toctree::
-    :hidden:
+    :titlesonly:
+    :includehidden:
 
     deco
     combichem

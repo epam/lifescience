@@ -2,9 +2,7 @@ Open-Source Initiative
 ======================
 
 .. toctree::
-    :titlesonly:
-    :includehidden:
-    :maxdepth: 4
+    :hidden:
 
     Bingo <bingo/index>
     Ketcher <ketcher/index>

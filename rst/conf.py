@@ -110,7 +110,7 @@ extensions = ['alabaster']
 html_theme = 'alabaster'
 html_sidebars = {
    '**': [
-       'about.html', 'globaltoc.html', 'searchbox.html',
+       'about.html', 'localtoc.html', 'navigation.html', 'searchbox.html',
    ]
 }
 
@@ -220,7 +220,7 @@ latex_documents = [
    u'EPAM Systems', 'manual'),
 ]
 
-# The name of an image file (relative to this directory) to place at the top of
+# The name of an image file (relative to this directory) to place at the top fo
 # the title page.
 #latex_logo = None
 

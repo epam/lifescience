@@ -2,7 +2,8 @@ Bingo
 =====
 
 .. toctree::
-    :hidden:
+    :titlesonly:
+    :includehidden:
 
     building-from-source
     installation-manual-oracle

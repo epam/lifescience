@@ -2,7 +2,8 @@ Indigo Toolkit
 ==============
 
 .. toctree::
-    :hidden:
+    :titlesonly:
+    :includehidden:
 
     Concepts <concepts/index>
     API <api/index>

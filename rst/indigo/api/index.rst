@@ -2,7 +2,8 @@ API
 ===
 
 .. toctree::
-    :hidden:
+    :titlesonly:
+    :includehidden:
 
     c
     options

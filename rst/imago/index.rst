@@ -2,7 +2,8 @@ Imago OCR
 =========
 
 .. toctree::
-    :hidden:
+    :titlesonly:
+    :includehidden:
 
     examples
     report

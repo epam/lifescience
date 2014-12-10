@@ -1,9 +1,6 @@
 Help
 ====
 
-Ketcher
-=======
-
 ***Ketcher*** is a tool to draw molecular structures and chemical
 reactions.
 

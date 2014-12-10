@@ -2,7 +2,8 @@ Ketcher
 =======
 
 .. toctree::
-    :hidden:
+    :titlesonly:
+    :includehidden:
 
     editing-tips
     developers-manual
