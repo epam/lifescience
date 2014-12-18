@@ -2,7 +2,7 @@ Indigo ELN: The Open-Source Chemistry Electronic Lab Notebook
 =============================================================
 
 .. toctree::
-    :titlesonly:
+    :hidden:
     :includehidden:
 
     changelog

@@ -2,7 +2,7 @@ API
 ===
 
 .. toctree::
-    :titlesonly:
+    :hidden:
     :includehidden:
 
     c

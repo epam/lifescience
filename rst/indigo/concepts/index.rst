@@ -2,7 +2,7 @@ Concepts
 ========
 
 .. toctree::
-    :titlesonly:
+    :hidden:
     :includehidden:
 
     deco

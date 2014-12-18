@@ -2,7 +2,7 @@ Bingo
 =====
 
 .. toctree::
-    :titlesonly:
+    :hidden:
     :includehidden:
 
     building-from-source

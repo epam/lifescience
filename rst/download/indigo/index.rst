@@ -2,7 +2,7 @@ Download Indigo Toolkit
 =======================
 
 .. toctree::
-    :titlesonly:
+    :hidden:
     :includehidden:
 
     previous

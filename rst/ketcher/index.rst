@@ -2,7 +2,7 @@ Ketcher
 =======
 
 .. toctree::
-    :titlesonly:
+    :hidden:
     :includehidden:
 
     editing-tips
