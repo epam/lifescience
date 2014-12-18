@@ -34,9 +34,6 @@ extensions = [
     'sphinx.ext.ifconfig',
 ]
 
-# Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
-
 # The suffix of source filenames.
 source_suffix = '.rst'
 
@@ -55,7 +52,7 @@ copyright = u'2014, EPAM Systems'
 # built documents.
 #
 # The short X.Y version.
-version = '0.1.0'
+version = '0.2.0'
 # The full version, including alpha/beta/rc tags.
 release = '0.1.0'
 
@@ -103,11 +100,8 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-import alabaster
-
-html_theme_path = [alabaster.get_path()]
-extensions = ['alabaster']
-html_theme = 'alabaster'
+html_theme_path = ['.']
+html_theme = 'theme'
 html_sidebars = {
    '**': [
        'about.html', 'localtoc.html', 'navigation.html', 'searchbox.html',
@@ -124,9 +118,6 @@ html_theme_options = {
     'sidebar_includehidden': True,
     'show_powered_by': False,
 }
-
-# Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
