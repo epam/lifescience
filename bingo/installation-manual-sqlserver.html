@@ -8,7 +8,7 @@
     
     <title>Installation Manual: SQL Server &mdash; Life Sciences 0.1.0 documentation</title>
     
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/elstyle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -23,6 +23,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
     <link rel="up" title="Bingo" href="index.html" />
     <link rel="next" title="Installation Manual: PostgreSQL" href="installation-manual-postgres.html" />
@@ -32,8 +33,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -53,7 +54,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="installation-manual-sql-server">
 <h1>Installation Manual: SQL Server<a class="headerlink" href="#installation-manual-sql-server" title="Permalink to this headline">¶</a></h1>
@@ -143,11 +144,11 @@ following exception:</p>
 </div>
 <p>To adjust the memory limit for CLR you have to specify the -g switch in
 the SQL Server Configuration Manager. For example, to set the memory
-limit for the CLR code to 512Mb, you need to add the <code class="docutils literal"><span class="pre">-g512</span></code> switch to
+limit for the CLR code to 512Mb, you need to add the <tt class="docutils literal"><span class="pre">-g512</span></tt> switch to
 the Startup Parameters in the properties for your SQL Server instance in
 the SQL Server Configuration Manager.</p>
 <p><strong>Note:</strong> In the 32-bit architecture, the total allocatable memory is
-limited to 2GB unless you add the <code class="docutils literal"><span class="pre">/3gb</span></code> switch to boot.ini file or
+limited to 2GB unless you add the <tt class="docutils literal"><span class="pre">/3gb</span></tt> switch to boot.ini file or
 specify “Use AWE to allocate memory” in the SQL Server settings. So
 increasing the memory limit for CLR, you reduce the memory limit for the
 internal SQL Server cache.</p>
@@ -174,7 +175,7 @@ memory minus 1 GB.</p>
 </div>
 <div class="section" id="installation-procedure">
 <h2>Installation Procedure<a class="headerlink" href="#installation-procedure" title="Permalink to this headline">¶</a></h2>
-<p>Log in as Administrator. Run the <code class="docutils literal"><span class="pre">bingo-sqlserver-install.bat</span></code> file
+<p>Log in as Administrator. Run the <tt class="docutils literal"><span class="pre">bingo-sqlserver-install.bat</span></tt> file
 located in the Bingo installation file set. The help message from the
 script is the following:</p>
 <div class="highlight-python"><div class="highlight"><pre>Usage: bingo-sqlserver-install.bat [parameters]
@@ -199,28 +200,28 @@ Parameters:
 </pre></div>
 </div>
 <p><strong>Note:</strong> The installer automatically issues the
-<code class="docutils literal"><span class="pre">ALTER</span> <span class="pre">DATABASE</span> <span class="pre">$(database)</span> <span class="pre">SET</span> <span class="pre">ENABLE_BROKER</span></code> statement if the
-<code class="docutils literal"><span class="pre">ENABLE_BROKER</span></code> option is not activated on your database. As this
+<tt class="docutils literal"><span class="pre">ALTER</span> <span class="pre">DATABASE</span> <span class="pre">$(database)</span> <span class="pre">SET</span> <span class="pre">ENABLE_BROKER</span></tt> statement if the
+<tt class="docutils literal"><span class="pre">ENABLE_BROKER</span></tt> option is not activated on your database. As this
 involves an exclusive database lock, we recommend that, in this case you
 restart the database prior to the installation.</p>
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <p>For the simplest installation, the defaults are taken, including
-<code class="docutils literal"><span class="pre">C:\bingo</span></code> directory for binaries. You have to specify only the
-<code class="docutils literal"><span class="pre">-database</span></code> flag with the name of your database:</p>
+<tt class="docutils literal"><span class="pre">C:\bingo</span></tt> directory for binaries. You have to specify only the
+<tt class="docutils literal"><span class="pre">-database</span></tt> flag with the name of your database:</p>
 <div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb
 </pre></div>
 </div>
 <p>If you use an SQL Server user account for thed DBA user (normally &#8216;sa&#8217;),
-you have to specify it with the <code class="docutils literal"><span class="pre">-dbaname</span></code> option:</p>
+you have to specify it with the <tt class="docutils literal"><span class="pre">-dbaname</span></tt> option:</p>
 <div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb -dbaname sa
 </pre></div>
 </div>
-<p>To run in the non-interactive mode, you must specify <code class="docutils literal"><span class="pre">-y</span></code></p>
+<p>To run in the non-interactive mode, you must specify <tt class="docutils literal"><span class="pre">-y</span></tt></p>
 <div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb -y
 </pre></div>
 </div>
-<p>(and also <code class="docutils literal"><span class="pre">-dbass</span></code> when you specify <code class="docutils literal"><span class="pre">-dbaname</span></code>)</p>
+<p>(and also <tt class="docutils literal"><span class="pre">-dbass</span></tt> when you specify <tt class="docutils literal"><span class="pre">-dbaname</span></tt>)</p>
 <div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb -dbaname sa -dbapass pwd123 -y
 </pre></div>
 </div>
@@ -231,9 +232,9 @@ you have to specify it with the <code class="docutils literal"><span class="pre"
 <p>To uninstall the cartridge, you must:</p>
 <ol class="arabic simple">
 <li>Remove all special indices created by users, by calling the
-<code class="docutils literal"><span class="pre">bingo.DropIndex()</span></code> function</li>
-<li>Run <code class="docutils literal"><span class="pre">bingo-sqlserver-uninstall.bat</span></code> with the same <code class="docutils literal"><span class="pre">-dbaname</span></code> ,
-<code class="docutils literal"><span class="pre">-bingoname</span></code>, and <code class="docutils literal"><span class="pre">-database</span></code> parameters that you passed to the
+<tt class="docutils literal"><span class="pre">bingo.DropIndex()</span></tt> function</li>
+<li>Run <tt class="docutils literal"><span class="pre">bingo-sqlserver-uninstall.bat</span></tt> with the same <tt class="docutils literal"><span class="pre">-dbaname</span></tt> ,
+<tt class="docutils literal"><span class="pre">-bingoname</span></tt>, and <tt class="docutils literal"><span class="pre">-database</span></tt> parameters that you passed to the
 installer.</li>
 </ol>
 <p>The help message from the uninstall script is the following:</p>
@@ -261,7 +262,7 @@ Parameters:
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
 <p class="logo">
   <a href="../index.html">
@@ -273,36 +274,45 @@ Parameters:
 </p>
 
 
-
-
-
-
-
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Installation Manual: SQL Server</a><ul>
-<li><a class="reference internal" href="#system-requirements">System Requirements</a><ul>
-<li><a class="reference internal" href="#operating-systems">Operating Systems</a></li>
-<li><a class="reference internal" href="#database-servers">Database Servers</a></li>
-<li><a class="reference internal" href="#tested-configurations">Tested Configurations</a></li>
+<h3>Table Of Contents</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Bingo</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="building-from-source.html">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation-manual-oracle.html">Installation Manual: Oracle</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Installation Manual: SQL Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-requirements">System Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#operating-systems">Operating Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database-servers">Database Servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tested-configurations">Tested Configurations</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#setting-up-a-server">Setting Up a Server</a><ul>
-<li><a class="reference internal" href="#bit">32-bit</a></li>
-<li><a class="reference internal" href="#id1">64-bit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-a-server">Setting Up a Server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bit">32-bit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">64-bit</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#installation-procedure">Installation Procedure</a><ul>
-<li><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-procedure">Installation Procedure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#uninstalling-the-cartridge">Uninstalling the Cartridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uninstalling-the-cartridge">Uninstalling the Cartridge</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="installation-manual-postgres.html">Installation Manual: PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance-tips-oracle.html">Performance Tips: Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual-oracle.html">User Manual: Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual-sqlserver.html">User Manual: SQL Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual-postgres.html">User Manual: PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html">Bingo Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#why-select-bingo-as-your-molecular-search-cartridge">Why Select Bingo as Your Molecular Search Cartridge?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#commercial-availability">Commercial Availability</a></li>
 </ul>
-<h3>Navigation</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Bingo</a></li>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
@@ -314,8 +324,7 @@ Parameters:
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
 </ul>
 
-
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -334,10 +343,7 @@ Parameters:
     </div>
     <div class="footer">
       &copy;2014, EPAM Systems.
-      
     </div>
-
-    
 
     
   </body>

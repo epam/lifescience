@@ -8,7 +8,7 @@
     
     <title>Installation Manual: Oracle &mdash; Life Sciences 0.1.0 documentation</title>
     
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/elstyle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -23,6 +23,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
     <link rel="up" title="Bingo" href="index.html" />
     <link rel="next" title="Installation Manual: SQL Server" href="installation-manual-sqlserver.html" />
@@ -32,8 +33,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -53,7 +54,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="installation-manual-oracle">
 <h1>Installation Manual: Oracle<a class="headerlink" href="#installation-manual-oracle" title="Permalink to this headline">¶</a></h1>
@@ -187,11 +188,11 @@
 <div class="section" id="all-systems">
 <h3>All Systems<a class="headerlink" href="#all-systems" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>The value of the <code class="docutils literal"><span class="pre">open_cursors</span></code> parameter of the Oracle database
+<li>The value of the <tt class="docutils literal"><span class="pre">open_cursors</span></tt> parameter of the Oracle database
 server should be increased to 1000.</li>
-<li>The <code class="docutils literal"><span class="pre">extproc</span></code> listener must be run in Oracle. The example of the
-<code class="docutils literal"><span class="pre">listener.ora</span></code> configuration file is provided below.</li>
-<li>Note the <code class="docutils literal"><span class="pre">EXTPROC_DLLS=ANY</span></code> setting: It makes Oracle tolerant to
+<li>The <tt class="docutils literal"><span class="pre">extproc</span></tt> listener must be run in Oracle. The example of the
+<tt class="docutils literal"><span class="pre">listener.ora</span></tt> configuration file is provided below.</li>
+<li>Note the <tt class="docutils literal"><span class="pre">EXTPROC_DLLS=ANY</span></tt> setting: It makes Oracle tolerant to
 the location of external libraries (including the Bingo library).
 However, this setting is not required when you install the Bingo
 library in the Oracle system directory (default).</li>
@@ -231,7 +232,7 @@ distributions.</p>
 </div>
 <div class="section" id="bit-linux-or-solaris-with-32-bit-extproc">
 <h3>64-bit Linux or Solaris, with 32-bit extproc<a class="headerlink" href="#bit-linux-or-solaris-with-32-bit-extproc" title="Permalink to this headline">¶</a></h3>
-<p>If you have 64-bit Oracle but want to keep the 32-bit <code class="docutils literal"><span class="pre">extproc</span></code> for
+<p>If you have 64-bit Oracle but want to keep the 32-bit <tt class="docutils literal"><span class="pre">extproc</span></tt> for
 some reason, you can still use the 32-bit version of Bingo.</p>
 <div class="highlight-python"><div class="highlight"><pre>SID_LIST_LISTENER =
   (SID_LIST =
@@ -263,8 +264,8 @@ some reason, you can still use the 32-bit version of Bingo.</p>
 <p>In addition to the kernel parameters described in <a class="reference external" href="http://download.oracle.com/docs/cd/B19306_01/install.102/b25286/pre_install.htm#BABCHAED">Oracle® Database
 Installation Guide 10g Release 2 (10.2) for Apple Mac OS
 X</a>
-you should change <code class="docutils literal"><span class="pre">kern.sysv.shmseg</span></code> from its default value, which is
-too low. Add the following line to <code class="docutils literal"><span class="pre">/etc/sysctl.conf</span></code> file:</p>
+you should change <tt class="docutils literal"><span class="pre">kern.sysv.shmseg</span></tt> from its default value, which is
+too low. Add the following line to <tt class="docutils literal"><span class="pre">/etc/sysctl.conf</span></tt> file:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">kern</span><span class="o">.</span><span class="n">sysv</span><span class="o">.</span><span class="n">shmseg</span><span class="o">=</span><span class="mi">256</span>
 </pre></div>
 </div>
@@ -275,18 +276,18 @@ too low. Add the following line to <code class="docutils literal"><span class="p
 <div class="section" id="id1">
 <h3>All Systems<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p><strong>Note:</strong> The installation script creates a new user (usually
-<code class="docutils literal"><span class="pre">bingo</span></code>), with the default tablespace <code class="docutils literal"><span class="pre">bingo</span></code> and the temporary
-tablespace <code class="docutils literal"><span class="pre">bingo_temp</span></code>. If you specify another username for Bingo
-(for example, <code class="docutils literal"><span class="pre">bingo1</span></code>), the tablespace names will be <code class="docutils literal"><span class="pre">bingo1</span></code> and
-<code class="docutils literal"><span class="pre">bingo1_temp</span></code>. The datafiles, located at the default Oracle datafile
+<tt class="docutils literal"><span class="pre">bingo</span></tt>), with the default tablespace <tt class="docutils literal"><span class="pre">bingo</span></tt> and the temporary
+tablespace <tt class="docutils literal"><span class="pre">bingo_temp</span></tt>. If you specify another username for Bingo
+(for example, <tt class="docutils literal"><span class="pre">bingo1</span></tt>), the tablespace names will be <tt class="docutils literal"><span class="pre">bingo1</span></tt> and
+<tt class="docutils literal"><span class="pre">bingo1_temp</span></tt>. The datafiles, located at the default Oracle datafile
 directory, will be 5 megabytes in size and will auto-extend by 5
 megabytes without size limit. If you need to change the tablespace
 names, datafile locations, or size conditions, please edit the
-<code class="docutils literal"><span class="pre">system/bingo_init.sql</span></code> file manually before running the installation
+<tt class="docutils literal"><span class="pre">system/bingo_init.sql</span></tt> file manually before running the installation
 script. If you are installing on Oracle 9, edit the
-<code class="docutils literal"><span class="pre">system/bingo_init_9.sql</span></code> file instead.</p>
+<tt class="docutils literal"><span class="pre">system/bingo_init_9.sql</span></tt> file instead.</p>
 <p><strong>Note:</strong> You cannot install Bingo on top of the existing installation.
-You have to drop the cartridge user (usually <code class="docutils literal"><span class="pre">bingo</span></code>) of the existing
+You have to drop the cartridge user (usually <tt class="docutils literal"><span class="pre">bingo</span></tt>) of the existing
 installation (see the
 <a class="reference external" href="installation-manual-oracle.html#uninstalling-the-cartridge">Uninstalling</a>
 section below). Or you can install a new version to another user.</p>
@@ -295,10 +296,10 @@ section below). Or you can install a new version to another user.</p>
 <h3>Windows<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>Log in as Administrator if you are installing Bingo in the Oracle
 library directory (this is the default behavior). If you do not have
-administrator rights, please override the default setting by <code class="docutils literal"><span class="pre">-libdir</span></code>
-flag. In the latter case, you should have the <code class="docutils literal"><span class="pre">EXTPROC_DLLS</span></code> option
+administrator rights, please override the default setting by <tt class="docutils literal"><span class="pre">-libdir</span></tt>
+flag. In the latter case, you should have the <tt class="docutils literal"><span class="pre">EXTPROC_DLLS</span></tt> option
 set up properly.</p>
-<p>Run the <code class="docutils literal"><span class="pre">bingo-oracle-install.bat</span></code> file located in the Bingo
+<p>Run the <tt class="docutils literal"><span class="pre">bingo-oracle-install.bat</span></tt> file located in the Bingo
 installation file set. The help message from the script follows:</p>
 <div class="highlight-python"><div class="highlight"><pre>Usage: bingo-oracle-install.bat [parameters]
 Parameters:
@@ -326,12 +327,12 @@ Parameters:
 </div>
 <div class="section" id="linux-solaris-or-mac-os-x">
 <h3>Linux, Solaris, or Mac OS X<a class="headerlink" href="#linux-solaris-or-mac-os-x" title="Permalink to this headline">¶</a></h3>
-<p>Log in as <code class="docutils literal"><span class="pre">oracle</span></code> user if you are installing Bingo in the Oracle
+<p>Log in as <tt class="docutils literal"><span class="pre">oracle</span></tt> user if you are installing Bingo in the Oracle
 library directory (this is the default behavior). If you do not have
-rights to log in as <code class="docutils literal"><span class="pre">oracle</span></code>, please override the default setting by
-<code class="docutils literal"><span class="pre">-libdir</span></code> flag. In the latter case, you should have the
-<code class="docutils literal"><span class="pre">EXTPROC_DLLS</span></code> option set up properly.</p>
-<p>Run the <code class="docutils literal"><span class="pre">bingo-oracle-install.sh</span></code> file located in the <code class="docutils literal"><span class="pre">sql</span></code> folder
+rights to log in as <tt class="docutils literal"><span class="pre">oracle</span></tt>, please override the default setting by
+<tt class="docutils literal"><span class="pre">-libdir</span></tt> flag. In the latter case, you should have the
+<tt class="docutils literal"><span class="pre">EXTPROC_DLLS</span></tt> option set up properly.</p>
+<p>Run the <tt class="docutils literal"><span class="pre">bingo-oracle-install.sh</span></tt> file located in the <tt class="docutils literal"><span class="pre">sql</span></tt> folder
 of the Bingo installation file set. The help message from the script is
 the following:</p>
 <div class="highlight-python"><div class="highlight"><pre>Usage: bingo-oracle-install.sh [parameters]
@@ -361,17 +362,17 @@ Parameters:
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <p>For the most simple installation, the defaults are taken:
-<code class="docutils literal"><span class="pre">$ORACLE_HOME/lib</span></code> directory for binary, &#8216;orcl&#8217; instance, &#8216;system&#8217; DBA
+<tt class="docutils literal"><span class="pre">$ORACLE_HOME/lib</span></tt> directory for binary, &#8216;orcl&#8217; instance, &#8216;system&#8217; DBA
 account, and &#8216;bingo/bingo&#8217; pseudo-user.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
-<p>If you do not have access to the <code class="docutils literal"><span class="pre">$ORACLE_HOME/lib</span></code> directory, you can
+<p>If you do not have access to the <tt class="docutils literal"><span class="pre">$ORACLE_HOME/lib</span></tt> directory, you can
 install the Bingo binary in your home directory:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">libdir</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myself</span>
 </pre></div>
 </div>
-<p>When you install on Oracle XE, the instance is usually called <code class="docutils literal"><span class="pre">xe</span></code>:</p>
+<p>When you install on Oracle XE, the instance is usually called <tt class="docutils literal"><span class="pre">xe</span></tt>:</p>
 <div class="highlight-python"><div class="highlight"><pre>bingo-oracle-install.sh -instance xe
 </pre></div>
 </div>
@@ -384,7 +385,7 @@ install the Bingo binary in your home directory:</p>
 <div class="highlight-python"><div class="highlight"><pre>bingo-oracle-install.sh -dbaname system -dbapass admin -y
 </pre></div>
 </div>
-<p>In Windows, you often do not have the <code class="docutils literal"><span class="pre">%ORACLE_HOME%</span></code> setting, and so
+<p>In Windows, you often do not have the <tt class="docutils literal"><span class="pre">%ORACLE_HOME%</span></tt> setting, and so
 you have to specify the library directory manually:</p>
 <div class="highlight-python"><div class="highlight"><pre>bingo-oracle-install.bat -libdir C:\oracle\product\11.1.0\bin -dbaname system -dbapass admin -y
 </pre></div>
@@ -420,10 +421,10 @@ can try this simple query:</p>
 <li>Remove all special domain indices that have been created by users.
 Removing the cartridge user without removing the indices will not
 harm your system, but the domain indices will be disabled.</li>
-<li>Remove the cartridge user (usually <code class="docutils literal"><span class="pre">bingo</span></code>) from the database: DROP
+<li>Remove the cartridge user (usually <tt class="docutils literal"><span class="pre">bingo</span></tt>) from the database: DROP
 USER BINGO CASCADE;</li>
-<li>Remove the cartridge tablespaces (usually <code class="docutils literal"><span class="pre">BINGO</span></code> and
-<code class="docutils literal"><span class="pre">BINGO_TEMP</span></code>). This step is necessary if you want to recover the
+<li>Remove the cartridge tablespaces (usually <tt class="docutils literal"><span class="pre">BINGO</span></tt> and
+<tt class="docutils literal"><span class="pre">BINGO_TEMP</span></tt>). This step is necessary if you want to recover the
 disk space previously occupied by the indices. You can skip this step
 if you are willing to reinstall Bingo afterwards.</li>
 </ol>
@@ -434,7 +435,7 @@ if you are willing to reinstall Bingo afterwards.</li>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
 <p class="logo">
   <a href="../index.html">
@@ -446,43 +447,52 @@ if you are willing to reinstall Bingo afterwards.</li>
 </p>
 
 
-
-
-
-
-
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Installation Manual: Oracle</a><ul>
-<li><a class="reference internal" href="#system-requirements">System Requirements</a><ul>
-<li><a class="reference internal" href="#operating-systems">Operating Systems</a></li>
-<li><a class="reference internal" href="#database-servers">Database Servers</a></li>
-<li><a class="reference internal" href="#tested-configurations">Tested Configurations</a></li>
+<h3>Table Of Contents</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Bingo</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="building-from-source.html">Building from Source</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Installation Manual: Oracle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-requirements">System Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#operating-systems">Operating Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database-servers">Database Servers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tested-configurations">Tested Configurations</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#installation-prerequisities">Installation Prerequisities</a><ul>
-<li><a class="reference internal" href="#all-systems">All Systems</a></li>
-<li><a class="reference internal" href="#windows">Windows</a></li>
-<li><a class="reference internal" href="#linux-32-bit-or-64-bit-or-solaris">Linux (32-bit or 64-bit) or Solaris</a></li>
-<li><a class="reference internal" href="#bit-linux-or-solaris-with-32-bit-extproc">64-bit Linux or Solaris, with 32-bit extproc</a></li>
-<li><a class="reference internal" href="#mac-os-x-64-bit">Mac OS X (64-bit)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-prerequisities">Installation Prerequisities</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#all-systems">All Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux-32-bit-or-64-bit-or-solaris">Linux (32-bit or 64-bit) or Solaris</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bit-linux-or-solaris-with-32-bit-extproc">64-bit Linux or Solaris, with 32-bit extproc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mac-os-x-64-bit">Mac OS X (64-bit)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#installation-procedure">Installation Procedure</a><ul>
-<li><a class="reference internal" href="#id1">All Systems</a></li>
-<li><a class="reference internal" href="#id2">Windows</a></li>
-<li><a class="reference internal" href="#linux-solaris-or-mac-os-x">Linux, Solaris, or Mac OS X</a></li>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-<li><a class="reference internal" href="#checking-the-installation">Checking the Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-procedure">Installation Procedure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">All Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux-solaris-or-mac-os-x">Linux, Solaris, or Mac OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#checking-the-installation">Checking the Installation</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#uninstalling-the-cartridge">Uninstalling the Cartridge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uninstalling-the-cartridge">Uninstalling the Cartridge</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="installation-manual-sqlserver.html">Installation Manual: SQL Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation-manual-postgres.html">Installation Manual: PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance-tips-oracle.html">Performance Tips: Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual-oracle.html">User Manual: Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual-sqlserver.html">User Manual: SQL Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual-postgres.html">User Manual: PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html">Bingo Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#why-select-bingo-as-your-molecular-search-cartridge">Why Select Bingo as Your Molecular Search Cartridge?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#commercial-availability">Commercial Availability</a></li>
 </ul>
-<h3>Navigation</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Bingo</a></li>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
@@ -494,8 +504,7 @@ if you are willing to reinstall Bingo afterwards.</li>
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
 </ul>
 
-
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -514,10 +523,7 @@ if you are willing to reinstall Bingo afterwards.</li>
     </div>
     <div class="footer">
       &copy;2014, EPAM Systems.
-      
     </div>
-
-    
 
     
   </body>
