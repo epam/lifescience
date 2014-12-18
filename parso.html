@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parso Java library &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="index.html" />
+    <link rel="next" title="GGA Selenium Framework" href="selenium.html" />
+    <link rel="prev" title="Changelog" href="imago/changelog.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="selenium.html" title="GGA Selenium Framework"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="imago/changelog.html" title="Changelog"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="parso-java-library">
+<h1>Parso Java library<a class="headerlink" href="#parso-java-library" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Parso is a lightweight Java library that is designed to read SAS7BDAT
+datasets. The Parso interfaces are analogous to those that belong to
+libraries designed to read table-storing files, for example, CSVReader
+library. Despite its small size, the Parso library is the only
+full-featured open-source solution to process SAS7BDAT datasets, both
+uncompressed and CHAR-compressed. It is effective in processing clinical
+and statistical data, which is often stored in SAS7BDAT format. In
+addition, the Parso library allows users to convert data into CSV
+format.</p>
+</div>
+<div class="section" id="why-select-parso-as-your-sas7bdat-file-reader">
+<h2>Why Select Parso as your SAS7BDAT File Reader?<a class="headerlink" href="#why-select-parso-as-your-sas7bdat-file-reader" title="Permalink to this headline">¶</a></h2>
+<p><strong>Stability</strong>: Successful processing in difficult cases (partially
+corrupt files, compression, etc.)</p>
+<p><strong>High processing speed</strong></p>
+<p><strong>Easy-to-use API</strong>: You need a couple of lines of program code to
+convert your SAS7BDAT file into a model or CSV format</p>
+<p><strong>JavaDoc for exposed API</strong></p>
+<p><strong>Algorithm descriptions enclosed</strong></p>
+<p><strong>Evolving project</strong>: GGA continues to develop the library by adding new
+functionality</p>
+<p><strong>On-going technical support</strong>: GGA welcomes any comments and concerns
+about this product and will address them on a regular basis</p>
+<p><strong>Possibility of integration with existing client projects</strong></p>
+<p><strong>Row-by-row reading of data allows you to optimally organize the
+storing of results</strong></p>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Data streams processing: no need to save the files to process</li>
+<li>Converting SAS7BDAT datasets into CSV format</li>
+<li>Reading and converting metadata of SAS7BDAT datasets into CSV format</li>
+<li>Extracting all properties of SAS7BDAT files (creation date,
+modification date, etc.)</li>
+<li>Two ways to read the file data: in one go and row by row</li>
+</ul>
+</div>
+<div class="section" id="support-and-development">
+<h2>Support and Development<a class="headerlink" href="#support-and-development" title="Permalink to this headline">¶</a></h2>
+<p>GGA has wide experience in integration services and will help you
+integrate Parso into your project. We will price those services based on
+your individual needs.</p>
+</div>
+<div class="section" id="how-to-use">
+<h2>How to Use<a class="headerlink" href="#how-to-use" title="Permalink to this headline">¶</a></h2>
+<p>If you use Maven, add the following dependency into the pom.xml file:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;dependency&gt;
+    &lt;groupId&gt;com.ggasoftware&lt;/groupId&gt;
+    &lt;artifactId&gt;parso&lt;/artifactId&gt;
+    &lt;version&gt;1.2.1&lt;/version&gt;
+&lt;/dependency&gt;
+</pre></div>
+</div>
+<p>Create a variable of the SasFileReader class and indicate your
+InputStream that contains the SAS7BDAT file as a parameter in the
+SasFileReader constructor:</p>
+<div class="highlight-python"><div class="highlight"><pre>com.ggasoftware.parso.SasFileReader sasFileReader = new SasFileReader(is);
+</pre></div>
+</div>
+<p>To get the properties of a SAS7BDAT file, use:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sasFileReader</span><span class="o">.</span><span class="n">getSasFileProperties</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>To get the description of the SAS7BDAT columns, use:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sasFileReader</span><span class="o">.</span><span class="n">getColumns</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>To get the data of the SAS7BDAT file, use:</p>
+<div class="highlight-python"><div class="highlight"><pre>sasFileReader.readAll(); //to read all rows at once
+
+sasFileReader.readNext(); //to read rows one by one
+</pre></div>
+</div>
+<p>To convert the metadata of the file into CSV format, use:</p>
+<div class="highlight-python"><div class="highlight"><pre>Writer writer = new StringWriter();
+CSVMetadataWriter csvMetadataWriter = new CSVMetadataWriter(writer);
+csvMetadataWriter.writeMetadata(sasFileReader.getColumns());
+</pre></div>
+</div>
+<p>To convert the data of the file into CSV format, use:</p>
+<div class="highlight-python"><div class="highlight"><pre>Writer writer = new StringWriter();
+CSVDataWriter csvDataWriter = new CSVDataWriter(writer);
+csvDataWriter.writeColumnNames(sasFileReader.getColumns());
+</pre></div>
+</div>
+<p>To write all rows at once to the &#8216;writer&#8217; variable:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">csvDataWriter</span><span class="o">.</span><span class="n">writeRowsArray</span><span class="p">(</span><span class="n">sasFileReader</span><span class="o">.</span><span class="n">getColumns</span><span class="p">(),</span> <span class="n">sasFileReader</span><span class="o">.</span><span class="n">readAll</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>To write rows one by one to the &#8216;writer&#8217; variable:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">csvDataWriter</span><span class="o">.</span><span class="n">writeRow</span><span class="p">(</span><span class="n">sasFileReader</span><span class="o">.</span><span class="n">getColumns</span><span class="p">(),</span> <span class="n">sasFileReader</span><span class="o">.</span><span class="n">readNext</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-and-install">
+<h2>Download and Install<a class="headerlink" href="#download-and-install" title="Permalink to this headline">¶</a></h2>
+<p>Look at the <a class="reference external" href="download/index.html">Downloads</a> page for the
+installation package suitable for your system.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Parso is free software: You can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free
+Software Foundation; version 3 of the License.</p>
+<p>This program is distributed WITHOUT ANY WARRANTY; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.</p>
+<p>You should receive a copy of the GNU General Public License along with
+this program. If you did not, please see <a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+</div>
+<div class="section" id="commercial-availability">
+<h2>Commercial Availability<a class="headerlink" href="#commercial-availability" title="Permalink to this headline">¶</a></h2>
+<p>If the GPL-licensed Parso does not satisfy your needs, please contact us
+at <a class="reference external" href="mailto:info&#37;&#52;&#48;ggasoftware&#46;com">info<span>&#64;</span>ggasoftware<span>&#46;</span>com</a> to discuss the possibility of a commercial
+license.</p>
+<p>We hope that you decide to use the Parso library. At GGA, we are
+available to help you use, integrate, and support Parso.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parso Java library</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#why-select-parso-as-your-sas7bdat-file-reader">Why Select Parso as your SAS7BDAT File Reader?</a></li>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#support-and-development">Support and Development</a></li>
+<li><a class="reference internal" href="#how-to-use">How to Use</a></li>
+<li><a class="reference internal" href="#download-and-install">Download and Install</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

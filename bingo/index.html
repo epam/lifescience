@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Bingo &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="next" title="Building from Source" href="building-from-source.html" />
+    <link rel="prev" title="Open-Source Initiative" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="building-from-source.html" title="Building from Source"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Open-Source Initiative"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bingo">
+<h1>Bingo<a class="headerlink" href="#bingo" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="building-from-source.html">Building from Source</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation-manual-oracle.html">Installation Manual: Oracle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation-manual-sqlserver.html">Installation Manual: SQL Server</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation-manual-postgres.html">Installation Manual: PostgreSQL</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="performance-tips-oracle.html">Performance Tips: Oracle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user-manual-oracle.html">User Manual: Oracle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user-manual-sqlserver.html">User Manual: SQL Server</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user-manual-postgres.html">User Manual: PostgreSQL</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Bingo Changelog</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Bingo is a RDBMS data cartridge that provides the industry’s
+next-generation, fast, scalable, and efficient storage and searching
+solution for chemical information.</p>
+<p>Bingo seamlessly integrates the chemistry into Oracle, Microsoft SQL
+Server and PostgreSQL databases. Its extensible indexing is designed to
+enable scientists to store, index, and search chemical moieties
+alongside numbers and text within one underlying relational database
+server.</p>
+<p>Bingo sets the industry standard in structure and reaction registration
+and retrieval. You can register entities reliably with the confidence
+that you can retrieve them rapidly.</p>
+<p>Because Bingo implements state-of-the-art indexing algorithms within the
+underlying database server, chemical searching is fast and reliable.
+Users can seamlessly combine chemical substructure, reaction, and exact
+structure searching with numeric and text SQL terms.</p>
+</div>
+<div class="section" id="why-select-bingo-as-your-molecular-search-cartridge">
+<h2>Why Select Bingo as Your Molecular Search Cartridge?<a class="headerlink" href="#why-select-bingo-as-your-molecular-search-cartridge" title="Permalink to this headline">¶</a></h2>
+<p>Bingo has all the necessary features required by modern chemoinformatics
+applications. It also has features not present in other cartridges — for
+example, advanced tautomer search, resonance substructure search, and
+fast updating of the index when adding new structures.</p>
+<p>Bingo provides an interface for the Oracle cost-based optimizer where
+possible, particularly in SMILES queries.</p>
+<p>Bingo is reliable. Bingo has no legacy code to maintain, and it has been
+subjected to extensive testing.</p>
+<p>Bingo is fast. We have succeeded in achieving the best performance in
+the industry for a search cartridge for both the screening phase and the
+matching phase of various types of searches, especially substructure
+search. Bingo has very effective memory management with no unnecessary
+reallocations. Communication with the underlying database, especially
+LOB handling, is optimized as well. During substructure searches,
+molecules and reactions are stored in shared memory to speed up the
+access.</p>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p><strong>Searches in a variety of ways:</strong> For molecule structure searching,
+Bingo supports 2D and 3D exact and substructure searches, as well as
+SMARTS searches. It also supports similarity, tautomer, Markush,
+formula, molecular weight, and flexmatch searches. Canonical SMILES,
+with isomeric information included, are available as well. For reaction
+searches, Bingo supports reaction substructure search (RSS) with the
+optional automatic generation of atom-to-atom mapping. All of these
+techniques are available through extensions to the SQL syntax.</p>
+<p>A chemistry column in a table being searched can contain Molfile (V2000
+or V3000) or SMILES data. Similarly, the query can be in Molfile or
+SMILES format. For reactions, Rxnfile or reaction SMILES formats are
+supported for both target and query structures.</p>
+<p>Fragment highlighting is supported for substructure, tautomer, and
+reaction substructure searches.</p>
+<p>Different indexing options are available to optimize storage space
+requirements versus the speed of registration. For example, by switching
+off the tautomer fingerprints, the indexing will become faster. Indexes
+can be updated or rebuilt with no downtime for maintenance. The addition
+of new molecules/reactions does not require the rebuilding of the index.</p>
+<p><strong>Flexibility and scalability of a true data cartridge:</strong> Fully
+compliant with the Oracle and MS SQL Server, Bingo allows structure and
+reaction tables to be placed anywhere in the database, and the data can
+be accessed by any SQL compliant application.</p>
+<p>Bingo contains a combined structure and reaction cartridge. 2D and 3D
+search features are supported by the same index.</p>
+<p>Bingo supports a large database operation. It is successfully
+<a class="reference external" href="TODO:bingo-demo">operating</a> on the PubChem database, with up to 27
+million structures.</p>
+<p>Bingo offers full support for Oracle 9/10/11 and for MS SQL Server 2008.
+It is written in C++ and is thread- safe. Native binaries are built for
+Windows 32/64 bit, Linux 32/64 bit, Mac OS X, and Solaris.</p>
+<p>Bingo has a very simple installation procedure. It is possible to
+install and use two (or more) versions at the same time.</p>
+<p><strong>Integration:</strong> With Bingo, you can build a fully relational
+registration system: Insert, delete, and update records in a relational
+structure or reaction database using data cartridge technology in
+Oracle, or automatically generated triggers in MS SQL Server.</p>
+<p>With Bingo, you can develop new applications that manage proprietary
+structure and reaction information. Since the cartridge is data model
+independent, it allows great flexibility in the design of applications
+and the management of proprietary structure and reaction information.</p>
+</div>
+<div class="section" id="download-and-install">
+<h2>Download and Install<a class="headerlink" href="#download-and-install" title="Permalink to this headline">¶</a></h2>
+<p>Look at the <a class="reference external" href="../download/bingo.html">Downloads</a> page for the
+installation package suitable for your system.</p>
+<p>For installation instructions, see the <a class="reference external" href="installation-manual-oracle.html">installation manual for
+Oracle</a>, <a class="reference external" href="installation-manual-sqlserver.html">installation manual for
+SQL Server</a> or <a class="reference external" href="installation-manual-postgres.html">installation
+manual for PostgreSQL</a></p>
+<p>Read the <a class="reference external" href="user-manual-oracle.html">user manual for Oracle</a> before
+using the cartridge in Oracle. For SQL Server users, please read the
+<a class="reference external" href="user-manual-sqlserver.html">user manual for SQL Server</a>. For
+PostgreSQL users, please read the <a class="reference external" href="user-manual-postgres.html">user manual for
+PostgreSQL</a>.</p>
+<p>For Oracle users, see also the <a class="reference external" href="performance-tips-oracle.html">performance
+tips</a>.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Copyright © 2009-2013 GGA Software Services LLC</p>
+<p>This program is free software: You can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; version 3 of the License.</p>
+<p>This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along
+with this program. If you did not not, please see
+<a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+<p><strong>Additional permissions under GNU GPL version 3 section 7.</strong> If you
+modify this program, or any covered work, by linking or combining it
+with an Oracle Database, containing parts covered by the terms of the
+<a class="reference external" href="http://www.oracle.com/technology/software/htdocs/devlic.html">Oracle Technology Network Developer
+License</a>,
+the licensors of this program grant you additional permission to convey
+the resulting work.</p>
+<p>If you modify this program, or any covered work, by linking or combining
+it with a Microsoft SQL Server Standard Edition or Microsoft SQL Server
+Express Edition, containing parts covered by the terms of the
+appropriate Microsoft SQL Server End User License Agreement, the
+licensors of this program grant you additional permission to convey the
+resulting work.</p>
+</div>
+<div class="section" id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h2>
+<p>Do you need assistance using our tools? Do you need a feature? Do you
+want to send a patch to us? Did you find a bug? Please write to one of
+the following newsgroups and let us know:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://groups.google.com/group/indigo-bugs">http://groups.google.com/group/indigo-bugs</a> : for bug reports on all
+GGA projects.</li>
+<li><a class="reference external" href="http://groups.google.com/group/indigo-dev">http://groups.google.com/group/indigo-dev</a> : for development topics.</li>
+<li><a class="reference external" href="http://groups.google.com/group/indigo-general">http://groups.google.com/group/indigo-general</a> : for any other
+discussions.</li>
+</ul>
+<p>No registration is required: you can write from your ordinary e-mail
+account to <a class="reference external" href="mailto:indigo-bugs&#37;&#52;&#48;googlegroups&#46;com">indigo-bugs<span>&#64;</span>googlegroups<span>&#46;</span>com</a>, <a class="reference external" href="mailto:indigo-dev&#37;&#52;&#48;googlegroups&#46;com">indigo-dev<span>&#64;</span>googlegroups<span>&#46;</span>com</a>, or
+<a class="reference external" href="mailto:indigo-general&#37;&#52;&#48;googlegroups&#46;com">indigo-general<span>&#64;</span>googlegroups<span>&#46;</span>com</a> to get your message posted.</p>
+</div>
+<div class="section" id="commercial-availability">
+<h2>Commercial Availability<a class="headerlink" href="#commercial-availability" title="Permalink to this headline">¶</a></h2>
+<p>If the GPL-licensed Bingo does not fit your needs, please contact us at
+<a class="reference external" href="mailto:info&#37;&#52;&#48;ggasoftware&#46;com">info<span>&#64;</span>ggasoftware<span>&#46;</span>com</a> to discuss the purchase of a commercial license.
+You may need the commercial license if you want to:</p>
+<ul class="simple">
+<li>Receive ongoing support and maintenance</li>
+<li>Include Bingo as a component in your proprietary software product</li>
+<li>Use Bingo with Oracle licensed not with OTN Developer License, or
+with MS SQL Server Enterprise Edition</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Bingo</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#why-select-bingo-as-your-molecular-search-cartridge">Why Select Bingo as Your Molecular Search Cartridge?</a></li>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#download-and-install">Download and Install</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#feedback">Feedback</a></li>
+<li><a class="reference internal" href="#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

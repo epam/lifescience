@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Java Bindings &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Imago OCR" href="index.html" />
+    <link rel="next" title="Dependencies" href="dependencies.html" />
+    <link rel="prev" title="C Library Reference" href="c.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="dependencies.html" title="Dependencies"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="c.html" title="C Library Reference"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Imago OCR</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="java-bindings">
+<h1>Java Bindings<a class="headerlink" href="#java-bindings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="distribution">
+<h2>Distribution<a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">imago.jar</span></code> file containing <code class="docutils literal"><span class="pre">com.gga.imago.Imago</span></code> wrapper class
+is included in the distribution package for each platform. It contains
+all the required binary modules for Windows, Linux and Mac OS X,
+depending on the selected platform. Imago-Java Universal package
+contains binaries for all the support platforms.</p>
+<p>Depending on the OS and architecture, proper binaries are loaded
+automatically.</p>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">Imago</span></code> class object represents a library instance. All operations
+are represented by methods of this object. Several library instances may
+be created within one thread to act simultaneously and independently.
+However, each instance requires a certain amount of memory, and thus it
+is recommended to have as few instances as possible.</p>
+<p>The procedure for rendering workflow is the following:</p>
+<ol class="arabic simple">
+<li>Create a library instance.</li>
+<li>Load a PNG image from the file or in-memory buffer.</li>
+<li>Set the optional parameters.</li>
+<li>Set the logging mode if required.</li>
+<li>Call <code class="docutils literal"><span class="pre">recognize()</span></code>.</li>
+<li>Get the resulting molfile via <code class="docutils literal"><span class="pre">getResult()</span></code>.</li>
+</ol>
+<p>Any method of the <code class="docutils literal"><span class="pre">Imago</span></code> class can throw an <code class="docutils literal"><span class="pre">Exception</span></code> if
+something went wrong. The <code class="docutils literal"><span class="pre">recognize()</span></code> method can throw an
+<code class="docutils literal"><span class="pre">Imago.NoResultException</span></code> in the event that the image has failed to be
+recognized as a molecule.</p>
+</div>
+<div class="section" id="imago-class-public-methods">
+<h2>Imago Class Public Methods<a class="headerlink" href="#imago-class-public-methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="constructor">
+<h3>Constructor<a class="headerlink" href="#constructor" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Imago</span> <span class="p">();</span>
+</pre></div>
+</div>
+<p>Instances are independent and are safe to be used in parallel.</p>
+</div>
+<div class="section" id="loading-the-image">
+<h3>Loading the Image<a class="headerlink" href="#loading-the-image" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>void loadImage (byte[] buf);
+</pre></div>
+</div>
+<p>Loads a supported image from the memory buffer.</p>
+<div class="highlight-python"><div class="highlight"><pre>void loadImage (String filename);
+</pre></div>
+</div>
+<p>Loads a supported type image from file.</p>
+</div>
+<div class="section" id="setting-the-options">
+<h3>Setting the Options<a class="headerlink" href="#setting-the-options" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>void setFilter (String filter_name);
+
+void setConfig (String config_name);
+</pre></div>
+</div>
+<p>Sets one of the pre-loaded configuration parameter sets.</p>
+</div>
+<div class="section" id="performing-the-recognition">
+<h3>Performing the Recognition<a class="headerlink" href="#performing-the-recognition" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>void recognize ();
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-the-result">
+<h3>Getting the Result<a class="headerlink" href="#getting-the-result" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>string getResult ();
+</pre></div>
+</div>
+<p>Returns a string with the recognized molecule in Molfile format.</p>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>com.gga.imago.Imago imago = new com.gga.imago.Imago();
+imago.setFilter(&quot;prefilter_basic&quot;);  // optional
+imago.setConfig(&quot;config_indigo_render.txt&quot;); // optional
+imago.loadImage(&quot;my-image.png&quot;);
+imago.recognize();
+System.out.println(imago.getResult());
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Java Bindings</a><ul>
+<li><a class="reference internal" href="#distribution">Distribution</a></li>
+<li><a class="reference internal" href="#workflow">Workflow</a></li>
+<li><a class="reference internal" href="#imago-class-public-methods">Imago Class Public Methods</a><ul>
+<li><a class="reference internal" href="#constructor">Constructor</a></li>
+<li><a class="reference internal" href="#loading-the-image">Loading the Image</a></li>
+<li><a class="reference internal" href="#setting-the-options">Setting the Options</a></li>
+<li><a class="reference internal" href="#performing-the-recognition">Performing the Recognition</a></li>
+<li><a class="reference internal" href="#getting-the-result">Getting the Result</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

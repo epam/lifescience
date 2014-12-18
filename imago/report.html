@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Comparison Report &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Imago OCR" href="index.html" />
+    <link rel="next" title="Imago OCR Visual Tool" href="imago-gui.html" />
+    <link rel="prev" title="Features and Examples" href="examples.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="imago-gui.html" title="Imago OCR Visual Tool"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Features and Examples"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Imago OCR</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="comparison-report">
+<h1>Comparison Report<a class="headerlink" href="#comparison-report" title="Permalink to this headline">¶</a></h1>
+<p>Our evaluation framework compares various versions of <a class="reference external" href="index.html">Imago
+OCR</a> application with other applications for molecule
+image optical character recognition. For each image the testing
+framework measures execution time and similarity score with a reference
+molecule file in Molfile format. <a class="reference external" href="../indigo/index.html">Indigo</a>
+toolkit is used to measure molecule similarity. Because different
+application produces output differently testing framework applies the
+following rules to standardize molecules:</p>
+<ul class="simple">
+<li>Hydrogens are folded.</li>
+<li>If the output contains multiple molecules in SDF format then all of
+them are merged into a single molecule with several disconnected
+fragments.</li>
+<li>Both aromatized and dearomatized structures are compared and best
+score is selected.</li>
+</ul>
+<div class="section" id="diverse-dataset-report">
+<h2>Diverse Dataset Report<a class="headerlink" href="#diverse-dataset-report" title="Permalink to this headline">¶</a></h2>
+<p>Report file is avialable at <a class="reference external" href="TODO:imago-report">the separate page</a>.
+You can also download all the report files (with script files) from the
+<a class="reference external" href="../download/imago.html">Downloads page</a>.</p>
+<p><a class="reference external" href="TODO:imago-report"><img alt="Report" src="../_images/imago-report-small-1.png" /></a></p>
+<p>This report contians 5 datasets of 500 molecule images each from
+different sources:</p>
+<ul>
+<li><div class="first line-block">
+<div class="line"><a class="reference external" href="TODO:imago-report#g1">Image2Structure</a></div>
+</div>
+<p>(<a class="reference external" href="TODO:imago-report">description</a>)
+|  A random subset of 500 images from Image2Structure task at <a class="reference external" href="http://trec.nist.gov/pubs/trec20/t20.proceedings.html">TREC
+Chem 2011
+conference</a>.</p>
+</li>
+<li><div class="first line-block">
+<div class="line"><a class="reference external" href="TODO:imago-report#g2">Mobile Camera</a></div>
+</div>
+<p>(<a class="reference external" href="TODO:imago-report">description</a>)
+|  Photos from a mobile phone of 500 PubChem molecules rendered using
+Indigo toolkit.</p>
+</li>
+<li><div class="first line-block">
+<div class="line"><a class="reference external" href="TODO:imago-report#g3">Rendered</a></div>
+</div>
+<p>(<a class="reference external" href="TODO:imago-report">description</a>)
+|  500 PubChem molecules rendered using Indigo toolkit.</p>
+</li>
+<li><div class="first line-block">
+<div class="line"><a class="reference external" href="TODO:imago-report#g4">USPTO</a></div>
+</div>
+<p>(<a class="reference external" href="TODO:imago-report">description</a>)
+|  A random subset of 500 structures from a validation set avialable
+at <a class="reference external" href="http://cactus.nci.nih.gov/osra/">OSRA website</a>.</p>
+</li>
+<li><div class="first line-block">
+<div class="line"><a class="reference external" href="TODO:imago-report#g5">chem-infty</a></div>
+</div>
+<p>(<a class="reference external" href="TODO:imago-report">description</a>)
+|  A random subset of 500 structure from <a class="reference external" href="http://www.iapr-tc11.org/mediawiki/index.php/Chem-Infty_Dataset:_A_ground-truthed_dataset_of_Chemical_Structure_Images">Chem-Infty
+Dataset</a>.</p>
+</li>
+</ul>
+<p>If you can suggest other test sets or other publicly available solutions
+we would be happy to include them too in the report.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Comparison Report</a><ul>
+<li><a class="reference internal" href="#diverse-dataset-report">Diverse Dataset Report</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

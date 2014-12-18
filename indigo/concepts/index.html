@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Concepts &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Indigo Toolkit" href="../index.html" />
+    <link rel="next" title="R-Group Deconvolution Examples" href="deco.html" />
+    <link rel="prev" title="Indigo Toolkit" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="deco.html" title="R-Group Deconvolution Examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Indigo Toolkit"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Indigo Toolkit</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="concepts">
+<h1>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deco.html">R-Group Deconvolution Examples</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="combichem.html">Reaction Enumeration Examples</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="transformation.html">Transformation</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="file-formats">
+<h2>File Formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h2>
+<p>Indigo supports the following molecule and reaction formats:</p>
+<ul class="simple">
+<li>Daylight SMILES with ChemAxon extensions</li>
+<li>Daylight SMARTS (including reactions)</li>
+<li>CML (including reactions)</li>
+<li>MDL (Symyx) Molfile and Rxnfile, both v2000 and v3000</li>
+<li>MDL (Symyx) SDFile and RDFile</li>
+<li>All the above in GZip-compressed form</li>
+</ul>
+<div class="section" id="daylight-formats-with-chemaxon-and-curlysmiles-extensions">
+<h3>Daylight Formats with ChemAxon and CurlySMILES Extensions<a class="headerlink" href="#daylight-formats-with-chemaxon-and-curlysmiles-extensions" title="Permalink to this headline">¶</a></h3>
+<p>Almost all features of the original Daylight
+<a class="reference external" href="http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html">SMILES</a>
+format are supported, including:</p>
+<ul class="simple">
+<li>Aromatic rings</li>
+<li>Hydrogen counters</li>
+<li>Tetrahedral and allene-like stereocenters</li>
+<li>Cis-trans double bonds</li>
+<li>Disconnected structures</li>
+<li>Reaction atom-to-atom mapping (AAM)</li>
+</ul>
+<p>The only features that are not supported are:</p>
+<ul class="simple">
+<li>&#8220;Up or unspecified&#8221;, &#8220;down or unspecified&#8221; notation (&#8220;/?&#8221;, &#8220;\?&#8221;)</li>
+<li>Square-planar, trigonal-bipyramidal, and octahedral stereo
+configurations.</li>
+</ul>
+<p>Almost all features of the original Daylight
+<a class="reference external" href="http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html">SMARTS</a>
+format are supported, including:</p>
+<ul class="simple">
+<li>Aromatic and aliphatic atoms</li>
+<li>SSSR (smallest set of smallest rings) calculation</li>
+<li>Logical operators</li>
+<li>Atom environments (nested SMARTS)</li>
+<li>Component-level grouping</li>
+</ul>
+<p>The only features that are not supported are:</p>
+<ul class="simple">
+<li>Constraint &#8220;h&#8221; (implicit hydrogen count). Hydrogens can be stored
+implicitly or explicitly in the database, and this difference should
+not affect the search results. &#8220;H&#8221; (total hydrogen count) may be used
+instead</li>
+<li>All features of SMILES format that are not supported</li>
+</ul>
+<p>The following ChemAxon SMILES
+<a class="reference external" href="http://www.chemaxon.com/marvin/help/formats/cxsmiles-doc.html">extensions</a>
+are supported:</p>
+<ul class="simple">
+<li>Radical numbers: monovalent, divalent singlet, and divalent triplet</li>
+<li><a class="reference external" href="http://www.chemaxon.com/jchem/doc/user/query_stereochemistry.html">Stereogroups</a></li>
+<li>Pseudo-atoms (atom aliases)</li>
+<li>Fragment level grouping in reactions</li>
+</ul>
+<p>The following extensions from the
+<a class="reference external" href="http://www.jcheminf.com/content/3/1/1">CurlySMILES</a> format are
+supported:</p>
+<ul class="simple">
+<li>Simple polymers: {-}...{+n}</li>
+<li>Multiple groups: {-}...{+nn=5}</li>
+</ul>
+</div>
+<div class="section" id="mdl-formats">
+<h3>MDL Formats<a class="headerlink" href="#mdl-formats" title="Permalink to this headline">¶</a></h3>
+<p>MDL (Symyx) Molfiles and Rxnfiles are supported by Indigo. Both format
+versions (2000 and 3000) are supported. Almost all format features are
+supported, including:</p>
+<ul class="simple">
+<li>Pseudo-atoms (atom aliases)</li>
+<li>Stereogroups</li>
+<li>R-Groups (Markush queries)</li>
+<li>Query atoms and query bonds</li>
+<li>Various query flags on atoms and bonds</li>
+<li>Atom positions</li>
+<li>3D constraints in v2000 Molfiles</li>
+<li>Reaction atom-to-atom mapping (AAM)</li>
+<li>Reacting centers and stereo inv/ret flags</li>
+<li>Data SGroups, polymers, superatoms (abbreviations)</li>
+</ul>
+<p>The only features that are not supported are:</p>
+<ul class="simple">
+<li>3D constraints in v3000 Molfiles</li>
+</ul>
+</div>
+</div>
+<div class="section" id="molecules-and-query-molecules">
+<h2>Molecules and Query Molecules<a class="headerlink" href="#molecules-and-query-molecules" title="Permalink to this headline">¶</a></h2>
+<p>Indigo treats &#8220;real&#8221; molecules different from query molecules in certain
+ways.</p>
+<ul class="simple">
+<li>Only a query molecule can contain query features like &#8220;any&#8221; atoms,
+atom lists, etc.</li>
+<li>Only a query molecule can contain R-Groups (although R-Sites can be
+present in &#8220;real&#8221; molecule too)</li>
+<li>Only a query molecule can be matched as a substructure</li>
+<li>Only a &#8220;real&#8221; molecule can be matched against by the substructure
+matcher.</li>
+<li>Only &#8220;real&#8221; molecules can be subject to MCS/common scaffold
+computation.</li>
+<li>Canonical SMILES can be calculated only on &#8220;real&#8221; molecules.</li>
+</ul>
+<p>Similar rules apply to &#8220;real&#8221; reactions and query reactions:</p>
+<ul class="simple">
+<li>Only a query reaction can be matched as a substructure in the
+reaction substructure matcher.</li>
+<li>Only a &#8220;real&#8221; reaction can be matched against by the reaction
+substructure matcher.</li>
+</ul>
+<p>There is never an ambiguity whether a particular object is a
+molecule/reaction or query molecule/reaction. While most input formats
+(Molfile/Rxnfile, SMILES) can store both types, different calls are
+provided for loading them as &#8220;real&#8221; or query objects. SMARTS strings
+always are loaded as query molecules, for obvious reasons.</p>
+</div>
+<div class="section" id="substructure-and-smarts-matching">
+<h2>Substructure and SMARTS Matching<a class="headerlink" href="#substructure-and-smarts-matching" title="Permalink to this headline">¶</a></h2>
+<p>Indigo provides full capabilities for substructure matching of query
+molecules, including ones loaded from SMARTS expressions. In the <a class="reference external" href="../../bingo/user-manual-oracle.html#substructure-search">Bingo
+User
+Manual</a>, you
+can find examples of substructure matches.</p>
+<div class="section" id="differences-between-smarts-and-query-smiles">
+<h3>Differences between SMARTS and query SMILES<a class="headerlink" href="#differences-between-smarts-and-query-smiles" title="Permalink to this headline">¶</a></h3>
+<p>While a lot of SMARTS notation is allowed when loading SMILES as a
+query, there are differences between SMARTS and query SMILES:</p>
+<ul class="simple">
+<li>SMARTS fragments $(...) are not allowed in query SMILES.</li>
+<li>Empty bond designator (like &#8216;CC&#8217; or &#8216;cc&#8217;) denotes &#8216;single or
+aromatic&#8217; bond in SMARTS. In query SMILES, it denotes aromatic bond,
+if it belongs to a ring and has both end atoms aromatic (lowercase);
+otherwise, it denotes a single bond.</li>
+<li>&#8216;C&#8217; within SMARTS means aliphatic carbon, while &#8216;C&#8217; within query
+SMILES means any carbon. The same applies to &#8216;B&#8217;, &#8216;N&#8217;, &#8216;O&#8217;, &#8216;S&#8217;, &#8216;P&#8217;.
+&#8216;C1~C~C~C~C~C~1&#8217; won&#8217;t match &#8216;c1ccccc1&#8217; as SMARTS, but it will do so
+as query SMILES.</li>
+<li>SMARTS queries are not fed to aromaticity matcher. &#8216;c1-c=c-c=c-c=1&#8217;
+won&#8217;t match &#8216;c1ccccc1&#8217; as SMARTS, but it will do so as query SMILES.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="exact-matching">
+<h2>Exact Matching<a class="headerlink" href="#exact-matching" title="Permalink to this headline">¶</a></h2>
+<p>Indigo can perform exact matching of pairs of molecules, or pairs of
+reactions.</p>
+</div>
+<div class="section" id="molecule-similarity">
+<h2>Molecule Similarity<a class="headerlink" href="#molecule-similarity" title="Permalink to this headline">¶</a></h2>
+<p>Indigo provides various molecule similarity measures, all based on
+originally developed fingerprints. In the <a class="reference external" href="../../bingo/user-manual-oracle.html#similarity-search">Bingo User
+Manual</a>, you
+can find detailed description and examples.</p>
+</div>
+<div class="section" id="canonical-smiles">
+<h2>Canonical SMILES<a class="headerlink" href="#canonical-smiles" title="Permalink to this headline">¶</a></h2>
+<p>Canonical SMILES generated by Indigo are, according to Daylight and
+ChemAxon terminology, unique SMILES with isomeric information, or
+<em>absolute</em> SMILES. All significant molecular features, such as isotopes,
+charges, radicals, stereocenters, stereogroups, cis-trans bonds, and
+aromaticity, are encoded into SMILES in a canonical form. A canonical
+SMILES string defines the molecule independently of any particular
+representation (atom renumbering, stereogroup renumbering,
+explicit/implicit hydrogens). So, the equality of the canonical SMILES
+of two molecules guarantees that these molecules are the same, and vice
+versa.</p>
+<div class="section" id="useless-stereocenters">
+<h3>&#8216;Useless&#8217; stereocenters<a class="headerlink" href="#useless-stereocenters" title="Permalink to this headline">¶</a></h3>
+<p>Stereocenter is not considered useful when it does not provide any
+information for distinguishing stereoisomers. Such useless stereocenters
+are ignored in canonical SMILES generated by Indigo.</p>
+<p>From the pictures below, you can see that all the three molecules
+specify the same mixture. This is represented in the fact that Indigo
+gives identical canonical SMILES for them.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image3" src="../../_images/cano_mol1.svg" /></td>
+<td><dl class="first last docutils">
+<dt><strong>Canonical SMILES:</strong></dt>
+<dd>C[C&#64;&#64;H]1CC(C(=O)N1)1N2CC(C)3CN1CC(C)(C2)C3=O</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><img alt="image4" src="../../_images/cano_mol2.svg" /></td>
+<td><dl class="first last docutils">
+<dt><strong>Canonical SMILES:</strong></dt>
+<dd>C[C&#64;&#64;H]1CC(C(=O)N1)1N2CC(C)3CN1CC(C)(C2)C3=O</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><img alt="image5" src="../../_images/cano_mol3.svg" /></td>
+<td><dl class="first last docutils">
+<dt><strong>Canonical SMILES:</strong></dt>
+<dd>C[C&#64;&#64;H]1CC(C(=O)N1)1N2CC(C)3CN1CC(C)(C2)C3=O</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Query features are not supported for canonicalization.</p>
+</div>
+</div>
+<div class="section" id="scaffold-detection">
+<h2>Scaffold Detection<a class="headerlink" href="#scaffold-detection" title="Permalink to this headline">¶</a></h2>
+<p>Indigo incorporates two algorithms (exact and approximate) of maximum
+common substructure (MCS) computation. Each of the algorithms can
+operate on an arbitrary amount of input structures. Thus, it is possible
+to pass the found scaffold to the <a class="reference external" href="#r-group-deconvolution">R-Group
+decovolution</a> procedure.</p>
+<p>Moreover, if the scaffold detection procedure has found more than one
+MCS, it is possible to obtain all of them.</p>
+</div>
+<div class="section" id="r-group-deconvolution">
+<h2>R-Group Deconvolution<a class="headerlink" href="#r-group-deconvolution" title="Permalink to this headline">¶</a></h2>
+<p>With a collection of structures and a scaffold that is common for these
+structures, it is possible to perform the R-Group deconvolution (R-Group
+decomposition). The result of this procedure will be a scaffold with
+marked R-sites (R1, R2, ...), and the actual substituents for these
+R-sites for each of the input structures.</p>
+<p>Examples are available on a <a class="reference external" href="deco.html">separate page</a>.</p>
+</div>
+<div class="section" id="layout">
+<h2>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h2>
+<p>Indigo is capable of performing layout (cleanup) of molecules and
+reactions. After the layout procedure, the average length of the bonds
+in a molecule will always be around 1.0. The procedure is not sensitive
+to the present molecular coordinates.</p>
+</div>
+<div class="section" id="rendering">
+<h2>Rendering<a class="headerlink" href="#rendering" title="Permalink to this headline">¶</a></h2>
+<p>Indigo provides high-quality 2D rendering capabilities for molecule and
+reactions. All the chemical features (including query features) are
+rendered properly following the IUPAC recommendations
+(<a class="reference external" href="http://www.iupac.org/publications/pac/78/10/1897/">1</a>,
+<a class="reference external" href="http://www.iupac.org/publications/pac/80/2/0277/">2</a>) for graphical
+representation. The features that are not covered by IUPAC (mostly,
+query features) are drawn in such a way that they do not overlay the
+primary structure.</p>
+<p>With Indigo, it is possible to display highlighted bonds and atoms with
+specified color and/or with thick lines and bold characters.</p>
+<p>The full list of options is available on the
+<a class="reference external" href="../api/options.html#rendering">options</a> page.</p>
+<p>The following output formats are supported for rendering:</p>
+<ul class="simple">
+<li>Adobe PDF</li>
+<li>Portable Network Graphics (PNG)</li>
+<li>Scalable Vector Graphics (SVG)</li>
+</ul>
+<p>On Windows platforms, Indigo is also able to:</p>
+<ul class="simple">
+<li>Render directly to a given device context (HDC)</li>
+<li>Produce .NET Bitmap objects</li>
+<li>Produce Enhanced Metafile Format (EMF) files and .NET Metafile
+objects</li>
+</ul>
+<p>Produced PNGs and Bitmaps are transparent unless the background is set
+explicitly. Produced SVGs, PDFs, and Metafiles contain no raster
+fragments.</p>
+<p>In the <a class="reference external" href="../../bingo/user-manual-oracle.html">Bingo User Manual</a>, you
+can find examples of rendered molecules and reactions. All the pictures
+in this manual were rendered to SVG by Indigo.</p>
+</div>
+<div class="section" id="combinatorial-chemistry">
+<h2>Combinatorial Chemistry<a class="headerlink" href="#combinatorial-chemistry" title="Permalink to this headline">¶</a></h2>
+<p>Indigo provides a reaction products enumerator, which has the following
+features:</p>
+<ul class="simple">
+<li>Query features (any bonds, any atoms)</li>
+<li>Accurate tetrahedral and cis-trans stereochemistry transformation
+based on atom-to-atom mapping</li>
+<li>Intramolecular reactions</li>
+<li>Exhaustive product enumeration from available monomers (products are
+used as monomers)</li>
+<li>Two generation modes: grid (monomers are assigned to wells and to
+reactants) and “one tube” (all monomers are mixed together)</li>
+<li>Support of functional groups with two attachment points</li>
+<li>Results are generated without duplicates even if source monomers are
+symmetrical</li>
+</ul>
+<p>The full list of options is available on the
+<a class="reference external" href="../api/options.html#reaction-products-enumeration">options</a> page.</p>
+<p>The examples are available on a <a class="reference external" href="combichem.html">separate page</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Concepts</a><ul>
+<li><a class="reference internal" href="#file-formats">File Formats</a><ul>
+<li><a class="reference internal" href="#daylight-formats-with-chemaxon-and-curlysmiles-extensions">Daylight Formats with ChemAxon and CurlySMILES Extensions</a></li>
+<li><a class="reference internal" href="#mdl-formats">MDL Formats</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#molecules-and-query-molecules">Molecules and Query Molecules</a></li>
+<li><a class="reference internal" href="#substructure-and-smarts-matching">Substructure and SMARTS Matching</a><ul>
+<li><a class="reference internal" href="#differences-between-smarts-and-query-smiles">Differences between SMARTS and query SMILES</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#exact-matching">Exact Matching</a></li>
+<li><a class="reference internal" href="#molecule-similarity">Molecule Similarity</a></li>
+<li><a class="reference internal" href="#canonical-smiles">Canonical SMILES</a><ul>
+<li><a class="reference internal" href="#useless-stereocenters">&#8216;Useless&#8217; stereocenters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scaffold-detection">Scaffold Detection</a></li>
+<li><a class="reference internal" href="#r-group-deconvolution">R-Group Deconvolution</a></li>
+<li><a class="reference internal" href="#layout">Layout</a></li>
+<li><a class="reference internal" href="#rendering">Rendering</a></li>
+<li><a class="reference internal" href="#combinatorial-chemistry">Combinatorial Chemistry</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

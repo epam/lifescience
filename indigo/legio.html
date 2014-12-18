@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Legio &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Indigo Toolkit" href="index.html" />
+    <link rel="next" title="indigo-depict" href="indigo-depict.html" />
+    <link rel="prev" title="Nodes for KNIME" href="knime.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="indigo-depict.html" title="indigo-depict"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="knime.html" title="Nodes for KNIME"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Indigo Toolkit</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="legio">
+<h1>Legio<a class="headerlink" href="#legio" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Legio is an Indigo-based GUI application that exposes the <a class="reference external" href="concepts/combichem.html">combinatorial
+chemistry</a> capabilities of Indigo.</p>
+</div>
+<div class="section" id="screenshots">
+<h2>Screenshots<a class="headerlink" href="#screenshots" title="Permalink to this headline">¶</a></h2>
+<p><img alt="image0" src="../_images/legio.png" /> <img alt="image1" src="../_images/legio_res.png" /></p>
+</div>
+<div class="section" id="options-description">
+<h2>Options Description<a class="headerlink" href="#options-description" title="Permalink to this headline">¶</a></h2>
+<p>If no options are specified, all reactions are performed in the “plate”
+mode. This mode is also called the “grid mode”. It models the microtiter
+plate, where every well of the plate contains exactly one monomer from
+each group. When the reaction has two reactants, the reaction matrix is
+a simple 2D table (square). When there are three reactants, the matrix
+is a 3D table (cube), and so on.</p>
+<p>When the “all reactions” flag is specified, the reaction can be repeated
+with reaction products as monomers, but only within one well. Monomers
+and products from different wells are independent and are never mixed.</p>
+<p>With the enabled “one tube” option all monomers are placed into one
+reaction vessel, and monomers from the same list of monomers can react.</p>
+<p>Additionally, the “self reactions” option enables intramolecular
+reactions, where one molecule of monomers can play the role of two (or
+more) reactants.</p>
+</div>
+<div class="section" id="portability">
+<h2>Portability<a class="headerlink" href="#portability" title="Permalink to this headline">¶</a></h2>
+<p>Legio is written in Java and supports Linux and Windows operating
+systems, both 32-bit and 64-bit versions of each system. Mac OS X 10.5
+and 10.6 are supported as well. Legio depends on (and is based on) the
+<a class="reference external" href="index.html">Indigo</a> library. The binaries of Indigo for all
+supported systems are included in the distribution.</p>
+</div>
+<div class="section" id="download-and-install">
+<h2>Download and Install<a class="headerlink" href="#download-and-install" title="Permalink to this headline">¶</a></h2>
+<p>Look at the <a class="reference external" href="../download/index.html">Downloads</a> page for the package
+suitable for your system. For Windows, an installer executable is
+provided. On Linux and Mac OS X, you just need to unpack the provided
+zipfile and run the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>/path/to/legio-1.0-xxxx/legio
+</pre></div>
+</div>
+<p>You can also put the symlink in /usr/local/bin:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo ln -s /path/to/legio-1.0-xxxx/legio /usr/local/bin
+</pre></div>
+</div>
+<p>and then you will be able to run Legio by typing <code class="docutils literal"><span class="pre">legio</span></code> in the
+command line.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Copyright © 2010 GGA Software Services LLC</p>
+<p>This program is free software: You can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; version 3 of the License.</p>
+<p>This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along
+with this program. If you did not, please see
+<a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+</div>
+<div class="section" id="commercial-availability">
+<h2>Commercial Availability<a class="headerlink" href="#commercial-availability" title="Permalink to this headline">¶</a></h2>
+<p>If the GPL-licensed Legio does not fit your needs, please contact us at
+<a class="reference external" href="mailto:info&#37;&#52;&#48;ggasoftware&#46;com">info<span>&#64;</span>ggasoftware<span>&#46;</span>com</a> to discuss the purchase of a commercial license.
+You may need the commercial license if you want to:</p>
+<ul class="simple">
+<li>Receive ongoing support and maintenance.</li>
+<li>Include Legio as a component in your proprietary software product.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Legio</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#screenshots">Screenshots</a></li>
+<li><a class="reference internal" href="#options-description">Options Description</a></li>
+<li><a class="reference internal" href="#portability">Portability</a></li>
+<li><a class="reference internal" href="#download-and-install">Download and Install</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

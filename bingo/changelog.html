@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Bingo Changelog &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Bingo" href="index.html" />
+    <link rel="next" title="Ketcher" href="../ketcher/index.html" />
+    <link rel="prev" title="User Manual: PostgreSQL" href="user-manual-postgres.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../ketcher/index.html" title="Ketcher"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="user-manual-postgres.html" title="User Manual: PostgreSQL"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Bingo</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bingo-changelog">
+<h1>Bingo Changelog<a class="headerlink" href="#bingo-changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bingo-1-7-9">
+<h2>Bingo 1.7.9<a class="headerlink" href="#bingo-1-7-9" title="Permalink to this headline">¶</a></h2>
+<p><em>3 April 2013</em></p>
+<p>General changes:</p>
+<ul class="simple">
+<li>Fingerprints now include information about single-atom fragments.
+This resolved an issue with empty fingerprints for single-atom
+molecules. Also this change makes substruture search more efficient
+in case of rare atoms in a query.</li>
+<li>Timeout parameter for exact search method for a single structure.
+Default value is 1 min.</li>
+<li>Smiles saver doesn&#8217;t throw exception about implicit hydrogens if they
+are not saving in SMILES</li>
+</ul>
+<p>Bingo PostgreSQL-specific changes:</p>
+<ul class="simple">
+<li>bug with similarity search for null structures was fixed</li>
+<li>performance was improved for join queries</li>
+<li>bug with exact join query (windows) was fixed</li>
+<li>bitmap scan feature was turned off by default for bingo</li>
+</ul>
+</div>
+<div class="section" id="bingo-1-7-8b2">
+<h2>Bingo 1.7.8b2<a class="headerlink" href="#bingo-1-7-8b2" title="Permalink to this headline">¶</a></h2>
+<p><em>15 February 2013</em></p>
+<p>General changes for Bingo Oracle, SQL Server and PostgreSQL:</p>
+<ul class="simple">
+<li>all the bug fixes from the Indigo branch (AAM cancellation timeout,
+aromatization bug fixed and others)</li>
+</ul>
+<p>Bingo PostgreSQL-specific changes:</p>
+<ul class="simple">
+<li>import sdf bug was fixed (throw error on incorrect format)</li>
+<li>bug with the rescan queries was fixed (join queries now work
+properly)</li>
+<li>errors while binary matching were fixed</li>
+<li>multi-threading was implemented for index building (creating index
+performance was improved)</li>
+</ul>
+</div>
+<div class="section" id="bingo-1-7-7">
+<h2>Bingo 1.7.7<a class="headerlink" href="#bingo-1-7-7" title="Permalink to this headline">¶</a></h2>
+<p><em>29 January 2013</em></p>
+<p>This is a stable Bingo release for the all three databases: Oracle, MS
+SQL Server, and PostgreSQL. It includes all the bug fixes from the
+Indigo branch.</p>
+<p>New methods for Bingo Oracle, SQL Server and PostgreSQL:</p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">bingo.InChI(molecule,</span> <span class="pre">options)</span></code> method to compute InChI
+identifier. You can pass any options that are supported by InChI
+library via <code class="docutils literal"><span class="pre">options</span></code> argument. For example you can provide options
+in the following way:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">bingo</span><span class="o">.</span><span class="n">InChI</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="s">&#39;/DoNotAddH /SUU /SLUUD&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">bingo.InChIKey(inchi)</span></code> method to compute InChI Key. To get an
+InChI key from a molecule with a default options use the following
+syntax:</p>
+<div class="highlight-python"><div class="highlight"><pre>select bingo.InChIKey(bingo.InChI(molecule, &#39;&#39;))
+</pre></div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">bingo.fingerprint(molecule,</span> <span class="pre">options)</span></code> and
+<code class="docutils literal"><span class="pre">bingo.rfingerprint(reaction,</span> <span class="pre">options)</span></code> methods to compute
+fingerprints. The options are the same as we have for the
+IndigoObject.fingerprint method in Indigo:</p>
+</li>
+<li><p class="first">sim - &#8220;Similarity fingerprint&#8221;, useful for calculating similarity
+measures (the default)</p>
+</li>
+<li><p class="first">sub - &#8220;Substructure fingerprint&#8221;, useful for substructure screening</p>
+</li>
+<li><p class="first">sub-res - &#8220;Resonance substructure fingerprint&#8221;, useful for resonance
+substructure screening</p>
+</li>
+<li><p class="first">sub-tau - &#8220;Tautomer substructure fingerprint&#8221;, useful for tautomer
+substructure screening</p>
+</li>
+<li><p class="first">full - &#8220;Full fingerprint&#8221;, which has all the mentioned fingerprint
+types included</p>
+</li>
+</ul>
+<p>Bingo PostgreSQL-specific changes:</p>
+<ul class="simple">
+<li>Postgres 9.2 support was added</li>
+<li>Bug with cost estimation engine was fixed</li>
+<li><code class="docutils literal"><span class="pre">bingo.compactMolecule(molecule,</span> <span class="pre">xyz)</span></code> and
+<code class="docutils literal"><span class="pre">bingo.compactReaction(reaction,</span> <span class="pre">xyz)</span></code> methods were added</li>
+<li>All utility methods now return text (not <code class="docutils literal"><span class="pre">cstring</span></code>)</li>
+<li>All utility methods now accept binary byte parameter for input
+structures(returned by <code class="docutils literal"><span class="pre">bingo.compactMolecule()</span></code> and
+<code class="docutils literal"><span class="pre">bingo.compactReaction()</span></code>)</li>
+</ul>
+<p>Bingo Oracle-specific changes:</p>
+<ul class="simple">
+<li>rowid is includeed into the message in case of exceptions</li>
+</ul>
+<p>Bingo SQL Server-specific changes:</p>
+<ul class="simple">
+<li>primary keys are added to the Bingo-specific table to support
+replication procedure.</li>
+<li>more details in the diagnostics log: thread id, process id, and etc.</li>
+<li>better support for query cancellation</li>
+</ul>
+<p>Also we switch to a continues version numbering like we are doing with
+Indigo releases.</p>
+</div>
+<div class="section" id="bingo-1-7-beta4">
+<h2>Bingo 1.7 beta4<a class="headerlink" href="#bingo-1-7-beta4" title="Permalink to this headline">¶</a></h2>
+<p><em>24 April 2012</em></p>
+<p>All the improvements have been merged from the Indigo branch (versions
+above 1.1 beta6), including:</p>
+<ul class="simple">
+<li>Better handling of molecules with invalid valence.</li>
+<li>Molecule serialization with more than 8 R-groups</li>
+<li>incorrect empty R-Group logic loading attachment points loading from
+molfile was fixed</li>
+</ul>
+<p>The new release contains bingo-specific changes including critical
+bugfixes for PostgreSQL:</p>
+<ul class="simple">
+<li>Bug with inserting to a table contained more than 64k molecules was
+fixed.</li>
+<li>Build and search queries now support cancel requests.</li>
+<li>Bug with possible dead lock for PostgreSQL hang queries was fixed.</li>
+<li>Binary data storing was fixed.</li>
+<li>Possible segmentation fault during raising exceptions was fixed.</li>
+<li>The issue with queries contained several bingo functions was
+resolved.</li>
+</ul>
+<p>Also, bug with Oracle 11.2 on Windows 7 x64 was fixed.</p>
+</div>
+<div class="section" id="bingo-1-7-beta3">
+<h2>Bingo 1.7 beta3<a class="headerlink" href="#bingo-1-7-beta3" title="Permalink to this headline">¶</a></h2>
+<p><em>28 December 2011</em></p>
+<p>All the bugfixes and improvements from the Indigo branch have been
+merged into the Bingo branch including:</p>
+<ul class="simple">
+<li>Cis-trans issues has been fixed.</li>
+<li>More accurate query fingerprints for SMARTS queries.</li>
+</ul>
+<p>Bingo-specific changes:</p>
+<ul class="simple">
+<li>Support of the PostgresSQL 9.1</li>
+<li>Now binary files for Oracle are available for download, because we
+eliminated a linkage with OCI libraries. No building from source is
+required any more for getting Bingo for Oracle on Windows.</li>
+</ul>
+</div>
+<div class="section" id="bingo-1-7-beta2">
+<h2>Bingo 1.7 beta2<a class="headerlink" href="#bingo-1-7-beta2" title="Permalink to this headline">¶</a></h2>
+<p><em>30 November 2011 (no public announcement)</em></p>
+<p>Bugfix release.</p>
+</div>
+<div class="section" id="bingo-1-7-beta1">
+<h2>Bingo 1.7 beta1<a class="headerlink" href="#bingo-1-7-beta1" title="Permalink to this headline">¶</a></h2>
+<p><em>29 September 2011</em></p>
+<p>First Bingo version for PostgreSQL. The cartridge is covered almost all
+the functionality taken from the Bingo Oracle and the Bingo Sql Server
+parts.</p>
+<p>The Bingo library for the PostgreSQL supports index building for
+molecules and reactions. The algorithm for the index search includes
+both the basic Bingo search engine principles and the unique heuristic
+algorithms for the PostgreSQL database. Thus the PostgreSQL Bingo
+cartridge can show a great performance comparable to or greater than
+other Bingo implementations.</p>
+</div>
+<div class="section" id="bingo-1-6-0">
+<h2>Bingo 1.6.0<a class="headerlink" href="#bingo-1-6-0" title="Permalink to this headline">¶</a></h2>
+<p><em>17 June 2011</em></p>
+<p>The stable Bingo release.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Bingo Changelog</a><ul>
+<li><a class="reference internal" href="#bingo-1-7-9">Bingo 1.7.9</a></li>
+<li><a class="reference internal" href="#bingo-1-7-8b2">Bingo 1.7.8b2</a></li>
+<li><a class="reference internal" href="#bingo-1-7-7">Bingo 1.7.7</a></li>
+<li><a class="reference internal" href="#bingo-1-7-beta4">Bingo 1.7 beta4</a></li>
+<li><a class="reference internal" href="#bingo-1-7-beta3">Bingo 1.7 beta3</a></li>
+<li><a class="reference internal" href="#bingo-1-7-beta2">Bingo 1.7 beta2</a></li>
+<li><a class="reference internal" href="#bingo-1-7-beta1">Bingo 1.7 beta1</a></li>
+<li><a class="reference internal" href="#bingo-1-6-0">Bingo 1.6.0</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

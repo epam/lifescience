@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Reaction Enumeration Examples &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Concepts" href="index.html" />
+    <link rel="next" title="Transformation" href="transformation.html" />
+    <link rel="prev" title="R-Group Deconvolution Examples" href="deco.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="transformation.html" title="Transformation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="deco.html" title="R-Group Deconvolution Examples"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Indigo Toolkit</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Concepts</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="reaction-enumeration-examples">
+<h1>Reaction Enumeration Examples<a class="headerlink" href="#reaction-enumeration-examples" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="peptide-bond-formation">
+<h2>Peptide Bond Formation<a class="headerlink" href="#peptide-bond-formation" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Reaction</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image1" src="../../_images/legio_am_rxn.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>Monomers were divided into two groups: acids and amines.</p>
+<p><strong>Acids:</strong></p>
+<p>A:</p>
+<p><img alt="image2" src="../../_images/legio_am_acids_1.svg" /></p>
+<p>B:</p>
+<p><img alt="image3" src="../../_images/legio_am_acids_2.svg" /></p>
+<p>C:</p>
+<p><img alt="image4" src="../../_images/legio_am_acids_3.svg" /></p>
+<p><strong>Amines:</strong></p>
+<p>X:</p>
+<p><img alt="image5" src="../../_images/legio_am_amines_1.svg" /></p>
+<p>Y:</p>
+<p><img alt="image6" src="../../_images/legio_am_amines_2.svg" /></p>
+<p>Z:</p>
+<p><img alt="image7" src="../../_images/legio_am_amines_3.svg" /></p>
+<p>Without the specification any additional options, Legio generates six
+products. Legio tries to perform specified reactions for each monomer
+from both the first group (acids) and the second group (amines):</p>
+<p>A</p>
+<p>B</p>
+<p>C</p>
+<p>X</p>
+<p><img alt="image8" src="../../_images/legio_am_prod_1.svg" /></p>
+<p><img alt="image9" src="../../_images/legio_am_prod_4.svg" /></p>
+<p><img alt="image10" src="../../_images/legio_am_prod_7.svg" /></p>
+<p>Y</p>
+<p><img alt="image11" src="../../_images/legio_am_prod_2.svg" /></p>
+<p><img alt="image12" src="../../_images/legio_am_prod_5.svg" /></p>
+<p><img alt="image13" src="../../_images/legio_am_prod_8.svg" /></p>
+<p>Z</p>
+<p><img alt="image14" src="../../_images/legio_am_prod_3.svg" /></p>
+<p><img alt="image15" src="../../_images/legio_am_prod_6.svg" /></p>
+<p><img alt="image16" src="../../_images/legio_am_prod_9.svg" /></p>
+<p>You can see that all the stereochemistry configurations are preserved
+during the reaction.</p>
+<p>When the “all reactions” mode is specified, products can take place in
+another reaction too, but only with original monomers or their products.
+So with such options, three additional products are generated:</p>
+<p>B + X + X:</p>
+<p><img alt="image17" src="../../_images/legio_am_prod_all_10.svg" /></p>
+<p>B + Y + Y:</p>
+<p><img alt="image18" src="../../_images/legio_am_prod_all_11.svg" /></p>
+<p>B + Z + Z:</p>
+<p><img alt="image19" src="../../_images/legio_am_prod_all_12.svg" /></p>
+<p>When the “one tube” mode is specified, any monomers and their products
+can make another reaction. With this mode, it is imagined that all
+monomers are in one tube. Another three products are generated:</p>
+<p>B + X + Y:</p>
+<p><img alt="image20" src="../../_images/legio_am_prod_all_one_11.svg" /></p>
+<p>B + X + Z:</p>
+<p><img alt="image21" src="../../_images/legio_am_prod_all_one_12.svg" /></p>
+<p>B + Y + Z:</p>
+<p><img alt="image22" src="../../_images/legio_am_prod_all_one_14.svg" /></p>
+</div>
+<div class="section" id="reactants-matching">
+<h2>Reactants Matching<a class="headerlink" href="#reactants-matching" title="Permalink to this headline">¶</a></h2>
+<p>When the reaction does not have any R-group atoms, matching of reactants
+to monomers is done according to substructure search rules.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Reaction</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image24" src="../../_images/legio_cisd_rxn.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Monomers:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image27" src="../../_images/legio_cisd_diene9.svg" /></td>
+<td><img alt="image28" src="../../_images/legio_cisd_dienophile9.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Products:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image31" src="../../_images/legio_cisd_prod_1.svg" /></td>
+<td><img alt="image32" src="../../_images/legio_cisd_prod_2.svg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="multistep-reactions">
+<h2>Multistep Reactions<a class="headerlink" href="#multistep-reactions" title="Permalink to this headline">¶</a></h2>
+<p>Legio can enumerate products appearing in the multistep reactions when
+existing monomers or produced products can take place in the reaction.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Reaction</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image34" src="../../_images/legio_mult_rxn.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Monomers:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image37" src="../../_images/legio_mult_accl.svg" /></td>
+<td><img alt="image38" src="../../_images/legio_mult_glucose.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Products:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image41" src="../../_images/legio_mult_prod_19.svg" /></td>
+<td><img alt="image42" src="../../_images/legio_mult_prod_31.svg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="generation-modes">
+<h2>Generation Modes<a class="headerlink" href="#generation-modes" title="Permalink to this headline">¶</a></h2>
+<p>Legio supports two generation modes for multistep reactions. In the
+&#8220;grid mode&#8221;, only one monomer from each group can react. This can be
+represented as a matrix where the columns correspond to the first group
+and the rows correspond to the second group. The reaction is performed
+in each cell. In the &#8220;one tube&#8221; mode, all of the monomers are in the
+same tube.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Reaction</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image44" src="../../_images/legio_modes_rxn.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Monomers:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">A</th>
+<th class="head">B</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image47" src="../../_images/legio_modes_mon_1.svg" /></td>
+<td><img alt="image48" src="../../_images/legio_modes_mon_2.svg" /></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">X</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image50" src="../../_images/legio_modes_symm.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>When the &#8220;grid mode&#8221; is on, each product can react with monomers from
+the same cell and with other products, formed earlier in this cell. For
+example:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image55" src="../../_images/legio_modes_prod_all_5.svg" /></td>
+<td><img alt="image56" src="../../_images/legio_modes_prod_all_18.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image57" src="../../_images/legio_modes_prod_all_6.svg" /></td>
+<td><img alt="image58" src="../../_images/legio_modes_prod_all_25.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>When the &#8220;one tube&#8221; mode is active, all of the products and monomers are
+contained in one tube and can react together. Legio generates the
+following new products:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image61" src="../../_images/legio_modes_prod_all_one_17.svg" /></td>
+<td><img alt="image62" src="../../_images/legio_modes_prod_all_one_37.svg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="intramolecular-interactions">
+<h2>Intramolecular Interactions<a class="headerlink" href="#intramolecular-interactions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Reaction</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image64" src="../../_images/legio_intr_rxn.svg" /></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Monomer</th>
+<th class="head">Product</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image67" src="../../_images/legio_intr_mon.svg" /></td>
+<td><img alt="image68" src="../../_images/legio_intr_prod_1.svg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tetrahedral-stereochemistry">
+<h2>Tetrahedral Stereochemistry<a class="headerlink" href="#tetrahedral-stereochemistry" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Reaction</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image70" src="../../_images/legio_sc_rxn.svg" /></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Monomers</th>
+<th class="head">Products</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image80" src="../../_images/legio_sc_mon_1.svg" /></td>
+<td><img alt="image81" src="../../_images/legio_sc_prod_1.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image82" src="../../_images/legio_sc_mon_2.svg" /></td>
+<td><img alt="image83" src="../../_images/legio_sc_prod_2.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image84" src="../../_images/legio_sc_mon_3.svg" /></td>
+<td><img alt="image85" src="../../_images/legio_sc_prod_3.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image86" src="../../_images/legio_sc_mon_4.svg" /></td>
+<td>no product</td>
+</tr>
+<tr class="row-even"><td><img alt="image87" src="../../_images/legio_sc_mon_5.svg" /></td>
+<td><img alt="image88" src="../../_images/legio_sc_prod_4.svg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cis-trans-stereochemistry">
+<h2>Cis-trans stereochemistry<a class="headerlink" href="#cis-trans-stereochemistry" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Reaction</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image90" src="../../_images/legio_cs_rxn.svg" /></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Monomers</th>
+<th class="head">Products</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image97" src="../../_images/legio_cs_mon_1.svg" /></td>
+<td><img alt="image98" src="../../_images/legio_cs_prod_1.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image99" src="../../_images/legio_cs_mon_2.svg" /></td>
+<td><img alt="image100" src="../../_images/legio_cs_prod_2.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image101" src="../../_images/legio_cs_mon_3.svg" /></td>
+<td><img alt="image102" src="../../_images/legio_cs_prod_3.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>The third example shows that stereochemistry configuration modifications
+are dependent.</p>
+</div>
+<div class="section" id="functional-groups-with-2-connections">
+<h2>Functional Groups with 2 Connections<a class="headerlink" href="#functional-groups-with-2-connections" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Reaction</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image104" src="../../_images/legio_peps_rxn.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Monomers:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image107" src="../../_images/legio_peps_glycine.svg" /></td>
+<td><img alt="image108" src="../../_images/legio_peps_lysine.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Products:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image112" src="../../_images/legio_peps_prod_1.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image113" src="../../_images/legio_peps_prod_2.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image114" src="../../_images/legio_peps_prod_3.svg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Reaction Enumeration Examples</a><ul>
+<li><a class="reference internal" href="#peptide-bond-formation">Peptide Bond Formation</a></li>
+<li><a class="reference internal" href="#reactants-matching">Reactants Matching</a></li>
+<li><a class="reference internal" href="#multistep-reactions">Multistep Reactions</a></li>
+<li><a class="reference internal" href="#generation-modes">Generation Modes</a></li>
+<li><a class="reference internal" href="#intramolecular-interactions">Intramolecular Interactions</a></li>
+<li><a class="reference internal" href="#tetrahedral-stereochemistry">Tetrahedral Stereochemistry</a></li>
+<li><a class="reference internal" href="#cis-trans-stereochemistry">Cis-trans stereochemistry</a></li>
+<li><a class="reference internal" href="#functional-groups-with-2-connections">Functional Groups with 2 Connections</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

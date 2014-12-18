@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation Manual: PostgreSQL &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Bingo" href="index.html" />
+    <link rel="next" title="Performance Tips: Oracle" href="performance-tips-oracle.html" />
+    <link rel="prev" title="Installation Manual: SQL Server" href="installation-manual-sqlserver.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="performance-tips-oracle.html" title="Performance Tips: Oracle"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="installation-manual-sqlserver.html" title="Installation Manual: SQL Server"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Bingo</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="installation-manual-postgresql">
+<h1>Installation Manual: PostgreSQL<a class="headerlink" href="#installation-manual-postgresql" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="operating-systems">
+<h3>Operating Systems<a class="headerlink" href="#operating-systems" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Windows 2000/XP/2003/Vista/2008 (32-bit and 64-bit)</li>
+<li>Linux (all modern distributions, 32-bit and 64-bit)</li>
+<li>Mac OS X (10.5 Leopard and 10.6 Snow Leopard 64 bit)</li>
+</ul>
+</div>
+<div class="section" id="database-servers">
+<h3>Database Servers<a class="headerlink" href="#database-servers" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>PostreSQL 9.0, 9.1, 9.2</li>
+</ul>
+</div>
+<div class="section" id="tested-configurations">
+<h3>Tested Configurations<a class="headerlink" href="#tested-configurations" title="Permalink to this headline">¶</a></h3>
+<p>Bingo has been successfully tested on the following configurations:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="31%" />
+<col width="33%" />
+<col width="16%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Bingo Version</th>
+<th class="head">Database</th>
+<th class="head">Operating System</th>
+<th class="head">Architecture</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>32-bit</td>
+<td>PostgreSQL 9.0.5 (32-bit)</td>
+<td>Linux: Ubuntu 10.04</td>
+<td>Intel x86</td>
+</tr>
+<tr class="row-odd"><td>64-bit</td>
+<td>PostgreSQL 9.0.4 (64-bit)</td>
+<td>Linux: Debian sid</td>
+<td>Intel x86-64</td>
+</tr>
+<tr class="row-even"><td>64-bit</td>
+<td>PostgreSQL 9.1.2 (64-bit)</td>
+<td>Linux: Debian sid</td>
+<td>Intel x86-64</td>
+</tr>
+<tr class="row-odd"><td>32-bit</td>
+<td>PostgreSQL 9.0.5 (32-bit)</td>
+<td>Windows 7 Enterprise</td>
+<td>Intel x86-64</td>
+</tr>
+<tr class="row-even"><td>64-bit</td>
+<td>PostgreSQL 9.0.5 (64-bit)</td>
+<td>Windows 7 Enterprise</td>
+<td>Intel x86-64</td>
+</tr>
+<tr class="row-odd"><td>64-bit</td>
+<td>PostgreSQL 9.1.2 (64-bit)</td>
+<td>Windows 7 Enterprise</td>
+<td>Intel x86-64</td>
+</tr>
+<tr class="row-even"><td>32/64 universal</td>
+<td>PostgreSQL 9.0.5(Mac OS X)</td>
+<td>Mac OS X 10.6 (Snow Leopard)</td>
+<td>Intel x86-64</td>
+</tr>
+<tr class="row-odd"><td>32/64 universal</td>
+<td>PostgreSQL 9.1.2(Mac OS X)</td>
+<td>Mac OS X 10.6 (Snow Leopard)</td>
+<td>Intel x86-64</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="installation-prerequisites">
+<h2>Installation Prerequisites<a class="headerlink" href="#installation-prerequisites" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="all-systems">
+<h3>All Systems<a class="headerlink" href="#all-systems" title="Permalink to this headline">¶</a></h3>
+<p>The shared buffer parameter in the PostgreSQL database configuration
+file (postgresql.conf) should be increased. For the optimal performance
+GGA recommends to increase the value .</p>
+<div class="highlight-python"><div class="highlight"><pre>shared_buffers=64MB
+</pre></div>
+</div>
+<p>The Bingo engine uses a simplified query planner (cost estimation)
+algorithm. GGA recommends to disable the BITMAP scan plan type for a
+database. This plan type can affect LIMIT and OFFSET queries, since the
+bitmap index scan will search through all the table, and it will take a
+lot of time regardless of the LIMIT parameter. To disable the bitmap
+scan use the following query:</p>
+<div class="highlight-python"><div class="highlight"><pre>set enable_bitmapscan=off;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">This parameter is a database parameter, so it can be modified once</div>
+</div>
+<p>(e.g. after a database creating). The parameter should be disabled for
+the LIMIT queries to work properly.</p>
+</div>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>The Bingo engine requires a lot of shared memory. For linux systems GGA
+recommends to change kernel.shmmax and kernel.shmall</p>
+<p>Add the following line to <code class="docutils literal"><span class="pre">/etc/sysctl.conf</span></code> file:</p>
+<div class="highlight-python"><div class="highlight"><pre>kernel.shmmax=&lt;value&gt;
+kernel.shmall=&lt;value&gt;
+</pre></div>
+</div>
+<p>The recommended value is appr. 50% of the RAM (in bytes)</p>
+<p>Execute (with the root privilegies)</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sysctl</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="installation-procedure">
+<h2>Installation Procedure<a class="headerlink" href="#installation-procedure" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>All Systems<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Download and unzip the cartridge archive. The Bingo library is located
+in the &#8216;bin&#8217; directory (bingo_postgres.dll for WINDOWS, or
+bingo_postgres.so for LINUX, or bingo_postgres.dylib for MacOSX). The
+Bingo library is built with specific PostgreSQL headers, so there is no
+need to run the building procedure. You can simply run the pre-generated
+SQL script with specified path to the Bingo library.</p>
+<ol class="arabic">
+<li><p class="first">Copy the library file to a desired directory. The library can be
+copied into the PostgreSQL package directory (<code class="docutils literal"><span class="pre">{POSTGRES_HOME}/lib</span></code>
+by default). In the second case the <code class="docutils literal"><span class="pre">-pglibdir</span></code> option should be
+added to the SQL-gen script (see the full options list below)</p>
+</li>
+<li><p class="first">Run SQL-gen script (specific for an OS). The script generates two SQL
+scripts:</p>
+<p>bingo_install.sql</p>
+<p>bingo_uninstall.sql</p>
+</li>
+</ol>
+<p>The <code class="docutils literal"><span class="pre">bingo_install.sql</span></code> installs all the functions and procedures
+related to the Bingo cartridge.</p>
+<ol class="arabic">
+<li><p class="first">Execute the script from the database. Usually it can be done by the
+following command:</p>
+<p>psql -U $admin -d $database -f bingo_install.sql</p>
+</li>
+</ol>
+<p>There are several important notes below.</p>
+<p><strong>Note:</strong> The installation can be done only to an existing database.</p>
+<p><strong>Note:</strong> You must have an admin role to install bingo cartridge on your
+database.</p>
+<p><strong>Note:</strong> The installation script creates a new schema (usually
+<code class="docutils literal"><span class="pre">bingo</span></code>),with the default tablespace. Please consider, that the
+specifying schema will be deleted while calling the uninstall script,
+thus the installer checks for a schema name and will raise an error if a
+schema already exists.</p>
+<p><strong>Note:</strong> You cannot install Bingo on top of the existing installation.
+You have to drop the cartridge schema (usually <code class="docutils literal"><span class="pre">bingo</span></code>) of the
+existing installation.</p>
+<p><strong>Note:</strong> You cannot install Bingo on a different PostgreSQL version,
+say, if you have PostgreSQL 9.1 and the Bingo library for the version
+9.0 then you can get unexpected crashes.</p>
+</div>
+<div class="section" id="id2">
+<h3>Linux<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Run the <code class="docutils literal"><span class="pre">bingo-pg-install.sh</span></code> file located in the root folder of the
+Bingo installation file set. The help message from the script is the
+following:</p>
+<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-pg-install.sh [parameters]
+Parameters:
+-?, -help
+  Print this help message
+-libdir path
+  Target directory with the installed bingo_postgres.so (defaut {CURRENT_DIR}/bin/).
+-schema name
+  Postgres schema name (default &quot;bingo&quot;).
+-pglibdir
+  Use postgreSQL $libdir option (default &quot;false&quot;)
+  Notice: bingo_postgres.so must be placed in the package library directory
+-y
+  Process default options (default &quot;false&quot;)
+</pre></div>
+</div>
+<p>Execute bingo_install.sql for your database.</p>
+</div>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>Run the <code class="docutils literal"><span class="pre">bingo-pg-install.bat</span></code> file located in the root folder of the
+Bingo installation file set. The help message from the script is the
+following:</p>
+<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-pg-install.bat [parameters]
+Parameters:
+-?, -help
+  Print this help message
+-libdir path
+  Target directory with the installed bingo_postgres.dll (defaut {CURRENT_DIR}/bin/).
+-schema name
+  Postgres schema name (default &quot;bingo&quot;).
+-pglibdir
+  Use postgreSQL $libdir option (default &quot;false&quot;)
+  Notice: bingo_postgres.dll must be placed in the package library directory
+-y
+  Process default options (default &quot;false&quot;)
+</pre></div>
+</div>
+<p>Execute bingo_install.sql for your database.</p>
+</div>
+<div class="section" id="mac-os-x">
+<h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h3>
+<p>Run the <code class="docutils literal"><span class="pre">bingo-pg-install.sh</span></code> file located in the root folder of the
+Bingo installation file set. The help message from the script is the
+following:</p>
+<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-pg-install.sh [parameters]
+Parameters:
+-?, -help
+  Print this help message
+-libdir path
+  Target directory with the installed bingo_postgres.dylib (defaut {CURRENT_DIR}/bin/).
+-schema name
+  Postgres schema name (default &quot;bingo&quot;).
+-pglibdir
+  Use postgreSQL $libdir option (default &quot;false&quot;)
+  Notice: bingo_postgres.dylib must be placed in the package library directory
+-y
+  Process default options (default &quot;false&quot;)
+</pre></div>
+</div>
+<p>Execute bingo_install.sql for your database.</p>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>For the most simple installation, the defaults are taken:
+<code class="docutils literal"><span class="pre">CURRENT_DIR/bin</span></code> directory for binary, <code class="docutils literal"><span class="pre">bingo</span></code> for the schema name,
+<code class="docutils literal"><span class="pre">test</span></code> for the database name and <code class="docutils literal"><span class="pre">postgres</span></code> for the admin user.</p>
+<div class="highlight-python"><div class="highlight"><pre>bingo-pg-install.sh
+psql -U postgres -d test -f bingo_install.sql
+</pre></div>
+</div>
+<p>If you have copied the library to the directory &#8216;/home/myself/&#8217;:</p>
+<div class="highlight-python"><div class="highlight"><pre>bingo-pg-install.sh -libdir /home/myself
+psql -U postgres -d test -f bingo_install.sql
+</pre></div>
+</div>
+<p>If you have copied the library to the Postges package directory
+&#8216;/usr/lib/postgresql/9.0/lib/&#8217; and want to create another <code class="docutils literal"><span class="pre">bingo2</span></code>
+schema for storing the procedures :</p>
+<div class="highlight-python"><div class="highlight"><pre>bingo-pg-install.sh -pglibdir -schema bingo2
+psql -U postgres -d test -f bingo_install.sql
+</pre></div>
+</div>
+</div>
+<div class="section" id="checking-the-installation">
+<h3>Checking the Installation<a class="headerlink" href="#checking-the-installation" title="Permalink to this headline">¶</a></h3>
+<p>To check that the shared library file is loaded properly by Postgres,
+you can try this simple query:</p>
+<div class="highlight-python"><div class="highlight"><pre>SELECT Bingo.GetVersion();
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="uninstalling-the-cartridge">
+<h2>Uninstalling the Cartridge<a class="headerlink" href="#uninstalling-the-cartridge" title="Permalink to this headline">¶</a></h2>
+<p>To uninstall the cartridge, you must:</p>
+<ol class="arabic simple">
+<li>Execute bingo_uninstall.sql (generated on the installation step) for
+your database.</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installation Manual: PostgreSQL</a><ul>
+<li><a class="reference internal" href="#system-requirements">System Requirements</a><ul>
+<li><a class="reference internal" href="#operating-systems">Operating Systems</a></li>
+<li><a class="reference internal" href="#database-servers">Database Servers</a></li>
+<li><a class="reference internal" href="#tested-configurations">Tested Configurations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation-prerequisites">Installation Prerequisites</a><ul>
+<li><a class="reference internal" href="#all-systems">All Systems</a></li>
+<li><a class="reference internal" href="#linux">Linux</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation-procedure">Installation Procedure</a><ul>
+<li><a class="reference internal" href="#id1">All Systems</a></li>
+<li><a class="reference internal" href="#id2">Linux</a></li>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+<li><a class="reference internal" href="#mac-os-x">Mac OS X</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#checking-the-installation">Checking the Installation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uninstalling-the-cartridge">Uninstalling the Cartridge</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Indigo Toolkit &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="next" title="Concepts" href="concepts/index.html" />
+    <link rel="prev" title="Help" href="../ketcher/help.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="concepts/index.html" title="Concepts"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../ketcher/help.html" title="Help"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="indigo-toolkit">
+<h1>Indigo Toolkit<a class="headerlink" href="#indigo-toolkit" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts/index.html">Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concepts/deco.html">R-Group Deconvolution Examples</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/combichem.html">Reaction Enumeration Examples</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="concepts/transformation.html">Transformation</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/c.html">Plain C</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/options.html">Options</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="knime.html">Nodes for KNIME</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="legio.html">Legio</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="indigo-depict.html">indigo-depict</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indigo-cano.html">indigo-cano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indigo-deco.html">indigo-deco</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chemdiff.html">ChemDiff</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Indigo Changelog</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Indigo is a universal organic chemistry toolkit. It contains first-class
+tools for end users, as well as a documented <a class="reference external" href="api/index.html">API</a>
+for developers. Indigo it is completely free and open-source, while also
+available on a commercial basis.</p>
+<p>Indigo is based on a cheminformatics library that incorporates a number
+of <a class="reference external" href="../resources.html#algorithms">unique algorithms</a> developed by
+GGA, as well as some standard algorithms well-known in the
+cheminformatics world. Since the core part of Indigo is written in
+modern C++ with no third-party code or dependencies except the
+ubiquitous zlib and libcairo, the toolkit provides outstanding
+performance and excellent portability.</p>
+<p>Indigo is used by many corporations and institutions. This includes some
+Indigo-based commercial tools developed exclusively for our clients.
+Also, our open-source chemical search engine
+<a class="reference external" href="../bingo/index.html">Bingo</a> is developed on top of the Indigo
+library.</p>
+<p>Indigo SDK does not make any restrictions for developers. Whatever your
+favorite platform is—Java, C#, or Python, not to mention plain C—you can
+easily integrate Indigo into your application. All problems you may be
+afraid of, such as loading binary modules appropriate for the system, or
+threading issues, or stack overflows, are already solved for you. Also,
+it is easy to start, as the <a class="reference external" href="api/index.html">interface</a> is very neat.
+No data types besides the absolute minimum required for it to work. No
+internal data formats. No painful initialization procedures.</p>
+<p>Indigo SDK is highly <a class="reference external" href="api/options.html">configurable</a> and extensible.
+You can write C/C++/C#/Java/Python plugins for it and distribute them
+independently.</p>
+<p>Indigo has got support from the cheminformatics
+<a class="reference external" href="../contact.html#feedback-on-open-source-software">community</a>. Any
+question or comment you have, you can always post it publicly and get a
+timely reply from the developers&#8217; team.</p>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Input formats support: Molfiles/Rxnfiles v2000 and v3000, SDF, RDF,
+CML, SMILES, SMARTS.</li>
+<li>Portability: Pre-built binary packages are provided for Linux and
+Windows (both 32-bit and 64-bit), and also for Mac OS X systems (both
+10.5 and 10.6).</li>
+<li>Molecule and reaction rendering. Best picture quality among all
+available products. Easy SVG support.</li>
+<li>Automatic layout for SMILES-represented molecules and reactions.</li>
+<li>Canonical (isomeric) SMILES computation.</li>
+<li>Exact matching, substructure matching, SMARTS matching.</li>
+<li>Matching of tautomers and resonance structures.</li>
+<li>Molecule fingerprinting, molecule similarity computation.</li>
+<li>Fast enumeration of SSSR rings, subtrees, and edge sugraphs.</li>
+<li>Molecular weight, molecular formula computation.</li>
+<li>R-Group deconvolution and scaffold detection. Pioneer work in
+computing the <em>exact</em> maximum common substructure for an arbitrary
+amount of input structures.</li>
+<li><a class="reference external" href="concepts/combichem.html">Combinatorial chemistry</a></li>
+<li>Plugins support in the API. As a reference, please see the Renderer
+plugin distributed together with the Indigo API.</li>
+</ul>
+</div>
+<div class="section" id="portability">
+<h2>Portability<a class="headerlink" href="#portability" title="Permalink to this headline">¶</a></h2>
+<p>Indigo is written from scratch in portable C++ and supports Linux,
+Windows, and Mac OS X operating systems. The rendering is done via
+<a class="reference external" href="http://cairographics.org/">Cairo</a> vector graphics library.
+<a class="reference external" href="http://www.zlib.net/">zlib</a> and
+<a class="reference external" href="http://www.libpng.org/pub/png/libpng.html">libpng</a> are needed for
+Cairo. <a class="reference external" href="http://www.grinninglizard.com/tinyxml/">tinyxml</a> is used to
+parse CML files. No other third-party components are used.</p>
+<p>Indigo exposes the <a class="reference external" href="api/c.html">C interface</a> to applications. Java
+and Python wrappers are available for all of the supported platforms.
+For Windows, there is also a .NET wrapper.</p>
+<p>All of the the code of Indigo is thread-safe, and so its use does not
+present a problem in multi-threaded applications.</p>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>To understand Indigo&#8217;s scope, start with the
+<a class="reference external" href="concepts/index.html">Concepts</a> page. A quick reference of the API
+for all supported languages is provided in the <a class="reference external" href="api/index.html">API</a>
+page. A separate page deals with the <a class="reference external" href="api/c.html">C interface</a>.
+Various options that can be passed to the library are explained on the
+<a class="reference external" href="api/options.html">Options</a> page.</p>
+<p><strong>`New documentation (work in progress) &lt;TODO:indigo-doc&gt;`__</strong></p>
+</div>
+<div class="section" id="gcc-2010-presentation">
+<h2>GCC 2010 Presentation<a class="headerlink" href="#gcc-2010-presentation" title="Permalink to this headline">¶</a></h2>
+<p>Here is the presentation for the talk that was given in November 2010 in
+Goslar at the German Conference on Chemoinformatics:
+<a class="reference external" href="../assets/indigo/indigo_cic2010.pdf">PDF</a> (396K).</p>
+<p>And here is the poster presented at the same conference:
+<a class="reference external" href="../assets/indigo/indigo_cic2010_poster.pdf">PDF</a> (3.1M).</p>
+</div>
+<div class="section" id="knime-nodes">
+<h2>KNIME Nodes<a class="headerlink" href="#knime-nodes" title="Permalink to this headline">¶</a></h2>
+<p>We provide a number of freely available <a class="reference external" href="knime.html">nodes</a> for the
+<a class="reference external" href="http://knime.org">KNIME</a> workflow engine. The nodes are based on
+Indigo and its Java SDK.</p>
+</div>
+<div class="section" id="java-gui-utilities">
+<h2>Java GUI Utilities<a class="headerlink" href="#java-gui-utilities" title="Permalink to this headline">¶</a></h2>
+<p>Two Indigo-based Java GUI applications are provided:</p>
+<ul class="simple">
+<li><a class="reference external" href="legio.html">Legio</a> — combinatorial chemistry</li>
+<li><a class="reference external" href="chemdiff.html">ChemDiff</a> — visual comparison of two SDF or SMILES
+files</li>
+</ul>
+</div>
+<div class="section" id="command-line-utilities">
+<h2>Command-Line Utilities<a class="headerlink" href="#command-line-utilities" title="Permalink to this headline">¶</a></h2>
+<p>Three Indigo-based command-line utilities written in plain C are
+provided:</p>
+<ul class="simple">
+<li><a class="reference external" href="indigo-depict.html">indigo-depict</a> (former <code class="docutils literal"><span class="pre">dingo-render</span></code>)
+Molecule and reaction rendering utility.</li>
+<li><a class="reference external" href="indigo-cano.html">indigo-cano</a> (former <code class="docutils literal"><span class="pre">cano-utility</span></code>)
+Canonical SMILES generator.</li>
+<li><a class="reference external" href="indigo-deco.html">indigo-deco</a> (former <code class="docutils literal"><span class="pre">deco</span></code>) R-Group
+deconvolution utility.</li>
+</ul>
+</div>
+<div class="section" id="download-and-install">
+<h2>Download and Install<a class="headerlink" href="#download-and-install" title="Permalink to this headline">¶</a></h2>
+<p>Look at the <a class="reference external" href="../download/indigo/index.html">Downloads</a> page for the
+installation package suitable for your system.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Copyright © 2009-2013 GGA Software Services LLC</p>
+<p>This program is free software: You can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; version 3 of the License.</p>
+<p>This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along
+with this program. If you did not not, please see
+<a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+</div>
+<div class="section" id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h2>
+<p>Do you need assistance using our tools? Do you need a feature? Do you
+want to send a patch to us? Did you find a bug? Please write to one of
+the following newsgroups and let us know:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://groups.google.com/group/indigo-bugs">http://groups.google.com/group/indigo-bugs</a> : for bug reports on all
+GGA projects.</li>
+<li><a class="reference external" href="http://groups.google.com/group/indigo-dev">http://groups.google.com/group/indigo-dev</a> : for development topics.</li>
+<li><a class="reference external" href="http://groups.google.com/group/indigo-general">http://groups.google.com/group/indigo-general</a> : for any other
+discussions.</li>
+</ul>
+<p>No registration is required: you can write from your ordinary e-mail
+account to <a class="reference external" href="mailto:indigo-bugs&#37;&#52;&#48;googlegroups&#46;com">indigo-bugs<span>&#64;</span>googlegroups<span>&#46;</span>com</a>, <a class="reference external" href="mailto:indigo-dev&#37;&#52;&#48;googlegroups&#46;com">indigo-dev<span>&#64;</span>googlegroups<span>&#46;</span>com</a>, or
+<a class="reference external" href="mailto:indigo-general&#37;&#52;&#48;googlegroups&#46;com">indigo-general<span>&#64;</span>googlegroups<span>&#46;</span>com</a> to get your message posted.</p>
+</div>
+<div class="section" id="commercial-availability">
+<h2>Commercial Availability<a class="headerlink" href="#commercial-availability" title="Permalink to this headline">¶</a></h2>
+<p>If the GPL-licensed Indigo does not fit your needs, please contact us at
+<a class="reference external" href="mailto:info&#37;&#52;&#48;ggasoftware&#46;com">info<span>&#64;</span>ggasoftware<span>&#46;</span>com</a> to discuss the purchase of a commercial license.
+You may need the commercial license if you want to:</p>
+<ul class="simple">
+<li>Receive ongoing support and maintenance</li>
+<li>Include Indigo as component in your proprietary software product</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Indigo Toolkit</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#portability">Portability</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#gcc-2010-presentation">GCC 2010 Presentation</a></li>
+<li><a class="reference internal" href="#knime-nodes">KNIME Nodes</a></li>
+<li><a class="reference internal" href="#java-gui-utilities">Java GUI Utilities</a></li>
+<li><a class="reference internal" href="#command-line-utilities">Command-Line Utilities</a></li>
+<li><a class="reference internal" href="#download-and-install">Download and Install</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#feedback">Feedback</a></li>
+<li><a class="reference internal" href="#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

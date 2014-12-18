@@ -1,0 +1,954 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Options &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="API" href="index.html" />
+    <link rel="next" title="Nodes for KNIME" href="../knime.html" />
+    <link rel="prev" title="Plain C" href="c.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../knime.html" title="Nodes for KNIME"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="c.html" title="Plain C"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Indigo Toolkit</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">API</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="options">
+<h1>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="input-output">
+<h2>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ignore-stereoche</span>
+<span class="pre">mistry-errors</span></code></td>
+<td>boolean</td>
+<td>When reading a
+Molfile/Rxnfile
+with incorrectly
+marked
+stereobonds,
+ignore them rather
+than raise an
+error.</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><a href="#id1"><span class="problematic" id="id2">``</span></a>ignore-noncritic
+al-query-features`
+`</td>
+<td>boolean</td>
+<td>When true, the
+&#8220;bond topology&#8221;,
+&#8220;stereo care&#8221;,
+&#8220;ring bond count&#8221;,
+and &#8220;unsaturation&#8221;
+specifications are
+ignored when a
+non-query molecule
+is being loaded.
+Otherwise, an
+error is raised.</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">treat-x-as-pseud</span>
+<span class="pre">oatom</span></code></td>
+<td>boolean</td>
+<td>Treat &#8216;X&#8217; atoms in
+Molfiles/Rxnfiles
+as pseudoatoms,
+rather than &#8220;any
+halogen&#8221; query
+atoms.</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">skip-3d-chiralit</span>
+<span class="pre">y</span></code></td>
+<td>boolean</td>
+<td>Do not calculate
+chirality of 3D
+input structures.</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">molfile-saving-m</span>
+<span class="pre">ode</span></code></td>
+<td>string</td>
+<td><ul class="first last simple">
+<li><code class="docutils literal"><span class="pre">2000</span></code>: force
+saving Molfiles
+and Rxnfiles to
+v2000 format,
+not regarding
+if there are
+features that
+can not be
+represented in
+v2000.</li>
+<li><code class="docutils literal"><span class="pre">3000</span></code>: force
+saving Molfiles
+and Rxnfiles to
+v3000 format,
+not regarding
+if there are
+features that
+can not be
+represented in
+v2000.</li>
+<li><code class="docutils literal"><span class="pre">auto</span></code>:
+detect if
+saving to v3000
+is really
+needed, and
+then save to
+v3000.
+Otherwise, save
+to v2000.</li>
+</ul>
+</td>
+<td><code class="docutils literal"><span class="pre">auto</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">molfile-saving-n</span>
+<span class="pre">o-chiral</span></code></td>
+<td>boolean</td>
+<td>Do no write the
+&#8220;Chiral&#8221; flag when
+saving Molfiles
+and Rxnfiles</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">molfile-saving-s</span>
+<span class="pre">kip-date</span></code></td>
+<td>boolean</td>
+<td>Do no write the
+current date into
+Molfiles, Rxnfiles
+and RDFiles</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">smiles-saving-wr</span>
+<span class="pre">ite-name</span></code></td>
+<td>boolean</td>
+<td>Write names when
+saving via generic
+saver interface in
+SMILES mode</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rendering">
+<h2>Rendering<a class="headerlink" href="#rendering" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-output-fo</span>
+<span class="pre">rmat</span></code></td>
+<td>string</td>
+<td>Obligatory.
+<code class="docutils literal"><span class="pre">png</span></code>, <code class="docutils literal"><span class="pre">svg</span></code>,
+<code class="docutils literal"><span class="pre">pdf</span></code> are
+allowed. On
+Windows, <code class="docutils literal"><span class="pre">emf</span></code>
+is also allowed.</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-bond-leng</span>
+<span class="pre">th</span></code></td>
+<td>integer</td>
+<td>Desired average
+bond length in
+pixels. The actual
+average bond
+length may be less
+if the
+<code class="docutils literal"><span class="pre">render-image-siz</span>
+<span class="pre">e</span></code>
+option is set. To
+reset this
+setting, you can
+set its value to
+-1.</td>
+<td>100</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-image-siz</span>
+<span class="pre">e</span></code></td>
+<td>size</td>
+<td>Width and height
+of target image.
+If not set, is
+calculated
+automatically
+according to
+<code class="docutils literal"><span class="pre">render-bond-leng</span>
+<span class="pre">th</span></code>.
+To reset this
+setting, you can
+set the values of
+width and height
+to -1.</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-margins</span></code></td>
+<td>size</td>
+<td>Horizontal and
+vertical margins
+around the image,
+in pixels.</td>
+<td>0x0</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-base-colo</span>
+<span class="pre">r</span></code></td>
+<td>color</td>
+<td>The default color
+for atoms and
+bonds.</td>
+<td>black</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-backgroun</span>
+<span class="pre">d-color</span></code></td>
+<td>color</td>
+<td>Background color.</td>
+<td>transparent</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-label-mod</span>
+<span class="pre">e</span></code></td>
+<td>string</td>
+<td><ul class="first simple">
+<li><code class="docutils literal"><span class="pre">all</span></code>: show
+all atoms</li>
+<li><a href="#id3"><span class="problematic" id="id4">``</span></a>terminal-hete</li>
+</ul>
+<dl class="docutils">
+<dt>ro``:</dt>
+<dd>show
+heteroatoms,
+terminal atoms,
+atoms with
+radical,
+charge,
+isotope,
+explicit
+valence, and
+atoms having
+two adjacent
+bonds in a line</dd>
+</dl>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">hetero</span></code>: the
+same as
+<a href="#id5"><span class="problematic" id="id6">``</span></a>terminal-hete</li>
+</ul>
+<dl class="docutils">
+<dt>ro``,</dt>
+<dd>but without
+terminal atoms</dd>
+</dl>
+<ul class="last simple">
+<li><code class="docutils literal"><span class="pre">none</span></code>: hide
+all labels,
+show only bonds</li>
+</ul>
+</td>
+<td><a href="#id7"><span class="problematic" id="id8">``</span></a>terminal-hetero`
+`</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-highlight</span>
+<span class="pre">ed-atoms-visible</span></code></td>
+<td>boolean</td>
+<td>Always show labels
+of highlighted
+atoms.</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><a href="#id9"><span class="problematic" id="id10">``</span></a>render-implicit-
+hydrogens-visible`
+`</td>
+<td>boolean</td>
+<td>Show implicit
+hydrogens on
+visible atoms.</td>
+<td>true</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-superatom</span>
+<span class="pre">-mode</span></code></td>
+<td>string</td>
+<td><ul class="first last simple">
+<li><code class="docutils literal"><span class="pre">expand</span></code>:
+render expanded
+superatoms</li>
+<li><code class="docutils literal"><span class="pre">collapse</span></code>:
+render just the
+superatoms&#8217;
+names</li>
+</ul>
+</td>
+<td><code class="docutils literal"><span class="pre">expand</span></code></td>
+</tr>
+<tr class="row-even"><td><a href="#id11"><span class="problematic" id="id12">``</span></a>render-coloring`
+`</td>
+<td>boolean</td>
+<td>Turn on atom
+coloring, e.g.
+nitrogen is blue,
+oxygen is red,
+etc.</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><a href="#id13"><span class="problematic" id="id14">``</span></a>render-highlight
+-thickness-enabled
+``</td>
+<td>boolean</td>
+<td>Enable
+highlighting with
+thick bonds and
+bold atom labels.</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-highlight</span>
+<span class="pre">-color-enabled</span></code></td>
+<td>boolean</td>
+<td>Enable
+highlighting with
+color.</td>
+<td>true</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-highlight</span>
+<span class="pre">-color</span></code></td>
+<td>color</td>
+<td>The color to be
+used for
+highlighting.</td>
+<td>red</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-data-sgro</span>
+<span class="pre">up-color</span></code></td>
+<td>color</td>
+<td>Color of data
+SGroup labels.</td>
+<td>black</td>
+</tr>
+<tr class="row-odd"><td><a href="#id15"><span class="problematic" id="id16">``</span></a>render-aam-color
+``</td>
+<td>color</td>
+<td>Atom-by-atom
+mapping indices
+color in
+reactions.</td>
+<td>black</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-stereo-st</span>
+<span class="pre">yle</span></code></td>
+<td>string</td>
+<td><ul class="first last simple">
+<li><code class="docutils literal"><span class="pre">old</span></code>: Only
+display the
+&#8220;Chiral&#8221; sign
+when
+appropriate.</li>
+<li><code class="docutils literal"><span class="pre">ext</span></code>:
+Display &#8220;abs&#8221;,
+&#8220;and&#8221;, &#8220;or&#8221;
+labels near
+each
+stereocenter.</li>
+<li><code class="docutils literal"><span class="pre">none</span></code>: Hide
+all the
+information
+about the
+stereogroups.</li>
+</ul>
+</td>
+<td><code class="docutils literal"><span class="pre">old</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-relative-</span>
+<span class="pre">thickness</span></code></td>
+<td>float</td>
+<td>Set the thickness
+of a bond to X/30
+of the average
+bond length.</td>
+<td>1.0</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-catalysts</span>
+<span class="pre">-placement</span></code></td>
+<td>string</td>
+<td><ul class="first simple">
+<li><code class="docutils literal"><span class="pre">above</span></code>:
+place reaction
+catalysts above
+the reaction
+arrow</li>
+<li><a href="#id17"><span class="problematic" id="id18">``</span></a>above-and-bel</li>
+</ul>
+<dl class="last docutils">
+<dt>ow``:</dt>
+<dd>place reaction
+calalysts above
+and below the
+reaction arrow</dd>
+</dl>
+</td>
+<td><a href="#id19"><span class="problematic" id="id20">``</span></a>above-and-below`
+`</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-comment</span></code></td>
+<td>string</td>
+<td>Put a single-line
+comment at the top
+or bottom of the
+image. If the
+image size is set
+explicitly, it
+must not be
+smaller than the
+size of the
+comment bounding
+box.</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-comment-p</span>
+<span class="pre">osition</span></code></td>
+<td>string</td>
+<td><code class="docutils literal"><span class="pre">top</span></code> or
+<code class="docutils literal"><span class="pre">bottom</span></code>.</td>
+<td><code class="docutils literal"><span class="pre">bottom</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-comment-o</span>
+<span class="pre">ffset</span></code></td>
+<td>integer</td>
+<td>Vertical space (in
+pixels) between
+the comment and
+the rendered
+structure or
+reaction.</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-comment-a</span>
+<span class="pre">lignment</span></code></td>
+<td>float</td>
+<td>0 is for alignment
+to the left, 1 is
+for the alignment
+to the right, 0.5
+is for centering
+the comment. Note
+that this setting
+has no effect if
+comment is larger
+than the
+molecule/reaction
+rendered.</td>
+<td>0.5</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-comment-f</span>
+<span class="pre">ont-size</span></code></td>
+<td>integer</td>
+<td>Font size for the
+comment in
+absolute units,
+roughly equal to
+the height in
+pixels.</td>
+<td>20</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-comment-c</span>
+<span class="pre">olor</span></code></td>
+<td>color</td>
+<td>Color to use for
+the comment.</td>
+<td>black</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-atom-ids-</span>
+<span class="pre">visible</span></code></td>
+<td>boolean</td>
+<td>Show atom numbers
+(for debugging
+purposes only).</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-bond-ids-</span>
+<span class="pre">visible</span></code></td>
+<td>boolean</td>
+<td>Show bond numbers
+(for debugging
+purposes only).</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-atom-bond</span>
+<span class="pre">-ids-from-one</span></code></td>
+<td>boolean</td>
+<td>Show atom and bond
+numbers starting
+from one, not from
+zero.</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rendering-in-grid">
+<h2>Rendering in Grid<a class="headerlink" href="#rendering-in-grid" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="4%" />
+<col width="78%" />
+<col width="4%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-grid-margins</span></code></td>
+<td>size</td>
+<td>Horizontal and vertical margins around the grid cell, in pixels.</td>
+<td>0, 0</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-grid-title-property</span></code></td>
+<td>string</td>
+<td>The name of the molecule&#8217;s property that defines the title that is put under each molecule. If not defined, no titles are shown. The special value &#8220;^NAME&#8221; means to use the molecule&#8217;s name as its title.</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-grid-title-alignment</span></code></td>
+<td>float</td>
+<td>0 is for alignment to the left, 1 is for the alignment to the right, 0.5 is for centering the title. Note that this setting has no effect if the title is larger than the molecule rendered.</td>
+<td>0.5</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">render-grid-title-font-size</span></code></td>
+<td>integer</td>
+<td>Font size for the title in absolute units, roughly equal to the height in pixels.</td>
+<td>20</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">render-grid-title-offset</span></code></td>
+<td>integer</td>
+<td>Vertical space (in pixels) between the title and the rendered structure.</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fingerprinting">
+<h2>Fingerprinting<a class="headerlink" href="#fingerprinting" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="9%" />
+<col width="62%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">fp-ord-qwords</span></code></td>
+<td>int</td>
+<td>Size of &#8220;ordinary&#8221; part of a fingerprint, in 8-byte blocks.</td>
+<td>25</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">fp-sim-qwords</span></code></td>
+<td>int</td>
+<td>Size of &#8220;similarity&#8221; part of a fingerprint, in 8-byte blocks.</td>
+<td>8</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">fp-any-qwords</span></code></td>
+<td>int</td>
+<td>Size of &#8220;any&#8221; part of a fingerprint, in 8-byte blocks.</td>
+<td>15</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">fp-tau-qwords</span></code></td>
+<td>int</td>
+<td>Size of &#8220;tautomer&#8221; part of a fingerprint, in 8-byte blocks.</td>
+<td>10</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">fp-ext-enabled</span></code></td>
+<td>boolean</td>
+<td>Sets whether to include or not 3-byte &#8220;EXT&#8221; part of the fingerprint.</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="layout">
+<h2>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="3%" />
+<col width="81%" />
+<col width="4%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">layout-max-iterations</span></code></td>
+<td>int</td>
+<td>The maximum number of iterations allowed for the layout procedure to run (the number is internally multiplied by 10000). If the limit is reached, an exception is thrown. Zero value means no limit.</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="substructure-matching">
+<h2>Substructure Matching<a class="headerlink" href="#substructure-matching" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">embedding-unique</span>
+<span class="pre">ness</span></code></td>
+<td>string</td>
+<td><p class="first">Defines how the
+uniqueness of a
+substructure match
+is determined when
+counting or
+iterating unique
+matches.</p>
+<ul class="last simple">
+<li><code class="docutils literal"><span class="pre">atoms</span></code>: by
+atoms; &#8220;CCC&#8221;
+matches &#8220;C1CC1&#8221;
+once</li>
+<li><code class="docutils literal"><span class="pre">bonds</span></code>: by
+bonds, &#8220;CCC&#8221;
+matches &#8220;C1CC1&#8221;
+three times</li>
+<li><code class="docutils literal"><span class="pre">none</span></code>: no
+test for
+uniqueness;
+&#8220;CCC&#8221; matches
+&#8220;C1CC1&#8221; six
+times</li>
+</ul>
+</td>
+<td><code class="docutils literal"><span class="pre">atoms</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">max-embeddings</span></code></td>
+<td>int</td>
+<td>The maximum number
+of embeddings
+allowed to
+enumerate when
+counting all
+embeddings. If the
+limit is reached,
+an exception is
+thrown. Zero value
+means no limit.</td>
+<td>10000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="r-group-deconvolution">
+<h2>R-Group Deconvolution<a class="headerlink" href="#r-group-deconvolution" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="13%" />
+<col width="34%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">deconvolution-aromatization</span></code></td>
+<td>boolean</td>
+<td>Aromatize input molecules.</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="reaction-products-enumeration">
+<h2>Reaction Products Enumeration<a class="headerlink" href="#reaction-products-enumeration" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">rpe-multistep-re</span>
+<span class="pre">actions</span></code></td>
+<td>boolean</td>
+<td>Enable multistep
+reactions.</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">rpe-mode</span></code></td>
+<td>string</td>
+<td><ul class="first last simple">
+<li><code class="docutils literal"><span class="pre">grid</span></code>:
+different sets
+of monomers
+react in
+different tubes</li>
+<li><code class="docutils literal"><span class="pre">one-tube</span></code>:
+reactions take
+place in one
+tube</li>
+</ul>
+</td>
+<td>grid</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">rpe-self-reactio</span>
+<span class="pre">n</span></code></td>
+<td>boolean</td>
+<td>Enable
+intramolecular
+reactions, where
+one molecule of
+monomers can play
+role of two (or
+more) reactants.</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">rpe-max-depth</span></code></td>
+<td>integer</td>
+<td>Maximum level of
+representing
+product like a
+monomer (works
+only with
+<code class="docutils literal"><span class="pre">rpe-multistep-re</span>
+<span class="pre">actions</span></code>
+enabled).</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">rpe-max-products</span>
+<span class="pre">-count</span></code></td>
+<td>integer</td>
+<td>Maximum amount of
+generated
+products.</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="inchi">
+<h2>InChI<a class="headerlink" href="#inchi" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="5%" />
+<col width="80%" />
+<col width="5%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Type</th>
+<th class="head">Description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">inchi-options</span></code></td>
+<td>string</td>
+<td>Options supported by the official InChI plugin: /NEWPSOFF /DoNotAddH /SNon /SRel /SRac /SUCF /ChiralFlagON /ChiralFlagOFF /SUU /SLUUD /FixedH /RecMet /KET /15T.</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Options</a><ul>
+<li><a class="reference internal" href="#input-output">Input/Output</a></li>
+<li><a class="reference internal" href="#rendering">Rendering</a></li>
+<li><a class="reference internal" href="#rendering-in-grid">Rendering in Grid</a></li>
+<li><a class="reference internal" href="#fingerprinting">Fingerprinting</a></li>
+<li><a class="reference internal" href="#layout">Layout</a></li>
+<li><a class="reference internal" href="#substructure-matching">Substructure Matching</a></li>
+<li><a class="reference internal" href="#r-group-deconvolution">R-Group Deconvolution</a></li>
+<li><a class="reference internal" href="#reaction-products-enumeration">Reaction Products Enumeration</a></li>
+<li><a class="reference internal" href="#inchi">InChI</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

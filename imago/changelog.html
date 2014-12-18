@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Changelog &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Imago OCR" href="index.html" />
+    <link rel="next" title="Parso Java library" href="../parso.html" />
+    <link rel="prev" title="Dependencies" href="dependencies.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../parso.html" title="Parso Java library"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="dependencies.html" title="Dependencies"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Imago OCR</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="imago-ocr-2-0">
+<h2>Imago OCR 2.0<a class="headerlink" href="#imago-ocr-2-0" title="Permalink to this headline">¶</a></h2>
+<p><em>22 February 2013</em></p>
+<ul class="simple">
+<li>Recognition quality:<ul>
+<li>Added adaptive preliminary filters designed for recognition of
+low-quality scans or even photos;</li>
+<li>Recognition rate is significantly improved due to usage of
+highly-adaptive methods instead of strict criterias;</li>
+<li>Restriction constants and recognition parameters are moved into
+configurable clusters, so the better recognition rate can be
+achieved on various non-typical image sets using machine learning
+approach;</li>
+<li>Machine learning tool is embedded in <a class="reference external" href="imago_console.html">console
+application</a>, added ability to quickly
+check recognition rate on specified collection;</li>
+</ul>
+</li>
+<li>Chemical features:<ul>
+<li>Chemical feature set is extended: bridged bonds, query features,
+R-groups are handled properly;</li>
+<li>Superatom labels validation logic introduced which greatly
+increases recognition probability of complex superatom labels;</li>
+<li>Abbreviation expansion support added;</li>
+</ul>
+</li>
+<li>Improved interoperability:<ul>
+<li>Added support of various popular image formats: <code class="docutils literal"><span class="pre">JPG</span></code>, <code class="docutils literal"><span class="pre">BMP</span></code>,
+<code class="docutils literal"><span class="pre">DIB</span></code>, <code class="docutils literal"><span class="pre">TIFF</span></code>, <code class="docutils literal"><span class="pre">PBM</span></code>, <code class="docutils literal"><span class="pre">RAS</span></code> and others;</li>
+<li>Implemented the new logging system which produces nice
+human-readable reports;</li>
+<li>Replaced characters recognition system, the new one supports
+user-defined fonts;</li>
+<li>Updated API and <a class="reference external" href="java.html">Java</a> / <a class="reference external" href="c.html">C</a> wrappers;</li>
+<li>Updated build system, reduced dependencies list;</li>
+<li>Fixed a lot of bugs, overall stability is significantly improved,
+decreased memory consumption.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="imago-ocr-1-0">
+<h2>Imago OCR 1.0<a class="headerlink" href="#imago-ocr-1-0" title="Permalink to this headline">¶</a></h2>
+<p><em>28 March 2011</em></p>
+<ul class="simple">
+<li>Recognizable Molecule Features<ul>
+<li>Single, double, triple bonds;</li>
+<li>Atom labels, subscripts, isotopes, charges;</li>
+<li>Superatoms;</li>
+<li>Rings;</li>
+<li>Stereochemistry (up- and down-bonds);</li>
+</ul>
+</li>
+<li>Supported PNG image format;</li>
+<li>Implemented characters recognition system based on Fourier
+Descriptors;</li>
+<li>Java and C wrappers introduced;</li>
+<li>Ego, a Java GUI application introduced</li>
+<li>Improved techniques are used for molecular graph extraction.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#imago-ocr-2-0">Imago OCR 2.0</a></li>
+<li><a class="reference internal" href="#imago-ocr-1-0">Imago OCR 1.0</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

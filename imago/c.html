@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>C Library Reference &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Imago OCR" href="index.html" />
+    <link rel="next" title="Java Bindings" href="java.html" />
+    <link rel="prev" title="Imago Console Application" href="imago_console.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="java.html" title="Java Bindings"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="imago_console.html" title="Imago Console Application"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Imago OCR</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="c-library-reference">
+<h1>C Library Reference<a class="headerlink" href="#c-library-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="distribution">
+<h2>Distribution<a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h2>
+<p>The following items are included into the Imago C shared library:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">imago.h</span></code> – C header file</li>
+<li><code class="docutils literal"><span class="pre">shared/&lt;System&gt;/&lt;Subsystem&gt;/imago_c.{dll,so,dylib}</span></code> – dynamic
+library appropriate for your platform (supported Windows, Linux and
+Mac OS X, 32-bit and 64-bit)</li>
+<li><code class="docutils literal"><span class="pre">dist/shared/msvcr100.dll</span></code>, <code class="docutils literal"><span class="pre">dist/shared/msvcp100.dll</span></code> – CRT
+dependencies (only in Windows distribution)</li>
+</ul>
+</div>
+<div class="section" id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<p>The function headers from <code class="docutils literal"><span class="pre">imago.h</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>/* All functions return 0 on error, and a nonzero value on success */
+
+/* Imago library acts as a state machine.
+ * You can use multiple Imago instances simultaneously, using the
+ * &#39;session ID-s&#39; (see below). It is obligatory to allocate at least one
+ * instance to get Imago library work properly.
+ */
+
+/* Get the version of Imago.*/
+CEXPORT const char *imagoGetVersion();
+
+/* Get the last error message.
+ * This can be called if some other function returned zero value.
+ */
+CEXPORT const char *imagoGetLastError();
+
+/* Allocate an instance. All instances are independent, that is,
+ * they have separate images, configurations settings, resulting
+ * molfiles, and error messages.
+ * Using Imago library without allocation an instance will cause an error.
+ */
+CEXPORT qword imagoAllocSessionId();
+
+/* Set the ID of the instance you are working with from current thread. */
+CEXPORT void imagoSetSessionId( qword id );
+
+/* Release a previously allocated instance. */
+CEXPORT void imagoReleaseSessionId( qword id );
+
+/* Set one of predefined configuration sets.
+ * The given name should be selected from imagoGetConfigsList() results
+ * Empty string as parameter means config auto-detection. */
+CEXPORT int imagoSetConfig( const char *name );
+
+/* Get the list of available predefined configuration sets separated by comma. */
+CEXPORT const char* imagoGetConfigsList();
+
+/* Choose the filter to process image before call imagoFilterImage()
+ * name can be &quot;prefilter_binarized&quot;, &quot;prefilter_basic&quot;, or something else.
+ * For the exact information see the filters_list.cpp file.
+ * By default, filter from current config will be used. */
+CEXPORT int imagoSetFilter( const char *name );
+
+/* Image loading functions. */
+CEXPORT int imagoLoadImageFromBuffer( const char *buf, const int buf_size );
+CEXPORT int imagoLoadImageFromFile( const char *FileName );
+
+/* PNG image saving function. */
+CEXPORT int imagoSaveImageToFile( const char *FileName );
+
+/* Load raw grayscale image - byte array of length width*height. */
+CEXPORT int imagoLoadGreyscaleRawImage( const char *buf, const int width, const int height );
+
+/* Enable or disable global log printing */
+/* Modes are: 0 - disabled, 1 - enable log to file, 2 - enable log to virtual fs*/
+/* WARNING: affects all threads/IDS */
+CEXPORT int imagoSetLogging( int mode );
+
+/* Attach some arbitrary data to the current Imago instance. */
+CEXPORT int imagoSetSessionSpecificData( void *data );
+CEXPORT int imagoGetSessionSpecificData( void **data );
+
+/* Main recognition routine. Image must be loaded &amp; filtered previously.
+   Returns count of recognition warnings in warningsCountDataOut value (if specified) */
+CEXPORT int imagoRecognize( int *warningsCountDataOut /* = NULL */);
+
+/* Molfile (.mol) output functions. */
+CEXPORT int imagoSaveMolToBuffer( char **buf, int *buf_size );
+CEXPORT int imagoSaveMolToFile( const char *fileName );
+
+/* Process image filtering. */
+CEXPORT int imagoFilterImage();
+
+/* Returns filtered image ink percentage (0.0 .. 1.0) */
+CEXPORT int imagoGetInkPercentage( double *result );
+
+/* returns filtered image dimensions */
+CEXPORT int imagoGetPrefilteredImageSize( int *width, int *height );
+
+/* returns filtered image data */
+CEXPORT int imagoGetPrefilteredImage( unsigned char **data, int *width, int *height );
+
+/* returns count of files contained in log vfs. */
+CEXPORT int imagoGetLogCount( int *count );
+
+/* returns it&#39;s file name, length and content */
+CEXPORT int imagoGetLogRecord( int it, char **filename, int *lengths, char **data );
+
+/* clears all current vfs log content */
+CEXPORT int imagoClearLog();
+</pre></div>
+</div>
+<p>The correct API functions calling order is:</p>
+<div class="highlight-python"><div class="highlight"><pre>imagoAllocSessionId()
+imagoSetSessionId(id)
+imagoLoadImageFromFile() / imagoLoadImageFromBuffer / imagoLoadGreyscaleRawImage
+imagoSetFilter() [optional]
+imagoFilterImage()
+    imagoSetConfig() [optional]
+    imagoRecognize()
+    imagoSaveMolToFile() / imagoSaveMolToBuffer()
+imagoReleaseSessionId(id)
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">C Library Reference</a><ul>
+<li><a class="reference internal" href="#distribution">Distribution</a></li>
+<li><a class="reference internal" href="#interface">Interface</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

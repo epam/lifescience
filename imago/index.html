@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Imago OCR &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="next" title="Features and Examples" href="examples.html" />
+    <link rel="prev" title="Indigo ELN Changelog" href="../indigo/eln/changelog.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="examples.html" title="Features and Examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../indigo/eln/changelog.html" title="Indigo ELN Changelog"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="imago-ocr">
+<h1>Imago OCR<a class="headerlink" href="#imago-ocr" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Features and Examples</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Comparison Report</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="imago-gui.html">Imago OCR Visual Tool</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="imago_console.html">Imago Console Application</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="c.html">C Library Reference</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="java.html">Java Bindings</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dependencies.html">Dependencies</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Imago OCR is a toolkit for 2D chemical structure image recognition. It
+contains a <a class="reference external" href="imago-gui.html">GUI</a> program and a <a class="reference external" href="imago_console.html">command-line
+utility</a>, as well as a documented
+<a class="reference external" href="c.html">API</a> for developers. Imago is completely free and
+open-source, while also available on a commercial basis.</p>
+<p>The core part of Imago is written from scratch in modern C++. It uses
+the best known algorithms for optical recognition. That guarantees
+Imago&#8217;s outstanding portability and performance.</p>
+<p>Imago OCR project is under active development. You can post us your
+<a class="reference external" href="#feedback">comments and suggestions</a> and get timely replies from the
+developers&#8217; team.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="66%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Source image</th>
+<th class="head">Recognized structure</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="../assets/imago/4_source_USRE039991-20080101-C00100.png"><img alt="image2" src="../_images/4_source_USRE039991-20080101-C00100_small.png" /></a></td>
+<td><a class="reference external" href="../assets/imago/4_result_USRE039991-20080101-C00100.png.imago-2.0.png"><img alt="image3" src="../_images/4_result_USRE039991-20080101-C00100.png.imago-2.0.svg" /></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="../assets/imago/4_source_USRE039991-20080101-C00100-1.png">USRE039991-20080101-C00100.png</a></td>
+<td><a class="reference external" href="../assets/imago/molecule.mol">molecule.mol</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="recognizable-molecule-features">
+<h2>Recognizable Molecule Features<a class="headerlink" href="#recognizable-molecule-features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Single, double, triple bonds, bridged bonds</li>
+<li>Atom labels, subscripts, isotopes, charges</li>
+<li>Superatoms and abbreviations expansion</li>
+<li>Aromatic rings</li>
+<li>Stereochemistry (up- and down-bonds)</li>
+</ul>
+<p>You can find more examples <a class="reference external" href="examples.html">on this page</a>.</p>
+</div>
+<div class="section" id="online-demo">
+<h2>Online Demo<a class="headerlink" href="#online-demo" title="Permalink to this headline">¶</a></h2>
+<p>You can evaluate the Imago OCR recognition quality on the <a class="reference external" href="TODO:imago-demo">Imago Demo
+web page</a>.</p>
+</div>
+<div class="section" id="comparison-with-other-systems">
+<h2>Comparison with other systems<a class="headerlink" href="#comparison-with-other-systems" title="Permalink to this headline">¶</a></h2>
+<p>We created a detailed report with sets of different images that compares
+Imago OCR with other publicly available solutions. The report is
+available on a <a class="reference external" href="TODO:imago-report">separate web page</a>. The scripts
+and the image sets are available in the <a class="reference external" href="../download/imago.html">download
+section</a>.</p>
+<p><a class="reference external" href="TODO:imago-report"><img alt="Report" src="../_images/imago-report-small.png" /></a></p>
+<p>If you can suggest other test sets or other publicly available solutions
+we would be happy to include them too in the report.</p>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<p>Presentation at the Symposium on 244th ACS National Meeting &amp;
+Exposition:</p>
+</div>
+<div class="section" id="portability">
+<h2>Portability<a class="headerlink" href="#portability" title="Permalink to this headline">¶</a></h2>
+<p>Imago library is written in portable C++ and supports Linux, Windows,
+and Mac OS X operating systems, both 32-bit and 64-bit versions of each
+system.</p>
+<p>Imago exposes the <a class="reference external" href="c.html">C interface</a> to applications. <a class="reference external" href="java.html">Java
+wrapper</a> is available for all supported platforms. A Java
+GUI application called <a class="reference external" href="imago-gui.html">Imago OCR Visual Tool</a> is
+provided, and a command-line utility
+<a class="reference external" href="imago_console.html">imago_console</a> is provided as well.</p>
+<div class="section" id="list-of-dependencies">
+<h3>List of Dependencies<a class="headerlink" href="#list-of-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>The dependencies are included into the distribution packages, and so you
+do not need to download any of them separately to run the programs or to
+compile the source code.</p>
+<p>Imago C++ dependencies:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://opencv.org/">OpenCV</a> library</li>
+<li><a class="reference external" href="http://www.boost.org/">Boost</a></li>
+<li><a class="reference external" href="http://lodev.org/lodepng">PicoPNG</a> (optional module to load PNG
+images with GGA changes for fail-safe PNG image loading)</li>
+</ul>
+<p>Java-specific dependencies:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://jna.java.net/">JNA</a> (for Java wrapper)</li>
+<li><a class="reference external" href="http://java.net/projects/pdf-renderer">PDFRenderer</a> (only for
+Imago OCR Visual Tool)</li>
+<li><a class="reference external" href="http://java.net/projects/jai">Java Advanced Imaging (JAI)</a> (only
+for Imago OCR Visual Tool, part of Java SDK)</li>
+<li><a class="reference external" href="http://launch4j.sourceforge.net">Launch4j</a></li>
+</ul>
+<p>More details on the dependencies (including their licenses) you can find
+on a <a class="reference external" href="dependencies.html">separate page</a></p>
+</div>
+</div>
+<div class="section" id="supported-data-formats">
+<h2>Supported Data Formats<a class="headerlink" href="#supported-data-formats" title="Permalink to this headline">¶</a></h2>
+<p>Both the Imago OCR project and the <code class="docutils literal"><span class="pre">imago_console</span></code> tool are supporting
+the most popular raster image formats: <code class="docutils literal"><span class="pre">PNG</span></code>, <code class="docutils literal"><span class="pre">JPEG</span></code>, <code class="docutils literal"><span class="pre">BMP</span></code>,
+<code class="docutils literal"><span class="pre">DIB</span></code>, <code class="docutils literal"><span class="pre">TIFF</span></code>, <code class="docutils literal"><span class="pre">PBM</span></code>, <code class="docutils literal"><span class="pre">RAS</span></code> and others (depending on platform).
+Imago OCR Visual Tool users can also open <code class="docutils literal"><span class="pre">PDF</span></code> files, choose the
+needed document page (if it is <code class="docutils literal"><span class="pre">PDF</span></code> or <code class="docutils literal"><span class="pre">TIFF</span></code>), and select a
+fragment that should be recognized.</p>
+<p>Developers who use the C API can pass supported format images or raw
+image data to the library. Recognition result can be saved as <code class="docutils literal"><span class="pre">MDL</span></code>
+(Symyx, Accelrys) Molfiles. Imago OCR Visual Tool also provides a
+possibility to copy the recognized molecule to the system clipboard.</p>
+</div>
+<div class="section" id="download-and-install">
+<h2>Download and Install<a class="headerlink" href="#download-and-install" title="Permalink to this headline">¶</a></h2>
+<p>Look at the <a class="reference external" href="../download/imago.html">Downloads</a> page for the
+installation package suitable for your system. There is an installer for
+Windows, and zipfiles for Linux and Mac OS X, which you can just unpack
+into <code class="docutils literal"><span class="pre">/usr/local/bin</span></code> or <code class="docutils literal"><span class="pre">/opt</span></code> directory, or into your home
+directory.</p>
+<p>You can run Imago OCR Visual Tool even without installing any files
+using Java Web Start technology. Open the <a class="reference external" href="TODO:/downloads/gpl/imago-2.0.0/jnlp/imago-ocr-visual-tool.jnlp">following
+JNLP-file</a>
+to execute Imago OCR Visual Tool.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Copyright © 2009-2013 GGA Software Services LLC</p>
+<p>This program is free software: You can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; version 3 of the License.</p>
+<p>This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along
+with this program. If you did not, please see
+<a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+</div>
+<div class="section" id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h2>
+<p>Do you need assistance using our tools? Do you need a feature? Do you
+want to send a patch to us? Did you find a bug? Please write to one of
+the following newsgroups and let us know:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://groups.google.com/group/indigo-bugs">http://groups.google.com/group/indigo-bugs</a> : for bug reports on all
+GGA projects.</li>
+<li><a class="reference external" href="http://groups.google.com/group/indigo-dev">http://groups.google.com/group/indigo-dev</a> : for development topics.</li>
+<li><a class="reference external" href="http://groups.google.com/group/indigo-general">http://groups.google.com/group/indigo-general</a> : for any other
+discussions.</li>
+</ul>
+<p>No registration is required: you can write from your ordinary e-mail
+account to <a class="reference external" href="mailto:indigo-bugs&#37;&#52;&#48;googlegroups&#46;com">indigo-bugs<span>&#64;</span>googlegroups<span>&#46;</span>com</a>, <a class="reference external" href="mailto:indigo-dev&#37;&#52;&#48;googlegroups&#46;com">indigo-dev<span>&#64;</span>googlegroups<span>&#46;</span>com</a>, or
+<a class="reference external" href="mailto:indigo-general&#37;&#52;&#48;googlegroups&#46;com">indigo-general<span>&#64;</span>googlegroups<span>&#46;</span>com</a> to get your message posted.</p>
+</div>
+<div class="section" id="commercial-availability">
+<h2>Commercial Availability<a class="headerlink" href="#commercial-availability" title="Permalink to this headline">¶</a></h2>
+<p>If the GPL-licensed Imago does not fit your needs, please contact us at
+<a class="reference external" href="mailto:info&#37;&#52;&#48;ggasoftware&#46;com">info<span>&#64;</span>ggasoftware<span>&#46;</span>com</a> to discuss the purchase of a commercial license.
+You may need the commercial license if you want to:</p>
+<ul class="simple">
+<li>Receive ongoing support and maintenance</li>
+<li>Include Imago as a component in your proprietary software product</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Imago OCR</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#recognizable-molecule-features">Recognizable Molecule Features</a></li>
+<li><a class="reference internal" href="#online-demo">Online Demo</a></li>
+<li><a class="reference internal" href="#comparison-with-other-systems">Comparison with other systems</a></li>
+<li><a class="reference internal" href="#resources">Resources</a></li>
+<li><a class="reference internal" href="#portability">Portability</a><ul>
+<li><a class="reference internal" href="#list-of-dependencies">List of Dependencies</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#supported-data-formats">Supported Data Formats</a></li>
+<li><a class="reference internal" href="#download-and-install">Download and Install</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#feedback">Feedback</a></li>
+<li><a class="reference internal" href="#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

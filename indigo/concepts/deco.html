@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>R-Group Deconvolution Examples &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Concepts" href="index.html" />
+    <link rel="next" title="Reaction Enumeration Examples" href="combichem.html" />
+    <link rel="prev" title="Concepts" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="combichem.html" title="Reaction Enumeration Examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Concepts"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Indigo Toolkit</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Concepts</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="r-group-deconvolution-examples">
+<h1>R-Group Deconvolution Examples<a class="headerlink" href="#r-group-deconvolution-examples" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h2>
+<p>The input molecules are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image6" src="../../_images/deco_01_1m.svg" /></td>
+<td><img alt="image7" src="../../_images/deco_01_2m.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image8" src="../../_images/deco_01_3m.svg" /></td>
+<td><img alt="image9" src="../../_images/deco_01_4m.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image10" src="../../_images/deco_01_5m.svg" /></td>
+<td><img alt="image11" src="../../_images/deco_01_6m.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>The detected scaffold is:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image13" src="../../_images/deco_01_scaf.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>The R-Group deconvolution is:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="65%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Highlighted Scaffold</th>
+<th class="head">R-Groups</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image26" src="../../_images/deco_01_1hi.svg" /></td>
+<td><img alt="image27" src="../../_images/deco_01_1r.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image28" src="../../_images/deco_01_2hi.svg" /></td>
+<td><img alt="image29" src="../../_images/deco_01_2r.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image30" src="../../_images/deco_01_3hi.svg" /></td>
+<td><img alt="image31" src="../../_images/deco_01_3r.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image32" src="../../_images/deco_01_4hi.svg" /></td>
+<td><img alt="image33" src="../../_images/deco_01_4r.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image34" src="../../_images/deco_01_5hi.svg" /></td>
+<td><img alt="image35" src="../../_images/deco_01_5r.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image36" src="../../_images/deco_01_6hi.svg" /></td>
+<td><img alt="image37" src="../../_images/deco_01_6r.svg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="example-2">
+<h2>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h2>
+<p>The input molecules are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image42" src="../../_images/deco_02_1m.svg" /></td>
+<td><img alt="image43" src="../../_images/deco_02_2m.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image44" src="../../_images/deco_02_3m.svg" /></td>
+<td><img alt="image45" src="../../_images/deco_02_4m.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>The detected scaffold is:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image47" src="../../_images/deco_02_scaf.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>The R-Group deconvolution is:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="65%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Highlighted Scaffold</th>
+<th class="head">R-Groups</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image56" src="../../_images/deco_02_1hi.svg" /></td>
+<td><img alt="image57" src="../../_images/deco_02_1r.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image58" src="../../_images/deco_02_2hi.svg" /></td>
+<td><img alt="image59" src="../../_images/deco_02_2r.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image60" src="../../_images/deco_02_3hi.svg" /></td>
+<td><img alt="image61" src="../../_images/deco_02_3r.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image62" src="../../_images/deco_02_4hi.svg" /></td>
+<td><img alt="image63" src="../../_images/deco_02_4r.svg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="example-3">
+<h2>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h2>
+<p>This example was run with <code class="docutils literal"><span class="pre">-na</span></code> option, and so the scaffolds are not
+aromatized.</p>
+<p>The input molecules are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image66" src="../../_images/deco_03_1m.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image67" src="../../_images/deco_03_2m.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>All possible scaffolds are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image74" src="../../_images/deco_03_scaf1.svg" /></td>
+<td><img alt="image75" src="../../_images/deco_03_scaf2.svg" /></td>
+</tr>
+<tr class="row-even"><td><img alt="image76" src="../../_images/deco_03_scaf3.svg" /></td>
+<td><img alt="image77" src="../../_images/deco_03_scaf4.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image78" src="../../_images/deco_03_scaf5.svg" /></td>
+<td><img alt="image79" src="../../_images/deco_03_scaf6.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>The selected scaffold is:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image81" src="../../_images/deco_03_scaf.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>The R-Group deconvolution is:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="65%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Highlighted Scaffold</th>
+<th class="head">R-Groups</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image86" src="../../_images/deco_03_1hi.svg" /></td>
+<td><img alt="image87" src="../../_images/deco_03_1r.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image88" src="../../_images/deco_03_2hi.svg" /></td>
+<td><img alt="image89" src="../../_images/deco_03_2r.svg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="example-4">
+<h2>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h2>
+<p>The input molecules are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image92" src="../../_images/deco_04_1m.svg" /></td>
+<td><img alt="image93" src="../../_images/deco_04_2m.svg" /></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="aromatic-scaffold">
+<h3>Aromatic scaffold<a class="headerlink" href="#aromatic-scaffold" title="Permalink to this headline">¶</a></h3>
+<p>The detected scaffold is:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image95" src="../../_images/deco_05_scaf.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>The molecules are identical (up to aromatization), so the R-Group
+deconvolution is trivial.</p>
+</div>
+<div class="section" id="nonaromatic-scaffold">
+<h3>Nonaromatic scaffold<a class="headerlink" href="#nonaromatic-scaffold" title="Permalink to this headline">¶</a></h3>
+<p>With <code class="docutils literal"><span class="pre">-na</span></code> option, the following scaffolds were found:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image98" src="../../_images/deco_04_scaf1.svg" /></td>
+<td><img alt="image99" src="../../_images/deco_04_scaf2.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>The first one was selected for R-Group deconvolution:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="image101" src="../../_images/deco_04_scaf.svg" /></td>
+</tr>
+</tbody>
+</table>
+<p>The R-Group deconvolution is:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Highlighted Scaffold</th>
+<th class="head">R-Groups</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="image106" src="../../_images/deco_04_1hi.svg" /></td>
+<td><img alt="image107" src="../../_images/deco_04_1r.svg" /></td>
+</tr>
+<tr class="row-odd"><td><img alt="image108" src="../../_images/deco_04_2hi.svg" /></td>
+<td><img alt="image109" src="../../_images/deco_04_2r.svg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">R-Group Deconvolution Examples</a><ul>
+<li><a class="reference internal" href="#example-1">Example 1</a></li>
+<li><a class="reference internal" href="#example-2">Example 2</a></li>
+<li><a class="reference internal" href="#example-3">Example 3</a></li>
+<li><a class="reference internal" href="#example-4">Example 4</a><ul>
+<li><a class="reference internal" href="#aromatic-scaffold">Aromatic scaffold</a></li>
+<li><a class="reference internal" href="#nonaromatic-scaffold">Nonaromatic scaffold</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

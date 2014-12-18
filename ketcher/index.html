@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ketcher &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="next" title="Editing Tips" href="editing-tips.html" />
+    <link rel="prev" title="Bingo Changelog" href="../bingo/changelog.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="editing-tips.html" title="Editing Tips"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../bingo/changelog.html" title="Bingo Changelog"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ketcher">
+<h1>Ketcher<a class="headerlink" href="#ketcher" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="editing-tips.html">Editing Tips</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developers-manual.html">Developer&#8217;s Manual</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Ketcher is a web-based chemical structure editor.</p>
+<p><a class="reference external" href="TODO:ketcher-demo"><img alt="image0" src="../_images/ketcher_2.png" /></a></p>
+<p>Since Ketcher is written in pure Javascript, it incorporates high
+performance, good portability and light weight. You will not need any
+Java or Flash plugins to use it in your browser. Ketcher is completely
+free and open-source, while also available on a commercial basis.</p>
+<p>You can easily integrate Ketcher into your web application. The process
+of integration is very simple and
+<a class="reference external" href="developers-manual.html">well-documented</a>.</p>
+<p>Ketcher is under active development. You can post us your <a class="reference external" href="../contact.html#feedback-on-open-source-products">comments and
+suggestions</a> and
+get timely replies from the developers&#8217; team.</p>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="standalone-mode">
+<h3>Standalone mode<a class="headerlink" href="#standalone-mode" title="Permalink to this headline">¶</a></h3>
+<p>Ketcher supports the standalone mode in which no server support is
+required. In this mode, SMILES loading, automatic layout and automatic
+atom-atom mapping are not available.</p>
+</div>
+<div class="section" id="scalable-vector-graphics-svg-for-rendering">
+<h3>Scalable Vector Graphics (SVG) for rendering<a class="headerlink" href="#scalable-vector-graphics-svg-for-rendering" title="Permalink to this headline">¶</a></h3>
+<p>Ketcher uses <a class="reference external" href="http://raphaeljs.com/">Raphael</a> as a backend, which
+means that <a class="reference external" href="../resources.html#web-standards">SVG</a> or
+<a class="reference external" href="../resources.html#web-standards">VML</a> (Vector Markup Language) is
+used for rendering, depending on the browser.</p>
+</div>
+<div class="section" id="automatic-layout-clean-up-aam-atom-to-atom-mapping-and-de-aromatization">
+<h3>Automatic layout (clean up), AAM (atom-to-atom mapping) and (de)aromatization<a class="headerlink" href="#automatic-layout-clean-up-aam-atom-to-atom-mapping-and-de-aromatization" title="Permalink to this headline">¶</a></h3>
+<p>Ketcher delegates these computationally intensive procedures to the
+<a class="reference external" href="../indigo/index.html">Indigo</a> toolkit on the server side.</p>
+</div>
+<div class="section" id="supported-file-formats">
+<h3>Supported file formats<a class="headerlink" href="#supported-file-formats" title="Permalink to this headline">¶</a></h3>
+<p>Ketcher can import and export
+<a class="reference external" href="../resources.html#file-formats">Molfile/Rxnfile</a>, as well as
+<a class="reference external" href="../resources.html#file-formats">SMILES</a>. Server is required to
+import a <a class="reference external" href="../resources.html#file-formats">SMILES</a> string, since
+layout is needed to obtain the coordinates.</p>
+</div>
+<div class="section" id="other-features">
+<h3>Other features<a class="headerlink" href="#other-features" title="Permalink to this headline">¶</a></h3>
+<p><strong>Fast and convenient editing.</strong> We strive to make Ketcher as easy to
+use and as fast as the state-of-the-art desktop structure editing tools.
+See <a class="reference external" href="editing-tips.html">Editing Tips</a> for details. Here are some
+highlights:</p>
+<ul class="simple">
+<li>Lasso and Rectangle selection tools, plus a special Fragment
+selection tool to deal with connected components, rather than single
+atoms/bonds.</li>
+<li>A variety of <a class="reference external" href="editing-tips.html#hotkeys">hotkeys</a>.</li>
+<li>Undo/Redo.</li>
+</ul>
+<p><strong>Stereochemistry.</strong> Ketcher provides complete stereochemistry support
+during the editing, loading, and saving of chemical structures.</p>
+<p><strong>Reactions.</strong> Full-featured reaction support including reacting
+centers, atom flags and AAM.</p>
+<p><strong>S-groups.</strong> All major S-group types are supported including generic,
+SRU polymers, multiple groups, superatoms and data S-groups.</p>
+<p><strong>R-groups.</strong> R-site and R-fragment assignment is supported, as well as
+attachment point specification and R-logic.</p>
+</div>
+</div>
+<div class="section" id="supported-browsers">
+<h2>Supported browsers<a class="headerlink" href="#supported-browsers" title="Permalink to this headline">¶</a></h2>
+<p>The complete functionality of Ketcher has been tested on the following
+browsers:</p>
+<ul class="simple">
+<li>Internet Explorer 6+</li>
+<li>Firefox 3.5+</li>
+<li>Safari 4+</li>
+<li>Opera 9.6+</li>
+<li>Chrome 2+</li>
+</ul>
+</div>
+<div class="section" id="third-party-code">
+<h2>Third-party code<a class="headerlink" href="#third-party-code" title="Permalink to this headline">¶</a></h2>
+<p>Ketcher makes use of <a class="reference external" href="http://raphaeljs.com/">Raphael</a> and
+<a class="reference external" href="http://prototypejs.org/">Prototype</a>.</p>
+<p>The current icon set was taken from <a class="reference external" href="http://tango.freedesktop.org/Tango_Icon_Library">Tango Desktop
+Project</a></p>
+</div>
+<div class="section" id="online-demo">
+<h2>Online Demo<a class="headerlink" href="#online-demo" title="Permalink to this headline">¶</a></h2>
+<p>You can try Ketcher <a class="reference external" href="TODO:ketcher-demo">here</a> or a web page with
+embedded Ketcher <a class="reference external" href="TODO:ketcher-demo">here</a>.</p>
+</div>
+<div class="section" id="download">
+<h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p>Look at the <a class="reference external" href="../download/ketcher.html">Downloads</a> page for the
+<a class="reference external" href="developers-manual.html#installation">installation</a> package and a
+sample <a class="reference external" href="developers-manual.html#ketcher-server">server</a>
+implementation.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Copyright © 2010-2013 GGA Software Services LLC</p>
+<p>This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, version 3 of the License.</p>
+<p>This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero
+General Public License for more details.</p>
+<p>You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+</div>
+<div class="section" id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h2>
+<p>Do you need assistance using our tools? Do you need a feature? Do you
+want to send a patch to us? Did you find a bug? Please write to one of
+the following newsgroups and let us know:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://groups.google.com/group/indigo-bugs">http://groups.google.com/group/indigo-bugs</a> : for bug reports on all
+GGA projects.</li>
+<li><a class="reference external" href="http://groups.google.com/group/indigo-dev">http://groups.google.com/group/indigo-dev</a> : for development topics.</li>
+<li><a class="reference external" href="http://groups.google.com/group/indigo-general">http://groups.google.com/group/indigo-general</a> : for any other
+discussions.</li>
+</ul>
+<p>No registration is required: you can write from your ordinary e-mail
+account to <a class="reference external" href="mailto:indigo-bugs&#37;&#52;&#48;googlegroups&#46;com">indigo-bugs<span>&#64;</span>googlegroups<span>&#46;</span>com</a>, <a class="reference external" href="mailto:indigo-dev&#37;&#52;&#48;googlegroups&#46;com">indigo-dev<span>&#64;</span>googlegroups<span>&#46;</span>com</a>, or
+<a class="reference external" href="mailto:indigo-general&#37;&#52;&#48;googlegroups&#46;com">indigo-general<span>&#64;</span>googlegroups<span>&#46;</span>com</a> to get your message posted.</p>
+</div>
+<div class="section" id="commercial-availability">
+<h2>Commercial Availability<a class="headerlink" href="#commercial-availability" title="Permalink to this headline">¶</a></h2>
+<p>If the AGPL-licensed Ketcher does not fit your needs, please contact us
+at <a class="reference external" href="mailto:info&#37;&#52;&#48;ggasoftware&#46;com">info<span>&#64;</span>ggasoftware<span>&#46;</span>com</a> to discuss the purchase of a commercial license.
+You may need the commercial license if you want to:</p>
+<ul class="simple">
+<li>Receive ongoing support and maintenance</li>
+<li>Include Ketcher as a component in your proprietary software product</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Ketcher</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#features">Features</a><ul>
+<li><a class="reference internal" href="#standalone-mode">Standalone mode</a></li>
+<li><a class="reference internal" href="#scalable-vector-graphics-svg-for-rendering">Scalable Vector Graphics (SVG) for rendering</a></li>
+<li><a class="reference internal" href="#automatic-layout-clean-up-aam-atom-to-atom-mapping-and-de-aromatization">Automatic layout (clean up), AAM (atom-to-atom mapping) and (de)aromatization</a></li>
+<li><a class="reference internal" href="#supported-file-formats">Supported file formats</a></li>
+<li><a class="reference internal" href="#other-features">Other features</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#supported-browsers">Supported browsers</a></li>
+<li><a class="reference internal" href="#third-party-code">Third-party code</a></li>
+<li><a class="reference internal" href="#online-demo">Online Demo</a></li>
+<li><a class="reference internal" href="#download">Download</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#feedback">Feedback</a></li>
+<li><a class="reference internal" href="#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

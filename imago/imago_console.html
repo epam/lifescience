@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Imago Console Application &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Imago OCR" href="index.html" />
+    <link rel="next" title="C Library Reference" href="c.html" />
+    <link rel="prev" title="Imago OCR Visual Tool" href="imago-gui.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="c.html" title="C Library Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="imago-gui.html" title="Imago OCR Visual Tool"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Imago OCR</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="imago-console-application">
+<h1>Imago Console Application<a class="headerlink" href="#imago-console-application" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="distribution">
+<h2>Distribution<a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h2>
+<p>The utility is called <code class="docutils literal"><span class="pre">imago_console.exe</span></code> in Windows distribution or
+simply <code class="docutils literal"><span class="pre">imago_console</span></code> in Linux and Mac OS X distributions. Binaries
+are offered in 32-bit and 64-bit versions.</p>
+</div>
+<div class="section" id="command-line-parameters-reference">
+<h2>Command-line parameters reference<a class="headerlink" href="#command-line-parameters-reference" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">imago_console</span></code> tool has an additional command line switches and
+possibilities in comparison to <a class="reference external" href="imago-gui.html">OCR Visual Tool</a>.</p>
+<p>The help message from the program is the following:</p>
+<div class="highlight-python"><div class="highlight"><pre>Usage: imago_console.exe [option]* [batches] [mode] [image_path] [-o output_file]
+
+ MODE SWITCHES:
+  image_path: full path to image to recognize (may be omitted if other switch is specified)
+  -o output_file: save single recognition result to the specified file
+  -characters: extracts only characters from image(s) and store in ./characters/
+  -learn dir_name: process machine learning for specified collection
+  -compare molfile1 molfile2: calculate similarity between molfiles
+    -retcode: returns similarity 0..100 in ERRORLEVEL
+  -test dir_name: calculate similarity score on specified test collection
+
+ OPTION SWITCHES:
+  -config cfg_file: use specified configuration cluster file
+  -log: enables debug log output to ./log.html
+  -logvfs: stores log in single encoded file ./log_vfs.txt
+  -noexp: do not expand chemical abbreviations
+  -pr: use probablistic separator (experimental)
+  -tl time_in_ms: timelimit per single image process (default is 10000)
+  -similarity tool [-sparam additional_parameters]: override the default comparison method
+  -pass: don&#39;t process images, only print their filenames
+  -override config_string: override config by applying specified string
+
+ BATCHES:
+  -dir dir_name: process every image from dir dir_name
+    -rec: process directory recursively
+    -images: skip non-supported files from directory
+
+ SHORTCUTS:
+  -learnd dir_name: -learn -dir dir_name -images
+</pre></div>
+</div>
+<p>The simplest use case is <code class="docutils literal"><span class="pre">imago_console</span> <span class="pre">image.png</span></code> which recognizes
+image and saves output to <code class="docutils literal"><span class="pre">molecule.mol</span></code>.</p>
+<ul class="simple">
+<li>You can easily process multiple images from same directory by
+specifying the <strong>-dir</strong> switch.</li>
+<li>The <strong>-rec</strong> switch allows recursively process and the <strong>-images</strong>
+switch skips all non-image data from directories. For example:
+<code class="docutils literal"><span class="pre">imago_console</span> <span class="pre">-dir</span> <span class="pre">C:\test</span> <span class="pre">-rec</span> <span class="pre">-images</span></code></li>
+<li>The <strong>-config</strong> switch allows to select configuration cluster
+manually, for instance
+<code class="docutils literal"><span class="pre">imago_console</span> <span class="pre">-config</span> <span class="pre">indigo_render.txt</span> <span class="pre">image_rendered_by_indigo.png</span></code></li>
+<li>The <strong>-log</strong> switch enables debug logging to <code class="docutils literal"><span class="pre">log.html</span></code> file (the
+required images will be stored in <code class="docutils literal"><span class="pre">htmlimgs</span></code> dir). The <strong>-logvfs</strong>
+stores all log data in single file <code class="docutils literal"><span class="pre">logvfs.txt</span></code></li>
+<li>The <strong>-compare</strong> switch allows to compare two molfiles and print the
+similarity value. If the <strong>-retcode</strong> switch specified also the
+result will be returned as error level variable (can be obtained
+under Windows by <code class="docutils literal"><span class="pre">echo</span> <span class="pre">%ERRORLEVEL%</span></code> command)</li>
+<li>The <strong>-learn</strong> switch performs the machine learning process. Before
+you start you need to create the test collection: folder (subfolders
+are allowed too) where the original images and corresponding
+recognized structures are placed (for instance: <code class="docutils literal"><span class="pre">image1.png</span></code>,
+<code class="docutils literal"><span class="pre">image1.mol</span></code>, <code class="docutils literal"><span class="pre">image2.jpg</span></code>, <code class="docutils literal"><span class="pre">image2.mol</span></code>, …). The program will
+try to generate the configuration cluster which gives the better
+recognition rate on the specified test collection. If so, the cluster
+will be saved in current folder as <code class="docutils literal"><span class="pre">config_NNNOK_MMM.txt</span></code>. You can
+use this config further by specifying the
+<code class="docutils literal"><span class="pre">-config</span> <span class="pre">config_NNNOK_MMM.txt</span></code> switch.</li>
+<li>The <strong>-test</strong> switch allows quickly check recognition result on a
+specified test collection (organized the same way as for machine
+learning) and returns count of correctly recognized images and
+average time. Can be combined with <strong>-retcode</strong> switch to return
+average recognition rate as process return code.</li>
+<li>The <strong>-tl</strong> switch can be used for limiting the recognition time per
+image. If the recognition process takes more time than specified -
+the process will be stopped.</li>
+<li>The <strong>-override</strong> switch can be used for setting config parameters.
+For example, <code class="docutils literal"><span class="pre">-override</span> <span class="pre">&quot;prefilterCV.MinGoodPixelsCount=30;&quot;</span></code> drops
+all connected segments with pixel count less than 30.</li>
+<li>The <strong>-o</strong> switch sets the output filename for single image
+recognition.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Imago Console Application</a><ul>
+<li><a class="reference internal" href="#distribution">Distribution</a></li>
+<li><a class="reference internal" href="#command-line-parameters-reference">Command-line parameters reference</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

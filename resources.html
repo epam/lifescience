@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Resources &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="index.html" />
+    <link rel="next" title="Download" href="download/index.html" />
+    <link rel="prev" title="GGA Selenium Framework" href="selenium.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="download/index.html" title="Download"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="selenium.html" title="GGA Selenium Framework"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="resources">
+<h1>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="algorithms">
+<h2>Algorithms<a class="headerlink" href="#algorithms" title="Permalink to this headline">¶</a></h2>
+<p>Fingerprinting is a common technique for molecular screening. Daylight,
+Inc. introduced this technique, and it is described in the following
+<a class="reference external" href="http://www.daylight.com/dayhtml/doc/theory/theory.finger.html">article</a>.
+Bingo fingerprints, as compared to Daylight fingerprints, are built not
+from bond paths, but from trees and rings. A Russian article describes
+the <a class="reference external" href="http://shmat-razum.blogspot.com/2008/11/blog-%0Apost.html">enumeration of
+subtrees</a>,
+which in turn is based on <a class="reference external" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.26.4487">reverse
+search</a>
+by David Avis and Komei Fukuda.</p>
+<p>For tautomer substructure search, Bingo incorporates a unique type of
+fingerprinting.</p>
+<p>For subgraph matching, we developed an original algorithm. It is
+somewhat similar to an algorithm by <a class="reference external" href="http://portal.acm.org/citation.cfm?id=1018377">Luigi Cordella et
+al.</a></p>
+<p>For the molecule layout in Indigo and Bingo, we developed a unique
+algorithm, based on biconnected components extraction. It incorporates
+some ideas of <a class="reference external" href="http://pubs.acs.org/doi/abs/10.1021/ci00038a002">Craig
+Shelley</a>.</p>
+<p>For the aromaticity matching and resonance search, we developed unique
+algorithms as well.</p>
+<p>For the canonical SMILES, Brendan McKay&#8217;s
+<a class="reference external" href="http://cs.anu.edu.au/~bdm/nauty/">nauty</a> canonical labeling
+algorithm was re-implemented. Many of the original nauty&#8217;s features and
+optimizations were not included. There is also a
+<a class="reference external" href="http://shmat-razum.blogspot.com/2009/06/graph-automorphisms-canonical-labeling.html">description</a>
+of the algorithm in Russian.</p>
+<p>For the affine transformation matching, <a class="reference external" href="http://scripts.iucr.org/cgi-%0Abin/paper?S0567739476001873">Wolfgang Kabsch&#8217;s
+algorithm</a>
+was implemented.</p>
+<p>In internal molecule and reaction formats, the
+<a class="reference external" href="http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch">LZW</a>
+algorithm with some modifications was used for compression.</p>
+<p>For the exact maximum common substructure search, we developed a unique
+algorithm partially based on <a class="reference external" href="http://cdk.sourcearchive.com/documentation/1:1.0.2-2/dir_fc89e4c1c81ccda6d426c1b67ae622bd.html">Thierry Hanser&#8217;s
+algorithm</a>
+(which in turn has its roots in an algorithm by <a class="reference external" href="http://portal.acm.org/citation.cfm?id=362367">Coen Bron and Joep
+Kerbosh</a>). For the
+approximate maximum common substructure search, the
+<a class="reference external" href="http://ci.nii.ac.jp/naid/110003210164/">2DOM</a> algorithm with some
+modifications was implemented. A <a class="reference external" href="assets/mcs_article.pdf">Russian
+paper</a> describes both algorithms.</p>
+</div>
+<div class="section" id="oracle-interface">
+<h2>Oracle Interface<a class="headerlink" href="#oracle-interface" title="Permalink to this headline">¶</a></h2>
+<p>The C++ wrapper was implemented for the Oracle OCI library. One Russian
+article describes <a class="reference external" href="http://lj.rossia.org/users/ringill/5064.html">the pitfalls of handling Oracle LOBs in
+OCI</a>, while another
+Russian article covers the <a class="reference external" href="http://shmat-razum.blogspot.com/2009/01/oracle.html">performance of
+queries</a>.</p>
+</div>
+<div class="section" id="cairo">
+<h2>Cairo<a class="headerlink" href="#cairo" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://cairographics.org/">Cairo</a> 1.8.6 was used for rendering in
+Indigo. In Linux builds, the system-wide installation of <code class="docutils literal"><span class="pre">libcairo</span></code>
+must be present (<code class="docutils literal"><span class="pre">-I/usr/include/cairo</span></code> flag is passed to the compiler
+and <code class="docutils literal"><span class="pre">-lcairo</span></code> is passed to the linker). In Mac OS X builds, the
+system-wide installation of <code class="docutils literal"><span class="pre">libcairo</span></code> must be present as well
+(<code class="docutils literal"><span class="pre">/opt/local/lib/libcairo.dylib</span></code> path is passed to the linker). You
+can install it using <a class="reference external" href="http://www.macports.org/">MacPorts</a>. The 32-bit
+and 64-bit Windows builds of Cairo are included in the source tree. They
+can be downloaded from
+<a class="reference external" href="http://www.gtk.org/download-windows.html">GTK</a> and
+<a class="reference external" href="http://ftp.gnome.org/pub/GNOME/binaries/win64/dependencies/">GNOME</a>
+project sites, respectively. Binaries of
+<a class="reference external" href="http://www.libpng.org/pub/png/libpng.html">libpng</a>,
+<a class="reference external" href="http://www.zlib.net">zlib</a>, <a class="reference external" href="http://www.freetype.org">Freetype</a>,
+<a class="reference external" href="http://www.fontconfig.org">Fontconfig</a>, and
+<a class="reference external" href="http://expat.sourceforge.net/">Expat</a>, needed for Cairo, are there
+as well.</p>
+</div>
+<div class="section" id="file-formats">
+<h2>File Formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h2>
+<p>The molecule and reaction format descriptions are available on the
+following sites: <a class="reference external" href="http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html">Daylight
+SMILES</a>,
+<a class="reference external" href="http://www.chemaxon.com/marvin/help/formats/cxsmiles-doc.html">ChemAxon SMILES
+extensions</a>,
+and <a class="reference external" href="http://www.symyx.com/downloads/public/ctfile/ctfile.jsp">MDL (Symyx)
+Molfiles</a>.</p>
+</div>
+<div class="section" id="web-standards">
+<h2>Web standards<a class="headerlink" href="#web-standards" title="Permalink to this headline">¶</a></h2>
+<p>More information about web standards used by Ketcher can be found here:
+<a class="reference external" href="http://www.w3.org/Graphics/SVG/">SVG</a>,
+<a class="reference external" href="http://www.w3.org/TR/NOTE-VML">VML</a>.</p>
+</div>
+<div class="section" id="web-frameworks">
+<h2>Web frameworks<a class="headerlink" href="#web-frameworks" title="Permalink to this headline">¶</a></h2>
+<p>Ketcher includes two JavaScript libraries:
+<a class="reference external" href="http://raphaeljs.com/">Raphaël</a> for vector graphics and
+<a class="reference external" href="http://prototypejs.org">Prototype</a> for overall code improvement.</p>
+</div>
+<div class="section" id="code-examples">
+<h2>Code Examples<a class="headerlink" href="#code-examples" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://ctr.wikia.com/wiki/Category:Indigo/C%2B%2B">Chemistry Toolkit
+Rosetta</a> wiki
+contains some examples of small utilities written using Indigo C++ API.</p>
+</div>
+<div class="section" id="development-tools">
+<h2>Development Tools<a class="headerlink" href="#development-tools" title="Permalink to this headline">¶</a></h2>
+<p>We use <a class="reference external" href="http://www.netbeans.org/">NetBeans 6.8</a> on Linux
+workstations, <a class="reference external" href="http://msdn.microsoft.com/hi-in/vstudio/default.aspx">Microsoft Visual Studio
+2008</a> on
+Windows workstations, and <a class="reference external" href="http://developer.apple.com/tools/xcode/">XCode
+3.2</a> on Mac OS X
+workstations.</p>
+</div>
+<div class="section" id="commercial-availability">
+<h2>Commercial availability<a class="headerlink" href="#commercial-availability" title="Permalink to this headline">¶</a></h2>
+<p>We have dual-licensed our code. If the GPL-licensed code does not fit
+your needs, please contact us at <a class="reference external" href="mailto:info&#37;&#52;&#48;ggasoftware&#46;com">info<span>&#64;</span>ggasoftware<span>&#46;</span>com</a> to discuss the
+purchase of a commercial license. You may need the commercial license if
+you want to:</p>
+<ul class="simple">
+<li>Receive ongoing support and maintenance of our code</li>
+<li>Include our code in your proprietary software product</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Resources</a><ul>
+<li><a class="reference internal" href="#algorithms">Algorithms</a></li>
+<li><a class="reference internal" href="#oracle-interface">Oracle Interface</a></li>
+<li><a class="reference internal" href="#cairo">Cairo</a></li>
+<li><a class="reference internal" href="#file-formats">File Formats</a></li>
+<li><a class="reference internal" href="#web-standards">Web standards</a></li>
+<li><a class="reference internal" href="#web-frameworks">Web frameworks</a></li>
+<li><a class="reference internal" href="#code-examples">Code Examples</a></li>
+<li><a class="reference internal" href="#development-tools">Development Tools</a></li>
+<li><a class="reference internal" href="#commercial-availability">Commercial availability</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

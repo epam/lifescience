@@ -1,0 +1,2597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Indigo Toolkit" href="../index.html" />
+    <link rel="next" title="Plain C" href="c.html" />
+    <link rel="prev" title="Transformation" href="../concepts/transformation.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="c.html" title="Plain C"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../concepts/transformation.html" title="Transformation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Indigo Toolkit</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="api">
+<h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="c.html">Plain C</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+<p><strong>`New documentation (work in progress) &lt;TODO:indigo-doc&gt;`__</strong></p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This page describes the API of Indigo library and its rendering plugin.
+The API allows developers to integrate Indigo into their
+C/Java/C#/Python projects. Please note that Indigo is under active
+development, and can always post your <a class="reference external" href="../../contact.html#feedback-on-open-source-software">comments and
+suggestions</a> to
+our team.</p>
+</div>
+<div class="section" id="system">
+<h2>System<a class="headerlink" href="#system" title="Permalink to this headline">¶</a></h2>
+<p>Indigo acts like a state machine that consists of:</p>
+<ul class="simple">
+<li>Objects</li>
+<li>Configuration settings</li>
+<li>Error handling facility</li>
+</ul>
+<p>It is possible to use more than one Indigo instance at a time. In plain
+C API, the &#8220;active&#8221; instance can be switched with <code class="docutils literal"><span class="pre">indigoSetSession</span></code>
+call, while in Python, Java, and C#, the instance is represented as an
+object of class <code class="docutils literal"><span class="pre">Indigo</span></code>.</p>
+<p>The objects that belong to the Indigo state machine are represented as
+integer handles in the C API, while in Python, Java, and C# they are
+wrapped by the <code class="docutils literal"><span class="pre">IndigoObject</span></code> class.</p>
+<p>Access to configuration settings is done via <code class="docutils literal"><span class="pre">indigoSetOption***</span></code>
+functions in the C API, while in Python, Java, and C# a number of
+<code class="docutils literal"><span class="pre">Indigo.setOption</span></code> methods can accomplish it.</p>
+<p>Error handling in C is done via return codes, <code class="docutils literal"><span class="pre">indigoGetLastError</span></code>,
+and <code class="docutils literal"><span class="pre">indigoSetErrorHandler</span></code>. In Python, Java, and C#, as soon as some
+Indigo function terminates with an error, an <code class="docutils literal"><span class="pre">IndigoException</span></code> is
+thrown.</p>
+<p>Several library instances may be created to act simultaneously and
+independently. However, each instance requires a certain amount of
+memory, and thus it is recommended to have as few instances as possible.</p>
+<p>It is allowable to have multiple Indigo instances within one program and
+even in different threads. However, using a single Indigo instance
+across multiple threads is prohibited.</p>
+<p>From now on, only the Python, Java, and C# interfaces are explained. For
+those who are interested in plain C interface, please read the <a class="reference external" href="c.html">C
+API</a> page.</p>
+</div>
+<div class="section" id="indigo-constructor">
+<h2>Indigo Constructor<a class="headerlink" href="#indigo-constructor" title="Permalink to this headline">¶</a></h2>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>import com.ggasoftware.indigo.*;
+...
+Indigo indigo = new Indigo();
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>using com.ggasoftware.indigo;
+....
+Indigo indigo = new Indigo();
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">indigo</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="o">...</span>
+<span class="n">indigo</span> <span class="o">=</span> <span class="n">Indigo</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Python will assume the Indigo binaries stored in the <code class="docutils literal"><span class="pre">lib</span></code> directory
+in the directory where <code class="docutils literal"><span class="pre">indigo.py</span></code> is located. In C# and Java, the
+binaries are unpacked automatically into the system temporary folder.</p>
+</div>
+<div class="section" id="getting-the-version-string">
+<h2>Getting the Version String<a class="headerlink" href="#getting-the-version-string" title="Permalink to this headline">¶</a></h2>
+<p>You can use the <code class="docutils literal"><span class="pre">Indigo.version</span></code> method to get the string containing
+the Indigo library version number.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Indigo version &quot;</span> <span class="o">+</span> <span class="n">indigo</span><span class="o">.</span><span class="n">version</span><span class="p">());</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">C#:</div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Indigo version &quot;</span> <span class="o">+</span> <span class="n">indigo</span><span class="o">.</span><span class="n">version</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="s">&quot;Indigo version &quot;</span> <span class="o">+</span> <span class="n">indigo</span><span class="o">.</span><span class="n">version</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loading-molecules-and-query-molecules">
+<h2>Loading Molecules and Query Molecules<a class="headerlink" href="#loading-molecules-and-query-molecules" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">Indigo</span></code> object provides methods for loading <a class="reference external" href="../concepts/index.html#molecules-and-query-molecules">molecules and query
+molecules</a>
+from: strings, <code class="docutils literal"><span class="pre">byte[]</span></code> buffers, and files. The input format is
+detected automatically, except for SMARTS expressions, for which there
+are special methods.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject mol1 = indigo.loadMolecule(&quot;ONc1cccc1&quot;);
+IndigoObject mol2 = indigo.loadMoleculeFromFile(&quot;structure.mol&quot;);
+IndigoObject qmol1 = indigo.loadQueryMolecule(&quot;C1-C-C-C-1&quot;);
+IndigoObject qmol2 = indigo.loadQueryMoleculeFromFile(&quot;query.mol&quot;);
+IndigoObject qmol3 = indigo.loadSmarts(&quot;[N,n,O;!H0]&quot;);
+IndigoObject qmol4 = indigo.loadSmartsFromFile(&quot;query.sma&quot;);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+<div class="section" id="instrumenting-molecules">
+<h2>Instrumenting Molecules<a class="headerlink" href="#instrumenting-molecules" title="Permalink to this headline">¶</a></h2>
+<p>You can programmatically add atoms and bonds to a molecule. Atoms can be
+added with the <code class="docutils literal"><span class="pre">addAtom</span></code> method of the molecule. This method accepts
+an atom symbol (a string) — an element from the periodic table, or a
+pseudoatom. Similarly, bonds can be added by calling <code class="docutils literal"><span class="pre">addBond</span></code> method
+of an atom. This method accepts another atom and the order of the new
+bond. You can also create an empty molecule by calling the
+<code class="docutils literal"><span class="pre">createMolecule</span></code> method.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject mol = indigo.createMolecule();
+IndigoObject atom1 = mol.addAtom(&quot;C&quot;);
+IndigoObject atom2 = mol.addAtom(&quot;C&quot;);
+IndigoObject atom3 = mol.addAtom(&quot;C&quot;);
+IndigoObject atom4 = mol.addAtom(&quot;C&quot;);
+IndigoObject atom5 = mol.addAtom(&quot;C&quot;);
+IndigoObject atom6 = mol.addAtom(&quot;N&quot;);
+IndigoObject bond1 = atom1.addBond(atom2, 2);
+IndigoObject bond2 = atom2.addBond(atom3, 2);
+IndigoObject bond3 = atom3.addBond(atom4, 1);
+IndigoObject bond4 = atom4.addBond(atom5, 2);
+IndigoObject bond5 = atom5.addBond(atom6, 1);
+IndigoObject bond6 = atom6.addBond(atom1, 2);
+</pre></div>
+</div>
+<p>You can programmatically construct a query molecule via
+<code class="docutils literal"><span class="pre">createQueryMolecule</span></code> method.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject qmol = indigo.createQueryMolecule()
+IndigoObject a1 = qmol.addAtom(&quot;C&quot;)
+IndigoObject a2 = qmol.addAtom(&quot;[#6]&quot;)
+a2.addBond(a1, 1)
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+<p>You can reset existing atom keeping its connections and stereo
+configuration using <code class="docutils literal"><span class="pre">IndigoObject.resetAtom</span></code> method. It accepts string
+representation of an atom in the SMILES (or SMARTS for the queries)
+notation:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">a</span><span class="o">.</span><span class="n">resetAtom</span><span class="p">(</span><span class="s">&quot;N&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To add R-sites or convert existing atom into R-site you can use
+<code class="docutils literal"><span class="pre">addRSite</span></code> and <code class="docutils literal"><span class="pre">setRSite</span></code> methods:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">atom</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">addRSite</span><span class="p">(</span><span class="s">&quot;R3&quot;</span><span class="p">)</span>
+<span class="n">atom2</span><span class="o">.</span><span class="n">setRSite</span><span class="p">(</span><span class="s">&quot;R4&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="instrumenting-query-atoms">
+<h2>Instrumenting Query Atoms<a class="headerlink" href="#instrumenting-query-atoms" title="Permalink to this headline">¶</a></h2>
+<p>Each atom and bond in the query molecule represents as a logic
+expression of various properties. Inidgo support almost all constraints
+from the SMARTS specification. To alter existing contrains you can use
+the following methods:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">addConstraint(type,</span> <span class="pre">value)</span></code> — adds a specified constraint using
+logical <code class="docutils literal"><span class="pre">and</span></code> operation.</li>
+<li><code class="docutils literal"><span class="pre">addConstraintNot(type,</span> <span class="pre">value)</span></code> — adds a negation of a constraint</li>
+<li><code class="docutils literal"><span class="pre">addConstraintOr(type,</span> <span class="pre">value)</span></code> — adds a constraint using logical
+<code class="docutils literal"><span class="pre">or</span></code> operation.</li>
+<li><code class="docutils literal"><span class="pre">removeConstraints(type)</span></code> — removed all constraints with a
+specified type.</li>
+</ul>
+<p>The following self-explaining integer constraint types are supported:</p>
+<ul class="simple">
+<li>&#8220;atomic-number&#8221;</li>
+<li>&#8220;charge&#8221;</li>
+<li>&#8220;isotope&#8221;</li>
+<li>&#8220;radical&#8221;</li>
+<li>&#8220;valence&#8221;</li>
+<li>&#8220;connectivity&#8221;</li>
+<li>&#8220;total-bond-order&#8221;</li>
+<li>&#8220;hydrogens&#8221;</li>
+<li>&#8220;substituents&#8221;</li>
+<li>&#8220;ring&#8221;</li>
+<li>&#8220;smallest-ring-size&#8221;</li>
+<li>&#8220;ring-bonds&#8221;</li>
+<li>&#8220;rsite-mask&#8221;</li>
+<li>&#8220;rsite&#8221;</li>
+</ul>
+<p>Other constraints:</p>
+<ul class="simple">
+<li>&#8220;aromaticity&#8221; = &#8220;aliphatic&#8221; or &#8220;aromatic&#8221;</li>
+<li>&#8220;smarts&#8221; — any single-atom SMARTS expression</li>
+</ul>
+<p>Code example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">query</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">createQueryMolecule</span><span class="p">()</span>
+<span class="n">atom</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">addAtom</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="n">atom</span><span class="o">.</span><span class="n">addConstraint</span><span class="p">(</span><span class="s">&quot;substituents&quot;</span><span class="p">,</span> <span class="s">&quot;3&quot;</span><span class="p">)</span>
+<span class="n">atom</span><span class="o">.</span><span class="n">addConstraintNot</span><span class="p">(</span><span class="s">&quot;atomic-number&quot;</span><span class="p">,</span> <span class="s">&quot;16&quot;</span><span class="p">)</span>
+<span class="n">atom</span><span class="o">.</span><span class="n">addConstraint</span><span class="p">(</span><span class="s">&quot;smarts&quot;</span><span class="p">,</span> <span class="s">&quot;[$([#6]=[N+]=[N-]),$([#6-]-[N+]#[N])]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="merging-molecules">
+<h3>Merging Molecules<a class="headerlink" href="#merging-molecules" title="Permalink to this headline">¶</a></h3>
+<p>You can merge one molecule into another using the <code class="docutils literal"><span class="pre">merge</span></code> method of a
+molecule. This method accepts a molecule that is to be merged into the
+first molecule, and returns a &#8220;mapping&#8221; object. You can call the
+<code class="docutils literal"><span class="pre">mapAtom</span></code> method of the mapping object to know what is the (new) atom
+of the first molecule that was transferred from the second molecule.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject mol = indigo.loadMolecule(&quot;c1ccccc1&quot;);
+IndigoObject mol2 = indigo.loadMolecule(&quot;ON&quot;);
+IndigoObject mapping = mol.merge(mol2);
+mapping.mapAtom(mol2.getAtom(0)).addBond(mol.getAtom(3), 1);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+<div class="section" id="removing-atoms-and-bonds-from-molecules">
+<h3>Removing Atoms and Bonds from Molecules<a class="headerlink" href="#removing-atoms-and-bonds-from-molecules" title="Permalink to this headline">¶</a></h3>
+<p>You can call the <code class="docutils literal"><span class="pre">IndigoObject.remove</span></code> method on an atom or a bond to
+remove it from the molecule it belongs to. Also, if you want to remove
+many atoms at once, you can call <code class="docutils literal"><span class="pre">IndigoObject.removeAtoms</span></code> method,
+providing to it an array of indices of atoms that you want to remove.</p>
+</div>
+<div class="section" id="submolecules">
+<h3>Submolecules<a class="headerlink" href="#submolecules" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.createSubmolecule</span></code> method is applicable to a
+molecule or a query molecule. It accepts an array of atom indices and
+returns a new molecule containing the given atoms copied from the
+molecule, and the bonds between them.</p>
+<p>Similarly, the <code class="docutils literal"><span class="pre">IndigoObject.createEdgeSubmolecule</span></code> method accepts two
+arrays — atom indices and bond indices — and returns a new molecule
+containing the given atoms and bonds copied from the molecule.</p>
+<p>Indigo allowes to create a reference on a submolecule of a molecule with
+method <code class="docutils literal"><span class="pre">IndigoObject.getSubmolecule</span></code>. Such molecule can be later used
+for finding layout of a molecule part.</p>
+</div>
+</div>
+<div class="section" id="accessing-molecules">
+<h2>Accessing Molecules<a class="headerlink" href="#accessing-molecules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="accessing-atoms-and-bonds">
+<h3>Accessing Atoms and Bonds<a class="headerlink" href="#accessing-atoms-and-bonds" title="Permalink to this headline">¶</a></h3>
+<p>The following methods can be applied to a molecule or query molecule:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">getAtom</span></code> — returns the atom by the given index.</li>
+<li><code class="docutils literal"><span class="pre">getBond</span></code> — returns the bond by the given index.</li>
+<li><code class="docutils literal"><span class="pre">iterateAtoms</span></code> — returns an iterator over atoms, including
+pseudoatoms and R-sites.</li>
+<li><code class="docutils literal"><span class="pre">iteratePseudoatoms</span></code> — returns an iterator over pseudoatoms.</li>
+<li><code class="docutils literal"><span class="pre">iterateRSites</span></code> — returns an iterator over R-sites.</li>
+<li><code class="docutils literal"><span class="pre">iterateBonds</span></code> — returns an iterator over bonds.</li>
+</ul>
+</div>
+<div class="section" id="getting-the-properties-of-atoms-and-bonds">
+<h3>Getting the Properties of Atoms and Bonds<a class="headerlink" href="#getting-the-properties-of-atoms-and-bonds" title="Permalink to this headline">¶</a></h3>
+<p>The following methods of a molecule&#8217;s atom can be called to obtain
+information:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">atomicNumber</span></code> — returns zero if the atomic number is undefined or
+ambiguous. (happens only on queries). This method can not be applied
+to R-sites or pseudoatoms.</li>
+<li><code class="docutils literal"><span class="pre">isotope</span></code> — returns the isotope value or zero if the atomic number
+is undefined or ambiguous.</li>
+<li><code class="docutils literal"><span class="pre">degree</span></code> — returns explicit atom degree.</li>
+<li><code class="docutils literal"><span class="pre">charge</span></code> — returns the chagre value or <code class="docutils literal"><span class="pre">null</span></code> if the charge is
+undefined (can happens only on queries).</li>
+<li><code class="docutils literal"><span class="pre">explicitValence</span></code> — returns the explicit valence or <code class="docutils literal"><span class="pre">null</span></code> if
+there is no explicit valence.</li>
+<li><code class="docutils literal"><span class="pre">radicalElectrons</span></code> — returns the number of radical electrons or
+<code class="docutils literal"><span class="pre">null</span></code> if the radical is undefined (can happen only on queries).</li>
+<li><code class="docutils literal"><span class="pre">countHydrogens</span></code> — returns the total number of hydrogens connected
+to the atom (explicit+implicit). Can return <code class="docutils literal"><span class="pre">null</span></code> on query atoms
+where the number of hydrogens is not definitely known.</li>
+<li><code class="docutils literal"><span class="pre">countImplicitHydrogens</span></code> — returns the number of implicit hydrogens
+connected to the atom. Not applicable to query atoms.</li>
+<li><code class="docutils literal"><span class="pre">valence</span></code> — returns the valence of the atom. Not applicable to
+query atoms.</li>
+<li><code class="docutils literal"><span class="pre">isPseudoatom</span></code> — returns <code class="docutils literal"><span class="pre">true</span></code> if the atom is a pseudoatom,
+<code class="docutils literal"><span class="pre">false</span></code> otherwise.</li>
+<li><code class="docutils literal"><span class="pre">isRSite</span></code> — returns <code class="docutils literal"><span class="pre">true</span></code> if the atom is a pseudoatom, <code class="docutils literal"><span class="pre">false</span></code>
+otherwise.</li>
+<li><code class="docutils literal"><span class="pre">symbol</span></code> — returns a string containing the atom symbol. It is
+either a symbol the periodic table (&#8220;C&#8221;, &#8220;Na&#8221;), or a pseudoatom label
+(&#8220;Res&#8221;), or an R-site mark (&#8220;R1&#8221;).</li>
+<li><code class="docutils literal"><span class="pre">xyz</span></code> —returns an aray of three <code class="docutils literal"><span class="pre">float</span></code> numbers, which define the
+position of the atom.</li>
+<li><code class="docutils literal"><span class="pre">singleAllowedRGroup</span></code> — R-Group index allowed on R-Site (usually
+there is a single allowed index). This method can be applied
+exclusively to R-sites.</li>
+</ul>
+<p>The following <code class="docutils literal"><span class="pre">IndigoObject</span></code> methods can be applied to molecule&#8217;s
+bonds:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">bondOrder</span></code> — returns 1/2/3 if the bond is a single/double/triple
+bond. Returns 4 if the bond is an aromatic bond. Returns zero if the
+bond is ambiguous (query bond).</li>
+<li><code class="docutils literal"><span class="pre">source</span></code> — the atom from which the bond is going</li>
+<li><code class="docutils literal"><span class="pre">destination</span></code> — the atom to which the bond is going</li>
+<li><code class="docutils literal"><span class="pre">topology</span></code> — returns Indigo.RING or Indigo.CHAIN, depending on
+whether the bond is a ring bond or not. Returns zero if the bond is
+ambiguous (query bond).</li>
+</ul>
+</div>
+<div class="section" id="modifying-atoms-and-bonds">
+<h3>Modifying Atoms and Bonds<a class="headerlink" href="#modifying-atoms-and-bonds" title="Permalink to this headline">¶</a></h3>
+<p>The following methods of a molecule&#8217;s atom can be called to modify the
+atom:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">resetCharge</span></code></li>
+<li><code class="docutils literal"><span class="pre">resetExplicitValence</span></code></li>
+<li><code class="docutils literal"><span class="pre">resetIsotope</span></code></li>
+<li><code class="docutils literal"><span class="pre">resetRadical</span></code></li>
+<li><code class="docutils literal"><span class="pre">setCharge</span></code> — accepts an integer charge value</li>
+<li><code class="docutils literal"><span class="pre">setIsotope</span></code> — accepts an integer isotope value</li>
+<li><code class="docutils literal"><span class="pre">setXYZ</span></code> — accepts three float numbers (X, Y, Z)</li>
+<li><code class="docutils literal"><span class="pre">setAttachmentPoint</span></code> — accepts an integer index of the attachment
+point (usually 1 or 2).</li>
+<li><code class="docutils literal"><span class="pre">setBondOrder</span></code> — accepts an integer value (1/2/3/4 for
+single/double/triple/aromatic)</li>
+</ul>
+</div>
+<div class="section" id="accessing-neighbor-atoms">
+<h3>Accessing Neighbor Atoms<a class="headerlink" href="#accessing-neighbor-atoms" title="Permalink to this headline">¶</a></h3>
+<p>With <code class="docutils literal"><span class="pre">iterateNeighbors</span></code> method you can access the neighbors atoms of
+an atom. Also, these &#8220;neighbor&#8221; objects respond to the <code class="docutils literal"><span class="pre">bond</span></code> method,
+which returns the bond connecting the atom with the neighbor.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>for (IndigoObject atom : mol.iterateAtoms())
+{
+  System.out.printf(&quot;atom %d: %d neighbors\n&quot;, atom.index(), atom.degree());
+  for (IndigoObject nei : atom.iterateNeighbors())
+    System.out.printf(&quot;neighbor atom %d is connected by bond %d\n&quot;, nei.index(), nei.bond().index());
+}
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">C#:</div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>foreach (IndigoObject atom in mol.iterateAtoms())
+{
+  System.Console.WriteLine(&quot;atom {0}: {1} neighbors\n&quot;, atom.index(), atom.degree());
+  foreach (IndigoObject nei in atom.iterateNeighbors())
+    System.Console.WriteLine(&quot;neighbor atom {0} is connected by bond {1}\n&quot;, nei.index(), nei.bond().index());
+}
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
+  <span class="k">print</span> <span class="s">&quot;atom </span><span class="si">%d</span><span class="s">: </span><span class="si">%d</span><span class="s"> neighbors&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">atom</span><span class="o">.</span><span class="n">degree</span><span class="p">())</span>
+  <span class="k">for</span> <span class="n">nei</span> <span class="ow">in</span> <span class="n">atom</span><span class="o">.</span><span class="n">iterateNeighbors</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s">&quot;neighbor atom </span><span class="si">%d</span><span class="s"> is connected by bond </span><span class="si">%d</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">nei</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">nei</span><span class="o">.</span><span class="n">bond</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-r-groups">
+<h3>Accessing R-Groups<a class="headerlink" href="#accessing-r-groups" title="Permalink to this headline">¶</a></h3>
+<p><strong>Note</strong>: This section applies exclusively to query molecules.</p>
+<p>The <code class="docutils literal"><span class="pre">iterateRGroups</span></code> method iterates over a query molecule&#8217;s R-groups.
+Each of the R-groups has a collection of possible &#8220;R-group fragments&#8221;,
+which in turn can be accessed via the <code class="docutils literal"><span class="pre">iterateRGroupFragments</span></code> method.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>for (IndigoObject rg : mol.iterateRGroups())
+{
+  System.out.println(&quot;RGROUP #&quot; + rg.index());
+  for (IndigoObject frag : rg.iterateRGroupFragments())
+  {
+     System.out.println(&quot;  FRAGMENT #&quot; + rg.index());
+     System.out.println(frag.molfile());
+  }
+}
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>foreach (IndigoObject rg in mol.iterateRGroups())
+{
+  System.Console.WriteLine(&quot;RGROUP #&quot; + rg.index());
+  foreach (IndigoObject frag in rg.iterateRGroupFragments())
+  {
+     System.Console.WriteLine(&quot;  FRAGMENT #&quot; + rg.index());
+     System.Console.WriteLine(frag.molfile());
+  }
+}
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">rg</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateRGroups</span><span class="p">():</span>
+  <span class="k">print</span> <span class="s">&quot;RGROUP #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+  <span class="k">for</span> <span class="n">frag</span> <span class="ow">in</span> <span class="n">rg</span><span class="o">.</span><span class="n">iterateRGroupFragments</span><span class="p">():</span>
+     <span class="k">print</span> <span class="s">&quot;  FRAGMENT #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+     <span class="k">print</span> <span class="n">frag</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="calculating-molecule-properties">
+<h2>Calculating Molecule Properties<a class="headerlink" href="#calculating-molecule-properties" title="Permalink to this headline">¶</a></h2>
+<p>The following <code class="docutils literal"><span class="pre">IndigoObject</span></code> methods can be applied to a molecule or
+query molecule:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">countAtoms</span></code> — returns the number of atoms, including pseudoatoms
+and R-sites.</li>
+<li><code class="docutils literal"><span class="pre">countPseudoatoms</span></code> — returns the number of pseudoatoms.</li>
+<li><code class="docutils literal"><span class="pre">countRSites</span></code> — returns the number of R-sites.</li>
+<li><code class="docutils literal"><span class="pre">coundBonds</span></code> — returns the number of bonds.</li>
+<li><code class="docutils literal"><span class="pre">grossFormula</span></code> — returns a string with the gross formula.</li>
+<li><code class="docutils literal"><span class="pre">molecularWeight</span></code> — returns the molecular weight (a floating-point
+number).</li>
+<li><code class="docutils literal"><span class="pre">mostAbundantMass</span></code> — returns the &#8220;most abundant isotopes mass&#8221; (a
+floating-point number).</li>
+<li><code class="docutils literal"><span class="pre">monoisotopicMass</span></code> — returns the monoisotopic mass (a
+floating-point number).</li>
+<li><code class="docutils literal"><span class="pre">hasCoord</span></code> — returns <code class="docutils literal"><span class="pre">true</span></code> if the given molecule has
+coordinates, <code class="docutils literal"><span class="pre">false</span></code> otherwise.</li>
+<li><code class="docutils literal"><span class="pre">hasZCoord</span></code> — returns <code class="docutils literal"><span class="pre">true</span></code> if the given molecule has 3D
+coordinates, <code class="docutils literal"><span class="pre">false</span></code> otherwise.</li>
+<li><code class="docutils literal"><span class="pre">isChiral</span></code> — returns <code class="docutils literal"><span class="pre">true</span></code> if the molecule was loaded from a
+Molfile, and if it had the &#8216;Chiral&#8217; flag set.</li>
+<li><code class="docutils literal"><span class="pre">countHeavyAtoms</span></code> — returns the number of atoms in the molecule,
+excluding hydrogen atoms. Hydrogen isotopes are excluded too.</li>
+<li><code class="docutils literal"><span class="pre">countImplicitHydrogens</span></code> — returns the total number of implicit
+hydrogens in the molecule.</li>
+<li><code class="docutils literal"><span class="pre">countHydrogens</span></code> — returns the total number of hydrogens in the
+molecule (implicit hydrogens included, hydrogen isotopes included).</li>
+<li><code class="docutils literal"><span class="pre">countSSSR</span></code> — returns the total number of cycles in the Smallest
+Set of Smallest Rings (SSSR).</li>
+</ul>
+</div>
+<div class="section" id="molecule-validation">
+<h2>Molecule Validation<a class="headerlink" href="#molecule-validation" title="Permalink to this headline">¶</a></h2>
+<p>Molecule validation can be done using the following methods:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">checkBadValence</span></code></li>
+<li><code class="docutils literal"><span class="pre">checkAmbiguousH</span></code></li>
+</ul>
+<p>These functions returns non-empty string description of found issues, or
+empty string if molecule is correct.</p>
+</div>
+<div class="section" id="working-with-connected-components">
+<h2>Working with Connected Components<a class="headerlink" href="#working-with-connected-components" title="Permalink to this headline">¶</a></h2>
+<p>You can use the <code class="docutils literal"><span class="pre">countComponents</span></code> method to calculate the number of
+connected components in a structure. Via the <code class="docutils literal"><span class="pre">componentIndex</span></code> method,
+you can obtain the number of the component to which the given atom
+belongs. Also, you can obtain the whole &#8220;component&#8221; object via the
+<code class="docutils literal"><span class="pre">component</span></code> method. You can also iterate over the components using the
+<code class="docutils literal"><span class="pre">iterateComponents</span></code> method.</p>
+<p>The &#8220;component&#8221; objects respond to the <code class="docutils literal"><span class="pre">countAtoms</span></code>, <code class="docutils literal"><span class="pre">countBonds</span></code>,
+<code class="docutils literal"><span class="pre">iterateAtoms</span></code>, and <code class="docutils literal"><span class="pre">iterateBonds</span></code> calls. However, they can not be
+used as molecules. If you want to have a separate molecule representing
+a connected component, you should <code class="docutils literal"><span class="pre">clone</span></code> it.</p>
+<p><strong>Note:</strong> The numbering of the components in zero-based.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>System.out.printf(&quot;%d components\n&quot;, mol.countComponents());
+
+for (IndigoObject comp : mol.iterateComponents())
+{
+   System.out.println(comp.clone().smiles());
+   System.out.printf(&quot;component %d: %d atoms, %d bonds\n&quot;, comp.index(), comp.countAtoms(), comp.countBonds());
+
+   for (IndigoObject atom : comp.iterateAtoms())
+      System.out.println(atom.index());
+
+}
+
+for (IndigoObject atom : mol.iterateAtoms())
+   System.out.println(atom.componentIndex());
+
+for (IndigoObject atom : mol.component(0).iterateAtoms())
+   System.out.println(atom.index());
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>System.Console.WriteLine(&quot;{0} components&quot;, mol.countComponents());
+
+foreach (IndigoObject comp in mol.iterateComponents())
+{
+   System.Console.WriteLine(comp.clone().smiles());
+   System.Console.WriteLine(&quot;component {0}: {0} atoms, {0} bonds\n&quot;, comp.index(), comp.countAtoms(), comp.countBonds());
+   foreach (IndigoObject atom in comp.iterateAtoms())
+      System.Console.WriteLine(atom.index());
+
+}
+
+foreach (IndigoObject atom in mol.iterateAtoms())
+   System.Console.WriteLine(atom.componentIndex());
+
+foreach (IndigoObject atom in mol.component(0).iterateAtoms())
+   System.Console.WriteLine(atom.index());
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">countComponents</span><span class="p">(),</span> <span class="s">&#39;components&#39;</span>
+
+<span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateComponents</span><span class="p">():</span>
+  <span class="k">print</span> <span class="n">comp</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+  <span class="k">print</span> <span class="s">&quot;component </span><span class="si">%d</span><span class="s">: </span><span class="si">%d</span><span class="s"> atoms, </span><span class="si">%d</span><span class="s"> bonds</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">comp</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">comp</span><span class="o">.</span><span class="n">countAtoms</span><span class="p">(),</span> <span class="n">comp</span><span class="o">.</span><span class="n">countBonds</span><span class="p">())</span>
+  <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">comp</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
+  <span class="k">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">compomentIndex</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">component</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
+  <span class="k">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="canonical-smiles">
+<h2>Canonical SMILES<a class="headerlink" href="#canonical-smiles" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">IndigoObject.canonicalSmiles</span></code> method computes the canonical SMILES
+(also known as absolute SMILES) string for a molecule.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">mol2</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">mol2</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">());</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">mol2</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="saving-molecules">
+<h2>Saving Molecules<a class="headerlink" href="#saving-molecules" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">IndigoObject.smiles</span></code>, when applied to a molecule, returns a SMILES
+string. Similarly, <code class="docutils literal"><span class="pre">IndigoObject.molfile</span></code> returns a string with a
+Molfile, while <code class="docutils literal"><span class="pre">IndigoObject.cml</span></code> returns a string with CML
+representation. <code class="docutils literal"><span class="pre">IndigoObject.saveMolfile</span></code> and
+<code class="docutils literal"><span class="pre">IndigoObject.saveCml</span></code> methods save Molfile and CML to disk.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">mol1</span><span class="o">.</span><span class="n">molfile</span><span class="p">());</span>
+<span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">mol2</span><span class="o">.</span><span class="n">smiles</span><span class="p">());</span>
+<span class="n">qmol1</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;query.mol&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">mol1</span><span class="o">.</span><span class="n">molfile</span><span class="p">());</span>
+<span class="n">System</span><span class="o">.</span><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">mol2</span><span class="o">.</span><span class="n">smiles</span><span class="p">());</span>
+<span class="n">qmol1</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;query.mol&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">mol1</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">mol2</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+<span class="n">qmol1</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;query.mol&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loading-reactions-and-query-reactions">
+<h2>Loading Reactions and Query Reactions<a class="headerlink" href="#loading-reactions-and-query-reactions" title="Permalink to this headline">¶</a></h2>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject rxn1 = indigo.loadReaction(&quot;[I-].[Na+].C=CCBr&gt;&gt;[Na+].[Br-].C=CCI&quot;);
+IndigoObject rxn2 = indigo.loadReactionFromFile(&quot;reaction.rxn&quot;);
+IndigoObject qrxn1 = indigo.loadQueryReaction(&quot;CBr&gt;&gt;CCl&quot;);
+IndigoObject qrxn2 = indigo.loadQueryReactionFromFile(&quot;query.rxn&quot;);
+IndigoObject rs    = indigo.loadReactionSmarts(&quot;[C$(CO)]&gt;&gt;[C$(CN)]&quot;);
+IndigoObject rs2   = indigo.loadReactionSmartsFromFile(&quot;query.sma&quot;);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+<div class="section" id="instrumenting-reactions">
+<h2>Instrumenting Reactions<a class="headerlink" href="#instrumenting-reactions" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">Indigo.createReaction</span></code> method returns an empty reaction. The
+<code class="docutils literal"><span class="pre">Indigo.createQueryReaction</span></code> method returns an empty query reaction.
+The <code class="docutils literal"><span class="pre">IndigoObject.addReactant</span></code>, <code class="docutils literal"><span class="pre">IndigoObject.addProduct</span></code>, and
+<code class="docutils literal"><span class="pre">IndigoObject.addCatalyst</span></code> methods can then be used to fill it up.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject rxn = indigo.createReaction();
+rxn.addReactant(mol1);
+rxn.addReactant(mol2);
+rxn.addProduct(indigo.loadMolecule(&quot;ClC1CCCCC1));
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+<div class="section" id="accessing-reactions">
+<h2>Accessing Reactions<a class="headerlink" href="#accessing-reactions" title="Permalink to this headline">¶</a></h2>
+<p>Reactions respond to the following <code class="docutils literal"><span class="pre">IndigoObject</span></code> methods:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">IndigoObject.iterateReactants</span></code> — enumerates reactants</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.iterateProducts</span></code> — enumerates products</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.iterateCatalysts</span></code> — enumerates catalysts</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.iterateMolecules</span></code> — enumerates reactants, products,
+and catalysts, in no particular order</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.countReactants</span></code> — returns the number of reactants</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.countProducts</span></code> — returns the number of products</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.countCatalysts</span></code> — returns the number of catalysts</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.countMolecules</span></code> — returns the total number of
+molecules in the reaction</li>
+</ul>
+<p>You can also call the <code class="docutils literal"><span class="pre">IndigoObject.remove</span></code> method of the reaction
+molecule to remove it from the reaction.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>System.out.println(rxn.countMolecules());
+for (IndigoObject item : rxn.iterateReactants())
+   System.out.println(item.molfile());
+
+for (IndigoObject item : rxn.iterateCatalysts())
+   item.remove();
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>System.Console.WriteLine(rxn.countMolecules());
+foreach (IndigoObject item in rxn.iterateReactants())
+   System.Console.WriteLine(item.molfile());
+
+foreach (IndigoObject item in rxn.iterateCatalysts())
+   item.remove();
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">countMolecules</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">rxn</span><span class="o">.</span><span class="n">iterateReactants</span><span class="p">():</span>
+   <span class="k">print</span> <span class="n">item</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">rxn</span><span class="o">.</span><span class="n">iterateCatalysts</span><span class="p">():</span>
+   <span class="n">item</span><span class="o">.</span><span class="n">remove</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="saving-reactions">
+<h2>Saving Reactions<a class="headerlink" href="#saving-reactions" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.smiles</span></code>, when applied to a reaction, returns a
+reaction SMILES string. Similarly, the <code class="docutils literal"><span class="pre">IndigoObject.rxnfile</span></code> returns
+a string with an Rxnfile. The <code class="docutils literal"><span class="pre">IndigoObject.saveRxnfile</span></code> method saves
+the Rxnfile to disk.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">rxn</span><span class="o">.</span><span class="n">smiles</span><span class="p">());</span>
+<span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">rxn</span><span class="o">.</span><span class="n">rxnfile</span><span class="p">());</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">saveRxnfile</span><span class="p">(</span><span class="s">&quot;reaction.rxn&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">rxn</span><span class="o">.</span><span class="n">smiles</span><span class="p">());</span>
+<span class="n">System</span><span class="o">.</span><span class="n">Console</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">rxn</span><span class="o">.</span><span class="n">rxnfile</span><span class="p">());</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">saveRxnfile</span><span class="p">(</span><span class="s">&quot;reaction.rxn&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">rxnfile</span><span class="p">()</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">saveRxnfile</span><span class="p">(</span><span class="s">&quot;reaction.rxn&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reacting-centers">
+<h2>Reacting Centers<a class="headerlink" href="#reacting-centers" title="Permalink to this headline">¶</a></h2>
+<p>Reacting centers include bonds that are involded in the reaction. Indigo
+supports the following types of reacting centers:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Indigo.RC_NOT_CENTER</span></code></li>
+<li><code class="docutils literal"><span class="pre">Indigo.RC_UNMARKED</span></code></li>
+<li><code class="docutils literal"><span class="pre">Indigo.RC_CENTER</span></code></li>
+<li><code class="docutils literal"><span class="pre">Indigo.RC_UNCHANGED</span></code></li>
+<li><code class="docutils literal"><span class="pre">Indigo.RC_MADE_OR_BROKEN</span></code></li>
+<li><code class="docutils literal"><span class="pre">Indigo.RC_ORDER_CHANGED</span></code></li>
+</ul>
+<p>These values are bit flags, and can be combinded.
+<code class="docutils literal"><span class="pre">IndigoObject.reactingCenter</span></code> and <code class="docutils literal"><span class="pre">IndigoObject.setReactingCenter</span></code>
+are the getter and setter of the bond reacting center property.</p>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&quot;reacting centers:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">rxn</span><span class="o">.</span><span class="n">iterateMolecules</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">rxn</span><span class="o">.</span><span class="n">reactingCenter</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">rxn</span><span class="o">.</span><span class="n">iterateMolecules</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">():</span>
+        <span class="n">rxn</span><span class="o">.</span><span class="n">setReactingCenter</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">Indigo</span><span class="o">.</span><span class="n">RC_CENTER</span> <span class="o">|</span> <span class="n">Indigo</span><span class="o">.</span><span class="n">RC_UNCHANGED</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.correctReactingCenters</span></code> method highlights bond
+reacting centers according to AAM.</p>
+<p>Java, C#, and Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">rxn</span><span class="o">.</span><span class="n">automap</span><span class="p">(</span><span class="s">&quot;discard&quot;</span><span class="p">);</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">correctReactingCenters</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reaction-atom-to-atom-mapping">
+<h2>Reaction Atom-to-Atom Mapping<a class="headerlink" href="#reaction-atom-to-atom-mapping" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.automap(mode</span> <span class="pre">[ignore_option])</span></code> method is purposed
+for generating reaction atom-to-atom mapping (AAM). The method accepts a
+string parameter called <code class="docutils literal"><span class="pre">mode</span></code>. The following modes are available:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">discard</span></code> : discards the existing mapping entirely and considers
+only the existing reaction centers (the default)</li>
+<li><code class="docutils literal"><span class="pre">keep</span></code> : keeps the existing mapping and maps unmapped atoms</li>
+<li><code class="docutils literal"><span class="pre">alter</span></code> : alters the existing mapping, and maps the rest of the
+reaction but may change the existing mapping</li>
+<li><code class="docutils literal"><span class="pre">clear</span></code> : removes the mapping from the reaction</li>
+</ul>
+<p>Java, C#, and Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">rxn</span><span class="o">.</span><span class="n">automap</span><span class="p">(</span><span class="s">&quot;discard&quot;</span><span class="p">);</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">saveRxnfile</span><span class="p">(</span><span class="s">&quot;rxn_aam.rxn&quot;</span><span class="p">);</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">automap</span><span class="p">(</span><span class="s">&quot;clear&quot;</span><span class="p">);</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">saveSmiles</span><span class="p">(</span><span class="s">&quot;rxn_noaam.smi&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The following options can be added after the <code class="docutils literal"><span class="pre">discard</span></code>, <code class="docutils literal"><span class="pre">keep</span></code> or
+<code class="docutils literal"><span class="pre">alter</span></code> modes (separated by a space):</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">ignore_charges</span></code> : do not consider atom charges while searching</li>
+<li><code class="docutils literal"><span class="pre">ignore_isotopes</span></code> : do not consider atom isotopes while searching</li>
+<li><code class="docutils literal"><span class="pre">ignore_valence</span></code> : do not consider atom valence while searching</li>
+<li><code class="docutils literal"><span class="pre">ignore_radicals</span></code> : do not consider atom radicals while searching</li>
+</ul>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre>rxn.automap(&quot;alter ignore_charges&quot;)
+for in rxn.iterateMolecules():
+    for atom in mol.iterateAtoms():
+        print(&quot;Atom %d %d&quot; % atom.index(), atom.atomMappingNumber())
+rxn.automap(&quot;alter ignore_charges ignore_valence&quot;)
+...
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.clearAAM</span></code> method resets current atom-to-atom
+mapping. Reaction atom has method <code class="docutils literal"><span class="pre">IndigoObject.atomMappingNumber</span></code> and
+<code class="docutils literal"><span class="pre">IndigoObject.setAtomMappingNumber</span></code> to get and set atom-to-atom
+mapping manually.</p>
+<p>Java, C#, and Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">rxn</span><span class="o">.</span><span class="n">clearAAM</span><span class="p">();</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">saveSmiles</span><span class="p">(</span><span class="s">&quot;rxn_noaam.smi&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">aam-timeout</span></code> indigo integer parameter (time in milliseconds)
+corresponds for the AAM algorithm working time. The AAM method returns a
+current state solution for a reaction when time is over.</p>
+<p>Java, C#, and Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s">&quot;aam-timeout&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">automap</span><span class="p">(</span><span class="s">&quot;discard&quot;</span><span class="p">);</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">saveSmiles</span><span class="p">(</span><span class="s">&quot;rxn_time.smi&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="attachment-points">
+<h2>Attachment points<a class="headerlink" href="#attachment-points" title="Permalink to this headline">¶</a></h2>
+<p>Every molecule can have many attachment points. They are grouped by
+order - the number of connections. For example, a molecule can have 2
+attachment points with order 1, and 3 attachment points with order 2.
+The following methods of <code class="docutils literal"><span class="pre">IndigoObject</span></code> for a molecule are available
+for working with attachment points:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">clearAttachmentPoints</span></code> resets all the attachment points.</li>
+<li><code class="docutils literal"><span class="pre">countAttachmentPoints</span></code> returns maximal order of attachment points.</li>
+<li><code class="docutils literal"><span class="pre">iterateAttachmentPoints(order)</span></code> iterates atoms corresposing to the
+attachment points with the same specified order.</li>
+</ul>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre>count = mol.countAttachmentPoints()
+print(&quot;%s Number of attachment points: %s&quot; % (offset, count))
+for order in range(1, count + 1):
+    for a in mol.iterateAttachmentPoints(order):
+        print(&quot;%s   Index: %d. Order %d&quot; % (offset, a.index(), order))
+ mol.clearAttachmentPoints()
+</pre></div>
+</div>
+</div>
+<div class="section" id="layout-2d-coordinates">
+<h2>Layout (2D coordinates)<a class="headerlink" href="#layout-2d-coordinates" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.layout</span></code> method performs the cleanup of the object it
+is applied to by computing atoms 2D coordinates.</p>
+<p>Java, C#, and Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mol</span><span class="o">.</span><span class="n">layout</span><span class="p">();</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="aromaticity">
+<h2>Aromaticity<a class="headerlink" href="#aromaticity" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.aromatize</span></code> and <code class="docutils literal"><span class="pre">IndigoObject.dearomatize</span></code> methods
+convert molecules/reactions to aromatic and Kekule forms respectively.</p>
+<p>Java, C#, and Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mol1</span><span class="o">.</span><span class="n">dearomatize</span><span class="p">();</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">aromatize</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="implicit-and-explicit-hydrogens">
+<h2>Implicit and Explicit Hydrogens<a class="headerlink" href="#implicit-and-explicit-hydrogens" title="Permalink to this headline">¶</a></h2>
+<p>Indigo does not change the representation of the hydrogens
+automatically. If the hydrogens in the input structure or reaction are
+implicit (this is usually the case), Indigo does not add the missing
+hydrogens to the structure or reaction. If some (or all) of hydrogens in
+the input are explicitly drawn, Indigo does not remove them.</p>
+<p>You can force folding (i.e. removal) or unfolding (i.e. addition) the
+hydrogens of a molecule or reaction by calling
+<code class="docutils literal"><span class="pre">IndigoObject.foldHydrogens</span></code> and <code class="docutils literal"><span class="pre">IndigoObject.unfoldHydrogens</span></code>
+methods.</p>
+<p>Java, C#, and Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mol</span><span class="o">.</span><span class="n">unfoldHydrogens</span><span class="p">();</span>
+<span class="n">mol</span><span class="o">.</span><span class="n">foldHydrogens</span><span class="p">();</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">unfoldHydrogens</span><span class="p">();</span>
+<span class="n">rxn</span><span class="o">.</span><span class="n">foldHydrogens</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="stereochemistry">
+<h2>Stereochemistry<a class="headerlink" href="#stereochemistry" title="Permalink to this headline">¶</a></h2>
+<p>The following methods of <code class="docutils literal"><span class="pre">IndigoObject</span></code> are available for accessing
+molecule&#8217;s stereo configuration:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">countStereocenters</span></code> returns the number of the chiral atoms in a
+molecule</li>
+<li><code class="docutils literal"><span class="pre">iterateStereocenters</span></code> returns an iterator for molecule&#8217;s atoms
+that are stereocenters</li>
+<li><code class="docutils literal"><span class="pre">countAlleneCenters</span></code> returns the number of allene-like stereo
+fragments</li>
+<li><code class="docutils literal"><span class="pre">iterateAlleneCenters</span></code> returns an iterator for molecule&#8217;s atoms
+that are centers of allene fragments (the middle &#8216;C&#8217; in &#8216;C=C=C&#8217;)</li>
+<li><code class="docutils literal"><span class="pre">bondStereo</span></code> returns one of the following constants:<ul>
+<li><code class="docutils literal"><span class="pre">Indigo.UP</span></code> — stereo &#8220;up&#8221; bond</li>
+<li><code class="docutils literal"><span class="pre">Indigo.DOWN</span></code> — stereo &#8220;down&#8221; bond</li>
+<li><code class="docutils literal"><span class="pre">Indigo.EITHER</span></code> — stereo &#8220;either&#8221; bond</li>
+<li><code class="docutils literal"><span class="pre">Indigo.CIS</span></code> — &#8220;Cis&#8221; double bond</li>
+<li><code class="docutils literal"><span class="pre">Indigo.TRANS</span></code> — &#8220;Trans&#8221; double bond</li>
+<li>zero — not a stereo bond of any kind</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">stereocenterType</span></code> returns one of the following constants:<ul>
+<li><code class="docutils literal"><span class="pre">Indigo.ABS</span></code> — &#8220;absolute&#8221; stereocenter</li>
+<li><code class="docutils literal"><span class="pre">Indigo.OR</span></code> — &#8220;or&#8221; stereocenter</li>
+<li><code class="docutils literal"><span class="pre">Indigo.AND</span></code> — &#8220;and&#8221; stereocenter</li>
+<li><code class="docutils literal"><span class="pre">Indigo.EITHER</span></code> — &#8220;any&#8221; stereocenter</li>
+<li>zero — not a stereocenter</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">invertStereo</span></code> inverts the stereo configuration of an atom</li>
+<li><code class="docutils literal"><span class="pre">resetStereo</span></code> resets the stereo configuration of an atom or a bond</li>
+<li><code class="docutils literal"><span class="pre">changeStereocenterType(newType)</span></code> changes current stereocenter type
+to a specified type</li>
+<li><code class="docutils literal"><span class="pre">addStereocenter(type,</span> <span class="pre">idx1,</span> <span class="pre">idx2,</span> <span class="pre">idx3,</span> <span class="pre">[idx4])</span></code> adds new
+stereocenter build on a atom pyramid with a specified atom indices</li>
+<li><code class="docutils literal"><span class="pre">clearStereocenters</span></code> resets the chiral configurations of a
+molecule&#8217;s atoms</li>
+<li><code class="docutils literal"><span class="pre">clearAlleneCenters</span></code> resets the chiral configurations of a
+molecule&#8217;s allene-like fragments</li>
+<li><code class="docutils literal"><span class="pre">clearCisTrans</span></code> resets the cis-trans configurations of a molecule&#8217;s
+bonds</li>
+</ul>
+<p>The following methods are useful for keeping cis-trans stereochemistry
+intact when converting to/from SMILES:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">resetSymmetricCisTrans</span></code> can be called on a molecule loaded from a
+Molfile or CML. After this call, the cis-trans configurations remain
+only on nonsymmetric cis-trans bonds. The method returns the number
+of bonds that have been reset.</li>
+<li><code class="docutils literal"><span class="pre">markEitherCisTrans</span></code> can be called prior to saving a molecule
+loaded from SMILES to Molfile format. It guarantees that the bonds
+that have no cis-trans configuration in SMILES will not have a
+cis-trans configuration in the resulting Molfile.</li>
+</ul>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject mol = indigo.loadMolecule(&quot;chiral.mol&quot;);
+
+System.output.println(&quot;%d chiral atoms\n&quot;, mol.countStereocenters());
+for (IndigoObject atom : mol.iterateStereocenters())
+{
+   System.out.printf(&quot;atom %d -- stereocenter type %d\n&quot;, atom.index(), atom.stereocenterType());
+   atom.invertStereo();
+}
+
+for (IndigoObject bond : mol.iterateBonds())
+   if (bond.bondStereo() != 0)
+     System.out.printf(&quot;bond %d -- stereo type %d\n&quot;, bond.index(), bond.bondStereo());
+
+System.out.println(mol.smiles());
+mol.clearStereocenters();
+mol.clearCisTrans();
+System.out.println(mol.smiles());
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject mol = indigo.loadMolecule(&quot;chiral.mol&quot;);
+
+System.Console.WriteLine(&quot;{0} chiral atoms\n&quot;, mol.countStereocenters());
+foreach (IndigoObject atom in mol.iterateStereocenters())
+{
+   System.Console.WriteLine(&quot;atom {0} -- stereocenter type {1}\n&quot;, atom.index(), atom.stereocenterType());
+   atom.invertStereo();
+}
+
+foreach (IndigoObject bond in mol.iterateBonds())
+   if (bond.bondStereo() != 0)
+     System.Console.WriteLine(&quot;bond {0} -- stereo type {1}\n&quot;, bond.index(), bond.bondStereo());
+
+System.Console.WriteLine(mol.smiles());
+mol.clearStereocenters();
+mol.clearCisTrans();
+System.out.println(mol.smiles());
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject mol = indigo.loadMolecule(&quot;chiral.mol&quot;);
+
+print mol.countStereocenters(), &quot;chiral atoms&quot;
+for atom in mol.iterateStereocenters():
+   print &quot;atom&quot;, atom.index(), &quot;-- stereocenter type&quot;, atom.stereocenterType()
+   atom.invertStereo();
+
+for bond in mol.iterateBonds():
+   if bond.bondStereo() != 0:
+     print &quot;bond&quot;, bond.index(), &quot;-- stereo type&quot;, bond.bondStereo()
+
+print mol.smiles()
+mol.clearStereocenters()
+mol.clearCisTrans()
+print mol.smiles()
+</pre></div>
+</div>
+</div>
+<div class="section" id="groups">
+<h2>Groups<a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h2>
+<p>In a molecule loaded from a Molfile, arbitrary subsets of a its atoms
+and bonds can be joined in groups. There are many kinds of groups,
+Indigo supports five of them:</p>
+<ul class="simple">
+<li>generic groups (GEN)</li>
+<li>superatoms (SUP)</li>
+<li>structure repeating units (SRU)</li>
+<li>multiple groups (MUL)</li>
+<li>data SGroups (DAT)</li>
+</ul>
+<p>The following methods of <code class="docutils literal"><span class="pre">IndigoObject</span></code> are available for reading
+molecule&#8217;s groups:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">countGenericSGroups</span></code></li>
+<li><code class="docutils literal"><span class="pre">countSuperatoms</span></code></li>
+<li><code class="docutils literal"><span class="pre">countRepeatingUnits</span></code></li>
+<li><code class="docutils literal"><span class="pre">countMultipleGroups</span></code></li>
+<li><code class="docutils literal"><span class="pre">countDataSGroups</span></code></li>
+<li><code class="docutils literal"><span class="pre">iterateGenericSGroups</span></code></li>
+<li><code class="docutils literal"><span class="pre">iterateSuperatoms</span></code></li>
+<li><code class="docutils literal"><span class="pre">iterateRepeatingUnits</span></code></li>
+<li><code class="docutils literal"><span class="pre">iterateMultipleGroups</span></code></li>
+<li><code class="docutils literal"><span class="pre">iterateDataSGroups</span></code></li>
+<li><code class="docutils literal"><span class="pre">getSuperatom(index)</span></code></li>
+<li><code class="docutils literal"><span class="pre">getDataSGroup(index)</span></code></li>
+</ul>
+<p>The iterator methods return &#8220;group&#8221; objects. Each &#8220;group&#8221; object
+responds to <code class="docutils literal"><span class="pre">IndigoObject.iterateAtoms</span></code> and
+<code class="docutils literal"><span class="pre">IndigoObject.iterateBonds</span></code> methods.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>for (IndigoObject dsg : mol.iterateDataSGroups())
+{
+   System.out.println(&quot;data sgroup &quot; + dsg.index());
+   for (IndigoObject atom : dsg.iterateAtoms())
+      System.out.println(&quot;  atom &quot; + atom.index());
+}
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>foreach (IndigoObject dsg in mol.iterateDataSGroups())
+{
+   System.Console.WriteLine(&quot;data sgroup &quot; + dsg.index());
+   foreach (IndigoObject atom in dsg.iterateAtoms())
+      System.Console.WriteLine(&quot;  atom &quot; + atom.index());
+}
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">dsg</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateDataSGroups</span><span class="p">():</span>
+   <span class="k">print</span> <span class="s">&quot;data sgroup&quot;</span><span class="p">,</span> <span class="n">dsg</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+   <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">dsg</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
+      <span class="k">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You can also add data SGroups to an existing structure using
+<code class="docutils literal"><span class="pre">IndigoObject.addDataSGroup()</span></code> method. It returns the added group. By
+default, the data SGroup is added in &#8220;attached&#8221; mode — that is, the data
+is attached to each of the group&#8217;s atoms. To make the data SGroup
+detached, you can call the <code class="docutils literal"><span class="pre">IndigoObject.setDataSGroupXY</span></code> method of
+the data SGroup object. To get a description of a data SGroup use method
+<code class="docutils literal"><span class="pre">IndigoObject.description()</span></code>.</p>
+<p>To add a superatom use <code class="docutils literal"><span class="pre">IndigoObject.addSuperatom()</span></code> method:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mol</span><span class="o">.</span><span class="n">addSuperatom</span><span class="p">(</span><span class="n">list_with_atom_indices</span><span class="p">,</span> <span class="s">&quot;Abbreviation&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reading-sdf-rdf-cml-multiline-smiles-files">
+<h2>Reading SDF, RDF, CML, multiline SMILES files<a class="headerlink" href="#reading-sdf-rdf-cml-multiline-smiles-files" title="Permalink to this headline">¶</a></h2>
+<p>The following methods of the <code class="docutils literal"><span class="pre">Indigo</span></code> class can be used to enumerate
+files with multiple molecules/reactions:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">iterateSDFile</span></code></li>
+<li><code class="docutils literal"><span class="pre">iterateRDFile</span></code></li>
+<li><code class="docutils literal"><span class="pre">iterateSmilesFile</span></code></li>
+<li><code class="docutils literal"><span class="pre">iterateCMLFile</span></code></li>
+</ul>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>for (IndigoObject item : indigo.iterateSDFile(&quot;structures.sdf&quot;))
+   System.out.println(item.grossFormula());
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>foreach (IndigoObject item in indigo.iterateSDFile(&quot;structures.sdf&quot;))
+   System.Console.WriteLine(item.grossFormula());
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateSDFile</span><span class="p">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="p">):</span>
+   <span class="k">print</span> <span class="n">item</span><span class="o">.</span><span class="n">grossFormula</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="indexed-access">
+<h3>Indexed access<a class="headerlink" href="#indexed-access" title="Permalink to this headline">¶</a></h3>
+<p>You can access items from SDF/RDF/CML/SMILES files by index, using the
+<code class="docutils literal"><span class="pre">at</span></code> method. The numbering of the items is zero-based.</p>
+<p>Java, C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject reader = indigo.iterateSDFile(&quot;structures.sdf&quot;);
+String s = reader.at(15).smiles()
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> and <code class="docutils literal"><span class="pre">String</span></code> omitted.</p>
+</div>
+</div>
+<div class="section" id="accessing-molecule-and-reaction-properties">
+<h2>Accessing Molecule and Reaction Properties<a class="headerlink" href="#accessing-molecule-and-reaction-properties" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="names">
+<h3>Names<a class="headerlink" href="#names" title="Permalink to this headline">¶</a></h3>
+<p>Molecule or reaction name is associated with the first line of the
+Molfile/Rxnfile the molecule/reaction was loaded from. In case it was
+loaded from SMILES string, the word immediately following the SMILES
+code is taken.</p>
+<p><code class="docutils literal"><span class="pre">IndigoObject.name</span></code> and <code class="docutils literal"><span class="pre">IndigoObject.setName</span></code> are the getter and
+setter of the molecule/reaction name.</p>
+<p>Java, C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>String name = mol2.name();
+mol2.setName(&quot;another name&quot;);
+mol2.saveMolfile(&quot;mol2.mol&quot;);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> and <code class="docutils literal"><span class="pre">String</span></code> omitted.</p>
+</div>
+<div class="section" id="sdf-rdf-properties">
+<h3>SDF/RDF Properties<a class="headerlink" href="#sdf-rdf-properties" title="Permalink to this headline">¶</a></h3>
+<p>The following methods are used to get the named properties of the
+molecule/reaction loaded from an SDF or RDF file:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">IndigoObject.hasProperty</span></code> (boolean) — checks if the object has the
+given property.</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.getProperty</span></code> (string) — returns the value of the
+given property, or raises an error in case the object does not have
+it.</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.removeProperty</span></code> — removes the given property from the
+object, or does nothing in case the object does not have it.</li>
+</ul>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>for (IndigoObject item : indigo.iterateSDFile(&quot;structures.sdf&quot;))
+   if (item.hasProperty(&quot;cdbregno&quot;))
+      System.out.println(item.getProperty(&quot;cdbregno&quot;));
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>foreach (IndigoObject item in indigo.iterateSDFile(&quot;structures.sdf&quot;))
+   if (item.hasProperty(&quot;cdbregno&quot;))
+      System.Console.WriteLine(item.getProperty(&quot;cdbregno&quot;));
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateSDFile</span><span class="p">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="p">):</span>
+   <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">hasProperty</span><span class="p">(</span><span class="s">&quot;cdbregno&quot;</span><span class="p">):</span>
+      <span class="k">print</span> <span class="n">item</span><span class="o">.</span><span class="n">getProperty</span><span class="p">(</span><span class="s">&quot;cdbregno&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is also possible to iterate over all properties of a particular
+record in SDF or RDF file.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>for (IndigoObject item : indigo.iterateRDfile(&quot;reactions.rdf&quot;))
+   for (IndigoObject prop : item.iterateProperties())
+      System.out.println(prop.name() + &quot; : &quot; + prop.rawData())
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>foreach (IndigoObject item in indigo.iterateRDfile(&quot;reactions.rdf&quot;))
+   foreach (IndigoObject prop in item.iterateProperties())
+      System.Console.WriteLine(prop.name() + &quot; : &quot; + prop.rawData())
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateRDFile</span><span class="p">(</span><span class="s">&quot;reactions.rdf&quot;</span><span class="p">):</span>
+   <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">iterateProperties</span><span class="p">():</span>
+      <span class="k">print</span> <span class="n">prop</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="s">&quot;:&quot;</span><span class="p">,</span> <span class="n">prop</span><span class="o">.</span><span class="n">rawData</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="writing-multiple-molecules-or-reactions-to-a-file">
+<h2>Writing Multiple Molecules or Reactions to a File<a class="headerlink" href="#writing-multiple-molecules-or-reactions-to-a-file" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="writing-sdf-files">
+<h3>Writing SDF Files<a class="headerlink" href="#writing-sdf-files" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to write molecules to SDF files, along with arbitrary
+properties assigned.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject saver = indigo.writeFile(&quot;structures.sdf&quot;);
+
+IndigoObject mol = indigo.loadMolecule(&quot;C1CCC1&quot;);
+mol.setName(&quot;cyclobutane&quot;);
+mol.setProperty(&quot;id&quot;, &quot;8506&quot;);
+saver.sdfAppend(mol);
+
+mol = indigo.loadMolecule(&quot;C(NNN)C&quot;);
+mol.setProperty(&quot;id&quot;, &quot;42&quot;);
+saver.sdfAppend(mol);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+<div class="section" id="writing-rdf-files">
+<h3>Writing RDF Files<a class="headerlink" href="#writing-rdf-files" title="Permalink to this headline">¶</a></h3>
+<p>Molecules and reactions can be written to an RDF file with the
+<code class="docutils literal"><span class="pre">rdfAppend</span></code> method. However, the special <code class="docutils literal"><span class="pre">rdfHeader</span></code> method must be
+called exactly once before anything is written into the RDF file.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject f = indigo.writeFile(&quot;test.rdf&quot;);
+f.rdfHeader();
+mol.setProperty(&quot;WHAT&quot;, &quot;a molecule&quot;);
+rxn.setProperty(&quot;WHAT&quot;, &quot;a reaction&quot;);
+f.rdfAppend(mol);
+f.rdfAppend(rxn);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+<div class="section" id="writing-cml-files">
+<h3>Writing CML Files<a class="headerlink" href="#writing-cml-files" title="Permalink to this headline">¶</a></h3>
+<p>Molecules can be written to a CML file with the <code class="docutils literal"><span class="pre">cmlAppend</span></code> method.
+However, the <code class="docutils literal"><span class="pre">cmlHeader</span></code> method must be called exactly once before
+anything is written into the CML file, and the <code class="docutils literal"><span class="pre">cmlFooter</span></code> method must
+be called after all the molecules has been written.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject f = indigo.writeFile(&quot;structures.cml&quot;);
+f.cmlHeader();
+f.cmlAppend(mol1);
+f.cmlAppend(mol2);
+f.cmlFooter();
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+<div class="section" id="writing-multiline-smiles-files">
+<h3>Writing Multiline SMILES Files<a class="headerlink" href="#writing-multiline-smiles-files" title="Permalink to this headline">¶</a></h3>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject f = indigo.writeFile(&quot;test.smi&quot;);
+f.smilesAppend(mol);
+f.smilesAppend(rxn);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+<div class="section" id="closing-files">
+<h3>Closing Files<a class="headerlink" href="#closing-files" title="Permalink to this headline">¶</a></h3>
+<p>The file output stream is closed on the object&#8217;s destructor. However,
+you may need to close it explicitly. You can use the <code class="docutils literal"><span class="pre">close</span></code> method:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>You may need to be sure that the file will be closed after some block of
+code has finished executing. In Java, you can call the <code class="docutils literal"><span class="pre">close</span></code> method
+in <code class="docutils literal"><span class="pre">finally</span></code> block:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject f = null;
+try
+{
+  f = indigo.writeFile(&quot;test.sdf&quot;);
+  f.sdfAppend(mol);
+}
+finally
+{
+  if (f != null)
+    f.close();
+}
+</pre></div>
+</div>
+<p>In C#, the &#8220;using&#8221; statement can make the job easier:</p>
+<div class="highlight-python"><div class="highlight"><pre>using (IndigoObject f = indigo.writeFile(&quot;test.sdf&quot;))
+{
+  f.sdfAppend(mol);
+}
+</pre></div>
+</div>
+<p>In Python, the &#8220;with&#8221; syntax serves the same purpose:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">with</span> <span class="n">indigo</span><span class="o">.</span><span class="n">writeFile</span><span class="p">(</span><span class="s">&quot;test.sdf&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+  <span class="n">f</span><span class="o">.</span><span class="n">sdfAppend</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="generic-interface-to-writing-files">
+<h3>Generic Interface to Writing Files<a class="headerlink" href="#generic-interface-to-writing-files" title="Permalink to this headline">¶</a></h3>
+<p>There is also a generic interface to writing multiple
+molecules/reactions in a file. You can create a generic file saver
+(<code class="docutils literal"><span class="pre">IndigoObject.createFileSaver</span></code>), specifying the desired format to it,
+and then append items to it (<code class="docutils literal"><span class="pre">IndigoObject.append</span></code>), not bothering
+about header and footer — the saver will write them for you
+automatically.</p>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.createFileSaver</span></code> method accepts the output file name
+and a string with the desired format, which is &#8220;sdf&#8221;, &#8220;rdf&#8221;, &#8220;cml&#8221;, or
+&#8220;smi&#8221;.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject saver = null;
+try
+{
+  saver = indigo.createFileSaver(&quot;reactions.cml&quot;, &quot;cml&quot;);
+  saver.append(rxn1);
+  saver.append(rxn2);
+}
+finally
+{
+  if (saver != null)
+    saver.close();
+}
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>using (IndigoObject saver = indigo.createFileSaver(&quot;reactions.cml&quot;, &quot;cml&quot;))
+{
+   saver.append(rxn1);
+   saver.append(rxn2);
+}
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">with</span> <span class="n">indigo</span><span class="o">.</span><span class="n">createFileSaver</span><span class="p">(</span><span class="s">&quot;reactions.cml&quot;</span><span class="p">,</span> <span class="s">&quot;cml&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">saver</span><span class="p">:</span>
+   <span class="n">saver</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rxn1</span><span class="p">);</span>
+   <span class="n">saver</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rxn2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="writing-into-a-memory-buffer">
+<h3>Writing into a Memory Buffer<a class="headerlink" href="#writing-into-a-memory-buffer" title="Permalink to this headline">¶</a></h3>
+<p>You can write the SDF or RDF data into a memory buffer instead of a
+file. <code class="docutils literal"><span class="pre">Indigo.writeBuffer</span></code> method creates and returns a memory output
+stream. After you have finished writing, you can call the <code class="docutils literal"><span class="pre">toString</span></code>
+method to obtain the written data.</p>
+<p>Java, C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject buf = indigo.writeBuffer();
+mol.setProperty(&quot;name&quot;, &quot;cyclobutane&quot;);
+buf.sdfAppend(mol);
+String s = buf.toString();
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> and <code class="docutils literal"><span class="pre">String</span></code> omitted.</p>
+<p>You can also create a generic saver on top of an existing buffer writer</p>
+<p>Java, C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject saver = indigo.createSaver(buf, &quot;cml&quot;);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+</div>
+<div class="section" id="enumeration-of-submolecules">
+<h2>Enumeration of Submolecules<a class="headerlink" href="#enumeration-of-submolecules" title="Permalink to this headline">¶</a></h2>
+<p>Indigo provides methods to enumerate submolecules of different kinds,
+namely:</p>
+<ul class="simple">
+<li>Smallest Set of Smallest Rings (SSSR) — <code class="docutils literal"><span class="pre">iterateSSSR</span></code>.</li>
+<li>All rings of size within a given interval — <code class="docutils literal"><span class="pre">iterateRings</span></code>. The
+method accepts the minimum and maximum amounts of the rings&#8217; atoms.</li>
+<li>All subtrees of size within a given interval — <code class="docutils literal"><span class="pre">iterateSubtrees</span></code>.
+The method accepts the minimum and maximum amounts of the subtrees&#8217;
+atoms.</li>
+<li>All edge submolecules of size within a given interval —
+<code class="docutils literal"><span class="pre">iterateEdgeSubmolecules</span></code>. The method accepts the minimum and
+maximum amounts of the submolecules&#8217; edges.</li>
+</ul>
+<p>The &#8220;submolecule&#8221; objects returned by these methods respond to the
+<code class="docutils literal"><span class="pre">countAtoms</span></code>, <code class="docutils literal"><span class="pre">countBonds</span></code>, <code class="docutils literal"><span class="pre">iterateAtoms</span></code>, and <code class="docutils literal"><span class="pre">iterateBonds</span></code>
+calls. However, they can not be used as molecules. If you want to have a
+separate molecule representing the obtained submolecule, you should
+<code class="docutils literal"><span class="pre">clone</span></code> it.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>for (IndigoObject submol : mol.iterateEdgeSubmolecules(1, mol.countBonds())
+{
+  System.out.printf(&quot;submolecule #%d: %s\n&quot;, submol.index(), submol.clone().smiles());
+  for (IndigoObject atom : item.iterateAtoms())
+    System.out.printf(&quot;%d &quot;, atom.index());
+  System.out.printf(&quot;\n&quot;);
+  for (IndigoObject bond : item.iterateBonds())
+    System.out.printf(&quot;%d &quot;, bond.index());
+  System.out.printf(&quot;\n&quot;);
+}
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>foreach (IndigoObject item in mol.iterateEdgeSubmolecules(1, mol.countAtoms()))
+{
+  System.Console.WriteLine(&quot;{0} {1}&quot;, item.index(), item.clone().smiles());
+  foreach (IndigoObject atom in item.iterateAtoms())
+    System.Console.Write(&quot;{0} &quot;, atom.index());
+  System.Console.WriteLine();
+  foreach (IndigoObject bond in item.iterateBonds())
+    System.Console.Write(&quot;{0} &quot;, bond.index());
+  System.Console.WriteLine();
+}
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre>for submol in mol.iterateEdgeSubmolecules(1, mol.countBonds()):
+  print &quot;submolecule&quot;, submol.index(), &quot;:&quot;, submol.clone().smiles())
+  print [atom.index() for atom in item.iterateAtoms()]
+  print [bond.index() for bond in item.iterateBonds()]
+</pre></div>
+</div>
+</div>
+<div class="section" id="fingerprints">
+<h2>Fingerprints<a class="headerlink" href="#fingerprints" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.fingerprint</span></code> method works for molecules and
+reactions (including query molecules and query reactions) and returns a
+<code class="docutils literal"><span class="pre">fingerprint</span></code> object. <code class="docutils literal"><span class="pre">IndigoObject.toString</span></code> and
+<code class="docutils literal"><span class="pre">IndigoObject.toBuffer</span></code> methods of that object can be called to obtain
+a hex-string representation or a byte array of a fingerprint,
+respectively.</p>
+<p>The <code class="docutils literal"><span class="pre">fingerprint</span></code> method accepts a string with a requested fingerprint
+type. The following fingerprint types are available:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">sim</span></code> — &#8220;Similarity fingerprint&#8221;, useful for calculating similarity
+measures (the default)</li>
+<li><code class="docutils literal"><span class="pre">sub</span></code> — &#8220;Substructure fingerprint&#8221;, useful for substructure
+screening</li>
+<li><code class="docutils literal"><span class="pre">sub-res</span></code> — &#8220;Resonance substructure fingerprint&#8221;, useful for
+resonance substructure screening</li>
+<li><code class="docutils literal"><span class="pre">sub-tau</span></code> — &#8220;Tautomer substructure fingerprint&#8221;, useful for
+tautomer substructure screening</li>
+<li><code class="docutils literal"><span class="pre">full</span></code> — &#8220;Full fingerprint&#8221;, which has all the mentioned
+fingerprint types included</li>
+</ul>
+<p>The size of the fingerprint can be controlled via a number of
+<a class="reference external" href="options.html#fingerprinting">fingerprinting options</a>.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>fp1 = mol1.fingerprint(&quot;sim&quot;);
+fp2 = mol2.fingerprint(&quot;sim&quot;);
+String fp1string = fp1.toString();
+byte[] fp2bytes = fp1.toBuffer();
+</pre></div>
+</div>
+<p>Python: the same with <code class="docutils literal"><span class="pre">IndigoObject</span></code> and <code class="docutils literal"><span class="pre">String</span></code> omitted.</p>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.countBits</span></code> method calculates the number of nonzero
+bits in a fingerprint. The <code class="docutils literal"><span class="pre">Indigo.commonBits</span></code> method calculates the
+number of coincident nonzero bits in two fingerprints.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>int bits1 = fp1.countBits();
+int bits2 = fp2.countBits();
+int bits12 = indigo.commonBits(fp1, fp2);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">int</span></code> omitted.</p>
+</div>
+<div class="section" id="molecule-and-reaction-similarity">
+<h2>Molecule and Reaction Similarity<a class="headerlink" href="#molecule-and-reaction-similarity" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">Indigo.similarity</span></code> method accepts two molecules, two reactions,
+or two fingerprints. It also accepts a &#8220;metrics&#8221; string and returns a
+float value — the similarity measure between the two given items. There
+are three available metrics, which are calculated in the following way:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">tanimoto</span></code> (the default) : c / (a + b - c)</li>
+<li><code class="docutils literal"><span class="pre">tversky</span> <span class="pre">&lt;alpha&gt;</span> <span class="pre">&lt;beta&gt;</span></code>: c / ((a - c) * alpha + (b - c) * beta)
+(if alpha and beta are omitted, they are taken for alpha = beta =
+0.5)</li>
+<li><code class="docutils literal"><span class="pre">euclid-sub</span></code>: c / a</li>
+</ul>
+<p>Where:</p>
+<ul class="simple">
+<li>&#8220;a&#8221; is the number of nonzero bits in the first fingerprint</li>
+<li>&#8220;b&#8221; is the number of nonzero bits in the second fingerprint</li>
+<li>&#8220;c&#8221; is the number of coincident bits in the two fingerprints</li>
+</ul>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>float sim1 = indigo.similarity(fp1, fp2, &quot;tanimoto&quot;);
+float sim2 = indigo.similarity(rxn1, rxn2, &quot;tversky&quot;);
+float sim2 = indigo.similarity(mol1, mol2, &quot;tversky 0.1 0.9&quot;);
+float sim4 = indigo.similarity(mol1, mol2, &quot;euclid-sub&quot;);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">float</span></code> omitted.</p>
+</div>
+<div class="section" id="exact-match">
+<h2>Exact Match<a class="headerlink" href="#exact-match" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">Indigo.exactMatch</span></code> method accepts two molecules or reactions and
+returns a &#8220;mapping&#8221; object — the result of the exact match of two given
+molecules or reactions. If match is not possible, it returns <code class="docutils literal"><span class="pre">null</span></code>.
+If you are interested only in does the match exist or not, you can just
+check if the result of the method is <code class="docutils literal"><span class="pre">null</span></code>. Otherwise, please check
+<a class="reference external" href="index.html#methods-of-mapping-object">below</a> how to work with the
+mapping objects.</p>
+<p><strong>Note:</strong> You can not pass query molecules or reactions to
+<code class="docutils literal"><span class="pre">exactMatch</span></code>.</p>
+<div class="section" id="exact-matching-flags-for-molecules">
+<h3>Exact Matching Flags for Molecules<a class="headerlink" href="#exact-matching-flags-for-molecules" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">Indigo.exactMatch</span></code> method accepts an optional string. In this
+string, you can pass the following flags to the matching procedure:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Flag</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ELE</span></code></td>
+<td>Distribution of electrons: bond types, atom charges, radicals, valences</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">MAS</span></code></td>
+<td>Atom isotopes</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">STE</span></code></td>
+<td>Stereochemistry: chiral centers, stereogroups, and cis-trans bonds</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">FRA</span></code></td>
+<td>Connected fragments: disallows match of separate ions in salts</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ALL</span></code></td>
+<td>All of the above (the most permissive matching)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">TAU</span></code></td>
+<td>Tautomer matching (not compatible to other flags)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">NONE</span></code></td>
+<td>No conditions (the most flexible kind of search)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">$number</span></code></td>
+<td>Maximum allowed RMS value for affine transformation match</td>
+</tr>
+</tbody>
+</table>
+<p>The flags should go in the parameters string separated by space. Each
+flag specifies a constraint for the matching procefure. The more flags
+you set, the more restrictive the matching is. You can write the minus
+sign before the flag to exclude it from the &#8216;ALL&#8217; flag. For example,
+&#8216;ALL -MAS&#8217; means that all the described features except the isotopes
+must match.</p>
+<p>The <code class="docutils literal"><span class="pre">TAU</span></code> flag stands for tautomer matching. It can not be combined
+with any other flags. You can see examples of exact matching, <a class="reference external" href="../../bingo/user-manual-oracle.html#affine-transformation-search">affine
+transformation
+matching</a>,
+and <a class="reference external" href="../../bingo/user-manual-oracle.html#exact-tautomer-search">exact tautomer
+matching</a>
+in the Bingo User Manual.</p>
+<p><strong>Note</strong>: When no flags are specified, the behavior is equivalent to the
+<code class="docutils literal"><span class="pre">ALL</span></code> flag.</p>
+<p>The <code class="docutils literal"><span class="pre">$number</span></code>, if present, should go after the flags; for example:
+<code class="docutils literal"><span class="pre">ALL</span> <span class="pre">0.1</span></code>. The given <code class="docutils literal"><span class="pre">number</span></code> is the maximum allowed
+root-mean-square deviation between the atoms of the two molecules,
+measured in angstroms. Prior to the calculation of the RMS value, the
+optimal affine transformation (translation+rotation+scale) is applied to
+one of the molecules to make it as close as possible to the other
+molecule.</p>
+<p><strong>Note</strong>: Affine transformation matching is not possible when the
+molecule&#8217;s atoms do not have coordinates (e.g. the molecule was loaded
+from SMILES).</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject match = indigo.exactMatch(mol1, mol2, &quot;ALL 0.1&quot;);
+
+if (match == null) // affine matching has failed?
+   match = indigo.exactMatch(mol1, mol2);
+
+if (match == null) // exact match has failed, trying to ignore stereochemistry
+   match = indigo.exactMatch(mol1, mol2, &quot;ALL -STE&quot;);
+
+if (match == null) // failed again; trying the most permissive matching
+   match = indigo.exactMatch(mol1, mol2, &quot;NONE&quot;);
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">exactMatch</span><span class="p">(</span><span class="n">mol1</span><span class="p">,</span> <span class="n">mol2</span><span class="p">,</span> <span class="s">&quot;ALL 0.1&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+   <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">exactMatch</span><span class="p">(</span><span class="n">mol1</span><span class="p">,</span> <span class="n">mol2</span><span class="p">)</span> <span class="c"># eqiuvalent to ALL</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+   <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">exactMatch</span><span class="p">(</span><span class="n">mol1</span><span class="p">,</span> <span class="n">mol2</span><span class="p">,</span> <span class="s">&quot;ALL -STE&quot;</span><span class="p">)</span> <span class="c"># equivalent to &quot;ELE MAS FRA&quot;</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+   <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">exactMatch</span><span class="p">(</span><span class="n">mol1</span><span class="p">,</span> <span class="n">mol2</span><span class="p">,</span> <span class="s">&quot;NONE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exact-matching-flags-for-reactions">
+<h3>Exact Matching Flags for Reactions<a class="headerlink" href="#exact-matching-flags-for-reactions" title="Permalink to this headline">¶</a></h3>
+<p>When calling the <code class="docutils literal"><span class="pre">Indigo.exactMatch</span></code> method for reactions, you can
+pass it the &#8220;ELE&#8221;, &#8220;MAS&#8221;, and &#8220;STE&#8221; flags, which have the same meaning
+as in molecule exact matching. You can also pass two reaction-specific
+flags:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Flag</th>
+<th class="head">Comment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">AAM</span></code></td>
+<td>Atom-atom mapping</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">RCT</span></code></td>
+<td>Reacting centers</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> <code class="docutils literal"><span class="pre">FRA</span></code>, <code class="docutils literal"><span class="pre">TAU</span></code>, and affine matching are not available for
+reactions.</p>
+</div>
+</div>
+<div class="section" id="molecule-substructure-matching">
+<h2>Molecule Substructure Matching<a class="headerlink" href="#molecule-substructure-matching" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">Indigo.substructureMatcher</span></code> method accepts a molecule (but not a
+query molecule) and returns a &#8220;substructure matcher&#8221; object. The given
+molecule is going to be the &#8220;target&#8221; molecule for the substructure
+match.</p>
+<div class="section" id="molecule-substructure-matching-flags">
+<h3>Molecule Substructure Matching Flags<a class="headerlink" href="#molecule-substructure-matching-flags" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">Indigo.substructureMatcher</span></code> method accepts an optional string, in
+which you can specify one of the following flags:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">RES</span></code> — to turn on the chemical resonance matching mode (<code class="docutils literal"><span class="pre">C=N</span></code>
+matches <code class="docutils literal"><span class="pre">CN=O</span></code> etc). You can read more about the resonance search
+and see examples on the <a class="reference external" href="../../bingo/user-manual-oracle.html#resonance-search">Bingo User
+Manual</a>
+page.</li>
+<li><code class="docutils literal"><span class="pre">TAU</span></code> — to turn on the tautomer matching mode. You can read more
+about the tautomer substructure search and see examples on the <a class="reference external" href="../../bingo/user-manual-oracle.html#tautomer-substructure-search">Bingo
+User
+Manual</a>
+page.</li>
+</ul>
+</div>
+<div class="section" id="methods-of-substructure-matcher">
+<h3>Methods of Substructure Matcher<a class="headerlink" href="#methods-of-substructure-matcher" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">IndigoObject.ignoreAtom</span></code> method accepts an atom of the target
+molecule and marks it as &#8220;ignored&#8221; for the substructure matcher. No
+atom of any query will be mapped to this atom.</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.unignoreAtom</span></code> method cancels the effect of the
+<code class="docutils literal"><span class="pre">ignoreAtom</span></code> method for the given atom.</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.unignoreAllAtoms</span></code> method cancels the effect of
+previous <code class="docutils literal"><span class="pre">ignoreAtom</span></code> calls.</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.match</span></code> accepts a query molecule and returns a
+&#8220;mapping&#8221; object if the matching has succeeded. If multiple matches
+are possible, the first one is taken. If no match is possible, it
+returns <code class="docutils literal"><span class="pre">null</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.countMatches</span></code> accepts a query molecule and returns
+the number or unique matches.</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.countMatchesWithLimit</span></code> works like <code class="docutils literal"><span class="pre">countMatches</span></code>,
+but also accepts an additional integer parameter for limiting the
+number of matches.</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.iterateMatches</span></code> accepts a query molecule and returns
+an iterator for unique matches (&#8220;mapping&#8221; objects).</li>
+</ul>
+<p>Also, please take a look on some
+<a class="reference external" href="options.html#substructure-matching">options</a> available for
+substructure matchers.</p>
+</div>
+</div>
+<div class="section" id="reaction-substructure-matching">
+<h2>Reaction Substructure Matching<a class="headerlink" href="#reaction-substructure-matching" title="Permalink to this headline">¶</a></h2>
+<p>You can pass a reaction to the <code class="docutils literal"><span class="pre">Indigo.substructureMatcher</span></code> method to
+obtain a &#8220;reaction substructure matcher&#8221; object. It responds to the
+<code class="docutils literal"><span class="pre">IndigoObject.match</span></code> method similarly to the molecule matcher. This
+method returns a &#8220;reaction match&#8221; object, or <code class="docutils literal"><span class="pre">null</span></code> if the matching is
+not possible.</p>
+<p>You can specify optional <code class="docutils literal"><span class="pre">DAYLIGHT-AAM</span></code> flag to the matcher. When this
+flag is present, the matching of the atom-atom mapping (reaction AAM) is
+following the Daylight&#8217;s rules for <a class="reference external" href="http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html">reaction
+SMARTS</a>.
+Otherwise, it follows ordinary rules that are normal for matching
+Rxnfiles.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject rxn1 = indigo.loadReactionSmarts(&quot;[C:1][C:1]&gt;&gt;[C:1]&quot;);
+IndigoObject rxn2 = indigo.loadReaction(&quot;[CH3:7][CH3:8]&gt;&gt;[CH3:7][CH3:8]&quot;);
+IndigoObject match = indigo.substructureMatcher(rxn2, &quot;DAYLIGHT-AAM&quot;).match(rxn1);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+<p><strong>Note:</strong> <code class="docutils literal"><span class="pre">ignoreAtom</span></code>, <code class="docutils literal"><span class="pre">unignoreAtoms</span></code>, <code class="docutils literal"><span class="pre">unignoreAllAtoms</span></code>,
+<code class="docutils literal"><span class="pre">countMatches</span></code>, <code class="docutils literal"><span class="pre">countMatchesWithLimit</span></code>, and <code class="docutils literal"><span class="pre">iterateMatches</span></code>
+methods are not supported by reaction substructure matcher.</p>
+</div>
+<div class="section" id="converting-the-substructure-query-to-the-aromatic-form">
+<h2>Converting the Substructure Query to the Aromatic Form<a class="headerlink" href="#converting-the-substructure-query-to-the-aromatic-form" title="Permalink to this headline">¶</a></h2>
+<p>If your query is loaded from a Molfile or SMILES and its aromatic rings
+are represented in Kekule form, you should transform it to aromatic form
+prior to matching. Otherwise, it will not match the aromatic rings in
+the target structure.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject query = indigo.loadMoleculeFromFile(&quot;kekule.mol&quot;);
+query.aromatize();
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+<p><strong>Note:</strong> <code class="docutils literal"><span class="pre">aromatize</span></code> does not have any effect for SMARTS queries (and
+should not be called on them).</p>
+</div>
+<div class="section" id="optimizing-the-substructure-query">
+<h2>Optimizing the Substructure Query<a class="headerlink" href="#optimizing-the-substructure-query" title="Permalink to this headline">¶</a></h2>
+<p>If you have a complex molecule or reaction SMARTS query, you can
+&#8220;optimize&#8221; it in-memory so that the matching performs faster.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject query = indigo.loadSmarts(&quot;[$([a;r4,!R1&amp;r3])]1:[$([a;r4,!R1&amp;r3])]:[$([a;r4,!R1&amp;r3])]:[$([a;r4,!R1&amp;r3])]:1&quot;);
+query.optimize();
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+<div class="section" id="methods-of-mapping-object">
+<h2>Methods of &#8220;mapping&#8221; object<a class="headerlink" href="#methods-of-mapping-object" title="Permalink to this headline">¶</a></h2>
+<p>You can get the detailed information about the succeeded matching via
+the returned &#8220;mapping&#8221; <code class="docutils literal"><span class="pre">IndigoObject</span></code>. It responds to the following
+method calls:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">IndigoObject.mapAtom</span></code> method accepts an atom of the query
+molecule/reaction and returns the corresponding atom from the target
+molecule/reaction. In case the query atom is unmapped (this can
+happen only with explicit hydrogens), it returns <code class="docutils literal"><span class="pre">null</span></code>. You can
+use <code class="docutils literal"><span class="pre">IndigoObject.index</span></code> method to get mapped atom intex.</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.mapBond</span></code> method is similar to <code class="docutils literal"><span class="pre">mapAtom</span></code>, but
+accepts a bond of the query and returns a bond of the target. It can
+also return <code class="docutils literal"><span class="pre">null</span></code> if the bond is unmapped (this can happen only
+with bonds to explicit hydrogens).</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.mapMolecule</span></code> method is similar to <code class="docutils literal"><span class="pre">mapAtom</span></code>, but
+accepts a molecule of the query reaction and returns a molecule of
+the target reaction. It can also return <code class="docutils literal"><span class="pre">null</span></code> if the molecule is
+unmapped (this can happen if a molecule within a query reaction
+represents explicit hydrogen).</li>
+<li><code class="docutils literal"><span class="pre">IndigoObject.highlightedTarget</span></code> method returns a copy of the
+target molecule/reaction where the matched atoms and bonds are
+highlighted.</li>
+</ul>
+<p><strong>Note:</strong> The <code class="docutils literal"><span class="pre">IndigoObject.mapAtom</span></code> and <code class="docutils literal"><span class="pre">IndigoObject.ignoreAtom</span></code>
+methods accepts only atoms, and not atom indices. Similarly, the
+<code class="docutils literal"><span class="pre">IndigoObject.mapBond</span></code> and <code class="docutils literal"><span class="pre">IndigoObject.mapMolecule</span></code> method accepts
+only bonds and molecules respectively, and not their indices.</p>
+<div class="section" id="example-1-mapping-query-molecule-atoms">
+<h3>Example 1 (mapping query molecule atoms)<a class="headerlink" href="#example-1-mapping-query-molecule-atoms" title="Permalink to this headline">¶</a></h3>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject match = indigo.substructureMatcher(mol).match(query);
+
+if (match != null)
+{
+   match.highlightedTarget().saveMolfile(&quot;highlighted.mol&quot;);
+   for (IndigoObject atom : qmol2.iterateAtoms())
+      System.out.printf(&quot;atom %d mapped to atom %d\n&quot;, atom.index(), match.mapAtom(atom).index());
+}
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject match = indigo.substructureMatcher(mol).match(query);
+
+if (match != null)
+{
+   match.highlightedTarget().saveMolfile(&quot;highlighted.mol&quot;);
+   foreach (IndigoObject atom in qmol2.iterateAtoms())
+      System.Console.WriteLine(&quot;atom {0} mapped to atom {1}&quot;, atom.index(), match.mapAtom(atom).index());
+}
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre>match = indigo.substructureMatcher(mol).match(query)
+
+if match:
+   match.highlightedTarget().saveMolfile(&quot;highlighted.mol&quot;)
+   for atom in qmol2.iterateAtoms():
+      print &quot;atom&quot;, atom.index(), &quot;mapped to atom&quot;, match.mapAtom(atom).index())
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-2-getting-the-highlighted-target-molecule">
+<h3>Example 2 (getting the highlighted target molecule)<a class="headerlink" href="#example-2-getting-the-highlighted-target-molecule" title="Permalink to this headline">¶</a></h3>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject matcher = indigo.substructureMatcher(mol);
+IndigoObject query = indigo.loadSmarts(&quot;O=[!C;R]&quot;);
+
+System.out.println(matcher.countMatches(query);
+for (IndigoObject match : matcher.iterateMatches(query))
+   System.out.println(match.highlightedTarget().smiles());
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject matcher = indigo.substructureMatcher(mol);
+IndigoObject query = indigo.loadSmarts(&quot;O=[!C;R]&quot;);
+
+System.Console.WriteLine(matcher.countMatches(query);
+foreach (IndigoObject match in matcher.iterateMatches(query))
+   System.Console.WriteLine(match.highlightedTarget().smiles());
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">matcher</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">substructureMatcher</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadSmarts</span><span class="p">(</span><span class="s">&quot;O=[!C;R]&quot;</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">matcher</span><span class="o">.</span><span class="n">countMatches</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">matcher</span><span class="o">.</span><span class="n">iterateMatches</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+   <span class="k">print</span> <span class="n">match</span><span class="o">.</span><span class="n">highlightedTarget</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-3-exact-match-between-reactions">
+<h3>Example 3 (exact match between reactions)<a class="headerlink" href="#example-3-exact-match-between-reactions" title="Permalink to this headline">¶</a></h3>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject match = indigo.exactMatch(rxn1, rxn2, &quot;ALL -AAM&quot;);
+
+if (match != null)
+{
+   for (IndigoObject mol : rxn1.iterateMolecules())
+   {
+      System.out.println(&quot;molecule #&quot; + mol.index());
+
+      for (IndigoObject atom : mol.iterateAtoms())
+        if (match.mapAtom(atom) != null)
+           System.out.printf(&quot;atom #%d matched\n&quot;, atom.index());
+
+      for (IndigoObject bond : mol.iterateBonds())
+        if (match.mapBond(atom) != null)
+           System.out.printf(&quot;bond #%d matched\n&quot;, bond.index());
+   }
+}
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject match = indigo.exactMatch(rxn1, rxn2, &quot;ALL -AAM&quot;);
+
+if (match != null)
+{
+   foreach (IndigoObject mol in rxn1.iterateMolecules())
+   {
+      System.Console.writeLine(&quot;molecule #&quot; + mol.index());
+
+      foreach (IndigoObject atom in mol.iterateAtoms())
+        if (match.mapAtom(atom) != null)
+           System.Console.WriteLine(&quot;atom #{0} matched\n&quot;, atom.index());
+
+      foreach (IndigoObject bond in mol.iterateBonds())
+        if (match.mapBond(bond) != null)
+           System.Console.WriteLine(&quot;bond #{0} matched\n&quot;, bond.index());
+
+   }
+}
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre>match = indigo.exactMatch(rxn1, rxn2, &quot;ALL -AAM&quot;)
+
+if match:
+  foreach mol in rxn1.iterateMolecules():
+    print &quot;molecule #&quot; + mol.index();
+    for atom in mol.iterateAtoms():
+      if match.mapAtom(atom):
+        print &quot;atom #&quot;, atom.index(), &quot;matched&quot;
+
+    for bond in mol.iterateBonds():
+      if match.mapBond(bond):
+        print &quot;bond #&quot;, bond.index(), &quot;matched&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="tautomer-matching-rules">
+<h2>Tautomer Matching Rules<a class="headerlink" href="#tautomer-matching-rules" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>By default, any chains that satisfy basic conditions of tautomerism,
+are considered tautomeric by he tautomer matcher. You can restrict
+the tautomer matching by enabling conditions for boundary atoms in
+tautomeric chains. Each rule consists of two conditions, for two
+boundary atoms of the chain. The rules are numbered (1,2,...), and
+the numbers can be used in matcher&#8217;s parameter string after the
+<code class="docutils literal"><span class="pre">TAU</span></code> specifier (<code class="docutils literal"><span class="pre">TAU</span> <span class="pre">R1</span> <span class="pre">R2</span></code>). The more rules you specify, the
+more flexibility you receive in the search; <em>but</em> when you specify no
+rules at all (<code class="docutils literal"><span class="pre">TAU</span></code>), you get the most flexible search because no
+rules are checked. Any tautomeric chain is acceptable in this case.
+You can also use <code class="docutils literal"><span class="pre">TAU</span> <span class="pre">R*</span></code> to specify all rules at once.</li>
+<li>Some metal bonds and atom charges can replace hydrogen in tautomeric
+chains. You can add the HYD word to disable such hydrogen
+replacements (<code class="docutils literal"><span class="pre">TAU</span> <span class="pre">HYD</span></code>).</li>
+<li>Ring-chain tautomerism is disabled by default. You can add <code class="docutils literal"><span class="pre">R-C</span></code> to
+enable it (<code class="docutils literal"><span class="pre">TAU</span> <span class="pre">R-C</span></code>).</li>
+</ul>
+<p>The following three rules are recommended and are used in examples:</p>
+<ul class="simple">
+<li>Each boundary atom in the tautomeric chain must be one of N, O, P, S,
+As, Se, Sb, Te</li>
+<li>Carbon not from the aromatic ring at one end of the tautomeric chain,
+and one of N, O, P, S at the other end</li>
+<li>Carbon from the aromatic ring at one end of the tautomeric chain and
+one of N, O at the other end</li>
+</ul>
+<div class="section" id="customizing-the-rules">
+<h3>Customizing the rules<a class="headerlink" href="#customizing-the-rules" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">Indigo</span></code> provides thee methods to customize the rules:
+<code class="docutils literal"><span class="pre">clearTautomerRules</span></code>, <code class="docutils literal"><span class="pre">setTautomerRule</span></code>, and <code class="docutils literal"><span class="pre">removeTautomerRule</span></code>.
+There are no rules by default. The <code class="docutils literal"><span class="pre">Indigo.setTautomerRule</span></code> method
+accepts an ID number of the rule (must be from 1 to 32), and two strings
+(for two bound atoms of the chain), containing allowed elements are
+separated by commas. &#8216;1&#8217; at the beginning means an aromatic atom, and
+&#8216;0&#8217; means an aliphatic (non-aromatic) atom.</p>
+<p>The three rules defined above can be set in the following way:</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>indigo.setTautomerRule(1, &quot;N,O,P,S,As,Se,Sb,Te&quot;, &quot;N,O,P,S,As,Se,Sb,Te&quot;);
+indigo.setTautomerRule(2, &quot;0C&quot;, &quot;N,O,P,S&quot;);
+indigo.setTautomerRule(3, &quot;1C&quot;, &quot;N,O&quot;);
+
+IndigoObject mol1 = indigo.loadQueryMolecule(&quot;OC1=CC=CNC1&quot;);
+IndigoObject mol2 = indigo.loadMolecule(&quot;O=C1CNCC2=CC=CC=C12&quot;);
+
+IndigoObject matcher = indigo.substructureMatcher(mol2, &quot;TAU R2&quot;);
+IndigoObject match = matcher.match(mol1);
+</pre></div>
+</div>
+<p>Python: the same with <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted</p>
+</div>
+</div>
+<div class="section" id="highlighting-atoms-and-bonds">
+<h2>Highlighting Atoms and Bonds<a class="headerlink" href="#highlighting-atoms-and-bonds" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.highlight</span></code> and <code class="docutils literal"><span class="pre">IndigoObject.unhighlight</span></code> methods
+can be applied to an atom or a bond. Also, the
+<code class="docutils literal"><span class="pre">IndigoObject.unhighlight</span></code> method can be applied to a molecule or
+reaction to dismiss the highlighting on the whole molecule or reaction.
+You can check if object is highlighted using
+<code class="docutils literal"><span class="pre">IndigoObject.isHighlighted</span></code> method.</p>
+<p>The following example shows how to highlight the matched atoms and bonds
+on a substructure matcher&#8217;s target, along with explicit hydrogens
+attached to the matched atoms.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject matcher = indigo.substructureMatcher(target);
+IndigoObject match = matcher.match(query);
+
+for (IndigoObject item : query.iterateAtoms())
+{
+   IndigoObject atom = match.mapAtom(item);
+   atom.highlight();
+
+   for (IndigoObject nei : atom.iterateNeighbors())
+   {
+      if (!nei.isPseudoatom() &amp;&amp; !nei.isRSite() &amp;&amp; nei.atomicNumber() == 1)
+      {
+         nei.highlight();
+         nei.bond().highlight();
+      }
+   }
+}
+
+for (IndigoObject bond : query.iterateBonds())
+   match.mapBond(bond).highlight();
+
+System.out.println(target.smiles());
+target.unhighlight();
+System.out.println(target.smiles());
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject matcher = indigo.substructureMatcher(target);
+IndigoObject match = matcher.match(query);
+
+foreach (IndigoObject qatom in query.iterateAtoms())
+{
+   IndigoObject atom = match.mapAtom(qatom);
+   atom.highlight();
+
+   foreach (IndigoObject nei in atom.iterateNeighbors())
+   {
+      if (!nei.isPseudoatom() &amp;&amp; !nei.isRSite() &amp;&amp; nei.atomicNumber() == 1)
+      {
+         nei.highlight();
+         nei.bond().highlight();
+      }
+   }
+}
+
+foreach (IndigoObject bond in query.iterateBonds())
+   match.mapBond(bond).highlight();
+
+System.Console.WriteLine(target.smiles());
+target.unhighlight();
+System.Console.WriteLine(target.smiles());
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">matcher</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">substructureMatcher</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+<span class="n">match</span> <span class="o">=</span> <span class="n">matcher</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">qatom</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
+  <span class="n">atom</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">mapAtom</span><span class="p">(</span><span class="n">qatom</span><span class="p">)</span>
+  <span class="n">atom</span><span class="o">.</span><span class="n">highlight</span><span class="p">()</span>
+
+  <span class="k">for</span> <span class="n">nei</span> <span class="ow">in</span> <span class="n">atom</span><span class="o">.</span><span class="n">iterateNeighbors</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">nei</span><span class="o">.</span><span class="n">isPseudoatom</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">nei</span><span class="o">.</span><span class="n">isRSite</span><span class="p">()</span> <span class="ow">and</span> <span class="n">nei</span><span class="o">.</span><span class="n">atomicNumber</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+      <span class="n">nei</span><span class="o">.</span><span class="n">highlight</span><span class="p">()</span>
+      <span class="n">nei</span><span class="o">.</span><span class="n">bond</span><span class="p">()</span><span class="o">.</span><span class="n">highlight</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">bond</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">():</span>
+  <span class="n">match</span><span class="o">.</span><span class="n">mapBond</span><span class="p">(</span><span class="n">bond</span><span class="p">)</span><span class="o">.</span><span class="n">highlight</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">target</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+<span class="n">target</span><span class="o">.</span><span class="n">unhighlight</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">target</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="serialization">
+<h2>Serialization<a class="headerlink" href="#serialization" title="Permalink to this headline">¶</a></h2>
+<p>You can use the <code class="docutils literal"><span class="pre">IndigoObject.serialize</span></code> method to serialize a
+molecule or a reaction into a binary byte array. All molecule and
+reaction features are serialized, including atom coordinates,
+stereochemistry, bond orientations, highlighting, AAM numbers, etc. To
+restore the molecule/reaction back, use the <code class="docutils literal"><span class="pre">Indigo.unzerialize</span></code>
+method.</p>
+<ul class="simple">
+<li><strong>Note:</strong> groups are not serialized (i.e. polymer brackets and data
+s-groups will be lost during serialization)</li>
+<li><strong>Note:</strong> Molecule/reaction name and SDF properties ate not
+serialized</li>
+</ul>
+<p>Java, C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>byte[] data = mol.serialize();
+...
+IndigoObject mol2 = indigo.unserialize(data);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
+</div>
+<div class="section" id="alignment-of-atoms">
+<h2>Alignment of Atoms<a class="headerlink" href="#alignment-of-atoms" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.alignAtoms</span></code> method can be used to calculate and
+apply the transformation (scale + rotatation + translation) of a
+molecule so that some subset of its atoms will become as close as
+possible to the desired positions. The method accepts an integer array
+of atom indices and a float array of desired coordinates (three times
+bigger that the array of indices, storing resired x,y,z coordinates for
+each atom).</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject query = indigo.loadSmarts(&quot;[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2&quot;);
+int[] atoms = new int[query.countAtoms()];
+float[] xyz = new float[query.countAtoms() * 3];
+
+for (IndigoObject structure : indigo.iterateSDFile(&quot;structures.sdf.gz&quot;))
+{
+   IndigoObject match = indigo.substructureMatcher(structure).match(query);
+   int i = 0;
+
+   if (structure.index() == 0)
+      for (IndigoObject atom : query.iterateAtoms())
+         System.arraycopy(match.mapAtom(atom).xyz(), 0, xyz, i++ * 3, 3);
+   else
+   {
+      for (IndigoObject atom : query.iterateAtoms())
+         atoms[i++] = match.mapAtom(atom).index();
+
+      structure.alignAtoms(atoms, xyz);
+   }
+}
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject query = indigo.loadSmarts(&quot;[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2&quot;);
+int[] atoms = new int[query.countAtoms()];
+float[] xyz = new float[query.countAtoms() * 3];
+
+foreach (IndigoObject structure in indigo.iterateSDFile(&quot;structures.sdf.gz&quot;))
+{
+   IndigoObject match = indigo.substructureMatcher(structure).match(query);
+   int i = 0;
+
+   if (structure.index() == 0)
+      foreach (IndigoObject atom in query.iterateAtoms())
+         Array.Copy(match.mapAtom(atom).xyz(), 0, xyz, i++ * 3, 3);
+   else
+   {
+      foreach (IndigoObject atom in query.iterateAtoms())
+      atoms[i++] = match.mapAtom(atom).index();
+
+      structure.alignAtoms(atoms, xyz);
+   }
+}
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">query</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadSmarts</span><span class="p">(</span><span class="s">&quot;[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2&quot;</span><span class="p">);</span>
+<span class="n">xyz</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">structure</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateSDFile</span><span class="p">(</span><span class="s">&quot;structures.sdf.gz&quot;</span><span class="p">):</span>
+  <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">substructureMatcher</span><span class="p">(</span><span class="n">structure</span><span class="p">)</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">structure</span><span class="o">.</span><span class="n">index</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
+      <span class="n">xyz</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">mapAtom</span><span class="p">(</span><span class="n">atom</span><span class="p">)</span><span class="o">.</span><span class="n">xyz</span><span class="p">())</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">atoms</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
+      <span class="n">atoms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">mapAtom</span><span class="p">(</span><span class="n">atom</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">())</span>
+    <span class="n">structure</span><span class="o">.</span><span class="n">alignAtoms</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">xyz</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="scaffold-detection">
+<h2>Scaffold Detection<a class="headerlink" href="#scaffold-detection" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">Indigo.extractCommonScaffold(mode</span> <span class="pre">[max_iterations])</span></code> method
+searches MCS scaffold for given molecules array and returns an
+extraction result. The method accepts a string parameter called
+<code class="docutils literal"><span class="pre">mode</span></code>. The following modes are available:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">exact</span></code> : searches MCS using the exact algorithm.</li>
+<li><code class="docutils literal"><span class="pre">approx</span></code> : searches MCS using the approximate algorithm</li>
+</ul>
+<p>There is an optional integer parameter (iteration limit) followed by the
+mode. The default value for the exact algorithm is 0 (infinite) and for
+the approximate algorithm is 1000.</p>
+<p>Indigo searches MCS in terms of a largest induced molecule1 subgraph
+isomorphic to an induced molecule2 subgraph. Largest means that a result
+subgraph can not be extended by the adding a vertex (atom). E.g. there
+are three possible mcs for the molecules &#8216;NCOCCCS&#8217; and &#8216;NCCOCCS&#8217; which
+can not be extended: &#8216;CCOC&#8217;, &#8216;NC&#8217; and &#8216;CCS&#8217;. Indigo stores all the
+intermediate subgraphs, which can be a result MCS. Thus, after a
+searching is finished, there is an array (all the solutions) of
+submolecules available. In the end, the result molecules array is sorted
+by the following rule: maximize rings number; if two molecules contain
+equal ring number, then maximize bonds number. The result sorted
+molecules array (all the maximum common submolecules) can be iterated by
+the <code class="docutils literal"><span class="pre">allScaffolds()</span></code> method. The <code class="docutils literal"><span class="pre">IndigoObject.allScaffolds()</span></code>
+method returns an array object.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject arr = indigo.createArray();
+
+for (IndigoObject item : indigo.iterateSDFile(&quot;structures.sdf&quot;))
+   arr.arrayAdd(item);
+
+IndigoObject scaf = indigo.extractCommonScaffold(arr, &quot;exact&quot;);
+
+if (scaf != null) {
+  System.out.println(&quot;max scaffold: &quot; + scaf.smiles());
+  for(IndigoObject scaffold: scaf.allScaffolds().iterateArray())
+     System.out.println(&quot;current scaffold: &quot; + scaffold.smiles());
+}
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject arr = indigo.createArray();
+
+foreach (IndigoObject item in indigo.iterateSDFile(&quot;structures.sdf&quot;))
+   arr.arrayAdd(item);
+
+IndigoObject scaf = indigo.extractCommonScaffold(arr, &quot;approx 2000&quot;);
+
+if (scaf != null) {
+  System.Console.WriteLine(&quot;max scaffold: &quot; + scaf.smiles());
+  for(IndigoObject scaffold: scaf.allScaffolds().iterateArray())
+     System.Console.WriteLine(&quot;current scaffold: &quot; + scaffold.smiles());
+}
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">arr</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">createArray</span><span class="p">();</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateSDFile</span><span class="p">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="p">):</span>
+   <span class="n">arr</span><span class="o">.</span><span class="n">arrayAdd</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+
+<span class="n">scaf</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">extractCommonScaffold</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="s">&quot;exact 1000&quot;</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="n">scaf</span><span class="p">:</span>
+  <span class="k">print</span> <span class="s">&quot;max scaffold:&quot;</span> <span class="o">+</span> <span class="n">scaf</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+
+  <span class="k">for</span> <span class="n">scaffold</span> <span class="ow">in</span> <span class="n">scaf</span><span class="o">.</span><span class="n">allScaffolds</span><span class="p">()</span><span class="o">.</span><span class="n">iterateArray</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s">&quot;current scaffold:&quot;</span> <span class="o">+</span> <span class="n">scaffold</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="r-group-decomposition">
+<h2>R-Group Decomposition<a class="headerlink" href="#r-group-decomposition" title="Permalink to this headline">¶</a></h2>
+<p>The R-Group decomposition algorithm separates given molecule into a
+scaffold (matches the given query molecule) and R-Groups. To start
+working with the algorithm you need to create a <code class="docutils literal"><span class="pre">Decomposer</span></code> object.
+The <code class="docutils literal"><span class="pre">Indigo.createDecomposer</span></code> method accepts a query molecule and
+returns the <code class="docutils literal"><span class="pre">Decomposer</span></code> object. During a decomposition the
+<code class="docutils literal"><span class="pre">Decomposer</span></code> object builds a common scaffold with all R-Groups
+gathered together(so named <code class="docutils literal"><span class="pre">full</span> <span class="pre">scaffold</span></code>). The scaffold matches
+every passed molecule and together with calculated R-Groups restores
+initial molecules. Once the <code class="docutils literal"><span class="pre">Decomposer</span></code> object is created, you can
+pass molecules into and perform the decomposition. The method
+<code class="docutils literal"><span class="pre">IndigoObject.decomposeMolecule</span></code> returns a <code class="docutils literal"><span class="pre">DecompositionItem</span></code>
+object. The method accepts molecule. User can get the calculated results
+by accessing the <code class="docutils literal"><span class="pre">DecompositionItem</span></code> object. The following methods are
+used to get the results:</p>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.decomposedMoleculeWithRGroups</span></code> returns molecule
+separated into a scaffold with R-Groups (<code class="docutils literal"><span class="pre">DecompositionItem</span></code> object).
+The <code class="docutils literal"><span class="pre">IndigoObject.decomposedMoleculeHighlighte</span></code> returns molecule with
+a highlighted scaffold (<code class="docutils literal"><span class="pre">DecompositionItem</span></code> object). The
+<code class="docutils literal"><span class="pre">IndigoObject.decomposedMoleculeScaffold</span></code> returns the full scaffold
+(<code class="docutils literal"><span class="pre">Decomposer</span></code> object) or a submolecule which matches the given query
+(<code class="docutils literal"><span class="pre">DecompositionItem</span></code> object).</p>
+<p>Java, C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject deco = indigo.createDecomposer(scaf);
+
+IndigoObject deco_item1 = decomposer.decomposeMolecule(mol1);
+deco_item1.decomposedMoleculeWithRGroups().saveMolfile(&quot;molrgoups1.mol&quot;);
+deco_item1.decomposedMoleculeHighlighted().saveMolfile(&quot;highlighted1.mol&quot;);
+deco_item1.decomposedMoleculeScaffold().saveMolfile(&quot;scaffold1.mol&quot;);
+
+IndigoObject deco_item2 = decomposer.decomposeMolecule(mol2);
+deco_item2.decomposedMoleculeWithRGroups().saveMolfile(&quot;molrgoups2.mol&quot;);
+deco_item2.decomposedMoleculeHighlighted().saveMolfile(&quot;highlighted2.mol&quot;);
+deco_item2.decomposedMoleculeScaffold().saveMolfile(&quot;scaffold2.mol&quot;);
+
+IndigoObject scaffold = deco.decomposedMoleculeScaffold();
+scaffold.saveMolfile(&quot;full_scaffold.mol&quot;);
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">deco</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">createDecomposer</span><span class="p">(</span><span class="n">scaf</span><span class="p">);</span>
+
+<span class="n">deco_item1</span> <span class="o">=</span> <span class="n">decomposer</span><span class="o">.</span><span class="n">decomposeMolecule</span><span class="p">(</span><span class="n">mol1</span><span class="p">);</span>
+<span class="n">deco_item1</span><span class="o">.</span><span class="n">decomposedMoleculeWithRGroups</span><span class="p">()</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;molrgoups1.mol&quot;</span><span class="p">);</span>
+<span class="n">deco_item1</span><span class="o">.</span><span class="n">decomposedMoleculeHighlighted</span><span class="p">()</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;highlighted1.mol&quot;</span><span class="p">);</span>
+<span class="n">deco_item1</span><span class="o">.</span><span class="n">decomposedMoleculeScaffold</span><span class="p">()</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;scaffold1.mol&quot;</span><span class="p">);</span>
+
+<span class="n">deco_item2</span> <span class="o">=</span> <span class="n">decomposer</span><span class="o">.</span><span class="n">decomposeMolecule</span><span class="p">(</span><span class="n">mol2</span><span class="p">);</span>
+<span class="n">deco_item2</span><span class="o">.</span><span class="n">decomposedMoleculeWithRGroups</span><span class="p">()</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;molrgoups2.mol&quot;</span><span class="p">);</span>
+<span class="n">deco_item2</span><span class="o">.</span><span class="n">decomposedMoleculeHighlighted</span><span class="p">()</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;highlighted2.mol&quot;</span><span class="p">);</span>
+<span class="n">deco_item2</span><span class="o">.</span><span class="n">decomposedMoleculeScaffold</span><span class="p">()</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;scaffold2.mol&quot;</span><span class="p">);</span>
+
+<span class="n">scaffold</span> <span class="o">=</span> <span class="n">deco</span><span class="o">.</span><span class="n">decomposedMoleculeScaffold</span><span class="p">();</span>
+<span class="n">scaffold</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;full_scaffold.mol&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Note</strong>: There are possible situations when a given query molecule does
+not match a next decomposition molecule. An exception is raised in that
+case.</p>
+<p>The <code class="docutils literal"><span class="pre">DecompositionItem</span></code> objects supports iterating matches since a
+given query scaffold can have several embeddings. The
+<code class="docutils literal"><span class="pre">IndigoObject.iterateDecompositions</span></code> returns the <code class="docutils literal"><span class="pre">DecompositionItem</span></code>
+iterator. The full scaffold can be completed by an appropriate match.
+The <code class="docutils literal"><span class="pre">IndigoObject.addDecomposition</span></code> (<code class="docutils literal"><span class="pre">Decomposer</span></code> object )method
+accepts a <code class="docutils literal"><span class="pre">DecompositionItem</span></code> object and adds the current match to the
+full scaffold. The following example shows the usage with iterating all
+matches:</p>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre>...
+
+# iterate over all the structures
+for smiles in structures:
+   # handle current molecule and handle exceptions
+   try:
+      item = deco.decomposeMolecule(indigo.loadMolecule(smiles))
+      # iterate over all the decompositions
+      for q_match in item.iterateDecompositions()
+         # get decomposed molecules (current match)
+         rg_mol = q_match.decomposedMoleculeWithRGroups()
+         # add current match
+         deco.addDecomposition(q_match)
+
+   except Exception,e:
+      # error handlers
+</pre></div>
+</div>
+<p><strong>Note</strong>: There are two different types of input queries: - user defined
+molecule with RGroups - simple query molecule, which can be passed from
+the Scaffold Detection</p>
+<p>In the first case the full scaffold equals to the user defined molecule
+itself and it can not be changed during the RGroup Decomposition. In the
+second case the full scaffold should be generated by the library, and it
+will be returned by the <code class="docutils literal"><span class="pre">decomposedMoleculeScaffold</span></code> method. You can
+load scaffold from a molfile. The SMILES format is not supported at the
+moment.</p>
+<p>The following example shows the usage user-defined scaffold:</p>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre># prepate query scaffold (e.g. &#39;(R1)C1CCCC(R2)C1&#39;)
+scaffold = indigo.loadQueryMoleculeFromFile(&quot;query_mol&quot;)
+
+# init decomposition
+deco = indigo.createDecomposer(scaffold)
+
+# load molecule
+mol = indigo.loadMolecule(&#39;NC1CCCC(O)C1&#39;)
+
+# create deco item
+item = deco.decomposeMolecule(indigo.loadMolecule(smiles))
+
+# iterate over all the decompositions
+for q_match in item.iterateDecompositions()
+   # get decomposed molecule (current match)
+   rg_mol = q_match.decomposedMoleculeWithRGroups()
+
+   # print molfile
+   print(rg_mol.molfile())
+</pre></div>
+</div>
+<p>In the example above there will be two matches: (R1)C1CCCC(R2)C1, R1=OH,
+R2=NH2 (R1)C1CCCC(R2)C1, R1=NH2, R2=OH</p>
+<p><strong>Note</strong>: the following code is deprecated:</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject deco = indigo.decomposeMolecules(scaf, arr);
+deco.decomposedMoleculeHighlighted().saveMolfile(&quot;highlighted.mol&quot;);
+IndigoObject scaffold = deco.decomposedMoleculeScaffold();
+for (IndigoObject item : deco.iterateDecomposedMolecules())
+   System.out.println(item.decomposedMoleculeWithRGroups().molfile());
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject deco = indigo.decomposeMolecules(scaf, arr);
+deco.decomposedMoleculeHighlighted().saveMolfile(&quot;highlighted.mol&quot;);
+IndigoObject scaffold = deco.decomposedMoleculeScaffold();
+foreach (IndigoObject item in deco.iterateDecomposedMolecules())
+   System.Console.WriteLine(item.decomposedMoleculeWithRGroups().molfile());
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">deco</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">decomposeMolecules</span><span class="p">(</span><span class="n">scaf</span><span class="p">,</span> <span class="n">arr</span><span class="p">);</span>
+<span class="n">deco</span><span class="o">.</span><span class="n">decomposedMoleculeHighlighted</span><span class="p">()</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s">&quot;highlighted.mol&quot;</span><span class="p">);</span>
+<span class="n">scaffold</span> <span class="o">=</span> <span class="n">deco</span><span class="o">.</span><span class="n">decomposedMoleculeScaffold</span><span class="p">();</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">deco</span><span class="o">.</span><span class="n">iterateDecomposedMolecules</span><span class="p">():</span>
+   <span class="k">print</span> <span class="n">item</span><span class="o">.</span><span class="n">decomposedMoleculeWithRGroups</span><span class="p">()</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reaction-products-enumeration">
+<h2>Reaction Products Enumeration<a class="headerlink" href="#reaction-products-enumeration" title="Permalink to this headline">¶</a></h2>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject reaction = indigo.loadQueryReactionFromFile(rxn_path);
+IndigoObject monomers_table = indigo.createArray();
+for (int i = 0; i &lt; reaction.countReactants(); i++)
+{
+   monomers_table.arrayAdd(indigo.createArray());
+
+   for (IndigoObject iterr : indigo.iterateSDFile(mon_paths[i])
+   {
+      monomers_table.at(i).arrayAdd(iterr.clone());
+   }
+}
+IndigoObject output_reactions = indigo.reactionProductEnumerate(reaction, monomers_table);
+</pre></div>
+</div>
+</div>
+<div class="section" id="reaction-based-molecule-transformations">
+<h2>Reaction-based Molecule Transformations<a class="headerlink" href="#reaction-based-molecule-transformations" title="Permalink to this headline">¶</a></h2>
+<p>Examples of usage are avialible
+<a class="reference external" href="../concepts/transformation.html">here</a>.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject reaction = indigo.loadQueryReaction(&quot;[NH:3]=[N:1]#[N:2]&gt;&gt;[NH:3]=[N+:1]=[#7-:2]&quot;);
+IndigoObject molecule = indigo.loadMolecule(&quot;N#N=NC1=CC(=CC=C1)N=N#N&quot;);
+indigo.transform(reaction, molecule);
+System.out.println(molecule.smiles); // N(C1=CC=CC(N=[N+]=[N-])=C1)=[N+]=[N-]
+</pre></div>
+</div>
+</div>
+<div class="section" id="rendering">
+<h2>Rendering<a class="headerlink" href="#rendering" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Rending in Indigo is done by the <code class="docutils literal"><span class="pre">IndigoRenderer</span></code> plugin which is</div>
+</div>
+<p>included in the Indigo distribution. The plugin is available for C (as a
+separate dynamic library), and has wrappers for all supported languages.</p>
+<p>To work with the rendering plugin in C#/Java/Python wrappers, one needs
+to create an instance of <code class="docutils literal"><span class="pre">IndigoRenderer</span></code>, passing an existing
+<code class="docutils literal"><span class="pre">Indigo</span></code> instance to it.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoRenderer renderer = new IndigoRenderer(indigo);
+</pre></div>
+</div>
+<p>A large number of <a class="reference external" href="options.html#rendering">options</a> can be set for
+the rendering plugin. They are set via the ordinary <code class="docutils literal"><span class="pre">Indigo</span></code> instance.
+One of the options is obligatory: <code class="docutils literal"><span class="pre">render-output-format</span></code> tells which
+format the image should be rendered to.</p>
+<p>The <code class="docutils literal"><span class="pre">IndigoRenderer.renderToBuffer</span></code> accepts an <code class="docutils literal"><span class="pre">IndigoObject</span></code> and
+returns a byte buffer with PNG, SVG, or PDF image (on the Windows
+platform, EMF format is supported too). Similarly, the
+<code class="docutils literal"><span class="pre">IndigoRenderer.renderToFile</span></code> method saves the image to a file.</p>
+<p>Java and C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>indigo.setOption(&quot;render-output-format&quot;, &quot;png&quot;);
+indigo.setOption(&quot;render-margins&quot;, 10, 10);
+mol1.layout();
+indigo.setOption(&quot;render-comment&quot;, &quot;N-Hydroxyaniline&quot;)
+renderer.renderToFile(mol1, &quot;mol.png&quot;);
+
+indigo.setOption(&quot;render-output-format&quot;, &quot;svg&quot;);
+byte[] svg = renderer.renderToBuffer(rxn);
+</pre></div>
+</div>
+<p>Python: the same with the <code class="docutils literal"><span class="pre">byte[]</span></code> omitted.</p>
+<div class="section" id="rendering-multiple-items-to-grid">
+<h3>Rendering Multiple Items to Grid<a class="headerlink" href="#rendering-multiple-items-to-grid" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">IndigoRenderer.renderGridToFile</span></code> and
+<code class="docutils literal"><span class="pre">IndigoRenderer.renderGridToBuffer</span></code> methods can be used to render
+multiple molecules or reactions at once. The rendered items are placed
+in grid specified by its number of columns. Some
+<a class="reference external" href="options.html#rendering-in-grid">options</a> are available for placing
+titles under (or above) the items.</p>
+<p>Java:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject arr = indigo.createArray();
+
+for (IndigoObject item : indigo.iterateSDFile(&quot;structures.sdf&quot;))
+   arr.arrayAdd(item);
+
+renderer.renderGridToFile(collection, null, 4, &quot;structures.png&quot;);
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-python"><div class="highlight"><pre>IndigoObject arr = indigo.createArray();
+
+foreach (IndigoObject item in indigo.iterateSDFile(&quot;structures.sdf&quot;))
+   arr.arrayAdd(item);
+
+renderer.renderGridToFile(collection, null, 4, &quot;structures.png&quot;);
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">arr</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">createArray</span><span class="p">();</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateSDFile</span><span class="p">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="p">):</span>
+   <span class="n">arr</span><span class="o">.</span><span class="n">arrayAdd</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+
+<span class="n">renderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">collection</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">&quot;structures.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The second parameter of the <code class="docutils literal"><span class="pre">IndigoRenderer.renderGridToFile</span></code> and
+<code class="docutils literal"><span class="pre">IndigoRenderer.renderGridToBuffer</span></code> methods is optional. You can
+specify it only for molecules, not for reactions. If this parameter is
+not <code class="docutils literal"><span class="pre">null</span></code>, it has to be an integer array whose number of elements is
+equal to the number of given molecules. Each element of this array is
+the index of the &#8220;referene atom&#8221; in the corresponding molecule. The
+rendering is then done in such a way that the reference atoms are
+grid-aligned. You can see the examples of this at
+<a class="reference external" href="http://ctr.wikia.com/wiki/Align_the_depiction_using_a_fixed_substructure">CTR</a>.</p>
+</div>
+<div class="section" id="win32-and-net-support">
+<h3>Win32 and .NET Support<a class="headerlink" href="#win32-and-net-support" title="Permalink to this headline">¶</a></h3>
+<p>In the .NET API, additional <code class="docutils literal"><span class="pre">IndigoRenderer</span></code> methods are available for
+working with Win32 HDC and <code class="docutils literal"><span class="pre">System.Drawing</span></code> objects directly:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">void</span> <span class="pre">renderToHDC</span> <span class="pre">(IndigoObject</span> <span class="pre">item,</span> <span class="pre">IntPtr</span> <span class="pre">hdc,</span> <span class="pre">bool</span> <span class="pre">printing)</span></code></li>
+<li><code class="docutils literal"><span class="pre">Bitmap</span> <span class="pre">renderToBitmap</span> <span class="pre">(IndigoObject</span> <span class="pre">item)</span></code></li>
+<li><code class="docutils literal"><span class="pre">Metafile</span> <span class="pre">renderToMetafile</span> <span class="pre">(IndigoObject</span> <span class="pre">item)</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="inchi">
+<h2>InChI<a class="headerlink" href="#inchi" title="Permalink to this headline">¶</a></h2>
+<p>InChI support is done via IndigoInchi plugin. To work with the InChI
+plugin in C#/Java/Python wrappers, one needs to create an instance of
+IndigoInchi, passing an existing Indigo instance to it.</p>
+<p>Use <code class="docutils literal"><span class="pre">IndigoInchi.loadMolecule</span></code> method to convert InChI strings to a
+molecule, and <code class="docutils literal"><span class="pre">IndigoInchi.getInchi</span></code> method for the reverse operation.</p>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">indigo_inchi</span> <span class="o">=</span> <span class="n">IndigoInchi</span><span class="p">(</span><span class="n">indigo</span><span class="p">);</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">version</span><span class="p">())</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">indigo_inchi</span><span class="o">.</span><span class="n">loadMolecule</span><span class="p">(</span><span class="s">&quot;InChI=1S/C10H20N2O2/c11-7-1-5-2-8(12)10(14)4-6(5)3-9(7)13/h5-10,13-14H,1-4,11-12H2&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">getInchi</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">getWarning</span><span class="p">())</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMolecule</span><span class="p">(</span><span class="s">&quot;C1CCCCCCC1&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">getInchi</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<p>You can pass any options supported by the official InChI library via
+<code class="docutils literal"><span class="pre">inchi-options</span></code> option:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s">&quot;inchi-options&quot;</span><span class="p">,</span> <span class="s">&quot;/DoNotAddH /SUU /SLUUD&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>One can use both <code class="docutils literal"><span class="pre">-</span></code> and <code class="docutils literal"><span class="pre">/</span></code> prefix for them:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s">&quot;inchi-options&quot;</span><span class="p">,</span> <span class="s">&quot;-DoNotAddH /SUU -SLUUD&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">API</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#system">System</a></li>
+<li><a class="reference internal" href="#indigo-constructor">Indigo Constructor</a></li>
+<li><a class="reference internal" href="#getting-the-version-string">Getting the Version String</a></li>
+<li><a class="reference internal" href="#loading-molecules-and-query-molecules">Loading Molecules and Query Molecules</a></li>
+<li><a class="reference internal" href="#instrumenting-molecules">Instrumenting Molecules</a></li>
+<li><a class="reference internal" href="#instrumenting-query-atoms">Instrumenting Query Atoms</a><ul>
+<li><a class="reference internal" href="#merging-molecules">Merging Molecules</a></li>
+<li><a class="reference internal" href="#removing-atoms-and-bonds-from-molecules">Removing Atoms and Bonds from Molecules</a></li>
+<li><a class="reference internal" href="#submolecules">Submolecules</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#accessing-molecules">Accessing Molecules</a><ul>
+<li><a class="reference internal" href="#accessing-atoms-and-bonds">Accessing Atoms and Bonds</a></li>
+<li><a class="reference internal" href="#getting-the-properties-of-atoms-and-bonds">Getting the Properties of Atoms and Bonds</a></li>
+<li><a class="reference internal" href="#modifying-atoms-and-bonds">Modifying Atoms and Bonds</a></li>
+<li><a class="reference internal" href="#accessing-neighbor-atoms">Accessing Neighbor Atoms</a></li>
+<li><a class="reference internal" href="#accessing-r-groups">Accessing R-Groups</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#calculating-molecule-properties">Calculating Molecule Properties</a></li>
+<li><a class="reference internal" href="#molecule-validation">Molecule Validation</a></li>
+<li><a class="reference internal" href="#working-with-connected-components">Working with Connected Components</a></li>
+<li><a class="reference internal" href="#canonical-smiles">Canonical SMILES</a></li>
+<li><a class="reference internal" href="#saving-molecules">Saving Molecules</a></li>
+<li><a class="reference internal" href="#loading-reactions-and-query-reactions">Loading Reactions and Query Reactions</a></li>
+<li><a class="reference internal" href="#instrumenting-reactions">Instrumenting Reactions</a></li>
+<li><a class="reference internal" href="#accessing-reactions">Accessing Reactions</a></li>
+<li><a class="reference internal" href="#saving-reactions">Saving Reactions</a></li>
+<li><a class="reference internal" href="#reacting-centers">Reacting Centers</a></li>
+<li><a class="reference internal" href="#reaction-atom-to-atom-mapping">Reaction Atom-to-Atom Mapping</a></li>
+<li><a class="reference internal" href="#attachment-points">Attachment points</a></li>
+<li><a class="reference internal" href="#layout-2d-coordinates">Layout (2D coordinates)</a></li>
+<li><a class="reference internal" href="#aromaticity">Aromaticity</a></li>
+<li><a class="reference internal" href="#implicit-and-explicit-hydrogens">Implicit and Explicit Hydrogens</a></li>
+<li><a class="reference internal" href="#stereochemistry">Stereochemistry</a></li>
+<li><a class="reference internal" href="#groups">Groups</a></li>
+<li><a class="reference internal" href="#reading-sdf-rdf-cml-multiline-smiles-files">Reading SDF, RDF, CML, multiline SMILES files</a><ul>
+<li><a class="reference internal" href="#indexed-access">Indexed access</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#accessing-molecule-and-reaction-properties">Accessing Molecule and Reaction Properties</a><ul>
+<li><a class="reference internal" href="#names">Names</a></li>
+<li><a class="reference internal" href="#sdf-rdf-properties">SDF/RDF Properties</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#writing-multiple-molecules-or-reactions-to-a-file">Writing Multiple Molecules or Reactions to a File</a><ul>
+<li><a class="reference internal" href="#writing-sdf-files">Writing SDF Files</a></li>
+<li><a class="reference internal" href="#writing-rdf-files">Writing RDF Files</a></li>
+<li><a class="reference internal" href="#writing-cml-files">Writing CML Files</a></li>
+<li><a class="reference internal" href="#writing-multiline-smiles-files">Writing Multiline SMILES Files</a></li>
+<li><a class="reference internal" href="#closing-files">Closing Files</a></li>
+<li><a class="reference internal" href="#generic-interface-to-writing-files">Generic Interface to Writing Files</a></li>
+<li><a class="reference internal" href="#writing-into-a-memory-buffer">Writing into a Memory Buffer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#enumeration-of-submolecules">Enumeration of Submolecules</a></li>
+<li><a class="reference internal" href="#fingerprints">Fingerprints</a></li>
+<li><a class="reference internal" href="#molecule-and-reaction-similarity">Molecule and Reaction Similarity</a></li>
+<li><a class="reference internal" href="#exact-match">Exact Match</a><ul>
+<li><a class="reference internal" href="#exact-matching-flags-for-molecules">Exact Matching Flags for Molecules</a></li>
+<li><a class="reference internal" href="#exact-matching-flags-for-reactions">Exact Matching Flags for Reactions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#molecule-substructure-matching">Molecule Substructure Matching</a><ul>
+<li><a class="reference internal" href="#molecule-substructure-matching-flags">Molecule Substructure Matching Flags</a></li>
+<li><a class="reference internal" href="#methods-of-substructure-matcher">Methods of Substructure Matcher</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reaction-substructure-matching">Reaction Substructure Matching</a></li>
+<li><a class="reference internal" href="#converting-the-substructure-query-to-the-aromatic-form">Converting the Substructure Query to the Aromatic Form</a></li>
+<li><a class="reference internal" href="#optimizing-the-substructure-query">Optimizing the Substructure Query</a></li>
+<li><a class="reference internal" href="#methods-of-mapping-object">Methods of &#8220;mapping&#8221; object</a><ul>
+<li><a class="reference internal" href="#example-1-mapping-query-molecule-atoms">Example 1 (mapping query molecule atoms)</a></li>
+<li><a class="reference internal" href="#example-2-getting-the-highlighted-target-molecule">Example 2 (getting the highlighted target molecule)</a></li>
+<li><a class="reference internal" href="#example-3-exact-match-between-reactions">Example 3 (exact match between reactions)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tautomer-matching-rules">Tautomer Matching Rules</a><ul>
+<li><a class="reference internal" href="#customizing-the-rules">Customizing the rules</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#highlighting-atoms-and-bonds">Highlighting Atoms and Bonds</a></li>
+<li><a class="reference internal" href="#serialization">Serialization</a></li>
+<li><a class="reference internal" href="#alignment-of-atoms">Alignment of Atoms</a></li>
+<li><a class="reference internal" href="#scaffold-detection">Scaffold Detection</a></li>
+<li><a class="reference internal" href="#r-group-decomposition">R-Group Decomposition</a></li>
+<li><a class="reference internal" href="#reaction-products-enumeration">Reaction Products Enumeration</a></li>
+<li><a class="reference internal" href="#reaction-based-molecule-transformations">Reaction-based Molecule Transformations</a></li>
+<li><a class="reference internal" href="#rendering">Rendering</a><ul>
+<li><a class="reference internal" href="#rendering-multiple-items-to-grid">Rendering Multiple Items to Grid</a></li>
+<li><a class="reference internal" href="#win32-and-net-support">Win32 and .NET Support</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#inchi">InChI</a><ul>
+<li><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

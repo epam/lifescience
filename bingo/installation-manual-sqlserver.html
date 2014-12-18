@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation Manual: SQL Server &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Bingo" href="index.html" />
+    <link rel="next" title="Installation Manual: PostgreSQL" href="installation-manual-postgres.html" />
+    <link rel="prev" title="Installation Manual: Oracle" href="installation-manual-oracle.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="installation-manual-postgres.html" title="Installation Manual: PostgreSQL"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="installation-manual-oracle.html" title="Installation Manual: Oracle"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Bingo</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="installation-manual-sql-server">
+<h1>Installation Manual: SQL Server<a class="headerlink" href="#installation-manual-sql-server" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="operating-systems">
+<h3>Operating Systems<a class="headerlink" href="#operating-systems" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Windows XP/Vista/7 (32-bit and 64-bit)</li>
+<li>Windows 2003/2008 Server (32-bit and 64-bit)</li>
+</ul>
+</div>
+<div class="section" id="database-servers">
+<h3>Database Servers<a class="headerlink" href="#database-servers" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Microsoft SQL Server 2005</li>
+<li>Microsoft SQL Server 2008</li>
+</ul>
+</div>
+<div class="section" id="tested-configurations">
+<h3>Tested Configurations<a class="headerlink" href="#tested-configurations" title="Permalink to this headline">¶</a></h3>
+<p>Bingo has been successfully tested on the following configurations:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="51%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Database</th>
+<th class="head">Operating System</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>SQL Server 2005 Express (32-bit)</td>
+<td>Windows XP Professional</td>
+</tr>
+<tr class="row-odd"><td>SQL Server 2005 Standard (32-bit)</td>
+<td>Windows 2003 Server</td>
+</tr>
+<tr class="row-even"><td>SQL Server 2008 Express (32-bit)</td>
+<td>Windows Vista Home Premium</td>
+</tr>
+<tr class="row-odd"><td>SQL Server 2008 Standard (32-bit)</td>
+<td>Windows XP Professional</td>
+</tr>
+<tr class="row-even"><td>SQL Server 2008 Standard (64-bit)</td>
+<td>Windows Server 2008 R2 Standard</td>
+</tr>
+<tr class="row-odd"><td>SQL Server 2008 Standard (64-bit)</td>
+<td>Windows 7 Enterprise</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="setting-up-a-server">
+<h2>Setting Up a Server<a class="headerlink" href="#setting-up-a-server" title="Permalink to this headline">¶</a></h2>
+<p>For indexing, Bingo uses &#64;&#64;SERVERNAME constant for establishing internal
+connections and it should return the correct server name. If multiple
+SQL Server instances are installed, then &#64;&#64;SERVERNAME should contain the
+service name as well. To get the server name, you can execute the
+following code:</p>
+<div class="highlight-python"><div class="highlight"><pre>select @@SERVERNAME
+</pre></div>
+</div>
+<p>If it returns an invalid name, you should execute the following
+commands:</p>
+<div class="highlight-python"><div class="highlight"><pre>sp_dropserver &lt;invalid server name returned by @@SERVERNAME or from executing sp_helpserver procedure&gt;
+sp_addserver &lt;valid server name&gt;, &#39;local&#39;
+</pre></div>
+</div>
+<p>&#8216;SQL Server Browser&#8217; service should be started for accepting connections
+that are created during the Bingo indexing operation. If this service is
+not started, then you might get the error during index creation
+indicating that the connection cannot be established.</p>
+<p>If you are using Bingo with large tables or a significant number of
+tables, then you have to configure the memory parameters in Microsoft
+SQL Server. The configuration depends on the 32-bit or 64-bit computer
+architecture that you are using.</p>
+<div class="section" id="bit">
+<h3>32-bit<a class="headerlink" href="#bit" title="Permalink to this headline">¶</a></h3>
+<p>By default MS SQL Server provides the possibility to allocate only 256Mb
+in all CLR code. If the memory limit is reached, then you will get the
+following exception:</p>
+<div class="highlight-python"><div class="highlight"><pre>.NET Framework execution was aborted by escalation policy because of out of memory.
+</pre></div>
+</div>
+<p>To adjust the memory limit for CLR you have to specify the -g switch in
+the SQL Server Configuration Manager. For example, to set the memory
+limit for the CLR code to 512Mb, you need to add the <code class="docutils literal"><span class="pre">-g512</span></code> switch to
+the Startup Parameters in the properties for your SQL Server instance in
+the SQL Server Configuration Manager.</p>
+<p><strong>Note:</strong> In the 32-bit architecture, the total allocatable memory is
+limited to 2GB unless you add the <code class="docutils literal"><span class="pre">/3gb</span></code> switch to boot.ini file or
+specify “Use AWE to allocate memory” in the SQL Server settings. So
+increasing the memory limit for CLR, you reduce the memory limit for the
+internal SQL Server cache.</p>
+</div>
+<div class="section" id="id1">
+<h3>64-bit<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>By default, MS SQL Server tries to take all of the memory available in
+the system. Sometimes (mostly on large databases), when the CLR engine
+underlying the SQL Server tries to allocate some memory for Bingo, you
+will get the same exception:</p>
+<div class="highlight-python"><div class="highlight"><pre>.NET Framework execution was aborted by escalation policy because of out of memory.
+</pre></div>
+</div>
+<p>And the following message will be logged to the system log:</p>
+<div class="highlight-python"><div class="highlight"><pre>AppDomain &lt;name&gt; is marked for unload due to memory pressure.
+</pre></div>
+</div>
+<p>To restrict the amount of memory that MS SQL Server can take (thus
+leaving more memory for Bingo), we recommend setting the “Maximium
+server memory” in the “Server Properties&gt;Memory” tab in the SQL Server
+Management Studio to some value less that than the actual size of your
+memory minus 1 GB.</p>
+</div>
+</div>
+<div class="section" id="installation-procedure">
+<h2>Installation Procedure<a class="headerlink" href="#installation-procedure" title="Permalink to this headline">¶</a></h2>
+<p>Log in as Administrator. Run the <code class="docutils literal"><span class="pre">bingo-sqlserver-install.bat</span></code> file
+located in the Bingo installation file set. The help message from the
+script is the following:</p>
+<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-sqlserver-install.bat [parameters]
+Parameters:
+  -?, -help
+    Print this help message
+  -server name
+    SQL Server name (default is local SQL Server)
+  -database database (obligatory)
+    Database to install on.
+  -dbaname name
+    Database administrator login (default is current user).
+  -dbapass password
+    Database administrator password.
+    If the password is not specified, you will have to enter it later.
+  -bingoname name
+    Name of cartridge pseudo-user (default &quot;bingo&quot;).
+  -bingopass password
+    Password of the pseudo-user (default &quot;bingo&quot;).
+  -y
+    Do not ask for confirmation.
+</pre></div>
+</div>
+<p><strong>Note:</strong> The installer automatically issues the
+<code class="docutils literal"><span class="pre">ALTER</span> <span class="pre">DATABASE</span> <span class="pre">$(database)</span> <span class="pre">SET</span> <span class="pre">ENABLE_BROKER</span></code> statement if the
+<code class="docutils literal"><span class="pre">ENABLE_BROKER</span></code> option is not activated on your database. As this
+involves an exclusive database lock, we recommend that, in this case you
+restart the database prior to the installation.</p>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>For the simplest installation, the defaults are taken, including
+<code class="docutils literal"><span class="pre">C:\bingo</span></code> directory for binaries. You have to specify only the
+<code class="docutils literal"><span class="pre">-database</span></code> flag with the name of your database:</p>
+<div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb
+</pre></div>
+</div>
+<p>If you use an SQL Server user account for thed DBA user (normally &#8216;sa&#8217;),
+you have to specify it with the <code class="docutils literal"><span class="pre">-dbaname</span></code> option:</p>
+<div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb -dbaname sa
+</pre></div>
+</div>
+<p>To run in the non-interactive mode, you must specify <code class="docutils literal"><span class="pre">-y</span></code></p>
+<div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb -y
+</pre></div>
+</div>
+<p>(and also <code class="docutils literal"><span class="pre">-dbass</span></code> when you specify <code class="docutils literal"><span class="pre">-dbaname</span></code>)</p>
+<div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb -dbaname sa -dbapass pwd123 -y
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="uninstalling-the-cartridge">
+<h2>Uninstalling the Cartridge<a class="headerlink" href="#uninstalling-the-cartridge" title="Permalink to this headline">¶</a></h2>
+<p>To uninstall the cartridge, you must:</p>
+<ol class="arabic simple">
+<li>Remove all special indices created by users, by calling the
+<code class="docutils literal"><span class="pre">bingo.DropIndex()</span></code> function</li>
+<li>Run <code class="docutils literal"><span class="pre">bingo-sqlserver-uninstall.bat</span></code> with the same <code class="docutils literal"><span class="pre">-dbaname</span></code> ,
+<code class="docutils literal"><span class="pre">-bingoname</span></code>, and <code class="docutils literal"><span class="pre">-database</span></code> parameters that you passed to the
+installer.</li>
+</ol>
+<p>The help message from the uninstall script is the following:</p>
+<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-sqlserver-uninstall.bat [parameters]
+Parameters:
+  -?, -help
+    Print this help message
+  -database database (obligatory)
+    Database to remove Bingo from.
+  -dbaname name
+    Database administrator login (default is current user).
+  -dbapass password
+    Database administrator password.
+    If the password is not specified, you will have to enter it later.
+  -bingoname name
+    Name of cartridge pseudo-user (default &quot;bingo&quot;).
+  -y
+    Do not ask for confirmation.
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installation Manual: SQL Server</a><ul>
+<li><a class="reference internal" href="#system-requirements">System Requirements</a><ul>
+<li><a class="reference internal" href="#operating-systems">Operating Systems</a></li>
+<li><a class="reference internal" href="#database-servers">Database Servers</a></li>
+<li><a class="reference internal" href="#tested-configurations">Tested Configurations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#setting-up-a-server">Setting Up a Server</a><ul>
+<li><a class="reference internal" href="#bit">32-bit</a></li>
+<li><a class="reference internal" href="#id1">64-bit</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation-procedure">Installation Procedure</a><ul>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uninstalling-the-cartridge">Uninstalling the Cartridge</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

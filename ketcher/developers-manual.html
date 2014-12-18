@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Developer’s Manual &mdash; Life Sciences 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Ketcher" href="index.html" />
+    <link rel="next" title="Help" href="help.html" />
+    <link rel="prev" title="Editing Tips" href="editing-tips.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="help.html" title="Help"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="editing-tips.html" title="Editing Tips"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Ketcher</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="developer-s-manual">
+<h1>Developer&#8217;s Manual<a class="headerlink" href="#developer-s-manual" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="editor-mode">
+<h2>Editor Mode<a class="headerlink" href="#editor-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
+<p>The installation package contains all required sources.</p>
+<ul>
+<li><p class="first">To run Ketcher in a separate page, use <code class="docutils literal"><span class="pre">ketcher/ketcher.html</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;a href=&quot;ketcher/ketcher.html&quot;&gt;Ketcher&lt;/a&gt;
+</pre></div>
+</div>
+</li>
+<li><p class="first">To embed Ketcher in another page, use IFrame:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;iframe id=&quot;ifKetcher&quot; src=&quot;ketcher/ketcher.html&quot; width=&quot;800&quot; height=&quot;600&quot;&gt;&lt;/iframe&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="ketcher-object">
+<h3>Ketcher Object<a class="headerlink" href="#ketcher-object" title="Permalink to this headline">¶</a></h3>
+<p>To access Ketcher from JavaScript, use the following code to obtain the
+object reference:</p>
+<div class="highlight-python"><div class="highlight"><pre>var ketcher = ketcherWindow.ketcher;
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">ketcherWindow</span></code> is a separate Ketcher window or</p>
+<div class="highlight-python"><div class="highlight"><pre>var ketcherFrame = document.getElementById(&#39;ifKetcher&#39;);
+var ketcher = null;
+
+if (&#39;contentDocument&#39; in ketcherFrame)
+    ketcher = ketcherFrame.contentWindow.ketcher;
+else // IE7
+    ketcher = document.frames[&#39;ifKetcher&#39;].window.ketcher;
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">ifKetcher</span></code> is a Ketcher IFrame.</p>
+<div class="section" id="ketcher-setmolecule">
+<h4>ketcher.setMolecule()<a class="headerlink" href="#ketcher-setmolecule" title="Permalink to this headline">¶</a></h4>
+<p>This method updates the current structure in the editor. Pass it a
+SMILES string or a Molfile/Rxnfile:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ketcher</span><span class="o">.</span><span class="n">setMolecule</span><span class="p">(</span><span class="s">&#39;c1ccccc1&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> SMILES import is not available in the standalone mode.</p>
+</div>
+<div class="section" id="ketcher-getsmiles">
+<h4>ketcher.getSmiles()<a class="headerlink" href="#ketcher-getsmiles" title="Permalink to this headline">¶</a></h4>
+<p>Export current structure as a SMILES string.</p>
+</div>
+<div class="section" id="ketcher-getmolfile">
+<h4>ketcher.getMolfile()<a class="headerlink" href="#ketcher-getmolfile" title="Permalink to this headline">¶</a></h4>
+<p>Export current structure as a Molfile/Rxnfile string.</p>
+</div>
+<div class="section" id="ketcher-addfragment">
+<h4>ketcher.addFragment()<a class="headerlink" href="#ketcher-addfragment" title="Permalink to this headline">¶</a></h4>
+<p>This method switches Ketcher to the fragment insertion mode where a user
+can specify where to the provided fragment. Pass it a SMILES string or a
+Molfile/Rxnfile:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ketcher</span><span class="o">.</span><span class="n">addFragment</span><span class="p">(</span><span class="s">&#39;c1ccccc1&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> SMILES import is not available in the standalone mode.</p>
+</div>
+</div>
+</div>
+<div class="section" id="ketcher-interaction-example">
+<h2>Ketcher interaction example<a class="headerlink" href="#ketcher-interaction-example" title="Permalink to this headline">¶</a></h2>
+<p>You can look at the source a web page with embedded Ketcher
+<a class="reference external" href="TODO:ketcher-demo">here</a> where the web page interacts with a Ketcher
+object using this API.</p>
+</div>
+<div class="section" id="ketcher-server">
+<h2>Ketcher Server<a class="headerlink" href="#ketcher-server" title="Permalink to this headline">¶</a></h2>
+<p>The current version of Ketcher has a sample implementation of the server
+side. A simple Python script <code class="docutils literal"><span class="pre">ketcher.py</span></code> listens to the port 8080 and
+has four interfaces:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="44%" />
+<col width="8%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Query</th>
+<th class="head">Action</th>
+<th class="head">Type</th>
+<th class="head">Parameters</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">/knocknock</span></code></td>
+<td>Server availability check</td>
+<td>GET</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">/open</span></code></td>
+<td>Query for loading files from disk</td>
+<td>POST</td>
+<td><code class="docutils literal"><span class="pre">filedata</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">/save</span></code></td>
+<td>Query for saving files to disk</td>
+<td>POST</td>
+<td><code class="docutils literal"><span class="pre">filedata</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">/layout</span></code></td>
+<td>Query for converting SMILES to Molfile</td>
+<td>POST</td>
+<td><code class="docutils literal"><span class="pre">moldata</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">/automap</span></code></td>
+<td>Query for reaction auto-mapping</td>
+<td>POST</td>
+<td><code class="docutils literal"><span class="pre">moldata</span></code>, <code class="docutils literal"><span class="pre">mode</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">/aromatize</span></code></td>
+<td>Query for aromatization</td>
+<td>POST</td>
+<td><code class="docutils literal"><span class="pre">moldata</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">/dearomatize</span></code></td>
+<td>Query for dearomatization</td>
+<td>POST</td>
+<td><code class="docutils literal"><span class="pre">moldata</span></code></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="../indigo/index.html">Indigo</a> binaries and Python wrappers are
+required to perform automatic layout, atom-to-atom mapping or SMILES
+import. Ketcher server script can be executed as a standalone
+application and also can run under WSGI.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">Life Sciences</h2>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Developer&#8217;s Manual</a><ul>
+<li><a class="reference internal" href="#editor-mode">Editor Mode</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#ketcher-object">Ketcher Object</a><ul>
+<li><a class="reference internal" href="#ketcher-setmolecule">ketcher.setMolecule()</a></li>
+<li><a class="reference internal" href="#ketcher-getsmiles">ketcher.getSmiles()</a></li>
+<li><a class="reference internal" href="#ketcher-getmolfile">ketcher.getMolfile()</a></li>
+<li><a class="reference internal" href="#ketcher-addfragment">ketcher.addFragment()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ketcher-interaction-example">Ketcher interaction example</a></li>
+<li><a class="reference internal" href="#ketcher-server">Ketcher Server</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../bingo/index.html">Bingo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Ketcher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imago/index.html">Imago OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, EPAM Systems.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
