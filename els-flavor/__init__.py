@@ -1,8 +1,5 @@
 import os
 
-from alabaster import _version as version
-
-
 def get_path():
     """
     Shortcut for users whose theme is next to their conf.py.
@@ -12,7 +9,7 @@ def get_path():
 
 
 def update_context(app, pagename, templatename, context, doctree):
-    context['alabaster_version'] = version.__version__
+    context['lifescience'] = 'GGA'
 
 def setup(app):
     app.connect('html-page-context', update_context)

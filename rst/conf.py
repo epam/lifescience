@@ -104,7 +104,7 @@ html_theme_path = ['.']
 html_theme = 'theme'
 html_sidebars = {
    '**': [
-       'about.html', 'localtoc.html', 'navigation.html', 'searchbox.html',
+       'about.html', 'navigation.html', 'searchbox.html',
    ]
 }
 
@@ -114,10 +114,10 @@ html_sidebars = {
 html_theme_options = {
     'logo': 'logo.svg',
     'logo_name': True,
-    'github_button': False,
-    'sidebar_includehidden': True,
-    'show_powered_by': False,
 }
+
+html_copy_source = False
+html_last_updated_fmt = '%b %d, %Y'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -138,7 +138,7 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -170,10 +170,10 @@ html_static_path = ['_static']
 #html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
-html_show_sourcelink = False
+#html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-html_show_sphinx = False
+#html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True
@@ -187,7 +187,7 @@ html_show_sphinx = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'EPAMLifeSciencedoc'
+#htmlhelp_basename = 'EPAMLifeSciencedoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -267,5 +267,3 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
-
-html_copy_source = False
