@@ -12,9 +12,9 @@ The changelog is available `on this page <../bingo/changelog.html>`__
    :widths: 28 24 24 24
 
    * - 
-     - Linux
-     - Windows
-     - Mac OS
+     - |image0| Linux
+     - |image1| Windows
+     - |image2| Mac OS
    * - Oracle
      - `32-bit <TODO:/downloads/gpl-oracle/bingo-1.7.9/bingo-oracle-1.7.9-linux32.zip>`__,
        `64-bit <TODO:/downloads/gpl-oracle/bingo-1.7.9/bingo-oracle-1.7.9-linux64.zip>`__
@@ -61,9 +61,9 @@ The changelog is available `on this page <../bingo/changelog.html>`__
    :widths: 28 24 24 24
 
    * - 
-     - Linux
-     - Windows
-     - Mac OS
+     - |image0| Linux
+     - |image1| Windows
+     - |image2| Mac OS
    * - Oracle
      - `32-bit <TODO:/downloads/gpl-oracle/bingo-1.7.8b2/bingo-oracle-1.7.8b2-linux32.zip>`__,
        `64-bit <TODO:/downloads/gpl-oracle/bingo-1.7.8b2/bingo-oracle-1.7.8b2-linux64.zip>`__
@@ -96,6 +96,8 @@ The changelog is available `on this page <../bingo/changelog.html>`__
      - `2005 and 2008 <TODO:/downloads/gpl-sqlserver/bingo-1.7.8b2/bingo-sqlserver-1.7.8b2.zip>`__
      - \-
 
-
+.. |image0| image:: ../assets/Linux.png
+.. |image1| image:: ../assets/Windows.png
+.. |image2| image:: ../assets/AppleSZ.png
 
 
