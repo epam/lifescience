@@ -15,7 +15,7 @@ Open-Source Initiative
     Downloads <download/index>
     contact
 
-| We have extensive experience and expertise in developing organic
+We have extensive experience and expertise in developing organic
 chemistry software products for use in pharmaceutical companies,
 research institutes, and universities. At the same time, we have been
 developing internally a number of cheminformatics tools, and in 2009, we

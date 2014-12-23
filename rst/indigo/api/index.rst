@@ -8,8 +8,6 @@ API
     c
     options
 
-**`New documentation (work in progress) <TODO:indigo-doc>`__**
-
 Overview
 --------
 
@@ -2468,7 +2466,7 @@ Python:
 
 ::
 
-      # prepate query scaffold (e.g. '(R1)C1CCCC(R2)C1')
+      # prepare query scaffold (e.g. '(R1)C1CCCC(R2)C1')
       scaffold = indigo.loadQueryMoleculeFromFile("query_mol")
 
       # init decomposition
@@ -2546,7 +2544,7 @@ Java:
 Reaction-based Molecule Transformations
 ---------------------------------------
 
-Examples of usage are avialible
+Examples of usage are available
 `here <../concepts/transformation.html>`__.
 
 Java:
@@ -2561,7 +2559,7 @@ Java:
 Rendering
 ---------
 
-| Rending in Indigo is done by the ``IndigoRenderer`` plugin which is
+Rendering in Indigo is done by the ``IndigoRenderer`` plugin which is
 included in the Indigo distribution. The plugin is available for C (as a
 separate dynamic library), and has wrappers for all supported languages.
 
@@ -2648,7 +2646,7 @@ The second parameter of the ``IndigoRenderer.renderGridToFile`` and
 specify it only for molecules, not for reactions. If this parameter is
 not ``null``, it has to be an integer array whose number of elements is
 equal to the number of given molecules. Each element of this array is
-the index of the "referene atom" in the corresponding molecule. The
+the index of the "reference atom" in the corresponding molecule. The
 rendering is then done in such a way that the reference atoms are
 grid-aligned. You can see the examples of this at
 `CTR <http://ctr.wikia.com/wiki/Align_the_depiction_using_a_fixed_substructure>`__.

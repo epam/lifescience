@@ -26,32 +26,32 @@ You can also download all the report files (with script files) from the
 
 |Report|
 
-This report contians 5 datasets of 500 molecule images each from
+This report contains 5 datasets of 500 molecule images each from
 different sources:
 
--  | `Image2Structure <TODO:imago-report#g1>`__
+-  `Image2Structure <TODO:imago-report#g1>`__
    (`description <TODO:imago-report>`__)
-   |  A random subset of 500 images from Image2Structure task at `TREC
+   A random subset of 500 images from Image2Structure task at `TREC
    Chem 2011
    conference <http://trec.nist.gov/pubs/trec20/t20.proceedings.html>`__.
 
--  | `Mobile Camera <TODO:imago-report#g2>`__
+-  `Mobile Camera <TODO:imago-report#g2>`__
    (`description <TODO:imago-report>`__)
-   |  Photos from a mobile phone of 500 PubChem molecules rendered using
+   Photos from a mobile phone of 500 PubChem molecules rendered using
    Indigo toolkit.
 
--  | `Rendered <TODO:imago-report#g3>`__
+-  `Rendered <TODO:imago-report#g3>`__
    (`description <TODO:imago-report>`__)
-   |  500 PubChem molecules rendered using Indigo toolkit.
+   500 PubChem molecules rendered using Indigo toolkit.
 
--  | `USPTO <TODO:imago-report#g4>`__
+-  `USPTO <TODO:imago-report#g4>`__
    (`description <TODO:imago-report>`__)
-   |  A random subset of 500 structures from a validation set avialable
+   A random subset of 500 structures from a validation set avialable
    at `OSRA website <http://cactus.nci.nih.gov/osra/>`__.
 
--  | `chem-infty <TODO:imago-report#g5>`__
+-  `chem-infty <TODO:imago-report#g5>`__
    (`description <TODO:imago-report>`__)
-   |  A random subset of 500 structure from `Chem-Infty
+   A random subset of 500 structure from `Chem-Infty
    Dataset <http://www.iapr-tc11.org/mediawiki/index.php/Chem-Infty_Dataset:_A_ground-truthed_dataset_of_Chemical_Structure_Images>`__.
 
 If you can suggest other test sets or other publicly available solutions
