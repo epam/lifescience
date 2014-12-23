@@ -14,7 +14,7 @@ Operating Systems
 Database Servers
 ~~~~~~~~~~~~~~~~
 
--  PostreSQL 9.0, 9.1, 9.2
+-  PostreSQL 9.0, 9.1, 9.2, 9.3, 9.4
 
 Tested Configurations
 ~~~~~~~~~~~~~~~~~~~~~
@@ -66,7 +66,7 @@ scan use the following query:
 
     set enable_bitmapscan=off;
 
-| This parameter is a database parameter, so it can be modified once
+This parameter is a database parameter, so it can be modified once
 (e.g. after a database creating). The parameter should be disabled for
 the LIMIT queries to work properly.
 
