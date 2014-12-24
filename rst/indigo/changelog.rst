@@ -212,14 +212,14 @@ New features:
 -  Rutherfordium isotopes atomic weights added
 -  Additional check for an invalid stereocenter when an angle between
    bonds is small.
-    Thanks to Karen:
+   Thanks to Karen:
    https://groups.google.com/d/msg/indigo-general/zYHfZs9V72Q/lB_KHfMxmi8J
 -  Options passed to the InChI plugin are being automatically corrected
    independent of OS. You can use both '-' and '/' prefixes on all the
    systems.
-    Look more at
-   `http://ggasoftware.com/opensource/indigo/api#options <api/index.html#options>`__
-    Thanks to Karen for the suggestion:
+   Look more at
+   `options <api/index.html#options>`__
+   Thanks to Karen for the suggestion:
    https://groups.google.com/d/msg/indigo-general/XxPC2EuT0-g/7kNUasWWpz0J
 -  Build scripts now work with Visual Studio 2012
 -  Cross-like layout of atom with four bonds for molecules like
@@ -262,7 +262,7 @@ Indigo 1.1.3
 
 -  JNA has been updated to 3.4.1. This fixed an issue with permissions
    for the temporary directory.
-    Thanks to Ingo:
+   Thanks to Ingo:
    http://tech.knime.org/forum/indigo/bundle-could-not-be-activated
 -  Transformation method automatically calls a layout algorithm if
    necessary.
@@ -281,7 +281,7 @@ Indigo 1.1.3
 -  Issues causing infinite loop due to the numeric errors in the layout
    algorithm have been fixed.
 -  Issue with loading a molecule with 3D coordinates has been fixed.
-    Thanks to Colin Batchelor:
+   Thanks to Colin Batchelor:
    https://groups.google.com/d/msg/indigo-bugs/rDsAJeDdNPo/Ca7RusLj8xYJ
 -  Allene centers now are recognized if the angle between double bonds
    are greater than 165 degrees.
@@ -307,12 +307,12 @@ Indigo 1.1.1
 -  symmetryClasses methods was added. Now the molecule object has a
    method symmetryClasses() that returns an array with a symmetry class
    ID for each atom.
-    Thanks to Karen for the suggestion:
+   Thanks to Karen for the suggestion:
    https://groups.google.com/d/msg/indigo-general/vR9BSWR87e8/PqpiQaE4SfgJ
 -  Query molecules can now have a highlighting constraint on atoms and
    bonds to match only (un)highlighted target atoms or bonds. Here is an
    exmaple: query.getAtom(0).addConstraint("highlighting", "true").
-    Again thanks to Karen:
+   Again thanks to Karen:
    https://groups.google.com/d/msg/indigo-general/J1RR9b0x2NM/Z_XOB9jQNw8J
 
 Indigo 1.1
@@ -354,16 +354,16 @@ Highlights:
    stereochemistry is defined not in a proper way. Allenes and cumulenes
    are not supported yet.
 
--  | new RGroup-Decomposition API was added: createDecomposer(),
+-  new RGroup-Decomposition API was added: createDecomposer(),
    addDecomposition(), decomposeMolecule(), iterateDecompositions()
-   |  See more details at
+   See more details at
    http://groups.google.com/group/indigo-general/browse_thread/thread/75281df2f70ec1a
    Thanks to Gerhard:
    http://groups.google.com/group/indigo-general/browse_thread/thread/c1dbc67ece5f78b0,
-   |  Mederich:
+   Mederich:
    http://groups.google.com/group/indigo-general/browse_thread/thread/6d77029359364dd8,
    and
-   |  Simon: http://tech.knime.org/forum/indigo/r-group-decomposer
+   Simon: http://tech.knime.org/forum/indigo/r-group-decomposer
 
 -  We completely switched to CMake project configurations.
 
@@ -373,7 +373,7 @@ Changes:
    and product molecules.
 -  correctReactingCenters() method was added for reactions. It
    highlights bond reacting centers according to AAM.
-    Thanks to James:
+   Thanks to James:
    http://tech.knime.org/forum/indigo/reaction-automapper-bond-highlighting
 -  "timeout" option is used for MCS computation.
 
@@ -381,7 +381,7 @@ Fixes:
 
 -  The bug with aam for query reactions was fixed
 -  The bug with aam timeout was fixed.
-    Thanks to Daniel:
+   Thanks to Daniel:
    http://groups.google.com/group/indigo-bugs/browse_thread/thread/1cc5b9dffd740240
 -  clearStereocenters() method now resets bond directions. After calling
    this method molecule is saved into Molfile format without tetrahedral
@@ -420,10 +420,10 @@ Changes:
    molecule RGroup attachment points are saved as pseudo atoms (named
    'AP1', 'AP2' etc). Therefore, the option allows to save initial bond
    orders.
-    Thanks to Mederich:
+   Thanks to Mederich:
    http://groups.google.com/group/indigo-general/browse_thread/thread/c4bca8b97ca54a87
 -  bug with the time hang was fixed for AAM.
-    Thanks to Daniel:
+   Thanks to Daniel:
    http://groups.google.com/group/indigo-bugs/browse_thread/thread/1cc5b9dffd740240
 -  minor bug fixes in AAM
 -  minor bug fixes in RGroup Decomposition
@@ -433,10 +433,10 @@ Fixed:
 -  automatic 2D coordinates generation procedure (layout) changes
    molecule components position if they have fixed atoms
 -  cycle enumeration fixed.
-    Thanks to Casey:
+   Thanks to Casey:
    https://groups.google.com/d/msg/indigo-general/UPkiBz1e-_o/WMtKB9RGE-UJ
 -  memory leak in the InChI computation procedure.
-    Thanks to Hinnerk:
+   Thanks to Hinnerk:
    https://groups.google.com/d/msg/indigo-bugs/Fvr4l8CQvAQ/r_HYDxumALAJ
 -  different minor exception when loading a molecule from a molfile
 -  different minor exception when rendering a molecule
@@ -470,13 +470,13 @@ Fixed:
    attachments points is greater then 2
 -  memory leak in reaction substructure matcher.
 -  infinite loop in reaction substructure matcher.
-    Thanks to fab for the bug report for both issues:
+   Thanks to fab for the bug report for both issues:
    http://tech.knime.org/forum/indigo/error-in-loop
 -  invalid stereo configuration when atom are being changed.
-    Thank to Lionel for the bug report:
+   Thank to Lionel for the bug report:
    http://tech.knime.org/forum/indigo/changes-in-molecule-properties-node
 -  bug with AAM not respecting atom type.
-    Thanks to Daniel:
+   Thanks to Daniel:
    http://groups.google.com/group/indigo-bugs/browse_thread/thread/9448f08ab596b74e
 
 Indigo 1.1-beta8
@@ -545,18 +545,18 @@ Indigo 1.1-beta6
 
 New functionality:
 
--  | Indigo.transform(reaction, molecule) method for transformation a
+-  Indigo.transform(reaction, molecule) method for transformation a
    molecule according to a rule, specified with a reaction.
-   |  Examples are available here:
+   Examples are available here:
    `http://ggasoftware.com/opensource/indigo/concepts/transformation <concepts/transformation.html>`__
 
 -  New IndigoObject methods for working with reaction atom-to-atom
    mapping: atomMappingNumber, setAtomMappingNumber, clearAAM
 
--  | New IndigoObject methods for working with attachment points:
+-  New IndigoObject methods for working with attachment points:
    iterateAttachmentPoints, countAttachmentPoints,
    clearAttachmentPoints.
-   |  See
+   See
    `http://ggasoftware.com/opensource/indigo/api#attachment-points <api/index.html#attachment-points>`__
    for more details
 
@@ -566,15 +566,15 @@ New functionality:
    getSuperatom, getDataSGroup, description,
    decomposedMoleculeHighlighted, getSubmolecule, addSuperatom
 
--  | Smiles saver might throw an exception on a molecule with explicit
+-  Smiles saver might throw an exception on a molecule with explicit
    hydrogens.
-   |  Thanks to Colin Batchelor:
+   Thanks to Colin Batchelor:
    http://groups.google.com/group/indigo-bugs/browse_thread/thread/35b240fb402e35c3
 
 Changelog:
 
--  | Improvements in the automatic atom-to-atom assignment.
-   |  Thanks to Ernst-Georg Schmid:
+-  Improvements in the automatic atom-to-atom assignment.
+   Thanks to Ernst-Georg Schmid:
    http://groups.google.com/group/indigo-general/browse_thread/thread/ffe48381a01f7d24
    And to Daniel Lowe:
    http://groups.google.com/group/indigo-bugs/browse_thread/thread/11373837ba65acd
@@ -603,9 +603,9 @@ Changelog:
    specification in the SMARTS expression is not supported yet. For
    example, such SMARTS is not supported yet: ``*/,\[R]=;@[R]/,\*``
 
--  | Fixed issue with saving query molecules in Molfile format with the
+-  Fixed issue with saving query molecules in Molfile format with the
    atom lists.
-   |  Thanks to Francesca:
+   Thanks to Francesca:
    http://groups.google.com/group/indigo-bugs/browse_thread/thread/b17b468049caf57a
 
 -  unfoldHydrogens how works with reaction properly.
@@ -624,31 +624,31 @@ Changelog:
 -  Fixed some issues with loading and saving of polymer repetition in
    SMILES
 
--  | SGroups and R-sites are saving during serialization/unserilization.
-   |  Thanks to Hinnerk Rey:
+-  SGroups and R-sites are saving during serialization/unserilization.
+   Thanks to Hinnerk Rey:
    http://groups.google.com/group/indigo-general/browse_thread/thread/1d9bda07b8ac299d
 
 -  Faster matching of SMARTS queries with unspecified bonds. This change
    also improves efficiency for our fingerprints for query molecules.
 
--  | Substructure matching counter now property counts queries with
+-  Substructure matching counter now property counts queries with
    explicit hydrogens, like N-[#1].
-   |  Thanks to James Davidson for this bug report:
+   Thanks to James Davidson for this bug report:
    http://tech.knime.org/forum/indigo/substructure-match-counter-question
 
--  | Stereocenter parities are now saved into molfile.
-   |  Thanks to Lionel:
+-  Stereocenter parities are now saved into molfile.
+   Thanks to Lionel:
    http://tech.knime.org/forum/indigo/chirality-flags
 
 -  R-group iterator now skips R-groups that are empty.
 
--  | Molfile loader now accepts left- and right-bounded atom labels.
-   |  Thanks to Ernst-Georg Schmid:
+-  Molfile loader now accepts left- and right-bounded atom labels.
+   Thanks to Ernst-Georg Schmid:
    http://groups.google.com/group/indigo-bugs/browse_thread/thread/1d2b8a01af98949
 
 -  renderGridToBuffer method now support null value as the second
    parameter.
-    Thanks to Mederich:
+   Thanks to Mederich:
    http://groups.google.com/group/indigo-general/browse_thread/thread/b995c53227cf3352
 
 Indigo 1.1-beta5
@@ -658,17 +658,17 @@ Indigo 1.1-beta5
 
 New functionality:
 
--  | Methods for specifing reacting centers on bonds:
+-  Methods for specifing reacting centers on bonds:
    reaction.reactingCenter(bond), reaction.setReactingCenter(bond, mask)
-   |  All reacting centers types are describes in Indigo namespace for
+   All reacting centers types are describes in Indigo namespace for
    Java and Python, and in ReactingCenter enum for C#.
-   |  Code examples can be found in this thread:
+   Code examples can be found in this thread:
    http://groups.google.com/group/indigo-bugs/browse_thread/thread/11373837ba65acd
 
--  | Method to add stereocenter at atom: atom.addStereocenter(type,
+-  Method to add stereocenter at atom: atom.addStereocenter(type,
    atom\_index1, atom\_index2, atom\_index3, atom\_index4). Last
    parameter is optional.
-   |  Code examples can be found in this thread:
+   Code examples can be found in this thread:
    http://groups.google.com/group/indigo-dev/browse_thread/thread/a164eddce485f053
 
 Note: this new methods have preliminary interface, and interface may be
@@ -678,7 +678,7 @@ Fixed:
 
 -  Molecule to Smiles conversion with explicit hydrogens connected to
    cis-trans bonds.
-    Thanks to Colin Batchelor:
+   Thanks to Colin Batchelor:
    http://groups.google.com/group/indigo-bugs/browse_thread/thread/35b240fb402e35c3
 
 Indigo 1.1-beta4
@@ -689,7 +689,7 @@ Indigo 1.1-beta4
 New functionality:
 
 -  New methods for Indigo: resetAtom, setRSite, isHighlighted for atoms.
-    Code example: atom.resetAtom("N"), atom.setRSite("R1, R3"),
+   Code example: atom.resetAtom("N"), atom.setRSite("R1, R3"),
    atom.isHighlighted()
 -  Reaction product enumerator now supports recursive SMARTS
 
@@ -717,7 +717,7 @@ New functionality since Indigo-1.0.0 stable version:
    http://groups.google.com/group/indigo-general/browse_thread/thread/d8a413a88b9da834
 -  addRSite method for adding R-site atoms to the molecule. This method
    is similar to addAtom.
-    Code example: atom = mol.addRSite("R1")
+   Code example: atom = mol.addRSite("R1")
 
 Fixed:
 
