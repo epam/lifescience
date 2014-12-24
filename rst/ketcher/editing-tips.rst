@@ -78,10 +78,10 @@ key instead of **Ctrl**):
 Fast Atom Label Input
 ---------------------
 
-| Press one of the atom buttons (or the corresponding keyboard shortcut)
+Press one of the atom buttons (or the corresponding keyboard shortcut)
 to change the labels of the selected atoms or, if none are selected, the
 label of the atom directly under cursor.
-|  When Selection mode is active, press and hold the left mouse button
+When Selection mode is active, press and hold the left mouse button
 on an atom to edit the label in place. Charge can also be specified
 here, e.g.: ``N-``, ``C2+``, ``Na``.
 

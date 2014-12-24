@@ -13,7 +13,7 @@ Indigo ELN: The Open-Source Chemistry Electronic Lab Notebook
 Overview
 --------
 
-| GGA Software Services LLC has received an exclusive license from
+GGA Software Services LLC has received an exclusive license from
 Pfizer Inc. to create and distribute an open-source version of Pfizer's
 internal chemistry electronic lab notebook, known as CeN, and Indigo ELN
 is the resulting open-source version that is available for your use,
@@ -29,7 +29,7 @@ Indigo ELN allows scientists to prepare, plan, and analyze experiments,
 access relevant information, and develop new methods in the areas of
 synthetic chemistry, analytical chemistry, and process chemistry.
 
-| Through the use of Indigo ELN, you can upgrade your existing ELN with
+Through the use of Indigo ELN, you can upgrade your existing ELN with
 a proven and tested open-source platform, and you can do it at no
 charge.
 
@@ -165,7 +165,7 @@ Major factors affecting the service pricing include:
 Download and Install
 --------------------
 
-| Please go to the `Downloads <../../download/indigo/eln.html>`__ page
+Please go to the `Downloads <../../download/indigo/eln.html>`__ page
 for the installation package suitable for your system.
 
 For installation instructions, see the `Installation
