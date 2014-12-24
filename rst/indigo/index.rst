@@ -107,7 +107,6 @@ page. A separate page deals with the `C interface <api/c.html>`__.
 Various options that can be passed to the library are explained on the
 `Options <api/options.html>`__ page.
 
-**`New documentation (work in progress) <TODO:indigo-doc>`__**
 
 GCC 2010 Presentation
 ---------------------

@@ -6,8 +6,6 @@ Indigo 1.1.11
 
 *2 July 2013*
 
-**Detailed release notes are available `on a separate
-page <TODO:indigo-doc>`__**
 
 Since this version we switched to a new documentation system based on
 `Sphinx <http://sphinx-doc.org/>`__
