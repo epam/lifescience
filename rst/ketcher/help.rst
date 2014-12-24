@@ -1,18 +1,18 @@
 Help
 ====
 
-***Ketcher*** is a tool to draw molecular structures and chemical
+**Ketcher** is a tool to draw molecular structures and chemical
 reactions.
 
 Ketcher Overview
 ----------------
 
-***Ketcher*** is a tool to draw molecular structures and chemical
+**Ketcher** is a tool to draw molecular structures and chemical
 reactions. Ketcher operates in two modes, the Server mode with most
 functions available and the client mode with limited functions
 available.
 
-***Ketcher*** consists of the following elements:
+**Ketcher** consists of the following elements:
 
 |Ketcher elements| Using the *Tool palette* you can
 
@@ -73,7 +73,7 @@ Drawing Atoms
 
 To draw/edit atoms you can:
 
--  | select an atom in the Atoms toolbar and click inside the drawing
+-  select an atom in the Atoms toolbar and click inside the drawing
    area;
 
 -  if the desired atom is absent in the toolbar, click on the […] button
@@ -252,7 +252,7 @@ presented as:
 R-Group Logic
 -------------
 
-***Ketcher*** enables one to add logic when using R-Groups. To access
+**Ketcher** enables one to add logic when using R-Groups. To access
 the R-Group logic:
 
 #. Create an R-Group member fragment as described above.
@@ -415,9 +415,9 @@ description of the button.
 +--------------------------------------+--------------------------------------+
 | **P**                                | Draw a phosphorus                    |
 +--------------------------------------+--------------------------------------+
-| **Shift+C **                         | Draw a chlorine                      |
+| **Shift+C**                          | Draw a chlorine                      |
 +--------------------------------------+--------------------------------------+
-| **Shift+B **                         | Draw a bromine                       |
+| **Shift+B**                          | Draw a bromine                       |
 +--------------------------------------+--------------------------------------+
 | **I**                                | Draw an iodine                       |
 +--------------------------------------+--------------------------------------+
@@ -454,34 +454,34 @@ description of the button.
 | **Ctrl+L**                           | Clean Up                             |
 +--------------------------------------+--------------------------------------+
 
-.. |Ketcher elements| image:: TODO:./main.png
-.. |image1| image:: TODO:./selection.png
-.. |image2| image:: TODO:./toolbar.png
-.. |image3| image:: TODO:./periodic.png
-.. |image4| image:: TODO:./ChangeAtom.png
-.. |image5| image:: TODO:./ions.png
-.. |image6| image:: TODO:./AtomProperties.png
-.. |image7| image:: TODO:./Reaxys.png
-.. |image8| image:: TODO:./bond.png
-.. |image9| image:: TODO:./chain.png
-.. |image10| image:: TODO:./BondProperties.png
-.. |image11| image:: TODO:./Rings.png
-.. |image12| image:: TODO:./fusion1.png
-.. |image13| image:: TODO:./fusion2.png
-.. |image14| image:: TODO:./fusion3.png
-.. |image15| image:: TODO:./RGroupMenu.png
-.. |image16| image:: TODO:./RGroup.png
-.. |image17| image:: TODO:./RGroupLabel1.png
-.. |image18| image:: TODO:./RGroupLabel2.png
-.. |image19| image:: TODO:./AttachmentPoint.png
-.. |image20| image:: TODO:./scheme1.png
-.. |image21| image:: TODO:./scheme2.png
-.. |image22| image:: TODO:./RGroupLogic.png
-.. |image23| image:: TODO:./SGroup.png
-.. |image24| image:: TODO:./SGroupProperties.png
-.. |image25| image:: TODO:./Data.png
-.. |image26| image:: TODO:./FlipRotate.png
-.. |image27| image:: TODO:./Display.png
-.. |image28| image:: TODO:./Reaction.png
-.. |image29| image:: TODO:./OpenFile.png
-.. |image30| image:: TODO:./SaveFile.png
+.. |Ketcher elements| replace::  `_ <TODO:./main.png>`__ 
+.. |image1| replace::  `_ <TODO:./selection.png>`__ 
+.. |image2| replace::  `_ <TODO:./toolbar.png>`__ 
+.. |image3| replace::  `_ <TODO:./periodic.png>`__ 
+.. |image4| replace::  `_ <TODO:./ChangeAtom.png>`__ 
+.. |image5| replace::  `_ <TODO:./ions.png>`__ 
+.. |image6| replace::  `_ <TODO:./AtomProperties.png>`__ 
+.. |image7| replace::  `_ <TODO:./Reaxys.png>`__ 
+.. |image8| replace::  `_ <TODO:./bond.png>`__ 
+.. |image9| replace::  `_ <TODO:./chain.png>`__ 
+.. |image10| replace::  `_ <TODO:./BondProperties.png>`__ 
+.. |image11| replace::  `_ <TODO:./Rings.png>`__ 
+.. |image12| replace::  `_ <TODO:./fusion1.png>`__ 
+.. |image13| replace::  `_ <TODO:./fusion2.png>`__ 
+.. |image14| replace::  `_ <TODO:./fusion3.png>`__ 
+.. |image15| replace::  `_ <TODO:./RGroupMenu.png>`__ 
+.. |image16| replace::  `_ <TODO:./RGroup.png>`__ 
+.. |image17| replace::  `_ <TODO:./RGroupLabel1.png>`__ 
+.. |image18| replace::  `_ <TODO:./RGroupLabel2.png>`__ 
+.. |image19| replace::  `_ <TODO:./AttachmentPoint.png>`__ 
+.. |image20| replace::  `_ <TODO:./scheme1.png>`__ 
+.. |image21| replace::  `_ <TODO:./scheme2.png>`__ 
+.. |image22| replace::  `_ <TODO:./RGroupLogic.png>`__ 
+.. |image23| replace::  `_ <TODO:./SGroup.png>`__ 
+.. |image24| replace::  `_ <TODO:./SGroupProperties.png>`__ 
+.. |image25| replace::  `_ <TODO:./Data.png>`__ 
+.. |image26| replace::  `_ <TODO:./FlipRotate.png>`__ 
+.. |image27| replace::  `_ <TODO:./Display.png>`__ 
+.. |image28| replace::  `_ <TODO:./Reaction.png>`__ 
+.. |image29| replace::  `_ <TODO:./OpenFile.png>`__ 
+.. |image30| replace::  `_ <TODO:./SaveFile.png>`__ 
