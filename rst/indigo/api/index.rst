@@ -62,7 +62,7 @@ Indigo Constructor
 
 Java:
 
-::
+.. code-block:: java
 
     import com.ggasoftware.indigo.*;
     ...
@@ -78,7 +78,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     from indigo import *
     ...
