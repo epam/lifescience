@@ -15,7 +15,7 @@ zipfile and run the following command:
 
 You can also run the application without installing and downloading it
 using Java Web Start technology. Open the `following
-JNLP-file <TODO:/downloads/gpl/imago-2.0.0/jnlp/imago-ocr-visual-tool.jnlp>`__
+JNLP-file <http://www.epam.com/content/dam/epam/open-source/library/imago-2.0.0/jnlp/imago-ocr-visual-tool.jnlp>`__
 to execute Imago OCR Visual Tool.
 
 Distribution
