@@ -13,9 +13,6 @@ Indigo 1.1.12
 
 *24 Dec 2013*
 
-**The Release Notes are available `on a separate
-page <TODO:indigo-doc>`__**
-
 All the previous changelogs is available `on this
 page <../../indigo/changelog.html>`__
 
