@@ -1,12 +1,12 @@
-GGA Selenium Framework
-======================
+EPAM Selenium Framework
+=======================
 
 Overview
 --------
 
-GGA Selenium Framework is a Java library developed for test automation
+EPAM Selenium Framework is a Java library developed for test automation
 using Selenium WebDriver. It is based on Maven structure and integrates
-with the TestNG testing framework. The GGA Selenium Framework provides
+with the TestNG testing framework. The EPAM Selenium Framework provides
 rapid test automation for Web applications and allows focusing on
 substantial test development instead of tiresome testware maintenance.
 
@@ -108,7 +108,7 @@ You can try simple demo project
 and demo project to run tests using Cucumber tool
 `here <https://github.com/ggasoftware/gga-selenium-framework/tree/master/gga-selenium-framework-demo-cukes>`__.
 
-|GGA Selenium Framework|
+|EPAM Selenium Framework|
 
 Download Sources
 ----------------
@@ -120,7 +120,7 @@ getting sources.
 License
 -------
 
-GGA Selenium Framework is free software. You can redistribute it and/or
+EPAM Selenium Framework is free software. You can redistribute it and/or
 modify it under the terms of the GNU General Public License as published
 by the Free Software Foundation; version 3 of the License.
 
@@ -131,4 +131,4 @@ See the GNU General Public License for more details.
 You should receive a copy of the GNU General Public License along with
 this program. If you did not, please see http://www.gnu.org/licenses/.
 
-.. |GGA Selenium Framework| image:: assets/selenium_2.png
+.. |EPAM Selenium Framework| image:: assets/selenium_2.png

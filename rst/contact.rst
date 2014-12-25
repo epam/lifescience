@@ -1,28 +1,31 @@
 Contact Info
 ============
 
-How to Contact GGA
-------------------
+How to Contact EPAM
+-------------------
 
-To learn more about GGA's extensive expertise and our broad range of
+To learn more about EPAM's extensive expertise and our broad range of
 service offerings, please contact us at the following locations. We look
 forward to speaking with you about your company's specific needs.
 
- |  Cambridge, MA, USA Location:
- |  GGA Software Services LLC
- |  One Mifflin Place
- |  Cambridge, MA 02138, USA
- |  Tel: +1-617-491-5100
- |  Fax: +1-617-491-0932
- |  Email: info@ggasoftware.com
+ |  Newtown, PA, USA Location:
+ |  EPAM Systems, Inc.
+ |  41 University Drive, Suite 202
+ |  Newtown, PA 18940, USA 
+ |  Tel:	(267) 759-9000
+ |  Fax: 	267) 759-8989
+
 
  |  Saint Petersburg, Russia Location:
- |  GGA Software Services
+ |  EPAM Systems, Inc.
  |  41, Nab. Chernoy rechki
  |  197342, Saint Petersburg, Russia
  |  Tel: +7-812-702-6706
  |  Fax: +7-812-702-6708
- |  E-mail: info@ggasoftware.com
+ 
+ |  `Contact Us <http://www.epam.com/company/contactus.html>`__
+ |  `Online Request <http://www.epam.com/company/requestinfo.html>`__
+
 
 Feedback on Open-source Software
 --------------------------------
@@ -32,7 +35,7 @@ want to send a patch to us? Did you find a bug? Please write to one of
 the following newsgroups and let us know:
 
 -  http://groups.google.com/group/indigo-bugs : for bug reports on all
-   GGA projects.
+   open-source projects.
 -  http://groups.google.com/group/indigo-dev : for development topics.
 -  http://groups.google.com/group/indigo-general : for any other
    discussions.
@@ -46,7 +49,7 @@ Commercial Availability
 
 We have dual-licensed our organic chemistry products. If the
 GPL-licensed Bingo, Imago, or Indigo, or AGPL-licensed Ketcher do not
-fit your needs, please contact us at info@ggasoftware.com to discuss the
+fit your needs, please contact us to discuss the
 purchase of a commercial license. You may need the commercial license if
 you want to:
 

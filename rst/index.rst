@@ -15,7 +15,7 @@ Open-Source Initiative
     Downloads <download/index>
     contact
 
-We have extensive experience and expertise in developing organic
+We have extensive experience and expertise in developing organic 
 chemistry software products for use in pharmaceutical companies,
 research institutes, and universities. At the same time, we have been
 developing internally a number of cheminformatics tools, and in 2009, we
@@ -23,11 +23,13 @@ decided to contribute these tools to the open-source community.
 Initially, we created a wholly owned subsidiary called SciTouch LLC for
 further developing and distributing these tools.
 
-|Scitouch|
-
-Since then, we have shifted this open-source initiative from SciTouch to
-GGA, and we are continuing to undertake this initiative through GGA
-itself.
+Since then, this open-source initiative was shifted from SciTouch to 
+GGA Software Services LLC, a US-based provider of scientific informatics 
+services to global pharmaceutical, scientific instrumentation, medical 
+device, scientific publishing and software, and early-stage life science 
+companies. In order to strengthen Life Science & Healthcare vertical, 
+EPAM Systems in 2014 acquired GGA, and we are continuing to undertake 
+this initiative through EPAM.
 
 Products
 --------

@@ -13,7 +13,7 @@ Indigo ELN: The Open-Source Chemistry Electronic Lab Notebook
 Overview
 --------
 
-GGA Software Services LLC has received an exclusive license from
+GGA Software Services LLC, now LifeSciences unit of EPAM Systems, Inc.,  has received an exclusive license from
 Pfizer Inc. to create and distribute an open-source version of Pfizer's
 internal chemistry electronic lab notebook, known as CeN, and Indigo ELN
 is the resulting open-source version that is available for your use,
@@ -71,7 +71,7 @@ Integration with external systems
 
 -  The core Indigo ELN product is shipped with the basic services
    included.
--  GGA is available to implement any requested services and to integrate
+-  EPAM is available to implement any requested services and to integrate
    the solution with your infrastructure.
 -  Indigo ELN will integrate seamlessly with Pfizer's services. All of
    the data in Indigo ELN will be recognized by Pfizer's services and
@@ -88,7 +88,7 @@ the ELN into the open-source community.
 The core Indigo ELN package includes:
 
 -  Database tier – Oracle, Oracle Express edition or PostreSQL database
-   (In addition, Indigo ELN supports GGA's open-source molecular search
+   (In addition, Indigo ELN supports EPAM's open-source molecular search
    cartridge Bingo\ :sup:`©` for these databases).
 -  Core user interface for creation of singleton experiments and
    conception records.
@@ -98,26 +98,26 @@ The core Indigo ELN package includes:
       and managing singleton experiments and concept records.
    -  Basic signature service to sign and witness experiments.
    -  Reaction rendering and chemical properties calculation based on
-      GGA's open-source cheminformatics engine Indigo\ :sup:`©`.
+      EPAM's open-source cheminformatics engine Indigo\ :sup:`©`.
    -  Compound registration and structure search services
 
--  Support both Ketcher (GGA's open-source editor) and ISIS Draw for
+-  Support both Ketcher (EPAM's open-source editor) and ISIS Draw for
    structure editing
 -  APIs to integrate with existing customer services and databases.
 
-GGA is available to support customers in integrating Indigo ELN with
+EPAM is available to support customers in integrating Indigo ELN with
 their services and databases, as well as in creating new services.
 
-GGA's Open-Source Products to Complement Indigo ELN
----------------------------------------------------
+EPAM's Open-Source Products to Complement Indigo ELN
+----------------------------------------------------
 
-GGA is available to integrate GGA's open-source products and other
+EPAM is available to integrate EPAM's open-source products and other
 open-source products with the core functionality of Indigo ELN. In this
 way, Indigo ELN becomes a complete solution:
 
--  Search in the Indigo ELN database by using GGA's molecular search
+-  Search in the Indigo ELN database by using EPAM's molecular search
    cartridge Bingo\ :sup:`©` for Oracle and PostreSQL databases.
--  Integration with GGA's chemistry drawing tool Ketcher\ :sup:`©`.
+-  Integration with EPAM's chemistry drawing tool Ketcher\ :sup:`©`.
 -  Basic compound and batch registration service (these can be adapted
    to meet your requirements).
 
@@ -142,14 +142,14 @@ the corresponding services:
 -  Retrieve analytical information
 
 As one of the world's leading scientific informatics outsourcing
-companies, GGA is available to provide your organization with any
+companies, EPAM is available to provide your organization with any
 integration and customization services to add functionality to Indigo
 ELN.
 
 Support and Development
 -----------------------
 
-GGA will provide you with customization, integration, support, and
+EPAM will provide you with customization, integration, support, and
 maintenance services for Indigo ELN and will price those services based
 on your individual needs.
 
@@ -192,9 +192,9 @@ Commercial Availability
 -----------------------
 
 If the GPL-licensed Indigo ELN does not satisfy your needs, please
-contact us at info@ggasoftware.com to discuss the possibility of a
+contact us to discuss the possibility of a
 commercial license.
 
-We hope that you decide to download and use Indigo ELN. At GGA, we are
+We hope that you decide to download and use Indigo ELN. At EPAM, we are
 available to help you install, use, integrate, customize, and support
 and maintain Indigo ELN.
