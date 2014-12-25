@@ -49,31 +49,18 @@ All Systems
 
 The shared buffer parameter in the PostgreSQL database configuration
 file (postgresql.conf) should be increased. For the optimal performance
-GGA recommends to increase the value .
+it is recommended to increase the value .
 
 ::
 
-    shared_buffers=64MB
+    shared_buffers=128MB
 
-The Bingo engine uses a simplified query planner (cost estimation)
-algorithm. GGA recommends to disable the BITMAP scan plan type for a
-database. This plan type can affect LIMIT and OFFSET queries, since the
-bitmap index scan will search through all the table, and it will take a
-lot of time regardless of the LIMIT parameter. To disable the bitmap
-scan use the following query:
 
-::
-
-    set enable_bitmapscan=off;
-
-This parameter is a database parameter, so it can be modified once
-(e.g. after a database creating). The parameter should be disabled for
-the LIMIT queries to work properly.
 
 Linux
 ~~~~~
 
-The Bingo engine requires a lot of shared memory. For linux systems GGA
+The Bingo engine requires a lot of shared memory. For linux systems our team
 recommends to change kernel.shmmax and kernel.shmall
 
 Add the following line to ``/etc/sysctl.conf`` file:

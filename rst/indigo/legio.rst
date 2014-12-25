@@ -1,4 +1,4 @@
-Legio
+﻿Legio
 =====
 
 Overview
@@ -84,8 +84,7 @@ http://www.gnu.org/licenses/.
 Commercial Availability
 -----------------------
 
-If the GPL-licensed Legio does not fit your needs, please contact us at
-info@ggasoftware.com to discuss the purchase of a commercial license.
+If the GPL-licensed Legio does not fit your needs, please contact us to discuss the purchase of a commercial license.
 You may need the commercial license if you want to:
 
 -  Receive ongoing support and maintenance.

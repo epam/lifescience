@@ -1,7 +1,7 @@
 Nodes for KNIME
 ===============
 
-Since May 2011, GGA Software Services provides Indigo-powered
+Since May 2011, our team provides Indigo-powered
 cheminformatics nodes nodes for KNIME. The overview of the nodes is
 available at `KNIME Tech <http://tech.knime.org/community/indigo>`__.
 

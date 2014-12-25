@@ -1,4 +1,4 @@
-Indigo Toolkit
+﻿Indigo Toolkit
 ==============
 
 .. toctree::
@@ -25,7 +25,7 @@ available on a commercial basis.
 
 Indigo is based on a cheminformatics library that incorporates a number
 of `unique algorithms <../resources.html#algorithms>`__ developed by
-GGA, as well as some standard algorithms well-known in the
+EPAM, as well as some standard algorithms well-known in the
 cheminformatics world. Since the core part of Indigo is written in
 modern C++ with no third-party code or dependencies except the
 ubiquitous zlib and libcairo, the toolkit provides outstanding
@@ -156,7 +156,7 @@ installation package suitable for your system.
 License
 -------
 
-Copyright © 2009-2013 GGA Software Services LLC
+Copyright © 2009-2014 LifeSciences unit of EPAM Systems, Inc.
 
 This program is free software: You can redistribute it and/or modify it
 under the terms of the GNU General Public License as published by the
@@ -179,7 +179,7 @@ want to send a patch to us? Did you find a bug? Please write to one of
 the following newsgroups and let us know:
 
 -  http://groups.google.com/group/indigo-bugs : for bug reports on all
-   GGA projects.
+   open-source projects.
 -  http://groups.google.com/group/indigo-dev : for development topics.
 -  http://groups.google.com/group/indigo-general : for any other
    discussions.
@@ -191,8 +191,7 @@ indigo-general@googlegroups.com to get your message posted.
 Commercial Availability
 -----------------------
 
-If the GPL-licensed Indigo does not fit your needs, please contact us at
-info@ggasoftware.com to discuss the purchase of a commercial license.
+If the GPL-licensed Indigo does not fit your needs, please contact us to discuss the purchase of a commercial license.
 You may need the commercial license if you want to:
 
 -  Receive ongoing support and maintenance

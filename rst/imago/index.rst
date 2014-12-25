@@ -1,4 +1,4 @@
-Imago OCR
+﻿Imago OCR
 =========
 
 .. toctree::
@@ -101,7 +101,7 @@ Imago C++ dependencies:
 -  `OpenCV <http://opencv.org/>`__ library
 -  `Boost <http://www.boost.org/>`__
 -  `PicoPNG <http://lodev.org/lodepng>`__ (optional module to load PNG
-   images with GGA changes for fail-safe PNG image loading)
+   images with changes for fail-safe PNG image loading)
 
 Java-specific dependencies:
 
@@ -147,7 +147,7 @@ to execute Imago OCR Visual Tool.
 License
 -------
 
-Copyright © 2009-2013 GGA Software Services LLC
+Copyright © 2009-2014 LifeSciences unit of EPAM Systems, Inc.
 
 This program is free software: You can redistribute it and/or modify it
 under the terms of the GNU General Public License as published by the
@@ -170,7 +170,7 @@ want to send a patch to us? Did you find a bug? Please write to one of
 the following newsgroups and let us know:
 
 -  http://groups.google.com/group/indigo-bugs : for bug reports on all
-   GGA projects.
+   Open-Source projects.
 -  http://groups.google.com/group/indigo-dev : for development topics.
 -  http://groups.google.com/group/indigo-general : for any other
    discussions.
@@ -182,8 +182,7 @@ indigo-general@googlegroups.com to get your message posted.
 Commercial Availability
 -----------------------
 
-If the GPL-licensed Imago does not fit your needs, please contact us at
-info@ggasoftware.com to discuss the purchase of a commercial license.
+If the GPL-licensed Imago does not fit your needs, please contact us to discuss the purchase of a commercial license.
 You may need the commercial license if you want to:
 
 -  Receive ongoing support and maintenance

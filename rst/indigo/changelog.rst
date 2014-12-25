@@ -546,7 +546,7 @@ New functionality:
 -  Indigo.transform(reaction, molecule) method for transformation a
    molecule according to a rule, specified with a reaction.
    Examples are available here:
-   `http://ggasoftware.com/opensource/indigo/concepts/transformation <concepts/transformation.html>`__
+   `concepts/transformation <concepts/transformation.html>`__
 
 -  New IndigoObject methods for working with reaction atom-to-atom
    mapping: atomMappingNumber, setAtomMappingNumber, clearAAM
@@ -555,7 +555,7 @@ New functionality:
    iterateAttachmentPoints, countAttachmentPoints,
    clearAttachmentPoints.
    See
-   `http://ggasoftware.com/opensource/indigo/api#attachment-points <api/index.html#attachment-points>`__
+   `api#attachment-points <api/index.html#attachment-points>`__
    for more details
 
 -  Other new IndigoObject methods with documentation has been added:

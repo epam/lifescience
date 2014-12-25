@@ -1,4 +1,4 @@
-Bingo
+﻿Bingo
 =====
 
 .. toctree::
@@ -138,7 +138,7 @@ tips <performance-tips-oracle.html>`__.
 License
 -------
 
-Copyright © 2009-2013 GGA Software Services LLC
+Copyright © 2009-2014 LifeSciences unit of EPAM Systems, Inc.
 
 This program is free software: You can redistribute it and/or modify it
 under the terms of the GNU General Public License as published by the
@@ -176,7 +176,7 @@ want to send a patch to us? Did you find a bug? Please write to one of
 the following newsgroups and let us know:
 
 -  http://groups.google.com/group/indigo-bugs : for bug reports on all
-   GGA projects.
+   Open-Source projects.
 -  http://groups.google.com/group/indigo-dev : for development topics.
 -  http://groups.google.com/group/indigo-general : for any other
    discussions.
@@ -188,8 +188,7 @@ indigo-general@googlegroups.com to get your message posted.
 Commercial Availability
 -----------------------
 
-If the GPL-licensed Bingo does not fit your needs, please contact us at
-info@ggasoftware.com to discuss the purchase of a commercial license.
+If the GPL-licensed Bingo does not fit your needs, please contact us to discuss the purchase of a commercial license.
 You may need the commercial license if you want to:
 
 -  Receive ongoing support and maintenance

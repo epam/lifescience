@@ -1,4 +1,4 @@
-Resources
+﻿Resources
 =========
 
 Algorithms
@@ -131,7 +131,7 @@ Commercial availability
 -----------------------
 
 We have dual-licensed our code. If the GPL-licensed code does not fit
-your needs, please contact us at info@ggasoftware.com to discuss the
+your needs, please contact us to discuss the
 purchase of a commercial license. You may need the commercial license if
 you want to:
 

@@ -63,17 +63,18 @@ Products
       for recognizing structures from documents
 
 -  `Parso <parso.html>`__: Parso Java library
--  `GGA Selenium Framework <selenium.html>`__: Test automation using
+-  `EPAM Selenium Framework <selenium.html>`__: Test automation using
    Selenium WebDriver
 
 Services
 --------
+*(Temporarily unavailable due to the server infrastructure changes).*
 
--  Bingo demo site: Search over PubChem and other databases
-   (*Temporarily unavailable due to the server infrastructure changes).*
+-  `Bingo demo <TODO:bingo-demo>`__ : Search over PubChem and other databases
 -  `Ketcher demo <TODO:ketcher-demo>`__: Edit molecules online
--  `Imago OCR demo <TODO:imago-demo>`__: Recognize molecule images
-   online
+-  `Imago OCR demo <TODO:imago-demo>`__: Recognize molecule images online
+
+
 
 Our objective has always been to develop products of high quality and
 excellent performance. We hope that our software will be helpful for

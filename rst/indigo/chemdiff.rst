@@ -1,4 +1,4 @@
-ChemDiff
+﻿ChemDiff
 ========
 
 Overview
@@ -105,7 +105,7 @@ command line.
 License
 -------
 
-Copyright © 2011 GGA Software Services LLC
+Copyright © 2011 LifeSciences unit of EPAM Systems, Inc.
 
 This program is free software: You can redistribute it and/or modify it
 under the terms of the GNU General Public License as published by the
@@ -123,8 +123,7 @@ http://www.gnu.org/licenses/.
 Commercial Availability
 -----------------------
 
-If GPL-licensed ChemDiff does not fit your needs, please contact us at
-info@ggasoftware.com to discuss the purchase of a commercial license.
+If GPL-licensed ChemDiff does not fit your needs, please contact us to discuss the purchase of a commercial license.
 You may need the commercial license if you want to:
 
 -  Receive ongoing support and maintenance

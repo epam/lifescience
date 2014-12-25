@@ -1,4 +1,4 @@
-Indigo ELN Changelog
+﻿Indigo ELN Changelog
 ====================
 
 Indigo ELN 1.1.3
@@ -33,7 +33,7 @@ Indigo ELN 1.1
 
 The major changes are the following:
 
--  Integration with GGA Ketcher product (sketcher)
+-  Integration with Ketcher product (sketcher)
 -  Implementation of and integration with simple registration/search
    services
 -  Fixes for the signing procedure and stoichiometry calculations

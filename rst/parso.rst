@@ -29,10 +29,10 @@ convert your SAS7BDAT file into a model or CSV format
 
 **Algorithm descriptions enclosed**
 
-**Evolving project**: GGA continues to develop the library by adding new
+**Evolving project**: EPAM continues to develop the library by adding new
 functionality
 
-**On-going technical support**: GGA welcomes any comments and concerns
+**On-going technical support**: EPAM welcomes any comments and concerns
 about this product and will address them on a regular basis
 
 **Possibility of integration with existing client projects**
@@ -53,7 +53,7 @@ Features
 Support and Development
 -----------------------
 
-GGA has wide experience in integration services and will help you
+EPAM has wide experience in integration services and will help you
 integrate Parso into your project. We will price those services based on
 your individual needs.
 
@@ -153,5 +153,5 @@ If the GPL-licensed Parso does not satisfy your needs, please contact us
 at info@ggasoftware.com to discuss the possibility of a commercial
 license.
 
-We hope that you decide to use the Parso library. At GGA, we are
+We hope that you decide to use the Parso library. At EPAM, we are
 available to help you use, integrate, and support Parso.
