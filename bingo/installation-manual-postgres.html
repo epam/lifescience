@@ -71,7 +71,7 @@
 <div class="section" id="database-servers">
 <h3>Database Servers<a class="headerlink" href="#database-servers" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>PostreSQL 9.0, 9.1, 9.2</li>
+<li>PostreSQL 9.0, 9.1, 9.2, 9.3, 9.4</li>
 </ul>
 </div>
 <div class="section" id="tested-configurations">
@@ -142,28 +142,14 @@
 <h3>All Systems<a class="headerlink" href="#all-systems" title="Permalink to this headline">¶</a></h3>
 <p>The shared buffer parameter in the PostgreSQL database configuration
 file (postgresql.conf) should be increased. For the optimal performance
-GGA recommends to increase the value .</p>
-<div class="highlight-python"><div class="highlight"><pre>shared_buffers=64MB
+it is recommended to increase the value .</p>
+<div class="highlight-python"><div class="highlight"><pre>shared_buffers=128MB
 </pre></div>
 </div>
-<p>The Bingo engine uses a simplified query planner (cost estimation)
-algorithm. GGA recommends to disable the BITMAP scan plan type for a
-database. This plan type can affect LIMIT and OFFSET queries, since the
-bitmap index scan will search through all the table, and it will take a
-lot of time regardless of the LIMIT parameter. To disable the bitmap
-scan use the following query:</p>
-<div class="highlight-python"><div class="highlight"><pre>set enable_bitmapscan=off;
-</pre></div>
-</div>
-<div class="line-block">
-<div class="line">This parameter is a database parameter, so it can be modified once</div>
-</div>
-<p>(e.g. after a database creating). The parameter should be disabled for
-the LIMIT queries to work properly.</p>
 </div>
 <div class="section" id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
-<p>The Bingo engine requires a lot of shared memory. For linux systems GGA
+<p>The Bingo engine requires a lot of shared memory. For linux systems our team
 recommends to change kernel.shmmax and kernel.shmall</p>
 <p>Add the following line to <tt class="docutils literal"><span class="pre">/etc/sysctl.conf</span></tt> file:</p>
 <div class="highlight-python"><div class="highlight"><pre>kernel.shmmax=&lt;value&gt;

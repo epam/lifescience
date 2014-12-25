@@ -63,10 +63,10 @@
 <h2>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="40%" />
+<col width="10%" />
+<col width="40%" />
+<col width="10%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Option</th>
@@ -76,117 +76,49 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">ignore-stereoche</span>
-<span class="pre">mistry-errors</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">ignore-stereochemistry-errors</span></tt></td>
 <td>boolean</td>
-<td>When reading a
-Molfile/Rxnfile
-with incorrectly
-marked
-stereobonds,
-ignore them rather
-than raise an
-error.</td>
+<td>When reading a Molfile/Rxnfile with incorrectly marked stereobonds, ignore them rather than raise an error.</td>
 <td>false</td>
 </tr>
-<tr class="row-odd"><td><a href="#id1"><span class="problematic" id="id2">``</span></a>ignore-noncritic
-al-query-features`
-`</td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">ignore-noncritical-query-features</span></tt></td>
 <td>boolean</td>
-<td>When true, the
-&#8220;bond topology&#8221;,
-&#8220;stereo care&#8221;,
-&#8220;ring bond count&#8221;,
-and &#8220;unsaturation&#8221;
-specifications are
-ignored when a
-non-query molecule
-is being loaded.
-Otherwise, an
-error is raised.</td>
+<td>When true, the &#8220;bond topology&#8221;, &#8220;stereo care&#8221;, &#8220;ring bond count&#8221;, and &#8220;unsaturation&#8221; specifications are ignored when a non-query molecule is being loaded. Otherwise, an error is raised.</td>
 <td>false</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">treat-x-as-pseud</span>
-<span class="pre">oatom</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">treat-x-as-pseudoatom</span></tt></td>
 <td>boolean</td>
-<td>Treat &#8216;X&#8217; atoms in
-Molfiles/Rxnfiles
-as pseudoatoms,
-rather than &#8220;any
-halogen&#8221; query
-atoms.</td>
+<td>Treat &#8216;X&#8217; atoms in Molfiles/Rxnfiles as pseudoatoms, rather than &#8220;any halogen&#8221; query atoms.</td>
 <td>false</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">skip-3d-chiralit</span>
-<span class="pre">y</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">skip-3d-chirality</span></tt></td>
 <td>boolean</td>
-<td>Do not calculate
-chirality of 3D
-input structures.</td>
+<td>Do not calculate chirality of 3D input structures.</td>
 <td>false</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">molfile-saving-m</span>
-<span class="pre">ode</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">molfile-saving-mode</span></tt></td>
 <td>string</td>
 <td><ul class="first last simple">
-<li><tt class="docutils literal"><span class="pre">2000</span></tt>: force
-saving Molfiles
-and Rxnfiles to
-v2000 format,
-not regarding
-if there are
-features that
-can not be
-represented in
-v2000.</li>
-<li><tt class="docutils literal"><span class="pre">3000</span></tt>: force
-saving Molfiles
-and Rxnfiles to
-v3000 format,
-not regarding
-if there are
-features that
-can not be
-represented in
-v2000.</li>
-<li><tt class="docutils literal"><span class="pre">auto</span></tt>:
-detect if
-saving to v3000
-is really
-needed, and
-then save to
-v3000.
-Otherwise, save
-to v2000.</li>
+<li><tt class="docutils literal"><span class="pre">2000</span></tt>: force saving Molfiles and Rxnfiles to v2000 format, not regarding if there are features that can not be represented in v2000.</li>
+<li><tt class="docutils literal"><span class="pre">3000</span></tt>: force saving Molfiles and Rxnfiles to v3000 format, not regarding if there are features that can not be represented in v2000.</li>
+<li><tt class="docutils literal"><span class="pre">auto</span></tt>: detect if saving to v3000 is really needed, and then save to v3000. Otherwise, save to v2000.</li>
 </ul>
 </td>
 <td><tt class="docutils literal"><span class="pre">auto</span></tt></td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">molfile-saving-n</span>
-<span class="pre">o-chiral</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">molfile-saving-no-chiral</span></tt></td>
 <td>boolean</td>
-<td>Do no write the
-&#8220;Chiral&#8221; flag when
-saving Molfiles
-and Rxnfiles</td>
+<td>Do no write the &#8220;Chiral&#8221; flag when saving Molfiles and Rxnfiles</td>
 <td>false</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">molfile-saving-s</span>
-<span class="pre">kip-date</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">molfile-saving-skip-date</span></tt></td>
 <td>boolean</td>
-<td>Do no write the
-current date into
-Molfiles, Rxnfiles
-and RDFiles</td>
+<td>Do no write the current date into Molfiles, Rxnfiles and RDFiles</td>
 <td>false</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">smiles-saving-wr</span>
-<span class="pre">ite-name</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">smiles-saving-write-name</span></tt></td>
 <td>boolean</td>
-<td>Write names when
-saving via generic
-saver interface in
-SMILES mode</td>
+<td>Write names when saving via generic saver interface in SMILES mode</td>
 <td>false</td>
 </tr>
 </tbody>
@@ -196,10 +128,10 @@ SMILES mode</td>
 <h2>Rendering<a class="headerlink" href="#rendering" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="40%" />
+<col width="10%" />
+<col width="40%" />
+<col width="10%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Option</th>
@@ -209,356 +141,163 @@ SMILES mode</td>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-output-fo</span>
-<span class="pre">rmat</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-output-format</span></tt></td>
 <td>string</td>
-<td>Obligatory.
-<tt class="docutils literal"><span class="pre">png</span></tt>, <tt class="docutils literal"><span class="pre">svg</span></tt>,
-<tt class="docutils literal"><span class="pre">pdf</span></tt> are
-allowed. On
-Windows, <tt class="docutils literal"><span class="pre">emf</span></tt>
-is also allowed.</td>
-<td><ul class="first last simple">
-<li></li>
-</ul>
-</td>
+<td>Obligatory. <tt class="docutils literal"><span class="pre">png</span></tt>, <tt class="docutils literal"><span class="pre">svg</span></tt>, <tt class="docutils literal"><span class="pre">pdf</span></tt> are allowed. On Windows, <tt class="docutils literal"><span class="pre">emf</span></tt> is also allowed.</td>
+<td>-</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-bond-leng</span>
-<span class="pre">th</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-bond-length</span></tt></td>
 <td>integer</td>
-<td>Desired average
-bond length in
-pixels. The actual
-average bond
-length may be less
-if the
-<tt class="docutils literal"><span class="pre">render-image-siz</span>
-<span class="pre">e</span></tt>
-option is set. To
-reset this
-setting, you can
-set its value to
--1.</td>
+<td>Desired average bond length in pixels. The actual average bond length may be less if the <tt class="docutils literal"><span class="pre">render-image-size</span></tt> option is set. To reset this setting, you can set its value to -1.</td>
 <td>100</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-image-siz</span>
-<span class="pre">e</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-image-size</span></tt></td>
 <td>size</td>
-<td>Width and height
-of target image.
-If not set, is
-calculated
-automatically
-according to
-<tt class="docutils literal"><span class="pre">render-bond-leng</span>
-<span class="pre">th</span></tt>.
-To reset this
-setting, you can
-set the values of
-width and height
-to -1.</td>
-<td><ul class="first last simple">
-<li></li>
-</ul>
-</td>
+<td>Width and height of target image. If not set, is calculated automatically according to <tt class="docutils literal"><span class="pre">render-bond-length</span></tt>. To reset this setting, you can set the values of width and height to -1.</td>
+<td>-</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-margins</span></tt></td>
 <td>size</td>
-<td>Horizontal and
-vertical margins
-around the image,
-in pixels.</td>
+<td>Horizontal and vertical margins around the image, in pixels.</td>
 <td>0x0</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-base-colo</span>
-<span class="pre">r</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-base-color</span></tt></td>
 <td>color</td>
-<td>The default color
-for atoms and
-bonds.</td>
+<td>The default color for atoms and bonds.</td>
 <td>black</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-backgroun</span>
-<span class="pre">d-color</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-background-color</span></tt></td>
 <td>color</td>
 <td>Background color.</td>
 <td>transparent</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-label-mod</span>
-<span class="pre">e</span></tt></td>
-<td>string</td>
-<td><ul class="first simple">
-<li><tt class="docutils literal"><span class="pre">all</span></tt>: show
-all atoms</li>
-<li><a href="#id3"><span class="problematic" id="id4">``</span></a>terminal-hete</li>
-</ul>
-<dl class="docutils">
-<dt>ro``:</dt>
-<dd>show
-heteroatoms,
-terminal atoms,
-atoms with
-radical,
-charge,
-isotope,
-explicit
-valence, and
-atoms having
-two adjacent
-bonds in a line</dd>
-</dl>
-<ul class="simple">
-<li><tt class="docutils literal"><span class="pre">hetero</span></tt>: the
-same as
-<a href="#id5"><span class="problematic" id="id6">``</span></a>terminal-hete</li>
-</ul>
-<dl class="docutils">
-<dt>ro``,</dt>
-<dd>but without
-terminal atoms</dd>
-</dl>
-<ul class="last simple">
-<li><tt class="docutils literal"><span class="pre">none</span></tt>: hide
-all labels,
-show only bonds</li>
-</ul>
-</td>
-<td><a href="#id7"><span class="problematic" id="id8">``</span></a>terminal-hetero`
-`</td>
-</tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-highlight</span>
-<span class="pre">ed-atoms-visible</span></tt></td>
-<td>boolean</td>
-<td>Always show labels
-of highlighted
-atoms.</td>
-<td>false</td>
-</tr>
-<tr class="row-even"><td><a href="#id9"><span class="problematic" id="id10">``</span></a>render-implicit-
-hydrogens-visible`
-`</td>
-<td>boolean</td>
-<td>Show implicit
-hydrogens on
-visible atoms.</td>
-<td>true</td>
-</tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-superatom</span>
-<span class="pre">-mode</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-label-mode</span></tt></td>
 <td>string</td>
 <td><ul class="first last simple">
-<li><tt class="docutils literal"><span class="pre">expand</span></tt>:
-render expanded
-superatoms</li>
-<li><tt class="docutils literal"><span class="pre">collapse</span></tt>:
-render just the
-superatoms&#8217;
-names</li>
+<li><tt class="docutils literal"><span class="pre">all</span></tt>: show all atoms</li>
+<li><tt class="docutils literal"><span class="pre">terminal-hetero</span></tt>: show heteroatoms, terminal atoms, atoms with radical, charge, isotope, explicit valence, and atoms having two adjacent bonds in a line</li>
+<li><tt class="docutils literal"><span class="pre">hetero</span></tt>: the same as <tt class="docutils literal"><span class="pre">terminal-hetero</span></tt>, but without terminal atoms</li>
+<li><tt class="docutils literal"><span class="pre">none</span></tt>: hide all labels, show only bonds</li>
+</ul>
+</td>
+<td><tt class="docutils literal"><span class="pre">terminal-hetero</span></tt></td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-highlighted-atoms-visible</span></tt></td>
+<td>boolean</td>
+<td>Always show labels of highlighted atoms.</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-implicit-hydrogens-visible</span></tt></td>
+<td>boolean</td>
+<td>Show implicit hydrogens on visible atoms.</td>
+<td>true</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-superatom-mode</span></tt></td>
+<td>string</td>
+<td><ul class="first last simple">
+<li><tt class="docutils literal"><span class="pre">expand</span></tt>: render expanded superatoms</li>
+<li><tt class="docutils literal"><span class="pre">collapse</span></tt>: render just the superatoms&#8217; names</li>
 </ul>
 </td>
 <td><tt class="docutils literal"><span class="pre">expand</span></tt></td>
 </tr>
-<tr class="row-even"><td><a href="#id11"><span class="problematic" id="id12">``</span></a>render-coloring`
-`</td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-coloring</span></tt></td>
 <td>boolean</td>
-<td>Turn on atom
-coloring, e.g.
-nitrogen is blue,
-oxygen is red,
-etc.</td>
+<td>Turn on atom coloring, e.g. nitrogen is blue, oxygen is red, etc.</td>
 <td>false</td>
 </tr>
-<tr class="row-odd"><td><a href="#id13"><span class="problematic" id="id14">``</span></a>render-highlight
--thickness-enabled
-``</td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-highlight-thickness-enabled</span></tt></td>
 <td>boolean</td>
-<td>Enable
-highlighting with
-thick bonds and
-bold atom labels.</td>
+<td>Enable highlighting with thick bonds and bold atom labels.</td>
 <td>false</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-highlight</span>
-<span class="pre">-color-enabled</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-highlight-color-enabled</span></tt></td>
 <td>boolean</td>
-<td>Enable
-highlighting with
-color.</td>
+<td>Enable highlighting with color.</td>
 <td>true</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-highlight</span>
-<span class="pre">-color</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-highlight-color</span></tt></td>
 <td>color</td>
-<td>The color to be
-used for
-highlighting.</td>
+<td>The color to be used for highlighting.</td>
 <td>red</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-data-sgro</span>
-<span class="pre">up-color</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-data-sgroup-color</span></tt></td>
 <td>color</td>
-<td>Color of data
-SGroup labels.</td>
+<td>Color of data SGroup labels.</td>
 <td>black</td>
 </tr>
-<tr class="row-odd"><td><a href="#id15"><span class="problematic" id="id16">``</span></a>render-aam-color
-``</td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-aam-color</span></tt></td>
 <td>color</td>
-<td>Atom-by-atom
-mapping indices
-color in
-reactions.</td>
+<td>Atom-by-atom mapping indices color in reactions.</td>
 <td>black</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-stereo-st</span>
-<span class="pre">yle</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-stereo-style</span></tt></td>
 <td>string</td>
 <td><ul class="first last simple">
-<li><tt class="docutils literal"><span class="pre">old</span></tt>: Only
-display the
-&#8220;Chiral&#8221; sign
-when
-appropriate.</li>
-<li><tt class="docutils literal"><span class="pre">ext</span></tt>:
-Display &#8220;abs&#8221;,
-&#8220;and&#8221;, &#8220;or&#8221;
-labels near
-each
-stereocenter.</li>
-<li><tt class="docutils literal"><span class="pre">none</span></tt>: Hide
-all the
-information
-about the
-stereogroups.</li>
+<li><tt class="docutils literal"><span class="pre">old</span></tt>: Only display the &#8220;Chiral&#8221; sign when appropriate.</li>
+<li><tt class="docutils literal"><span class="pre">ext</span></tt>: Display &#8220;abs&#8221;, &#8220;and&#8221;, &#8220;or&#8221; labels near each stereocenter.</li>
+<li><tt class="docutils literal"><span class="pre">none</span></tt>: Hide all the information about the stereogroups.</li>
 </ul>
 </td>
 <td><tt class="docutils literal"><span class="pre">old</span></tt></td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-relative-</span>
-<span class="pre">thickness</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-relative-thickness</span></tt></td>
 <td>float</td>
-<td>Set the thickness
-of a bond to X/30
-of the average
-bond length.</td>
+<td>Set the thickness of a bond to X/30 of the average bond length.</td>
 <td>1.0</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-catalysts</span>
-<span class="pre">-placement</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-catalysts-placement</span></tt></td>
 <td>string</td>
-<td><ul class="first simple">
-<li><tt class="docutils literal"><span class="pre">above</span></tt>:
-place reaction
-catalysts above
-the reaction
-arrow</li>
-<li><a href="#id17"><span class="problematic" id="id18">``</span></a>above-and-bel</li>
+<td><ul class="first last simple">
+<li><tt class="docutils literal"><span class="pre">above</span></tt>: place reaction catalysts above the reaction arrow</li>
+<li><tt class="docutils literal"><span class="pre">above-and-below</span></tt>: place reaction calalysts above and below the reaction arrow</li>
 </ul>
-<dl class="last docutils">
-<dt>ow``:</dt>
-<dd>place reaction
-calalysts above
-and below the
-reaction arrow</dd>
-</dl>
 </td>
-<td><a href="#id19"><span class="problematic" id="id20">``</span></a>above-and-below`
-`</td>
+<td><tt class="docutils literal"><span class="pre">above-and-below</span></tt></td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-comment</span></tt></td>
 <td>string</td>
-<td>Put a single-line
-comment at the top
-or bottom of the
-image. If the
-image size is set
-explicitly, it
-must not be
-smaller than the
-size of the
-comment bounding
-box.</td>
-<td><ul class="first last simple">
-<li></li>
-</ul>
-</td>
+<td>Put a single-line comment at the top or bottom of the image. If the image size is set explicitly, it must not be smaller than the size of the comment bounding box.</td>
+<td>-</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-comment-p</span>
-<span class="pre">osition</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-comment-position</span></tt></td>
 <td>string</td>
-<td><tt class="docutils literal"><span class="pre">top</span></tt> or
-<tt class="docutils literal"><span class="pre">bottom</span></tt>.</td>
+<td><tt class="docutils literal"><span class="pre">top</span></tt> or <tt class="docutils literal"><span class="pre">bottom</span></tt>.</td>
 <td><tt class="docutils literal"><span class="pre">bottom</span></tt></td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-comment-o</span>
-<span class="pre">ffset</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-comment-offset</span></tt></td>
 <td>integer</td>
-<td>Vertical space (in
-pixels) between
-the comment and
-the rendered
-structure or
-reaction.</td>
+<td>Vertical space (in pixels) between the comment and the rendered structure or reaction.</td>
 <td>0</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-comment-a</span>
-<span class="pre">lignment</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-comment-alignment</span></tt></td>
 <td>float</td>
-<td>0 is for alignment
-to the left, 1 is
-for the alignment
-to the right, 0.5
-is for centering
-the comment. Note
-that this setting
-has no effect if
-comment is larger
-than the
-molecule/reaction
-rendered.</td>
+<td>0 is for alignment to the left, 1 is for the alignment to the right, 0.5 is for centering the comment. Note that this setting has no effect if comment is larger than the molecule/reaction rendered.</td>
 <td>0.5</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-comment-f</span>
-<span class="pre">ont-size</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-comment-font-size</span></tt></td>
 <td>integer</td>
-<td>Font size for the
-comment in
-absolute units,
-roughly equal to
-the height in
-pixels.</td>
+<td>Font size for the comment in absolute units, roughly equal to the height in pixels.</td>
 <td>20</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-comment-c</span>
-<span class="pre">olor</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-comment-color</span></tt></td>
 <td>color</td>
-<td>Color to use for
-the comment.</td>
+<td>Color to use for the comment.</td>
 <td>black</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-atom-ids-</span>
-<span class="pre">visible</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-atom-ids-visible</span></tt></td>
 <td>boolean</td>
-<td>Show atom numbers
-(for debugging
-purposes only).</td>
+<td>Show atom numbers (for debugging purposes only).</td>
 <td>false</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-bond-ids-</span>
-<span class="pre">visible</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-bond-ids-visible</span></tt></td>
 <td>boolean</td>
-<td>Show bond numbers
-(for debugging
-purposes only).</td>
+<td>Show bond numbers (for debugging purposes only).</td>
 <td>false</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-atom-bond</span>
-<span class="pre">-ids-from-one</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-atom-bond-ids-from-one</span></tt></td>
 <td>boolean</td>
-<td>Show atom and bond
-numbers starting
-from one, not from
-zero.</td>
+<td>Show atom and bond numbers starting from one, not from zero.</td>
 <td>false</td>
 </tr>
 </tbody>
@@ -568,10 +307,10 @@ zero.</td>
 <h2>Rendering in Grid<a class="headerlink" href="#rendering-in-grid" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="13%" />
-<col width="4%" />
-<col width="78%" />
-<col width="4%" />
+<col width="40%" />
+<col width="10%" />
+<col width="40%" />
+<col width="10%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Option</th>
@@ -589,10 +328,7 @@ zero.</td>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">render-grid-title-property</span></tt></td>
 <td>string</td>
 <td>The name of the molecule&#8217;s property that defines the title that is put under each molecule. If not defined, no titles are shown. The special value &#8220;^NAME&#8221; means to use the molecule&#8217;s name as its title.</td>
-<td><ul class="first last simple">
-<li></li>
-</ul>
-</td>
+<td>-</td>
 </tr>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">render-grid-title-alignment</span></tt></td>
 <td>float</td>
@@ -616,10 +352,10 @@ zero.</td>
 <h2>Fingerprinting<a class="headerlink" href="#fingerprinting" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="19%" />
-<col width="9%" />
-<col width="62%" />
-<col width="9%" />
+<col width="40%" />
+<col width="10%" />
+<col width="40%" />
+<col width="10%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Option</th>
@@ -661,10 +397,10 @@ zero.</td>
 <h2>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="12%" />
-<col width="3%" />
-<col width="81%" />
-<col width="4%" />
+<col width="40%" />
+<col width="10%" />
+<col width="40%" />
+<col width="10%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Option</th>
@@ -686,10 +422,10 @@ zero.</td>
 <h2>Substructure Matching<a class="headerlink" href="#substructure-matching" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="40%" />
+<col width="10%" />
+<col width="40%" />
+<col width="10%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Option</th>
@@ -699,47 +435,23 @@ zero.</td>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">embedding-unique</span>
-<span class="pre">ness</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">embedding-uniqueness</span></tt></td>
 <td>string</td>
-<td><p class="first">Defines how the
-uniqueness of a
-substructure match
-is determined when
-counting or
-iterating unique
-matches.</p>
-<ul class="last simple">
-<li><tt class="docutils literal"><span class="pre">atoms</span></tt>: by
-atoms; &#8220;CCC&#8221;
-matches &#8220;C1CC1&#8221;
-once</li>
-<li><tt class="docutils literal"><span class="pre">bonds</span></tt>: by
-bonds, &#8220;CCC&#8221;
-matches &#8220;C1CC1&#8221;
-three times</li>
-<li><tt class="docutils literal"><span class="pre">none</span></tt>: no
-test for
-uniqueness;
-&#8220;CCC&#8221; matches
-&#8220;C1CC1&#8221; six
-times</li>
+<td><dl class="first last docutils">
+<dt>Defines how the uniqueness of a substructure match is determined when counting or iterating unique matches.</dt>
+<dd><ul class="first last simple">
+<li><tt class="docutils literal"><span class="pre">atoms</span></tt>: by atoms; &#8220;CCC&#8221; matches &#8220;C1CC1&#8221; once</li>
+<li><tt class="docutils literal"><span class="pre">bonds</span></tt>: by bonds, &#8220;CCC&#8221; matches &#8220;C1CC1&#8221; three times</li>
+<li><tt class="docutils literal"><span class="pre">none</span></tt>: no test for uniqueness; &#8220;CCC&#8221; matches &#8220;C1CC1&#8221; six times</li>
 </ul>
+</dd>
+</dl>
 </td>
 <td><tt class="docutils literal"><span class="pre">atoms</span></tt></td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">max-embeddings</span></tt></td>
 <td>int</td>
-<td>The maximum number
-of embeddings
-allowed to
-enumerate when
-counting all
-embeddings. If the
-limit is reached,
-an exception is
-thrown. Zero value
-means no limit.</td>
+<td>The maximum number of embeddings allowed to enumerate when counting all embeddings. If the limit is reached, an exception is thrown. Zero value means no limit.</td>
 <td>10000</td>
 </tr>
 </tbody>
@@ -750,9 +462,9 @@ means no limit.</td>
 <table border="1" class="docutils">
 <colgroup>
 <col width="40%" />
-<col width="13%" />
-<col width="34%" />
-<col width="13%" />
+<col width="10%" />
+<col width="40%" />
+<col width="10%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Option</th>
@@ -774,10 +486,10 @@ means no limit.</td>
 <h2>Reaction Products Enumeration<a class="headerlink" href="#reaction-products-enumeration" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="40%" />
+<col width="10%" />
+<col width="40%" />
+<col width="10%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Option</th>
@@ -787,59 +499,33 @@ means no limit.</td>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rpe-multistep-re</span>
-<span class="pre">actions</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rpe-multistep-reactions</span></tt></td>
 <td>boolean</td>
-<td>Enable multistep
-reactions.</td>
+<td>Enable multistep reactions.</td>
 <td>false</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">rpe-mode</span></tt></td>
 <td>string</td>
 <td><ul class="first last simple">
-<li><tt class="docutils literal"><span class="pre">grid</span></tt>:
-different sets
-of monomers
-react in
-different tubes</li>
-<li><tt class="docutils literal"><span class="pre">one-tube</span></tt>:
-reactions take
-place in one
-tube</li>
+<li><tt class="docutils literal"><span class="pre">grid</span></tt>: different sets of monomers react in different tubes</li>
+<li><tt class="docutils literal"><span class="pre">one-tube</span></tt>: reactions take place in one tube</li>
 </ul>
 </td>
 <td>grid</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rpe-self-reactio</span>
-<span class="pre">n</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rpe-self-reaction</span></tt></td>
 <td>boolean</td>
-<td>Enable
-intramolecular
-reactions, where
-one molecule of
-monomers can play
-role of two (or
-more) reactants.</td>
+<td>Enable intramolecular reactions, where one molecule of monomers can play role of two (or more) reactants.</td>
 <td>false</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">rpe-max-depth</span></tt></td>
 <td>integer</td>
-<td>Maximum level of
-representing
-product like a
-monomer (works
-only with
-<tt class="docutils literal"><span class="pre">rpe-multistep-re</span>
-<span class="pre">actions</span></tt>
-enabled).</td>
+<td>Maximum level of representing product like a monomer (works only with <tt class="docutils literal"><span class="pre">rpe-multistep-reactions</span></tt> enabled).</td>
 <td>2</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rpe-max-products</span>
-<span class="pre">-count</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rpe-max-products-count</span></tt></td>
 <td>integer</td>
-<td>Maximum amount of
-generated
-products.</td>
+<td>Maximum amount of generated products.</td>
 <td>1000</td>
 </tr>
 </tbody>
@@ -849,10 +535,10 @@ products.</td>
 <h2>InChI<a class="headerlink" href="#inchi" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
+<col width="40%" />
 <col width="10%" />
-<col width="5%" />
-<col width="80%" />
-<col width="5%" />
+<col width="40%" />
+<col width="10%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Option</th>
@@ -865,10 +551,7 @@ products.</td>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">inchi-options</span></tt></td>
 <td>string</td>
 <td>Options supported by the official InChI plugin: /NEWPSOFF /DoNotAddH /SNon /SRel /SRac /SUCF /ChiralFlagON /ChiralFlagOFF /SUU /SLUUD /FixedH /RecMet /KET /15T.</td>
-<td><ul class="first last simple">
-<li></li>
-</ul>
-</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>

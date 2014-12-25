@@ -60,7 +60,6 @@
 <h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<p><strong>`New documentation (work in progress) &lt;TODO:indigo-doc&gt;`__</strong></p>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>This page describes the API of Indigo library and its rendering plugin.
@@ -105,9 +104,9 @@ API</a> page.</p>
 <div class="section" id="indigo-constructor">
 <h2>Indigo Constructor<a class="headerlink" href="#indigo-constructor" title="Permalink to this headline">¶</a></h2>
 <p>Java:</p>
-<div class="highlight-python"><div class="highlight"><pre>import com.ggasoftware.indigo.*;
-...
-Indigo indigo = new Indigo();
+<div class="highlight-java"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">com.ggasoftware.indigo.*</span><span class="o">;</span>
+<span class="o">...</span>
+<span class="n">Indigo</span> <span class="n">indigo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Indigo</span><span class="o">();</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -2217,7 +2216,7 @@ load scaffold from a molfile. The SMILES format is not supported at the
 moment.</p>
 <p>The following example shows the usage user-defined scaffold:</p>
 <p>Python:</p>
-<div class="highlight-python"><div class="highlight"><pre># prepate query scaffold (e.g. &#39;(R1)C1CCCC(R2)C1&#39;)
+<div class="highlight-python"><div class="highlight"><pre># prepare query scaffold (e.g. &#39;(R1)C1CCCC(R2)C1&#39;)
 scaffold = indigo.loadQueryMoleculeFromFile(&quot;query_mol&quot;)
 
 # init decomposition
@@ -2286,7 +2285,7 @@ IndigoObject output_reactions = indigo.reactionProductEnumerate(reaction, monome
 </div>
 <div class="section" id="reaction-based-molecule-transformations">
 <h2>Reaction-based Molecule Transformations<a class="headerlink" href="#reaction-based-molecule-transformations" title="Permalink to this headline">¶</a></h2>
-<p>Examples of usage are avialible
+<p>Examples of usage are available
 <a class="reference external" href="../concepts/transformation.html">here</a>.</p>
 <p>Java:</p>
 <div class="highlight-python"><div class="highlight"><pre>IndigoObject reaction = indigo.loadQueryReaction(&quot;[NH:3]=[N:1]#[N:2]&gt;&gt;[NH:3]=[N+:1]=[#7-:2]&quot;);
@@ -2298,10 +2297,8 @@ System.out.println(molecule.smiles); // N(C1=CC=CC(N=[N+]=[N-])=C1)=[N+]=[N-]
 </div>
 <div class="section" id="rendering">
 <h2>Rendering<a class="headerlink" href="#rendering" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line">Rending in Indigo is done by the <tt class="docutils literal"><span class="pre">IndigoRenderer</span></tt> plugin which is</div>
-</div>
-<p>included in the Indigo distribution. The plugin is available for C (as a
+<p>Rendering in Indigo is done by the <tt class="docutils literal"><span class="pre">IndigoRenderer</span></tt> plugin which is
+included in the Indigo distribution. The plugin is available for C (as a
 separate dynamic library), and has wrappers for all supported languages.</p>
 <p>To work with the rendering plugin in C#/Java/Python wrappers, one needs
 to create an instance of <tt class="docutils literal"><span class="pre">IndigoRenderer</span></tt>, passing an existing
@@ -2370,7 +2367,7 @@ renderer.renderGridToFile(collection, null, 4, &quot;structures.png&quot;);
 specify it only for molecules, not for reactions. If this parameter is
 not <tt class="docutils literal"><span class="pre">null</span></tt>, it has to be an integer array whose number of elements is
 equal to the number of given molecules. Each element of this array is
-the index of the &#8220;referene atom&#8221; in the corresponding molecule. The
+the index of the &#8220;reference atom&#8221; in the corresponding molecule. The
 rendering is then done in such a way that the reference atoms are
 grid-aligned. You can see the examples of this at
 <a class="reference external" href="http://ctr.wikia.com/wiki/Align_the_depiction_using_a_fixed_substructure">CTR</a>.</p>
