@@ -13,7 +13,7 @@ forward to speaking with you about your company's specific needs.
  |  41 University Drive, Suite 202
  |  Newtown, PA 18940, USA 
  |  Tel:	(267) 759-9000
- |  Fax: 	267) 759-8989
+ |  Fax: 	(267) 759-8989
 
 
  |  Saint Petersburg, Russia Location:
