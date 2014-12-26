@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
     <link rel="up" title="Bingo" href="index.html" />
     <link rel="next" title="User Manual: PostgreSQL" href="user-manual-postgres.html" />
@@ -33,8 +33,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -54,7 +54,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="user-manual-sql-server">
 <h1>User Manual: SQL Server<a class="headerlink" href="#user-manual-sql-server" title="Permalink to this headline">¶</a></h1>
@@ -64,35 +64,35 @@
 <h3>Data representation<a class="headerlink" href="#data-representation" title="Permalink to this headline">¶</a></h3>
 <p>Bingo supports Daylight SMILES with some ChemAxon extensions and MDL
 (Symyx) Molfile/Rxnfile formats both in the text and binary
-representation. All methods like <tt class="docutils literal"><span class="pre">Mass</span></tt>, <tt class="docutils literal"><span class="pre">Gross</span></tt>, <tt class="docutils literal"><span class="pre">Molfile</span></tt>,
-<tt class="docutils literal"><span class="pre">SMILES</span></tt> and etc. have same functions for binary data with <tt class="docutils literal"><span class="pre">B</span></tt>
-suffix: <tt class="docutils literal"><span class="pre">MassB</span></tt>, <tt class="docutils literal"><span class="pre">GrossB</span></tt> and etc. Please look at the corresponding
+representation. All methods like <code class="docutils literal"><span class="pre">Mass</span></code>, <code class="docutils literal"><span class="pre">Gross</span></code>, <code class="docutils literal"><span class="pre">Molfile</span></code>,
+<code class="docutils literal"><span class="pre">SMILES</span></code> and etc. have same functions for binary data with <code class="docutils literal"><span class="pre">B</span></code>
+suffix: <code class="docutils literal"><span class="pre">MassB</span></code>, <code class="docutils literal"><span class="pre">GrossB</span></code> and etc. Please look at the corresponding
 section of <a class="reference external" href="user-manual-oracle.html#data-representation">Bingo User Manual for
 Oracle</a> for details.</p>
 </div>
 <div class="section" id="storage">
 <h3>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h3>
-<p>Suppose you have a table with a <tt class="docutils literal"><span class="pre">nvarchar</span></tt>, <tt class="docutils literal"><span class="pre">varchar</span></tt> or &#8216;varbinary&#8217;
+<p>Suppose you have a table with a <code class="docutils literal"><span class="pre">nvarchar</span></code>, <code class="docutils literal"><span class="pre">varchar</span></code> or &#8216;varbinary&#8217;
 column containing a Molfiles/Rxnfiles or SMILES with molecules or
 reactions. In order to make Bingo work with your table, you would need a
 column in your table containing a unique integer number for each
 molecule or reaction. Normally, although not necessary, this is a
-primary key. If you have a <tt class="docutils literal"><span class="pre">[n]varchar</span></tt> field as the primary key, you
+primary key. If you have a <code class="docutils literal"><span class="pre">[n]varchar</span></code> field as the primary key, you
 still have to add a unique integer field.</p>
 <p>Once you have prepared your table, you can execute
-<tt class="docutils literal"><span class="pre">CheckMoleculeTable</span></tt> or <tt class="docutils literal"><span class="pre">CheckReactionTable</span></tt> to ensure that all the
+<code class="docutils literal"><span class="pre">CheckMoleculeTable</span></code> or <code class="docutils literal"><span class="pre">CheckReactionTable</span></code> to ensure that all the
 records are valid. These functions return table with invalid records and
 corresponding error message. All molecules or reactions that are in this
 table will be excluded from the chemical index. You can update these
 molecules later after indexing.</p>
 <p>After you have prepared and checked your table, you can execute
-<tt class="docutils literal"><span class="pre">CreateMoleculeIndex</span></tt> or <tt class="docutils literal"><span class="pre">CreateReactionIndex</span></tt> to make Bingo search
+<code class="docutils literal"><span class="pre">CreateMoleculeIndex</span></code> or <code class="docutils literal"><span class="pre">CreateReactionIndex</span></code> to make Bingo search
 procedures available for you table. The more records the table contains,
 the longer it takes to create an index.</p>
 </div>
 <div class="section" id="queries">
 <h3>Queries<a class="headerlink" href="#queries" title="Permalink to this headline">¶</a></h3>
-<p>You can specify the query molecule as a <tt class="docutils literal"><span class="pre">nvarchar</span></tt> string containing a
+<p>You can specify the query molecule as a <code class="docutils literal"><span class="pre">nvarchar</span></code> string containing a
 Molfile (including various query features), a SMILES, or a SMARTS
 string. For reaction queries, use Rxnfiles, reaction SMILES, or reaction
 SMARTS.</p>
@@ -103,7 +103,7 @@ subsequent ones. The loaded molecules are shared across other SQL
 sessions, and so other sessions there will not encounter such time lags.
 The memory is freed as soon as all the sessions working with this table
 are disconnected. You can force Bingo not to unload index cache by
-calling <tt class="docutils literal"><span class="pre">SetKeepCache</span></tt> function.</p>
+calling <code class="docutils literal"><span class="pre">SetKeepCache</span></code> function.</p>
 </div>
 </div>
 <div class="section" id="molecules">
@@ -114,8 +114,8 @@ calling <tt class="docutils literal"><span class="pre">SetKeepCache</span></tt> 
 <div class="highlight-python"><div class="highlight"><pre>exec bingo.CreateMoleculeIndex &#39;$table&#39;, &#39;$id&#39;, &#39;$molecule&#39;;
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molecule data in column
-<tt class="docutils literal"><span class="pre">$molecule</span></tt> and the unique integer identifier in column <tt class="docutils literal"><span class="pre">$id</span></tt>.</p>
+<p><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molecule data in column
+<code class="docutils literal"><span class="pre">$molecule</span></code> and the unique integer identifier in column <code class="docutils literal"><span class="pre">$id</span></code>.</p>
 </div>
 <div class="section" id="updating-and-dropping-index">
 <h3>Updating and Dropping Index<a class="headerlink" href="#updating-and-dropping-index" title="Permalink to this headline">¶</a></h3>
@@ -126,10 +126,10 @@ once. No re- indexing is required after adding the records.</p>
 <p>After you insert, update or delete, you must either:</p>
 <ul class="simple">
 <li>close the SQL session, or</li>
-<li>execute <tt class="docutils literal"><span class="pre">Bingo.FlushOperations()</span></tt> procedure.</li>
+<li>execute <code class="docutils literal"><span class="pre">Bingo.FlushOperations()</span></code> procedure.</li>
 </ul>
 <p>If the index was modified, any search procedure will be raising an
-exception until <tt class="docutils literal"><span class="pre">FlushOperations</span></tt> is called.</p>
+exception until <code class="docutils literal"><span class="pre">FlushOperations</span></code> is called.</p>
 <p>It is much faster to insert, delete or update records in a single SQL
 statement rather by doing it one by one. If you have the indexed table,
 and you have another portion on molecules that you to add, then you
@@ -140,7 +140,7 @@ should do it in a single SQL statement:</p>
 <p>Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#updating-and-dropping-index">Bingo User Manual for
 Oracle</a> for more
 details and recommendations. Please, note that for SQL Server flush
-procedure is called <tt class="docutils literal"><span class="pre">FlushOperations</span></tt> because it must be called after
+procedure is called <code class="docutils literal"><span class="pre">FlushOperations</span></code> because it must be called after
 delete operations too.</p>
 </div>
 <div class="section" id="substructure-search">
@@ -150,32 +150,32 @@ delete operations too.</p>
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing the unique integer
-identifier in column <tt class="docutils literal"><span class="pre">$id</span></tt>. <tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">nvarchar</span></tt> string
-containing the query molfile or SMILES. <tt class="docutils literal"><span class="pre">$parameters</span></tt> is a
-<tt class="docutils literal"><span class="pre">nvarchar</span></tt> string that can be empty or contain some options to pass to
+<p><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing the unique integer
+identifier in column <code class="docutils literal"><span class="pre">$id</span></code>. <code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">nvarchar</span></code> string
+containing the query molfile or SMILES. <code class="docutils literal"><span class="pre">$parameters</span></code> is a
+<code class="docutils literal"><span class="pre">nvarchar</span></code> string that can be empty or contain some options to pass to
 Bingo search engine.</p>
-<p><tt class="docutils literal"><span class="pre">$n</span></tt> is the number defining how many hits you want, at most.</p>
-<p><strong>Note:</strong> It is possible to use the ordinary <tt class="docutils literal"><span class="pre">SELECT</span> <span class="pre">TOP</span></tt> SQL
-statement, but using the <tt class="docutils literal"><span class="pre">TOP</span></tt> parameter in Bingo parameters string
+<p><code class="docutils literal"><span class="pre">$n</span></code> is the number defining how many hits you want, at most.</p>
+<p><strong>Note:</strong> It is possible to use the ordinary <code class="docutils literal"><span class="pre">SELECT</span> <span class="pre">TOP</span></code> SQL
+statement, but using the <code class="docutils literal"><span class="pre">TOP</span></code> parameter in Bingo parameters string
 will be better for performance, as in this case the database engine will
 not retrieve all the resulting records into memory before returning the
-top <tt class="docutils literal"><span class="pre">$n</span></tt> ones.</p>
+top <code class="docutils literal"><span class="pre">$n</span></code> ones.</p>
 <p>You can get all the hits by portions of an arbitary size. First query
-should have <tt class="docutils literal"><span class="pre">START</span></tt> option:</p>
+should have <code class="docutils literal"><span class="pre">START</span></code> option:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.* from $table, bingo.SearchSub(&#39;$table&#39;, $query, &#39;$parameters; TOP $n; START&#39;) t
    where $table.$id = t.id;
 </pre></div>
 </div>
 <p>After that you can get next portion of results by specifing last id,
-returned by <tt class="docutils literal"><span class="pre">SearchSub</span></tt> function:</p>
+returned by <code class="docutils literal"><span class="pre">SearchSub</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.* from $table, bingo.SearchSub(&#39;$table&#39;, $query, &#39;$parameters; TOP $n; NEXT $last_id&#39;) t
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p><strong>Note:</strong> These <tt class="docutils literal"><span class="pre">TOP</span></tt>, <tt class="docutils literal"><span class="pre">START</span></tt>, and <tt class="docutils literal"><span class="pre">NEXT</span></tt> options are common for
+<p><strong>Note:</strong> These <code class="docutils literal"><span class="pre">TOP</span></code>, <code class="docutils literal"><span class="pre">START</span></code>, and <code class="docutils literal"><span class="pre">NEXT</span></code> options are common for
 all Bingo search functions.</p>
-<p>In case you need all the hits, you can omit the <tt class="docutils literal"><span class="pre">TOP</span> <span class="pre">$n</span></tt> part of the
+<p>In case you need all the hits, you can omit the <code class="docutils literal"><span class="pre">TOP</span> <span class="pre">$n</span></code> part of the
 parameters string:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.* from $table, bingo.SearchSub(&#39;$table&#39;, $query, &#39;$parameters&#39;) t
    where $table.$id = t.id;
@@ -189,14 +189,14 @@ features available.</p>
 <div class="section" id="highlighting-the-resulting-molecules">
 <h4>Highlighting the resulting molecules<a class="headerlink" href="#highlighting-the-resulting-molecules" title="Permalink to this headline">¶</a></h4>
 <p>You can get search results with highlighting by using the
-<tt class="docutils literal"><span class="pre">bingo.SearchSubHi</span></tt> function:</p>
+<code class="docutils literal"><span class="pre">bingo.SearchSubHi</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.&lt;columns&gt;, t.highlighting from $table, bingo.SearchSubHi(&#39;$table&#39;, $query, &#39;$parameters; TOP $n&#39;) t
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">$column</span></tt> is the column in your <tt class="docutils literal"><span class="pre">$table</span></tt> which contain the
+<p><code class="docutils literal"><span class="pre">$column</span></code> is the column in your <code class="docutils literal"><span class="pre">$table</span></code> which contain the
 molecules.</p>
-<p>Or you can use the <tt class="docutils literal"><span class="pre">bingo.SubHi</span></tt> function on each resulting molecule
+<p>Or you can use the <code class="docutils literal"><span class="pre">bingo.SubHi</span></code> function on each resulting molecule
 to get an Molfile containing the highlighted substructure:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.*, bingo.SubHi($column, $query, &#39;$parameters&#39;)
    from $table, bingo.SearchSub(&#39;$table&#39;, $query, &#39;$parameters; TOP $n&#39;) t
@@ -236,24 +236,24 @@ SMARTS matching in Bingo.</p>
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p>The meaning of <tt class="docutils literal"><span class="pre">$table</span></tt>, <tt class="docutils literal"><span class="pre">$id</span></tt>, <tt class="docutils literal"><span class="pre">$query</span></tt>, <tt class="docutils literal"><span class="pre">$parameters</span></tt>, and
-<tt class="docutils literal"><span class="pre">$n</span></tt> is the same as in <tt class="docutils literal"><span class="pre">SearchSub</span></tt> function.</p>
+<p>The meaning of <code class="docutils literal"><span class="pre">$table</span></code>, <code class="docutils literal"><span class="pre">$id</span></code>, <code class="docutils literal"><span class="pre">$query</span></code>, <code class="docutils literal"><span class="pre">$parameters</span></code>, and
+<code class="docutils literal"><span class="pre">$n</span></code> is the same as in <code class="docutils literal"><span class="pre">SearchSub</span></code> function.</p>
 <p>Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#exact-search">Bingo User Manual for
 Oracle</a> to learn the rules of
-Bingo exact matching and various flags available for <tt class="docutils literal"><span class="pre">$parameters</span></tt>
+Bingo exact matching and various flags available for <code class="docutils literal"><span class="pre">$parameters</span></code>
 string.</p>
 </div>
 <div class="section" id="tautomer-search">
 <h3>Tautomer Search<a class="headerlink" href="#tautomer-search" title="Permalink to this headline">¶</a></h3>
 <p>Tautomer search is implemented within Substructure and Exact search
-functions, and requires <tt class="docutils literal"><span class="pre">TAU</span></tt> flag to be specified in <tt class="docutils literal"><span class="pre">$parameters</span></tt>
+functions, and requires <code class="docutils literal"><span class="pre">TAU</span></code> flag to be specified in <code class="docutils literal"><span class="pre">$parameters</span></code>
 string. Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#tautomer-search">Bingo User Manual for
 Oracle</a> to learn the rules
 of Bingo exact and substructure tautomer matching.</p>
 <div class="section" id="customizing-the-rules">
 <h4>Customizing the Rules<a class="headerlink" href="#customizing-the-rules" title="Permalink to this headline">¶</a></h4>
 <p>Your database (to which you have installed Bingo) contains a table
-called <tt class="docutils literal"><span class="pre">bingo.TAUTOMER_RULES</span></tt>. By default it contains 3 records with
+called <code class="docutils literal"><span class="pre">bingo.TAUTOMER_RULES</span></code>. By default it contains 3 records with
 predefined rules. You can add, remove, or update the defined rules.
 Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#tautomer-search">Bingo User Manual for
 Oracle</a> to learn the format
@@ -267,18 +267,18 @@ of the tautomer matching rules.</p>
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p>The meaning of <tt class="docutils literal"><span class="pre">$table</span></tt>, <tt class="docutils literal"><span class="pre">$id</span></tt>, <tt class="docutils literal"><span class="pre">$query</span></tt>, and <tt class="docutils literal"><span class="pre">$n</span></tt> is the same
-as in <tt class="docutils literal"><span class="pre">SearchSub</span></tt> and <tt class="docutils literal"><span class="pre">SearchExact</span></tt> functions. <tt class="docutils literal"><span class="pre">$metric</span></tt> is a
-<tt class="docutils literal"><span class="pre">nvarchar</span></tt> string defining the metric to use: <tt class="docutils literal"><span class="pre">Tanimoto</span></tt>,
-<tt class="docutils literal"><span class="pre">Tversky</span></tt>, or <tt class="docutils literal"><span class="pre">Euclid-sub</span></tt>. Please see the corresponding section of
+<p>The meaning of <code class="docutils literal"><span class="pre">$table</span></code>, <code class="docutils literal"><span class="pre">$id</span></code>, <code class="docutils literal"><span class="pre">$query</span></code>, and <code class="docutils literal"><span class="pre">$n</span></code> is the same
+as in <code class="docutils literal"><span class="pre">SearchSub</span></code> and <code class="docutils literal"><span class="pre">SearchExact</span></code> functions. <code class="docutils literal"><span class="pre">$metric</span></code> is a
+<code class="docutils literal"><span class="pre">nvarchar</span></code> string defining the metric to use: <code class="docutils literal"><span class="pre">Tanimoto</span></code>,
+<code class="docutils literal"><span class="pre">Tversky</span></code>, or <code class="docutils literal"><span class="pre">Euclid-sub</span></code>. Please see the corresponding section of
 <a class="reference external" href="user-manual-oracle.html#similarity-search">Bingo User Manual for
 Oracle</a> to learn more
 about the metrics.</p>
-<p><tt class="docutils literal"><span class="pre">$bottom</span></tt> and <tt class="docutils literal"><span class="pre">$top</span></tt> are real numbers that specify bottom and top
+<p><code class="docutils literal"><span class="pre">$bottom</span></code> and <code class="docutils literal"><span class="pre">$top</span></code> are real numbers that specify bottom and top
 limits of the required similarity, respectively. By default, the bottom
 limit is zero and the top limit is 1, which is the maximum possible
-value of similarity. You can specify <tt class="docutils literal"><span class="pre">null</span></tt> in place of <tt class="docutils literal"><span class="pre">$bottom</span></tt> or
-<tt class="docutils literal"><span class="pre">$top</span></tt> to disable the lower or upper bound. In most cases, you may
+value of similarity. You can specify <code class="docutils literal"><span class="pre">null</span></code> in place of <code class="docutils literal"><span class="pre">$bottom</span></code> or
+<code class="docutils literal"><span class="pre">$top</span></code> to disable the lower or upper bound. In most cases, you may
 want to cancel the upper bound:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.* from $table, bingo.SearchSim(&#39;$table&#39;, $query, &#39;Tanimoto; TOP 100&#39;, 0.8, null) t
    where $table.$id = t.id;
@@ -292,8 +292,8 @@ want to cancel the upper bound:</p>
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p>The meaning of <tt class="docutils literal"><span class="pre">$table</span></tt>, <tt class="docutils literal"><span class="pre">$id</span></tt>, and <tt class="docutils literal"><span class="pre">$n</span></tt> is the same as in all
-similar functions mentioned above. <tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">nvarchar</span></tt> string
+<p>The meaning of <code class="docutils literal"><span class="pre">$table</span></code>, <code class="docutils literal"><span class="pre">$id</span></code>, and <code class="docutils literal"><span class="pre">$n</span></code> is the same as in all
+similar functions mentioned above. <code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">nvarchar</span></code> string
 which looks like ”&gt;= Cl6”, ”? C4 H4 O”, or ”= C6 H6”. Please see the
 corresponding section of the <a class="reference external" href="user-manual-oracle.html#gross-formula-search">Bingo User Manual for
 Oracle</a> to see some
@@ -306,15 +306,15 @@ examples.</p>
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">$table</span></tt>, <tt class="docutils literal"><span class="pre">$id</span></tt>, and <tt class="docutils literal"><span class="pre">$n</span></tt> have the usual meaning. <tt class="docutils literal"><span class="pre">$bottom</span></tt> and
-<tt class="docutils literal"><span class="pre">$top</span></tt> are numbers that specify the range to which the molecular
+<p><code class="docutils literal"><span class="pre">$table</span></code>, <code class="docutils literal"><span class="pre">$id</span></code>, and <code class="docutils literal"><span class="pre">$n</span></code> have the usual meaning. <code class="docutils literal"><span class="pre">$bottom</span></code> and
+<code class="docutils literal"><span class="pre">$top</span></code> are numbers that specify the range to which the molecular
 weight of the resulting molecules must belong. You can cancel the lower
-or upper limit by specifying <tt class="docutils literal"><span class="pre">null</span></tt> in place of <tt class="docutils literal"><span class="pre">$bottom</span></tt> or
-<tt class="docutils literal"><span class="pre">$top</span></tt>.</p>
+or upper limit by specifying <code class="docutils literal"><span class="pre">null</span></code> in place of <code class="docutils literal"><span class="pre">$bottom</span></code> or
+<code class="docutils literal"><span class="pre">$top</span></code>.</p>
 </div>
 <div class="section" id="format-conversion">
 <h3>Format Conversion<a class="headerlink" href="#format-conversion" title="Permalink to this headline">¶</a></h3>
-<p>You can convert a molecule to SMILES string with <tt class="docutils literal"><span class="pre">bingo.SMILES</span></tt>
+<p>You can convert a molecule to SMILES string with <code class="docutils literal"><span class="pre">bingo.SMILES</span></code>
 function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.SMILES(molfile) from mytable;
 
@@ -329,21 +329,21 @@ select t.id, bingo.SMILES(molfile)
    where mytable.id = t.id;
 </pre></div>
 </div>
-<p>You can convert a molecule to Molfile using the <tt class="docutils literal"><span class="pre">bingo.Molfile</span></tt>
+<p>You can convert a molecule to Molfile using the <code class="docutils literal"><span class="pre">bingo.Molfile</span></code>
 function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.Molfile(&#39;C1=CC2=C(C=C1)C=CC=C2&#39;);
 </pre></div>
 </div>
 <p>The automatic layout procedure is performed to calculate the 2D
 coordinates of the resulting molecule.</p>
-<p>You can convert a molecule to CML format using the <tt class="docutils literal"><span class="pre">bingo.CML</span></tt>
+<p>You can convert a molecule to CML format using the <code class="docutils literal"><span class="pre">bingo.CML</span></code>
 function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.CML(&#39;C1=CC2=C(C=C1)C=CC=C2&#39;);
 </pre></div>
 </div>
 <div class="section" id="canonical-smiles-computation">
 <h4>Canonical SMILES computation<a class="headerlink" href="#canonical-smiles-computation" title="Permalink to this headline">¶</a></h4>
-<p>You can use the <tt class="docutils literal"><span class="pre">bingo.CanSMILES()</span></tt> function to generate canonical
+<p>You can use the <code class="docutils literal"><span class="pre">bingo.CanSMILES()</span></code> function to generate canonical
 SMILES strings for molecules represented as Molfiles or SMILES strings.
 Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#canonical-smiles">Bingo User Manual for
 Oracle</a> to learn the
@@ -352,14 +352,14 @@ benefits of Bingo canonical SMILES format.</p>
 </div>
 <div class="section" id="molecule-fingerprints">
 <h3>Molecule Fingerprints<a class="headerlink" href="#molecule-fingerprints" title="Permalink to this headline">¶</a></h3>
-<p>You can generate a molecule fingerprint via <tt class="docutils literal"><span class="pre">bingo.Fingeprint</span></tt>
+<p>You can generate a molecule fingerprint via <code class="docutils literal"><span class="pre">bingo.Fingeprint</span></code>
 function. The syntax is the same as for Bingo for Oracle, and it is
 described <a class="reference external" href="user-manual-oracle.html#molecule-fingerprints">in this
 section</a>.</p>
 </div>
 <div class="section" id="inchi-and-inchikey">
 <h3>InChI and InChIKey<a class="headerlink" href="#inchi-and-inchikey" title="Permalink to this headline">¶</a></h3>
-<p>You can use <tt class="docutils literal"><span class="pre">bingo.InChI</span></tt> and <tt class="docutils literal"><span class="pre">bingo.InChIKey</span></tt> function to get InChI
+<p>You can use <code class="docutils literal"><span class="pre">bingo.InChI</span></code> and <code class="docutils literal"><span class="pre">bingo.InChIKey</span></code> function to get InChI
 and InChIKey strings. The syntax is the same as for Bingo for Oracle,
 and it is described <a class="reference external" href="user-manual-oracle.html#inchi-and-inchikey">in this
 section</a>.</p>
@@ -373,9 +373,9 @@ section</a>.</p>
 <div class="highlight-python"><div class="highlight"><pre>exec bingo.CreateReactionIndex &#39;$table&#39;, &#39;$id&#39;, &#39;$reaction&#39;;
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing chemical reaction data in
-column <tt class="docutils literal"><span class="pre">$reaction</span></tt> and the unique integer identifier in column
-<tt class="docutils literal"><span class="pre">$id</span></tt>.</p>
+<p><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing chemical reaction data in
+column <code class="docutils literal"><span class="pre">$reaction</span></code> and the unique integer identifier in column
+<code class="docutils literal"><span class="pre">$id</span></code>.</p>
 </div>
 <div class="section" id="reaction-substructure-search">
 <h3>Reaction Substructure Search<a class="headerlink" href="#reaction-substructure-search" title="Permalink to this headline">¶</a></h3>
@@ -384,30 +384,30 @@ column <tt class="docutils literal"><span class="pre">$reaction</span></tt> and 
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing the unique integer
-identifier in column <tt class="docutils literal"><span class="pre">$id</span></tt>. <tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">nvarchar</span></tt> string
+<p><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing the unique integer
+identifier in column <code class="docutils literal"><span class="pre">$id</span></code>. <code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">nvarchar</span></code> string
 containing the query Rxnfile or reaction SMILES.</p>
-<p><tt class="docutils literal"><span class="pre">$n</span></tt> is the number defining how many hits you want, at most.</p>
-<p><strong>Note:</strong> It is possible to use the ordinary <tt class="docutils literal"><span class="pre">SELECT</span> <span class="pre">TOP</span></tt> SQL
-statement, but using the <tt class="docutils literal"><span class="pre">TOP</span></tt> parameter in Bingo parameters string
+<p><code class="docutils literal"><span class="pre">$n</span></code> is the number defining how many hits you want, at most.</p>
+<p><strong>Note:</strong> It is possible to use the ordinary <code class="docutils literal"><span class="pre">SELECT</span> <span class="pre">TOP</span></code> SQL
+statement, but using the <code class="docutils literal"><span class="pre">TOP</span></code> parameter in Bingo parameters string
 will be better for performance, as in this case the database engine will
 not retrieve all the resulting records into memory before returning the
-top <tt class="docutils literal"><span class="pre">$n</span></tt> ones.</p>
+top <code class="docutils literal"><span class="pre">$n</span></code> ones.</p>
 <p>You can get all the hits by portions of an arbitary size. First query
-should have <tt class="docutils literal"><span class="pre">START</span></tt> option:</p>
+should have <code class="docutils literal"><span class="pre">START</span></code> option:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.* from $table, bingo.SearchRSub(&#39;$table&#39;, $query, &#39;$parameters; TOP $n; START&#39;) t
    where $table.$id = t.id;
 </pre></div>
 </div>
 <p>After that you can get next portion of results by specifing last id,
-returned by <tt class="docutils literal"><span class="pre">SearchSub</span></tt> function:</p>
+returned by <code class="docutils literal"><span class="pre">SearchSub</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.* from $table, bingo.SearchRSub(&#39;$table&#39;, $query, &#39;$parameters; TOP $n; NEXT $last_id&#39;) t
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p><strong>Note:</strong> These <tt class="docutils literal"><span class="pre">TOP</span></tt>, <tt class="docutils literal"><span class="pre">START</span></tt>, and <tt class="docutils literal"><span class="pre">NEXT</span></tt> options are common for
+<p><strong>Note:</strong> These <code class="docutils literal"><span class="pre">TOP</span></code>, <code class="docutils literal"><span class="pre">START</span></code>, and <code class="docutils literal"><span class="pre">NEXT</span></code> options are common for
 all Bingo search functions.</p>
-<p>In case you need all the hits, you can omit the <tt class="docutils literal"><span class="pre">TOP</span> <span class="pre">$n</span></tt>, leaving the
+<p>In case you need all the hits, you can omit the <code class="docutils literal"><span class="pre">TOP</span> <span class="pre">$n</span></code>, leaving the
 empty string:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.* from $table, bingo.SearchRSub(&#39;$table&#39;, $query, &#39;&#39;) t
    where $table.$id = t.id;
@@ -449,50 +449,50 @@ of SMARTS matching in Bingo.</p>
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p>The meaning of <tt class="docutils literal"><span class="pre">$table</span></tt>, <tt class="docutils literal"><span class="pre">$id</span></tt>, <tt class="docutils literal"><span class="pre">$query</span></tt>, <tt class="docutils literal"><span class="pre">$parameters</span></tt>, and
-<tt class="docutils literal"><span class="pre">$n</span></tt> is the same as in <tt class="docutils literal"><span class="pre">SearchSub</span></tt> function.</p>
+<p>The meaning of <code class="docutils literal"><span class="pre">$table</span></code>, <code class="docutils literal"><span class="pre">$id</span></code>, <code class="docutils literal"><span class="pre">$query</span></code>, <code class="docutils literal"><span class="pre">$parameters</span></code>, and
+<code class="docutils literal"><span class="pre">$n</span></code> is the same as in <code class="docutils literal"><span class="pre">SearchSub</span></code> function.</p>
 <p>Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#exact-search-1">Bingo User Manual for
 Oracle</a> to learn the rules of
-Bingo exact matching and various flags available for <tt class="docutils literal"><span class="pre">$parameters</span></tt>
+Bingo exact matching and various flags available for <code class="docutils literal"><span class="pre">$parameters</span></code>
 string.</p>
 <div class="section" id="highlighting-the-resulting-reactions">
 <h4>Highlighting the resulting reactions<a class="headerlink" href="#highlighting-the-resulting-reactions" title="Permalink to this headline">¶</a></h4>
-<p>You can get the highlighted results by using <tt class="docutils literal"><span class="pre">BingoSearchRSub</span></tt>
+<p>You can get the highlighted results by using <code class="docutils literal"><span class="pre">BingoSearchRSub</span></code>
 function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.&lt;columns&gt;, t.highlighting from $table, bingo.SearchRSubHi(&#39;$table&#39;, $query, &#39;$parameters; TOP $n&#39;) t
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p>Or you can use the <tt class="docutils literal"><span class="pre">bingo.RSubHi</span></tt> function on each resulting reaction
+<p>Or you can use the <code class="docutils literal"><span class="pre">bingo.RSubHi</span></code> function on each resulting reaction
 to get an Rxnfile containing the highlighted substructure:</p>
 <div class="highlight-python"><div class="highlight"><pre>select $table.*, bingo.RSubHi($column, $query)
    from $table, bingo.SearchRSub(&#39;$table&#39;, $query, &#39;TOP $n&#39;) t
    where $table.$id = t.id;
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">$column</span></tt> is the column in your <tt class="docutils literal"><span class="pre">$table</span></tt> which contain the
+<p><code class="docutils literal"><span class="pre">$column</span></code> is the column in your <code class="docutils literal"><span class="pre">$table</span></code> which contain the
 reactions.</p>
 </div>
 </div>
 <div class="section" id="automatic-atom-to-atom-mapping">
 <h3>Automatic Atom-to-Atom mapping<a class="headerlink" href="#automatic-atom-to-atom-mapping" title="Permalink to this headline">¶</a></h3>
-<p>You can compute reaction AAM by calling <tt class="docutils literal"><span class="pre">bingo.AAM</span></tt> function:</p>
+<p>You can compute reaction AAM by calling <code class="docutils literal"><span class="pre">bingo.AAM</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.AAM($reaction, $strategy);
 </pre></div>
 </div>
-<p>As <tt class="docutils literal"><span class="pre">$reaction</span></tt> you can specify a <tt class="docutils literal"><span class="pre">nvarchar</span></tt> string containing
+<p>As <code class="docutils literal"><span class="pre">$reaction</span></code> you can specify a <code class="docutils literal"><span class="pre">nvarchar</span></code> string containing
 reaction SMILES or Rxnfile. The return value is an Rxnfile. In case the
 given reaction is represented as a reaction SMILES, the automatic
 reaction layout is performed.</p>
 <p>The corresponding section of <a class="reference external" href="user-manual-oracle.html#automatic-atom-to-atom-mapping">Bingo User Manual for
 Oracle</a>
-describes the allowable values of the <tt class="docutils literal"><span class="pre">$strategy</span></tt> parameter and shows
+describes the allowable values of the <code class="docutils literal"><span class="pre">$strategy</span></code> parameter and shows
 some examples.</p>
 </div>
 <div class="section" id="id4">
 <h3>Format Conversion<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>You can convert a reaction to reaction SMILES string with
-<tt class="docutils literal"><span class="pre">bingo.RSMILES</span></tt> function:</p>
+<code class="docutils literal"><span class="pre">bingo.RSMILES</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.RSMILES(rxnfile) from mytable;
 
 select t.id, bingo.RSMILES(rxnfile)
@@ -507,13 +507,13 @@ select t.id, bingo.RSMILES(rxnfile)
 </pre></div>
 </div>
 <p>You can convert a reaction SMILES string to Rxnfile using the
-<tt class="docutils literal"><span class="pre">bingo.Rxnfile</span></tt> function:</p>
+<code class="docutils literal"><span class="pre">bingo.Rxnfile</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.Rxnfile(&#39;COC(=O)CC1=CC(=C)NC2=C1C(=O)CCC2&gt;&gt;ONC(=O)CC1=CC(=O)NC2=C1C(CCC2)=NO&#39;);
 </pre></div>
 </div>
 <p>The automatic layout procedure is performed to calculate the 2D
 coordinates of the resulting reaction.</p>
-<p>You can convert a reaction to a reaction CML using the <tt class="docutils literal"><span class="pre">bingo.RCML</span></tt>
+<p>You can convert a reaction to a reaction CML using the <code class="docutils literal"><span class="pre">bingo.RCML</span></code>
 function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.RCML(&#39;COC(=O)CC1=CC(=C)NC2=C1C(=O)CCC2&gt;&gt;ONC(=O)CC1=CC(=O)NC2=C1C(CCC2)=NO&#39;);
 </pre></div>
@@ -521,7 +521,7 @@ function:</p>
 </div>
 <div class="section" id="reaction-fingerprints">
 <h3>Reaction Fingerprints<a class="headerlink" href="#reaction-fingerprints" title="Permalink to this headline">¶</a></h3>
-<p>You can generate a reaction fingerprint via <tt class="docutils literal"><span class="pre">bingo.RFingeprint</span></tt>
+<p>You can generate a reaction fingerprint via <code class="docutils literal"><span class="pre">bingo.RFingeprint</span></code>
 function. The syntax is the same as for Bingo for Oracle, and it is
 described <a class="reference external" href="user-manual-oracle.html#reaction-fingerprints">in this
 section</a>.</p>
@@ -539,11 +539,11 @@ exec bingo.ImportSDF &#39;$table&#39;, &#39;$column&#39;, &#39;$filename.sdf[.gz
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molfiles in
-<tt class="docutils literal"><span class="pre">$column</span></tt></li>
-<li><tt class="docutils literal"><span class="pre">$id</span></tt> is another column of the table, containing unique integer
-identifiers, which are read from <tt class="docutils literal"><span class="pre">$sdf_id</span></tt> field of the SDF file.</li>
-<li><tt class="docutils literal"><span class="pre">$other_columns</span></tt> is the comma-separated list of space-separated
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molfiles in
+<code class="docutils literal"><span class="pre">$column</span></code></li>
+<li><code class="docutils literal"><span class="pre">$id</span></code> is another column of the table, containing unique integer
+identifiers, which are read from <code class="docutils literal"><span class="pre">$sdf_id</span></code> field of the SDF file.</li>
+<li><code class="docutils literal"><span class="pre">$other_columns</span></code> is the comma-separated list of space-separated
 &#8216;property-column&#8217; pairs that are to be imported. Each given SDF
 property is mapped to the given table column. You can specify an
 empty string if there are no properties to import.</li>
@@ -562,19 +562,19 @@ can call it the same way:</p>
 <div class="highlight-python"><div class="highlight"><pre>exec bingo.ImportSDF &#39;nci&#39;, &#39;molfile&#39;, &#39;C:\Users\Administrator\july2008_2d.sdf.gz&#39;, &#39;nsc nsc&#39;;
 </pre></div>
 </div>
-<p>Importing RDF files is done with <tt class="docutils literal"><span class="pre">ImportRDF()</span></tt> function the same way
+<p>Importing RDF files is done with <code class="docutils literal"><span class="pre">ImportRDF()</span></code> function the same way
 as SDF files:</p>
 <div class="highlight-python"><div class="highlight"><pre>create table $table ($id int, $column nvarchar(max), ...);
 exec bingo.ImportRDF &#39;$table&#39;, &#39;$column&#39;, &#39;$filename.rdf[.gz]&#39;, &#39;$sdf_id $id[, $other_columns]&#39;;
 </pre></div>
 </div>
 <p>Importing multi-line molecule or reaction SMILES file is done the
-similar way with the <tt class="docutils literal"><span class="pre">ImportSMILES()</span></tt> function:</p>
+similar way with the <code class="docutils literal"><span class="pre">ImportSMILES()</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre>create table $table ($id int, $column nvarchar(max), ...);
 exec bingo.ImportSMILES &#39;$table&#39;, &#39;$column&#39;, &#39;$filename.sdf[.gz]&#39;, &#39;$id&#39;;
 </pre></div>
 </div>
-<p>The identifier within SMILES string, which goes for the <tt class="docutils literal"><span class="pre">$id</span></tt> column,
+<p>The identifier within SMILES string, which goes for the <code class="docutils literal"><span class="pre">$id</span></code> column,
 is anything that goes after the molecule or reaction, separated by
 space.</p>
 <p><strong>Note:</strong> When you import the file contents to a table, the old table
@@ -588,7 +588,7 @@ export the molecule or reaction table to an SDF file.</p>
 <div class="highlight-python"><div class="highlight"><pre>EXEC Bingo.ExportSDF &#39;$table&#39;, &#39;$column&#39;, &#39;$filename&#39;, &#39;$other_columns&#39;
 </pre></div>
 </div>
-<p>Example of exporting the PubChem database to the <tt class="docutils literal"><span class="pre">/tmp/pubchem.sdf</span></tt>
+<p>Example of exporting the PubChem database to the <code class="docutils literal"><span class="pre">/tmp/pubchem.sdf</span></code>
 file:</p>
 <div class="highlight-python"><div class="highlight"><pre>EXEC Bingo.ExportSDF &#39;PUBCHEM.COMPOUNDS&#39;, &#39;structure&#39;, &#39;c:/tmp/pubchem.sdf&#39;, &#39;cid, name, mw&#39;
 </pre></div>
@@ -599,7 +599,7 @@ file:</p>
 <h2>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="extracting-the-names-of-molecules-and-reactions">
 <h3>Extracting the Names of Molecules and Reactions<a class="headerlink" href="#extracting-the-names-of-molecules-and-reactions" title="Permalink to this headline">¶</a></h3>
-<p><tt class="docutils literal"><span class="pre">bingo.Name</span></tt> function extracts the molecule or reaction name from
+<p><code class="docutils literal"><span class="pre">bingo.Name</span></code> function extracts the molecule or reaction name from
 Molfile, Rxnfile, or SMILES string.</p>
 <div class="highlight-python"><div class="highlight"><pre>SELECT bingo.Name(molfile) from mytable;
 
@@ -609,32 +609,32 @@ SELECT bingo.Name(&#39;c1ccc2ccccc2c1 Naphthalene&#39;);
 </div>
 <div class="section" id="calculating-molecule-properties">
 <h3>Calculating Molecule Properties<a class="headerlink" href="#calculating-molecule-properties" title="Permalink to this headline">¶</a></h3>
-<p><tt class="docutils literal"><span class="pre">bingo.Mass</span></tt> function returns the molecular weight of the given
+<p><code class="docutils literal"><span class="pre">bingo.Mass</span></code> function returns the molecular weight of the given
 molecule, represented as a Molfile or SMILES string. It has an
 additional parameter which defines the &#8216;kind&#8217; of the resulting molecular
 mass value.</p>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'</span></tt> is a short for
-<tt class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'molecular-weight')</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'molecular-weight')</span></tt> returns the molecular
+<li><code class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'</span></code> is a short for
+<code class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'molecular-weight')</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'molecular-weight')</span></code> returns the molecular
 weight.</li>
-<li><tt class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'most-abundant-mass')</span></tt> returns the <a class="reference external" href="http://en.wikipedia.org/wiki/Mass%20%28mass%20spectrometry%29#Most%20abundant%20mass#Most%20abundant%20mass">most
+<li><code class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'most-abundant-mass')</span></code> returns the <a class="reference external" href="http://en.wikipedia.org/wiki/Mass%20%28mass%20spectrometry%29#Most%20abundant%20mass#Most%20abundant%20mass">most
 abundant
 mass</a>,
 which is calculated using most likely isotopic composition for a
 single random molecule.</li>
-<li><tt class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'monoisotopic-mass')</span></tt> returns the
+<li><code class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'monoisotopic-mass')</span></code> returns the
 <a class="reference external" href="http://en.wikipedia.org/wiki/Monoisotopic_mass">monoisotopic
 mass</a>, which is
 calculated using the most abundant isotope of each element.</li>
 </ul>
-<p>Here are some examples of using the <tt class="docutils literal"><span class="pre">Bingo.Mass()</span></tt> operator:</p>
+<p>Here are some examples of using the <code class="docutils literal"><span class="pre">Bingo.Mass()</span></code> operator:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.Mass(&#39;C1C=CC=CC=1&#39;, &#39;&#39;);
 
 select bingo.MolecularWeight(molfile, &#39;most-abundant-mass&#39;) from mytable;
 </pre></div>
 </div>
-<p>Similarly, <tt class="docutils literal"><span class="pre">bingo.Gross()</span></tt> function returns the gross formula of the
+<p>Similarly, <code class="docutils literal"><span class="pre">bingo.Gross()</span></code> function returns the gross formula of the
 given molecule</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.Gross(&#39;C1C=CC=CC=1&#39;);
 
@@ -644,35 +644,35 @@ select bingo.Gross(molfile) from mytable;
 </div>
 <div class="section" id="checking-molecules-and-reactions-for-correctness">
 <h3>Checking Molecules and Reactions for Correctness<a class="headerlink" href="#checking-molecules-and-reactions-for-correctness" title="Permalink to this headline">¶</a></h3>
-<p>You can use the <tt class="docutils literal"><span class="pre">bingo.CheckMolecule()</span></tt> function to check that
+<p>You can use the <code class="docutils literal"><span class="pre">bingo.CheckMolecule()</span></code> function to check that
 molecules are presented in acceptable form. If the molecule has some
 problems (unsupported format, exceeded valence, incorrect
 stereochemistry), the functions returns a string with the description of
 the problem. Is the molecule is represented with a correct Molfile or
-SMILES string, the function returns <tt class="docutils literal"><span class="pre">null</span></tt>.</p>
+SMILES string, the function returns <code class="docutils literal"><span class="pre">null</span></code>.</p>
 <div class="highlight-python"><div class="highlight"><pre>SELECT bingo.CheckMolecule($molecule);
 
 SELECT $table.*, bingo.CheckMolecule($column) from $table where bingo.CheckMolecule($column) is not null;
 </pre></div>
 </div>
 <p>Similarly, you can check reactions for correctness with the
-<tt class="docutils literal"><span class="pre">bingo.CheckReaction()</span></tt> function:</p>
+<code class="docutils literal"><span class="pre">bingo.CheckReaction()</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre>SELECT bingo.CheckReaction($reaction);
 
 SELECT $table.*, bingo.CheckReaction($column) from $table where bingo.CheckReaction($column) is not null;
 </pre></div>
 </div>
-<p>To check the whole table you can use <tt class="docutils literal"><span class="pre">CheckMoleculeTable</span></tt> and
-<tt class="docutils literal"><span class="pre">CheckReactionTable</span></tt> functions. It is much faster to check the whole
+<p>To check the whole table you can use <code class="docutils literal"><span class="pre">CheckMoleculeTable</span></code> and
+<code class="docutils literal"><span class="pre">CheckReactionTable</span></code> functions. It is much faster to check the whole
 table then to check each molecule one by one.</p>
 <p>The following command checkes the table for invalid molecules/reactions:</p>
 <div class="highlight-python"><div class="highlight"><pre>select * from bingo.CheckMoleculeTable(&#39;$table&#39;, &#39;$id&#39;, &#39;$molecule&#39;)
 select * from bingo.CheckReactionTable(&#39;$table&#39;, &#39;$id&#39;, &#39;$reaction_column&#39;)
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molecule/reaction data in
-column <tt class="docutils literal"><span class="pre">$molecule</span></tt>/<tt class="docutils literal"><span class="pre">$reaction</span></tt> and the unique integer identifier in
-column <tt class="docutils literal"><span class="pre">$id</span></tt>.</p>
+<p><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molecule/reaction data in
+column <code class="docutils literal"><span class="pre">$molecule</span></code>/<code class="docutils literal"><span class="pre">$reaction</span></code> and the unique integer identifier in
+column <code class="docutils literal"><span class="pre">$id</span></code>.</p>
 <p>These functions returns a table with molecule/reactions that have
 mistakes. Such records will not be added to them chemical index. Before
 indexing new table we recommend you to call this method and correct
@@ -724,10 +724,10 @@ have permissions to perform molecule and reaction search queries.</li>
 </div>
 <div class="section" id="viewing-the-log-file">
 <h3>Viewing the Log File<a class="headerlink" href="#viewing-the-log-file" title="Permalink to this headline">¶</a></h3>
-<p>The log file is called <tt class="docutils literal"><span class="pre">bingo_sql_server.log</span></tt> and located in the
+<p>The log file is called <code class="docutils literal"><span class="pre">bingo_sql_server.log</span></code> and located in the
 system temporary directory on the server file system. Usually it is:
-<tt class="docutils literal"><span class="pre">C:\Windows\Temp\bingo_sql_server.log</span></tt> or
-<tt class="docutils literal"><span class="pre">C:\Windows\ServiceProfiles\NetworkService\AppData\bingo_sql_server.log</span></tt>.
+<code class="docutils literal"><span class="pre">C:\Windows\Temp\bingo_sql_server.log</span></code> or
+<code class="docutils literal"><span class="pre">C:\Windows\ServiceProfiles\NetworkService\AppData\bingo_sql_server.log</span></code>.
 To find out the log file location you can call:</p>
 <div class="highlight-python"><div class="highlight"><pre>exec bingo._WriteLog &#39;Some text&#39;
 </pre></div>
@@ -745,7 +745,7 @@ measures of the SQL queries are written to the log as well.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper"><p class="logo">
   <a href="../index.html">
     <img class="logo" src="../_static/logo.svg" alt="Logo"/>
@@ -753,88 +753,8 @@ measures of the SQL queries are written to the log as well.</p>
   </a>
 </p>
 <h3>Table Of Contents</h3>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Bingo</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="building-from-source.html">Building from Source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation-manual-oracle.html">Installation Manual: Oracle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation-manual-sqlserver.html">Installation Manual: SQL Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation-manual-postgres.html">Installation Manual: PostgreSQL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance-tips-oracle.html">Performance Tips: Oracle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user-manual-oracle.html">User Manual: Oracle</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">User Manual: SQL Server</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#basics">Basics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#data-representation">Data representation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#storage">Storage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#queries">Queries</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#molecules">Molecules</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#creating-an-index">Creating an Index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#updating-and-dropping-index">Updating and Dropping Index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#substructure-search">Substructure Search</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#highlighting-the-resulting-molecules">Highlighting the resulting molecules</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#smarts-search">SMARTS Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#exact-search">Exact Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tautomer-search">Tautomer Search</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#customizing-the-rules">Customizing the Rules</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#similarity-search">Similarity Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#gross-formula-search">Gross Formula Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#molecular-weight-search">Molecular Weight Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#format-conversion">Format Conversion</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#canonical-smiles-computation">Canonical SMILES computation</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#molecule-fingerprints">Molecule Fingerprints</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#inchi-and-inchikey">InChI and InChIKey</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#reactions">Reactions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Creating an Index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reaction-substructure-search">Reaction Substructure Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">SMARTS Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">Exact Search</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#highlighting-the-resulting-reactions">Highlighting the resulting reactions</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#automatic-atom-to-atom-mapping">Automatic Atom-to-Atom mapping</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">Format Conversion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reaction-fingerprints">Reaction Fingerprints</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#importing-and-exporting-data">Importing and Exporting Data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#importing-sdfiles-rdfiles-and-smiles-files">Importing SDFiles, RDFiles, and SMILES files</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#exporting-sdfiles">Exporting SDFiles</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#utility-functions">Utility functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#extracting-the-names-of-molecules-and-reactions">Extracting the Names of Molecules and Reactions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#calculating-molecule-properties">Calculating Molecule Properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#checking-molecules-and-reactions-for-correctness">Checking Molecules and Reactions for Correctness</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#permissions-management">Permissions management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#maintenance">Maintenance</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#obtaining-bingo-version-number">Obtaining Bingo Version Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#viewing-the-log-file">Viewing the Log File</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="user-manual-postgres.html">User Manual: PostgreSQL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html">Bingo Changelog</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#why-select-bingo-as-your-molecular-search-cartridge">Why Select Bingo as Your Molecular Search Cartridge?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#features">Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#download-and-install">Download and Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#license">License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#feedback">Feedback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#commercial-availability">Commercial Availability</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Bingo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
@@ -846,7 +766,7 @@ measures of the SQL queries are written to the log as well.</p>
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
 </ul>
 
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
