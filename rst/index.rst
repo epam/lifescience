@@ -1,5 +1,5 @@
-Open-Source Initiative
-======================
+Life Science Open Source
+========================
 
 .. toctree::
     :hidden:
