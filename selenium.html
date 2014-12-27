@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="top" title="Life Sciences 0.1.0 documentation" href="index.html" />
     <link rel="next" title="Resources" href="resources.html" />
@@ -33,8 +33,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -53,7 +53,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="epam-selenium-framework">
 <h1>EPAM Selenium Framework<a class="headerlink" href="#epam-selenium-framework" title="Permalink to this headline">¶</a></h1>
@@ -81,7 +81,7 @@ substantial test development instead of tiresome testware maintenance.</p>
 <div class="section" id="how-to-use">
 <h2>How to Use<a class="headerlink" href="#how-to-use" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">Change the <code class="docutils literal"><span class="pre">pom.xml</span></code> file of Maven project:</p>
+<li><p class="first">Change the <tt class="docutils literal"><span class="pre">pom.xml</span></tt> file of Maven project:</p>
 <ul>
 <li><p class="first">Add the following dependencies:</p>
 <div class="highlight-python"><div class="highlight"><pre>&lt;dependency&gt;
@@ -98,7 +98,7 @@ substantial test development instead of tiresome testware maintenance.</p>
 </div>
 </li>
 <li><p class="first">Add the XML suit file and listener to the
-<code class="docutils literal"><span class="pre">maven-surefire-plugin</span></code> configuration:</p>
+<tt class="docutils literal"><span class="pre">maven-surefire-plugin</span></tt> configuration:</p>
 <div class="highlight-python"><div class="highlight"><pre>&lt;suiteXmlFiles&gt;
     &lt;suiteXmlFile&gt;src/test/resources/${testng_xml}&lt;/suiteXmlFile&gt;
 &lt;/suiteXmlFiles&gt;
@@ -112,8 +112,8 @@ substantial test development instead of tiresome testware maintenance.</p>
 </li>
 </ul>
 </li>
-<li><p class="first">Create base class that extends the <code class="docutils literal"><span class="pre">TestBaseWebDriver</span></code> class with
-<code class="docutils literal"><span class="pre">TestNG</span></code> annotations:</p>
+<li><p class="first">Create base class that extends the <tt class="docutils literal"><span class="pre">TestBaseWebDriver</span></tt> class with
+<tt class="docutils literal"><span class="pre">TestNG</span></tt> annotations:</p>
 <div class="highlight-python"><div class="highlight"><pre>@BeforeTest
 public void setUp() throws MalformedURLException {
     setBrowserType(&quot;firefox&quot;);
@@ -138,7 +138,7 @@ environment variables.</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">For using AutoIt library, please, download <code class="docutils literal"><span class="pre">AutoItX3.dll</span></code> (<a class="reference external" href="http://www.autoitscript.com/site/autoit/downloads/">AutoIt
+<li><p class="first">For using AutoIt library, please, download <tt class="docutils literal"><span class="pre">AutoItX3.dll</span></tt> (<a class="reference external" href="http://www.autoitscript.com/site/autoit/downloads/">AutoIt
 Downloads</a>)
 and add environment variable.</p>
 <p>For project base class it is:</p>
@@ -147,10 +147,10 @@ and add environment variable.</p>
 </div>
 </li>
 </ol>
-<p>Use standard TestNG plugin commands: <code class="docutils literal"><span class="pre">run</span></code> or <code class="docutils literal"><span class="pre">debug</span></code> for running a
-specific test. Use Maven lifecycle command <code class="docutils literal"><span class="pre">test</span></code> for running the test
+<p>Use standard TestNG plugin commands: <tt class="docutils literal"><span class="pre">run</span></tt> or <tt class="docutils literal"><span class="pre">debug</span></tt> for running a
+specific test. Use Maven lifecycle command <tt class="docutils literal"><span class="pre">test</span></tt> for running the test
 suit and creating the HTML report. Use command line for running a test
-suit: <code class="docutils literal"><span class="pre">mvn.bat</span> <span class="pre">clean</span> <span class="pre">test</span></code></p>
+suit: <tt class="docutils literal"><span class="pre">mvn.bat</span> <span class="pre">clean</span> <span class="pre">test</span></tt></p>
 </div>
 <div class="section" id="demos">
 <h2>Demos<a class="headerlink" href="#demos" title="Permalink to this headline">¶</a></h2>
@@ -183,7 +183,7 @@ this program. If you did not, please see <a class="reference external" href="htt
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper"><p class="logo">
   <a href="index.html">
     <img class="logo" src="_static/logo.svg" alt="Logo"/>
@@ -198,13 +198,21 @@ this program. If you did not, please see <a class="reference external" href="htt
 <li class="toctree-l1"><a class="reference internal" href="indigo/eln/index.html">Indigo ELN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="imago/index.html">Imago OCR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parso.html">Parso</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Selenium Framework</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Selenium Framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#framework-features">Framework Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use">How to Use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#demos">Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-sources">Download Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download/index.html">Downloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Info</a></li>
 </ul>
 
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />

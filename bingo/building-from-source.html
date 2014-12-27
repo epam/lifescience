@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
     <link rel="up" title="Bingo" href="index.html" />
@@ -34,8 +34,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -55,7 +55,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="building-from-source">
 <h1>Building from Source<a class="headerlink" href="#building-from-source" title="Permalink to this headline">¶</a></h1>
@@ -63,41 +63,41 @@
 <h2>Unpack the Source Code<a class="headerlink" href="#unpack-the-source-code" title="Permalink to this headline">¶</a></h2>
 <p>The source code links are available on the
 <a class="reference external" href="../download/index.html">Downloads</a> page.</p>
-<p>Unzip the <code class="docutils literal"><span class="pre">bingo-src-XXXX.zip</span></code> archive (<code class="docutils literal"><span class="pre">XXXX</span></code> is the revision
+<p>Unzip the <tt class="docutils literal"><span class="pre">bingo-src-XXXX.zip</span></tt> archive (<tt class="docutils literal"><span class="pre">XXXX</span></tt> is the revision
 number). After finishing the unpacking, go to the
-<code class="docutils literal"><span class="pre">bingo-src-XXXX/bingo</span></code> folder.</p>
+<tt class="docutils literal"><span class="pre">bingo-src-XXXX/bingo</span></tt> folder.</p>
 </div>
 <div class="section" id="copy-the-oci-files">
 <h2>Copy the OCI files<a class="headerlink" href="#copy-the-oci-files" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="on-all-systems">
 <h3>On All Systems<a class="headerlink" href="#on-all-systems" title="Permalink to this headline">¶</a></h3>
-<p>Copy <code class="docutils literal"><span class="pre">oci.h</span></code>, <code class="docutils literal"><span class="pre">ociextp.h</span></code>, and other header files from your Oracle
-installation (usually located in <code class="docutils literal"><span class="pre">$ORACLE_HOME/rdbms/public/</span></code> and/or
-<code class="docutils literal"><span class="pre">$ORACLE_HOME/oci/include/</span></code> and/or <code class="docutils literal"><span class="pre">$ORACLE_HOME/rdbms/demo/</span></code>) into
-<code class="docutils literal"><span class="pre">../oci/include</span></code> directory. On Solaris, copy them to the
-<code class="docutils literal"><span class="pre">../oci/include.sun</span></code> directory instead.</p>
+<p>Copy <tt class="docutils literal"><span class="pre">oci.h</span></tt>, <tt class="docutils literal"><span class="pre">ociextp.h</span></tt>, and other header files from your Oracle
+installation (usually located in <tt class="docutils literal"><span class="pre">$ORACLE_HOME/rdbms/public/</span></tt> and/or
+<tt class="docutils literal"><span class="pre">$ORACLE_HOME/oci/include/</span></tt> and/or <tt class="docutils literal"><span class="pre">$ORACLE_HOME/rdbms/demo/</span></tt>) into
+<tt class="docutils literal"><span class="pre">../oci/include</span></tt> directory. On Solaris, copy them to the
+<tt class="docutils literal"><span class="pre">../oci/include.sun</span></tt> directory instead.</p>
 </div>
 <div class="section" id="on-32-bit-windows">
 <h3>On 32-bit Windows<a class="headerlink" href="#on-32-bit-windows" title="Permalink to this headline">¶</a></h3>
-<p>Copy <code class="docutils literal"><span class="pre">oci.lib</span></code> from your Oracle installation (usually located in
-<code class="docutils literal"><span class="pre">%ORACLE_HOME%\oci\lib\msvc\</span></code>) into <code class="docutils literal"><span class="pre">../oci/lib32/oci32.lib</span></code>.
+<p>Copy <tt class="docutils literal"><span class="pre">oci.lib</span></tt> from your Oracle installation (usually located in
+<tt class="docutils literal"><span class="pre">%ORACLE_HOME%\oci\lib\msvc\</span></tt>) into <tt class="docutils literal"><span class="pre">../oci/lib32/oci32.lib</span></tt>.
 <strong>Note:</strong> You should rename the file.</p>
 </div>
 <div class="section" id="on-64-bit-windows">
 <h3>On 64-bit Windows<a class="headerlink" href="#on-64-bit-windows" title="Permalink to this headline">¶</a></h3>
-<p>Copy <code class="docutils literal"><span class="pre">oci.lib</span></code> from your Oracle installation (usually located in
-<code class="docutils literal"><span class="pre">%ORACLE_HOME%\oci\lib\msvc\</span></code>) into <code class="docutils literal"><span class="pre">../oci/lib64/oci64.lib</span></code>.
+<p>Copy <tt class="docutils literal"><span class="pre">oci.lib</span></tt> from your Oracle installation (usually located in
+<tt class="docutils literal"><span class="pre">%ORACLE_HOME%\oci\lib\msvc\</span></tt>) into <tt class="docutils literal"><span class="pre">../oci/lib64/oci64.lib</span></tt>.
 <strong>Note:</strong> You should rename the file.</p>
 </div>
 <div class="section" id="on-mac-os-x">
 <h3>On Mac OS X<a class="headerlink" href="#on-mac-os-x" title="Permalink to this headline">¶</a></h3>
-<p>Copy <code class="docutils literal"><span class="pre">liborasdk.dylib</span></code> from your Oracle installation (usually located
-in <code class="docutils literal"><span class="pre">%ORACLE_HOME%\lib\</span></code>) into <code class="docutils literal"><span class="pre">../oci/lib64/liborasdk.dylib</span></code>.</p>
+<p>Copy <tt class="docutils literal"><span class="pre">liborasdk.dylib</span></tt> from your Oracle installation (usually located
+in <tt class="docutils literal"><span class="pre">%ORACLE_HOME%\lib\</span></tt>) into <tt class="docutils literal"><span class="pre">../oci/lib64/liborasdk.dylib</span></tt>.</p>
 </div>
 </div>
 <div class="section" id="build">
 <h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
-<p><strong>Note:</strong> You should have the <code class="docutils literal"><span class="pre">zip</span></code> command-line utility installed on
+<p><strong>Note:</strong> You should have the <tt class="docutils literal"><span class="pre">zip</span></tt> command-line utility installed on
 your system.</p>
 <p>On Linux, run</p>
 <div class="highlight-python"><div class="highlight"><pre>./all-release-linux.sh $version
@@ -111,8 +111,8 @@ your system.</p>
 <div class="highlight-python"><div class="highlight"><pre>all-release-windows.bat $version
 </pre></div>
 </div>
-<p>where <code class="docutils literal"><span class="pre">$version</span></code> is some version identifier, like <code class="docutils literal"><span class="pre">1.5-xxxx</span></code>.</p>
-<p>You will get a number of <code class="docutils literal"><span class="pre">.zip</span></code> archives for your selected platform,
+<p>where <tt class="docutils literal"><span class="pre">$version</span></tt> is some version identifier, like <tt class="docutils literal"><span class="pre">1.5-xxxx</span></tt>.</p>
+<p>You will get a number of <tt class="docutils literal"><span class="pre">.zip</span></tt> archives for your selected platform,
 both 32-bit and 64-bit versions. (In case of Mac OS X, both 10.5 and
 10.6 versions.) Please read the <a class="reference external" href="installation-manual-oracle.html">Installation Manual for
 Oracle</a> or <a class="reference external" href="installation-manual-sqlserver.html">Installation Manual for
@@ -125,7 +125,7 @@ install the package on your system.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper"><p class="logo">
   <a href="../index.html">
     <img class="logo" src="../_static/logo.svg" alt="Logo"/>
@@ -133,8 +133,37 @@ install the package on your system.</p>
   </a>
 </p>
 <h3>Table Of Contents</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Bingo</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Bingo</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Building from Source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#unpack-the-source-code">Unpack the Source Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#copy-the-oci-files">Copy the OCI files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#on-all-systems">On All Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#on-32-bit-windows">On 32-bit Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#on-64-bit-windows">On 64-bit Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#on-mac-os-x">On Mac OS X</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#build">Build</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation-manual-oracle.html">Installation Manual: Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation-manual-sqlserver.html">Installation Manual: SQL Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation-manual-postgres.html">Installation Manual: PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance-tips-oracle.html">Performance Tips: Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual-oracle.html">User Manual: Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual-sqlserver.html">User Manual: SQL Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-manual-postgres.html">User Manual: PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html">Bingo Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#why-select-bingo-as-your-molecular-search-cartridge">Why Select Bingo as Your Molecular Search Cartridge?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
@@ -146,7 +175,7 @@ install the package on your system.</p>
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
 </ul>
 
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />

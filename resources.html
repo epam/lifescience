@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="top" title="Life Sciences 0.1.0 documentation" href="index.html" />
     <link rel="next" title="Download" href="download/index.html" />
@@ -33,8 +33,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -53,7 +53,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="resources">
 <h1>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
@@ -113,11 +113,11 @@ queries</a>.</p>
 <div class="section" id="cairo">
 <h2>Cairo<a class="headerlink" href="#cairo" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://cairographics.org/">Cairo</a> 1.8.6 was used for rendering in
-Indigo. In Linux builds, the system-wide installation of <code class="docutils literal"><span class="pre">libcairo</span></code>
-must be present (<code class="docutils literal"><span class="pre">-I/usr/include/cairo</span></code> flag is passed to the compiler
-and <code class="docutils literal"><span class="pre">-lcairo</span></code> is passed to the linker). In Mac OS X builds, the
-system-wide installation of <code class="docutils literal"><span class="pre">libcairo</span></code> must be present as well
-(<code class="docutils literal"><span class="pre">/opt/local/lib/libcairo.dylib</span></code> path is passed to the linker). You
+Indigo. In Linux builds, the system-wide installation of <tt class="docutils literal"><span class="pre">libcairo</span></tt>
+must be present (<tt class="docutils literal"><span class="pre">-I/usr/include/cairo</span></tt> flag is passed to the compiler
+and <tt class="docutils literal"><span class="pre">-lcairo</span></tt> is passed to the linker). In Mac OS X builds, the
+system-wide installation of <tt class="docutils literal"><span class="pre">libcairo</span></tt> must be present as well
+(<tt class="docutils literal"><span class="pre">/opt/local/lib/libcairo.dylib</span></tt> path is passed to the linker). You
 can install it using <a class="reference external" href="http://www.macports.org/">MacPorts</a>. The 32-bit
 and 64-bit Windows builds of Cairo are included in the source tree. They
 can be downloaded from
@@ -184,7 +184,7 @@ you want to:</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper"><p class="logo">
   <a href="index.html">
     <img class="logo" src="_static/logo.svg" alt="Logo"/>
@@ -200,12 +200,23 @@ you want to:</p>
 <li class="toctree-l1"><a class="reference internal" href="imago/index.html">Imago OCR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parso.html">Parso</a></li>
 <li class="toctree-l1"><a class="reference internal" href="selenium.html">Selenium Framework</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Resources</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#algorithms">Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#oracle-interface">Oracle Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cairo">Cairo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-formats">File Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#web-standards">Web standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#web-frameworks">Web frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-examples">Code Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-tools">Development Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commercial-availability">Commercial availability</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="download/index.html">Downloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Info</a></li>
 </ul>
 
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
