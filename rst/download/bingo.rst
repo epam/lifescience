@@ -1,7 +1,7 @@
 Download Bingo
 ==============
 
-Bingo 1.7.10-beta
+Bingo 1.7.10-dev6
 -----------------
 
 The changelog is available `on this page <../bingo/changelog.html>`__

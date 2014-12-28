@@ -1,5 +1,31 @@
 Bingo Changelog
 ===============
+Bingo 1.7.10 dev6
+-----------------
+
+*28 December 2014*
+
+General changes:
+
+-  Indigo now understand aromatic rings with external double bonds such
+   as O=C1C=CC=CC=C1. 
+-  Either cis/trans bond marked is preserved during molfile loading even
+   if substitutes are collinear.
+-  Fixed an issue in the SMILES loader module that set invalid number of
+   implicit hydrogens:
+   https://groups.google.com/d/msg/indigo-bugs/i7g3hoSXxhI/XaXsEOVJ8_cJ
+-  New method to get stereocenter pyramid. Thanks to Daniel for the
+   feature request:
+   https://groups.google.com/d/msg/indigo-dev/z0a1QwRMrx4/0s-KEtPBB_EJ
+-  Fingerprints computation now works 30% faster.
+-  All stereocenter exceptions now includes also atom index:
+   https://groups.google.com/d/msg/indigo-bugs/nZOmFCEsNqk/S92lgH5zjvwJ
+
+
+Bingo PostgreSQL-specific changes:
+
+-  PostgreSQL 9.3 and PostgreSQL 9.4 versions support was added
+
 
 Bingo 1.7.9
 -----------
@@ -10,7 +36,7 @@ General changes:
 
 -  Fingerprints now include information about single-atom fragments.
    This resolved an issue with empty fingerprints for single-atom
-   molecules. Also this change makes substruture search more efficient
+   molecules. Also this change makes substructure search more efficient
    in case of rare atoms in a query.
 -  Timeout parameter for exact search method for a single structure.
    Default value is 1 min.
@@ -88,7 +114,7 @@ New methods for Bingo Oracle, SQL Server and PostgreSQL:
 
 Bingo PostgreSQL-specific changes:
 
--  Postgres 9.2 support was added
+-  PostgreSQL 9.2 support was added
 -  Bug with cost estimation engine was fixed
 -  ``bingo.compactMolecule(molecule, xyz)`` and
    ``bingo.compactReaction(reaction, xyz)`` methods were added
