@@ -25,6 +25,9 @@ General changes:
 Bingo PostgreSQL-specific changes:
 
 -  PostgreSQL 9.3 and PostgreSQL 9.4 versions support was added
+-  Bug with join queries was fixed
+-  Multithread option was implemented for the index create procedure
+-  Other bugfixes and improvements
 
 
 Bingo 1.7.9
