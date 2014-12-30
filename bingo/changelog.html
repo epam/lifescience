@@ -59,6 +59,33 @@
             
   <div class="section" id="bingo-changelog">
 <h1>Bingo Changelog<a class="headerlink" href="#bingo-changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bingo-1-7-10-dev6">
+<h2>Bingo 1.7.10 dev6<a class="headerlink" href="#bingo-1-7-10-dev6" title="Permalink to this headline">¶</a></h2>
+<p><em>28 December 2014</em></p>
+<p>General changes:</p>
+<ul class="simple">
+<li>Indigo now understand aromatic rings with external double bonds such
+as O=C1C=CC=CC=C1.</li>
+<li>Either cis/trans bond marked is preserved during molfile loading even
+if substitutes are collinear.</li>
+<li>Fixed an issue in the SMILES loader module that set invalid number of
+implicit hydrogens:
+<a class="reference external" href="https://groups.google.com/d/msg/indigo-bugs/i7g3hoSXxhI/XaXsEOVJ8_cJ">https://groups.google.com/d/msg/indigo-bugs/i7g3hoSXxhI/XaXsEOVJ8_cJ</a></li>
+<li>New method to get stereocenter pyramid. Thanks to Daniel for the
+feature request:
+<a class="reference external" href="https://groups.google.com/d/msg/indigo-dev/z0a1QwRMrx4/0s-KEtPBB_EJ">https://groups.google.com/d/msg/indigo-dev/z0a1QwRMrx4/0s-KEtPBB_EJ</a></li>
+<li>Fingerprints computation now works 30% faster.</li>
+<li>All stereocenter exceptions now includes also atom index:
+<a class="reference external" href="https://groups.google.com/d/msg/indigo-bugs/nZOmFCEsNqk/S92lgH5zjvwJ">https://groups.google.com/d/msg/indigo-bugs/nZOmFCEsNqk/S92lgH5zjvwJ</a></li>
+</ul>
+<p>Bingo PostgreSQL-specific changes:</p>
+<ul class="simple">
+<li>PostgreSQL 9.3 and PostgreSQL 9.4 versions support was added</li>
+<li>Bug with join queries was fixed</li>
+<li>Multithread option was implemented for the index create procedure</li>
+<li>Other bugfixes and improvements</li>
+</ul>
+</div>
 <div class="section" id="bingo-1-7-9">
 <h2>Bingo 1.7.9<a class="headerlink" href="#bingo-1-7-9" title="Permalink to this headline">¶</a></h2>
 <p><em>3 April 2013</em></p>
@@ -66,7 +93,7 @@
 <ul class="simple">
 <li>Fingerprints now include information about single-atom fragments.
 This resolved an issue with empty fingerprints for single-atom
-molecules. Also this change makes substruture search more efficient
+molecules. Also this change makes substructure search more efficient
 in case of rare atoms in a query.</li>
 <li>Timeout parameter for exact search method for a single structure.
 Default value is 1 min.</li>
@@ -144,7 +171,7 @@ types included</p>
 </ul>
 <p>Bingo PostgreSQL-specific changes:</p>
 <ul class="simple">
-<li>Postgres 9.2 support was added</li>
+<li>PostgreSQL 9.2 support was added</li>
 <li>Bug with cost estimation engine was fixed</li>
 <li><tt class="docutils literal"><span class="pre">bingo.compactMolecule(molecule,</span> <span class="pre">xyz)</span></tt> and
 <tt class="docutils literal"><span class="pre">bingo.compactReaction(reaction,</span> <span class="pre">xyz)</span></tt> methods were added</li>
@@ -257,6 +284,7 @@ other Bingo implementations.</p>
 <li class="toctree-l2"><a class="reference internal" href="user-manual-sqlserver.html">User Manual: SQL Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user-manual-postgres.html">User Manual: PostgreSQL</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Bingo Changelog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bingo-1-7-10-dev6">Bingo 1.7.10 dev6</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bingo-1-7-9">Bingo 1.7.9</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bingo-1-7-8b2">Bingo 1.7.8b2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bingo-1-7-7">Bingo 1.7.7</a></li>
