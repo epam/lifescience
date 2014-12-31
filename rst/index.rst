@@ -15,21 +15,7 @@ Life Science Open Source
     Downloads <download/index>
     contact
 
-We have extensive experience and expertise in developing organic 
-chemistry software products for use in pharmaceutical companies,
-research institutes, and universities. At the same time, we have been
-developing internally a number of cheminformatics tools, and in 2009, we
-decided to contribute these tools to the open-source community.
-Initially, we created a wholly owned subsidiary called SciTouch LLC for
-further developing and distributing these tools.
-
-Since then, this open-source initiative was shifted from SciTouch to 
-GGA Software Services LLC, a US-based provider of scientific informatics 
-services to global pharmaceutical, scientific instrumentation, medical 
-device, scientific publishing and software, and early-stage life science 
-companies. In order to strengthen Life Science & Healthcare vertical, 
-EPAM Systems in 2014 acquired GGA, and we are continuing to undertake 
-this initiative through EPAM.
+EPAM Life Sciences has extensive experience and expertise in developing organic chemistry software products for use in life science companies, research institutes, and universities.  Before joining EPAM Systems in June 2014 and becoming EPAM Life Sciences, GGA Software Services developed internally a series of cheminformatics tools, and decided to make these tools available to the open-source community.  We are continuing to undertake this open-source initiative through EPAM, and we look forward to improving the existing tools and to developing new tools for your use.
 
 Products
 --------
