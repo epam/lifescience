@@ -454,34 +454,34 @@ description of the button.
 | **Ctrl+L**                           | Clean Up                             |
 +--------------------------------------+--------------------------------------+
 
-.. |Ketcher elements| replace::  `_ <TODO:./main.png>`__ 
-.. |image1| replace::  `_ <TODO:./selection.png>`__ 
-.. |image2| replace::  `_ <TODO:./toolbar.png>`__ 
-.. |image3| replace::  `_ <TODO:./periodic.png>`__ 
-.. |image4| replace::  `_ <TODO:./ChangeAtom.png>`__ 
-.. |image5| replace::  `_ <TODO:./ions.png>`__ 
-.. |image6| replace::  `_ <TODO:./AtomProperties.png>`__ 
-.. |image7| replace::  `_ <TODO:./Reaxys.png>`__ 
-.. |image8| replace::  `_ <TODO:./bond.png>`__ 
-.. |image9| replace::  `_ <TODO:./chain.png>`__ 
+.. |Ketcher elements| image:: ../assets/ketcher/help/mainNew.png 
+.. |image1| image:: ../assets/ketcher/help/selection.png 
+.. |image2| image:: ../assets/ketcher/help/mainToolbarNew.png 
+.. |image3| image:: ../assets/ketcher/help/periodic.png 
+.. |image4| image:: ../assets/ketcher/help/ChangeAtom.png 
+.. |image5| image:: ../assets/ketcher/help/ions.png 
+.. |image6| image:: ../assets/ketcher/help/AtomProperties.png 
+.. |image7| image:: ../assets/ketcher/help/reaxys.png 
+.. |image8| image:: ../assets/ketcher/help/bond.png 
+.. |image9| image:: ../assets/ketcher/help/chain.png 
 .. |image10| replace::  `_ <TODO:./BondProperties.png>`__ 
-.. |image11| replace::  `_ <TODO:./Rings.png>`__ 
+.. |image11| image:: ../assets/ketcher/help/rings.png 
 .. |image12| replace::  `_ <TODO:./fusion1.png>`__ 
 .. |image13| replace::  `_ <TODO:./fusion2.png>`__ 
 .. |image14| replace::  `_ <TODO:./fusion3.png>`__ 
 .. |image15| replace::  `_ <TODO:./RGroupMenu.png>`__ 
-.. |image16| replace::  `_ <TODO:./RGroup.png>`__ 
-.. |image17| replace::  `_ <TODO:./RGroupLabel1.png>`__ 
+.. |image16| image:: ../assets/ketcher/help/rgroup.png 
+.. |image17| image:: ../assets/ketcher/help/RGroupLabel.png 
 .. |image18| replace::  `_ <TODO:./RGroupLabel2.png>`__ 
-.. |image19| replace::  `_ <TODO:./AttachmentPoint.png>`__ 
+.. |image19| image:: ../assets/ketcher/help/AttachmentPoint.png 
 .. |image20| replace::  `_ <TODO:./scheme1.png>`__ 
 .. |image21| replace::  `_ <TODO:./scheme2.png>`__ 
 .. |image22| replace::  `_ <TODO:./RGroupLogic.png>`__ 
 .. |image23| replace::  `_ <TODO:./SGroup.png>`__ 
 .. |image24| replace::  `_ <TODO:./SGroupProperties.png>`__ 
 .. |image25| replace::  `_ <TODO:./Data.png>`__ 
-.. |image26| replace::  `_ <TODO:./FlipRotate.png>`__ 
+.. |image26| image:: ../assets/ketcher/help/flip-rotate.png 
 .. |image27| replace::  `_ <TODO:./Display.png>`__ 
 .. |image28| replace::  `_ <TODO:./Reaction.png>`__ 
-.. |image29| replace::  `_ <TODO:./OpenFile.png>`__ 
-.. |image30| replace::  `_ <TODO:./SaveFile.png>`__ 
+.. |image29| image:: ../assets/ketcher/help/OpenFile.png 
+.. |image30| image:: ../assets/ketcher/help/SaveFile.png 
