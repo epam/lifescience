@@ -14,7 +14,8 @@ forward to speaking with you about your company's specific needs.
  |  Newtown, PA 18940, USA 
  |  Tel:	(267) 759-9000
  |  Fax: 	(267) 759-8989
-
+ |  `Contact Us <http://www.epam.com/company/contactus.html>`__
+ |  `Online Request <http://www.epam.com/company/requestinfo.html>`__
 
  |  Saint Petersburg, Russia Location:
  |  EPAM Systems, Inc.
@@ -22,10 +23,8 @@ forward to speaking with you about your company's specific needs.
  |  197342, Saint Petersburg, Russia
  |  Tel: +7-812-702-6706
  |  Fax: +7-812-702-6708
+ |  E-mail: lifescience.opensource@epam.com
  
- |  `Contact Us <http://www.epam.com/company/contactus.html>`__
- |  `Online Request <http://www.epam.com/company/requestinfo.html>`__
-
 
 Feedback on Open-source Software
 --------------------------------
