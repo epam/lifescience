@@ -1,8 +1,11 @@
 ## Migration branch
 
-To compile site install [Sphinx](http://sphinx-doc.org/) and
-then run:
+To compile site install [Sphinx](http://sphinx-doc.org/) 
 
+    `sudo pip install -r requirements.txt`
+
+and then run:
+    
     `make html`
 
 The folder `source` contains plain old html extracted from
