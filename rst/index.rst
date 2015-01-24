@@ -1,4 +1,4 @@
-Life Science Open Source
+Life Sciences Open Source
 ========================
 
 .. toctree::
