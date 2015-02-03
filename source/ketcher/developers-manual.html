@@ -1,0 +1,132 @@
+<h1 id="developers-manual">Developer's Manual</h1>
+
+<h2 id="editor-mode">Editor Mode</h2>
+
+<h3 id="installation">Installation</h3>
+
+<p>The installation package contains all required sources.</p>
+
+<ul>
+<li>
+<p>To run Ketcher in a separate page, use <code>ketcher/ketcher.html</code>:</p>
+<pre><code>&lt;a href="ketcher/ketcher.html"&gt;Ketcher&lt;/a&gt;
+</code></pre>
+</li>
+<li>
+<p>To embed Ketcher in another page, use IFrame:</p>
+<pre><code>&lt;iframe id="ifKetcher" src="ketcher/ketcher.html" width="800" height="600"&gt;&lt;/iframe&gt;
+</code></pre>
+</li>
+</ul>
+
+<h3 id="ketcher-object">Ketcher Object</h3>
+
+<p>To access Ketcher from JavaScript, use the following code to obtain the object reference:</p>
+
+<pre><code>var ketcher = ketcherWindow.ketcher;
+</code></pre>
+
+<p>where <code>ketcherWindow</code> is a separate Ketcher window or</p>
+
+<pre><code>var ketcherFrame = document.getElementById('ifKetcher');
+var ketcher = null;
+
+if ('contentDocument' in ketcherFrame)
+    ketcher = ketcherFrame.contentWindow.ketcher;
+else // IE7
+    ketcher = document.frames['ifKetcher'].window.ketcher;
+</code></pre>
+
+<p>where <code>ifKetcher</code> is a Ketcher IFrame.</p>
+
+<h4 id="ketchersetmolecule">ketcher.setMolecule()</h4>
+
+<p>This method updates the current structure in the editor. Pass it a SMILES string or a Molfile/Rxnfile:</p>
+
+<pre><code>ketcher.setMolecule('c1ccccc1');
+</code></pre>
+
+<p><strong>Note:</strong> SMILES import is not available in the standalone mode.</p>
+
+<h4 id="ketchergetsmiles">ketcher.getSmiles()</h4>
+
+<p>Export current structure as a SMILES string.</p>
+
+<h4 id="ketchergetmolfile">ketcher.getMolfile()</h4>
+
+<p>Export current structure as a Molfile/Rxnfile string.</p>
+
+<h4 id="ketcheraddfragment">ketcher.addFragment()</h4>
+
+<p>This method switches Ketcher to the fragment insertion mode where a user can specify where to the provided fragment. Pass it a SMILES string or a Molfile/Rxnfile:</p>
+
+<pre><code>ketcher.addFragment('c1ccccc1');
+</code></pre>
+
+<p><strong>Note:</strong> SMILES import is not available in the standalone mode.</p>
+
+<h2 id="ketcher-interaction-example">Ketcher interaction example</h2>
+
+<p>You can look at the source a web page with embedded Ketcher <a href="TODO:ketcher-demo">here</a> where the web page interacts with a Ketcher object using this API.</p>
+
+<h2 id="ketcher-server">Ketcher Server</h2>
+
+<p>The current version of Ketcher has a sample implementation of the server side. A simple Python script <code>ketcher.py</code> listens to the port 8080 and has four interfaces:</p>
+
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Action</th>
+<th>Type</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>/knocknock</code></td>
+<td align="left">Server availability check</td>
+<td align="right">GET</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center"><code>/open</code></td>
+<td align="left">Query for loading files from disk</td>
+<td align="right">POST</td>
+<td align="center"><code>filedata</code></td>
+</tr>
+<tr>
+<td align="center"><code>/save</code></td>
+<td align="left">Query for saving files to disk</td>
+<td align="right">POST</td>
+<td align="center"><code>filedata</code></td>
+</tr>
+<tr>
+<td align="center"><code>/layout</code></td>
+<td align="left">Query for converting SMILES to Molfile</td>
+<td align="right">POST</td>
+<td align="center"><code>moldata</code></td>
+</tr>
+<tr>
+<td align="center"><code>/automap</code></td>
+<td align="left">Query for reaction auto-mapping</td>
+<td align="right">POST</td>
+<td align="center"><code>moldata</code>, <code>mode</code></td>
+</tr>
+<tr>
+<td align="center"><code>/aromatize</code></td>
+<td align="left">Query for aromatization</td>
+<td align="right">POST</td>
+<td align="center"><code>moldata</code></td>
+</tr>
+<tr>
+<td align="center"><code>/dearomatize</code></td>
+<td align="left">Query for dearomatization</td>
+<td align="right">POST</td>
+<td align="center"><code>moldata</code></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="../indigo/index.html">Indigo</a> binaries and Python wrappers are required to perform automatic layout, atom-to-atom mapping or SMILES import.
+Ketcher server script can be executed as a standalone application and also can run under WSGI.</p>

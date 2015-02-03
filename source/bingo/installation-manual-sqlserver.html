@@ -1,0 +1,190 @@
+<h1 id="installation-manual-sql-server">Installation Manual: SQL Server</h1>
+
+<h2 id="system-requirements">System Requirements</h2>
+
+<h3 id="operating-systems">Operating Systems</h3>
+
+<ul>
+<li>Windows XP/Vista/7 (32-bit and 64-bit)</li>
+<li>Windows 2003/2008 Server (32-bit and 64-bit)</li>
+</ul>
+
+<h3 id="database-servers">Database Servers</h3>
+
+<ul>
+<li>Microsoft SQL Server 2005</li>
+<li>Microsoft SQL Server 2008</li>
+</ul>
+
+<h3 id="tested-configurations">Tested Configurations</h3>
+
+<p>Bingo has been successfully tested on the following configurations:</p>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Operating System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQL Server 2005 Express (32-bit)</td>
+<td align="center">Windows XP Professional</td>
+</tr>
+<tr>
+<td>SQL Server 2005 Standard (32-bit)</td>
+<td align="center">Windows 2003  Server</td>
+</tr>
+<tr>
+<td>SQL Server 2008 Express (32-bit)</td>
+<td align="center">Windows Vista Home Premium</td>
+</tr>
+<tr>
+<td>SQL Server 2008 Standard (32-bit)</td>
+<td align="center">Windows XP Professional</td>
+</tr>
+<tr>
+<td>SQL Server 2008 Standard (64-bit)</td>
+<td align="center">Windows Server 2008 R2 Standard</td>
+</tr>
+<tr>
+<td>SQL Server 2008 Standard (64-bit)</td>
+<td align="center">Windows 7 Enterprise</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="setting-up-a-server">Setting Up a Server</h2>
+
+<p>For indexing, Bingo uses @@SERVERNAME constant for establishing internal connections and it should return the correct server name. If multiple SQL Server instances are installed, then @@SERVERNAME should contain the service name as well. To get the server name, you can execute the following code:</p>
+
+<pre><code>select @@SERVERNAME
+</code></pre>
+
+<p>If it returns an invalid name, you should execute the following commands:</p>
+
+<pre><code>sp_dropserver &lt;invalid server name returned by @@SERVERNAME or from executing sp_helpserver procedure&gt;
+sp_addserver &lt;valid server name&gt;, 'local'
+</code></pre>
+
+<p>'SQL Server Browser' service should be started for accepting connections that are created during the Bingo indexing operation. If this service is not started, then you might get the error during index creation indicating that the connection cannot be established.</p>
+
+<p>If you are using Bingo with large tables or a significant number of tables, then you have to configure the memory parameters in
+Microsoft SQL Server. The configuration depends on the 32-bit or 64-bit computer architecture that you are using.</p>
+
+<h3 id="32bit">32-bit</h3>
+
+<p>By default MS SQL Server provides the possibility to allocate only 256Mb in all CLR code. If the memory limit is
+reached, then you will get the following exception:</p>
+
+<pre><code>.NET Framework execution was aborted by escalation policy because of out of memory.
+</code></pre>
+
+<p>To adjust the memory limit for CLR you have to specify the -g switch in the SQL Server Configuration Manager. For
+example, to set the memory limit for the CLR code to 512Mb, you need to add the <code>-g512</code> switch to the Startup Parameters in the
+properties for your SQL Server instance in the SQL Server Configuration Manager.</p>
+
+<p><strong>Note:</strong> In the 32-bit architecture, the total allocatable memory is limited to 2GB unless you add the <code>/3gb</code> switch to
+boot.ini file or specify &#8220;Use AWE to allocate memory&#8221; in the SQL Server settings. So increasing the memory limit for
+CLR, you reduce the memory limit for the internal SQL Server cache.</p>
+
+<h3 id="64bit">64-bit</h3>
+
+<p>By default, MS SQL Server tries to take all of the memory available in the system. Sometimes (mostly on large
+databases), when the CLR engine underlying the SQL Server tries to allocate some memory for Bingo, you will
+get the same exception:</p>
+
+<pre><code>.NET Framework execution was aborted by escalation policy because of out of memory.
+</code></pre>
+
+<p>And the following message will be logged to the system log:</p>
+
+<pre><code>AppDomain &lt;name&gt; is marked for unload due to memory pressure.
+</code></pre>
+
+<p>To restrict the amount of memory that MS SQL Server can take (thus leaving more memory for Bingo), we
+recommend setting the &#8220;Maximium server memory&#8221; in the &#8220;Server Properties&gt;Memory&#8221; tab in the SQL Server Management
+Studio to some value less that than the actual size of your memory minus 1 GB.</p>
+
+<h2 id="installation-procedure">Installation Procedure</h2>
+
+<p>Log in as Administrator. Run the <code>bingo-sqlserver-install.bat</code> file located in the Bingo installation file set.
+The help message from the script is the following:</p>
+
+<pre><code>Usage: bingo-sqlserver-install.bat [parameters]
+Parameters:
+  -?, -help
+    Print this help message
+  -server name
+    SQL Server name (default is local SQL Server)
+  -database database (obligatory)
+    Database to install on.
+  -dbaname name
+    Database administrator login (default is current user).
+  -dbapass password
+    Database administrator password.
+    If the password is not specified, you will have to enter it later.
+  -bingoname name
+    Name of cartridge pseudo-user (default "bingo").
+  -bingopass password
+    Password of the pseudo-user (default "bingo").
+  -y
+    Do not ask for confirmation.
+</code></pre>
+
+<p><strong>Note:</strong> The installer automatically issues the <code>ALTER DATABASE $(database) SET ENABLE_BROKER</code> statement if the
+<code>ENABLE_BROKER</code> option is not activated on your database. As this involves an exclusive database lock, we
+recommend that, in this case you restart the database prior to the installation.</p>
+
+<h3 id="examples">Examples</h3>
+
+<p>For the simplest installation, the defaults are taken, including <code>C:\bingo</code> directory for binaries. You
+have to specify only the <code>-database</code> flag with the name of your database:</p>
+
+<pre><code>bingo-sqlserver-install.bat -database mydb
+</code></pre>
+
+<p>If you use an SQL Server user account for thed DBA user (normally 'sa'), you have to specify it with the
+<code>-dbaname</code> option:</p>
+
+<pre><code>bingo-sqlserver-install.bat -database mydb -dbaname sa
+</code></pre>
+
+<p>To run in the non-interactive mode, you must specify <code>-y</code></p>
+
+<pre><code>bingo-sqlserver-install.bat -database mydb -y
+</code></pre>
+
+<p>(and also <code>-dbass</code> when you specify <code>-dbaname</code>)</p>
+
+<pre><code>bingo-sqlserver-install.bat -database mydb -dbaname sa -dbapass pwd123 -y
+</code></pre>
+
+<h2 id="uninstalling-the-cartridge">Uninstalling the Cartridge</h2>
+
+<p>To uninstall the cartridge, you must:</p>
+
+<ol>
+<li>Remove all special indices created by users, by calling the <code>bingo.DropIndex()</code> function</li>
+<li>Run <code>bingo-sqlserver-uninstall.bat</code> with the same <code>-dbaname</code> , <code>-bingoname</code>, and <code>-database</code> parameters that you passed to the installer.</li>
+</ol>
+
+<p>The help message from the uninstall script is the following:</p>
+
+<pre><code>Usage: bingo-sqlserver-uninstall.bat [parameters]
+Parameters:
+  -?, -help
+    Print this help message
+  -database database (obligatory)
+    Database to remove Bingo from.
+  -dbaname name
+    Database administrator login (default is current user).
+  -dbapass password
+    Database administrator password.
+    If the password is not specified, you will have to enter it later.
+  -bingoname name
+    Name of cartridge pseudo-user (default "bingo").
+  -y
+    Do not ask for confirmation.
+</code></pre>

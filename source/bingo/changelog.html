@@ -1,0 +1,166 @@
+<h1 id="bingo-changelog">Bingo Changelog</h1>
+
+<h2 id="bingo-179">Bingo 1.7.9</h2>
+
+<p><em>3 April 2013</em></p>
+
+<p>General changes:</p>
+
+<ul>
+<li>Fingerprints now include information about single-atom fragments. This resolved an issue with empty fingerprints for single-atom molecules. Also this change makes substruture search more efficient in case of rare atoms in a query.</li>
+<li>Timeout parameter for exact search method for a single structure. Default value is 1 min.</li>
+<li>Smiles saver doesn't throw exception about implicit hydrogens if they are not saving in SMILES</li>
+</ul>
+
+<p>Bingo PostgreSQL-specific changes:</p>
+
+<ul>
+<li>bug with similarity search for null structures was fixed</li>
+<li>performance was improved for join queries</li>
+<li>bug with exact join query (windows) was fixed </li>
+<li>bitmap scan feature was turned off by default for bingo </li>
+</ul>
+
+<h2 id="bingo-178b2">Bingo 1.7.8b2</h2>
+
+<p><em>15 February 2013</em></p>
+
+<p>General changes for Bingo Oracle, SQL Server and PostgreSQL:</p>
+
+<ul>
+<li>all the bug fixes from the Indigo branch (AAM cancellation timeout, aromatization bug fixed and others)</li>
+</ul>
+
+<p>Bingo PostgreSQL-specific changes: </p>
+
+<ul>
+<li>import sdf bug was fixed (throw error on incorrect format)</li>
+<li>bug with the rescan queries was fixed (join queries now work properly)</li>
+<li>errors while binary matching were fixed </li>
+<li>multi-threading was implemented for index building (creating index performance was improved)</li>
+</ul>
+
+<h2 id="bingo-177">Bingo 1.7.7</h2>
+
+<p><em>29 January 2013</em></p>
+
+<p>This is a stable Bingo release for the all three databases: Oracle, MS SQL Server, and PostgreSQL. It includes all the bug fixes from the Indigo branch.</p>
+
+<p>New methods for Bingo Oracle, SQL Server and PostgreSQL:</p>
+
+<ul>
+<li>
+<p><code>bingo.InChI(molecule, options)</code> method to compute InChI identifier. You can pass any options that are supported by InChI library via <code>options</code> argument. For example you can provide options in the following way:</p>
+<pre><code>bingo.InChI(molecule, '/DoNotAddH /SUU /SLUUD')
+</code></pre>
+</li>
+<li>
+<p><code>bingo.InChIKey(inchi)</code> method to compute InChI Key. To get an InChI key from a molecule with a default options use the following syntax:</p>
+<pre><code>select bingo.InChIKey(bingo.InChI(molecule, ''))
+</code></pre>
+</li>
+<li>
+<p><code>bingo.fingerprint(molecule, options)</code> and <code>bingo.rfingerprint(reaction, options)</code> methods to compute fingerprints. The options are the same as we have for the IndigoObject.fingerprint method in Indigo:</p>
+</li>
+<li>sim - "Similarity fingerprint", useful for calculating similarity measures (the default)</li>
+<li>sub - "Substructure fingerprint", useful for substructure screening </li>
+<li>sub-res - "Resonance substructure fingerprint", useful for resonance substructure screening</li>
+<li>sub-tau - "Tautomer substructure fingerprint", useful for tautomer substructure screening</li>
+<li>full - "Full fingerprint", which has all the mentioned fingerprint types included</li>
+</ul>
+
+<p>Bingo PostgreSQL-specific changes: </p>
+
+<ul>
+<li>Postgres 9.2 support was added</li>
+<li>Bug with cost estimation engine was fixed</li>
+<li><code>bingo.compactMolecule(molecule, xyz)</code> and <code>bingo.compactReaction(reaction, xyz)</code> methods were added</li>
+<li>All utility methods now return text (not <code>cstring</code>)</li>
+<li>All utility methods now accept binary byte parameter for input structures(returned by <code>bingo.compactMolecule()</code> and <code>bingo.compactReaction()</code>)</li>
+</ul>
+
+<p>Bingo Oracle-specific changes: </p>
+
+<ul>
+<li>rowid is includeed into the message in case of exceptions</li>
+</ul>
+
+<p>Bingo SQL Server-specific changes: </p>
+
+<ul>
+<li>primary keys are added to the Bingo-specific table to support replication procedure.</li>
+<li>more details in the diagnostics log: thread id, process id, and etc.</li>
+<li>better support for query cancellation</li>
+</ul>
+
+<p>Also we switch to a continues version numbering like we are doing with Indigo releases.</p>
+
+<h2 id="bingo-17-beta4">Bingo 1.7 beta4</h2>
+
+<p><em>24 April 2012</em></p>
+
+<p>All the improvements have been merged from the Indigo branch (versions above 1.1 beta6), including: </p>
+
+<ul>
+<li>Better handling of molecules with invalid valence. </li>
+<li>Molecule serialization with more than 8 R-groups </li>
+<li>incorrect empty R-Group logic loading attachment points loading from molfile was fixed </li>
+</ul>
+
+<p>The new release contains bingo-specific changes including critical bugfixes for PostgreSQL:</p>
+
+<ul>
+<li>Bug with inserting to a table contained more than 64k molecules was fixed. </li>
+<li>Build and search queries now support cancel requests.</li>
+<li>Bug with possible dead lock for PostgreSQL hang queries was fixed. </li>
+<li>Binary data storing was fixed.</li>
+<li>Possible segmentation fault during raising exceptions was fixed. </li>
+<li>The issue with queries contained several bingo functions was resolved. </li>
+</ul>
+
+<p>Also, bug with Oracle 11.2 on Windows 7 x64 was fixed. </p>
+
+<h2 id="bingo-17-beta3">Bingo 1.7 beta3</h2>
+
+<p><em>28 December 2011</em></p>
+
+<p>All the bugfixes and improvements from the Indigo branch have been merged into the Bingo branch including: </p>
+
+<ul>
+<li>Cis-trans issues has been fixed. </li>
+<li>More accurate query fingerprints for SMARTS queries. </li>
+</ul>
+
+<p>Bingo-specific changes: </p>
+
+<ul>
+<li>Support of the PostgresSQL 9.1 </li>
+<li>Now binary files for Oracle are available for download, because we eliminated a linkage with OCI libraries. No building from source is required any more for getting Bingo for Oracle on Windows. </li>
+</ul>
+
+<h2 id="bingo-17-beta2">Bingo 1.7 beta2</h2>
+
+<p><em>30 November 2011 (no public announcement)</em></p>
+
+<p>Bugfix release.</p>
+
+<h2 id="bingo-17-beta1">Bingo 1.7 beta1</h2>
+
+<p><em>29 September 2011</em></p>
+
+<p>First Bingo version for PostgreSQL. The cartridge is covered 
+almost all the functionality taken from the Bingo Oracle and the Bingo 
+Sql Server parts. </p>
+
+<p>The Bingo library for the PostgreSQL supports index building for 
+molecules and reactions. The algorithm for the index search includes 
+both the basic Bingo search engine principles and the unique heuristic 
+algorithms for the PostgreSQL database. Thus the PostgreSQL Bingo 
+cartridge can show a great performance comparable to or greater than 
+other Bingo implementations. </p>
+
+<h2 id="bingo-160">Bingo 1.6.0</h2>
+
+<p><em>17 June 2011</em></p>
+
+<p>The stable Bingo release.</p>

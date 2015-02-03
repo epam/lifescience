@@ -1,0 +1,80 @@
+<h1 id="java-bindings">Java Bindings</h1>
+
+<h2 id="distribution">Distribution</h2>
+
+<p>The <code>imago.jar</code> file containing <code>com.gga.imago.Imago</code> wrapper class is included in the distribution package for each platform. It contains all the required binary modules for Windows, Linux and Mac OS X, depending on the selected platform. Imago-Java Universal package contains binaries for all the support platforms.</p>
+
+<p>Depending on the OS and architecture, proper binaries are loaded automatically.</p>
+
+<h2 id="workflow">Workflow</h2>
+
+<p>The <code>Imago</code> class object represents a library instance. All operations are represented by methods of this object.
+Several library instances may be created within one thread to act simultaneously and independently. However,
+each instance requires a certain amount of memory, and thus it is recommended to have as few instances as
+possible.</p>
+
+<p>The procedure for rendering workflow is the following:</p>
+
+<ol>
+<li>Create a library instance.</li>
+<li>Load a PNG image from the file or in-memory buffer.</li>
+<li>Set the optional parameters.</li>
+<li>Set the logging mode if required.</li>
+<li>Call <code>recognize()</code>.</li>
+<li>Get the resulting molfile via <code>getResult()</code>.</li>
+</ol>
+
+<p>Any method of the <code>Imago</code> class can throw an <code>Exception</code> if something went wrong. The <code>recognize()</code> method
+can throw an <code>Imago.NoResultException</code> in the event that the image has failed to be recognized as a molecule.</p>
+
+<h2 id="imago-class-public-methods">Imago Class Public Methods</h2>
+
+<h3 id="constructor">Constructor</h3>
+
+<pre><code>Imago ();
+</code></pre>
+
+<p>Instances are independent and are safe to be used in parallel.</p>
+
+<h3 id="loading-the-image">Loading the Image</h3>
+
+<pre><code>void loadImage (byte[] buf);
+</code></pre>
+
+<p>Loads a supported image from the memory buffer.</p>
+
+<pre><code>void loadImage (String filename);
+</code></pre>
+
+<p>Loads a supported type image from file.</p>
+
+<h3 id="setting-the-options">Setting the Options</h3>
+
+<pre><code>void setFilter (String filter_name);
+
+void setConfig (String config_name);
+</code></pre>
+
+<p>Sets one of the pre-loaded configuration parameter sets. </p>
+
+<h3 id="performing-the-recognition">Performing the Recognition</h3>
+
+<pre><code>void recognize ();
+</code></pre>
+
+<h3 id="getting-the-result">Getting the Result</h3>
+
+<pre><code>string getResult ();
+</code></pre>
+
+<p>Returns a string with the recognized molecule in Molfile format.</p>
+
+<h2 id="example">Example</h2>
+
+<pre><code>   com.gga.imago.Imago imago = new com.gga.imago.Imago();   
+   imago.setFilter("prefilter_basic");  // optional
+   imago.setConfig("config_indigo_render.txt"); // optional
+   imago.loadImage("my-image.png");
+   imago.recognize();
+   System.out.println(imago.getResult());
+</code></pre>

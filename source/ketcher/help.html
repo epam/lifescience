@@ -1,0 +1,634 @@
+<h1 id="help">Help</h1>
+
+<h1 id="ketcher">Ketcher</h1>
+
+<p><strong><em>Ketcher</em></strong> is a tool to draw molecular structures and chemical reactions.</p>
+
+<h2 id="ketcher-overview">Ketcher Overview</h2>
+
+<p><strong><em>Ketcher</em></strong> is a tool to draw molecular structures and chemical reactions. Ketcher operates in two modes, the Server mode with most functions available and the client mode with limited functions available.</p>
+
+<p><strong><em>Ketcher</em></strong> consists of the following elements:</p>
+
+<p><img alt="Ketcher elements" src="TODO:./main.png">
+Using the <em>Tool palette</em> you can</p>
+
+<ul>
+<li>draw and edit the molecule or reaction by clicking on and dragging atoms, bonds, and other elements provided with the buttons on <em>Atoms</em> toolbar and <em>Tool palette</em>;</li>
+<li>delete any element of the drawing (atom or bond) by clicking on it with the Erase tool;</li>
+<li>delete the entire molecule or its fragment by rectangular selection with the Erase tool;</li>
+<li>draw special structures (see the following sections);</li>
+<li>select the entire molecule or its fragment in one of the following ways (click on the button to see the list of available options):</li>
+</ul>
+
+<p><img alt="" src="TODO:./selection.png"></p>
+
+<p>To select one atom or bond, click Lasso or Rectangle Selection tool, and then click the atom or bond.</p>
+
+<p>To select the entire structure:</p>
+
+<ul>
+<li>Select the Fragment Selection tool and then click the object.</li>
+<li>Select the Lasso or Rectangle Selection tool, then drag the mouse to select the object.</li>
+<li>Ctrl-click with the Lasso or Rectangle Selection tool.</li>
+</ul>
+
+<p>To select multiple atoms, bonds, structures, or other objects, do one of the following:</p>
+
+<ul>
+<li>Shift-click with the Lasso or Rectangle Selection tool selects some (connected or not) atoms/bonds.</li>
+<li>With the Lasso or Rectangle Selection tool click and drag the mouse around the atoms, bonds, or structures that you want to select.</li>
+</ul>
+
+<p><strong>Note</strong>: Ctrl+Shift-click with the Lasso or Rectangle Selection tool selects several structures.</p>
+
+<p>You can use the buttons of the <em>Main</em> toolbar:
+<img alt="" src="TODO:./toolbar.png"> </p>
+
+<ul>
+<li><strong>Clear Canvas</strong> (1) button to start drawing a new molecule; this command clears the drawing area;</li>
+<li><strong>Open&#8230;</strong> (2) and <strong>Save As&#8230;</strong> (3) buttons to import a molecule from a molecular file or save it to a supported molecular file format;</li>
+<li><strong>Undo</strong>/<strong>Redo</strong> (4), <strong>Cut</strong> (5), <strong>Copy</strong> (6), <strong>Paste</strong> (7), <strong>Zoom In</strong>/<strong>Out</strong> (8), and <strong>Scaling</strong> (9) buttons to perform the corresponding actions;</li>
+<li><strong>Clean</strong> button (10) to improve the appearance of the structure by assigning them uniform bond lengths and angles.</li>
+<li><strong>Aromatize</strong>/<strong>Dearomatize</strong> buttons (11) to mark aromatic structures (to convert a structure to the Aromatic or Kekule presentation).</li>
+</ul>
+
+<p><strong>Note</strong>: <strong>Clean</strong> and <strong>Aromatize</strong>/<strong>Dearomatize</strong> buttons are active only in the Server mode.</p>
+
+<h2 id="drawing-atoms">Drawing Atoms</h2>
+
+<p>To draw/edit atoms you can:</p>
+
+<ul>
+<li>
+<p>select an atom in the Atoms toolbar and click inside the drawing area;  <br>
+</p>
+</li>
+<li>
+<p>if the desired atom is absent in the toolbar, click on the [&#8230;] button to invoke the Periodic Table and click on the desired atom (available options: <em>Single</em> &#8211; selection of a single atom, <em>List</em> &#8211; choose an atom from the list of selected options (To allow one atom from a list of atoms of your choice at that position), <em>Not List</em> - exclude any atom on your list at that position).</p>
+</li>
+</ul>
+
+<p><img alt="" src="TODO:./periodic.png"></p>
+
+<ul>
+<li>add an atom to the existing molecule by selecting an atom in the <em>Atoms</em> toolbar, clicking on an atom in the molecule, and dragging the cursor; the atom will be added with a single bond; vacant valences will be filled with the corresponding number of hydrogen atoms;</li>
+<li>change an atom by selecting an atom in the <em>Atoms</em> toolbar and clicking on the atom to be changed; in the case a wrong valence thus appears the atom will be underlined in red;</li>
+<li>change an atom by clicking on an existing atom with the <em>Selection</em> tool and waiting for a couple of seconds for the text box to appear; type another atom symbol in the text box:</li>
+</ul>
+
+<p><img alt="" src="TODO:./ChangeAtom.png"></p>
+
+<ul>
+<li>change the charge of an atom by selecting the Charge Plus or Charge Minus tool and clicking consecutively on an atom to increase/decrease its charge</li>
+</ul>
+
+<p><img alt="" src="TODO:./ions.png"></p>
+
+<ul>
+<li>change an atom or its properties by double-clicking on the atom to invoke the Atom Properties dialog (the dialog also provides atom query features):</li>
+</ul>
+
+<p><img alt="" src="TODO:./AtomProperties.png"></p>
+
+<ul>
+<li>click on Generic Groups to invoke the Reaxys Generics dialog and select a corresponding generic group:</li>
+</ul>
+
+<p><img alt="" src="TODO:./Reaxys.png"></p>
+
+<h2 id="drawing-bonds">Drawing Bonds</h2>
+
+<p>To draw/edit bonds you can:</p>
+
+<ul>
+<li>Click an arrow on the Bond tool in the Tools palette to open the drop-down list with the following bond types:</li>
+</ul>
+
+<p><img alt="" src="TODO:./bond.png"></p>
+
+<ul>
+<li>select a bond type from the drop down list and click inside the drawing area; a bond of the selected type will be drawn;</li>
+<li>click on an atom in the molecule; a bond of the selected type will be added to the atom at the angle of 120 degrees;</li>
+<li>add a bond to the existing molecule by clicking on an atom in the molecule and dragging the cursor; in this case you can set the angle manually;</li>
+<li>change the bond type by clicking on it;</li>
+<li>use the Chain Tool <img alt="" src="TODO:./chain.png"> to draw consecutive single bonds; you can use hotkeys to change atom types.</li>
+<li>change a bond or its properties by double-clicking on the bond to invoke the Bond Properties dialog</li>
+</ul>
+
+<p><img alt="" src="TODO:./BondProperties.png"></p>
+
+<p>Clicking on a drawn stereo bond changes its direction.</p>
+
+<p>Clicking with the Single Bond tool switches the bond type cyclically: Single-Double-Triple-Single.</p>
+
+<h2 id="using-templates">Using Templates</h2>
+
+<p>You can add templates (rings or other predefined structures) to the structure using the Template tool. To add a ring to the molecule, select a ring from the toolbar and click inside the drawing area, or click on an atom or a bond in the molecule.</p>
+
+<p><img alt="" src="TODO:./Rings.png"></p>
+
+<p>Rules of using templates:</p>
+
+<ul>
+<li>Selecting a template and clicking on an atom in the existing structure adds the template to the structure connected with a single bond:</li>
+</ul>
+
+<p><img alt="" src="TODO:./fusion1.png"></p>
+
+<ul>
+<li>Selecting a template and dragging the cursor from an atom in the existing structure adds the template directly to this atom resulting in the fused structure:</li>
+</ul>
+
+<p><img alt="" src="TODO:./fusion2.png"></p>
+
+<ul>
+<li>A discrete rotation is available in this mode with a step equal to 15 degrees; pressing <shift> makes rotation stepless.</shift></li>
+<li>Dragging the cursor from an atom in the existing structure results in the single bond attachment if the cursor is dragged to more than &#189; of the bond length; otherwise the fused structure is drawn.</li>
+<li>Selecting a template and clicking on a bond in the existing structure created a bond-to-bond fused structure:</li>
+</ul>
+
+<p><img alt="" src="TODO:./fusion3.png"></p>
+
+<ul>
+<li>The bond in the initial structure is replaced with the bond in the template.</li>
+<li>This procedure doesn&#8217;t change the length of the bond in the initial structure.</li>
+<li>Dragging the cursor relative to the initial bond applies the template at the corresponding side of the bond.</li>
+</ul>
+
+<p><strong>Note</strong>: The added template will be fused by the default attachment atom or bond preset in the program.</p>
+
+<h2 id="drawing-rgroups">Drawing R-Groups</h2>
+
+<p>Use the <em>R-Group</em> toolbox to draw R-groups in Markush structures:</p>
+
+<p><img alt="" src="TODO:./RGroupMenu.png"></p>
+
+<p>Selecting the <em>R-Group Label Tool</em> and clicking on an atom in the structure invokes the dialog to select the R-Group label for a current atom position in the structure:</p>
+
+<p><img alt="" src="TODO:./RGroup.png"></p>
+
+<p>Selecting the R-Group label and clicking <strong>OK</strong> converts the structure into a Markush structure with the selected R-Group label:</p>
+
+<p><img alt="" src="TODO:./RGroupLabel1.png"></p>
+
+<p><strong>Note</strong>: You can choose several R-Group labels simultaneously:</p>
+
+<p><img alt="" src="TODO:./RGroupLabel2.png"></p>
+
+<p>Particular chemical fragments that may be substituted for a given R-Group form a set of R-Group members. R-Group members can be any structural fragment, including functional groups and single atoms or atom lists.</p>
+
+<p>To create a set of R-Group members:</p>
+
+<ol>
+<li>Draw a structure to become an R-Group member.</li>
+<li>Select the structure using the <em>R-Group Fragment Tool</em> to invoke the R-Group dialog; in this dialog select the label of the R-Group to assign the fragment to.</li>
+<li>Click on <strong>OK</strong> to convert the structure into an R-Group member.</li>
+</ol>
+
+<p>An R-Group attachment point is the atom in an R-Group member fragment that attaches the fragment to the initial Markush structure.</p>
+
+<p>Selecting the <em>Attachment Point Tool</em> and clicking on an atom in the R-Group fragment converts this atom into an attachment point. If the R-Group contains more than one attachment point, you can specify one of them as primary and the other as secondary. You can select between either the primary or secondary attachment point using the dialog that appears after clicking on the atom:</p>
+
+<p><img alt="" src="TODO:./AttachmentPoint.png"></p>
+
+<p>If there are two attachment points on an R-Group member, there must be two corresponding attachments (bonds) to the R-Group atom that has the same R-Group label. Clicking on <strong>OK</strong> in the above dialog creates the attachment point.</p>
+
+<p>Schematically, the entire process of the R-Group member creation can be presented as:</p>
+
+<p><img alt="" src="TODO:./scheme1.png"></p>
+
+<p><img alt="" src="TODO:./scheme2.png"></p>
+
+<h2 id="rgroup-logic">R-Group Logic</h2>
+
+<p><strong><em>Ketcher</em></strong> enables one to add logic when using R-Groups.
+To access the R-Group logic:</p>
+
+<ol>
+<li>
+<p>Create an R-Group member fragment as described above.</p>
+</li>
+<li>
+<p>Move the cursor over the entire fragment for the green frame to appear, then click inside the fragment. The following dialog appears:</p>
+</li>
+</ol>
+
+<p><img alt="" src="TODO:./RGroupLogic.png"></p>
+
+<ol>
+<li>
+<p>Specify <strong>Occurrence</strong> to define how many of an R-Group occurs.
+If an R-Group atom appears several times in the initial structure, you will specify <strong>Occurrence</strong> &#8220;&gt;n&#8221;, n being the number of occurrences; if it appears once, you see &#8220;R1 &gt;0&#8221;.</p>
+</li>
+<li>
+<p>Specify H at <strong>unoccupied</strong> R-Group sites (<strong>RestH</strong>): choose On or Off in the drop-down list.</p>
+</li>
+<li>Specify the logical <strong>Condition</strong>. Use the R-Group condition <strong>If R(i) Then</strong> to specify whether the presence of an R-Group is dependent on the presence of another R-Group.</li>
+</ol>
+
+<h2 id="marking-sgroups">Marking S-Groups</h2>
+
+<p>To mark S-Groups, use the <em>S-Group tool</em> <img alt="" src="TODO:./SGroup.png"> and the following dialog that appears after selecting a fragment with this tool:</p>
+
+<p><img alt="" src="TODO:./SGroupProperties.png"></p>
+
+<p>Available S-Group types:</p>
+
+<p><em>Generic</em></p>
+
+<p>Multiple group is a pair of brackets without any labels that represents a fixed number of identical repeating units in condensed form.</p>
+
+<p><em>SRU Polymer</em></p>
+
+<p>The Structural Repeating Unit (SRU) brackets enclose the structural repeating of a polymer. You have three available patterns: head-to-tail (the default), head-to-head, and either/unknown.</p>
+
+<p><em>Superatom</em></p>
+
+<p>An abbreviated structure (abbreviation) is all or part of a structure (molecule or reaction component) that has been abbreviated to a text label. Structures that you abbreviate keep their chemical significance, but their underlying structure is hidden. The current version can&#8217;t display contracted structures but correctly saves/reads them into/from files.</p>
+
+<p><em>Data</em></p>
+
+<p>Attached data is numeric or text data that you can associate with all or part of a structure. You can attach data to an atom, a bond, a fragment, the entire structure or to any collection of atoms and bonds.</p>
+
+<p><img alt="" src="TODO:./Data.png"></p>
+
+<ul>
+<li>Add the appropriate S-Group Field Name. If you enter a wrong value, the attached data can be saved to a molfile but cannot be registered to the target database or used in a search.</li>
+<li>Type the appropriate Field Value.</li>
+<li>The labels can be specified as Absolute, Relative or Attached.</li>
+</ul>
+
+<h2 id="changing-structure-display">Changing Structure Display</h2>
+
+<p>Use the Flip/Rotate tool <img alt="" src="TODO:./FlipRotate.png"> to change the structure display:</p>
+
+<p><img alt="" src="TODO:./Display.png"></p>
+
+<h2 id="drawing-reactions">Drawing Reactions</h2>
+
+<p>To draw/edit reactions you can</p>
+
+<ul>
+<li>draw reagents and products as described above;</li>
+<li>use options of the <em>Reaction Arrow Tool</em> to draw an arrow and and pluses in the reaction equation and map same atoms in reagents and products.</li>
+</ul>
+
+<p><img alt="" src="TODO:./Reaction.png"></p>
+
+<p><strong>Note</strong>: Reaction Auto-Mapping Tool is available only in the Server mode.</p>
+
+<h2 id="working-with-files">Working with Files</h2>
+
+<p>Ketcher supports the following molecular formats that can be entered either manually or from files:</p>
+
+<ul>
+<li>MDL Molfile or RXN file;</li>
+<li>Daylight SMILES (Server mode only);</li>
+<li>InChi string (Server mode only).</li>
+</ul>
+
+<p>You can use the <strong>Open&#8230;</strong> and <strong>Save As&#8230;</strong> buttons of the <em>Main</em> toolbar to import a molecule from a molecular file or save it to a supported molecular file format. The <em>Open File</em> dialog enables one to either browse for a file (Server mode) or manually input, e.g., the Molfile ctable for the molecule to be imported:</p>
+
+<p><img alt="" src="TODO:./OpenFile.png"></p>
+
+<p>The <em>Save File</em> dialog enables one to save the molecular file:</p>
+
+<p><img alt="" src="TODO:./SaveFile.png"></p>
+
+<p><strong>Note</strong>: In the standalone version only mol/rxn are supported for Open and mol/SMILES for Save.</p>
+
+<h2 id="hotkeys">Hotkeys</h2>
+
+<p>You can use keyboard hotkeys for some features/commands of the Editor. To display the hotkeys just place the cursor over a toolbar button. If a hotkey is available for the button, it will appear in brackets after the description of the button.</p>
+
+<table>
+
+<tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>Key</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>Action</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Esc</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Switching between the Lasso/Rectangle/Fragment
+  Selection tools</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>0</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw Any bond.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>1</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Single / Single Up / Single Down / Single Up/Down
+  bond. Consecutive pressing switches between these types.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>2</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span lang="FR" style='font-size:9.5pt;line-height:115%;
+  font-family:"Verdana","sans-serif"'>Double / Double Cis/Trans bond</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>3</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw a triple bond.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>4</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw an aromatic bond.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>R</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Creates an R-Group label. Use &lt;Shift&gt;+R to
+  change the R-Group label type (R-Group Label Tool/R-Group Fragment
+  Tool/Attachment Point Tool).</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>A</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw any atom</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>H</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw a hydrogen</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>C</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw a carbon</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>N</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw a nitrogen</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>O</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw an oxygen</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>S</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw a sulfur</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>F</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw a fluorine</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>P</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw a phosphorus</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>Shift+C </span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw a chlorine</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>Shift+B </span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw a bromine</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif";
+  color:black'>I</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif";color:black'>Draw an iodine</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>T</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Drawing templates. Consecutive pressing switches
+  between different templates.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>5</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Charge Plus/Charge Minus.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Ctrl+G</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>S-Group tool</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Ctrl+N</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Clear canvas</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Ctrl+O</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Open </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Ctrl+S</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Save As</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Ctrl+Z</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Undo</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Ctrl+Y</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Redo</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Ctrl+X</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Cut</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Ctrl+C</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Copy</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Ctrl+V</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Paste</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>+</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Zoom In</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>-</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Zoom Out</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Delete</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Delete the selected objects</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><b><span style='font-size:9.5pt;line-height:115%;font-family:"Verdana","sans-serif"'>Ctrl+L</span></b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt">
+  <p class="MsoNormal"><span style='font-size:9.5pt;line-height:115%;font-family:
+  "Verdana","sans-serif"'>Clean Up</span></p>
+  </td>
+ </tr>
+
+</table>

@@ -1,0 +1,100 @@
+<h1 id="chemdiff">ChemDiff</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>ChemDiff is an Indigo-based utility for finding duplications and visual comparison of two files containing multiple structures. SDF, SMILES, CML, MOLFILE input formats are supported. Files can contains large amount of molecules and ChemDiff was test on files with up to 1 million ones.</p>
+
+<p>There are at least 3 possible use cases for ChemDiff:</p>
+
+<ol>
+<li>Compare 2 sets of molecules.</li>
+<li>Find duplicates in a single set of molecules.</li>
+<li>Test whether a specified molecule (or some set of molecules) belongs to another set of molecules.</li>
+</ol>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<p><a href="../assets/indigo/ChemDiff_input.png"><img alt="" src="../assets/indigo/ChemDiff_input_small.png"></a>
+<a href="../assets/indigo/ChemDiff_output_ignore.png"><img alt="" src="../assets/indigo/ChemDiff_output_ignore_small.png"></a></p>
+
+<h2 id="features">Features</h2>
+
+<p>ChemDiff window contains two tabs: first tab is for input molecules, and second tab contains comparison result. To load set of molecules you need to click corresponding button for the first set or for the second set. After loading set of molecules ChemDiff asks what property should be used as an identifier for the molecule. Example of such dialog is given below. Table of possible properties contains name, serial number in the file, and all properties associated with this molecule.</p>
+
+<p><img alt="" src="../assets/indigo/ChemDiff_Select_ID_field.png"></p>
+
+<p>When the "Compare" button is pressed, ChemDiff compares the specified set of molecules and shows the results on the second tab:</p>
+
+<p><a href="../assets/indigo/ChemDiff_output.png"><img alt="" src="../assets/indigo/ChemDiff_output_small.png"></a></p>
+
+<p>Any table cell can be opened by double click or by pressing right mouse button:</p>
+
+<p><img alt="" src="../assets/indigo/ChemDiff_context_menu.png"></p>
+
+<p>If a table cell contain multiple molecules then ChemDiff shows a separate window with molecules from this group:</p>
+
+<p><img alt="" src="../assets/indigo/ChemDiff_multiple_molecules.png"></p>
+
+<p>If you double-click a molecule, you will see a separate window with this molecule:</p>
+
+<p><a href="../assets/indigo/ChemDiff_single_molecule.png"><img alt="" src="../assets/indigo/ChemDiff_single_molecule_small.png"></a></p>
+
+<p>There are different comparison options:</p>
+
+<p><img alt="" src="../assets/indigo/ChemDiff_options.png"></p>
+
+<p>If a molecule contains atoms with invalid valence or etc. then red mark is shown. Details can be found by double-clicking this molecule:</p>
+
+<p><img alt="" src="../assets/indigo/ChemDiff_error.png"></p>
+
+<p>ChemDiff distribution includes a set of test files showing features of molecules comparation.</p>
+
+<h2 id="more-screenshots">More screenshots</h2>
+
+<p><a href="../assets/indigo/ChemDiff_shot1_small-1.png"><img alt="" src="../assets/indigo/ChemDiff_shot1_small.png"></a>
+<a href="../assets/indigo/ChemDiff_shot2_small-1.png"><img alt="" src="../assets/indigo/ChemDiff_shot2_small.png"></a>
+<a href="../assets/indigo/ChemDiff_large_set_in.png"><img alt="" src="../assets/indigo/ChemDiff_large_set_in_small.png"></a>
+<a href="../assets/indigo/ChemDiff_large_set_out.png"><img alt="" src="../assets/indigo/ChemDiff_large_set_out_small.png"></a></p>
+
+<h2 id="portability">Portability</h2>
+
+<p>ChemDiff is written in Java and supports Linux and Windows operating systems, both 32-bit and 64-bit versions
+of each system. Mac OS X 10.5 and 10.6 are supported as well. ChemDiff depends on the <a href="index.html">Indigo</a> library. The binaries of Indigo for all supported systems are included in the distribution.</p>
+
+<h2 id="download-and-install">Download and Install</h2>
+
+<p>Look at the <a href="../download/index.html#utilities">Downloads</a> page for package suitable for your system. For Windows, an installer executable is provided. On Linux and Mac OS X, you just need to unpack the provided zipfile and run the following command:</p>
+
+<pre><code>/path/to/chemdiff-1.0-xxxx/chemdiff
+</code></pre>
+
+<p>You can also put the symlink in /usr/local/bin:</p>
+
+<pre><code>sudo ln -s /path/to/chemdiff-1.0-xxxx/chemdiff /usr/local/bin
+</code></pre>
+
+<p>and then you will be able to run ChemDiff by typing <code>chemdiff</code> in the command line.</p>
+
+<h2 id="license">License</h2>
+
+<p>Copyright &#169; 2011 GGA Software Services LLC</p>
+
+<p>This program is free software: You can redistribute it and/or modify it under the terms of the GNU General
+Public License as published by the Free Software Foundation; version 3 of the License.</p>
+
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License along with this program. If you did not
+not, please see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+
+<h2 id="commercial-availability">Commercial Availability</h2>
+
+<p>If GPL-licensed ChemDiff does not fit your needs, please contact us at <a href="mailto:info@ggasoftware.com">info@ggasoftware.com</a> to discuss the
+purchase of a commercial license. You may need the commercial license if you want to:</p>
+
+<ul>
+<li>Receive ongoing support and maintenance</li>
+<li>Include ChemDiff as a component in your proprietary software product</li>
+</ul>

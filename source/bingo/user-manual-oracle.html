@@ -1,0 +1,2858 @@
+<h1 id="user-manual-oracle">User Manual: Oracle</h1>
+
+<h2 id="basics">Basics</h2>
+
+<h3 id="data--representation">Data  representation</h3>
+
+<p>Bingo supports the following molecule formats:</p>
+
+<ul>
+<li>Daylight SMILES with ChemAxon extensions</li>
+<li>Daylight SMARTS</li>
+<li>MDL (Symyx) Molfile</li>
+<li>GZip-compressed Molfile</li>
+<li>CML</li>
+<li>Internal binary format</li>
+</ul>
+
+<p>Bingo supports the following reaction formats:</p>
+
+<ul>
+<li>Daylight reaction SMILES with ChemAxon Extensions</li>
+<li>Daylight reaction SMARTS</li>
+<li>MDL (Symyx) Rxnfile</li>
+<li>GZip-compressed Rxnfile</li>
+<li>CML</li>
+<li>Internal binary format</li>
+</ul>
+
+<h4 id="daylight-formats-with-chemaxon-extensions">Daylight Formats with ChemAxon Extensions</h4>
+
+<p>Almost all features of the original Daylight
+<a href="http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html">SMILES</a> format are supported, including:</p>
+
+<ul>
+<li>Aromatic rings</li>
+<li>Hydrogen counters</li>
+<li>Tetrahedral and allene-like stereocenters</li>
+<li>Cis-trans double bonds</li>
+<li>Disconnected structures</li>
+<li>Reaction atom-to-atom mapping (AAM)</li>
+</ul>
+
+<p>The only features that are not supported are:</p>
+
+<ul>
+<li>Square-planar, trigonal-bipyramidal, octahedral stereo configurations</li>
+</ul>
+
+<p>Almost all features of the original Daylight
+<a href="http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html">SMARTS</a> format are supported, including:</p>
+
+<ul>
+<li>Aromatic and aliphatic atoms</li>
+<li>SSSR (smallest set of smallest rings) calculation</li>
+<li>Logical operators</li>
+<li>Atom environments (nested SMARTS)</li>
+<li>Component-level grouping</li>
+</ul>
+
+<p>The only features that are not supported are:</p>
+
+<ul>
+<li>Constraint "h<n>" (implicit hydrogen count). Hydrogens can be stored implicitly or explicitly in the database, and we believe that this difference should not affect the search results. "H<n>" (total hydrogen count) may be used instead</n></n></li>
+<li>All features of SMILES format  that are not supported</li>
+</ul>
+
+<p>The following ChemAxon SMILES <a href="http://www.chemaxon.com/marvin/help/formats/cxsmiles-doc.html">extensions</a> are
+supported:</p>
+
+<ul>
+<li>Radical numbers: monovalent, divalent singlet, and divalent triplet</li>
+<li><a href="http://www.chemaxon.com/jchem/doc/user/query_stereochemistry.html">Stereogroups</a></li>
+<li>Pseudo-atoms (atom aliases)</li>
+<li>Fragment level grouping in reactions</li>
+</ul>
+
+<h4 id="mdl-formats">MDL Formats</h4>
+
+<p>MDL (Symyx) Molfiles and Rxnfiles are supported by Bingo. Both format versions (2000 and 3000) are supported.
+Almost all format features are supported, including:</p>
+
+<ul>
+<li>Pseudo-atoms (atom aliases)</li>
+<li>Stereogroups</li>
+<li>R-Groups (Markush queries)</li>
+<li>Query atoms and query bonds</li>
+<li>Various query flags on atoms and bonds</li>
+<li>Atom positions</li>
+<li>3D constraints in v2000 Molfiles</li>
+<li>Reaction atom-to-atom mapping (AAM)</li>
+<li>Reacting centers and stereo inv/ret flags</li>
+</ul>
+
+<p>The only features that are not supported are:</p>
+
+<ul>
+<li>SGroups and polymers</li>
+<li>3D constraints in v3000 Molfiles</li>
+</ul>
+
+<p>MDL (Symyx) SDfile format (.sdf) is supported for export from user tables. SDFile, RDfile (.rdf), and
+multiline SMILES formats are supported for import to user tables.</p>
+
+<h4 id="internal-binary-formats">Internal Binary Formats</h4>
+
+<p>Internal Bingo binary molecule and reaction formats are designed exclusively for database molecules and
+reactions, but not for queries. All the molecule and reaction features that are not query features are
+supported, including:</p>
+
+<ul>
+<li>Pseudo-atoms</li>
+<li>Aromatic rings</li>
+<li>Tetrahedral stereocenters, allene stereo, stereogroups, and cis-trans double bonds</li>
+<li>Reaction atom-to-atom mapping (AAM)</li>
+<li>Reacting centers and stereo inv/ret flags</li>
+<li>Atom positions (optional)</li>
+</ul>
+
+<h3 id="storage">Storage</h3>
+
+<h4 id="choosing-the-format">Choosing the format</h4>
+
+<p>If you have a database table with Molfiles, we recommend that you use:</p>
+
+<ul>
+<li>Molfiles if you are too busy to convert anything and not so interested in performance. Performance will be
+    acceptable anyway.</li>
+<li>SMILES if you are interested in performance but do not undertake 3D searches and do not use the
+    highlighting feature frequently.</li>
+<li>Internal binary format if you are interested in performance and need 3D searches or use the highlighting
+    feature often.</li>
+<li>GZip-compressed Molfiles if you are interested in performance but not allowed to use any format other that
+    Molfile. Normally, you would not need that option.</li>
+</ul>
+
+<p>If you have a database table with Rxnfiles, the recommendations are the same, but please note that the
+reaction SMILES format does not contain the reacting centers information. So if you need the reacting centers
+in the database reactions, use Rxnfiles or binary format. If you do not use the highlighting frequently, you
+can choose not to save atom positions.</p>
+
+<h4 id="choosing-the-oracle-data-type">Choosing the Oracle Data Type</h4>
+
+<p>For molecule and reaction storage, Bingo supports the following Oracle data types equally well:</p>
+
+<ul>
+<li>Character Large Object (CLOB)</li>
+<li>Binary Large Object (BLOB)</li>
+<li>String (VARCHAR2), limited to 4000 characters by Oracle</li>
+</ul>
+
+<p>We recommend that you use:</p>
+
+<ul>
+<li>CLOB for Molfiles and Rxnfiles</li>
+<li>VARCHAR2 for SMILES and reaction SMILES</li>
+<li>BLOB for binary format or GZip-compressed data</li>
+</ul>
+
+<p>However, you can use any data type for any of the supported formats. Please consider the limitation of
+VARCHAR2 to 4000 characters. This number of characters is more than enough for SMILES, but usually it is not
+enough for Molfiles and Rxnfiles.</p>
+
+<h4 id="mixing-formats">Mixing formats</h4>
+
+<p>Mixing different formats in the database is not a problem. For example, you can insert SMILES string to CLOB
+column that contains Molfiles.</p>
+
+<h4 id="conversion">Conversion</h4>
+
+<p>You can convert molecules and reactions from any format to any other format using Bingo operators, namely
+<code>Molfile()</code>, <code>Rxnfile()</code>, <code>SMILES()</code>, <code>RSMILES()</code>, <code>CompactMolecule()</code>, <code>CompactReaction()</code>, <code>Zip()</code>, and
+<code>Unzip()</code>. See below for details.</p>
+
+<p><strong>Note:</strong> Conversion operators work only for target (database) molecules and reactions. Query features are
+not supported for conversion.</p>
+
+<h4 id="performance-notice">Performance Notice</h4>
+
+<p>Oracle stores table data in cached
+<a href="http://download.oracle.com/docs/cd/B28359_01/server.111/b28318/logical.htm#i4894">blocks</a> in a row-wise
+manner. That means, the more data in each row, the more blocks that Oracle has to read from disk to fetch one
+column with molecule or reaction number. In order to minimize the number of blocks (and so minimize the query
+completion time), you may want to include less data in table rows. This is the reason for using the compact
+formats like SMILES or Bingo binary format.</p>
+
+<p><strong>Note:</strong> If you have both columns with large items (Molfiles/Rxnfiles) and compact items (SMILES/binary) in
+one table, the query performance will be even worse than with the single Molfile/Rxnfile column. The benefits
+of compact formats are evident when you separate the compact table from the initial large one.</p>
+
+<h3 id="indices">Indices</h3>
+
+<h4 id="creating-an-index">Creating an Index</h4>
+
+<p>For a significant increase in the operator performance when querying a table, you can assign a special index
+on a table field (column) that contains molecules or reactions. CLOB, BLOB, and VARCHAR2 columns are all
+available for indexing. All queries will return the same set of results with or without the index.</p>
+
+<p>The more records the table contains, the longer it takes to create an index.</p>
+
+<p><strong>Note:</strong> Renaming the table after index creation is not allowed.</p>
+
+<h5>Index Parameters</h5>
+
+<p>In some situations you do not need all of the search features. In these cases, you have options for skipping
+some indexing sub-procedures in order to accelerate the indexing. See below for details.</p>
+
+<h5>Monitoring the Index Creation Process</h5>
+
+<p>You have two options for monitoring the index creation process (which may take quite a long time):</p>
+
+<ol>
+<li>Viewing the progress of Oracle <a href="http://download.oracle.com/docs/cd/B25329_01/doc/admin.102/b25107/monitoring.htm#CEGGAFBC">long
+      operations</a>.
+      Bingo continuously updates the &#8220;progress meter&#8221; of the long operation during the indexing.</li>
+<li>Viewing the Bingo log file. See <a href="#viewing-the-log-file">below</a> for details.</li>
+</ol>
+
+<h4 id="updating-and-dropping-index">Updating and Dropping Index</h4>
+
+<p>You can add, remove, or edit records in the table after the index is created. Adding records does not slow
+down the queries, i.e. the performance will be the same as if you had indexed the whole table at once. No re-
+indexing is required after adding the records.</p>
+
+<p>You can drop the index at any time. After the drop, the queries will slow down but return the same results.</p>
+
+<p><strong>Note:</strong> Due to technical limitations with Oracle, adding the molecules in an indexed table is slower than
+indexing the existing molecules. For example, if you have an indexed table with 5000 molecules and if you want
+to add another 50000, dropping the index before adding and re-creating it would be a good decision. On the
+other hand, if you have 50000 indexed molecules, adding another 5000 will be faster if you do not re-index.</p>
+
+<p><strong>Note:</strong> If you delete or replace substantial amount of records in the indexed table, re-creating the index
+in order will speed up the queries.</p>
+
+<p>After you insert or update, you must either:</p>
+
+<ul>
+<li>close the SQL session, or</li>
+<li>execute <code>Bingo.FlushInserts()</code> procedure.</li>
+</ul>
+
+<p>to make the inserted/updated rows available for other SQL sessions. If there are no other sessions that are
+using the table you are updating, this is not necessary.</p>
+
+<p><strong>Note:</strong> You must call <code>FlushInserts()</code> before doing <code>INSERT</code> or <code>UPDATE</code> of the same table from another
+session. If you do another <code>INSERT</code> or <code>UPDATE</code> concurrently from another session, it will hang until the
+first session does <code>FlushInserts()</code> or terminates.</p>
+
+<p><code>FlushInserts()</code> takes some time, and as a result, it is not included in the <code>INSERT</code> and <code>UPDATE</code>
+implementations. You do not need to call <code>FlushInserts()</code> after each <code>INSERT</code> or <code>UPDATE</code>. It is normal to
+call it after you have finished updating the table.</p>
+
+<p>Here is an example:</p>
+
+<pre><code>CREATE INDEX $index ON $table ($column) INDEXTYPE IS Bingo.MoleculeIndex;
+INSERT INTO $table (SELECT * FROM $other_table);
+EXECUTE BEGIN Bingo.FlushInserts(); END;
+</code></pre>
+
+<h3 id="queries">Queries</h3>
+
+<p>You can specify the query molecule as a Molfile (including various query features), or as a SMILES string.
+For reaction queries, use Rxnfiles or reaction SMILES. As for Oracle data types, CLOB and VARCHAR2 are
+supported for queries.</p>
+
+<p><strong>Note:</strong> In order to make substructure and SMARTS search faster, Bingo loads the indexed molecules into memory. The
+loading itself takes some time, and as a result, the first substructure or SMARTS query runs slower than all the
+subsequent ones. The loaded molecules are shared across other SQL sessions, and so other sessions there will
+not encounter such time lags. The memory is freed as soon as all the sessions working with this table are
+disconnected.</p>
+
+<h2 id="molecules">Molecules</h2>
+
+<h3 id="conversion-to-smiles">Conversion to SMILES</h3>
+
+<p>The <code>Bingo.SMILES()</code> operator can be used for converting Molfiles and binary molecules to SMILES. The
+operator works equally well with CLOB, BLOB, and VARCHAR2 operands. The operator always returns the VARCHAR2
+result.</p>
+
+<pre><code>SELECT Bingo.SMILES($molfile) FROM DUAL;
+
+SELECT Bingo.SMILES($binary) FROM DUAL;
+
+SELECT Bingo.SMILES($column) FROM $table;
+</code></pre>
+
+<p><strong>Note:</strong> If the input molecule is badly formed (i.e. does not conform to format, has drawing mistakes, or
+has unsupported features), Bingo throws the exception to Oracle.</p>
+
+<h4 id="converting-a-table">Converting a Table</h4>
+
+<p>When you convert a table to SMILES, you have two possibilities for skipping the bad exception-raising
+molecules:</p>
+
+<p><strong>1.</strong> Short option:</p>
+
+<pre><code>CREATE TABLE $newtable AS SELECT $id $newid, Bingo.SMILES($molfile) $smiles FROM $table
+                                       WHERE Bingo.CheckMolecule($molfile) IS NULL;
+</code></pre>
+
+<p><strong>2.</strong> Lengthy but faster option:</p>
+
+<pre><code>CREATE TABLE $newtable ($newid NUMBER, $smiles VARCHAR2(4000));
+
+set serveroutput on;
+declare
+  i int := 0;
+begin
+  dbms_output.enable(1000000);
+  for item in (select $id, $molfile from $table) loop
+    begin
+      INSERT INTO $newtable values(item.$id, bingo.SMILES(item.$molfile));
+    exception
+      when others then 
+        dbms_output.put_line('Bad molecule '|| item.$id ||': ' || SQLERRM);
+    end;
+    i := i + 1;
+    if i mod 1000 = 0 then
+      COMMIT;
+    end if;
+  end loop;
+end;
+</code></pre>
+
+<p><code>$table</code> contains Molfiles in the <code>$molfile</code> column and molecule IDs in the <code>$id</code> column. <code>$newtable</code>
+contains SMILES in the <code>$smiles</code> column and molecule IDs in the <code>$newid</code> column.</p>
+
+<h3 id="conversion-to-binary-format">Conversion to Binary Format</h3>
+
+<p>The <code>Bingo.CompactMolecule()</code> operator can be used for converting Molfiles and SMILES to the internal binary
+format. The operator works equally well with CLOB, BLOB, and VARCHAR2 operands. The operator always returns
+the BLOB result.</p>
+
+<pre><code>SELECT Bingo.CompactMolecule($molfile, $xyz) FROM DUAL;
+
+SELECT Bingo.CompactMolecule($smiles, $xyz) FROM DUAL;
+
+SELECT Bingo.CompactMolecule($column, $xyz) FROM $table;
+</code></pre>
+
+<p>The <code>$xyz</code> parameter must be 0 or 1. If it is 1, the positions of atoms are saved to the binary format. If it
+is zero, the positions are skipped.</p>
+
+<p><strong>Note:</strong> If the input molecule is badly formed (i.e. does not conform to any format, has drawing mistakes,
+or has unsupported features), Bingo throws the exception to Oracle.</p>
+
+<h4 id="converting-a-table-1">Converting a Table</h4>
+
+<p>When you convert a table to binary format, you have two possibilities for skipping the bad exception-raising
+molecules:</p>
+
+<p><strong>1.</strong> Short option:</p>
+
+<pre><code>CREATE TABLE $newtable AS SELECT $id $newid, Bingo.CompactMolecule($molfile, $xyz) $binary FROM $table
+                                       WHERE Bingo.CheckMolecule($molfile) IS NULL;
+</code></pre>
+
+<p><strong>2.</strong> Lengthy but faster option:</p>
+
+<pre><code>CREATE TABLE $newtable ($newid NUMBER, $binary BLOB) lob($binary) store as (enable storage in row);
+set serveroutput on;
+declare
+  i int := 0;
+begin
+  dbms_output.enable(1000000);
+  for item in (select $id, $molfile from $table) loop
+    begin
+      INSERT INTO $newtable values(item.$id, bingo.CompactMolecule(item.$molfile, $xyz));
+    exception
+      when others then 
+        dbms_output.put_line('Bad molecule '|| item.$id ||': ' || SQLERRM);
+    end;
+    i := i + 1;
+    if i mod 1000 = 0 then
+      COMMIT;
+    end if;
+  end loop;
+end;
+</code></pre>
+
+<h3 id="creating-an-index-1">Creating an Index</h3>
+
+<p>The following command creates the index:</p>
+
+<pre><code>CREATE INDEX $index ON $table ($column) INDEXTYPE IS Bingo.MoleculeIndex;
+</code></pre>
+
+<p><code>$table</code> is the name of the table containing molecule data in column <code>$column</code>. <code>$index</code> is the unique name
+of the Oracle domain index that will be created.</p>
+
+<p>You can disable the computation of specific fingerprint parts (saving both time and disk space), setting the
+corresponding parameter to zero:</p>
+
+<ul>
+<li><code>FP_ORD_SIZE=0</code>, if you are not planning to undertake a substructure or SMARTS search often;</li>
+<li><code>FP_TAU_SIZE=0</code>, if you are not planning to undertake a tautomer substructure search often;</li>
+<li><code>FP_ANY_SIZE=0</code>, if your substructure search queries will not contain a lot of query features;</li>
+<li><code>FP_SIM_SIZE=0</code>, if you will never use similarity search capability.</li>
+</ul>
+
+<p>Here is an example to turn off &#8220;any&#8221; and &#8220;tautomer&#8221; fingerprint bits:</p>
+
+<pre><code>CREATE INDEX $index on $table($column) INDEXTYPE IS Bingo.MoleculeIndex PARAMETERS('FP_TAU_SIZE=0 FP_ANY_SIZE=0');
+</code></pre>
+
+<p>Without fingerprints, you will still be able to perform the search, but it will run slowly. In order to make
+it run fast, you will need to re-create the index with the fingerprints enabled.</p>
+
+<p>You can specify number of parallel threads for the index creation procedure. For example, if you want to use
+only one core of your multi-core CPU, please set the number of threads to one:</p>
+
+<pre><code>CREATE INDEX $index on $table($column) INDEXTYPE IS Bingo.MoleculeIndex PARAMETERS('NTHREADS=1');
+</code></pre>
+
+<p>The default value for <code>NTHREADS</code> is zero, which means that the number of threads will be equal to the number
+of CPU cores (auto-detected) plus one.</p>
+
+<h3 id="substructure-search">Substructure Search</h3>
+
+<h4 id="description-and-syntax">Description and Syntax</h4>
+
+<p>The general form of substructure search query is as follows:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sub($column, $query, $parameters)=1;
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molfile CLOBs in the column <code>$column</code>.</li>
+<li><code>$query</code> is a VARCHAR2 or CLOB containing the query molfile or SMILES string.</li>
+<li><code>$parameters</code> is a VARCHAR2 string.</li>
+</ul>
+
+<p>You can omit the <code>$parameters</code> value:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sub($column, $query)=1;
+</code></pre>
+
+<p>This is equal to the following:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sub($column, $query, '')=1;
+</code></pre>
+
+<p>A substructure search query with no <code>$parameters</code> returns the molecules that include the query structure as
+the substructure or exact match. The matched part is highlighted in examples.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q01.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t01.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>The query molecule can be disconnected. Matched fragments in the target structure cannot overlap.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q22.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t22.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_n22.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="substructure-query-features">Substructure Query Features</h4>
+
+<h5>Explicit Hydrogens</h5>
+
+<p>The explicit hydrogens specified in the query structure must match any (explicit or implicit) hydrogen in the
+target structure.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q02.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t02.svg"></td>
+<td align="left"><img alt="" src="../assets/bingo/sub_tn02.svg"></td>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_h_01q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_h_01t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_h_01n.svg"></td>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_h_02q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_h_02t.svg"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Charges and Radicals</h5>
+
+<p>The presence of charged atoms in the query molecule is an additional property. If the charge is specified, it
+must match the charge in the target molecule. An atom without a specific charge can match an atom with either
+charge. The same rule applies for radicals.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q03.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t03.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn03.svg"></td>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q04.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t04.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn04.svg"></td>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q05.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t05.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn05.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Isotopes</h5>
+
+<p>The presence of isotopes atoms in the query molecule is an additional property, like charges.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q07.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t07.svg"></td>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q08.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t08.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Valence</h5>
+
+<p>Valence can be specified on the query atoms.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q09.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t09.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn09.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Preventing Hydrogen Substitutions</h5>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q10.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t10.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn10.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Number of Non-Hydrogen Substitutions</h5>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q11.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t11.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn11.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Unsaturation flag</h5>
+
+<p>An unsaturated atom must have at least one non-single bond.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q12.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t12.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn12.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Ring Bond Count</h5>
+
+<p>You can specify the number of ring bonds that are connected to the atom.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q13.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t13.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn13.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Bond Topology</h5>
+
+<p>&#8220;Ring&#8221; query bonds must match the ring(s) of the target molecule; &#8220;chain&#8221; query bonds must not.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q14.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t14.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn14.svg"></td>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q15.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t15.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn15.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Query Atom Labels</h5>
+
+<p>&#8220;A&#8221; query atom matches any atom except hydrogen (or its isotopes). &#8220;Q&#8221; query atom matches any atom except
+hydrogen and carbon.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q16.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t16.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn16.svg"></td>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q17.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t17.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn17.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Atom Lists</h5>
+
+<p>You can specify the list of elements that are allowed or prohibited for the query atom. Hydrogen in the list
+can match the explicit or implicit hydrogen of the target.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q18.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t18.svg"></td>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q19.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t19.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Query Bonds</h5>
+
+<p>The following types of query bonds are supported:</p>
+
+<ul>
+<li>Single or double</li>
+<li>Single or aromatic</li>
+<li>Double or aromatic</li>
+<li>Any</li>
+</ul>
+
+<p>Below is an example with 'Single or Double' bonds. Such bonds cannot match aromatic target bonds.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q20.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t20.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_tn20.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="cistrans-isomerism">Cis-trans Isomerism</h4>
+
+<p>You can specify the &#8220;stereo&#8221; flag on a carbon double bond that you do not want to rotate in order to exclude
+cis-trans isomers from the search results. Explicit and implicit hydrogen substituents are supported.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_10q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_10t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_10n.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_11q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_11t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_11n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="chirality">Chirality</h4>
+
+<p>The following tetrahedral stereocenters are allowed:</p>
+
+<ul>
+<li>C or Si or N+ with 3 single bonds (implicit hydrogen)</li>
+<li>C or Si or N+ with 4 single bonds</li>
+<li>S with 2 single bonds and 2 double bonds</li>
+<li>P with 3 single bonds and 1 double bond</li>
+<li>P+ with 4 single bonds</li>
+</ul>
+
+<p>Also, a special type of tetrahedral stereocenter&#8212;with the pyramid is formed by 3 neighbor atoms and the lone
+pair of electrons&#8212;is allowed:</p>
+
+<ul>
+<li>N or P or S+ with 3 single bonds</li>
+<li>S with 2 single bonds and 1 double bond</li>
+</ul>
+
+<p>The stereocenter is defined by up- or down-oriented stereobond(s) connected to it. The chirality is
+determined from the stereobond orientation and the position of atoms. The stereocenter that has an &#8220;absolute&#8221;
+configuration can match only &#8220;absolute&#8221; stereocenters that have the same chirality.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_01q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_01t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_01n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Here are two examples of non-carbon chiral centers:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_08q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_08t.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_09q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_09t.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>MDL notation of stereogroups is supported. &#8220;AND&#8221; stereocenters can match &#8220;AND&#8221;, &#8220;OR&#8221;, and absolute ones; &#8220;OR&#8221;
+stereocenters can match &#8220;OR&#8221; and absolute ones. Target stereo-groups cannot be more fragmented than the query
+stereo-groups.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_05q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_05t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_05n.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_06q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_06t.svg"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<p>&#8220;Either&#8221; stereobond can be specified in the query. The corresponding stereocenter matches any stereocenter
+regardless of chirality.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_07q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_07t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_07n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note:</strong> The embedding of the substructure is not limited to the way in which it is drawn. Sometimes, single
+bonds can &#8220;swap&#8221;, producing the hits that are correct, but appear strange.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_02q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_02t.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note:</strong> A chiral center with explicit hydrogen can match a chiral center with implicit hydrogen, and vice
+versa.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_03q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_03t.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_stereo_04q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_stereo_04t.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="markush-search">Markush Search</h4>
+
+<p>Markush search has the same syntax as the basic substructure search, and it will be performed automatically
+if the query molecule contains one or more R-groups.</p>
+
+<table>
+<thead>
+<tr>
+<th>Markush Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_mar_q01.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_mar_t01.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_mar_nt01.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_mar_q02.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_mar_t02.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_mar_n02.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="aromaticity-in-substructure-search-and-markush-search">Aromaticity in Substructure Search and Markush Search</h4>
+
+<h5>Basic Queries</h5>
+
+<p>Aromatic bonds can match only aromatic bonds.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/arom_sq1_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_sq1_r.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_sq1_nr.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/arom_sq2_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_sq2_r.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_sq2_nr.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/arom_sq3_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_sq3_r.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_sq3_nr.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Queries with Query Features</h5>
+
+<p>Some queries with query features can have ambiguous aromaticity status: they are aromatic in one matching and
+not aromatic in another matching.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/arom_qq1_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_qq1_r.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_qq1_nr.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/arom_qq2_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_qq2_r.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_qq2_nr.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Aromaticity and Markush Search</h5>
+
+<p>Markush queries are allowed to match both aromatic and non-aromatic targets.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/arom_qm1_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_qm1_t.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h5>Charge and Aromaticity</h5>
+
+<p>Charges and aromatic bonds are matched independently. In some structures where the acquisition of the charge
+by an atom destroys the aromaticity of a ring, matching is not possible due to the mismatch of bond orders.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules <strong>Not</strong> Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/arom_cq1_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/arom_cq1_nr.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>However, uncharged  aromatic queries match charged aromatic structures:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/sub_q21.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_t21.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="pseudoatoms">Pseudo-atoms</h4>
+
+<p>Pseudo-atom in the query structure can match only the same pseudo-atom in the target structure. The matching
+is case-sensitive.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_pseudo_q1.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_pseudo_t1.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_pseudo_n1.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Pseudo-atoms in target structures are never expanded:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_pseudo_q2.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_pseudo_n2.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Query atoms can match pseudo-atoms:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_pseudo_q3.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_pseudo_t3.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note:</strong> 'X' atom is treated as 'any halogen' query atom by default, but there is an option to treat it as
+pseudo-atom. In order to treat it so, please run the following SQL statement prior to table indexing:</p>
+
+<pre><code>exec Bingo.TreatXAsPseudoatom(1);
+</code></pre>
+
+<p>After that, please reconnect to the database. This setting will be saved, so you will never need to run the
+statement again (unless you re-install the cartridge). To get the original behavior back, you can run the
+following SQL statement:</p>
+
+<pre><code>exec Bingo.TreatXAsPseudoatom(0);
+</code></pre>
+
+<table>
+
+<tr>
+<th>Substructure Query</th>
+<th>Examples of Molecules Retrieved (Or Not)</th>
+<th>Comment</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_pseudo_q4.svg"></td>
+<td><img alt="" src="../assets/bingo/sub_pseudo_t4.svg"></td>
+<td>Matches with &#8220;x as pseudo atom&#8221; option; <br>
+
+ Raises an error with &#8220;x as any halogen atom&#8221; option (default).</td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_pseudo_q5.svg"></td>
+<td><img alt="" src="../assets/bingo/sub_pseudo_t5.svg"></td>
+<td align="right">Matches with &#8220;x as any halogen atom&#8221; option (default); <br>
+
+ Does not match with &#8220;x as pseudo atom&#8221; option.</td>
+</tr>
+</table>
+
+
+<h4 id="resonance-search">Resonance Search</h4>
+
+<p>The resonance substructure search is provided by the <code>Sub</code> operator with <code>RES</code> parameter:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sub($column, $query, 'RES')=1;
+</code></pre>
+
+<p>With this type of search you can find molecules whose resonance forms contain the query molecule.</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Example of Molecule Retrieved</th>
+<th>Matched Resonance Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/res_02_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_01_t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_01_r.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/res_01_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_02_t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_02_r.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>The query molecule can contain any query features:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Example of Molecule Retrieved</th>
+<th>Matched Resonance Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/res_03_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_03_t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_03_r.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/res_04_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_03_t-1.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_03_r-1.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Impossible resonance forms are not matched:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Example of Molecule Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/res_06_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_06_n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Actually, only the <em>main resonance contributors</em> are matched. The main resonance contributors are resonance
+forms that have the maximum number of atoms with the full octet and/or the minimum number of atoms with
+nonzero formal charge. For example, the following structure would not match itself because both atoms are
+charged and only one atom has a full octet:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Example of Molecule Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/res_07_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_07_n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Uncharged atoms still match charged ones in the resonance search:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Example of Molecule Retrieved</th>
+<th>Matched Resonance Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/res_08_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_08_t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_08_r.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>A resonance chain can be of any length:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Example of Molecule Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/res_05_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_05_t.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Cyclic resonance forms are currently not supported:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Example of Molecule Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/res_09_q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/res_09_n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="3d-constraints">3D Constraints</h4>
+
+<p>Bingo supports all types of 3D constraints for the queries in MDL (Symyx) Molfile 2000 format:</p>
+
+<ul>
+<li>Distance ranges</li>
+<li>Angle ranges</li>
+<li>Dihedral angle ranges</li>
+<li>Exclusion spheres</li>
+</ul>
+
+<p>The substructure match with 3D constraints follows the rules of the ordinary substructure match. In addition,
+the 3D constraints defined in the query molecule must be fulfilled by the corresponding atoms of the target.
+If the query can be embedded in several ways, all embeddings are checked. The query matches the target when at
+least one embedding conforms to the conditions.</p>
+
+<p><strong>Note:</strong> 3D constraints of Molfile 3000 format are not supported.</p>
+
+<h4 id="affine-transformation-search">Affine Transformation Search</h4>
+
+<p>This type of 3D search treats the molecule as a rigid structure consisting of points in space. Similar to the
+case of the search with constraints, all inclusions of the query are checked against the following condition:
+the structure of the query is transformed to its image on the target by an affine transformation
+(translation+rotation+scale). 1 The syntax of the affine transformation substructure search is as follows:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sub($column, $query, 'AFF $rms')=1;
+</code></pre>
+
+<p><code>rms</code> is the maximum allowed root-mean-square deviation of all imposed atoms. It is measured in angstroms.</p>
+
+<p>The query atoms that are fixed must be labeled fixed. The imposition of other atoms is not restricted to
+<code>rms</code>.</p>
+
+<p>The following example makes no chemical sense, but is included here as a simple two-dimensional illustration
+of the affine transformation search:</p>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Parameters</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_aff_01q.svg"></td>
+<td><code>AFF 0.1</code></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_aff_01t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_aff_01n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note:</strong> When no atoms are labeled fixed, all of them are considered fixed.</p>
+
+<h4 id="conformational-search">Conformational Search</h4>
+
+<p>Any conformation can be obtained by rotating the molecule around single bonds. Thus, the inclusion is correct
+if the image of the query molecule is the conformation of the query, i.e. a sequence of rotations of the
+molecule around single bonds converts the query into a substructure of the target. In a way similar to affine
+transformation search, you can set the <code>rms</code> parameter in order to define the accuracy of the transformation.</p>
+
+<p>The syntax of the conformational substructure search is as follows:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sub($column, $query, 'CONF $rms')=1;
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Substructure Query</th>
+<th>Parameters</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Examples of Molecules Not Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sub_conf_01q.svg"></td>
+<td><code>CONF 0.1</code></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_conf_01t.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/sub_conf_01n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="smarts-search">SMARTS Search</h3>
+
+<p>You can search over your database for <a href="http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html">SMARTS</a>
+expression match with the following query:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.SMARTS($column, $smarts)=1;
+</code></pre>
+
+<h4 id="differences-between-substructure-and-smarts-matching">Differences between substructure and SMARTS matching</h4>
+
+<p>While a lot of SMARTS notation is allowed in <code>Sub()</code> operator queries as well, there
+are differences between substructure and SMARTS search:</p>
+
+<ul>
+<li>
+<p>SMARTS fragments $(...) are not allowed in ordinary substructure search</p>
+</li>
+<li>
+<p>Empty bond designator (like 'CC' or 'cc') denotes 'single or aromatic' bond in <code>SMARTS()</code>.
+    In <code>Sub()</code>, it denotes aromatic bond, if it belongs to a ring and has both
+    end atoms aromatic (lowercase); otherwise, it denotes a single bond. </p>
+</li>
+<li>
+<p>'C' within <code>SMARTS()</code> means aliphatic carbon, while 'C' within <code>Sub()</code> means any carbon.
+    The same applies to 'B', 'N', 'O', 'S', 'P'. 'C1~C~C~C~C~C~1' won't match 'c1ccccc1'
+    in <code>SMARTS()</code>, but it will do so in <code>Sub()</code>. </p>
+</li>
+<li>
+<p>SMARTS queries are not fed to aromaticity matcher. 'c1-c=c-c=c-c=1' won't match
+    'c1ccccc1' in <code>SMARTS()</code>, but it will do so in <code>Sub()</code>. </p>
+</li>
+<li>
+<p>Tautomer (<code>TAU</code>) and resonance (<code>RES</code>) matching options are not allowed within
+    <code>SMARTS()</code> operator. </p>
+</li>
+</ul>
+
+<h3 id="exact-search">Exact Search</h3>
+
+<p>The general form of exact search query is as follows:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Exact($column, $query, $parameters)=1;
+</code></pre>
+
+<p>You can omit the <code>$parameters</code> value:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Exact($column, $query)=1;
+</code></pre>
+
+<p>It is equal to:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Exact($column, $query, 'ALL')=1;
+</code></pre>
+
+<p>This kind of search makes it possible for you to set various search conditions. If no search conditions are
+set, two molecules are considered similar when they are completely equal (up to aromaticity and implicit/explicit hydrogens). You can set up the flags to match only some characteristics of the molecule: </p>
+
+<p>The supported flags are:</p>
+
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ELE</td>
+<td align="left">Distribution of electrons: bond types, atom charges, radicals, valences</td>
+</tr>
+<tr>
+<td align="center">MAS</td>
+<td align="left">Atom isotopes</td>
+</tr>
+<tr>
+<td align="center">STE</td>
+<td align="left">Stereochemistry: chiral centers, stereogroups, and cis-trans bonds</td>
+</tr>
+<tr>
+<td align="center">FRA</td>
+<td align="left">Connected fragments: disallows match of separate ions in salts</td>
+</tr>
+<tr>
+<td align="center">ALL</td>
+<td align="left">All of the above (the most restrictive kind of search)</td>
+</tr>
+<tr>
+<td align="center">NONE</td>
+<td align="left">None of the above (the most flexible kind of search)</td>
+</tr>
+<tr>
+<td align="center"><code>$rms</code></td>
+<td align="left">Affine transformation, see the substructure search description for details</td>
+</tr>
+</tbody>
+</table>
+
+<p>The flags, which can be combined in any way, should go in the parameters string separated by space. The <code>rms</code> number, if present, should go
+after the flags; for example: <code>ALL 0.1</code>. You can write the minus sign before the flag to exclude it from the
+'ALL' flag. For example, 'ALL -MAS' means that all the described features except the isotopes must match. The <code>NONE</code> flag, if present, must be single.</p>
+
+<table>
+
+<tr>
+<th>Exact Search Query</th>
+<th>Example of Molecule Retrieved  (or Not)</th>
+<th>Comment</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/flex_01q.svg"></td>
+<td><img alt="" src="../assets/bingo/flex_01n.svg"></td>
+<td>Matches with 'ALL -MAS', does not match with 'ALL' or 'MAS'</td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/flex_03q.svg"></td>
+<td><img alt="" src="../assets/bingo/flex_03n.svg"></td>
+<td>Matches with 'ALL -ELE', does not match with 'ALL' or 'ELE'</td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/flex_02q.svg"></td>
+<td>C</td>
+<td>Matches with 'ALL'</td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/flex_04q.svg"></td>
+<td><img alt="" src="../assets/bingo/flex_04n.svg"></td>
+<td>Matches with 'ALL -FRA', does not match with 'ALL' or 'FRA'</td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/flex_05q.svg"></td>
+<td><img alt="" src="../assets/bingo/flex_05n.svg"></td>
+<td>Matches with 'ALL -STE', does not match with 'ALL' or 'STE'</td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/flex_06q.svg"></td>
+<td><img alt="" src="../assets/bingo/flex_06n.svg"></td>
+<td>Matches with 'ALL', does not match with '0.1' or 'ALL 0.1'</td>
+</tr>
+</table>
+
+
+<p>On aromatic molecules, the <code>BON</code> flag is not sensitive to the difference between single and double bonds that
+form the aromatic rings.</p>
+
+<table>
+<thead>
+<tr>
+<th>Exact Search Query</th>
+<th>Example of Molecule Retrieved</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/flex_07q.svg"></td>
+<td align="center"><img alt="" src="../assets/bingo/flex_07t.svg"></td>
+<td>Matches with 'ALL'</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note:</strong> Query features are not allowed in exact search.</p>
+
+<h3 id="tautomer-search">Tautomer Search</h3>
+
+<h4 id="syntax">Syntax</h4>
+
+<p>The general form of exact tautomer search query is the following:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Exact($column, $query, $parameters)=1;
+</code></pre>
+
+<p>The general form of tautomer substructure search query is the following:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sub($column, $query, $parameters)=1;
+</code></pre>
+
+<p>for tautomer-as-subsructure search</p>
+
+<ul>
+<li><code>$table</code> is the name of the table containing molfile CLOBs in the column <code>$column</code>.</li>
+<li><code>$query</code> is a VARCHAR2 or CLOB containing the query molfile or SMILES string.</li>
+<li><code>$parameters</code> is a VARCHAR2 containing parameters that restrict the resulting set of molecules by various
+    criteria.</li>
+</ul>
+
+<p>The <code>$parameters</code> string must begin with the <code>TAU</code> word. If it is the only word, the search with the less
+restriction will be performed:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Exact($column, $query, 'TAU')=1;
+</code></pre>
+
+<p>Some metal bonds and atom charges can replace hydrogen in tautomeric chains. You can add the <code>HYD</code> word to
+disable such hydrogen replacements:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Exact($column, $query, 'TAU HYD')=1;
+</code></pre>
+
+<p>Ring-chain tautomerism is disabled by default. You can add <code>R-C</code> string parameter to enable it.</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Exact($column, $query, 'TAU R-C')=1;
+</code></pre>
+
+<p><strong>Note:</strong> The support of the ring-chain tauromerism is experimental and may not work properly.</p>
+
+<p>Also you can restrict the tautomer search by enabling conditions for boundary atoms in tautomeric chains. By
+default, there are three conditions:</p>
+
+<ol>
+<li>Each boundary atom in the tautomeric chain must be one of <code>N</code>, <code>O</code>, <code>P</code>, <code>S</code>, <code>As</code>, <code>Se</code>, <code>Sb</code>, <code>Te</code></li>
+<li>Carbon not from the aromatic ring at one end of the tautomeric chain, and one of <code>N</code>, <code>O</code>, <code>P</code>, <code>S</code> at
+      the other end</li>
+<li>Carbon from the aromatic ring at one end of the tautomeric chain and one of <code>N</code>, <code>O</code> at the other end</li>
+</ol>
+
+<p>To enable the first condition put <code>R1</code> to <code>$parameters</code> string (<code>R2</code> to enable the second condition, <code>R3</code> to
+enable the third condition):</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Exact($column, $query, 'TAU R1 R3')=1;
+</code></pre>
+
+<p>If you want all conditions enabled, just put <code>R*</code>:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Exact($column, $query, 'TAU R*')=1;
+</code></pre>
+
+<p>Each tautomeric chain is checked to conform to one of the given rules. The more rules you specify, the more
+flexibility you receive in the search; <em>but</em> when you specify no rules at all (<code>TAU</code>), you get the most
+flexible search because no rules are checked. Any tautomeric chain is acceptable in this case.</p>
+
+<h4 id="exact-tautomer-search">Exact Tautomer Search</h4>
+
+<p>The resulting set of this kind of search can contain exact matches.</p>
+
+<table>
+
+<tr>
+<th>Tautomer Query</th>
+<th>Examples of Molecules Retrieved (or Not)</th>
+<th>Comment</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/tau_q1.svg"></td>
+<td><img alt="" src="../assets/bingo/tau_t1.svg"></td>
+<td>Matches with <code>TAU</code> or <code>TAU R2</code>, does not match with <code>TAU R1 R3</code></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/tau_q2.svg"></td>
+<td><img alt="" src="../assets/bingo/tau_t2.svg"></td>
+<td>Matches with <code>TAU R-C</code> or <code>TAU R-C R2</code>, does not match with <code>TAU</code> or <code>TAU R1 R3</code></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/tau_q3.svg"></td>
+<td><img alt="" src="../assets/bingo/tau_t3.svg"></td>
+<td>Matches with <code>TAU</code> or <code>TAU R1</code>, does not match with <code>TAU R2 R3</code></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/tau_q4.svg"></td>
+<td><img alt="" src="../assets/bingo/tau_t4.svg"></td>
+<td>Matches with <code>TAU</code> or <code>TAU R1</code>, does not match with <code>TAU R2 R3</code></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/tau_q5.svg"></td>
+<td><img alt="" src="../assets/bingo/tau_t5.svg"></td>
+<td>Matches with <code>TAU</code>, does not match with <code>TAU R*</code></td>
+</tr>
+</table>
+
+
+<p><strong>Note:</strong> The retrieved molecules in the first row are completely the same because of their aromaticity.</p>
+
+<h4 id="tautomer-substructure-search">Tautomer Substructure Search</h4>
+
+<p>The resulting set of this kind of search can contain exact tautomer matches. Additional tautomer parameters
+have the same effect as in the exact tautomer search.</p>
+
+<table>
+
+<tr>
+<th>Tautomer Query</th>
+<th>Examples of Molecules Retrieved (or Not)</th>
+<th>Comment</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/tau_sub_q5.svg"></td>
+<td><img alt="" src="../assets/bingo/tau_sub_t5.svg"></td>
+<td>Matches with <code>TAU</code> or <code>TAU R1</code>, does not match with <code>TAU R2 R3</code></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/tau_sub_q3.svg"></td>
+<td><img alt="" src="../assets/bingo/tau_sub_t3.svg"></td>
+<td>Matches with <code>TAU</code> or <code>TAU R2</code>, does not match with <code>TAU R1 R3</code></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/tau_sub_q6.svg"></td>
+<td><img alt="" src="../assets/bingo/tau_sub_t6.svg"></td>
+<td>Matches with <code>TAU</code>, does not match with <code>TAU R*</code></td>
+</tr>
+</table>
+
+
+<h4 id="customizing-the-rules">Customizing the Rules</h4>
+
+<p><code>Bingo</code> user has a table called <code>TAUTOMER_RULES</code>. The three rules defined above are contained in this table:</p>
+
+<pre><code>SELECT * FROM Bingo.TAUTOMER_RULES;
+
+   ID                  BEG                  END
+-----  -------------------  -------------------
+    1  N,O,P,S,As,Se,Sb,Te  N,O,P,S,As,Se,Sb,Te
+    2                   0C              N,O,P,S
+    3                   1C                  N,O
+</code></pre>
+
+<p>You can add, remove or update the defined rules. VARCHAR2 strings <code>BEG</code> and <code>END</code> refer to the ends of the
+tautomeric chain. Allowed elements are separated by commas. '1' at the beginning means an aromatic atom, and
+'0' means an aliphatic (non-aromatic) atom.</p>
+
+<pre><code>INSERT INTO Bingo.TAUTOMER_RULES values($id, $beg, $end);
+</code></pre>
+
+<p><strong>Note:</strong> The ID numbers must be different and belong to the range from 1 to 32.</p>
+
+<h3 id="similarity-search">Similarity Search</h3>
+
+<h4 id="description-and-syntax-1">Description and Syntax</h4>
+
+<p>This type of search estimates the similarity of the molecules by comparing their bit imprints (fingerprints).
+Characteristics based on the following metrics are supported:</p>
+
+<ul>
+<li>Tanimoto metric: c / (a + b - c)</li>
+<li>Tversky metric: c / (alpha * (a-c) + beta * (b-c) + c)</li>
+<li>Euclidean metric for substructures: c / a</li>
+</ul>
+
+<p>where</p>
+
+<ul>
+<li>a is the count of bits in the fingerprint of the query</li>
+<li>b is the count of bits in the fingerprint of the target</li>
+<li>c is the count of coincident bits in the fingerprints</li>
+</ul>
+
+<p>All characteristics have values from 0 to 1, with the value of 1 providing the maximum similarity (which
+means equal fingerprints).</p>
+
+<p>You can specify in the query the minimum similarity and/or the maximum similarity that the fetched molecules
+must have.</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sim($column, $query, $metric) &gt; $min;
+
+SELECT * FROM $table WHERE Bingo.Sim($column, $query, $metric) &lt; $max;
+
+SELECT * FROM $table WHERE Bingo.Sim($column, $query, $metric) BETWEEN $min AND $max;
+</code></pre>
+
+<ul>
+<li><code>$min</code> is the lower limit of the desired similarity.</li>
+<li><code>$max</code> is the upper limit.</li>
+<li><code>$metric</code> is a string specifying the metric to use: <code>tanimoto</code> , <code>tversky</code>, or <code>euclid-sub</code>.
+In case of Tversky metric, there are optional "alpha" and "beta" parameters: <code>tversky 0.9 0.1</code> denotes alpha = 0.9, beta = 0.1. The default is alpha = beta = 0.5 (Dice index).</li>
+</ul>
+
+<p>You can omit the <code>$metric</code> parameter and write <code>Bingo.Sim($column, $query)</code>. The default Tanimoto metric will
+be used.</p>
+
+<p><strong>Note:</strong> Query features are not allowed in query molecules for similarity search.</p>
+
+<h4 id="examples">Examples</h4>
+
+<table>
+<thead>
+<tr>
+<th>Query Molecule</th>
+<th>Metrics</th>
+<th>Lower Limit</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../assets/bingo/sim_01q.svg"></td>
+<td align="center">Tanimoto</td>
+<td align="center">0.7</td>
+<td align="center"><img alt="" src="../assets/bingo/sim_01t.svg"></td>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/sim_02q.svg"></td>
+<td align="center">Euclid for Substructures</td>
+<td align="center">0.95</td>
+<td align="center"><img alt="" src="../assets/bingo/sim_02t.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="gross-formula-search">Gross Formula Search</h3>
+
+<h4 id="description-and-syntax-2">Description and Syntax</h4>
+
+<p>You can get the gross formula of the molecule with the <code>Bingo.Gross()</code> operator:</p>
+
+<pre><code>SELECT Bingo.Gross($molfile) FROM DUAL;
+
+SELECT Bingo.Gross('C1C=CC=CC=1') FROM DUAL;
+
+SELECT Bingo.Gross($column) FROM $table;
+</code></pre>
+
+<p>You can also query a table for molecules with gross formula more than, less than, or equal to query gross
+formula.</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Gross($column, '&gt;= $query')=1;
+
+SELECT * FROM $table WHERE Bingo.Gross($column, '&lt;= $query')=1;
+
+SELECT * FROM $table WHERE Bingo.Gross($column, '= $query')=1;
+</code></pre>
+
+<p>The order of atoms and the spaces in the query does not matter.</p>
+
+<table>
+<thead>
+<tr>
+<th>Left Side</th>
+<th>Relation</th>
+<th>Right Side</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">OC6</td>
+<td align="center">=</td>
+<td align="center">C6 O</td>
+</tr>
+<tr>
+<td align="center">OC6</td>
+<td align="center">?</td>
+<td align="center">C6 O</td>
+</tr>
+<tr>
+<td align="center">C6 O</td>
+<td align="center">?</td>
+<td align="center">C8 O2</td>
+</tr>
+<tr>
+<td align="center">C6 Cl</td>
+<td align="center">?</td>
+<td align="center">C6</td>
+</tr>
+<tr>
+<td align="center">C6 H5</td>
+<td align="center">?</td>
+<td align="center">C6 H6</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note:</strong> Gross formulae are not always comparable: for example, &#8216;C2 H6 O&#8217; and &#8216;Ag O N C&#8217;</p>
+
+<h4 id="examples-1">Examples</h4>
+
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Examples of Molecules Retrieved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>= C6 H6</code></td>
+<td align="center"><img alt="" src="../assets/bingo/gross_01.svg"></td>
+</tr>
+<tr>
+<td align="center"><code>&lt;= C4 H4 O</code></td>
+<td align="center"><img alt="" src="../assets/bingo/gross_02.svg"></td>
+</tr>
+<tr>
+<td align="center"><code>&gt;= Cl6</code></td>
+<td align="center"><img alt="" src="../assets/bingo/gross_03.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="molecular-mass-search">Molecular Mass Search</h3>
+
+<h4 id="description-and-syntax-3">Description and syntax</h4>
+
+<p>The <code>Bingo.Mass</code> operator returns molecular mass as the sum of the standard atomic weights for atoms without
+isotope specified and relative atomic masses of isotopes. The table with masses was extracted from the
+<a href="http://physics.nist.gov/PhysRefData/Compositions">http://physics.nist.gov/PhysRefData/Compositions</a> website.</p>
+
+<pre><code>SELECT Bingo.Mass($molecule) FROM DUAL;
+
+SELECT Bingo.Mass($column) FROM $table;
+</code></pre>
+
+<p>You can also query a table for the molecules with molecular mass more than a value, less than a value, or
+between two values.</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Mass($column) &gt; $lower;
+
+SELECT * FROM $table WHERE Bingo.Mass($column) &lt; $upper;
+
+SELECT * FROM $table WHERE Bingo.Mass($column) BETWEEN $lower AND $upper;
+</code></pre>
+
+<h4 id="examples-2">Examples</h4>
+
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Examples of Molecules Retrieved</th>
+<th>Mass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Bingo.Mass(molecule) &gt; 100</code></td>
+<td align="center"><img alt="" src="../assets/bingo/mass_130.svg"></td>
+<td>130.185</td>
+</tr>
+<tr>
+<td><code>Bingo.Mass(molecule) &lt; 100</code></td>
+<td align="center"><img alt="" src="../assets/bingo/mass_94.svg"></td>
+<td>94.115</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="customization">Customization</h4>
+
+<p>Bingo provides the possibility for changing default atom masses with the following procedure:</p>
+
+<pre><code>EXECUTE BEGIN Bingo.SetRelativeAtomicMass($str); END;
+</code></pre>
+
+<p><code>$str</code> is the VARCHAR2 string. Its value must be contain the default atom masses separated by semicolons, for
+example: &#8221;<code>C 12; N 14; O 16</code>&#8221;.</p>
+
+<h4 id="other-kinds-of-molecular-weight">Other Kinds of Molecular Weight</h4>
+
+<p>The <code>Bingo.Mass</code> has an optional <code>VARCHAR2</code> parameter, which defines the 'kind' of the resulting molecular
+mass value:</p>
+
+<ul>
+<li><code>Bingo.Mass($molecule, 'molecular-weight')</code> returns the molecular weight (this is the default).</li>
+<li><code>Bingo.Mass($molecule, 'most-abundant-mass')</code> returns the <a href="http://en.wikipedia.org/wiki/Mass%20%28mass%20spectrometry%29#Most%20abundant%20mass#Most%20abundant%20mass">most abundant
+    mass</a>,
+    which is calculated using most likely isotopic composition for a single random molecule.</li>
+<li><code>Bingo.Mass($molecule, 'monoisitopic-mass')</code> returns the <a href="http://en.wikipedia.org/wiki/Monoisotopic_mass">monoisotopic
+    mass</a>, which is calculated using the most abundant isotope
+    of each element.</li>
+</ul>
+
+<h3 id="canonical-smiles">Canonical SMILES</h3>
+
+<p>The <code>Bingo.CANSMILES()</code> operator can be used for generating canonical SMILES of Molfiles, other SMILES, or
+binary molecules. The operator works equally well with CLOB, BLOB, and VARCHAR2 operands. The operator always
+returns the VARCHAR2 result.</p>
+
+<pre><code>SELECT Bingo.CanSMILES($molfile) FROM DUAL;
+
+SELECT Bingo.CanSMILES($column) FROM $table;
+</code></pre>
+
+<p>Bingo Canonical SMILES is, according to Daylight and ChemAxon terminology, unique SMILES with isomeric
+information, or <em>absolute</em> SMILES. All significant molecular features, such as isotopes, charges, radicals,
+stereocenters, stereogroups, cis-trans bonds, and aromaticity, are encoded into SMILES in a canonical form. A
+canonical SMILES string defines the molecule independently of any particular representation (atoms
+renumbering, stereogroups renumbering, explicit/imlpicit hydrogens). So, the equality of canonical SMILES of
+two molecules guarantees that these molecules are the same, and vice versa:</p>
+
+<pre><code>Bingo.CANSMILES($a) = Bingo.CANSMILES($b)
+</code></pre>
+
+<p><em>if and only if</em></p>
+
+<pre><code>Bingo.Exact($a, $b, 'ALL') = 1
+</code></pre>
+
+<p><strong>Note:</strong> A canonical SMILES computation can only be done for database molecules. Query features are not
+supported.</p>
+
+<p><strong>Note:</strong> If the input molecule is badly formed (i.e. does not conform to any format, has drawing mistakes or
+has unsupported features), Bingo throws an exception to Oracle.</p>
+
+<h3 id="molecule-fingerprints">Molecule Fingerprints</h3>
+
+<p>The <code>Bingo.Fingeprint</code> operator can be used to generate Indigo fingerprints for molecule structures. The operator has two arguments: molecule and options, and returns BLOB result.</p>
+
+<pre><code>SELECT Bingo.Fingerprint($molecule, $type) FROM DUAL;
+
+SELECT Bingo.Fingerprint($binary, $type) FROM DUAL;
+
+SELECT Bingo.Fingerprint($column, $type) FROM $table;
+</code></pre>
+
+<p>The options are the same as for <code>IndigoObject.fingerprint</code> method from the Indigo SDK described <a href="../indigo/api/index.html#fingerprints">here</a>.</p>
+
+<p>The following fingerprint types are available:</p>
+
+<ul>
+<li><code>sim</code> &#8212; "Similarity fingerprint", useful for calculating similarity measures (the default)</li>
+<li><code>sub</code> &#8212; "Substructure fingerprint", useful for substructure screening </li>
+<li><code>sub-res</code> &#8212; "Resonance substructure fingerprint", useful for resonance substructure screening</li>
+<li><code>sub-tau</code> &#8212; "Tautomer substructure fingerprint", useful for tautomer substructure screening</li>
+<li><code>full</code> &#8212; "Full fingerprint", which has all the mentioned fingerprint types included</li>
+</ul>
+
+<h3 id="inchi-and-inchikey">InChI and InChIKey</h3>
+
+<p>The <code>Bingo.InChI</code> operator can be used to generate <a href="http://www.inchi-trust.org/inchi/">InChI</a> string for a gived molecule structure. The operator has two arguments: molecule and options, and returns CLOB result.</p>
+
+<pre><code>SELECT Bingo.InChI($molecule, $options) FROM DUAL;
+
+SELECT Bingo.InChI($binary, $options) FROM DUAL;
+
+SELECT Bingo.InChI($column, $options) FROM $table;
+</code></pre>
+
+<p>You can pass any options supported by the official InChI libary. This options can be found in the InChI manual or on the <a href="http://www.inchi-trust.org/fileadmin/user_upload/html/inchifaq/inchi-faq.html#15.17">InChI FAQ page</a>. Usage example:</p>
+
+<pre><code>SELECT Bingo.InChI('CC1CC(C)OC(C)N1', '') FROM DUAL;
+
+SELECT Bingo.InChI('CC1CC(C)OC(C)N1', '/DoNotAddH /SUU /SLUUD') FROM DUAL;
+
+SELECT Bingo.InChI('CC1CC(C)OC(C)N1', '-DoNotAddH -SUU -SLUUD') FROM DUAL;
+</code></pre>
+
+<p>Each option can start with <code>\</code> or <code>-</code> symbol.</p>
+
+<p>The <code>Bingo.InChIKey</code> operator can be used to generate <a href="http://www.inchi-trust.org/fileadmin/user_upload/html/inchifaq/inchi-faq.html#2.7">InChIKey</a> from InChI string:</p>
+
+<pre><code>SELECT Bingo.InChIKey('InChI=1S/C6H6O/c7-6-4-2-1-3-5-6/h1-5,7H') FROM DUAL;
+
+SELECT Bingo.InChIKey(Bingo.InChI('OC1=CC=CC=C1', '')) FROM DUAL;
+</code></pre>
+
+<h2 id="reactions">Reactions</h2>
+
+<h3 id="conversion-to-reaction-smiles">Conversion to Reaction SMILES</h3>
+
+<p>The <code>Bingo.RSMILES()</code> operator can be used for converting Rxnfiles and binary reactions to reaction SMILES.
+The operator works equally well with CLOB, BLOB, and VARCHAR2 operands. The operator always returns the
+VARCHAR2 result.</p>
+
+<pre><code>SELECT Bingo.RSMILES($rxnfile) FROM DUAL;
+
+SELECT Bingo.RSMILES($binary) FROM DUAL;
+
+SELECT Bingo.RSMILES($column) FROM $table;
+</code></pre>
+
+<p><strong>Note:</strong> If the input reaction is badly formed (i.e. does not accord to any format, has drawing mistakes or
+has unsupported features), Bingo throws the exception to Oracle.</p>
+
+<h4 id="converting-a-table-2">Converting a Table</h4>
+
+<p>When you convert a table to reaction SMILES, you have two possibilities for skipping the bad exception-
+raising reactions:</p>
+
+<p><strong>1.</strong> Short option:</p>
+
+<pre><code>CREATE TABLE $newtable AS SELECT $id $newid, Bingo.RSMILES($rxnfile) $rsmiles FROM $table
+                                         WHERE Bingo.CheckReaction($rxnfile) IS NULL;
+</code></pre>
+
+<p><strong>2.</strong> Lengthy but faster option:</p>
+
+<pre><code>CREATE TABLE $newtable ($newid NUMBER, $rsmiles VARCHAR2(4000));
+
+set serveroutput on;
+declare
+  i int := 0;
+begin
+  dbms_output.enable(1000000);
+  for item in (select $id, $rxnfile from $table) loop
+    begin
+      INSERT INTO $newtable values(item.$id, bingo.RSMILES(item.$rxnfile, 1));
+    exception
+      when others then 
+        dbms_output.put_line('Bad reaction '|| item.$id ||': ' || SQLERRM);;
+    end;
+    i := i + 1;
+    if i mod 1000 = 0 then
+      COMMIT;
+    end if;
+  end loop;
+end;
+</code></pre>
+
+<p><code>$table</code> contains Rxnfiles in the <code>$rxnfile</code> column and the reaction ID-s in the <code>$id</code> column. <code>$newtable</code>
+will contain reaction SMILES in the <code>$rsmiles</code> column and reaction ID-s in the <code>$newid</code> column.</p>
+
+<h3 id="conversion-to-binary-format-1">Conversion to binary format</h3>
+
+<p>The <code>Bingo.CompactReaction()</code> operator can be used for converting Rxnfiles and reaction SMILES to internal
+binary format. The operator works equally well with CLOB, BLOB, and VARCHAR2 operands. The operator always
+returns the BLOB result.</p>
+
+<pre><code>SELECT Bingo.CompactReaction($rxnfile, $xyz) FROM DUAL;
+
+SELECT Bingo.CompactReaction($rsmiles, $xyz) FROM DUAL;
+
+SELECT Bingo.CompactReaction($column, $xyz) FROM $table;
+</code></pre>
+
+<p>The <code>$xyz</code> parameter must be 0 or 1. If it is 1, the positions of atoms are saved to the binary format. If it
+is zero, the positions are skipped.</p>
+
+<p><strong>Note:</strong> If the input reaction is badly formed (i.e. does not conform to any format, has drawing mistakes or
+has unsupported features), Bingo throws the exception to Oracle.</p>
+
+<h4 id="converting-a-table-3">Converting a table</h4>
+
+<p>When you convert a table to binary format, you have two possibilities for skipping the bad exception-raising
+reactions:</p>
+
+<p><strong>1.</strong> Short option:</p>
+
+<pre><code>CREATE TABLE $newtable AS SELECT $id $newid, Bingo.CompactReaction($rxnfile, &amp;xyz) $binary FROM $table
+                                  WHERE Bingo.CheckReaction($rxnfile) IS NULL;
+</code></pre>
+
+<p><strong>2.</strong> Lengthy but faster option:</p>
+
+<pre><code>CREATE TABLE $newtable ($newid NUMBER, $binary BLOB) lob($binary) store as (enable storage in row);
+set serveroutput on;
+
+declare
+  i int := 0;
+begin
+  dbms_output.enable(1000000);
+  for item in (select $id, $rxnfile from $table) loop
+    begin
+      INSERT INTO $newtable values(item.$id, bingo.CompactReaction(item.$rxnfile, $xyz));
+    exception
+      when others then 
+        dbms_output.put_line('Bad reaction '|| item.$id ||': ' || SQLERRM);
+    end;
+    i := i + 1;
+    if i mod 1000 = 0 then
+      COMMIT;
+    end if;
+  end loop;
+end;
+</code></pre>
+
+<h3 id="creating-an-index-2">Creating an Index</h3>
+
+<p>The following command creates the index:</p>
+
+<pre><code>CREATE INDEX $index ON $table ($column) INDEXTYPE IS Bingo.ReactionIndex;
+</code></pre>
+
+<p><code>$table</code> is the name of the table containing reaction data in the column <code>$column</code>. <code>$index</code> is the unique
+name of the Oracle domain index that will be created.</p>
+
+<h3 id="exact-search-1">Exact Search</h3>
+
+<p>The general form of reaction exact search query is as follows:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.RExact($column, $query, $parameters)=1;
+</code></pre>
+
+<p>You can omit the <code>$parameters</code> value:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.RExact($column, $query)=1;
+</code></pre>
+
+<p>It is equal to:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.RExact($column, $query, 'ALL')=1;
+</code></pre>
+
+<p>This kind of search makes it possible for you to set various search conditions. If no search conditions are
+set, two molecules are considered similar when they are completely equal (up to aromaticity and implicit/explicit hydrogens). You can set up the flags to match only some characteristics of the molecule: </p>
+
+<p>The supported flags are:</p>
+
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ELE</td>
+<td align="left">Distribution of electrons: bond types, atom charges, radicals, valences</td>
+</tr>
+<tr>
+<td align="center">MAS</td>
+<td align="left">Atom isotopes</td>
+</tr>
+<tr>
+<td align="center">STE</td>
+<td align="left">Stereochemistry: chiral centers, stereogroups, and cis-trans bonds</td>
+</tr>
+<tr>
+<td align="center">AAM</td>
+<td align="left">Atom-to-atom mapping</td>
+</tr>
+<tr>
+<td align="center">RCT</td>
+<td align="left">Reacting centers</td>
+</tr>
+<tr>
+<td align="center">ALL</td>
+<td align="left">All of the above (the most restrictive kind of search)</td>
+</tr>
+<tr>
+<td align="center">NONE</td>
+<td align="left">None of the above (the most flexible kind of search)</td>
+</tr>
+</tbody>
+</table>
+
+<p>The flags, which can be combined in any way, should go in the parameters string separated by space. You can write the minus sign before the flag to exclude it from the
+'ALL' flag. For example, 'ALL -MAS -AAM' means that all the described features except the isotopes and the AAM numbers must match. The <code>NONE</code> flag, if present, must be single.</p>
+
+<h3 id="smarts-search-1">SMARTS Search</h3>
+
+<p>You can search over your database for reaction <a href="http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html">SMARTS</a>
+expression match with the following query:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.RSMARTS($column, $rsmarts)=1;
+</code></pre>
+
+<h3 id="substructure-search-1">Substructure Search</h3>
+
+<h4 id="description-and-syntax-4">Description and Syntax</h4>
+
+<p>The general form of the substructure search query is the following:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.RSub($column, $query)=1;
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table containing the reaction <code>$column</code>. The target reactions may be
+    represented in Rxnfile, reaction SMILES or binary format. <code>$column</code> may have CLOB, VARCHAR2, and BLOB data
+    type.</li>
+<li><code>$query</code> is a VARCHAR2 or CLOB containing the query Rxnfile or reaction SMILES.</li>
+</ul>
+
+<h4 id="examples-3">Examples</h4>
+
+<p>You can specify an arbitrary amount of reactants and products in the query. The different reactants/products
+of the query match the different reactants/products of the matched target.</p>
+
+<table>
+<tbody>
+<tr>
+<th>Reaction Substructure Query</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_01_q.svg"></td>
+</tr>
+<tr>
+<th>Example of Reaction Retrieved</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_01_t.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>You can specify an empty reactant or empty target:</p>
+
+<table>
+<tbody>
+<tr>
+<th>Reaction Substructure Query</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_02_q.svg"></td>
+</tr>
+<tr>
+<th>Example of Reaction Retrieved</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_02_t.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Query atom-to-atom mapping, when present, is taken into account:</p>
+
+<table>
+<tbody>
+<tr>
+<th>Reaction Substructure Query</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_03_q.svg"></td>
+</tr>
+<tr>
+<th>Example of Reaction Retrieved</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_03_t.svg"></td>
+</tr>
+<tr>
+<th>Example of Reaction Not Retrieved</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_03_n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Reacting centers in the query, if present, match the target reacting centers as well:</p>
+
+<table>
+<tbody>
+<tr>
+<th>Reaction Substructure Query</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_04_q.svg"></td>
+</tr>
+<tr>
+<th>Example of Reaction Retrieved</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_04_t.svg"></td>
+</tr>
+<tr>
+<th>Example of Reaction Not Retrieved</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_04_n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Stereo inversion/retention flags are supported in the query:</p>
+
+<table>
+<tbody>
+<tr>
+<th>Reaction Substructure Query</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_05_q.svg"></td>
+</tr>
+<tr>
+<th>Example of Reaction Retrieved</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_05_t.svg"></td>
+</tr>
+<tr>
+<th>Example of Reaction Not Retrieved</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_05_n.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>You can specify any query features, as in the molecule substructure search, except the R-Groups:</p>
+
+<table>
+<tbody>
+<tr>
+<th>Reaction Substructure Query</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_06_q.svg"></td>
+</tr>
+<tr>
+<th>Example of Reaction Retrieved</th>
+</tr>
+<tr>
+<td align="center"><img alt="" src="../assets/bingo/rsub_06_t.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="automatic-atomtoatom-mapping">Automatic Atom-to-Atom Mapping</h3>
+
+<h4 id="description-and-syntax-5">Description and Syntax</h4>
+
+<p>The following Bingo operator is used to compute reaction AAM:</p>
+
+<pre><code>Bingo.AAM($reaction, $strategy)
+</code></pre>
+
+<p>You can get the resulting reaction by selecting it from the <code>DUAL</code> table:</p>
+
+<pre><code>SELECT Bingo.AAM($reaction, $strategy) FROM DUAL;
+</code></pre>
+
+<p>As <code>$reaction</code> you can specify VARCHAR2, CLOB, or BLOB containing reaction SMILES, Rxnfile of binary
+reaction.</p>
+
+<p><code>$strategy</code> is one of the following VARCHAR2 strings:</p>
+
+<ul>
+<li><code>DISCARD</code>: discards the existing mappings entirely and considers only the existing reaction centers.</li>
+<li><code>KEEP</code>: keeps the existing mapping and maps unmapped atoms.</li>
+<li><code>ALTER</code>: alters the existing mapping, and maps the rest of the reaction but may change the existing
+    mapping.</li>
+<li><code>CLEAR</code>: removes the mappings from the reaction.</li>
+</ul>
+
+<p><strong>Note:</strong> In the 'KEEP' and 'ALTER' modes, any possible contradictions between the existing mapping and the
+reaction centers are resolved by correcting the reacting centers.</p>
+
+<p>As a result, the operator always returns CLOB with Rxnfile.</p>
+
+<p><strong>Note:</strong> In case the given reaction does not have atom positions (i.e. is represented as a reaction SMILES
+or binary format without atom positions), the automatic reaction layout is performed.</p>
+
+<h4 id="examples-4">Examples</h4>
+
+<p>Building the mapping from reacting centers (<code>DISCARD</code> mode):</p>
+
+<table>
+<tbody>
+<tr>
+<th>Source Reaction</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/aam_01_s.svg"></td>
+</tr>
+<tr>
+<th>Resulting Reaction</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/aam_01_r.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Keeping the existing mapping (<code>KEEP</code> mode). Note also the change in the 3-7 reacting center:</p>
+
+<table>
+<tbody>
+<tr>
+<th>Source Reaction</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/aam_02_s.svg"></td>
+</tr>
+<tr>
+<th>Resulting Reaction</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/aam_02_r.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Altering the existing mapping (<code>ALTER</code> mode). Note the correction of bond 16-18, the renumbering of mapped
+atoms and numbering of the unmapped atoms:</p>
+
+<table>
+<tbody>
+<tr>
+<th>Source Reaction</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/aam_03_s.svg"></td>
+</tr>
+<tr>
+<th>Resulting Reaction</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/aam_03_r.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Clearing the mapping (<code>CLEAR</code> mode):</p>
+
+<table>
+<tbody>
+<tr>
+<th>Source Reaction</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/aam_04_s.svg"></td>
+</tr>
+<tr>
+<th>Resulting Reaction</th>
+</tr>
+<tr>
+<td><img alt="" src="../assets/bingo/aam_04_r.svg"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="reaction-fingerprints">Reaction Fingerprints</h3>
+
+<p>The <code>Bingo.RFingeprint</code> operator can be used to generate Indigo fingerprints for reaction structures. The operator has two arguments: reaction and options and returns BLOB result.</p>
+
+<pre><code>SELECT Bingo.Fingerprint($reaction, $type) FROM DUAL;
+
+SELECT Bingo.Fingerprint($binary, $type) FROM DUAL;
+
+SELECT Bingo.Fingerprint($column, $type) FROM $table;
+</code></pre>
+
+<p>The options are the same as for <code>IndigoObject.fingerprint</code> method from the Indigo SDK described <a href="../indigo/api/index.html#fingerprints">here</a>.</p>
+
+<p>The following fingerprint types are available:</p>
+
+<ul>
+<li><code>sim</code> &#8212; "Similarity fingerprint", useful for calculating similarity measures (the default)</li>
+<li><code>sub</code> &#8212; "Substructure fingerprint", useful for substructure screening </li>
+<li><code>full</code> &#8212; "Full fingerprint", which has all the mentioned fingerprint types included</li>
+</ul>
+
+<h2 id="nonstandard-queries">Nonstandard Queries</h2>
+
+<h3 id="finding-nonmatches">Finding Non-Matches</h3>
+
+<p>You can specify zero right side in the Bingo operator calls in order to find targets that do <em>not</em> match the
+query.</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sub($column, $query, $parameters)=0;
+
+SELECT * FROM $table WHERE Bingo.Exact($column, $query, $parameters)=0;
+
+SELECT * FROM $table WHERE Bingo.Gross($column, $query, $parameters)=0;
+
+SELECT * FROM $table WHERE Bingo.RSub($column, $query)=0;
+</code></pre>
+
+<h3 id="fragment-highlighting">Fragment Highlighting</h3>
+
+<p>Along with the results of the substructure search, you can get back the target molecules or reactions
+in Molfile/Rxnfile v3000 format with the query fragment highlighted.</p>
+
+<pre><code>SELECT $id, Bingo.SubHi(1) FROM $table WHERE Bingo.Sub($column, $query, 1)=1;
+</code></pre>
+
+<p>You can also do an affine transformation or a conformation search in this manner.</p>
+
+<pre><code>SELECT $id, Bingo.SubHi(1) FROM $table WHERE Bingo.Sub($column, $query, 'AFF $rms', 1)=1;
+
+SELECT $id, Bingo.SubHi(1) FROM $table WHERE Bingo.Sub($column, $query, 'CONF $rms', 1)=1;
+</code></pre>
+
+<p>SMARTS search results also can be viewed with highlighting:</p>
+
+<pre><code>SELECT $id, Bingo.SmartsHi(1) FROM $table WHERE Bingo.SMARTS($column, $query, 1)=1;
+</code></pre>
+
+<p>When performing tautomer search, you can highlight the tautomeric chains that differ in query and target.</p>
+
+<pre><code>SELECT $id, Bingo.ExactHi(1) FROM $table WHERE Bingo.Exact($column, $query, 'TAU $parameters', 1)=1;
+</code></pre>
+
+<p>In tautomer substructure search, both the fragment and chains are highlighted.</p>
+
+<pre><code>SELECT $id, Bingo.SubHi(1) FROM $table WHERE Bingo.Sub($column, $query, 'TAU $parameters', 1)=1;
+</code></pre>
+
+<p>For reaction substructure search, you can highlight the query reaction in the target reaction.</p>
+
+<pre><code>SELECT $id, Bingo.RSubHi(1) FROM $table WHERE Bingo.RSub($column, $query, 1)=1;
+</code></pre>
+
+<p>Examples of highlighting are all over the User Manual. The highlighted fragments in the examples are rendered
+in bold font and double bond width.</p>
+
+<p><strong>Note:</strong> In case the matched molecule or reaction does not have layout information (i.e. is represented as
+SMILES or binary format with atom positions switched off), the automatic layout procedure is performed.</p>
+
+<p>You can also convert the highlighted Molfiles/Rxnfiles to SMILES, which will contain the highlighting
+information encoded to a format understandable by <a href="../indigo/index.html">Indigo</a> toolkit, and particularly by the
+<a href="../indigo/indigo-depict.html">indigo-depict</a> utility:</p>
+
+<pre><code>SELECT $id, Bingo.SMILES(Bingo.SubHi(1)) FROM $table WHERE Bingo.Sub($column, $query, 1)=1;
+
+SELECT $id, Bingo.SMILES(Bingo.SmartsHi(1)) FROM $table WHERE Bingo.SMARTS($column, $query, 1)=1;
+</code></pre>
+
+<h3 id="multiple-conditions-and-joins">Multiple Conditions and Joins</h3>
+
+<p>You can mix the cartridge operators with other (standard) operators to restrict the set of fetched results:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sub($column, $query)=1 AND $molweight &lt; $value;
+</code></pre>
+
+<p>Mixing various Bingo operators is also possible:</p>
+
+<pre><code>SELECT * FROM $table WHERE Bingo.Sub($column, $query)=1 AND Bingo.Gross($column, '&gt;= C20')=1;
+</code></pre>
+
+<p>You can select from two or more tables:</p>
+
+<pre><code>SELECT * FROM $table1, $table2 WHERE
+     Bingo.Sub($column1, $query1)=1 AND Bingo.Sub($column2, $query2)=1 AND
+     Bingo.Gross($column1)=Bingo.Gross($column2);
+</code></pre>
+
+<p><strong>Note:</strong> In case <code>$query</code> is a VARCHAR2 string, Bingo is able to make use of Oracle's Cost-Based Optimizer
+(CBO) capability. This capability allows Oracle to call single operator functions rather than to use the index
+implementation, if the former gives higher performance expectations.</p>
+
+<p><strong>Note:</strong> A CLOB <code>$query</code> does not take advantage of CBO due to the technical limitation of Oracle.</p>
+
+<h2 id="importing-and-exporting-data">Importing and Exporting Data</h2>
+
+<h3 id="importing-sdfiles-rdfiles-and-smiles-files">Importing SDFiles, RDFiles, and SMILES files</h3>
+
+<p>You can import a molecule or reaction table from an SDF file. You can also import SDF fields corresponding to
+each record in the SDF file. Prior to importing, you have to create the table manually and grant to <code>Bingo</code>
+the access to insert to your table:</p>
+
+<pre><code>CREATE TABLE $table(..., $column CLOB, ...);
+GRANT INSERT ON $table to Bingo;
+EXEC Bingo.ImportSDF('$table', '$column', '$other_columns', '$filename');
+</code></pre>
+
+<ul>
+<li><code>$table</code> is the name of the table subject to import, <em>including the schema qualifier</em>.</li>
+<li><code>$column</code> is the name of the CLOB column containing the data in Molfile or Rxnfile format.</li>
+<li><code>$other_columns</code> is the comma-separated list of space-separated 'property-column' pairs that are to be
+    imported. Each given SDF property is mapped to the given table column. You can specify an empty string or
+    NULL if there are no properties to import.</li>
+<li><code>$filename</code> is the location of the resulting file on the <em>server filesystem</em>.</li>
+</ul>
+
+<p>One can import a part of PubChem database (stored, for example, in <code>pubchem.sdf</code> file) with the following
+commands:</p>
+
+<pre><code>CREATE TABLE STRUCTURES(cid INT, structure CLOB, name VARCHAR2(4000), mw NUMBER);
+GRANT INSERT ON STRUCTURES to Bingo;
+EXEC Bingo.ImportSDF('PUBCHEM.STRUCTURES', 'structure',
+       'pubchem_compound_cid cid, pubchem_iupac_name name, pubchem_molecular_weight mw',
+       '/tmp/pubchem.sdf');
+</code></pre>
+
+<p>GZip-compressed data is detected automatically in <code>ImportSDF</code>, and so you can call it the same way:</p>
+
+<pre><code>EXEC Bingo.ImportSDF('PUBCHEM.STRUCTURES', 'structure',
+       'pubchem_compound_cid cid, pubchem_iupac_name name, pubchem_molecular_weight mw',
+       '/tmp/pubchem.sdf.gz');
+</code></pre>
+
+<p>Importing RDF files is done with <code>ImportRDF()</code> function the same way as SDF files:</p>
+
+<pre><code>CREATE TABLE $table(..., $column CLOB, ...);
+GRANT INSERT ON $table to Bingo;
+EXEC Bingo.ImportRDF('$table', '$column', '$other_columns', '$filename');
+</code></pre>
+
+<p>Importing multi-line molecule or reaction SMILES file is done the similar way with the <code>ImportSMILES()</code>
+function:</p>
+
+<pre><code>CREATE TABLE $table($id INT, $column VARCHAR2(4000));
+GRANT INSERT ON $table to Bingo;
+EXEC Bingo.ImportSMILES('$table', '$column', '$id', '$filename');
+</code></pre>
+
+<ul>
+<li><code>$table</code>, <code>$column</code>, and <code>$filename</code> have the usual meaning</li>
+<li><code>$id</code> is the column where molecule and reaction identifiers go. The identifier within SMILES string is
+    anything that goes after the molecule or reaction, separated by space. It is allowed to pass an empty
+    string or NULL as the <code>$id</code> parameter, if there are no identifiers in the SMILES file subject to import.</li>
+</ul>
+
+<p><strong>Note:</strong> When you import the file contents to a table, the old table contents are not removed. Thus, you can
+import multiple files into the same table.</p>
+
+<p><strong>Note:</strong> You cannot use these procedures without granting to <code>Bingo</code> the access to select from/insert to
+your table.</p>
+
+<h3 id="exporting-sdfiles">Exporting SDFiles</h3>
+
+<p>Exporting SDF files is conducted in a similar way to importing, except that you have to grant to <code>Bingo</code> the
+access to select from your table rather than insert to it: You can export the molecule or reaction table to an
+SDF file.</p>
+
+<pre><code>EXEC Bingo.ExportSDF($table, $column, $other_columns, $filename);
+</code></pre>
+
+<p>Example of exporting the PubChem database to the <code>/tmp/pubchem.sdf</code> file:</p>
+
+<pre><code>EXEC Bingo.ExportSDF('PUBCHEM.COMPOUNDS', 'structure', 'cid name mw', '/tmp/pubchem.sdf');
+</code></pre>
+
+<p>You can also export the table to a GZip-compressed SDF file:</p>
+
+<pre><code>EXEC Bingo.ExportSDFZip($table, $column, $other_columns, $filename);
+</code></pre>
+
+<p>In this case, please do not forget to append <code>.gz</code> to the file name:</p>
+
+<pre><code>EXEC Bingo.ExportSDFZip('PUBCHEM.COMPOUNDS', 'structure', 'cid name mw', '/tmp/pubchem.sdf.gz');
+</code></pre>
+
+<h2 id="utility-functions">Utility Functions</h2>
+
+<h3 id="extracting-the-names-of-molecules-and-reactions">Extracting the Names of Molecules and Reactions</h3>
+
+<p><code>Bingo.Name</code> function extracts the molecule or reaction name from Molfile, Rxnfile, or SMILES string.</p>
+
+<pre><code>SELECT bingo.Name(molfile) from mytable;
+
+SELECT bingo.Name('c1ccc2ccccc2c1 Naphthalene') from DUAL;
+</code></pre>
+
+<h3 id="conversion-to-molfilesrxnfiles-and-cml">Conversion to Molfiles/Rxnfiles and CML</h3>
+
+<p>Use the <code>Bingo.Molfile</code> operator to convert SMILES or binary molecule back to Molfile:</p>
+
+<pre><code>SELECT Bingo.Molfile($smiles) from DUAL;
+
+SELECT Bingo.Molfile($binary) from DUAL;
+
+SELECT Bingo.Molfile($column) from $table;
+</code></pre>
+
+<p>Use the <code>Bingo.Rxnfile</code> operator to convert reaction SMILES or binary reaction back to Rxnfile:</p>
+
+<pre><code>SELECT Bingo.Rxnfile($rsmiles) from DUAL;
+
+SELECT Bingo.Rxnfile($binary) from DUAL;
+
+SELECT Bingo.Rxnfile($column) from $table;
+</code></pre>
+
+<p>Use the <code>Bingo.CML</code> operator to convert SMILES or Molfile to the [CML]
+(http://en.wikipedia.org/wiki/Chemical_Markup_Language) format:</p>
+
+<pre><code>SELECT Bingo.CML($smiles) from DUAL;
+
+SELECT Bingo.CML($binary) from DUAL;
+
+SELECT Bingo.CML($column) from $table;
+</code></pre>
+
+<p>Similarly, the <code>Bingo.RCML</code> operator returns the input reaction converted to the CML format:</p>
+
+<pre><code>SELECT Bingo.RCML($smiles) from DUAL;
+
+SELECT Bingo.RCML($binary) from DUAL;
+
+SELECT Bingo.RCML($column) from $table;
+</code></pre>
+
+<p><strong>Note</strong>: If the input molecule of reaction is badly formed (i.e. does not conform to any format, has drawing
+mistakes or has unsupported features), Bingo throws the exception to Oracle.</p>
+
+<p><strong>Note</strong>: In case the input molecule or reaction does not have layout information (i.e. is represented in
+reaction SMILES or binary format with atom positions switched off), the automatic layout procedure is
+performed.</p>
+
+<h3 id="checking-molecules-and-reactions-for-correctness">Checking Molecules and Reactions for Correctness</h3>
+
+<p>You can use the <code>Bingo.CheckMolecule()</code> function to check that molecules are presented in acceptable form:</p>
+
+<pre><code>SELECT Bingo.CheckMolecule($molecule) from DUAL;
+SELECT Bingo.CheckMolecule($column) from $table;
+</code></pre>
+
+<p>If the molecule is correct, the function returns NULL. Otherwise, it returns the VARCHAR2 string with the
+error message. For example, you can select all incorrect molfiles from the table by the following query:</p>
+
+<pre><code>SELECT * from (SELECT $id, Bingo.CheckMolecule($molfile) cm FROM $table) WHERE cm is not null;
+</code></pre>
+
+<p>You can check reactions for correctness with the <code>Bingo.CheckReaction()</code> function:</p>
+
+<pre><code>SELECT Bingo.CheckReaction($reaction) from DUAL;
+SELECT Bingo.CheckReaction($column) from $table;
+SELECT * from (SELECT $id, Bingo.CheckReaction($rxnfile) cr FROM $table) WHERE cr is not null;
+</code></pre>
+
+<h3 id="reading-and-writing-files-on-server">Reading and Writing Files on Server</h3>
+
+<p>The <code>Bingo.FileToClob()</code> function accepts a VARCHAR2 file path and loads a file from the server file system
+to Oracle CLOB.</p>
+
+<pre><code>SELECT Bingo.FileToClob($path) FROM DUAL;
+</code></pre>
+
+<p>Usually you may want to load the query molecule in the following way:</p>
+
+<pre><code>SELECT * form $table WHERE Bingo.Sub($column, Bingo.FileToClob($path))=1;
+</code></pre>
+
+<p>The <code>Bingo.ClobToFile()</code> procedure accepts a CLOB and VARCHAR2 file path and saves the CLOB to the server
+file system.</p>
+
+<pre><code>EXECUTE BEGIN Bingo.ClobToFile($lob, $path); END;
+</code></pre>
+
+<h3 id="gzip-compression-and-decompression">GZip Compression and Decompression</h3>
+
+<p>You can use <code>Bingo.Zip()</code> function to convert CLOBs to BLOBs which are in fact GZip data:</p>
+
+<pre><code>CREATE TABLE $gztable as SELECT $id, Bingo.Zip($data) $gzdata FROM $table;
+</code></pre>
+
+<p>Table indexing and all queries should work on compressed Molfile/Rxnfile BLOB-s exactly the same way as they
+work on ordinary Molfile/Rxnfile CLOB-s. To uncompress the data back, please use Bingo.Unzip() function:</p>
+
+<pre><code>SELECT Bingo.Unzip($gzdata) FROM $gztable;
+</code></pre>
+
+<p><strong>Note:</strong> Normally, you would not need these functions, as long as you have a possibility of using SMILES and
+Bingo compact formats for molecules and reactions.</p>
+
+<h2 id="maintenance">Maintenance</h2>
+
+<h3 id="obtaining-the-bingo-version-number">Obtaining the Bingo Version Number</h3>
+
+<p>You can get the product version from the following query:</p>
+
+<pre><code>select Bingo.GetVersion from DUAL;
+</code></pre>
+
+<h3 id="viewing-the-log-file">Viewing the Log File</h3>
+
+<p>The log file is called <code>bingo.log</code> and located in the system temporary directory on the server file system.
+Usually it is:</p>
+
+<ul>
+<li><code>/tmp/bingo.log</code> on Linux and Solaris</li>
+<li><code>C:\Windows\Temp\bingo.log</code>, <code>C:\WINNT\Temp\bingo.log</code>, or <code>C:\TEMP\bingo.log</code> on Windows</li>
+</ul>
+
+<p>All operation of Bingo is logged. All error and warning messages (not necessarily visible in SQL session) are
+logged. Most importantly, the Oracle ROWID of each indexed molecule or reaction is recorded, and so you could
+easily find the molecules and/or reactions that have caused problems. Some performance measures of the SQL
+queries are written to the log as well.</p>

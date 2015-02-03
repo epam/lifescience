@@ -1,0 +1,130 @@
+<h1 id="indigo-toolkit">Indigo Toolkit</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>Indigo is a universal organic chemistry toolkit. It contains first-class tools for end users, as well as a documented <a href="api/index.html">API</a> for developers. Indigo it is completely free and open-source, while also available on a commercial basis.</p>
+
+<p>Indigo is based on a cheminformatics library that incorporates a number of <a href="../resources.html#algorithms">unique algorithms</a> developed by GGA, as well as some standard
+algorithms well-known in the cheminformatics world. Since the core part of Indigo is written
+in modern C++ with no third-party code or dependencies except the ubiquitous zlib and libcairo,
+the toolkit provides outstanding performance and excellent portability.</p>
+
+<p>Indigo is used by many corporations and institutions. This includes some Indigo-based commercial tools developed exclusively for our clients. Also, our open-source chemical search engine <a href="../bingo/index.html">Bingo</a> is developed on top of the Indigo library.</p>
+
+<p>Indigo SDK does not make any restrictions for developers. Whatever your favorite platform is&#8212;Java, C#, or Python, not to mention plain C&#8212;you can easily integrate Indigo into your application. All problems you may be afraid of, such as loading binary modules appropriate for the system, or threading issues, or stack overflows, are already solved for you. Also, it is easy to start, as the <a href="api/index.html">interface</a> is very neat. No data types besides the absolute minimum required for it to work. No internal data formats. No painful initialization procedures. </p>
+
+<p>Indigo SDK is highly <a href="api/options.html">configurable</a> and extensible. You can write C/C++/C#/Java/Python plugins for it and distribute them independently.</p>
+
+<p>Indigo has got support from the cheminformatics <a href="../contact.html#feedback-on-open-source-software">community</a>. Any question or comment you have, you can always post it publicly and get a timely reply from the developers' team.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+<li>Input formats support: Molfiles/Rxnfiles v2000 and v3000, SDF, RDF, CML, SMILES, SMARTS.</li>
+<li>Portability: Pre-built binary packages are provided for Linux and Windows (both 32-bit and 64-bit), and also for Mac OS X systems (both 10.5 and 10.6).</li>
+<li>Molecule and reaction rendering. Best picture quality among all available products. Easy
+    SVG support.</li>
+<li>Automatic layout for SMILES-represented molecules and reactions.</li>
+<li>Canonical (isomeric) SMILES computation.</li>
+<li>Exact matching, substructure matching, SMARTS matching. </li>
+<li>Matching of tautomers and resonance structures.</li>
+<li>Molecule fingerprinting, molecule similarity computation.</li>
+<li>Fast enumeration of SSSR rings, subtrees, and edge sugraphs.</li>
+<li>Molecular weight, molecular formula computation.</li>
+<li>R-Group deconvolution and scaffold detection. Pioneer work
+    in computing the <em>exact</em> maximum common substructure for an arbitrary amount of input structures.</li>
+<li><a href="concepts/combichem.html">Combinatorial chemistry</a></li>
+<li>Plugins support in the API. As a reference, please see the Renderer plugin distributed together with the Indigo API.</li>
+</ul>
+
+<h2 id="portability">Portability</h2>
+
+<p>Indigo is written from scratch in portable C++ and supports Linux, Windows, and Mac OS X operating systems.
+The rendering is done via <a href="http://cairographics.org/">Cairo</a> vector graphics library. <a href="http://www.zlib.net/">zlib</a> and
+<a href="http://www.libpng.org/pub/png/libpng.html">libpng</a> are needed for Cairo. <a href="http://www.grinninglizard.com/tinyxml/">tinyxml</a> is used to parse CML files. No other third-party components are used.</p>
+
+<p>Indigo exposes the <a href="api/c.html">C interface</a> to applications. Java and Python
+wrappers are available for all of the supported platforms. For Windows, there is also a .NET wrapper.</p>
+
+<p>All of the the code of Indigo is thread-safe, and so its use does not present a problem in multi-threaded applications.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>To understand Indigo's scope, start with the <a href="concepts/index.html">Concepts</a> page.
+A quick reference of the API for all supported languages is provided in the
+<a href="api/index.html">API</a> page. A separate page deals with the <a href="api/c.html">C interface</a>.
+Various options that can be passed to the library are explained on the <a href="api/options.html">Options</a> page.</p>
+
+<p><strong><a href="TODO:indigo-doc">New documentation (work in progress)</a></strong></p>
+
+<h2 id="gcc-2010-presentation">GCC 2010 Presentation</h2>
+
+<p>Here is the presentation for the talk that was given in November 2010 in Goslar at the German Conference on Chemoinformatics:
+<a href="../assets/indigo/indigo_cic2010.pdf">PDF</a> (396K).</p>
+
+<p>And here is the poster presented at the same conference:
+<a href="../assets/indigo/indigo_cic2010_poster.pdf">PDF</a> (3.1M).</p>
+
+<h2 id="knime-nodes">KNIME Nodes</h2>
+
+<p>We provide a number of freely available <a href="knime.html">nodes</a> for the <a href="http://knime.org">KNIME</a> workflow engine. The nodes are based on Indigo and its Java SDK.</p>
+
+<h2 id="java-gui-utilities">Java GUI Utilities</h2>
+
+<p>Two Indigo-based Java GUI applications are provided:</p>
+
+<ul>
+<li><a href="legio.html">Legio</a> &#8212; combinatorial chemistry</li>
+<li><a href="chemdiff.html">ChemDiff</a> &#8212; visual comparison of two SDF or SMILES files</li>
+</ul>
+
+<h2 id="commandline-utilities">Command-Line Utilities</h2>
+
+<p>Three Indigo-based command-line utilities written in plain C are provided:</p>
+
+<ul>
+<li><a href="indigo-depict.html">indigo-depict</a> (former <code>dingo-render</code>) Molecule and reaction rendering utility.</li>
+<li><a href="indigo-cano.html">indigo-cano</a> (former <code>cano-utility</code>) Canonical SMILES generator.</li>
+<li><a href="indigo-deco.html">indigo-deco</a> (former <code>deco</code>) R-Group deconvolution utility.</li>
+</ul>
+
+<h2 id="download-and-install">Download and Install</h2>
+
+<p>Look at the <a href="../download/indigo/index.html">Downloads</a> page for the installation package suitable for your system.</p>
+
+<h2 id="license">License</h2>
+
+<p>Copyright &#169; 2009-2013 GGA Software Services LLC</p>
+
+<p>This program is free software: You can redistribute it and/or modify it under the terms of the GNU General
+Public License as published by the Free Software Foundation; version 3 of the License.</p>
+
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License along with this program. If you did not
+not, please see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+
+<h2 id="feedback">Feedback</h2>
+
+<p>Do you need assistance using our tools? Do you need a feature? Do you want to send a patch to us? Did you find a bug?  Please write to one of the following newsgroups and let us know:</p>
+
+<ul>
+<li><a href="http://groups.google.com/group/indigo-bugs">http://groups.google.com/group/indigo-bugs</a> : for bug reports on all GGA projects.</li>
+<li><a href="http://groups.google.com/group/indigo-dev">http://groups.google.com/group/indigo-dev</a> : for development topics.</li>
+<li><a href="http://groups.google.com/group/indigo-general">http://groups.google.com/group/indigo-general</a> : for any other discussions.</li>
+</ul>
+
+<p>No registration is required: you can write from your ordinary e-mail account to
+<a href="mailto:indigo-bugs@googlegroups.com">indigo-bugs@googlegroups.com</a>, <a href="mailto:indigo-dev@googlegroups.com">indigo-dev@googlegroups.com</a>, or <a href="mailto:indigo-general@googlegroups.com">indigo-general@googlegroups.com</a> to get your message posted.</p>
+
+<h2 id="commercial-availability">Commercial Availability</h2>
+
+<p>If the GPL-licensed Indigo does not fit your needs, please contact us at <a href="mailto:info@ggasoftware.com">info@ggasoftware.com</a> to discuss the
+purchase of a commercial license. You may need the commercial license if you want to:</p>
+
+<ul>
+<li>Receive ongoing support and maintenance</li>
+<li>Include Indigo as component in your proprietary software product</li>
+</ul>

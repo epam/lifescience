@@ -1,0 +1,366 @@
+<h1 id="installation-manual-oracle">Installation Manual: Oracle</h1>
+
+<h2 id="system-requirements">System Requirements</h2>
+
+<h3 id="operating-systems">Operating Systems</h3>
+
+<ul>
+<li>Windows 2000/XP/2003/Vista/2008 (32-bit and 64-bit)</li>
+<li>Linux (all modern distributions, 32-bit and 64-bit)</li>
+<li>Solaris (including SPARC hardware)</li>
+<li>Mac OS X 10.5 Leopard/10.6 Snow Leopard (64-bit)</li>
+</ul>
+
+<h3 id="database-servers">Database Servers</h3>
+
+<ul>
+<li>Oracle 9, 10, 11 (including 11.2)</li>
+<li>Oracle 10 XE</li>
+</ul>
+
+<h3 id="tested-configurations">Tested Configurations</h3>
+
+<p>Bingo has been successfully tested on the following configurations:</p>
+
+<table>
+<thead>
+<tr>
+<th>Bingo Version</th>
+<th>Database</th>
+<th>Operating System</th>
+<th>Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">32-bit</td>
+<td align="center">Oracle 9 (32-bit)</td>
+<td align="center">Windows XP Professional</td>
+<td align="center">Intel x86</td>
+</tr>
+<tr>
+<td align="center">32-bit</td>
+<td align="center">Oracle 10 (32-bit)</td>
+<td align="center">Windows XP Professional</td>
+<td align="center">Intel x86</td>
+</tr>
+<tr>
+<td align="center">32-bit</td>
+<td align="center">Oracle 10 XE (32-bit)</td>
+<td align="center">Windows XP Professional</td>
+<td align="center">Intel x86</td>
+</tr>
+<tr>
+<td align="center">32-bit</td>
+<td align="center">Oracle 11 (32-bit)</td>
+<td align="center">Windows XP Professional</td>
+<td align="center">Intel x86</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="center">Oracle 11 (64-bit)</td>
+<td align="center">Windows 2003 Server</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">32-bit</td>
+<td align="center">Oracle 11 (64-bit)</td>
+<td align="center">Windows 2003 Server</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="center">Oracle 11 (64-bit)</td>
+<td align="center">Windows Vista Business</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="center">Oracle 11 (64-bit)</td>
+<td align="center">Windows Server 2008 R2 Standard</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="center">Oracle 11 (64-bit)</td>
+<td align="center">Windows 7 Enterprise</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">32-bit</td>
+<td align="center">Oracle 10 XE (32-bit)</td>
+<td align="center">Linux: Ubuntu 9.04</td>
+<td align="center">Intel x86</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="center">Oracle 10 (64-bit)</td>
+<td align="center">Linux: Debian sid</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">32-bit</td>
+<td align="center">Oracle 11 (64-bit)</td>
+<td align="center">Linux: Debian sid</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="center">Oracle 11 (64-bit)</td>
+<td align="center">Linux: Debian sid</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="center">Oracle 10 (64-bit)</td>
+<td align="center">Linux: CentOS 5.1</td>
+<td align="center">Intel x86-64</td>
+</tr>
+<tr>
+<td align="center">32-bit</td>
+<td align="center">Oracle 9 (64-bit)</td>
+<td align="center">Solaris: SunOS 5.10</td>
+<td align="center">UltraSPARC III</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="center">Oracle 9 (64-bit)</td>
+<td align="center">Solaris: SunOS 5.10</td>
+<td align="center">UltraSPARC III</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="center">Oracle 10 (64-bit)</td>
+<td align="center">Mac OS X 10.6.1</td>
+<td align="center">Intel x86-64</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="installation-prerequisities">Installation Prerequisities</h2>
+
+<h3 id="all-systems">All Systems</h3>
+
+<ul>
+<li>The value of the <code>open_cursors</code> parameter of the Oracle database server should be increased to 1000.</li>
+<li>The <code>extproc</code> listener must be run in Oracle. The example of the <code>listener.ora</code> configuration file is
+    provided below.</li>
+<li>Note the <code>EXTPROC_DLLS=ANY</code> setting: It makes Oracle tolerant to the location of external libraries
+    (including the Bingo library). However, this setting is not required when you install the Bingo library in the Oracle system directory (default).</li>
+</ul>
+
+<h3 id="windows">Windows</h3>
+
+<p>The configuration is the same for all 32-bit and 64-bit Windows distributions.</p>
+
+<pre><code>SID_LIST_LISTENER =
+  (SID_LIST =
+    (SID_DESC =
+      (PROGRAM = extproc)
+      (SID_NAME = PLSExtProc)
+      (GLOBAL_DBNAME = orcl)
+      (ORACLE_HOME = C:\oracle\product\10.2.0\db_1)
+      (ENVS="EXTPROC_DLLS=ANY")
+    )
+  )
+</code></pre>
+
+<h3 id="linux-32bit-or-64bit-or-solaris">Linux (32-bit or 64-bit) or Solaris</h3>
+
+<pre><code>SID_LIST_LISTENER =
+  (SID_LIST =
+    (SID_DESC =
+      (PROGRAM = extproc)
+      (SID_NAME = PLSExtProc)
+      (GLOBAL_DBNAME = orcl)
+      (ORACLE_HOME = /home/oracle/product/10.2.0/db_1)
+      (ENVS = "EXTPROC_DLLS=ANY")
+    )
+  )
+</code></pre>
+
+<h3 id="64bit-linux-or-solaris-with-32bit-extproc">64-bit Linux or Solaris, with 32-bit extproc</h3>
+
+<p>If you have 64-bit Oracle but want to keep the 32-bit <code>extproc</code> for some reason, you can still use the 32-bit
+version of Bingo.</p>
+
+<pre><code>SID_LIST_LISTENER =
+  (SID_LIST =
+    (SID_DESC =
+      (SID_NAME = PLSExtProc)
+      (GLOBAL_DBNAME = orcl)
+      (ORACLE_HOME = /oracle/11.1)
+      (PROGRAM = extproc32)
+      (ENVS = "EXTPROC_DLLS=ANY,LD_LIBRARY_PATH=/oracle/11.1/lib32")
+    )
+  )
+</code></pre>
+
+<h3 id="mac-os-x-64bit">Mac OS X (64-bit)</h3>
+
+<pre><code>SID_LIST_LISTENER =
+  (SID_LIST =
+    (SID_DESC =
+      (PROGRAM = extproc)
+      (SID_NAME = PLSExtProc)
+      (GLOBAL_DBNAME = orcl)
+      (ORACLE_HOME = /Users/oracle/product/10.2.0/db_1)
+      (ENVS = "EXTPROC_DLLS=ANY")
+    )
+  )
+</code></pre>
+
+<p>In addition to the kernel parameters described in <a href="http://download.oracle.com/docs/cd/B19306_01/install.102/b25286/pre_install.htm#BABCHAED">Oracle&#174; Database Installation Guide 10g Release 2 (10.2) for
+Apple Mac OS X</a> you
+should change <code>kern.sysv.shmseg</code> from its default value, which is too low. Add the following line to
+<code>/etc/sysctl.conf</code> file:</p>
+
+<pre><code>kern.sysv.shmseg=256
+</code></pre>
+
+<h2 id="installation-procedure">Installation Procedure</h2>
+
+<h3 id="all-systems-1">All Systems</h3>
+
+<p><strong>Note:</strong> The installation script creates a new user (usually <code>bingo</code>), with the default tablespace <code>bingo</code>
+and the temporary tablespace <code>bingo_temp</code>. If you specify another username for Bingo (for example, <code>bingo1</code>),
+the tablespace names will be <code>bingo1</code> and <code>bingo1_temp</code>. The datafiles, located at the default Oracle datafile
+directory, will be 5 megabytes in size and will auto-extend by 5 megabytes without size limit. If you need to
+change the tablespace names, datafile locations, or size conditions, please edit the <code>system/bingo_init.sql</code>
+file manually before running the installation script. If you are installing on Oracle 9, edit the
+<code>system/bingo_init_9.sql</code> file instead.</p>
+
+<p><strong>Note:</strong> You cannot install Bingo on top of the existing installation. You have to drop the cartridge user
+(usually <code>bingo</code>) of the existing installation (see the <a href="installation-manual-oracle.html#uninstalling-the-cartridge">Uninstalling</a> section below). Or you can install a new version to another user.</p>
+
+<h3 id="windows-1">Windows</h3>
+
+<p>Log in as Administrator if you are installing Bingo in the Oracle library directory (this is the default behavior).
+If you do not have administrator rights, please override the default setting by <code>-libdir</code> flag. In the latter
+case, you should have the <code>EXTPROC_DLLS</code> option set up properly.</p>
+
+<p>Run the <code>bingo-oracle-install.bat</code> file located in the Bingo installation file set. The help
+message from the script follows:</p>
+
+<pre><code>Usage: bingo-oracle-install.bat [parameters]
+Parameters:
+  -?, -help
+    Print this help message
+  -libdir path
+    Target directory to install bingo-oracle.dll (defaut %ORACLE_HOME%\bin).
+    If the directory does not exist, it will be created.
+  -dbaname name
+    Database administrator login (default "system").
+  -dbapass password
+    Database administrator password (no default).
+    If the password is not specified, you will have to enter it later.
+  -instance instance
+    Database instance (default "orcl").
+    You can specify full address like "server:1521/instance" as well.
+  -bingoname name
+    Name of cartridge pseudo-user (default "bingo").
+  -bingopass password
+    Password of the pseudo-user (default "bingo").
+  -y
+    Do not ask for confirmation.
+</code></pre>
+
+<h3 id="linux-solaris-or-mac-os-x">Linux, Solaris, or Mac OS X</h3>
+
+<p>Log in as <code>oracle</code> user if you are installing Bingo in the Oracle library directory (this is the default behavior).
+If you do not have rights to log in as <code>oracle</code>, please override the default setting by <code>-libdir</code> flag. In the
+latter case, you should have the <code>EXTPROC_DLLS</code> option set up properly.</p>
+
+<p>Run the <code>bingo-oracle-install.sh</code> file located in the <code>sql</code> folder of the Bingo installation file set. The help
+message from the script is the following:</p>
+
+<pre><code>Usage: bingo-oracle-install.sh [parameters]
+Parameters:
+  -?, -help
+    Print this help message
+  -libdir path
+    Target directory to install libbingo.so (defaut $ORACLE_HOME/lib).
+    If the directory does not exist, it will be created.
+  -dbaname name
+    Database administrator login (default "system").
+  -dbapass password
+    Database administrator password (no default).
+    If the password is not specified, you will have to enter it later.
+  -instance instance
+    Database instance (default "orcl").
+    You can specify full address like "server:1521/instance" as well.
+  -bingoname name
+    Name of cartridge pseudo-user (default "bingo").
+  -bingopass password
+    Password of the pseudo-user (default "bingo").
+  -y
+    Do not ask for confirmation.
+</code></pre>
+
+<h3 id="examples">Examples</h3>
+
+<p>For the most simple installation, the defaults are taken: <code>$ORACLE_HOME/lib</code> directory for binary, 'orcl'
+instance, 'system' DBA account, and 'bingo/bingo' pseudo-user.</p>
+
+<pre><code>bingo-oracle-install.sh
+</code></pre>
+
+<p>If you do not have access to the <code>$ORACLE_HOME/lib</code> directory, you can install the Bingo binary in your home directory:</p>
+
+<pre><code>bingo-oracle-install.sh -libdir /home/myself
+</code></pre>
+
+<p>When you install on Oracle XE, the instance is usually called <code>xe</code>:</p>
+
+<pre><code>bingo-oracle-install.sh -instance xe
+</code></pre>
+
+<p>You can install Bingo to an Oracle user other than 'bingo':</p>
+
+<pre><code>bingo-oracle-install.sh -bingoname bingo2
+</code></pre>
+
+<p>To run in the non-interactive mode, you must specify '-y' and '-dbapass':</p>
+
+<pre><code>bingo-oracle-install.sh -dbaname system -dbapass admin -y
+</code></pre>
+
+<p>In Windows, you often do not have the <code>%ORACLE_HOME%</code> setting, and so you have to specify the library directory
+manually:</p>
+
+<pre><code>bingo-oracle-install.bat -libdir C:\oracle\product\11.1.0\bin -dbaname system -dbapass admin -y
+</code></pre>
+
+<h3 id="checking-the-installation">Checking the Installation</h3>
+
+<p>If the installation has succeeded, the following report will be printed at the end:</p>
+
+<pre><code>--------- REPORT ---------
+Tables:             7
+Views:              0
+Packages:           4
+Procedures:         45
+Functions:          69
+Sequences:          1
+--------------------------
+
+DB check executed.
+</code></pre>
+
+<p>To check that the shared library file is loaded properly by Oracle, you can try this simple query:</p>
+
+<pre><code>SELECT Bingo.GetVersion from DUAL;
+</code></pre>
+
+<h2 id="uninstalling-the-cartridge">Uninstalling the Cartridge</h2>
+
+<p>To uninstall the cartridge, you must:</p>
+
+<ol>
+<li>Remove all special domain indices that have been created by users. Removing the cartridge user without removing the
+      indices will not harm your system, but the domain indices will be disabled.</li>
+<li>Remove the cartridge user (usually <code>bingo</code>) from the database:     DROP USER BINGO CASCADE;</li>
+<li>Remove the cartridge tablespaces (usually <code>BINGO</code> and <code>BINGO_TEMP</code>).  This step is necessary if you want
+      to recover the disk space previously occupied by the indices. You can skip this step if you are willing
+      to reinstall Bingo afterwards.</li>
+</ol>
