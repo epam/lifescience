@@ -1,5 +1,5 @@
 Life Sciences Open Source
-========================
+=========================
 
 .. toctree::
     :hidden:
