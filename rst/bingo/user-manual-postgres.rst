@@ -584,14 +584,14 @@ Utility functions
 Extracting Names
 ~~~~~~~~~~~~~~~~
 
-``bingo.Name`` function extracts the molecule or reaction name from
+``bingo.getName`` function extracts the molecule or reaction name from
 Molfile, Rxnfile, or SMILES string.
 
 ::
 
-    select bingo.Name(molfile) from mytable;
+    select bingo.getName(molfile) from mytable;
 
-    select bingo.Name('c1ccc2ccccc2c1 Naphthalene');
+    select bingo.getName('c1ccc2ccccc2c1 Naphthalene');
 
 Calculating Molecule Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
