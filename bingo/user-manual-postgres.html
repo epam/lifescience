@@ -568,11 +568,11 @@ select bingo.ExportRDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$id[, $other_c
 <h2>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="extracting-names">
 <h3>Extracting Names<a class="headerlink" href="#extracting-names" title="Permalink to this headline">¶</a></h3>
-<p><tt class="docutils literal"><span class="pre">bingo.Name</span></tt> function extracts the molecule or reaction name from
+<p><tt class="docutils literal"><span class="pre">bingo.getName</span></tt> function extracts the molecule or reaction name from
 Molfile, Rxnfile, or SMILES string.</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.Name(molfile) from mytable;
+<div class="highlight-python"><div class="highlight"><pre>select bingo.getName(molfile) from mytable;
 
-select bingo.Name(&#39;c1ccc2ccccc2c1 Naphthalene&#39;);
+select bingo.getName(&#39;c1ccc2ccccc2c1 Naphthalene&#39;);
 </pre></div>
 </div>
 </div>
