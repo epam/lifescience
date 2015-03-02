@@ -1,6 +1,18 @@
 Indigo Changelog
 ================
 
+Indigo 1.2.0
+------------
+
+*27 February 2015*
+
+This release has several major changes:
+
+#. New layout algorithm for large macrocycles
+#. Reaction canonical smiles
+#. Better stereochemistry support 
+
+
 Indigo 1.1.11
 -------------
 
