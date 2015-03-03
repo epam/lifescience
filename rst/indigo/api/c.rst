@@ -4,7 +4,7 @@ Plain C
 Core Indigo API
 ---------------
 
-::
+.. code-block:: cpp
 
     /* All integer and float functions return -1 on error. */
     /* All string functions return zero pointer on error. */
