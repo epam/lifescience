@@ -5,18 +5,13 @@
     :hidden:
     :includehidden:
 
-    building-from-source
-    installation-manual-oracle
-    installation-manual-sqlserver
-    installation-manual-postgres
-    performance-tips-oracle
-    user-manual-oracle
-    user-manual-sqlserver
-    user-manual-postgres
-    changelog
+    bingo-oracle
+    bingo-postgres
+    bingo-sqlserver
+    bingo-nosql
 
-Overview
---------
+.. rubric:: 
+    Overview
 
 Bingo is a RDBMS data cartridge that provides the industry’s
 next-generation, fast, scalable, and efficient storage and searching
@@ -37,8 +32,9 @@ underlying database server, chemical searching is fast and reliable.
 Users can seamlessly combine chemical substructure, reaction, and exact
 structure searching with numeric and text SQL terms.
 
-Why Select Bingo as Your Molecular Search Cartridge?
-----------------------------------------------------
+.. rubric:: 
+    Why Select Bingo as Your Molecular Search Cartridge?
+
 
 Bingo has all the necessary features required by modern chemoinformatics
 applications. It also has features not present in other cartridges — for
@@ -60,8 +56,9 @@ LOB handling, is optimized as well. During substructure searches,
 molecules and reactions are stored in shared memory to speed up the
 access.
 
-Features
---------
+.. rubric::
+    Features
+
 
 **Searches in a variety of ways:** For molecule structure searching,
 Bingo supports 2D and 3D exact and substructure searches, as well as
@@ -168,8 +165,9 @@ appropriate Microsoft SQL Server End User License Agreement, the
 licensors of this program grant you additional permission to convey the
 resulting work.
 
-Feedback
---------
+.. rubric::
+    Feedback
+
 
 Do you need assistance using our tools? Do you need a feature? Do you
 want to send a patch to us? Did you find a bug? Please write to one of
@@ -185,8 +183,9 @@ No registration is required: you can write from your ordinary e-mail
 account to indigo-bugs@googlegroups.com, indigo-dev@googlegroups.com, or
 indigo-general@googlegroups.com to get your message posted.
 
-Commercial Availability
------------------------
+.. rubric::
+    Commercial Availability
+
 
 If the GPL-licensed Bingo does not fit your needs, please contact us to discuss the purchase of a commercial license.
 You may need the commercial license if you want to:
@@ -195,3 +194,10 @@ You may need the commercial license if you want to:
 -  Include Bingo as a component in your proprietary software product
 -  Use Bingo with Oracle licensed not with OTN Developer License, or
    with MS SQL Server Enterprise Edition
+
+
+
+Changelog
+---------
+
+Please see the `Bingo Changelog <changelog.html>`__ page

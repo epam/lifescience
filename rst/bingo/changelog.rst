@@ -1,5 +1,12 @@
 Bingo Changelog
 ===============
+
+.. toctree::
+    :hidden:
+    :includehidden:
+
+    changelog
+
 Bingo 1.7.10 dev6
 -----------------
 

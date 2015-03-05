@@ -181,6 +181,13 @@ div.body dd,
 div.body li {
   line-height: 1.4em;
 }
+p.rubric {
+  font-family: Georgia, Times, Times New Roman, serif;
+  font-weight: normal;
+  margin: 30px 0px 10px 0px;
+  padding: 0;
+  font-size: 180%;
+}
 div.admonition {
   margin: 20px 0px;
   padding: 10px 30px;
@@ -325,6 +332,7 @@ tt {
   background-color: #ecf0f3;
   color: #222;
   /* padding: 1px 2px; */
+
 }
 tt.xref,
 a tt {
