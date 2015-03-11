@@ -10,8 +10,8 @@
     bingo-sqlserver
     bingo-nosql
 
-.. rubric:: 
-    Overview
+Overview
+--------
 
 Bingo is a RDBMS data cartridge that provides the industry’s
 next-generation, fast, scalable, and efficient storage and searching
@@ -32,8 +32,8 @@ underlying database server, chemical searching is fast and reliable.
 Users can seamlessly combine chemical substructure, reaction, and exact
 structure searching with numeric and text SQL terms.
 
-.. rubric:: 
-    Why Select Bingo as Your Molecular Search Cartridge?
+Why Select Bingo as Your Molecular Search Cartridge?
+----------------------------------------------------
 
 
 Bingo has all the necessary features required by modern chemoinformatics
@@ -56,8 +56,8 @@ LOB handling, is optimized as well. During substructure searches,
 molecules and reactions are stored in shared memory to speed up the
 access.
 
-.. rubric::
-    Features
+Features
+--------
 
 
 **Searches in a variety of ways:** For molecule structure searching,
@@ -165,8 +165,8 @@ appropriate Microsoft SQL Server End User License Agreement, the
 licensors of this program grant you additional permission to convey the
 resulting work.
 
-.. rubric::
-    Feedback
+Feedback
+--------
 
 
 Do you need assistance using our tools? Do you need a feature? Do you
@@ -183,8 +183,8 @@ No registration is required: you can write from your ordinary e-mail
 account to indigo-bugs@googlegroups.com, indigo-dev@googlegroups.com, or
 indigo-general@googlegroups.com to get your message posted.
 
-.. rubric::
-    Commercial Availability
+Commercial Availability
+-----------------------
 
 
 If the GPL-licensed Bingo does not fit your needs, please contact us to discuss the purchase of a commercial license.

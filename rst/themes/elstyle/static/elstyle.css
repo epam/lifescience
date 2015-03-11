@@ -463,6 +463,10 @@ a:hover tt {
     display: none;
   }
 }
+
+img.logo {
+  height: 40px;
+}
 .revsys-inline {
   display: none!important;
 }

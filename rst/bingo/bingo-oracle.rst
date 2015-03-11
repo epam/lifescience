@@ -2,6 +2,7 @@ Bingo Oracle
 ============
 
 .. toctree::
+    :hidden:
 
     installation-manual-oracle
     user-manual-oracle

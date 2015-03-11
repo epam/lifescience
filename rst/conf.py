@@ -117,7 +117,7 @@ html_theme_options = {
     'navbar_title': "Life Sciences",
     'navbar_sidebarrel': False,
     'bootstrap_version': "2",
-    'globaltoc_depth': 3, 
+    'globaltoc_depth': 4, 
     'navbar_links' : [
         ("Resources", "resources"),
         ("Downloads", "download/index"),

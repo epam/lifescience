@@ -31,13 +31,62 @@
             .children('a').first().attr('tabindex', -1);
 
           $item.addClass('dropdown-menu');
-        }
+        
+        } 
 
-        findA($item, level + 1);
+       findA($item, level + 1);
+
       });
     };
 
     findA($ul);
+  };
+
+  var fixGlobalToc = function ($ul) {
+    var findA,
+      $localLi;
+
+    // Find all a "internal" tags, traversing recursively.
+    findA = function ($elem, level) {
+      level = level || 0;
+      var $items = $elem.find("> ul, > li");
+
+      // Iterate everything in order.
+      $items.each(function (index, item) {
+        var $item = $(item),
+          tag = item.tagName.toLowerCase(),
+          $childrenUl = $item.children('ul');
+
+          
+        if (tag === 'li' && $childrenUl.length === 0) {
+           $item.remove();
+        }  else {
+       	    findA($item, level + 1);
+	}
+
+      });
+    };
+    var findB = function ($elem, level) {
+      level = level || 0;
+      var $items = $elem.find("> ul, > li");
+
+      // Iterate everything in order.
+      $items.each(function (index, item) {
+        var $item = $(item),
+          tag = item.tagName.toLowerCase(),
+          $childrenLi = $item.children('li');
+
+        if (tag === 'ul' && $childrenLi.length === 0) {
+           $parentLi = $item.parent('li');
+           $parentLi.removeClass('dropdown-submenu');
+           $item.remove();
+	} else {
+       	    findB($item, level + 1);
+	}
+      });
+    };
+    findA($ul);
+    findB($ul);
   };
 
   /**
@@ -79,6 +128,7 @@
     // Global TOC.
     if ($("ul.globaltoc li").length) {
       patchToc($("ul.globaltoc"), 1);
+      fixGlobalToc($("ul.globaltoc"));
     } else {
       // Remove Global TOC.
       $(".globaltoc-container").remove();
