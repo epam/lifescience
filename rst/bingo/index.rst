@@ -9,6 +9,7 @@
     bingo-postgres
     bingo-sqlserver
     bingo-nosql
+    Downloads <../download/bingo>
 
 Overview
 --------
