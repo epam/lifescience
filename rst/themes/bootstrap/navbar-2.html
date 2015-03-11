@@ -8,11 +8,11 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="brand" href="{{ pathto(master_doc) }}">{% if theme_navbar_title -%}{{ theme_navbar_title|e }}{%- else -%}{{ project|e }}{%- endif -%}</a>
-        
+        <a class="brand" href="{{ pathto(master_doc) }}"><img class="logo" src="{{ pathto('_static/logo.svg', 1) }}" alt="Logo"/><p>{{ theme_navbar_title|e }}</p></a>
 
         <div class="nav-collapse">
           <ul class="nav">
+
             <li class="divider-vertical"></li>
 
             {% block navbartoc %}

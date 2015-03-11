@@ -114,7 +114,7 @@ html_sidebars = {
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'navbar_title': "Lifeciences Open Source Portal",
+    'navbar_title': "Life Sciences",
     'navbar_sidebarrel': False,
     'bootstrap_version': "2",
     'globaltoc_depth': 3, 
