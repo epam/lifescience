@@ -11,9 +11,6 @@ Life Sciences Open Source
     Imago OCR <imago/index>
     Parso <parso>
     Selenium Framework <selenium>
-    resources
-    Downloads <download/index>
-    contact
 
 EPAM Life Sciences has extensive experience and expertise in developing organic chemistry software products for use in life science companies, research institutes, and universities.  Before joining EPAM Systems in June 2014 and becoming EPAM Life Sciences, GGA Software Services developed internally a series of cheminformatics tools, and decided to make these tools available to the open-source community.  We are continuing to undertake this open-source initiative through EPAM, and we look forward to improving the existing tools and to developing new tools for your use.
 

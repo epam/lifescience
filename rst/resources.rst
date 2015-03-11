@@ -1,6 +1,11 @@
 ﻿Resources
 =========
 
+.. toctree::
+    :hidden:
+
+    resources
+
 Algorithms
 ----------
 

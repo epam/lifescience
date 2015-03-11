@@ -1,6 +1,11 @@
 Contact Info
 ============
 
+.. toctree::
+    :hidden:
+
+    contact
+
 How to Contact EPAM
 -------------------
 

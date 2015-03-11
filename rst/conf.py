@@ -119,7 +119,9 @@ html_theme_options = {
     'bootstrap_version': "2",
     'globaltoc_depth': 3, 
     'navbar_links' : [
+        ("Resources", "resources"),
         ("Downloads", "download/index"),
+        ("Contact Info", "contact"),
     ],
 }
 
