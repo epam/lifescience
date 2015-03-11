@@ -100,19 +100,28 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-html_theme_path = ['.']
-html_theme = 'theme'
+html_theme_path = ['./themes']
+html_theme = 'bootstrap'
 html_sidebars = {
-   '**': [
-       'about.html', 'navigation.html', 'searchbox.html',
+   '*/**': [
+       'navbartoc.html'
    ]
 }
+
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {
-#}
+html_theme_options = {
+    'navbar_title': "Lifeciences Open Source Portal",
+    'navbar_sidebarrel': False,
+    'bootstrap_version': "2",
+    'globaltoc_depth': 3, 
+    'navbar_links' : [
+        ("Downloads", "download/index"),
+    ],
+}
 
 html_copy_source = False
 html_last_updated_fmt = '%b %d, %Y'
