@@ -433,6 +433,8 @@ a:hover tt {
 }
 
 img.logo {
+  position: relative;
+  margin-top: 10px;
   height: 50px;
 }
 
