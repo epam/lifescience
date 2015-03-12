@@ -5,15 +5,11 @@
     :hidden:
     :includehidden:
 
-    Concepts <concepts/index>
     API <api/index>
-    knime
-    legio
-    indigo-depict
-    indigo-cano
-    indigo-deco
-    chemdiff
-    changelog
+    Concepts <concepts/index>
+    ﻿Indigo Utilities <utilities>
+    Downloads <../download/indigo/index>
+    Changelog <changelog>
 
 Overview
 --------

@@ -5,8 +5,8 @@ Life Sciences Open Source
     :hidden:
 
     Bingo <bingo/index>
-    Ketcher <ketcher/index>
     Indigo Toolkit <indigo/index>
+    Ketcher <ketcher/index>
     Indigo ELN <indigo/eln/index>
     Imago OCR <imago/index>
     Parso <parso>
