@@ -221,7 +221,7 @@ div#searchbox {
 div.sphinxsidebar input {
   border: 1px solid #cccccc;
   border-radius: 4px;
-  font-family: 'Georgia', serif;
+  font-family: Georgia,Times, Times New Roman, serif;
   font-size: 1em;
 }
 div.sphinxsidebar hr {
@@ -241,15 +241,21 @@ a:hover {
   color: #6d4100;
   text-decoration: underline;
 }
-div.body h1,
-div.body h2,
-div.body h3,
-div.body h4,
-div.body h5,
-div.body h6 {
+
+.section {
+  color: #3E4349;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
   font-family: Georgia, Times, Times New Roman, serif;
   font-weight: normal;
   margin: 30px 0px 10px 0px;
+  color: #000;
   padding: 0;
 }
 div.body h1 {
