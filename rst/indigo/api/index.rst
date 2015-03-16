@@ -1333,8 +1333,8 @@ One can use both ``-`` and ``/`` prefix for them:
 IO
 --
 
-Reading SDF, RDF, CML, multiline SMILES files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Reading SDF, RDF, CML, multiline SMILES files, CDX (binary)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following methods of the ``Indigo`` class can be used to enumerate
 files with multiple molecules/reactions:
@@ -1343,6 +1343,7 @@ files with multiple molecules/reactions:
 -  ``iterateRDFile``
 -  ``iterateSmilesFile``
 -  ``iterateCMLFile``
+-  ``iterateCDXFile``
 
 Java:
 
@@ -1404,11 +1405,11 @@ Java, C#:
 
 Python: the same with the ``IndigoObject`` and ``String`` omitted.
 
-SDF/RDF Properties
-^^^^^^^^^^^^^^^^^^
+SDF/RDF/CDX Properties
+^^^^^^^^^^^^^^^^^^^^^^
 
 The following methods are used to get the named properties of the
-molecule/reaction loaded from an SDF or RDF file:
+molecule/reaction loaded from an SDF or RDF or CDX file:
 
 -  ``IndigoObject.hasProperty`` (boolean) — checks if the object has the
    given property.
@@ -1417,6 +1418,8 @@ molecule/reaction loaded from an SDF or RDF file:
    it.
 -  ``IndigoObject.removeProperty`` — removes the given property from the
    object, or does nothing in case the object does not have it.
+
+-  **Note:** currently CDX annotations are used as CDX properties
 
 Java:
 
@@ -1443,7 +1446,7 @@ Python:
           print item.getProperty("cdbregno")
 
 It is also possible to iterate over all properties of a particular
-record in SDF or RDF file.
+record in SDF or RDF or CDX file.
 
 Java:
 
