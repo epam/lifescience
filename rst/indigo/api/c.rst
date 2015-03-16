@@ -201,7 +201,7 @@ Core Indigo API
     CEXPORT int indigoOptimize (int query, const char *options);
 
     // Method for molecule and query standardizing
-    // It standrdize charges, stereo, geometry and etc. in accordance with Indigo options
+    // It standardize charges, stereo, geometry and etc. in accordance with Indigo options
     CEXPORT int indigoStandardize (int item);
 
     // Automatic reaction atom-to-atom mapping
