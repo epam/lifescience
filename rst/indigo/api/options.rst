@@ -359,3 +359,152 @@ InChI
      - string
      - Options supported by the official InChI plugin: /NEWPSOFF /DoNotAddH /SNon /SRel /SRac /SUCF /ChiralFlagON /ChiralFlagOFF /SUU /SLUUD /FixedH /RecMet /KET /15T.
      - \-
+
+Standardize
+-----------
+
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 40 10 40 10
+   
+   * - Option
+     - Type
+     - Description
+     - Default
+   * - ``standardize-stereo``
+     - boolean
+     - Sets or repairs the stereo on a molecule.
+     - false
+   * - ``standardize-charges``
+     - boolean
+     - Sets the charges on a molecule to a standard form.
+     - false
+   * - ``standardize-center-molecule``
+     - boolean
+     - Translates a molecule so its geometric center lies at the origin.
+     - false
+   * - ``standardize-remove-single-atoms``
+     - boolean
+     - Removes fragments that consist of only a single heavy atom.
+     - false
+   * - ``standardize-keep-smallest``
+     - boolean
+     - Keeps only the smallest fragment in the molecule.
+     - false
+   * - ``standardize-keep-largest``
+     - boolean
+     - Keeps only the largest fragment in the molecule.
+     - false
+   * - ``standardize-remove-largest``
+     - boolean
+     - Removes the largest fragment in the molecule.
+     - false
+   * - ``standardize-make-non-h-to-c-atoms``
+     - boolean
+     - Converts all non-Hydrogen atoms atoms in the molecule to carbon.
+     - false
+   * - ``standardize-make-non-h-to-a-atoms``
+     - boolean
+     - Converts all non-Hydrogen atoms in the molecule to the A query atom type.
+     - false
+   * - ``standardize-make-non-h-c-to-q-atoms``
+     - boolean
+     - Converts all non-Carbon, non-Hydrogen atoms in the molecule to the Q query atom type.
+     - false
+   * - ``standardize-make-all-bonds-single``
+     - boolean
+     - Converts all bonds in the molecule to single bonds.
+     - false
+   * - ``standardize-clear-coordinates``
+     - boolean
+     - Sets all x, y, z coordinates to zero.
+     - false
+   * - ``standardize-straighten-triple-bonds``
+     - boolean
+     - Finds atoms with triple bonds and non-linear geometry and fixes them so that the bond angles are 180 degrees.
+     - false
+   * - ``standardize-straighten-allens``
+     - boolean
+     - Finds atoms with two double-bonds and non-linear geometry and fixes them so that the bond angles are 180 degrees.
+     - false
+   * - ``standardize-clear-molecule``
+     - boolean
+     - Deletes all atoms and bonds in the molecule, keeping the molecule object in the data record.
+     - false
+   * - ``standardize-clear-stereo``
+     - boolean
+     - Sets all atoms and bonds to NoStereo.
+     - false
+   * - ``standardize-clear-enhanced-stereo``
+     - boolean
+     - Removes all relative stereo groupings.
+     - false
+   * - ``standardize-clear-unknown-stereo``
+     - boolean
+     - Sets all atoms and bonds marked UnknownStereo to NoStereo.
+     - false
+   * - ``standardize-clear-unknown-atom-stereo``
+     - boolean
+     - Sets all atoms marked UnknownStereo to NoStereo.
+     - false
+   * - ``standardize-clear-unknown-bond-stereo``
+     - boolean
+     - Sets all bonds marked UnknownStereo to NoStereo.
+     - false
+   * - ``standardize-clear-cis-trans``
+     - boolean
+     - Sets all bonds marked CisStereo or TransStereo to UnknownStereo.
+     - false
+   * - ``standardize-stereo-from-coordinates``
+     - boolean
+     - Uses 2D coordinates and up/down bond markings (or 3D coordinates) to assign the stereochemistry of the atoms or bonds.
+     - false
+   * - ``standardize-reposition-stereo-bonds``
+     - boolean
+     - Repositions the stereo bond markings in an attempt to find the best bond to mark as a wedge bond for each stereo atom.
+     - false
+   * - ``standardize-reposition-axial-stereo-bonds``
+     - boolean
+     - Repositions the stereo bond markings for axial stereo centers (allenes and atropisomers) in an attempt to find the best bond to mark as a wedge bond for each center.
+     - false
+   * - ``standardize-fix-direction-wedge-bonds``
+     - boolean
+     - Checks the wedge bonds in the molecule to ensure that the wedge is drawn with the stereo atom at the narrow end of the wedge.
+     - false
+   * - ``standardize-clear-charges``
+     - boolean
+     - Sets all formal charges to zero.
+     - false
+   * - ``standardize-highlight-colors``
+     - boolean
+     - Clears any highlight colors from atoms and bonds.
+     - false
+   * - ``standardize-neutralize-zwitterions``
+     - boolean
+     - Converts directly bonded zwitterions (positively charged atom bonded to negatively charged atom, A+B-) to the neutral representation (A=B).
+     - false
+   * - ``standardize-clear-unusual-valences``
+     - boolean
+     - Clears any atom valence query features and resets all implicit hydrogen counts to their standard values.
+     - false
+   * - ``standardize-clear-isotopes``
+     - boolean
+     - Clears all isotope markings from atoms.
+     - false
+   * - ``standardize-clear-dative-bonds``
+     - boolean
+     - Clears all explicit zero-order coordination bonds of dative type (V3000 type-9 bonds).
+     - false
+   * - ``standardize-clear-hydrogen-bonds``
+     - boolean
+     - Clears all explicit zero-order hydrogen bonds (V3000 type-10 bonds).
+     - false
+   * - ``standardize-create-dative-bonds``
+     - boolean
+     - Create coordination bond (zero-order bond) instead of wrong co-valent bond.
+     - false
+   * - ``standardize-create-hydrogen-bonds``
+     - boolean
+     - Create hydrogen bond (zero-order bond) instead of wrong co-valent bond.
+     - false
