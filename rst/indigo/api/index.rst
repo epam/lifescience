@@ -1328,6 +1328,25 @@ One can use both ``-`` and ``/`` prefix for them:
     indigo.setOption("inchi-options", "-DoNotAddH /SUU -SLUUD")
 
 
+Standardize of Molecule
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``IndigoObject.standardize`` method can be used to the "standardizing"
+of the molecule or query (stereo, charges, geometry, valences, atoms and bonds porperties)
+in accordance with requirements. The list of applied modifications is defined by
+options activated in Indigo (full list of available standardize options is described
+in the corresponding `Options <options.html#standardize>`__ section).
+
+**Note:** in the case of activation multiple options the order of applied modifications
+corresponds to the order of the options in the list of available options
+
+Java, C#, and Python:
+
+.. code-block:: python
+
+    indigo.setOption("standardize-stereo", true);
+    indigo.setOption("standardize-charges", true);
+    mol.standardize();
 
 
 IO
