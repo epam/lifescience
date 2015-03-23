@@ -1,4 +1,4 @@
-User Manual: NOSQL
+User Manual: NoSQL
 ==================
 
 Basics
@@ -7,7 +7,7 @@ Basics
 Data representation
 ~~~~~~~~~~~~~~~~~~~
 
-Bingo NOSQL supports all formats which is supported by Indigo.
+Bingo NoSQL supports all formats which is supported by Indigo.
 
 Storage
 ~~~~~~~
