@@ -1,4 +1,4 @@
-Installation Manual: NOSQL
+Installation Manual: NoSQL
 ===========================
 
 System Requirements
@@ -31,6 +31,5 @@ Bingo has been successfully tested on the following configurations:
 Installation Procedure
 ----------------------
 
-Bingo NOSQL is distributed as Indigo Toolkit plugin so to install it you 
-should donload and build Indigo sources.
-Look at the 'Building from sources' indigo page for the installation manual.
+Bingo NoSQL is distributed as Indigo Toolkit plugin. Look at the `Downloads <../download/index.html>`__ page for
+package suitable for your system.

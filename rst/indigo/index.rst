@@ -9,6 +9,7 @@
     Concepts <concepts/index>
     ﻿Indigo Utilities <utilities>
     Downloads <../download/indigo/index>
+    Build <../indigo/build.rst>
     Changelog <changelog>
 
 Overview
@@ -148,6 +149,11 @@ Download and Install
 
 Look at the `Downloads <../download/indigo/index.html>`__ page for the
 installation package suitable for your system.
+
+Building from sources
+---------------------
+
+Look at the `Build <../indigo/build.html>`__ page for the building manual.
 
 License
 -------
