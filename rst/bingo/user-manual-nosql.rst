@@ -99,14 +99,14 @@ The following function opens the database:
 Substructure Search
 ~~~~~~~~~~~~~~~~~~~
 
-To run substructure search through your database you can do next couble of steps.
+To run substructure search through your database you can do next couple of steps.
 
 Load your query molecule:
 ::
 
     query = indigo.loadQueryMolecule('CC')
 
-Next function will create bingos substracture matcher object:
+Next function will create bingo substructure matcher object:
 ::
 
     sub_matcher = bingo_db.searchSub(query, '')
@@ -152,9 +152,9 @@ Here is:
 -  ``query`` is the query molecule
 -  ``sim_type`` is the string that defines similarity measure type:
 
-   +  ``'tanimoto'`` - Tanimotos measure
-   +  ``'tversky'`` - Tverskys measure
-   +  ``'euclid'`` - Euclids measure
+   +  ``'tanimoto'`` - Tanimoto's measure
+   +  ``'tversky'`` - Tversky's measure
+   +  ``'euclid'`` - Euclid's measure
 
 
 The following loop will print all results of similarity matching:
@@ -170,7 +170,7 @@ The following loop will print all results of similarity matching:
 -  ``sim_matcher.getIndigoObject()`` will return object that will contain result target molecule at each iteration
 -  ``sim_matcher.getCurrentId()`` will return current result record id
 -  ``sim_matcher.getCurrentSimilarityValue()`` will return similarity value of current result and query
--  ``cur_mol.smiles()`` is the Indigos function that return smiles string for an object
+-  ``cur_mol.smiles()`` is the Indigo's function that return smiles string for an object
 
 Gross Formula Search
 ~~~~~~~~~~~~~~~~~~~~
@@ -251,7 +251,7 @@ Follow the steps described in 'Molecules' section `Loading Index <user-manual-no
 Reaction Substructure Search
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To run substructure search through your database you can do next couble of steps.
+To run substructure search through your database you can do next couple of steps.
 
 Load your query reaction:
 ::

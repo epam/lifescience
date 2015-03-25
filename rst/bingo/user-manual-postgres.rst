@@ -296,7 +296,7 @@ benefits of Bingo canonical SMILES format.
 Molecule Fingerprints
 ~~~~~~~~~~~~~~~~~~~~~
 
-You can generate a molecule fingerprint via ``bingo.Fingeprint``
+You can generate a molecule fingerprint via ``bingo.Fingerprint``
 function. The syntax is the same as for Bingo for Oracle, and it is
 described `in this
 section <user-manual-oracle.html#molecule-fingerprints>`__.

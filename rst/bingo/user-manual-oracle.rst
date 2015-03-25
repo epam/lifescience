@@ -1203,7 +1203,7 @@ The general form of tautomer substructure search query is the following:
 
     SELECT * FROM $table WHERE Bingo.Sub($column, $query, $parameters)=1;
 
-for tautomer-as-subsructure search
+for tautomer-as-substructure search
 
 -  ``$table`` is the name of the table containing molfile CLOBs in the
    column ``$column``.
@@ -1234,7 +1234,7 @@ string parameter to enable it.
 
     SELECT * FROM $table WHERE Bingo.Exact($column, $query, 'TAU R-C')=1;
 
-**Note:** The support of the ring-chain tauromerism is experimental and
+**Note:** The support of the ring-chain tautomerism is experimental and
 may not work properly.
 
 Also you can restrict the tautomer search by enabling conditions for
@@ -1439,7 +1439,7 @@ The order of atoms and the spaces in the query does not matter.
 | C6 H5       | ?          | C6 H6        |
 +-------------+------------+--------------+
 
-**Note:** Gross formulae are not always comparable: for example, ‘C2 H6
+**Note:** Gross formula are not always comparable: for example, ‘C2 H6
 O’ and ‘Ag O N C’
 
 Examples
@@ -1521,7 +1521,7 @@ the 'kind' of the resulting molecular mass value:
    mass <http://en.wikipedia.org/wiki/Mass%20%28mass%20spectrometry%29#Most%20abundant%20mass#Most%20abundant%20mass>`__,
    which is calculated using most likely isotopic composition for a
    single random molecule.
--  ``Bingo.Mass($molecule, 'monoisitopic-mass')`` returns the
+-  ``Bingo.Mass($molecule, 'monoisotopic-mass')`` returns the
    `monoisotopic
    mass <http://en.wikipedia.org/wiki/Monoisotopic_mass>`__, which is
    calculated using the most abundant isotope of each element.
@@ -1546,7 +1546,7 @@ SMILES. All significant molecular features, such as isotopes, charges,
 radicals, stereocenters, stereogroups, cis-trans bonds, and aromaticity,
 are encoded into SMILES in a canonical form. A canonical SMILES string
 defines the molecule independently of any particular representation
-(atoms renumbering, stereogroups renumbering, explicit/imlpicit
+(atoms renumbering, stereogroups renumbering, explicit/implicit
 hydrogens). So, the equality of canonical SMILES of two molecules
 guarantees that these molecules are the same, and vice versa:
 
@@ -1570,7 +1570,7 @@ throws an exception to Oracle.
 Molecule Fingerprints
 ~~~~~~~~~~~~~~~~~~~~~
 
-The ``Bingo.Fingeprint`` operator can be used to generate Indigo
+The ``Bingo.Fingerprint`` operator can be used to generate Indigo
 fingerprints for molecule structures. The operator has two arguments:
 molecule and options, and returns BLOB result.
 
@@ -1603,7 +1603,7 @@ InChI and InChIKey
 ~~~~~~~~~~~~~~~~~~
 
 The ``Bingo.InChI`` operator can be used to generate
-`InChI <http://www.inchi-trust.org/inchi/>`__ string for a gived
+`InChI <http://www.inchi-trust.org/inchi/>`__ string for a given
 molecule structure. The operator has two arguments: molecule and
 options, and returns CLOB result.
 
@@ -1615,7 +1615,7 @@ options, and returns CLOB result.
 
     SELECT Bingo.InChI($column, $options) FROM $table;
 
-You can pass any options supported by the official InChI libary. This
+You can pass any options supported by the official InChI library. This
 options can be found in the InChI manual or on the `InChI FAQ
 page <http://www.inchi-trust.org/fileadmin/user_upload/html/inchifaq/inchi-faq.html#15.17>`__.
 Usage example:

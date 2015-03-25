@@ -14,7 +14,7 @@ Operating Systems
 Database Servers
 ~~~~~~~~~~~~~~~~
 
--  PostreSQL 9.0, 9.1, 9.2, 9.3, 9.4
+-  PostgreSQL 9.0, 9.1, 9.2, 9.3, 9.4
 
 Tested Configurations
 ~~~~~~~~~~~~~~~~~~~~~
@@ -72,7 +72,7 @@ Add the following line to ``/etc/sysctl.conf`` file:
 
 The recommended value is appr. 50% of the RAM (in bytes)
 
-Execute (with the root privilegies)
+Execute (with the root privileges)
 
 ::
 
@@ -150,7 +150,7 @@ following:
     -schema name
       Postgres schema name (default "bingo").
     -pglibdir
-      Use postgreSQL $libdir option (default "false")
+      Use PostgreSQL $libdir option (default "false")
       Notice: bingo_postgres.so must be placed in the package library directory
     -y
       Process default options (default "false")
@@ -175,7 +175,7 @@ following:
     -schema name
       Postgres schema name (default "bingo").
     -pglibdir
-      Use postgreSQL $libdir option (default "false")
+      Use PostgreSQL $libdir option (default "false")
       Notice: bingo_postgres.dll must be placed in the package library directory
     -y
       Process default options (default "false")
@@ -200,7 +200,7 @@ following:
     -schema name
       Postgres schema name (default "bingo").
     -pglibdir
-      Use postgreSQL $libdir option (default "false")
+      Use PostgreSQL $libdir option (default "false")
       Notice: bingo_postgres.dylib must be placed in the package library directory
     -y
       Process default options (default "false")
@@ -226,7 +226,7 @@ If you have copied the library to the directory '/home/myself/':
     bingo-pg-install.sh -libdir /home/myself
     psql -U postgres -d test -f bingo_install.sql
 
-If you have copied the library to the Postges package directory
+If you have copied the library to the PostgreSQL package directory
 '/usr/lib/postgresql/9.0/lib/' and want to create another ``bingo2``
 schema for storing the procedures :
 

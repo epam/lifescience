@@ -135,7 +135,7 @@ Bingo PostgreSQL-specific changes:
 
 Bingo Oracle-specific changes:
 
--  rowid is includeed into the message in case of exceptions
+-  rowid is included into the message in case of exceptions
 
 Bingo SQL Server-specific changes:
 
@@ -187,7 +187,7 @@ merged into the Bingo branch including:
 
 Bingo-specific changes:
 
--  Support of the PostgresSQL 9.1
+-  Support of the PostgreSQL 9.1
 -  Now binary files for Oracle are available for download, because we
    eliminated a linkage with OCI libraries. No building from source is
    required any more for getting Bingo for Oracle on Windows.

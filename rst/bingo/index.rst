@@ -37,7 +37,7 @@ Why Select Bingo as Your Molecular Search Cartridge?
 ----------------------------------------------------
 
 
-Bingo has all the necessary features required by modern chemoinformatics
+Bingo has all the necessary features required by modern cheminformatics
 applications. It also has features not present in other cartridges — for
 example, advanced tautomer search, resonance substructure search, and
 fast updating of the index when adding new structures.
@@ -52,7 +52,7 @@ Bingo is fast. We have succeeded in achieving the best performance in
 the industry for a search cartridge for both the screening phase and the
 matching phase of various types of searches, especially substructure
 search. Bingo has very effective memory management with no unnecessary
-reallocations. Communication with the underlying database, especially
+re-allocations. Communication with the underlying database, especially
 LOB handling, is optimized as well. During substructure searches,
 molecules and reactions are stored in shared memory to speed up the
 access.

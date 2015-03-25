@@ -82,7 +82,7 @@ following exception:
 To adjust the memory limit for CLR you have to specify the -g switch in
 the SQL Server Configuration Manager. For example, to set the memory
 limit for the CLR code to 512Mb, you need to add the ``-g512`` switch to
-the Startup Parameters in the properties for your SQL Server instance in
+the Start-up Parameters in the properties for your SQL Server instance in
 the SQL Server Configuration Manager.
 
 **Note:** In the 32-bit architecture, the total allocatable memory is
@@ -110,7 +110,7 @@ And the following message will be logged to the system log:
     AppDomain <name> is marked for unload due to memory pressure.
 
 To restrict the amount of memory that MS SQL Server can take (thus
-leaving more memory for Bingo), we recommend setting the “Maximium
+leaving more memory for Bingo), we recommend setting the “Maximum
 server memory” in the “Server Properties>Memory” tab in the SQL Server
 Management Studio to some value less that than the actual size of your
 memory minus 1 GB.
@@ -161,7 +161,7 @@ For the simplest installation, the defaults are taken, including
 
     bingo-sqlserver-install.bat -database mydb
 
-If you use an SQL Server user account for thed DBA user (normally 'sa'),
+If you use an SQL Server user account for the DBA user (normally 'sa'),
 you have to specify it with the ``-dbaname`` option:
 
 ::
