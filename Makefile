@@ -21,6 +21,33 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
 
+SOURCEDIR     = rst
+#IMAGEDIRS can be a list of directories that contain SVG files and are relative to the SOURCEDIR
+IMAGEDIRS      = assets
+
+# SVG to PDF conversion
+SVG2PDF       = inkscape
+SVG2PDF_FLAGS = -C
+
+# SVG to PNG conversion
+#SVG2PNG       = inkscape
+#SVG2PNG_FLAGS = -C -d=90 --export-background-opacity=\#00
+
+# Pattern rule for converting SVG to PDF
+%.pdf : %.svg
+	$(SVG2PDF) $(SVG2PDF_FLAGS) -f $< -A $@
+
+# Pattern rule for converting SVG to PNG
+#%.png : %.svg
+#	$(SVG2PNG) $(SVG2PNG_FLAGS) -f $< -e $@
+
+# Build a list of SVG files to convert to PDFs
+PDFs := $(foreach dir, $(IMAGEDIRS), $(patsubst %.svg,%.pdf,$(wildcard $(SOURCEDIR)/$(dir)/*/*.svg)))
+
+# Build a list of SVG files to convert to PNGs
+#PNGs := $(foreach dir, $(IMAGEDIRS), $(patsubst %.svg,%.png,$(wildcard $(SOURCEDIR)/$(dir)/*/*.svg)))
+
+
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
@@ -45,6 +72,9 @@ help:
 	@echo "  pseudoxml  to make pseudoxml-XML files for display purposes"
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
+	@echo "  images-pdf to run building images for PDF documents"
+	@echo "  clean-pdf to run cleaning images for PDF documents"
+
 
 clean:
 	rm -rf $(BUILDDIR)/*
@@ -174,3 +204,24 @@ pseudoxml:
 	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+
+# Make a rule to build the PDFs
+images-pdf: $(PDFs) 
+
+# Make a rule to build the PNGs
+#images-png: $(PNGs) 
+
+# Make a rule to build the images
+images: 
+	images-pdf #images-png
+
+clean-pdf:
+	-rm $(PDFs)
+
+#clean-png:
+#	-rm $(PNGs)
+
+clean-images: 
+	clean-pdf #clean-png
+
+

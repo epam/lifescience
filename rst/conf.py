@@ -210,14 +210,21 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
+'preamble': '\setcounter{tocdepth}{3}'
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'EPAMLifeScience.tex', u'EPAM Life Science Documentation',
+  ('bingo/bingo-postgres', 'BingoPostgreSQL.tex', u'EPAM Life Sciences Bingo PostgreSQL Documentation',
    u'EPAM Systems', 'manual'),
+  ('bingo/bingo-oracle', 'BingoOracle.tex', u'EPAM Life Sciences Bingo Oracle Documentation',
+   u'EPAM Systems', 'manual'),
+  ('bingo/bingo-sqlserver', 'BingoMSSQLServer.tex', u'EPAM Life Sciences Bingo MS SQL Server Documentation',
+   u'EPAM Systems', 'manual'),
+  ('bingo/bingo-nosql', 'BingoNoSQL.tex', u'EPAM Life Sciences Bingo NoSQL Documentation',
+   u'EPAM Systems', 'manual')
 ]
 
 # The name of an image file (relative to this directory) to place at the top fo
