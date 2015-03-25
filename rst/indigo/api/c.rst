@@ -762,7 +762,7 @@ Core Indigo API
 
     /* Reaction products enumeration */
 
-    // Accepts a query reaction with markd R-sites, and array of arrays
+    // Accepts a query reaction with marked R-sites, and array of arrays
     // of substituents corresponding to the R-Sites. Returns an array of
     // reactions with R-Sites replaced by the actual substituents.
     CEXPORT int indigoReactionProductEnumerate (int reaction, int monomers);

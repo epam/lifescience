@@ -205,8 +205,8 @@ Instrumenting Query Atoms
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each atom and bond in the query molecule represents as a logic
-expression of various properties. Inidgo support almost all constraints
-from the SMARTS specification. To alter existing contrains you can use
+expression of various properties. Indigo support almost all constraints
+from the SMARTS specification. To alter existing constraints you can use
 the following methods:
 
 -  ``addConstraint(type, value)`` — adds a specified constraint using
@@ -289,7 +289,7 @@ Similarly, the ``IndigoObject.createEdgeSubmolecule`` method accepts two
 arrays — atom indices and bond indices — and returns a new molecule
 containing the given atoms and bonds copied from the molecule.
 
-Indigo allowes to create a reference on a submolecule of a molecule with
+Indigo allows to create a reference on a submolecule of a molecule with
 method ``IndigoObject.getSubmolecule``. Such molecule can be later used
 for finding layout of a molecule part.
 
@@ -319,7 +319,7 @@ information:
 -  ``isotope`` — returns the isotope value or zero if the atomic number
    is undefined or ambiguous.
 -  ``degree`` — returns explicit atom degree.
--  ``charge`` — returns the chagre value or ``null`` if the charge is
+-  ``charge`` — returns the charge value or ``null`` if the charge is
    undefined (can happens only on queries).
 -  ``explicitValence`` — returns the explicit valence or ``null`` if
    there is no explicit valence.
@@ -339,7 +339,7 @@ information:
 -  ``symbol`` — returns a string containing the atom symbol. It is
    either a symbol the periodic table ("C", "Na"), or a pseudoatom label
    ("Res"), or an R-site mark ("R1").
--  ``xyz`` —returns an aray of three ``float`` numbers, which define the
+-  ``xyz`` —returns an array of three ``float`` numbers, which define the
    position of the atom.
 -  ``singleAllowedRGroup`` — R-Group index allowed on R-Site (usually
    there is a single allowed index). This method can be applied
@@ -620,7 +620,7 @@ Python:
 Reacting Centers
 ~~~~~~~~~~~~~~~~
 
-Reacting centers include bonds that are involded in the reaction. Indigo
+Reacting centers include bonds that are involved in the reaction. Indigo
 supports the following types of reacting centers:
 
 -  ``Indigo.RC_NOT_CENTER``
@@ -630,7 +630,7 @@ supports the following types of reacting centers:
 -  ``Indigo.RC_MADE_OR_BROKEN``
 -  ``Indigo.RC_ORDER_CHANGED``
 
-These values are bit flags, and can be combinded.
+These values are bit flags, and can be combined.
 ``IndigoObject.reactingCenter`` and ``IndigoObject.setReactingCenter``
 are the getter and setter of the bond reacting center property.
 
@@ -881,7 +881,7 @@ for working with attachment points:
 
 -  ``clearAttachmentPoints`` resets all the attachment points.
 -  ``countAttachmentPoints`` returns maximal order of attachment points.
--  ``iterateAttachmentPoints(order)`` iterates atoms corresposing to the
+-  ``iterateAttachmentPoints(order)`` iterates atoms corresponding to the
    attachment points with the same specified order.
 
 Python:
@@ -1211,7 +1211,7 @@ Alignment of Atoms
 ~~~~~~~~~~~~~~~~~~
 
 The ``IndigoObject.alignAtoms`` method can be used to calculate and
-apply the transformation (scale + rotatation + translation) of a
+apply the transformation (scale + rotation + translation) of a
 molecule so that some subset of its atoms will become as close as
 possible to the desired positions. The method accepts an integer array
 of atom indices and a float array of desired coordinates (three times
@@ -1332,7 +1332,7 @@ Standardize of Molecule
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``IndigoObject.standardize`` method can be used to the "standardizing"
-of the molecule or query (stereo, charges, geometry, valences, atoms and bonds porperties)
+of the molecule or query (stereo, charges, geometry, valences, atoms and bonds properties)
 in accordance with requirements. The list of applied modifications is defined by
 options activated in Indigo (full list of available standardize options is described
 in the corresponding `Options <options.html#standardize>`__ section).
@@ -1696,7 +1696,7 @@ You can use the ``IndigoObject.serialize`` method to serialize a
 molecule or a reaction into a binary byte array. All molecule and
 reaction features are serialized, including atom coordinates,
 stereochemistry, bond orientations, highlighting, AAM numbers, etc. To
-restore the molecule/reaction back, use the ``Indigo.unzerialize``
+restore the molecule/reaction back, use the ``Indigo.unserialize``
 method.
 
 -  **Note:** groups are not serialized (i.e. polymer brackets and data
@@ -1842,7 +1842,7 @@ string, you can pass the following flags to the matching procedure:
 +---------------+---------------------------------------------------------------------------+
 
 The flags should go in the parameters string separated by space. Each
-flag specifies a constraint for the matching procefure. The more flags
+flag specifies a constraint for the matching procedure. The more flags
 you set, the more restrictive the matching is. You can write the minus
 sign before the flag to exclude it from the 'ALL' flag. For example,
 'ALL -MAS' means that all the described features except the isotopes
@@ -1892,7 +1892,7 @@ Python:
 
     match = indigo.exactMatch(mol1, mol2, "ALL 0.1")
     if not match:
-       match = indigo.exactMatch(mol1, mol2) # eqiuvalent to ALL
+       match = indigo.exactMatch(mol1, mol2) # equivalent to ALL
     if not match:
        match = indigo.exactMatch(mol1, mol2, "ALL -STE") # equivalent to "ELE MAS FRA"
     if not match:
@@ -2045,7 +2045,7 @@ method calls:
    molecule/reaction and returns the corresponding atom from the target
    molecule/reaction. In case the query atom is unmapped (this can
    happen only with explicit hydrogens), it returns ``null``. You can
-   use ``IndigoObject.index`` method to get mapped atom intex.
+   use ``IndigoObject.index`` method to get mapped atom index.
 -  ``IndigoObject.mapBond`` method is similar to ``mapAtom``, but
    accepts a bond of the query and returns a bond of the target. It can
    also return ``null`` if the bond is unmapped (this can happen only
