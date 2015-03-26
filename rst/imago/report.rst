@@ -20,7 +20,7 @@ following rules to standardize molecules:
 Diverse Dataset Report
 ----------------------
 
-Report file is avialable at `the separate page <TODO:imago-report>`__.
+Report file is available at `the separate page <TODO:imago-report>`__.
 You can also download all the report files (with script files) from the
 `Downloads page <../download/imago.html>`__.
 
@@ -46,7 +46,7 @@ different sources:
 
 -  `USPTO <TODO:imago-report#g4>`__
    (`description <TODO:imago-report>`__)
-   A random subset of 500 structures from a validation set avialable
+   A random subset of 500 structures from a validation set available
    at `OSRA website <http://cactus.nci.nih.gov/osra/>`__.
 
 -  `chem-infty <TODO:imago-report#g5>`__

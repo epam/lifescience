@@ -8,7 +8,7 @@ available at `KNIME Tech <http://tech.knime.org/community/indigo>`__.
 Installation
 ------------
 
-Prerequisities
+Prerequisites
 ~~~~~~~~~~~~~~
 
 First, you need to add the `KNIME update

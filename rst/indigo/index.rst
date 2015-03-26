@@ -67,7 +67,7 @@ Features
 -  Exact matching, substructure matching, SMARTS matching.
 -  Matching of tautomers and resonance structures.
 -  Molecule fingerprinting, molecule similarity computation.
--  Fast enumeration of SSSR rings, subtrees, and edge sugraphs.
+-  Fast enumeration of SSSR rings, subtrees, and edge subgraphs.
 -  Molecular weight, molecular formula computation.
 -  R-Group deconvolution and scaffold detection. Pioneer work in
    computing the *exact* maximum common substructure for an arbitrary
@@ -109,7 +109,7 @@ GCC 2010 Presentation
 ---------------------
 
 Here is the presentation for the talk that was given in November 2010 in
-Goslar at the German Conference on Chemoinformatics:
+Goslar at the German Conference on Cheminformatics:
 `PDF <../assets/indigo/indigo_cic2010.pdf>`__ (396K).
 
 And here is the poster presented at the same conference:

@@ -34,7 +34,7 @@ The help message from the program is the following:
       -log: enables debug log output to ./log.html
       -logvfs: stores log in single encoded file ./log_vfs.txt
       -noexp: do not expand chemical abbreviations
-      -pr: use probablistic separator (experimental)
+      -pr: use probabilistic separator (experimental)
       -tl time_in_ms: timelimit per single image process (default is 10000)
       -similarity tool [-sparam additional_parameters]: override the default comparison method
       -pass: don't process images, only print their filenames

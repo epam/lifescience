@@ -8,7 +8,7 @@ Indigo 1.2.0
 
 This release has several major changes:
 
-#. New layout algorithm for large macrocycles
+#. New layout algorithm for large macro-cycles
 #. Reaction canonical smiles
 #. Better stereochemistry support 
 
@@ -81,7 +81,7 @@ All changes:
    is ambiguous (that means that canonical SMILES cannot be generated):
    https://groups.google.com/d/msg/indigo-bugs/WIH8bWQpVHs/Z8VLlXR2U28J
 -  IndigoInchi.loadMolecule can now load molecules from InChI Aux
-   infromation. Thanks to Nico:
+   information. Thanks to Nico:
    http://tech.knime.org/forum/indigo/inchi-conversion-into-2d-structure#comment-28514
 -  Indigo Renderer doesn't have a dependency on the new GLIBC any more.
    This dependency prevented loading of Indigo Renderer on CentOS 5.9
@@ -321,7 +321,7 @@ Indigo 1.1.1
    https://groups.google.com/d/msg/indigo-general/vR9BSWR87e8/PqpiQaE4SfgJ
 -  Query molecules can now have a highlighting constraint on atoms and
    bonds to match only (un)highlighted target atoms or bonds. Here is an
-   exmaple: query.getAtom(0).addConstraint("highlighting", "true").
+   example: query.getAtom(0).addConstraint("highlighting", "true").
    Again thanks to Karen:
    https://groups.google.com/d/msg/indigo-general/J1RR9b0x2NM/Z_XOB9jQNw8J
 
@@ -414,7 +414,7 @@ Changes:
 -  Molfile atom lists now support pseudoatoms
 -  Global timeout for all the most time consuming operations:
    substructure search, canonical smiles generation and etc. Option is
-   called "timeout" and corresponts to milliseconds.
+   called "timeout" and corresponds to milliseconds.
 -  explicit hydrogen near Nitrogen is handled correctly to calculate
    cis-trans and tetrahedral stereo configuration.
 -  InChI plugin now have "version" methods to return an actual InChI
@@ -467,7 +467,7 @@ Changes:
    returns a current state solution for a reaction when time is over.
    Thanks to Daniel:
    http://groups.google.com/group/indigo-dev/browse_thread/thread/4430412b9864f3fd
--  default layout call was added for the deconvolultion scaffold getter
+-  default layout call was added for the deconvolution scaffold getter
    (decomposedMoleculeScaffold())
 -  empty RGroup handling (one single bond) was implemented for deco.
 -  minor bug fixes in AAM
@@ -476,7 +476,7 @@ Changes:
 Fixed:
 
 -  incorrect empty R-Group logic loading from molfile
--  incorrect attachmement points loading from molfile if the number of
+-  incorrect attachment points loading from molfile if the number of
    attachments points is greater then 2
 -  memory leak in reaction substructure matcher.
 -  infinite loop in reaction substructure matcher.
@@ -508,11 +508,11 @@ Usage example :
     IndigoObject molecule = indigo.loadMolecule("InChI=1S/C3H9NO/c1-3(5)2-4/h3,5H,2,4H2,1H3");
     String inchi_string = indigo.getInchi(molecule);
 
-New methods and functionallity:
+New methods and functionality:
 
 -  InChI support! (without stereochemistry yet)
 -  mapMolecule(queryReactoinMolecule) to retrieve mapped molecule for
-   the query reaction for the reaction substrcuture match object
+   the query reaction for the reaction substructure match object
 -  getMolecule(index) to get the reaction molecule
 -  QueryMolecules can now be constructed with the following methods:
 
@@ -620,7 +620,7 @@ Changelog:
 
 -  unfoldHydrogens how works with reaction properly.
 
--  Some fixes of the dearomation algorithm bug arisen during tautomer
+-  Some fixes of the dearomatization algorithm bug arisen during tautomer
    substructure matching.
 
 -  Better support of sgroups in Molfile
@@ -668,7 +668,7 @@ Indigo 1.1-beta5
 
 New functionality:
 
--  Methods for specifing reacting centers on bonds:
+-  Methods for specifying reacting centers on bonds:
    reaction.reactingCenter(bond), reaction.setReactingCenter(bond, mask)
    All reacting centers types are describes in Indigo namespace for
    Java and Python, and in ReactingCenter enum for C#.

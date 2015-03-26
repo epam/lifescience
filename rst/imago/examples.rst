@@ -22,7 +22,7 @@ Superatoms and abbreviations expansion
 | |image2|       | |image3|               |
 +----------------+------------------------+
 
-Aromartic rings and 2-connected superatom
+Aromatic rings and 2-connected superatom
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------+------------------------+
