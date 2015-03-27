@@ -71,6 +71,11 @@
       {%- endif %}
 {%- endmacro %}
 
+{%- macro b_newsfeed() %}
+   <div class="span6">
+      {%- include 'newsfeed.html' %}
+   </div>
+{%- endmacro %}
 
 {%- block extrahead %}
 <meta charset='utf-8'>
@@ -86,19 +91,30 @@
 {% block sidebarsourcelink %}{% endblock %}
 
 {%- block content %}
-{{ navBar() }}
-<div class="container">
-  <div class="row">
-    {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
-    <div class="{{ bs_content_span }}">
-      {% block body %}{% endblock %}
-    </div>
-    {% block sidebar2 %} {# possible location for sidebar #} {% endblock %}
-  </div>
-</div>
+   {%- if pagename != "newsfeed" %}
+      {{ navBar() }}
+      <div class="container">
+        <div class="row">
+          {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
+   {%- endif %}
+   {%- if pagename == "index" %}
+          <div class="span6">
+   {%- else %}
+          <div class="{{ bs_content_span }}">
+   {%- endif %}
+            {% block body %}{% endblock %}
+          </div>
+   {%- if pagename == "index" %}
+          {{ b_newsfeed() }}
+   {%- endif %}
+   {%- if pagename != "newsfeed" %}
+        </div>
+      </div>
+   {%- endif %}
 {%- endblock %}
 
 {%- block footer %}
+{%- if pagename != "newsfeed" %}
 <footer class="footer">
   <div class="container">
     <p class="pull-right">
@@ -126,4 +142,5 @@
     </p>
   </div>
 </footer>
+{%- endif %}
 {%- endblock %}

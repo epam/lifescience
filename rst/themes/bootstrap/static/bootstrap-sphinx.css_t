@@ -460,3 +460,8 @@ a.brand p {
 div#changelog > div.section > ul > li > p:only-child {
   margin-bottom: 0;
 }
+
+div#newsfeed.well iframe {
+  width:100%;
+  height: 80vh;
+}

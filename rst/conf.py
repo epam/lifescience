@@ -30,7 +30,7 @@ import os
 # ones.
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.mathjax',
+#    'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
 ]
 
@@ -168,6 +168,8 @@ html_favicon = 'assets/favicon.ico'
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
 #html_additional_pages = {}
+
+
 
 # If false, no module index is generated.
 #html_domain_indices = True
