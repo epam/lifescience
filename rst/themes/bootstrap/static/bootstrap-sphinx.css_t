@@ -405,7 +405,7 @@ table.footnote td.label {
   padding: 0.3em 0 0.3em 0.5em;
 }
 table.footnote td {
-  padding: 0.3em 0.5em;
+  padding: 0.3em 1.5em;
 }
 
 a tt {
@@ -464,4 +464,9 @@ div#changelog > div.section > ul > li > p:only-child {
 div#newsfeed.well iframe {
   width:100%;
   height: 80vh;
+}
+
+
+a.reference.internal.image-reference {
+  border-bottom: initial;
 }
