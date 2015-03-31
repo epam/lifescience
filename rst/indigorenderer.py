@@ -7,12 +7,22 @@ import re
 import sys
 from docutils import nodes
 from docutils.parsers.rst.directives import images,flag
-from indigo import Indigo, IndigoException
-from indigo_renderer import IndigoRenderer
-from indigo_inchi import IndigoInchi
 from sphinx.errors import SphinxError
 from sphinx.util import relative_uri
 from sphinx import addnodes
+
+global _no_indigo
+_no_indigo = False
+
+try:
+    from indigo import Indigo, IndigoException
+    from indigo_renderer import IndigoRenderer
+    from indigo_inchi import IndigoInchi
+except Exception as e:
+    _no_indigo = True
+    print("WARNING: could not load indigo: some images will not be renderred")
+
+
 
 from codeblockimport import registerCodeDict
 
@@ -158,9 +168,9 @@ def render_indigorenderer_images(app, doctree):
                     newimg['uri'] = relative_path.replace('\\', '/')
                     newimg['scale'] = 1.0 / float(len(relative_paths))
                     imgnodes.append(newimg)
-                    span = img.copy()
-                    span['uri'] = relative_uri(app.builder.env.docname, '_static') + '/span.png'
-                    imgnodes.append(span)
+                    #span = img.copy()
+                    #span['uri'] = relative_uri(app.builder.env.docname, '_static') + '/span.png'
+                    #imgnodes.append(span)
             if output:
                 if 'noimage' not in options:
                     newline = nodes.line()
@@ -305,9 +315,6 @@ def render(indigo, options, text, absolute_path, relativePath, rstdir, curdir):
         return executeIndigoCode(text, absolute_path, relativePath, rstdir, curdir, options)
 
 def render_indigorenderer(app, text, options, rstdir, curdir):
-    # Reset Indigo to use new fresh options
-    resetIndigo()
-
     format_map = DEFAULT_FORMATS.copy()
     format_map.update(app.builder.config.indigorenderer_format)
     output_format = format_map[app.builder.format]
@@ -321,6 +328,8 @@ def render_indigorenderer(app, text, options, rstdir, curdir):
     output_filename = 'indigorenderer_%s.%s' % (hashid, output_format) if not 'imagename' in options else options['imagename'] + '.' + output_format
     relative_path = ''
 
+
+
     if app.builder.format == 'html':
         output_folder = relative_uri(app.builder.env.docname,'_images')
         relative_path = os.path.join(output_folder, output_filename)
@@ -331,6 +340,13 @@ def render_indigorenderer(app, text, options, rstdir, curdir):
     absolute_path = absolute_path.replace('\\', '\\\\')
     relative_paths = [relative_path, ]
     output = None
+
+    if _no_indigo:
+        return relative_paths, output
+
+    # Reset Indigo to use new fresh options
+    resetIndigo()
+
     try:
         if 'indigooptions' in options:
             strings = options['indigooptions'][1:-1].split(';')
@@ -343,6 +359,8 @@ def render_indigorenderer(app, text, options, rstdir, curdir):
             output, relative_paths = result
     except IndigoException, exc:
         raise IndigoRendererError(exc)
+
+
     return relative_paths, output
 
 def setup(app):

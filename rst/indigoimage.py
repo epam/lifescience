@@ -1,11 +1,15 @@
 import os
 from docutils import nodes
 from docutils.parsers.rst import directives
-from indigo import Indigo, IndigoException
-from indigo_renderer import IndigoRenderer
-from indigo_inchi import IndigoInchi
 from sphinx.errors import SphinxError
 from sphinx.util import relative_uri
+try:
+    from indigo import Indigo, IndigoException
+    from indigo_renderer import IndigoRenderer
+    from indigo_inchi import IndigoInchi
+except Exception as e:
+    print("WARNING: could not load indigo")
+
 
 DEFAULT_FORMATS = dict(html='svg', latex='pdf', text=None, xml=None)
 

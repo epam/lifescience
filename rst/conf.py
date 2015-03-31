@@ -20,10 +20,10 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 sys.path.append(os.path.abspath(os.curdir))
-sys.path.append('api/python')
-sys.path.append('api/plugins/renderer/python')
-sys.path.append('api/plugins/inchi/python')
-sys.path.append('api/plugins/bingo/python')
+sys.path.append('indigo/python')
+sys.path.append('indigo/plugins/renderer/python')
+sys.path.append('indigo/plugins/inchi/python')
+sys.path.append('indigo/plugins/bingo/python')
 
 
 # -- General configuration ------------------------------------------------
@@ -38,8 +38,10 @@ extensions = [
     'sphinx.ext.todo',
 #    'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
-    'indigorenderer'
-    , 'codeexample', 'codeblockimport', 'indigoimage'
+    'indigorenderer',
+    'codeblockimport', 
+    'indigoimage',
+    'options_node'
 ]
 
 # The suffix of source filenames.
