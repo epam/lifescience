@@ -122,47 +122,58 @@ def createOptionsTable(content):
     return tbody
 
 
-from itertools import groupby
+def get_title(title_str):
+    t = title_str.strip()
+    if t.startswith('<title>'):
+        end_s = t.find('</title>')
+        t=t[len('<title>'):end_s]
+    return t
 
+
+
+from itertools import groupby
+    
 
 def process_indigo_option_nodes(app, doctree, fromdocname):
     env = app.builder.env
 
     for node in doctree.traverse(optionslist):
         content = []
-
-        group = nodes.subtitle()
-        group.append(nodes.Text('Test'))
-
-
-        content.append(group)
-        tbody = createOptionsTable(content)
-        
         sorted_options = sorted(env.indigo_options, key=lambda o:o['name'])
-        
-        #for op_group,s_options in groupby(env.indigo_options, key=lambda o:env.titles[o['docname']]):
+
+        for op_group,s_options in groupby(sorted_options, key=lambda o:get_title(str(env.titles[o['docname']]))):
             #print(op_group)
-            #print(str(s_options))
+            #for opt_info in s_options:
+            #    print(opt_info)
             #sorted_options = list(s_options)
             #print(str(sorted_options))
-        for opt_info in sorted_options:
-            #print(str(env.titles[opt_info['docname']]))
-            row = nodes.row()
-            tbody += row
+            group = nodes.subtitle(op_group, op_group)
+            #group.source = op_group
+            #group.setText(op_group)
+            #group=nodes.rubric('', op_group)
+            #group.append(nodes.Text(op_group))
+            content.append(group)
+            tbody = createOptionsTable(content)
 
-            # Create a reference
-            newnode = nodes.reference('', '')
-            innernode = nodes.Text(opt_info['name'], opt_info['name'])
-            newnode['refdocname'] = opt_info['docname']
-            newnode['refuri'] = app.builder.get_relative_uri(
-                fromdocname, opt_info['docname'])
-            newnode['refuri'] += '#' + normalize_name(opt_info['name'])
-            newnode.append(innernode)
+            for opt_info in s_options:
+                #print(str(env.titles[opt_info['docname']]))
+                #get_title(str(env.titles[opt_info['docname']]))
+                row = nodes.row()
+                tbody += row
 
-            row += createRowEntry(newnode)
-            row += createRowEntryText(opt_info['type'])
-            row += createRowEntryText(opt_info['default'])
-            row += createRowEntryText(opt_info['short'])
+                # Create a reference
+                newnode = nodes.reference('', '')
+                innernode = nodes.Text(opt_info['name'], opt_info['name'])
+                newnode['refdocname'] = opt_info['docname']
+                newnode['refuri'] = app.builder.get_relative_uri(
+                    fromdocname, opt_info['docname'])
+                newnode['refuri'] += '#' + normalize_name(opt_info['name'])
+                newnode.append(innernode)
+
+                row += createRowEntry(newnode)
+                row += createRowEntryText(opt_info['type'])
+                row += createRowEntryText(opt_info['default'])
+                row += createRowEntryText(opt_info['short'])
 
         node.replace_self(content)
 
