@@ -97,38 +97,56 @@ def createRowEntry (node):
 def createRowEntryText (text):
     return createRowEntry(nodes.Text(text))
 
+def createOptionsTable(content):
+    tbl = nodes.table()
+    tgroup = nodes.tgroup(cols=4)
+    tbl += tgroup
+
+    tgroup += nodes.colspec(colwidth=35)
+    tgroup += nodes.colspec(colwidth=9)
+    tgroup += nodes.colspec(colwidth=9)
+    tgroup += nodes.colspec(colwidth=73)
+
+    thead = nodes.thead()
+    tgroup += thead
+    row = nodes.row()
+    thead += row
+    row += createRowEntryText('Name')
+    row += createRowEntryText('Type')
+    row += createRowEntryText('Default')
+    row += createRowEntryText('Short description')
+
+    tbody = nodes.tbody()
+    tgroup += tbody
+    content.append(tbl)
+    return tbody
+
+
+from itertools import groupby
+
+
 def process_indigo_option_nodes(app, doctree, fromdocname):
     env = app.builder.env
 
     for node in doctree.traverse(optionslist):
         content = []
 
-        tbl = nodes.table()
-        tgroup = nodes.tgroup(cols=4)
-        tbl += tgroup
+        group = nodes.subtitle()
+        group.append(nodes.Text('Test'))
 
-        tgroup += nodes.colspec(colwidth=35)
-        tgroup += nodes.colspec(colwidth=9)
-        tgroup += nodes.colspec(colwidth=9)
-        tgroup += nodes.colspec(colwidth=73)
 
-        thead = nodes.thead()
-        tgroup += thead
-        row = nodes.row()
-        thead += row
-        row += createRowEntryText('Name')
-        row += createRowEntryText('Type')
-        row += createRowEntryText('Default')
-        row += createRowEntryText('Short description')
-
-        tbody = nodes.tbody()
-        tgroup += tbody
-
-        content.append(tbl)
-
+        content.append(group)
+        tbody = createOptionsTable(content)
+        
         sorted_options = sorted(env.indigo_options, key=lambda o:o['name'])
-
+        
+        #for op_group,s_options in groupby(env.indigo_options, key=lambda o:env.titles[o['docname']]):
+            #print(op_group)
+            #print(str(s_options))
+            #sorted_options = list(s_options)
+            #print(str(sorted_options))
         for opt_info in sorted_options:
+            #print(str(env.titles[opt_info['docname']]))
             row = nodes.row()
             tbody += row
 
