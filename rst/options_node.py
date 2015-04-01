@@ -2,6 +2,7 @@ from docutils import nodes
 from sphinx.errors import SphinxError
 from docutils.nodes import fully_normalize_name as normalize_name
 from docutils.parsers.rst import Directive
+from itertools import groupby
 #import sphinx.ext.doctest
 #from sphinx.directives import CodeBlock
 #from sphinx.util import parselinenos
@@ -104,8 +105,8 @@ def create_options_table(content):
 
     tgroup += nodes.colspec(colwidth=35)
     tgroup += nodes.colspec(colwidth=9)
-    tgroup += nodes.colspec(colwidth=9)
     tgroup += nodes.colspec(colwidth=73)
+    tgroup += nodes.colspec(colwidth=9)
 
     thead = nodes.thead()
     tgroup += thead
@@ -113,8 +114,8 @@ def create_options_table(content):
     thead += row
     row += create_row_entry_text('Name')
     row += create_row_entry_text('Type')
-    row += create_row_entry_text('Default')
     row += create_row_entry_text('Short description')
+    row += create_row_entry_text('Default')
 
     tbody = nodes.tbody()
     tgroup += tbody
@@ -123,7 +124,7 @@ def create_options_table(content):
 
 
 def get_title(title_str):
-    t = title_str.strip()
+    t = str(title_str).strip()
     if t.startswith('<title>'):
         end_s = t.find('</title>')
         t=t[len('<title>'):end_s]
@@ -131,7 +132,7 @@ def get_title(title_str):
 
 
 
-from itertools import groupby
+
     
 
 def process_indigo_option_nodes(app, doctree, fromdocname):
@@ -141,8 +142,8 @@ def process_indigo_option_nodes(app, doctree, fromdocname):
         content = []
         #sorted_options = sorted(env.indigo_options, key=lambda o:o['name'])
 
-        for op_group,s_options in groupby(env.indigo_options, key=lambda o:get_title(str(env.titles[o['docname']]))):
-            group = nodes.subtitle(op_group, op_group)
+        for op_group,s_options in groupby(env.indigo_options, key=lambda o:get_title(env.titles[o['docname']])):
+            #group = nodes.title('', op_group)
 
             #print(op_group)
             #for opt_info in s_options:
@@ -155,14 +156,23 @@ def process_indigo_option_nodes(app, doctree, fromdocname):
             #group.setText(op_group)
             #group=nodes.rubric('', op_group)
             #group.append(nodes.Text(op_group))
-            content.append(group)
-            tbody = create_options_table(content)
+            #content.append(group)
+            
+            section_node = OptionInfo()
+            options_name = op_group
+            section_node['names'].append(options_name)
+            section_node['ids'].append(options_name)
+            
+            titlenode = nodes.title('', options_name)
+            section_node += titlenode
+            
+            tbody = create_options_table(section_node)
+            
+            content.append(section_node)
 
             for opt_info in s_options:
-                #print(str(env.titles[opt_info['docname']]))
-                #get_title(str(env.titles[opt_info['docname']]))
                 row = nodes.row()
-                tbody += row
+                tbody.append(row)
 
                 # Create a reference
                 newnode = nodes.reference('', '')
@@ -175,10 +185,11 @@ def process_indigo_option_nodes(app, doctree, fromdocname):
 
                 row += create_row_entry(newnode)
                 row += create_row_entry_text(opt_info['type'])
-                row += create_row_entry_text(opt_info['default'])
                 row += create_row_entry_text(opt_info['short'])
+                row += create_row_entry_text(opt_info['default'])
 
         node.replace_self(content)
+        
 
 class OptionsTableDirective(Directive):
     has_content = False
