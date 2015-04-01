@@ -1,21 +1,21 @@
 from docutils import nodes
 from sphinx.errors import SphinxError
-import sphinx.ext.doctest
-from sphinx.directives import CodeBlock
-from sphinx.util import parselinenos
-from sphinx.util.nodes import set_source_info
 from docutils.nodes import fully_normalize_name as normalize_name
-from docutils.transforms import Transform
-from docutils.transforms.parts import ContentsFilter
-from docutils.parsers.rst import Directive, directives
+from docutils.parsers.rst import Directive
+#import sphinx.ext.doctest
+#from sphinx.directives import CodeBlock
+#from sphinx.util import parselinenos
+#from sphinx.util.nodes import set_source_info
+#from docutils.transforms import Transform
+#from docutils.transforms.parts import ContentsFilter
 
 class OptionsNodesError(SphinxError):
     category = "OptionsNode error"
 
-class optioninfo(nodes.section, nodes.Element):
+class OptionInfo(nodes.section, nodes.Element):
     pass
 
-class optionslist(nodes.General, nodes.Element):
+class OptionsList(nodes.General, nodes.Element):
     pass
 
 def visit_optioninfo_node(self, node):
@@ -49,7 +49,7 @@ class OptionsDirective(Directive):
         targetid = "indigo-option-%d" % env.new_serialno('indigo-option')
         targetnode = nodes.target('', '', ids=[targetid])
 
-        section_node = optioninfo()
+        section_node = OptionInfo()
         section_node['names'].append(normalize_name(name))
         section_node['ids'].append(normalize_name(name))
         titlenode = nodes.title('', name + ' = ' + self.options.get('default'))
@@ -87,17 +87,17 @@ def purge_indigo_options(app, env, docname):
     env.indigo_options = [opt for opt in env.indigo_options
                           if opt['docname'] != docname]
 
-def createRowEntry (node):
+def create_row_entry (node):
     entry = nodes.entry()
     paragraph = nodes.paragraph()
     paragraph += node
     entry += paragraph
     return entry
 
-def createRowEntryText (text):
-    return createRowEntry(nodes.Text(text))
+def create_row_entry_text (text):
+    return create_row_entry(nodes.Text(text))
 
-def createOptionsTable(content):
+def create_options_table(content):
     tbl = nodes.table()
     tgroup = nodes.tgroup(cols=4)
     tbl += tgroup
@@ -111,10 +111,10 @@ def createOptionsTable(content):
     tgroup += thead
     row = nodes.row()
     thead += row
-    row += createRowEntryText('Name')
-    row += createRowEntryText('Type')
-    row += createRowEntryText('Default')
-    row += createRowEntryText('Short description')
+    row += create_row_entry_text('Name')
+    row += create_row_entry_text('Type')
+    row += create_row_entry_text('Default')
+    row += create_row_entry_text('Short description')
 
     tbody = nodes.tbody()
     tgroup += tbody
@@ -137,23 +137,26 @@ from itertools import groupby
 def process_indigo_option_nodes(app, doctree, fromdocname):
     env = app.builder.env
 
-    for node in doctree.traverse(optionslist):
+    for node in doctree.traverse(OptionsList):
         content = []
-        sorted_options = sorted(env.indigo_options, key=lambda o:o['name'])
+        #sorted_options = sorted(env.indigo_options, key=lambda o:o['name'])
 
-        for op_group,s_options in groupby(sorted_options, key=lambda o:get_title(str(env.titles[o['docname']]))):
+        for op_group,s_options in groupby(env.indigo_options, key=lambda o:get_title(str(env.titles[o['docname']]))):
+            group = nodes.subtitle(op_group, op_group)
+
             #print(op_group)
             #for opt_info in s_options:
             #    print(opt_info)
             #sorted_options = list(s_options)
             #print(str(sorted_options))
-            group = nodes.subtitle(op_group, op_group)
+
+
             #group.source = op_group
             #group.setText(op_group)
             #group=nodes.rubric('', op_group)
             #group.append(nodes.Text(op_group))
             content.append(group)
-            tbody = createOptionsTable(content)
+            tbody = create_options_table(content)
 
             for opt_info in s_options:
                 #print(str(env.titles[opt_info['docname']]))
@@ -170,10 +173,10 @@ def process_indigo_option_nodes(app, doctree, fromdocname):
                 newnode['refuri'] += '#' + normalize_name(opt_info['name'])
                 newnode.append(innernode)
 
-                row += createRowEntry(newnode)
-                row += createRowEntryText(opt_info['type'])
-                row += createRowEntryText(opt_info['default'])
-                row += createRowEntryText(opt_info['short'])
+                row += create_row_entry(newnode)
+                row += create_row_entry_text(opt_info['type'])
+                row += create_row_entry_text(opt_info['default'])
+                row += create_row_entry_text(opt_info['short'])
 
         node.replace_self(content)
 
@@ -185,7 +188,7 @@ class OptionsTableDirective(Directive):
     option_spec = dict()
 
     def run(self):
-        optlist = optionslist('')
+        optlist = OptionsList('')
         env = self.state.document.settings.env
         optlist['docname'] = env.docname
         return [ optlist ]
@@ -228,8 +231,8 @@ def setup(app):
     app.add_directive('indigo_option', OptionsDirective)
     app.add_directive('indigo_options_table', OptionsTableDirective)
 
-    app.add_node(optionslist)
-    app.add_node(optioninfo,
+    app.add_node(OptionsList)
+    app.add_node(OptionInfo,
                  html=(visit_optioninfo_node, depart_optioninfo_node),
                  latex=(visit_optioninfo_node, depart_optioninfo_node),
                  text=(visit_optioninfo_node, depart_optioninfo_node))
