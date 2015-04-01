@@ -12,11 +12,11 @@ Indigo instance represents an environment for IndigoObjects. Many methods in Ind
     indigo.setOption("render-comment-color", "0, 0.4, 0.5")
     indigo.setOption("ignore-stereochemistry-errors", True)
 
-Contents:
+Contents
+--------
 
 .. toctree::
-    :maxdepth: 2
-    :hidden:
+    :maxdepth: 1
 
     input-output-options.rst
     layout-options.rst
@@ -30,5 +30,9 @@ Contents:
     reaction-product-enumeration.rst
     inchi.rst
 
+Options Table
+-------------
+
 .. indigo_options_table::
+
 
