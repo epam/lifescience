@@ -10,6 +10,7 @@
     ﻿Indigo Utilities <utilities>
     Downloads <../download/indigo/index>
     Build <../indigo/build.rst>
+    options/index
     release-notes/index
     examples/index
 

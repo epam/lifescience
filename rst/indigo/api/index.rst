@@ -6,7 +6,6 @@ API
     :includehidden:
 
     c
-    options
 
 Overview
 --------

@@ -29,6 +29,7 @@ Contents
     timeout.rst
     reaction-product-enumeration.rst
     inchi.rst
+    standardize
 
 Options Table
 -------------
