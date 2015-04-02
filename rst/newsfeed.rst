@@ -20,6 +20,14 @@ TODO: description
 
 * |indigo_1_2_1_downloads|
 
+.. |indigo_1_2_1_notes| raw:: html
+
+   <a href="indigo/release-notes/1.2.x/indigo-1.2.1.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_2_1_downloads| raw:: html
+
+   <a href="download/indigo/index.html#indigo-1-1-12" target="_blank">Downloads</a>
+
 
 
 
@@ -36,6 +44,17 @@ We have released the new Bingo with PostgreSQL 9.3 and 9.4 support. It includes 
 * |1-7-10-dev6_downloads|
 
 
+.. |1-7-10-dev6_notes|  raw:: html
+
+   <a href="bingo/changelog.html" target="_blank">Release Notes</a>
+
+.. |1-7-10-dev6_downloads| raw:: html
+
+   <a href="download/bingo.html#bingo-1-7-10-dev6" target="_blank">Downloads</a>
+
+
+
+
 New portal for Life Sciences Open Source products
 -------------------------------------------------
 
@@ -47,6 +66,15 @@ There was a long silence period. EPAM Systems acquired GGA, in order to strength
 We are glad to present the new portal for the Life Sciences Open-Source products.
 
 * |general_notes|
+
+.. |general_notes|  raw:: html
+
+   <a href="release-notes/index.html" target="_blank">Release Notes</a>
+
+.. |epam| raw:: html
+
+   <a href="http://www.epam.com" target="_blank">EPAM</a>
+
 
 
 Indigo 1.1.12 released
@@ -61,11 +89,6 @@ We are releasing Indigo 1.1.12 that is the last version in the 1.1.x series. New
 * |indigo_1_1_12_downloads|
 
 
-
-.. |general_notes|  raw:: html
-
-   <a href="release-notes/index.html" target="_blank">Release Notes</a>
-
 .. |indigo_1_1_12_notes| raw:: html
 
    <a href="indigo/release-notes/1.1.x/indigo-1.1.12.html" target="_blank">Release Notes</a>
@@ -75,32 +98,12 @@ We are releasing Indigo 1.1.12 that is the last version in the 1.1.x series. New
    <a href="download/indigo/index.html#indigo-1-1-12" target="_blank">Downloads</a>
 
 
-.. |epam| raw:: html
-
-   <a href="http://www.epam.com" target="_blank">EPAM</a>
 
 
-* |1-7-10-dev6_notes|
-
-* |1-7-10-dev6_downloads|
 
 
-.. |1-7-10-dev6_notes|  raw:: html
-
-   <a href="bingo/changelog.html" target="_blank">Release Notes</a>
-
-.. |1-7-10-dev6_downloads| raw:: html
-
-   <a href="download/bingo.html#bingo-1-7-10-dev6" target="_blank">Downloads</a>
 
 
-.. |indigo_1_2_1_notes| raw:: html
-
-   <a href="indigo/release-notes/1.2.x/indigo-1.2.1.html" target="_blank">Release Notes</a>
-
-.. |indigo_1_2_1_downloads| raw:: html
-
-   <a href="download/indigo/index.html#indigo-1-1-12" target="_blank">Downloads</a>
 
 
 
