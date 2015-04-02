@@ -9,8 +9,24 @@ News
 
 
 
+Indigo 1.2.1 released
+---------------------
+
+*2 April 2015*
+
+TODO
+
+* |indigo_1_2_1_notes|
+
+* |indigo_1_2_1_downloads|
+
+
+
+
 Bingo 1.7.10-dev6 released
 --------------------------
+
+*31 Dec 2014*
 
 We have released the new Bingo with PostgreSQL 9.3 and 9.4 support. It includes also other fixes and features (e.g. multithreading for index procedure).
 
@@ -76,5 +92,15 @@ We are releasing Indigo 1.1.12 that is the last version in the 1.1.x series. New
 .. |1-7-10-dev6_downloads| raw:: html
 
    <a href="download/bingo.html#bingo-1-7-10-dev6" target="_blank">Downloads</a>
+
+
+.. |indigo_1_2_1_notes| raw:: html
+
+   <a href="indigo/release-notes/1.2.x/indigo-1.2.1.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_2_1_downloads| raw:: html
+
+   <a href="download/indigo/index.html#indigo-1-1-12" target="_blank">Downloads</a>
+
 
 

@@ -14,7 +14,7 @@ Indigo 1.1.12
 *24 Dec 2013*
 
 All the previous changelogs is available `on this
-page <../../indigo/changelog.html>`__
+page <../../indigo/release-notes/1.1.x/indigo-1.1.x.html>`__
 
 Language Bindings
 ~~~~~~~~~~~~~~~~~
