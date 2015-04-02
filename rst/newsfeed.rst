@@ -1,6 +1,25 @@
 News
 ====
 
+.. toctree::
+    :hidden:
+
+    newsfeed
+    release-notes/index
+
+
+
+Bingo 1.7.10-dev6 released
+--------------------------
+
+We have released the new Bingo with PostgreSQL 9.3 and 9.4 support. It includes also other fixes and features (e.g. multithreading for index procedure).
+
+
+* |1-7-10-dev6_notes|
+
+* |1-7-10-dev6_downloads|
+
+
 New portal for Life Sciences Open Source products
 -------------------------------------------------
 
@@ -43,3 +62,19 @@ We are releasing Indigo 1.1.12 that is the last version in the 1.1.x series. New
 .. |epam| raw:: html
 
    <a href="http://www.epam.com" target="_blank">EPAM</a>
+
+
+* |1-7-10-dev6_notes|
+
+* |1-7-10-dev6_downloads|
+
+
+.. |1-7-10-dev6_notes|  raw:: html
+
+   <a href="bingo/changelog.html" target="_blank">Release Notes</a>
+
+.. |1-7-10-dev6_downloads| raw:: html
+
+   <a href="download/bingo.html#bingo-1-7-10-dev6" target="_blank">Downloads</a>
+
+
