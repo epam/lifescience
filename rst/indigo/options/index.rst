@@ -12,11 +12,12 @@ Indigo instance represents an environment for IndigoObjects. Many methods in Ind
     indigo.setOption("render-comment-color", "0, 0.4, 0.5")
     indigo.setOption("ignore-stereochemistry-errors", True)
 
-Contents
---------
+.. rubric::
+    Contents
 
 .. toctree::
     :maxdepth: 1
+
 
     input-output-options.rst
     layout-options.rst
