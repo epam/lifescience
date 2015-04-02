@@ -470,3 +470,16 @@ div#newsfeed.well iframe {
 a.reference.internal.image-reference {
   border-bottom: initial;
 }
+
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section h5,
+.section h6 {
+  font-family: Georgia, Times, Times New Roman, serif;
+  font-weight: normal;
+  margin: 30px 0px 10px 0px;
+  color: #000;
+  padding: 0;
+}
