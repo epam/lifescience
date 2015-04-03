@@ -7,8 +7,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   atom-coloring.rst
-   installation.rst
+   atom-coloring
+   installation
+   calculating-properties
 
 
 .. TODO

@@ -868,6 +868,8 @@ Python:
 
     print mol2.canonicalSmiles()
 
+Please see the :ref:`indigo-example-canonical-smiles` for detailed examples
+
 
 Attachment points
 ~~~~~~~~~~~~~~~~~
