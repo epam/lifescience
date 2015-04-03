@@ -125,11 +125,9 @@ contains some examples of small utilities written using Indigo C++ API.
 Development Tools
 -----------------
 
-We use `NetBeans 6.8 <http://www.netbeans.org/>`__ on Linux
-workstations, `Microsoft Visual Studio
-2008 <http://msdn.microsoft.com/hi-in/vstudio/default.aspx>`__ on
-Windows workstations, and `XCode
-3.2 <http://developer.apple.com/tools/xcode/>`__ on Mac OS X
+For building projects `CMake <http://www.cmake.org/>`__ is used. We use `NetBeans <http://www.netbeans.org/>`__ on Linux
+workstations, `Microsoft Visual Studio <http://msdn.microsoft.com/hi-in/vstudio/default.aspx>`__ on
+Windows workstations, and `XCode <http://developer.apple.com/tools/xcode/>`__ on Mac OS X
 workstations.
 
 Commercial availability
