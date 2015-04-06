@@ -129,24 +129,16 @@ You may need the commercial license if you want to:
 -  Receive ongoing support and maintenance
 -  Include ChemDiff as a component in your proprietary software product
 
-.. |image0| image:: ../assets/indigo/ChemDiff_input_small.png
-   :target: ../assets/indigo/ChemDiff_input.png
-.. |image1| image:: ../assets/indigo/ChemDiff_output_ignore_small.png
-   :target: ../assets/indigo/ChemDiff_output_ignore.png
+.. |image0| image:: ../assets/indigo/ChemDiff_input.png
+.. |image1| image:: ../assets/indigo/ChemDiff_output_ignore.png
 .. |image2| image:: ../assets/indigo/ChemDiff_Select_ID_field.png
-.. |image3| image:: ../assets/indigo/ChemDiff_output_small.png
-   :target: ../assets/indigo/ChemDiff_output.png
+.. |image3| image:: ../assets/indigo/ChemDiff_output.png
 .. |image4| image:: ../assets/indigo/ChemDiff_context_menu.png
 .. |image5| image:: ../assets/indigo/ChemDiff_multiple_molecules.png
-.. |image6| image:: ../assets/indigo/ChemDiff_single_molecule_small.png
-   :target: ../assets/indigo/ChemDiff_single_molecule.png
+.. |image6| image:: ../assets/indigo/ChemDiff_single_molecule.png
 .. |image7| image:: ../assets/indigo/ChemDiff_options.png
 .. |image8| image:: ../assets/indigo/ChemDiff_error.png
-.. |image9| image:: ../assets/indigo/ChemDiff_shot1_small.png
-   :target: ../assets/indigo/ChemDiff_shot1_small-1.png
-.. |image10| image:: ../assets/indigo/ChemDiff_shot2_small.png
-   :target: ../assets/indigo/ChemDiff_shot2_small-1.png
-.. |image11| image:: ../assets/indigo/ChemDiff_large_set_in_small.png
-   :target: ../assets/indigo/ChemDiff_large_set_in.png
-.. |image12| image:: ../assets/indigo/ChemDiff_large_set_out_small.png
-   :target: ../assets/indigo/ChemDiff_large_set_out.png
+.. |image9| image:: ../assets/indigo/ChemDiff_shot1_small-1.png
+.. |image10| image:: ../assets/indigo/ChemDiff_shot2_small-1.png
+.. |image11| image:: ../assets/indigo/ChemDiff_large_set_in.png
+.. |image12| image:: ../assets/indigo/ChemDiff_large_set_out.png
