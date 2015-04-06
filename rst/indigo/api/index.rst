@@ -848,25 +848,28 @@ Canonical SMILES
 ~~~~~~~~~~~~~~~~
 
 ``IndigoObject.canonicalSmiles`` method computes the canonical SMILES
-(also known as absolute SMILES) string for a molecule.
+(also known as absolute SMILES) string for either molecule or reaction.
 
 Java:
 
 .. code-block:: java
 
-    System.out.println(mol2.canonicalSmiles());
+    System.out.println(mol.canonicalSmiles());
+    System.out.println(rxn.canonicalSmiles());
 
 C#:
 
 .. code-block:: csharp
 
-    System.Console.WriteLine(mol2.canonicalSmiles());
+    System.Console.WriteLine(mol.canonicalSmiles());
+    System.Console.WriteLine(rxn.canonicalSmiles());
 
 Python:
 
 .. code-block:: python
 
-    print mol2.canonicalSmiles()
+    print mol.canonicalSmiles()
+    print rxn.canonicalSmiles()
 
 Please see the :ref:`indigo-example-canonical-smiles` for detailed examples
 
