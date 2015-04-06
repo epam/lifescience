@@ -57,7 +57,11 @@ def render_indigoimage_images(app, doctree):
 def get_relative_path(app, text, options):
     # Reset Indigo to use new fresh options
     format_map = DEFAULT_FORMATS.copy()
-    output_format = format_map[app.builder.format]
+    output_format = None
+    
+    if len(app.builder.format) > 0:
+        output_format = format_map[app.builder.format]
+        
     if output_format is None:
         return None
     output_filename = options['imagename'] + '.' + output_format

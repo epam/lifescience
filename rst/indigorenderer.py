@@ -317,7 +317,11 @@ def render(indigo, options, text, absolute_path, relativePath, rstdir, curdir):
 def render_indigorenderer(app, text, options, rstdir, curdir):
     format_map = DEFAULT_FORMATS.copy()
     format_map.update(app.builder.config.indigorenderer_format)
-    output_format = format_map[app.builder.format]
+    output_format = None
+    
+    if len(app.builder.format) > 0:
+        output_format = format_map[app.builder.format]
+        
     if 'format' in options:
         output_format = options['format']
 
