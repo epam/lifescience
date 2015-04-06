@@ -24,7 +24,7 @@ The following code prints canonical smiles string for a given structure
     #print canonical smiles for a molecule
     print(mol.canonicalSmiles())
 
-|
+
 The example below prints canonical smiles string for a given reaction
 
 .. indigorenderer::
