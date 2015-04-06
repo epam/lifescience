@@ -102,7 +102,7 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 # If true, keep warnings as "system message" paragraphs in the built documents.
-#keep_warnings = False
+keep_warnings = True
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -295,3 +295,5 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+nitpicky = True
