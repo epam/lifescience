@@ -1,12 +1,10 @@
+=======================
 Download Indigo Toolkit
 =======================
 
-.. toctree::
-    :hidden:
-    :includehidden:
+Stable
+======
 
-    previous
-    dev
 
 Indigo 1.1.12
 -------------
@@ -93,3 +91,23 @@ installer <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.1.1
 build <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.1.12/legio-1.1.12-linux.zip>`__,
 `Mac OS X
 build <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.1.12/legio-1.1.12-mac.zip>`__.
+
+
+Nightly Builds
+==============
+
+.. toctree::
+    :includehidden:
+
+    dev
+
+Previous Versions
+=================
+
+
+.. toctree::
+    :includehidden:
+
+    previous
+
+
