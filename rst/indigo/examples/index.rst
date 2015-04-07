@@ -10,6 +10,7 @@ Contents:
    atom-coloring
    installation
    calculating-properties
+   standardize
 
 
 .. TODO
