@@ -1617,7 +1617,7 @@ options, and returns CLOB result.
 
 You can pass any options supported by the official InChI library. This
 options can be found in the InChI manual or on the `InChI FAQ
-page <http://www.inchi-trust.org/fileadmin/user_upload/html/inchifaq/inchi-faq.html#15.17>`__.
+page <http://www.inchi-trust.org/technical-faq>`__.
 Usage example:
 
 ::

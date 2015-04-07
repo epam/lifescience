@@ -155,7 +155,7 @@ http://www.gnu.org/licenses/.
 modify this program, or any covered work, by linking or combining it
 with an Oracle Database, containing parts covered by the terms of the
 `Oracle Technology Network Developer
-License <http://www.oracle.com/technology/software/htdocs/devlic.html>`__,
+License <http://www.oracle.com/technetwork/testcontent/standard-license-088383.html>`__,
 the licensors of this program grant you additional permission to convey
 the resulting work.
 

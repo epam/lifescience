@@ -15,7 +15,7 @@ Inc. introduced this technique, and it is described in the following
 Bingo fingerprints, as compared to Daylight fingerprints, are built not
 from bond paths, but from trees and rings. A Russian article describes
 the `enumeration of
-subtrees <http://shmat-razum.blogspot.com/2008/11/blog-%0Apost.html>`__,
+subtrees <http://shmat-razum.blogspot.com/2008/11/blog-post.html>`__,
 which in turn is based on `reverse
 search <http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.26.4487>`__
 by David Avis and Komei Fukuda.
@@ -43,7 +43,7 @@ optimizations were not included. There is also a
 of the algorithm in Russian.
 
 For the affine transformation matching, `Wolfgang Kabsch's
-algorithm <http://scripts.iucr.org/cgi-%0Abin/paper?S0567739476001873>`__
+algorithm <http://scripts.iucr.org/cgi-bin/paper?S0567739476001873>`__
 was implemented.
 
 In internal molecule and reaction formats, the
@@ -80,7 +80,7 @@ system-wide installation of ``libcairo`` must be present as well
 can install it using `MacPorts <http://www.macports.org/>`__. The 32-bit
 and 64-bit Windows builds of Cairo are included in the source tree. They
 can be downloaded from
-`GTK <http://www.gtk.org/download-windows.html>`__ and
+`GTK <http://www.gtk.org/download/index.php>`__ and
 `GNOME <http://ftp.gnome.org/pub/GNOME/binaries/win64/dependencies/>`__
 project sites, respectively. Binaries of
 `libpng <http://www.libpng.org/pub/png/libpng.html>`__,
@@ -98,7 +98,7 @@ SMILES <http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html>`__,
 `ChemAxon SMILES
 extensions <http://www.chemaxon.com/marvin/help/formats/cxsmiles-doc.html>`__,
 and `MDL (Symyx)
-Molfiles <http://www.symyx.com/downloads/public/ctfile/ctfile.jsp>`__.
+Molfiles <http://infochim.u-strasbg.fr/recherche/Download/Fragmentor/MDL_SDF.pdf>`__.
 
 Web standards
 -------------
