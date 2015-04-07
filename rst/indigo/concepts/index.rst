@@ -298,7 +298,7 @@ features:
    symmetrical
 
 The full list of options is available on the
-`options <../api/options.html#reaction-products-enumeration>`__ page.
+`options <../options/reaction-product-enumeration.html>`__ page.
 
 The examples are available on a `separate page <combichem.html>`__.
 

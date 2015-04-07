@@ -1339,7 +1339,7 @@ The ``IndigoObject.standardize`` method can be used to the "standardizing"
 of the molecule or query (stereo, charges, geometry, valences, atoms and bonds properties)
 in accordance with requirements. The list of applied modifications is defined by
 options activated in Indigo (full list of available standardize options is described
-in the corresponding `Options <options.html#standardize>`__ section).
+in the corresponding `Options <../options/standardize.html>`__ section).
 
 **Note:** in the case of activation multiple options the order of applied modifications
 corresponds to the order of the options in the list of available options
@@ -1747,7 +1747,7 @@ type. The following fingerprint types are available:
    fingerprint types included
 
 The size of the fingerprint can be controlled via a number of
-`fingerprinting options <options.html#fingerprinting>`__.
+`fingerprinting options <../options/fingerprints.html>`__.
 
 Java:
 
@@ -1970,7 +1970,7 @@ Methods of Substructure Matcher
    an iterator for unique matches ("mapping" objects).
 
 Also, please take a look on some
-`options <options.html#substructure-matching>`__ available for
+`options <../options/substructure-matching-options.html>`__ available for
 substructure matchers.
 
 Reaction Substructure Matching
@@ -2382,7 +2382,7 @@ Java and C#:
 
     IndigoRenderer renderer = new IndigoRenderer(indigo);
 
-A large number of `options <options.html#rendering>`__ can be set for
+A large number of `options <../options/rendering-options.html>`__ can be set for
 the rendering plugin. They are set via the ordinary ``Indigo`` instance.
 One of the options is obligatory: ``render-output-format`` tells which
 format the image should be rendered to.
@@ -2414,7 +2414,7 @@ Rendering Multiple Items to Grid
 ``IndigoRenderer.renderGridToBuffer`` methods can be used to render
 multiple molecules or reactions at once. The rendered items are placed
 in grid specified by its number of columns. Some
-`options <options.html#rendering-in-grid>`__ are available for placing
+`options <../options/rendering-options.html>`__ are available for placing
 titles under (or above) the items.
 
 Java:

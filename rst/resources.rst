@@ -57,8 +57,7 @@ algorithm <http://cdk.sourcearchive.com/documentation/1:1.0.2-2/dir_fc89e4c1c81c
 Kerbosh <http://portal.acm.org/citation.cfm?id=362367>`__). For the
 approximate maximum common substructure search, the
 `2DOM <http://ci.nii.ac.jp/naid/110003210164/>`__ algorithm with some
-modifications was implemented. A `Russian
-paper <assets/mcs_article.pdf>`__ describes both algorithms.
+modifications was implemented. A :download:`Russian paper <assets/mcs_article.pdf>` describes both algorithms.
 
 Oracle Interface
 ----------------
