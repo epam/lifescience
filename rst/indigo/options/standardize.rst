@@ -2,8 +2,8 @@
 Standardize options
 ####################
 
-Standardize stereo options
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Stereo
+~~~~~~
 
 .. indigo_option::
     :name: standardize-stereo
@@ -71,8 +71,8 @@ Standardize stereo options
     :short: Checks the wedge bonds in the molecule to ensure that the wedge is drawn with the stereo atom at the narrow end of the wedge.
     :default: false
 
-Standardize charges options
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Charges
+~~~~~~~
 
 .. indigo_option::
     :name: standardize-charges
@@ -93,8 +93,8 @@ Standardize charges options
     :default: false
 
 
-Standardize geometry options
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Geometry
+~~~~~~~~
 
 .. indigo_option::
     :name: standardize-center-molecule
@@ -151,8 +151,8 @@ Standardize geometry options
     :default: false
 
 
-Standardize query options
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Query
+~~~~~
 
 .. indigo_option::
     :name: standardize-make-non-h-to-c-atoms
@@ -173,8 +173,8 @@ Standardize query options
     :default: false
 
 
-Misc standardize options
-~~~~~~~~~~~~~~~~~~~~~~~~
+Misc
+~~~~
 
 .. indigo_option::
     :name: standardize-make-all-bonds-single
