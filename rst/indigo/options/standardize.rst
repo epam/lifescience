@@ -2,95 +2,13 @@
 Standardize options
 ####################
 
+Standardize stereo options
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. indigo_option::
     :name: standardize-stereo
     :type: boolean
     :short: Sets or repairs the stereo on a molecule.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-charges
-    :type: boolean
-    :short: Sets the charges on a molecule to a standard form.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-center-molecule
-    :type: boolean
-    :short: Translates a molecule so its geometric center lies at the origin.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-remove-single-atoms
-    :type: boolean
-    :short: Removes fragments that consist of only a single heavy atom.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-keep-smallest
-    :type: boolean
-    :short: Keeps only the smallest fragment in the molecule.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-keep-largest
-    :type: boolean
-    :short: Keeps only the largest fragment in the molecule.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-remove-largest
-    :type: boolean
-    :short: Removes the largest fragment in the molecule.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-make-non-h-to-c-atoms
-    :type: boolean
-    :short: Converts all non-Hydrogen atoms atoms in the molecule to carbon.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-make-non-h-to-a-atoms
-    :type: boolean
-    :short: Converts all non-Hydrogen atoms in the molecule to the A query atom type.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-make-non-h-c-to-q-atoms
-    :type: boolean
-    :short: Converts all non-Carbon, non-Hydrogen atoms in the molecule to the Q query atom type.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-make-all-bonds-single
-    :type: boolean
-    :short: Converts all bonds in the molecule to single bonds.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-clear-coordinates
-    :type: boolean
-    :short: Sets all x, y, z coordinates to zero.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-straighten-triple-bonds
-    :type: boolean
-    :short: Finds atoms with triple bonds and non-linear geometry and fixes them so that the bond angles are 180 degrees.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-straighten-allens
-    :type: boolean
-    :short: Finds atoms with two double-bonds and non-linear geometry and fixes them so that the bond angles are 180 degrees.
-    :default: false
-
-.. indigo_option::
-    :name: standardize-clear-molecule
-    :type: boolean
-    :short: Deletes all atoms and bonds in the molecule, keeping the molecule object in the data record.
     :default: false
 
 .. indigo_option::
@@ -153,6 +71,15 @@ Standardize options
     :short: Checks the wedge bonds in the molecule to ensure that the wedge is drawn with the stereo atom at the narrow end of the wedge.
     :default: false
 
+Standardize charges options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. indigo_option::
+    :name: standardize-charges
+    :type: boolean
+    :short: Sets the charges on a molecule to a standard form.
+    :default: false
+
 .. indigo_option::
     :name: standardize-clear-charges
     :type: boolean
@@ -160,15 +87,105 @@ Standardize options
     :default: false
 
 .. indigo_option::
-    :name: standardize-highlight-colors
-    :type: boolean
-    :short: Clears any highlight colors from atoms and bonds.
-    :default: false
-
-.. indigo_option::
     :name: standardize-neutralize-zwitterions
     :type: boolean
     :short: Converts directly bonded zwitterions (positively charged atom bonded to negatively charged atom, A+B-) to the neutral representation (A=B).
+    :default: false
+
+
+Standardize geometry options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. indigo_option::
+    :name: standardize-center-molecule
+    :type: boolean
+    :short: Translates a molecule so its geometric center lies at the origin.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-remove-single-atoms
+    :type: boolean
+    :short: Removes fragments that consist of only a single heavy atom.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-keep-smallest
+    :type: boolean
+    :short: Keeps only the smallest fragment in the molecule.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-keep-largest
+    :type: boolean
+    :short: Keeps only the largest fragment in the molecule.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-remove-largest
+    :type: boolean
+    :short: Removes the largest fragment in the molecule.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-clear-coordinates
+    :type: boolean
+    :short: Sets all x, y, z coordinates to zero.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-straighten-triple-bonds
+    :type: boolean
+    :short: Finds atoms with triple bonds and non-linear geometry and fixes them so that the bond angles are 180 degrees.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-straighten-allens
+    :type: boolean
+    :short: Finds atoms with two double-bonds and non-linear geometry and fixes them so that the bond angles are 180 degrees.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-clear-molecule
+    :type: boolean
+    :short: Deletes all atoms and bonds in the molecule, keeping the molecule object in the data record.
+    :default: false
+
+
+Standardize query options
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. indigo_option::
+    :name: standardize-make-non-h-to-c-atoms
+    :type: boolean
+    :short: Converts all non-Hydrogen atoms atoms in the molecule to carbon.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-make-non-h-to-a-atoms
+    :type: boolean
+    :short: Converts all non-Hydrogen atoms in the molecule to the A query atom type.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-make-non-h-c-to-q-atoms
+    :type: boolean
+    :short: Converts all non-Carbon, non-Hydrogen atoms in the molecule to the Q query atom type.
+    :default: false
+
+
+Misc standardize options
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. indigo_option::
+    :name: standardize-make-all-bonds-single
+    :type: boolean
+    :short: Converts all bonds in the molecule to single bonds.
+    :default: false
+
+.. indigo_option::
+    :name: standardize-highlight-colors
+    :type: boolean
+    :short: Clears any highlight colors from atoms and bonds.
     :default: false
 
 .. indigo_option::
