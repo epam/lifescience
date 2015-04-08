@@ -2,6 +2,9 @@
 Rendering options
 #################
 
+General
+=======
+
 .. code::
     :name: render-with-different-options
     :hidden:
@@ -208,11 +211,10 @@ Rendering options
         renderMolfileWithOptions('data/render_example1.mol', 'render-label-mode', [ "all", "terminal-hetero", "hetero", "none" ])
 
 .. indigo_option::
-    :name: render-implicit-hydrogens-visible
-    :type: boolean
-    :default: True
-    :short:
-        Show implicit hydrogens on visible atoms.
+    :name: render-hdc-offset
+    :type: offset
+    :default: 0, 0
+    :short: Offset for the rendering area
 
     .. indigorenderer::
         :indigoobjecttype: code
@@ -220,7 +222,10 @@ Rendering options
         :includecode: render-with-different-options
         :nocode:
 
-        renderMolfileWithOptions('data/render_example2.mol', 'render-implicit-hydrogens-visible', [ True, False ])
+        renderMolfileWithOptions('data/render_example1.mol', 'render-hdc-offset', [ '0, 0', '30, 5' ])
+
+Comments
+========
 
 .. indigo_option::
     :name: render-comment
@@ -334,6 +339,25 @@ Rendering options
         :nocode:
 
         renderMolfileWithOptions('data/render_example1.mol', 'render-comment-offset', [ 0, 10, 20 ])
+
+Chemistry
+=========
+
+.. indigo_option::
+    :name: render-implicit-hydrogens-visible
+    :type: boolean
+    :default: True
+    :short:
+        Show implicit hydrogens on visible atoms.
+
+    .. indigorenderer::
+        :indigoobjecttype: code
+        :indigoloadertype: code
+        :includecode: render-with-different-options
+        :nocode:
+
+        renderMolfileWithOptions('data/render_example2.mol', 'render-implicit-hydrogens-visible', [ True, False ])
+
 
 .. indigo_option::
     :name: render-atom-ids-visible
@@ -475,19 +499,7 @@ Rendering options
 
         renderMolfileWithOptions('data/render_example-sgroup.mol', 'render-data-sgroup-color', [ '0.5, 0.3, 0.5', '0.1, 0.1, 0.9' ])
 
-.. indigo_option::
-    :name: render-hdc-offset
-    :type: offset
-    :default: 0, 0
-    :short: Offset for the rendering area
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-
-        renderMolfileWithOptions('data/render_example1.mol', 'render-hdc-offset', [ '0, 0', '30, 5' ])
 
 .. indigo_option::
     :name: render-stereo-style
@@ -551,6 +563,9 @@ Rendering options
         :nocode:
 
         renderMolfileWithOptions('data/render_example-valence.mol', 'render-valences-visible', [ True, False ])
+
+Highlighting
+============
 
 .. indigo_option::
     :name: render-highlight-color
