@@ -98,9 +98,9 @@
           {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
    {%- endif %}
    {%- if pagename == "index" %}
-          <div class="span6">
+          <div class="span6 {{ pagename }}">
    {%- else %}
-          <div class="{{ bs_content_span }}">
+          <div class="{{ bs_content_span }} {{ pagename }}">
    {%- endif %}
             {% block body %}{% endblock %}
           </div>

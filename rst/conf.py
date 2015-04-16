@@ -39,7 +39,7 @@ extensions = [
 #    'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
     'indigorenderer',
-    'codeblockimport', 
+    'codeblockimport',
     'indigoimage',
     'options_node'
 ]
@@ -127,7 +127,7 @@ html_theme_options = {
     'navbar_title': "Life Sciences",
     'navbar_sidebarrel': False,
     'bootstrap_version': "2",
-    'globaltoc_depth': 7, 
+    'globaltoc_depth': 7,
     'navbar_links' : [
         ("Resources", "resources"),
         ("Downloads", "download/index"),
@@ -194,7 +194,7 @@ html_favicon = 'assets/favicon.ico'
 #html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = False
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True

@@ -134,7 +134,7 @@ a.reference {
   border-bottom: 1px dotted #004b6b;
 }
 a.reference:hover {
-  border-bottom: 1px solid #6d4100;
+  border-bottom: none;
 }
 a.footnote-reference {
   text-decoration: none;
@@ -154,8 +154,13 @@ body {
   font-size: 17px;
   background-color: white;
   color: #000;
-  padding: 100px;
+  padding: 100px 50px 0;
 }
+
+.span9 {
+  padding-bottom: 50px;
+}
+
 hr {
   border: 1px solid #B1B4B6;
 }
@@ -412,13 +417,31 @@ a tt {
   background-color: #FBFBFB;
   border-bottom: 1px solid white;
 }
-a.reference {
+a.reference, #sidebar a, .newsfeed a {
   text-decoration: none;
   border-bottom: 1px dotted #004b6b;
 }
-a.reference:hover {
-  border-bottom: 1px solid #6d4100;
+a.reference img {
+  display: block;
 }
+
+a[href^="http"], a[href^="mailto:"] {
+	background-image: url('external.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-right: 10px;
+}
+
+a.reference:hover, a.reference:active,
+.newsfeed a:hover, .newsfeed a:active,
+#sidebar li:last-child a {
+  text-decoration: none;
+  border-bottom: none;
+}
+.dropdown-menu li:hover>a, .dropdown-menu li:last-child a {
+  border-bottom: 1px solid transparent;
+}
+
 a.footnote-reference {
   text-decoration: none;
   font-size: 0.7em;
@@ -430,6 +453,13 @@ a.footnote-reference:hover {
 }
 a:hover tt {
   background: #EEE;
+}
+
+.newsfeed h2:first-child {
+  margin-top: 0;
+}
+.index h1:first-child {
+  margin-bottom: 30px;
 }
 
 img.logo {
@@ -447,7 +477,11 @@ a.brand p {
 }
 
 .navbar .nav {
-    margin: 15px 10px 0 0;
+    margin: 20px 10px 0 25px;
+}
+
+.navbar .navbar-form {
+  margin-top: 20px;
 }
 
 .revsys-inline {
@@ -461,18 +495,13 @@ div#changelog > div.section > ul > li > p:only-child {
   margin-bottom: 0;
 }
 
-div#newsfeed.well iframe {
-  width:100%;
+div#newsfeed iframe {
+  width: 100%;
   height: 80vh;
+  border: 0;
 }
-
-
-a.reference.internal.image-reference {
-  border-bottom: initial;
-}
-
-a.reference.external {
-  border-bottom: initial;
+div#newsfeed {
+  padding: 0 0 20px 20px;
 }
 
 .section h1,
