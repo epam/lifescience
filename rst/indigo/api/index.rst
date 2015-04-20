@@ -1356,6 +1356,8 @@ Java, C#, and Python:
 IO
 --
 
+.. _indigo-api-io-reading-files:
+
 Reading SDF, RDF, CML, multiline SMILES files, CDX (binary)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
