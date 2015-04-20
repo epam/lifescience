@@ -25,12 +25,18 @@ Summary
 
 * New option for skipping layout while reaction product enumeration. ( ``TODO``)
 
+* Stereo and cis-trans configuration better support ( :ref:`details <indigo-1.2.1-stereo>`)
+
+* Bidirectional stereocenters mode (used by ChemDraw) support was implemented. :optref:`stereochemistry-bidirectional-mode` option was added.  
+
+
+
 
 **Bugfixes**:
 
 * SGroups releated bugs were fixed
 
-* Indigo now calculates stereocenters for SMARTS like ``[*@H](~*)~*`` ( ``TODO``)
+* Indigo now calculates stereocenters for SMARTS like ``[*@H](~*)~*`` ( :ref:`details <indigo-1.2.1-stereo>`)
 
 * Bug with ``countComponents()`` was fixed
 
@@ -72,3 +78,27 @@ CDX Format
 
 Chemdraw CDX format support was implemented. New method ``iterateCDXFile`` was added into Indigo 
 API. See :ref:`details <indigo-api-io-reading-files>`
+
+.. _indigo-1.2.1-stereo:
+
+=====================
+Stereo better support 
+=====================
+
+Improvements and fixes were applied for the stereo algorithm. 
+Now Indigo restores stereo configurations according to the given information. Here is an example where stereo configuration is defined *incorrectly*. But for SMARTS pattern it is required to find all molecules with *any* stereo-center, thus no errors should be raised while SMARTS loading.  
+
+.. indigorenderer::
+   :indigoobjecttype: code
+   :indigoloadertype: code
+   :nocode: 
+    
+   # Load structure
+   q = indigo.loadSmarts('[*@H](~*)~*')
+
+   indigo.setOption("render-comment", "SMARTS = [*@H](~*)~*")
+
+   #render query molecule
+   indigoRenderer.renderToFile(q, 'result.png')
+
+Release includes also other stereo and cis/trans improvements: loading/serialization, bidirection mode, haworth projection, etc. 
