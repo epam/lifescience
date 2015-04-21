@@ -95,3 +95,38 @@ Stereocenters options
         indigoRenderer.renderToFile(m2, 'result_2.png')
 
 
+
+
+
+
+.. indigo_option::
+   :name: stereochemistry-detect-haworth-projection
+   :type: boolean
+   :default: false
+   :short: Detect Haworth projection
+
+    .. indigorenderer::
+        :indigoobjecttype: code
+        :indigoloadertype: code
+        :downloads: data/projection_ordinary.mol,data/projection_haworth.mol
+
+
+        # Load structure
+        q = indigo.loadQueryMoleculeFromFile('data/projection_ordinary.mol')
+        t = indigo.loadMoleculeFromFile('data/projection_haworth.mol')
+        
+        # Render structures
+        indigo.setOption("render-comment", "projection_ordinary")
+        indigoRenderer.renderToFile(q, 'result_1.png')
+        indigo.setOption("render-comment", "projection_haworth")
+        indigoRenderer.renderToFile(t, 'result_2.png')
+        
+        # Match with haworth-projection option disabled
+        matcher = indigo.substructureMatcher(t)
+        print("match with haworth-projection turned OFF: " + str(matcher.match(q) != None))
+
+        # Load and match with haworth-projection option enabled
+        indigo.setOption("stereochemistry-detect-haworth-projection", "True")
+        t2 = indigo.loadMoleculeFromFile('data/projection_haworth.mol')
+        matcher = indigo.substructureMatcher(t2)
+        print("match with haworth-projection turned ON: " + str(matcher.match(q) != None))

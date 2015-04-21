@@ -19,7 +19,7 @@ Summary
 
 * ``canonicalSmiles()`` for *Reactions* ( see :ref:`examples <indigo-example-canonical-smiles>`)
 
-* Molfile V3000 type9 and type10 bonds support was implemented
+* Molfile V3000 type9 and type10 bonds support was implemented 
 
 * ChemDraw CDX reader was implemented ( :ref:`details <indigo-1.2.1-cdx>`)
 
@@ -28,6 +28,8 @@ Summary
 * Stereo and cis-trans configuration better support ( :ref:`details <indigo-1.2.1-stereo>`)
 
 * Bidirectional stereocenters mode (used by ChemDraw) support was implemented. :optref:`stereochemistry-bidirectional-mode` option was added.  
+
+* Stereocenters detection for the haworth projection was implemented. New option :optref:`stereochemistry-detect-haworth-projection` was added
 
 
 
@@ -43,6 +45,8 @@ Summary
 * Custom collection names loading in molfile V3000
 
 * Bug with superatoms saving was fixed
+
+* Other small bugfixes
 
 
 
@@ -68,7 +72,34 @@ Standardize
 ===========
 
 ``standardize`` method can be used to the “standardizing” of the molecule or query (stereo, 
-charges, geometry, valences, atoms and bonds properties) in accordance with requirements. The list of applied modifications is defined by options activated in Indigo (full list of available standardize options is described in the corresponding `Options <../../../indigo/options/standardize.html>`__ section). See `examples <../../../indigo/examples/standardize.html>`__ page to find some usage examples.
+charges, geometry, valences, atoms and bonds properties) in accordance with requirements. The list of applied modifications is defined by options activated in Indigo (full list of available standardize options is described in the corresponding `Options <../../../indigo/options/standardize.html>`__ section). 
+
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+
+    indigo.setOption("standardize-stereo", True);
+
+    mol1 = indigo.loadMolecule('CCN1C(SC(C)N1)')
+    mol2 = mol1.clone()
+
+    mol2.standardize()
+
+    array = indigo.createArray()
+
+    mol1.setProperty("grid-comment", "before")
+    mol2.setProperty("grid-comment", "after")
+    
+    array.arrayAdd(mol1)
+    array.arrayAdd(mol2)
+
+    indigo.setOption("render-grid-title-property", "grid-comment")
+    indigo.setOption("render-grid-margins", "20, 10")
+    indigo.setOption("render-grid-title-offset", "10")
+
+    indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
+
+See `examples <../../../indigo/examples/standardize.html>`__ page to find more usage examples.
 
 .. _indigo-1.2.1-cdx:
 
@@ -102,3 +133,4 @@ Now Indigo restores stereo configurations according to the given information. He
    indigoRenderer.renderToFile(q, 'result.png')
 
 Release includes also other stereo and cis/trans improvements: loading/serialization, bidirection mode, haworth projection, etc. 
+

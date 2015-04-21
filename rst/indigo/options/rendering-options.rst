@@ -59,7 +59,7 @@ General
         :nocode:
 
         indigo.setOption("render-bond-length", -1)
-        renderMolfileWithOptions('data/render_example1.mol', 'render-image-size', [ "300, 200", "200, 100" ])
+        renderMolfileWithOptions('data/render_example1.mol', 'render-image-size', [ "300, 200", "210, 100" ])
 
 .. indigo_option::
     :name: render-bond-length
