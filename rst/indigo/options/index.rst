@@ -24,6 +24,7 @@ Indigo instance represents an environment for IndigoObjects. Many methods in Ind
     rendering-options.rst
     grid-rendering-options.rst
     substructure-matching-options.rst
+    stereocenters-options
     fingerprints.rst
     deconvolution.rst
     aromaticity.rst

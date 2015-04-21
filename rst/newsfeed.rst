@@ -14,7 +14,7 @@ Indigo 1.2.1 released
 
 *2 April 2015*
 
-TODO: description
+New Indigo stable version is available. It includes bugfixes and enhancements. 
 
 * |indigo_1_2_1_notes|
 
