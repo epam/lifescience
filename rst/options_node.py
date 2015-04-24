@@ -134,7 +134,7 @@ def get_title(title_str):
 
 
 
-    
+
 
 def process_indigo_option_nodes(app, doctree, fromdocname):
     env = app.builder.env
@@ -158,17 +158,17 @@ def process_indigo_option_nodes(app, doctree, fromdocname):
             #group=nodes.rubric('', op_group)
             #group.append(nodes.Text(op_group))
             #content.append(group)
-            
+
             section_node = OptionInfo()
             options_name = op_group
             section_node['names'].append(options_name)
             section_node['ids'].append(options_name)
-            
+
             titlenode = nodes.title('', options_name)
             section_node += titlenode
-            
+
             tbody = create_options_table(section_node)
-            
+
             content.append(section_node)
 
             for opt_info in s_options:
@@ -182,6 +182,7 @@ def process_indigo_option_nodes(app, doctree, fromdocname):
                 newnode['refuri'] = app.builder.get_relative_uri(
                     fromdocname, opt_info['docname'])
                 newnode['refuri'] += '#' + normalize_name(opt_info['name'])
+                newnode['classes'].append('option')
                 newnode.append(innernode)
 
                 row += create_row_entry(newnode)
@@ -190,7 +191,7 @@ def process_indigo_option_nodes(app, doctree, fromdocname):
                 row += create_row_entry_text(opt_info['default'])
 
         node.replace_self(content)
-        
+
 
 class OptionsTableDirective(Directive):
     has_content = False
@@ -235,6 +236,7 @@ def indigo_option_role(name, rawtext, text, lineno, inliner, options={}, content
     newnode['refuri'] = app.builder.get_relative_uri(
         env.docname, opt_info['docname'])
     newnode['refuri'] += '#' + normalize_name(opt_info['name'])
+    newnode['classes'].append('option')
     newnode.append(innernode)
 
     return [newnode], []

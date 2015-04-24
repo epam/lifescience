@@ -133,9 +133,23 @@ a.reference {
   text-decoration: none;
   border-bottom: 1px dotted #004b6b;
 }
-a.reference:hover {
-  border-bottom: none;
+
+a.option {
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  font-size: 12px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #f7f7f9;
+  padding: 2px 4px;
+  white-space: nowrap;
+  //border-color: #e1e1e8;
+  border: 1px dotted #004b6b;
 }
+
+a.reference:hover {
+  border-color: transparent;
+}
+
 a.footnote-reference {
   text-decoration: none;
   font-size: 0.7em;
