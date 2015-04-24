@@ -435,8 +435,8 @@ a.reference, #sidebar a, .newsfeed a {
   text-decoration: none;
   border-bottom: 1px dotted #004b6b;
 }
-a.reference img {
-  display: block;
+a.image-reference {
+  border: none;
 }
 
 a[href^="http"], a[href^="mailto:"] {
