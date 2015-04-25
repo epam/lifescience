@@ -8,7 +8,9 @@ Also, you will need *Indigo* if you want to use the special `indigorenderer` dir
 
 
 and then run:
-    
+
     `make html`
 
 
+Optionaly you could also install the [livereload](https://livereload.readthedocs.org/en/latest/) package, run
+`python watch.py` and see how the documentation recompiles/updates as you modify sources.
