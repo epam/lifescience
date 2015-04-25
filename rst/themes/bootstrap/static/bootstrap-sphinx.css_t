@@ -446,6 +446,36 @@ a[href^="http"], a[href^="mailto:"] {
 	padding-right: 10px;
 }
 
+#sidebar .breadcrumbs li {
+  font-size: 0.5em;
+  display: inline-block;
+}
+
+#sidebar .breadcrumbs a {
+  font-size: inherit;
+  display: inline-block;
+  border: none;
+}
+
+#sidebar .breadcrumbs li:before {
+  padding-right: 0.6em;
+  content: '/'
+}
+
+#sidebar .breadcrumbs li:first-child:before {
+  content: none;
+}
+
+#sidebar .breadcrumbs:after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 2px 1px 0px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #fff;
+}
+
 a.reference:hover, a.reference:active,
 .newsfeed a:hover, .newsfeed a:active,
 #sidebar li:last-child a {

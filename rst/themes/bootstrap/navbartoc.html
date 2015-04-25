@@ -1,2 +1,9 @@
-<ul class="nav bs-docs-sidenav localtoc">{{ toc }}</ul>
+<ul class="breadcrumbs">
+    {% for doc in parents %}
+    <li><a href="{{ doc.link|e }}">{{ doc.title }}</a></li>
+    {% endfor %}
+</ul>
+<ul class="nav bs-docs-sidenav localtoc">
+    {{ toc }}
+</ul>
 
