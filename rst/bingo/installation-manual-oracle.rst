@@ -61,7 +61,7 @@ Bingo has been successfully tested on the following configurations:
 | 64-bit          | Oracle 10 (64-bit)      | Mac OS X 10.6.1                   | Intel x86-64     |
 +-----------------+-------------------------+-----------------------------------+------------------+
 
-Installation Prerequisities
+Installation Prerequisites
 ---------------------------
 
 All Systems

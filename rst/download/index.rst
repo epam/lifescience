@@ -4,6 +4,7 @@ Download
 .. toctree::
     :hidden:
 
+    index
     bingo
     ketcher
     Indigo <indigo/index>

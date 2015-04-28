@@ -5,7 +5,7 @@ indigo-deco
 
     Usage:
       indigo-deco files [options]
-    Perfoms molecule scaffold detection and R-group deconvolution
+    Performs molecule scaffold detection and R-group deconvolution
     Accepted formats are: Molfile, SDFile, RDFile, SMILES
     Options:
     -h         print this help message

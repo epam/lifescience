@@ -5,15 +5,14 @@
     :hidden:
     :includehidden:
 
-    Concepts <concepts/index>
     API <api/index>
-    knime
-    legio
-    indigo-depict
-    indigo-cano
-    indigo-deco
-    chemdiff
-    changelog
+    Concepts <concepts/index>
+    ﻿Indigo Utilities <utilities>
+    Downloads <../download/indigo/index>
+    Build <../indigo/build.rst>
+    options/index
+    release-notes/index
+    examples/index
 
 Overview
 --------
@@ -46,7 +45,7 @@ it is easy to start, as the `interface <api/index.html>`__ is very neat.
 No data types besides the absolute minimum required for it to work. No
 internal data formats. No painful initialization procedures.
 
-Indigo SDK is highly `configurable <api/options.html>`__ and extensible.
+Indigo SDK is highly `configurable <options/index.html>`__ and extensible.
 You can write C/C++/C#/Java/Python plugins for it and distribute them
 independently.
 
@@ -70,7 +69,7 @@ Features
 -  Exact matching, substructure matching, SMARTS matching.
 -  Matching of tautomers and resonance structures.
 -  Molecule fingerprinting, molecule similarity computation.
--  Fast enumeration of SSSR rings, subtrees, and edge sugraphs.
+-  Fast enumeration of SSSR rings, subtrees, and edge subgraphs.
 -  Molecular weight, molecular formula computation.
 -  R-Group deconvolution and scaffold detection. Pioneer work in
    computing the *exact* maximum common substructure for an arbitrary
@@ -105,18 +104,18 @@ To understand Indigo's scope, start with the
 for all supported languages is provided in the `API <api/index.html>`__
 page. A separate page deals with the `C interface <api/c.html>`__.
 Various options that can be passed to the library are explained on the
-`Options <api/options.html>`__ page.
+`Options <options/index.html>`__ page.
 
 
 GCC 2010 Presentation
 ---------------------
 
 Here is the presentation for the talk that was given in November 2010 in
-Goslar at the German Conference on Chemoinformatics:
-`PDF <../assets/indigo/indigo_cic2010.pdf>`__ (396K).
+Goslar at the German Conference on Cheminformatics:
+:download:`PDF <../assets/indigo/indigo_cic2010.pdf>` (396K).
 
 And here is the poster presented at the same conference:
-`PDF <../assets/indigo/indigo_cic2010_poster.pdf>`__ (3.1M).
+:download:`PDF <../assets/indigo/indigo_cic2010_poster.pdf>` (3.1M).
 
 KNIME Nodes
 -----------
@@ -152,6 +151,11 @@ Download and Install
 
 Look at the `Downloads <../download/indigo/index.html>`__ page for the
 installation package suitable for your system.
+
+Building from sources
+---------------------
+
+Look at the `Build <../indigo/build.html>`__ page for the building manual.
 
 License
 -------

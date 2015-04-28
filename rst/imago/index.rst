@@ -31,13 +31,16 @@ Imago OCR project is under active development. You can post us your
 `comments and suggestions <#feedback>`__ and get timely replies from the
 developers' team.
 
-+--------------------------------------------------------------------------------------------------+---------------------------------------------------+
-| Source image                                                                                     | Recognized structure                              |
-+==================================================================================================+===================================================+
-| |image2|                                                                                         | |image3|                                          |
-+--------------------------------------------------------------------------------------------------+---------------------------------------------------+
-| `USRE039991-20080101-C00100.png <../assets/imago/4_source_USRE039991-20080101-C00100-1.png>`__   | `molecule.mol <../assets/imago/molecule.mol>`__   |
-+--------------------------------------------------------------------------------------------------+---------------------------------------------------+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 50 50
+
+   * - Source image
+     - Recognized structure
+   * - |image2|
+     - |image3|
+   * - :download:`USRE039991-20080101-C00100.png <../assets/imago/4_source_USRE039991-20080101-C00100-1.png>`
+     - :download:`molecule.mol <../assets/imago/molecule.mol>`
 
 Recognizable Molecule Features
 ------------------------------
@@ -188,13 +191,7 @@ You may need the commercial license if you want to:
 -  Receive ongoing support and maintenance
 -  Include Imago as a component in your proprietary software product
 
-.. |image0| image:: ../assets/imago/4_source_USRE039991-20080101-C00100_small.png
-   :target: ../assets/imago/4_source_USRE039991-20080101-C00100.png
-.. |image1| image:: ../assets/imago/4_result_USRE039991-20080101-C00100.png.imago-2.0.svg
-   :target: ../assets/imago/4_result_USRE039991-20080101-C00100.png.imago-2.0.png
-.. |image2| image:: ../assets/imago/4_source_USRE039991-20080101-C00100_small.png
-   :target: ../assets/imago/4_source_USRE039991-20080101-C00100.png
-.. |image3| image:: ../assets/imago/4_result_USRE039991-20080101-C00100.png.imago-2.0.svg
-   :target: ../assets/imago/4_result_USRE039991-20080101-C00100.png.imago-2.0.png
+.. |image2| image:: ../assets/imago/4_source_USRE039991-20080101-C00100.*
+.. |image3| image:: ../assets/imago/4_result_USRE039991-20080101-C00100.png.imago-2.0.*
 .. |Report| image:: ../assets/imago/imago-report-small.png
    :target: TODO:imago-report

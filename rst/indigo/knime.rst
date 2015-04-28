@@ -8,7 +8,7 @@ available at `KNIME Tech <http://tech.knime.org/community/indigo>`__.
 Installation
 ------------
 
-Prerequisities
+Prerequisites
 ~~~~~~~~~~~~~~
 
 First, you need to add the `KNIME update
@@ -69,15 +69,9 @@ the KNIME Tech. Topics related to the core Indigo library may, as
 always, be posted into our `Google
 groups <../contact.html#feedback-on-open-source-software>`__.
 
-.. |image0| image:: ../assets/indigo/knime-install-01-small.png
-   :target: ../assets/indigo/knime-install-01.png
-.. |image1| image:: ../assets/indigo/knime-install-02-small.png
-   :target: ../assets/indigo/knime-install-02.png
-.. |image2| image:: ../assets/indigo/knime-install-03-small.png
-   :target: ../assets/indigo/knime-install-03.png
-.. |image3| image:: ../assets/indigo/knime-example-01-small.png
-   :target: ../assets/indigo/knime-example-01.png
-.. |image4| image:: ../assets/indigo/knime-example-02-small.png
-   :target: ../assets/indigo/knime-example-02.png
-.. |image5| image:: ../assets/indigo/knime-example-03-small.png
-   :target: ../assets/indigo/knime-example-03.png
+.. |image0| image:: ../assets/indigo/knime-install-01.png
+.. |image1| image:: ../assets/indigo/knime-install-02.png
+.. |image2| image:: ../assets/indigo/knime-install-03.png
+.. |image3| image:: ../assets/indigo/knime-example-01.png
+.. |image4| image:: ../assets/indigo/knime-example-02.png
+.. |image5| image:: ../assets/indigo/knime-example-03.png

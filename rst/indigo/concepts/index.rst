@@ -256,7 +256,7 @@ With Indigo, it is possible to display highlighted bonds and atoms with
 specified color and/or with thick lines and bold characters.
 
 The full list of options is available on the
-`options <../api/options.html#rendering>`__ page.
+`options <../options/rendering-options.html>`__ page.
 
 The following output formats are supported for rendering:
 
@@ -298,7 +298,7 @@ features:
    symmetrical
 
 The full list of options is available on the
-`options <../api/options.html#reaction-products-enumeration>`__ page.
+`options <../options/reaction-product-enumeration.html>`__ page.
 
 The examples are available on a `separate page <combichem.html>`__.
 

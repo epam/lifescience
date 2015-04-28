@@ -19,6 +19,12 @@ import os
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
+sys.path.append(os.path.abspath(os.curdir))
+sys.path.append('indigo/python')
+sys.path.append('indigo/plugins/renderer/python')
+sys.path.append('indigo/plugins/inchi/python')
+sys.path.append('indigo/plugins/bingo/python')
+
 
 # -- General configuration ------------------------------------------------
 
@@ -30,8 +36,12 @@ import os
 # ones.
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.mathjax',
+#    'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
+    'indigorenderer',
+    'codeblockimport',
+    'indigoimage',
+    'options_node'
 ]
 
 # The suffix of source filenames.
@@ -92,7 +102,7 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 # If true, keep warnings as "system message" paragraphs in the built documents.
-#keep_warnings = False
+keep_warnings = True
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -100,19 +110,30 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-html_theme_path = ['.']
-html_theme = 'theme'
+html_theme_path = ['./themes']
+html_theme = 'bootstrap'
 html_sidebars = {
-   '**': [
-       'about.html', 'navigation.html', 'searchbox.html',
+   '*/**': [
+       'navbartoc.html'
    ]
 }
+
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {
-#}
+html_theme_options = {
+    'navbar_title': "Life Sciences",
+    'navbar_sidebarrel': False,
+    'bootstrap_version': "2",
+    'globaltoc_depth': 7,
+    'navbar_links' : [
+        ("Resources", "resources"),
+        ("Downloads", "download/index"),
+        ("Contact Info", "contact"),
+    ],
+}
 
 html_copy_source = False
 html_last_updated_fmt = '%b %d, %Y'
@@ -158,6 +179,8 @@ html_favicon = 'assets/favicon.ico'
 # template names.
 #html_additional_pages = {}
 
+
+
 # If false, no module index is generated.
 #html_domain_indices = True
 
@@ -171,7 +194,7 @@ html_favicon = 'assets/favicon.ico'
 #html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = False
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True
@@ -199,14 +222,21 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
+'preamble': '\setcounter{tocdepth}{3}'
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'EPAMLifeScience.tex', u'EPAM Life Science Documentation',
+  ('bingo/bingo-postgres', 'BingoPostgreSQL.tex', u'EPAM Life Sciences Bingo PostgreSQL Documentation',
    u'EPAM Systems', 'manual'),
+  ('bingo/bingo-oracle', 'BingoOracle.tex', u'EPAM Life Sciences Bingo Oracle Documentation',
+   u'EPAM Systems', 'manual'),
+  ('bingo/bingo-sqlserver', 'BingoMSSQLServer.tex', u'EPAM Life Sciences Bingo MS SQL Server Documentation',
+   u'EPAM Systems', 'manual'),
+  ('bingo/bingo-nosql', 'BingoNoSQL.tex', u'EPAM Life Sciences Bingo NoSQL Documentation',
+   u'EPAM Systems', 'manual')
 ]
 
 # The name of an image file (relative to this directory) to place at the top fo
@@ -265,3 +295,5 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+nitpicky = True

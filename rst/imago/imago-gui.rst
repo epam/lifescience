@@ -22,7 +22,7 @@ Distribution
 ------------
 
 The ``imago-gui.jar`` file is included in the package for each
-architecture. It doesn't have any depenent files. Binary dynamic
+architecture. It doesn't have any dependent files. Binary dynamic
 libraries are extracted from JAR files and loaded automatically.
 
 Interface

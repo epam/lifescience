@@ -5,15 +5,11 @@
     :hidden:
     :includehidden:
 
-    building-from-source
-    installation-manual-oracle
-    installation-manual-sqlserver
-    installation-manual-postgres
-    performance-tips-oracle
-    user-manual-oracle
-    user-manual-sqlserver
-    user-manual-postgres
-    changelog
+    bingo-oracle
+    bingo-postgres
+    bingo-sqlserver
+    bingo-nosql
+    Downloads <../download/bingo>
 
 Overview
 --------
@@ -40,7 +36,8 @@ structure searching with numeric and text SQL terms.
 Why Select Bingo as Your Molecular Search Cartridge?
 ----------------------------------------------------
 
-Bingo has all the necessary features required by modern chemoinformatics
+
+Bingo has all the necessary features required by modern cheminformatics
 applications. It also has features not present in other cartridges — for
 example, advanced tautomer search, resonance substructure search, and
 fast updating of the index when adding new structures.
@@ -55,13 +52,14 @@ Bingo is fast. We have succeeded in achieving the best performance in
 the industry for a search cartridge for both the screening phase and the
 matching phase of various types of searches, especially substructure
 search. Bingo has very effective memory management with no unnecessary
-reallocations. Communication with the underlying database, especially
+re-allocations. Communication with the underlying database, especially
 LOB handling, is optimized as well. During substructure searches,
 molecules and reactions are stored in shared memory to speed up the
 access.
 
 Features
 --------
+
 
 **Searches in a variety of ways:** For molecule structure searching,
 Bingo supports 2D and 3D exact and substructure searches, as well as
@@ -157,7 +155,7 @@ http://www.gnu.org/licenses/.
 modify this program, or any covered work, by linking or combining it
 with an Oracle Database, containing parts covered by the terms of the
 `Oracle Technology Network Developer
-License <http://www.oracle.com/technology/software/htdocs/devlic.html>`__,
+License <http://www.oracle.com/technetwork/testcontent/standard-license-088383.html>`__,
 the licensors of this program grant you additional permission to convey
 the resulting work.
 
@@ -170,6 +168,7 @@ resulting work.
 
 Feedback
 --------
+
 
 Do you need assistance using our tools? Do you need a feature? Do you
 want to send a patch to us? Did you find a bug? Please write to one of
@@ -188,6 +187,7 @@ indigo-general@googlegroups.com to get your message posted.
 Commercial Availability
 -----------------------
 
+
 If the GPL-licensed Bingo does not fit your needs, please contact us to discuss the purchase of a commercial license.
 You may need the commercial license if you want to:
 
@@ -195,3 +195,10 @@ You may need the commercial license if you want to:
 -  Include Bingo as a component in your proprietary software product
 -  Use Bingo with Oracle licensed not with OTN Developer License, or
    with MS SQL Server Enterprise Edition
+
+
+
+Changelog
+---------
+
+Please see the `Bingo Changelog <changelog.html>`__ page

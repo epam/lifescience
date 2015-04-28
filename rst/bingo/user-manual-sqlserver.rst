@@ -125,7 +125,7 @@ will be better for performance, as in this case the database engine will
 not retrieve all the resulting records into memory before returning the
 top ``$n`` ones.
 
-You can get all the hits by portions of an arbitary size. First query
+You can get all the hits by portions of an arbitrary size. First query
 should have ``START`` option:
 
 ::
@@ -133,7 +133,7 @@ should have ``START`` option:
     select $table.* from $table, bingo.SearchSub('$table', $query, '$parameters; TOP $n; START') t
        where $table.$id = t.id;
 
-After that you can get next portion of results by specifing last id,
+After that you can get next portion of results by specifying last id,
 returned by ``SearchSub`` function:
 
 ::
@@ -363,7 +363,7 @@ benefits of Bingo canonical SMILES format.
 Molecule Fingerprints
 ~~~~~~~~~~~~~~~~~~~~~
 
-You can generate a molecule fingerprint via ``bingo.Fingeprint``
+You can generate a molecule fingerprint via ``bingo.Fingerprint``
 function. The syntax is the same as for Bingo for Oracle, and it is
 described `in this
 section <user-manual-oracle.html#molecule-fingerprints>`__.
@@ -414,7 +414,7 @@ will be better for performance, as in this case the database engine will
 not retrieve all the resulting records into memory before returning the
 top ``$n`` ones.
 
-You can get all the hits by portions of an arbitary size. First query
+You can get all the hits by portions of an arbitrary size. First query
 should have ``START`` option:
 
 ::
@@ -422,7 +422,7 @@ should have ``START`` option:
     select $table.* from $table, bingo.SearchRSub('$table', $query, '$parameters; TOP $n; START') t
        where $table.$id = t.id;
 
-After that you can get next portion of results by specifing last id,
+After that you can get next portion of results by specifying last id,
 returned by ``SearchSub`` function:
 
 ::
@@ -750,7 +750,7 @@ To check the whole table you can use ``CheckMoleculeTable`` and
 ``CheckReactionTable`` functions. It is much faster to check the whole
 table then to check each molecule one by one.
 
-The following command checkes the table for invalid molecules/reactions:
+The following command checks the table for invalid molecules/reactions:
 
 ::
 
@@ -825,7 +825,7 @@ To find out the log file location you can call:
 
     exec bingo._WriteLog 'Some text'
 
-This procedure adds specifed text to the log file and prints to the
+This procedure adds specified text to the log file and prints to the
 output path to the log file.
 
 All operation of Bingo is logged. All error and warning messages (not

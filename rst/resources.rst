@@ -1,6 +1,11 @@
 ﻿Resources
 =========
 
+.. toctree::
+    :hidden:
+
+    resources
+
 Algorithms
 ----------
 
@@ -10,7 +15,7 @@ Inc. introduced this technique, and it is described in the following
 Bingo fingerprints, as compared to Daylight fingerprints, are built not
 from bond paths, but from trees and rings. A Russian article describes
 the `enumeration of
-subtrees <http://shmat-razum.blogspot.com/2008/11/blog-%0Apost.html>`__,
+subtrees <http://shmat-razum.blogspot.com/2008/11/blog-post.html>`__,
 which in turn is based on `reverse
 search <http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.26.4487>`__
 by David Avis and Komei Fukuda.
@@ -38,7 +43,7 @@ optimizations were not included. There is also a
 of the algorithm in Russian.
 
 For the affine transformation matching, `Wolfgang Kabsch's
-algorithm <http://scripts.iucr.org/cgi-%0Abin/paper?S0567739476001873>`__
+algorithm <http://scripts.iucr.org/cgi-bin/paper?S0567739476001873>`__
 was implemented.
 
 In internal molecule and reaction formats, the
@@ -52,8 +57,7 @@ algorithm <http://cdk.sourcearchive.com/documentation/1:1.0.2-2/dir_fc89e4c1c81c
 Kerbosh <http://portal.acm.org/citation.cfm?id=362367>`__). For the
 approximate maximum common substructure search, the
 `2DOM <http://ci.nii.ac.jp/naid/110003210164/>`__ algorithm with some
-modifications was implemented. A `Russian
-paper <assets/mcs_article.pdf>`__ describes both algorithms.
+modifications was implemented. A :download:`Russian paper <assets/mcs_article.pdf>` describes both algorithms.
 
 Oracle Interface
 ----------------
@@ -76,7 +80,7 @@ system-wide installation of ``libcairo`` must be present as well
 can install it using `MacPorts <http://www.macports.org/>`__. The 32-bit
 and 64-bit Windows builds of Cairo are included in the source tree. They
 can be downloaded from
-`GTK <http://www.gtk.org/download-windows.html>`__ and
+`GTK <http://www.gtk.org/download/index.php>`__ and
 `GNOME <http://ftp.gnome.org/pub/GNOME/binaries/win64/dependencies/>`__
 project sites, respectively. Binaries of
 `libpng <http://www.libpng.org/pub/png/libpng.html>`__,
@@ -94,7 +98,7 @@ SMILES <http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html>`__,
 `ChemAxon SMILES
 extensions <http://www.chemaxon.com/marvin/help/formats/cxsmiles-doc.html>`__,
 and `MDL (Symyx)
-Molfiles <http://www.symyx.com/downloads/public/ctfile/ctfile.jsp>`__.
+Molfiles <http://infochim.u-strasbg.fr/recherche/Download/Fragmentor/MDL_SDF.pdf>`__.
 
 Web standards
 -------------
@@ -120,11 +124,9 @@ contains some examples of small utilities written using Indigo C++ API.
 Development Tools
 -----------------
 
-We use `NetBeans 6.8 <http://www.netbeans.org/>`__ on Linux
-workstations, `Microsoft Visual Studio
-2008 <http://msdn.microsoft.com/hi-in/vstudio/default.aspx>`__ on
-Windows workstations, and `XCode
-3.2 <http://developer.apple.com/tools/xcode/>`__ on Mac OS X
+For building projects `CMake <http://www.cmake.org/>`__ is used. We use `NetBeans <http://www.netbeans.org/>`__ on Linux
+workstations, `Microsoft Visual Studio <http://msdn.microsoft.com/hi-in/vstudio/default.aspx>`__ on
+Windows workstations, and `XCode <http://developer.apple.com/tools/xcode/>`__ on Mac OS X
 workstations.
 
 Commercial availability

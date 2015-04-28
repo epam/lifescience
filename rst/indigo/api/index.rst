@@ -6,7 +6,6 @@ API
     :includehidden:
 
     c
-    options
 
 Overview
 --------
@@ -18,8 +17,12 @@ development, and can always post your `comments and
 suggestions <../../contact.html#feedback-on-open-source-software>`__ to
 our team.
 
-System
+Basics
 ------
+
+
+System
+~~~~~~
 
 Indigo acts like a state machine that consists of:
 
@@ -58,7 +61,7 @@ those who are interested in plain C interface, please read the `C
 API <c.html>`__ page.
 
 Indigo Constructor
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Java:
 
@@ -70,7 +73,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     using com.ggasoftware.indigo;
     ....
@@ -89,31 +92,34 @@ in the directory where ``indigo.py`` is located. In C# and Java, the
 binaries are unpacked automatically into the system temporary folder.
 
 Getting the Version String
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can use the ``Indigo.version`` method to get the string containing
 the Indigo library version number.
 
 Java:
 
-::
+.. code-block:: java
 
     System.out.println("Indigo version " + indigo.version());
 
-| C#:
+C#:
 
-::
+.. code-block:: csharp
 
     System.Console.WriteLine("Indigo version " + indigo.version());
 
 Python:
 
-::
+.. code-block:: python
 
     print "Indigo version " + indigo.version()
 
+Molecules
+---------
+
 Loading Molecules and Query Molecules
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``Indigo`` object provides methods for loading `molecules and query
 molecules <../concepts/index.html#molecules-and-query-molecules>`__
@@ -123,7 +129,7 @@ are special methods.
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject mol1 = indigo.loadMolecule("ONc1cccc1");
     IndigoObject mol2 = indigo.loadMoleculeFromFile("structure.mol");
@@ -135,7 +141,7 @@ Java and C#:
 Python: the same with the ``IndigoObject`` omitted.
 
 Instrumenting Molecules
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 You can programmatically add atoms and bonds to a molecule. Atoms can be
 added with the ``addAtom`` method of the molecule. This method accepts
@@ -147,7 +153,7 @@ bond. You can also create an empty molecule by calling the
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject mol = indigo.createMolecule();
     IndigoObject atom1 = mol.addAtom("C");
@@ -168,7 +174,7 @@ You can programmatically construct a query molecule via
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject qmol = indigo.createQueryMolecule()
     IndigoObject a1 = qmol.addAtom("C")
@@ -195,11 +201,11 @@ To add R-sites or convert existing atom into R-site you can use
     atom2.setRSite("R4")
 
 Instrumenting Query Atoms
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each atom and bond in the query molecule represents as a logic
-expression of various properties. Inidgo support almost all constraints
-from the SMARTS specification. To alter existing contrains you can use
+expression of various properties. Indigo support almost all constraints
+from the SMARTS specification. To alter existing constraints you can use
 the following methods:
 
 -  ``addConstraint(type, value)`` — adds a specified constraint using
@@ -253,7 +259,7 @@ of the first molecule that was transferred from the second molecule.
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject mol = indigo.loadMolecule("c1ccccc1");
     IndigoObject mol2 = indigo.loadMolecule("ON");
@@ -282,12 +288,10 @@ Similarly, the ``IndigoObject.createEdgeSubmolecule`` method accepts two
 arrays — atom indices and bond indices — and returns a new molecule
 containing the given atoms and bonds copied from the molecule.
 
-Indigo allowes to create a reference on a submolecule of a molecule with
+Indigo allows to create a reference on a submolecule of a molecule with
 method ``IndigoObject.getSubmolecule``. Such molecule can be later used
 for finding layout of a molecule part.
 
-Accessing Molecules
--------------------
 
 Accessing Atoms and Bonds
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -314,7 +318,7 @@ information:
 -  ``isotope`` — returns the isotope value or zero if the atomic number
    is undefined or ambiguous.
 -  ``degree`` — returns explicit atom degree.
--  ``charge`` — returns the chagre value or ``null`` if the charge is
+-  ``charge`` — returns the charge value or ``null`` if the charge is
    undefined (can happens only on queries).
 -  ``explicitValence`` — returns the explicit valence or ``null`` if
    there is no explicit valence.
@@ -334,7 +338,7 @@ information:
 -  ``symbol`` — returns a string containing the atom symbol. It is
    either a symbol the periodic table ("C", "Na"), or a pseudoatom label
    ("Res"), or an R-site mark ("R1").
--  ``xyz`` —returns an aray of three ``float`` numbers, which define the
+-  ``xyz`` —returns an array of three ``float`` numbers, which define the
    position of the atom.
 -  ``singleAllowedRGroup`` — R-Group index allowed on R-Site (usually
    there is a single allowed index). This method can be applied
@@ -379,7 +383,7 @@ which returns the bond connecting the atom with the neighbor.
 
 Java:
 
-::
+.. code-block:: java
 
     for (IndigoObject atom : mol.iterateAtoms())
     {
@@ -390,7 +394,7 @@ Java:
 
 | C#:
 
-::
+.. code-block:: csharp
 
     foreach (IndigoObject atom in mol.iterateAtoms())
     {
@@ -401,7 +405,7 @@ Java:
 
 Python:
 
-::
+.. code-block:: python
 
     for atom in mol.iterateAtoms():
       print "atom %d: %d neighbors" % (atom.index(), atom.degree())
@@ -419,7 +423,7 @@ which in turn can be accessed via the ``iterateRGroupFragments`` method.
 
 Java:
 
-::
+.. code-block:: java
 
     for (IndigoObject rg : mol.iterateRGroups())
     {
@@ -433,7 +437,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     foreach (IndigoObject rg in mol.iterateRGroups())
     {
@@ -447,7 +451,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     for rg in mol.iterateRGroups():
       print "RGROUP #" + rg.index()
@@ -455,8 +459,271 @@ Python:
          print "  FRAGMENT #" + rg.index()
          print frag.molfile()
 
-Calculating Molecule Properties
--------------------------------
+
+
+Saving Molecules
+~~~~~~~~~~~~~~~~
+
+``IndigoObject.smiles``, when applied to a molecule, returns a SMILES
+string. Similarly, ``IndigoObject.molfile`` returns a string with a
+Molfile, while ``IndigoObject.cml`` returns a string with CML
+representation. ``IndigoObject.saveMolfile`` and
+``IndigoObject.saveCml`` methods save Molfile and CML to disk.
+
+Java:
+
+.. code-block:: java
+
+    System.out.println(mol1.molfile());
+    System.out.println(mol2.smiles());
+    qmol1.saveMolfile("query.mol");
+
+C#:
+
+.. code-block:: csharp
+
+    System.Console.WriteLine(mol1.molfile());
+    System.Console.WriteLine(mol2.smiles());
+    qmol1.saveMolfile("query.mol");
+
+Python:
+
+.. code-block:: python
+
+    print mol1.molfile()
+    print mol2.smiles()
+    qmol1.saveMolfile("query.mol")
+
+Reactions
+---------
+
+Loading Reactions and Query Reactions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Java and C#:
+
+.. code-block:: csharp
+
+    IndigoObject rxn1 = indigo.loadReaction("[I-].[Na+].C=CCBr>>[Na+].[Br-].C=CCI");
+    IndigoObject rxn2 = indigo.loadReactionFromFile("reaction.rxn");
+    IndigoObject qrxn1 = indigo.loadQueryReaction("CBr>>CCl");
+    IndigoObject qrxn2 = indigo.loadQueryReactionFromFile("query.rxn");
+    IndigoObject rs    = indigo.loadReactionSmarts("[C$(CO)]>>[C$(CN)]");
+    IndigoObject rs2   = indigo.loadReactionSmartsFromFile("query.sma");
+
+Python: the same with the ``IndigoObject`` omitted.
+
+Instrumenting Reactions
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``Indigo.createReaction`` method returns an empty reaction. The
+``Indigo.createQueryReaction`` method returns an empty query reaction.
+The ``IndigoObject.addReactant``, ``IndigoObject.addProduct``, and
+``IndigoObject.addCatalyst`` methods can then be used to fill it up.
+
+Java and C#:
+
+.. code-block:: csharp
+
+    IndigoObject rxn = indigo.createReaction();
+    rxn.addReactant(mol1);
+    rxn.addReactant(mol2);
+    rxn.addProduct(indigo.loadMolecule("ClC1CCCCC1));
+
+Python: the same with the ``IndigoObject`` omitted.
+
+Accessing Reactions
+~~~~~~~~~~~~~~~~~~~
+
+Reactions respond to the following ``IndigoObject`` methods:
+
+-  ``IndigoObject.iterateReactants`` — enumerates reactants
+-  ``IndigoObject.iterateProducts`` — enumerates products
+-  ``IndigoObject.iterateCatalysts`` — enumerates catalysts
+-  ``IndigoObject.iterateMolecules`` — enumerates reactants, products,
+   and catalysts, in no particular order
+-  ``IndigoObject.countReactants`` — returns the number of reactants
+-  ``IndigoObject.countProducts`` — returns the number of products
+-  ``IndigoObject.countCatalysts`` — returns the number of catalysts
+-  ``IndigoObject.countMolecules`` — returns the total number of
+   molecules in the reaction
+
+You can also call the ``IndigoObject.remove`` method of the reaction
+molecule to remove it from the reaction.
+
+Java:
+
+.. code-block:: java
+
+    System.out.println(rxn.countMolecules());
+    for (IndigoObject item : rxn.iterateReactants())
+       System.out.println(item.molfile());
+
+    for (IndigoObject item : rxn.iterateCatalysts())
+       item.remove();
+
+C#:
+
+.. code-block:: csharp
+
+    System.Console.WriteLine(rxn.countMolecules());
+    foreach (IndigoObject item in rxn.iterateReactants())
+       System.Console.WriteLine(item.molfile());
+
+    foreach (IndigoObject item in rxn.iterateCatalysts())
+       item.remove();
+
+Python:
+
+.. code-block:: python
+
+    print rxn.countMolecules()
+    for item in rxn.iterateReactants():
+       print item.molfile()
+
+    for item in rxn.iterateCatalysts():
+       item.remove();
+
+Saving Reactions
+~~~~~~~~~~~~~~~~
+
+The ``IndigoObject.smiles``, when applied to a reaction, returns a
+reaction SMILES string. Similarly, the ``IndigoObject.rxnfile`` returns
+a string with an Rxnfile. The ``IndigoObject.saveRxnfile`` method saves
+the Rxnfile to disk.
+
+Java:
+
+.. code-block:: java
+
+    System.out.println(rxn.smiles());
+    System.out.println(rxn.rxnfile());
+    rxn.saveRxnfile("reaction.rxn");
+
+C#:
+
+.. code-block:: csharp
+
+    System.Console.WriteLine(rxn.smiles());
+    System.Console.WriteLine(rxn.rxnfile());
+    rxn.saveRxnfile("reaction.rxn");
+
+Python:
+
+.. code-block:: python
+
+    print rxn.smiles()
+    print rxn.rxnfile()
+    rxn.saveRxnfile("reaction.rxn")
+
+Reacting Centers
+~~~~~~~~~~~~~~~~
+
+Reacting centers include bonds that are involved in the reaction. Indigo
+supports the following types of reacting centers:
+
+-  ``Indigo.RC_NOT_CENTER``
+-  ``Indigo.RC_UNMARKED``
+-  ``Indigo.RC_CENTER``
+-  ``Indigo.RC_UNCHANGED``
+-  ``Indigo.RC_MADE_OR_BROKEN``
+-  ``Indigo.RC_ORDER_CHANGED``
+
+These values are bit flags, and can be combined.
+``IndigoObject.reactingCenter`` and ``IndigoObject.setReactingCenter``
+are the getter and setter of the bond reacting center property.
+
+Python:
+
+.. code-block:: python
+
+    print("reacting centers:")
+    for m in rxn.iterateMolecules():
+        for b in m.iterateBonds():
+            print(rxn.reactingCenter(b))
+    for m in rxn.iterateMolecules():
+        for b in m.iterateBonds():
+            rxn.setReactingCenter(b, Indigo.RC_CENTER | Indigo.RC_UNCHANGED)
+
+The ``IndigoObject.correctReactingCenters`` method highlights bond
+reacting centers according to AAM.
+
+Java, C#, and Python:
+
+.. code-block:: python
+
+    rxn.automap("discard");
+    rxn.correctReactingCenters();
+
+Reaction Atom-to-Atom Mapping
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``IndigoObject.automap(mode [ignore_option])`` method is purposed
+for generating reaction atom-to-atom mapping (AAM). The method accepts a
+string parameter called ``mode``. The following modes are available:
+
+-  ``discard`` : discards the existing mapping entirely and considers
+   only the existing reaction centers (the default)
+-  ``keep`` : keeps the existing mapping and maps unmapped atoms
+-  ``alter`` : alters the existing mapping, and maps the rest of the
+   reaction but may change the existing mapping
+-  ``clear`` : removes the mapping from the reaction
+
+Java, C#, and Python:
+
+.. code-block:: python
+
+    rxn.automap("discard");
+    rxn.saveRxnfile("rxn_aam.rxn");
+    rxn.automap("clear");
+    rxn.saveSmiles("rxn_noaam.smi");
+
+The following options can be added after the ``discard``, ``keep`` or
+``alter`` modes (separated by a space):
+
+-  ``ignore_charges`` : do not consider atom charges while searching
+-  ``ignore_isotopes`` : do not consider atom isotopes while searching
+-  ``ignore_valence`` : do not consider atom valence while searching
+-  ``ignore_radicals`` : do not consider atom radicals while searching
+
+Python:
+
+.. code-block:: python
+
+    rxn.automap("alter ignore_charges")
+    for in rxn.iterateMolecules():
+        for atom in mol.iterateAtoms():
+            print("Atom %d %d" % atom.index(), atom.atomMappingNumber())
+    rxn.automap("alter ignore_charges ignore_valence")
+    ...
+
+The ``IndigoObject.clearAAM`` method resets current atom-to-atom
+mapping. Reaction atom has method ``IndigoObject.atomMappingNumber`` and
+``IndigoObject.setAtomMappingNumber`` to get and set atom-to-atom
+mapping manually.
+
+Java, C#, and Python:
+
+.. code-block:: python
+
+    rxn.clearAAM();
+    rxn.saveSmiles("rxn_noaam.smi");
+
+The ``aam-timeout`` indigo integer parameter (time in milliseconds)
+corresponds for the AAM algorithm working time. The AAM method returns a
+current state solution for a reaction when time is over.
+
+Java, C#, and Python:
+
+.. code-block:: python
+
+    indigo.setOption("aam-timeout", 500);
+    rxn.automap("discard");
+    rxn.saveSmiles("rxn_time.smi");
+
+
+Calculating Properties
+----------------------
 
 The following ``IndigoObject`` methods can be applied to a molecule or
 query molecule:
@@ -489,7 +756,7 @@ query molecule:
    Set of Smallest Rings (SSSR).
 
 Molecule Validation
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 Molecule validation can be done using the following methods:
 
@@ -500,7 +767,7 @@ These functions returns non-empty string description of found issues, or
 empty string if molecule is correct.
 
 Working with Connected Components
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can use the ``countComponents`` method to calculate the number of
 connected components in a structure. Via the ``componentIndex`` method,
@@ -518,7 +785,7 @@ a connected component, you should ``clone`` it.
 
 Java:
 
-::
+.. code-block:: java
 
     System.out.printf("%d components\n", mol.countComponents());
 
@@ -540,7 +807,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     System.Console.WriteLine("{0} components", mol.countComponents());
 
@@ -561,7 +828,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     print mol.countComponents(), 'components'
 
@@ -578,288 +845,37 @@ Python:
       print atom.index()
 
 Canonical SMILES
-----------------
+~~~~~~~~~~~~~~~~
 
 ``IndigoObject.canonicalSmiles`` method computes the canonical SMILES
-(also known as absolute SMILES) string for a molecule.
+(also known as absolute SMILES) string for either molecule or reaction.
 
 Java:
 
-::
+.. code-block:: java
 
-    System.out.println(mol2.canonicalSmiles());
-
-C#:
-
-::
-
-    System.Console.WriteLine(mol2.canonicalSmiles());
-
-Python:
-
-::
-
-    print mol2.canonicalSmiles()
-
-Saving Molecules
-----------------
-
-``IndigoObject.smiles``, when applied to a molecule, returns a SMILES
-string. Similarly, ``IndigoObject.molfile`` returns a string with a
-Molfile, while ``IndigoObject.cml`` returns a string with CML
-representation. ``IndigoObject.saveMolfile`` and
-``IndigoObject.saveCml`` methods save Molfile and CML to disk.
-
-Java:
-
-::
-
-    System.out.println(mol1.molfile());
-    System.out.println(mol2.smiles());
-    qmol1.saveMolfile("query.mol");
+    System.out.println(mol.canonicalSmiles());
+    System.out.println(rxn.canonicalSmiles());
 
 C#:
 
-::
+.. code-block:: csharp
 
-    System.Console.WriteLine(mol1.molfile());
-    System.Console.WriteLine(mol2.smiles());
-    qmol1.saveMolfile("query.mol");
-
-Python:
-
-::
-
-    print mol1.molfile()
-    print mol2.smiles()
-    qmol1.saveMolfile("query.mol")
-
-Loading Reactions and Query Reactions
--------------------------------------
-
-Java and C#:
-
-::
-
-    IndigoObject rxn1 = indigo.loadReaction("[I-].[Na+].C=CCBr>>[Na+].[Br-].C=CCI");
-    IndigoObject rxn2 = indigo.loadReactionFromFile("reaction.rxn");
-    IndigoObject qrxn1 = indigo.loadQueryReaction("CBr>>CCl");
-    IndigoObject qrxn2 = indigo.loadQueryReactionFromFile("query.rxn");
-    IndigoObject rs    = indigo.loadReactionSmarts("[C$(CO)]>>[C$(CN)]");
-    IndigoObject rs2   = indigo.loadReactionSmartsFromFile("query.sma");
-
-Python: the same with the ``IndigoObject`` omitted.
-
-Instrumenting Reactions
------------------------
-
-The ``Indigo.createReaction`` method returns an empty reaction. The
-``Indigo.createQueryReaction`` method returns an empty query reaction.
-The ``IndigoObject.addReactant``, ``IndigoObject.addProduct``, and
-``IndigoObject.addCatalyst`` methods can then be used to fill it up.
-
-Java and C#:
-
-::
-
-    IndigoObject rxn = indigo.createReaction();
-    rxn.addReactant(mol1);
-    rxn.addReactant(mol2);
-    rxn.addProduct(indigo.loadMolecule("ClC1CCCCC1));
-
-Python: the same with the ``IndigoObject`` omitted.
-
-Accessing Reactions
--------------------
-
-Reactions respond to the following ``IndigoObject`` methods:
-
--  ``IndigoObject.iterateReactants`` — enumerates reactants
--  ``IndigoObject.iterateProducts`` — enumerates products
--  ``IndigoObject.iterateCatalysts`` — enumerates catalysts
--  ``IndigoObject.iterateMolecules`` — enumerates reactants, products,
-   and catalysts, in no particular order
--  ``IndigoObject.countReactants`` — returns the number of reactants
--  ``IndigoObject.countProducts`` — returns the number of products
--  ``IndigoObject.countCatalysts`` — returns the number of catalysts
--  ``IndigoObject.countMolecules`` — returns the total number of
-   molecules in the reaction
-
-You can also call the ``IndigoObject.remove`` method of the reaction
-molecule to remove it from the reaction.
-
-Java:
-
-::
-
-    System.out.println(rxn.countMolecules());
-    for (IndigoObject item : rxn.iterateReactants())
-       System.out.println(item.molfile());
-
-    for (IndigoObject item : rxn.iterateCatalysts())
-       item.remove();
-
-C#:
-
-::
-
-    System.Console.WriteLine(rxn.countMolecules());
-    foreach (IndigoObject item in rxn.iterateReactants())
-       System.Console.WriteLine(item.molfile());
-
-    foreach (IndigoObject item in rxn.iterateCatalysts())
-       item.remove();
+    System.Console.WriteLine(mol.canonicalSmiles());
+    System.Console.WriteLine(rxn.canonicalSmiles());
 
 Python:
 
-::
+.. code-block:: python
 
-    print rxn.countMolecules()
-    for item in rxn.iterateReactants():
-       print item.molfile()
+    print mol.canonicalSmiles()
+    print rxn.canonicalSmiles()
 
-    for item in rxn.iterateCatalysts():
-       item.remove();
+Please see the :ref:`indigo-example-canonical-smiles` for detailed examples
 
-Saving Reactions
-----------------
-
-The ``IndigoObject.smiles``, when applied to a reaction, returns a
-reaction SMILES string. Similarly, the ``IndigoObject.rxnfile`` returns
-a string with an Rxnfile. The ``IndigoObject.saveRxnfile`` method saves
-the Rxnfile to disk.
-
-Java:
-
-::
-
-    System.out.println(rxn.smiles());
-    System.out.println(rxn.rxnfile());
-    rxn.saveRxnfile("reaction.rxn");
-
-C#:
-
-::
-
-    System.Console.WriteLine(rxn.smiles());
-    System.Console.WriteLine(rxn.rxnfile());
-    rxn.saveRxnfile("reaction.rxn");
-
-Python:
-
-::
-
-    print rxn.smiles()
-    print rxn.rxnfile()
-    rxn.saveRxnfile("reaction.rxn")
-
-Reacting Centers
-----------------
-
-Reacting centers include bonds that are involded in the reaction. Indigo
-supports the following types of reacting centers:
-
--  ``Indigo.RC_NOT_CENTER``
--  ``Indigo.RC_UNMARKED``
--  ``Indigo.RC_CENTER``
--  ``Indigo.RC_UNCHANGED``
--  ``Indigo.RC_MADE_OR_BROKEN``
--  ``Indigo.RC_ORDER_CHANGED``
-
-These values are bit flags, and can be combinded.
-``IndigoObject.reactingCenter`` and ``IndigoObject.setReactingCenter``
-are the getter and setter of the bond reacting center property.
-
-Python:
-
-::
-
-    print("reacting centers:")
-    for m in rxn.iterateMolecules():
-        for b in m.iterateBonds():
-            print(rxn.reactingCenter(b))
-    for m in rxn.iterateMolecules():
-        for b in m.iterateBonds():
-            rxn.setReactingCenter(b, Indigo.RC_CENTER | Indigo.RC_UNCHANGED)
-
-The ``IndigoObject.correctReactingCenters`` method highlights bond
-reacting centers according to AAM.
-
-Java, C#, and Python:
-
-::
-
-    rxn.automap("discard");
-    rxn.correctReactingCenters();
-
-Reaction Atom-to-Atom Mapping
------------------------------
-
-The ``IndigoObject.automap(mode [ignore_option])`` method is purposed
-for generating reaction atom-to-atom mapping (AAM). The method accepts a
-string parameter called ``mode``. The following modes are available:
-
--  ``discard`` : discards the existing mapping entirely and considers
-   only the existing reaction centers (the default)
--  ``keep`` : keeps the existing mapping and maps unmapped atoms
--  ``alter`` : alters the existing mapping, and maps the rest of the
-   reaction but may change the existing mapping
--  ``clear`` : removes the mapping from the reaction
-
-Java, C#, and Python:
-
-::
-
-    rxn.automap("discard");
-    rxn.saveRxnfile("rxn_aam.rxn");
-    rxn.automap("clear");
-    rxn.saveSmiles("rxn_noaam.smi");
-
-The following options can be added after the ``discard``, ``keep`` or
-``alter`` modes (separated by a space):
-
--  ``ignore_charges`` : do not consider atom charges while searching
--  ``ignore_isotopes`` : do not consider atom isotopes while searching
--  ``ignore_valence`` : do not consider atom valence while searching
--  ``ignore_radicals`` : do not consider atom radicals while searching
-
-Python:
-
-::
-
-    rxn.automap("alter ignore_charges")
-    for in rxn.iterateMolecules():
-        for atom in mol.iterateAtoms():
-            print("Atom %d %d" % atom.index(), atom.atomMappingNumber())
-    rxn.automap("alter ignore_charges ignore_valence")
-    ...
-
-The ``IndigoObject.clearAAM`` method resets current atom-to-atom
-mapping. Reaction atom has method ``IndigoObject.atomMappingNumber`` and
-``IndigoObject.setAtomMappingNumber`` to get and set atom-to-atom
-mapping manually.
-
-Java, C#, and Python:
-
-::
-
-    rxn.clearAAM();
-    rxn.saveSmiles("rxn_noaam.smi");
-
-The ``aam-timeout`` indigo integer parameter (time in milliseconds)
-corresponds for the AAM algorithm working time. The AAM method returns a
-current state solution for a reaction when time is over.
-
-Java, C#, and Python:
-
-::
-
-    indigo.setOption("aam-timeout", 500);
-    rxn.automap("discard");
-    rxn.saveSmiles("rxn_time.smi");
 
 Attachment points
------------------
+~~~~~~~~~~~~~~~~~
 
 Every molecule can have many attachment points. They are grouped by
 order - the number of connections. For example, a molecule can have 2
@@ -869,12 +885,12 @@ for working with attachment points:
 
 -  ``clearAttachmentPoints`` resets all the attachment points.
 -  ``countAttachmentPoints`` returns maximal order of attachment points.
--  ``iterateAttachmentPoints(order)`` iterates atoms corresposing to the
+-  ``iterateAttachmentPoints(order)`` iterates atoms corresponding to the
    attachment points with the same specified order.
 
 Python:
 
-::
+.. code-block:: python
 
     count = mol.countAttachmentPoints()
     print("%s Number of attachment points: %s" % (offset, count))
@@ -883,34 +899,35 @@ Python:
             print("%s   Index: %d. Order %d" % (offset, a.index(), order))
      mol.clearAttachmentPoints()
 
+
 Layout (2D coordinates)
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``IndigoObject.layout`` method performs the cleanup of the object it
 is applied to by computing atoms 2D coordinates.
 
 Java, C#, and Python:
 
-::
+.. code-block:: python
 
     mol.layout();
     rxn.layout();
 
 Aromaticity
------------
+~~~~~~~~~~~
 
 The ``IndigoObject.aromatize`` and ``IndigoObject.dearomatize`` methods
 convert molecules/reactions to aromatic and Kekule forms respectively.
 
 Java, C#, and Python:
 
-::
+.. code-block:: python
 
     mol1.dearomatize();
     rxn.aromatize();
 
 Implicit and Explicit Hydrogens
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Indigo does not change the representation of the hydrogens
 automatically. If the hydrogens in the input structure or reaction are
@@ -925,7 +942,7 @@ methods.
 
 Java, C#, and Python:
 
-::
+.. code-block:: python
 
     mol.unfoldHydrogens();
     mol.foldHydrogens();
@@ -933,7 +950,7 @@ Java, C#, and Python:
     rxn.foldHydrogens();
 
 Stereochemistry
----------------
+~~~~~~~~~~~~~~~
 
 The following methods of ``IndigoObject`` are available for accessing
 molecule's stereo configuration:
@@ -990,7 +1007,7 @@ intact when converting to/from SMILES:
 
 Java:
 
-::
+.. code-block:: java
 
       IndigoObject mol = indigo.loadMolecule("chiral.mol");
 
@@ -1012,7 +1029,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
       IndigoObject mol = indigo.loadMolecule("chiral.mol");
 
@@ -1034,7 +1051,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
       IndigoObject mol = indigo.loadMolecule("chiral.mol");
 
@@ -1052,8 +1069,69 @@ Python:
       mol.clearCisTrans()
       print mol.smiles()
 
+Enumeration of Submolecules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Indigo provides methods to enumerate submolecules of different kinds,
+namely:
+
+-  Smallest Set of Smallest Rings (SSSR) — ``iterateSSSR``.
+-  All rings of size within a given interval — ``iterateRings``. The
+   method accepts the minimum and maximum amounts of the rings' atoms.
+-  All subtrees of size within a given interval — ``iterateSubtrees``.
+   The method accepts the minimum and maximum amounts of the subtrees'
+   atoms.
+-  All edge submolecules of size within a given interval —
+   ``iterateEdgeSubmolecules``. The method accepts the minimum and
+   maximum amounts of the submolecules' edges.
+
+The "submolecule" objects returned by these methods respond to the
+``countAtoms``, ``countBonds``, ``iterateAtoms``, and ``iterateBonds``
+calls. However, they can not be used as molecules. If you want to have a
+separate molecule representing the obtained submolecule, you should
+``clone`` it.
+
+Java:
+
+.. code-block:: java
+
+    for (IndigoObject submol : mol.iterateEdgeSubmolecules(1, mol.countBonds())
+    {
+      System.out.printf("submolecule #%d: %s\n", submol.index(), submol.clone().smiles());
+      for (IndigoObject atom : item.iterateAtoms())
+        System.out.printf("%d ", atom.index());
+      System.out.printf("\n");
+      for (IndigoObject bond : item.iterateBonds())
+        System.out.printf("%d ", bond.index());
+      System.out.printf("\n");
+    }
+
+C#:
+
+.. code-block:: csharp
+
+    foreach (IndigoObject item in mol.iterateEdgeSubmolecules(1, mol.countAtoms()))
+    {
+      System.Console.WriteLine("{0} {1}", item.index(), item.clone().smiles());
+      foreach (IndigoObject atom in item.iterateAtoms())
+        System.Console.Write("{0} ", atom.index());
+      System.Console.WriteLine();
+      foreach (IndigoObject bond in item.iterateBonds())
+        System.Console.Write("{0} ", bond.index());
+      System.Console.WriteLine();
+    }
+
+Python:
+
+.. code-block:: python
+
+    for submol in mol.iterateEdgeSubmolecules(1, mol.countBonds()):
+      print "submolecule", submol.index(), ":", submol.clone().smiles())
+      print [atom.index() for atom in item.iterateAtoms()]
+      print [bond.index() for bond in item.iterateBonds()]
+
 Groups
-------
+~~~~~~
 
 In a molecule loaded from a Molfile, arbitrary subsets of a its atoms
 and bonds can be joined in groups. There are many kinds of groups,
@@ -1087,7 +1165,7 @@ responds to ``IndigoObject.iterateAtoms`` and
 
 Java:
 
-::
+.. code-block:: java
 
     for (IndigoObject dsg : mol.iterateDataSGroups())
     {
@@ -1098,7 +1176,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     foreach (IndigoObject dsg in mol.iterateDataSGroups())
     {
@@ -1109,7 +1187,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     for dsg in mol.iterateDataSGroups():
        print "data sgroup", dsg.index()
@@ -1130,8 +1208,158 @@ To add a superatom use ``IndigoObject.addSuperatom()`` method:
 
     mol.addSuperatom(list_with_atom_indices, "Abbreviation")
 
-Reading SDF, RDF, CML, multiline SMILES files
----------------------------------------------
+
+
+
+Alignment of Atoms
+~~~~~~~~~~~~~~~~~~
+
+The ``IndigoObject.alignAtoms`` method can be used to calculate and
+apply the transformation (scale + rotation + translation) of a
+molecule so that some subset of its atoms will become as close as
+possible to the desired positions. The method accepts an integer array
+of atom indices and a float array of desired coordinates (three times
+bigger that the array of indices, storing resired x,y,z coordinates for
+each atom).
+
+Java:
+
+.. code-block:: java
+
+      IndigoObject query = indigo.loadSmarts("[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2");
+      int[] atoms = new int[query.countAtoms()];
+      float[] xyz = new float[query.countAtoms() * 3];
+
+      for (IndigoObject structure : indigo.iterateSDFile("structures.sdf.gz"))
+      {
+         IndigoObject match = indigo.substructureMatcher(structure).match(query);
+         int i = 0;
+
+         if (structure.index() == 0)
+            for (IndigoObject atom : query.iterateAtoms())
+               System.arraycopy(match.mapAtom(atom).xyz(), 0, xyz, i++ * 3, 3);
+         else
+         {
+            for (IndigoObject atom : query.iterateAtoms())
+               atoms[i++] = match.mapAtom(atom).index();
+
+            structure.alignAtoms(atoms, xyz);
+         }
+      }
+
+C#:
+
+.. code-block:: csharp
+
+    IndigoObject query = indigo.loadSmarts("[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2");
+    int[] atoms = new int[query.countAtoms()];
+    float[] xyz = new float[query.countAtoms() * 3];
+
+    foreach (IndigoObject structure in indigo.iterateSDFile("structures.sdf.gz"))
+    {
+       IndigoObject match = indigo.substructureMatcher(structure).match(query);
+       int i = 0;
+
+       if (structure.index() == 0)
+          foreach (IndigoObject atom in query.iterateAtoms())
+             Array.Copy(match.mapAtom(atom).xyz(), 0, xyz, i++ * 3, 3);
+       else
+       {
+          foreach (IndigoObject atom in query.iterateAtoms())
+          atoms[i++] = match.mapAtom(atom).index();
+
+          structure.alignAtoms(atoms, xyz);
+       }
+    }
+
+Python:
+
+.. code-block:: python
+
+    query = indigo.loadSmarts("[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2");
+    xyz = []
+    for structure in indigo.iterateSDFile("structures.sdf.gz"):
+      match = indigo.substructureMatcher(structure).match(query)
+      if structure.index() == 0:
+        for atom in query.iterateAtoms():
+          xyz.extend(match.mapAtom(atom).xyz())
+      else:
+        atoms = []
+        for atom in query.iterateAtoms():
+          atoms.append(match.mapAtom(atom).index())
+        structure.alignAtoms(atoms, xyz);
+
+
+InChI
+~~~~~
+
+InChI support is done via IndigoInchi plugin. To work with the InChI
+plugin in C#/Java/Python wrappers, one needs to create an instance of
+IndigoInchi, passing an existing Indigo instance to it.
+
+Use ``IndigoInchi.loadMolecule`` method to convert InChI strings to a
+molecule, and ``IndigoInchi.getInchi`` method for the reverse operation.
+
+Python:
+
+.. code-block:: python
+
+    indigo_inchi = IndigoInchi(indigo);
+
+    print(indigo_inchi.version())
+    m = indigo_inchi.loadMolecule("InChI=1S/C10H20N2O2/c11-7-1-5-2-8(12)10(14)4-6(5)3-9(7)13/h5-10,13-14H,1-4,11-12H2")
+    print(m.canonicalSmiles())
+    print(indigo_inchi.getInchi(m))
+    print(indigo_inchi.getWarning())
+
+    m = indigo.loadMolecule("C1CCCCCCC1")
+    print(indigo_inchi.getInchi(m))
+
+Options
+^^^^^^^
+
+You can pass any options supported by the official InChI library via
+``inchi-options`` option:
+
+.. code-block:: python
+
+    indigo.setOption("inchi-options", "/DoNotAddH /SUU /SLUUD")
+
+One can use both ``-`` and ``/`` prefix for them:
+
+.. code-block:: python
+
+    indigo.setOption("inchi-options", "-DoNotAddH /SUU -SLUUD")
+
+
+Standardize of Molecule
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``IndigoObject.standardize`` method can be used to the "standardizing"
+of the molecule or query (stereo, charges, geometry, valences, atoms and bonds properties)
+in accordance with requirements. The list of applied modifications is defined by
+options activated in Indigo (full list of available standardize options is described
+in the corresponding `Options <../options/standardize.html>`__ section).
+
+**Note:** in the case of activation multiple options the order of applied modifications
+corresponds to the order of the options in the list of available options
+
+Java, C#, and Python:
+
+.. code-block:: python
+
+    indigo.setOption("standardize-stereo", true);
+    indigo.setOption("standardize-charges", true);
+    mol.standardize();
+
+
+IO
+--
+
+.. _indigo-api-io-reading-files:
+
+Reading SDF, RDF, CML, multiline SMILES files, CDX (binary)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following methods of the ``Indigo`` class can be used to enumerate
 files with multiple molecules/reactions:
@@ -1140,24 +1368,25 @@ files with multiple molecules/reactions:
 -  ``iterateRDFile``
 -  ``iterateSmilesFile``
 -  ``iterateCMLFile``
+-  ``iterateCDXFile``
 
 Java:
 
-::
+.. code-block:: java
 
     for (IndigoObject item : indigo.iterateSDFile("structures.sdf"))
        System.out.println(item.grossFormula());
 
 C#:
 
-::
+.. code-block:: csharp
 
     foreach (IndigoObject item in indigo.iterateSDFile("structures.sdf"))
        System.Console.WriteLine(item.grossFormula());
 
 Python:
 
-::
+.. code-block:: python
 
     for item in indigo.iterateSDFile("structures.sdf"):
        print item.grossFormula()
@@ -1170,7 +1399,7 @@ You can access items from SDF/RDF/CML/SMILES files by index, using the
 
 Java, C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject reader = indigo.iterateSDFile("structures.sdf");
     String s = reader.at(15).smiles()
@@ -1178,10 +1407,10 @@ Java, C#:
 Python: the same with the ``IndigoObject`` and ``String`` omitted.
 
 Accessing Molecule and Reaction Properties
-------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Names
-~~~~~
+^^^^^
 
 Molecule or reaction name is associated with the first line of the
 Molfile/Rxnfile the molecule/reaction was loaded from. In case it was
@@ -1193,7 +1422,7 @@ setter of the molecule/reaction name.
 
 Java, C#:
 
-::
+.. code-block:: csharp
 
     String name = mol2.name();
     mol2.setName("another name");
@@ -1201,11 +1430,11 @@ Java, C#:
 
 Python: the same with the ``IndigoObject`` and ``String`` omitted.
 
-SDF/RDF Properties
-~~~~~~~~~~~~~~~~~~
+SDF/RDF/CDX Properties
+^^^^^^^^^^^^^^^^^^^^^^
 
 The following methods are used to get the named properties of the
-molecule/reaction loaded from an SDF or RDF file:
+molecule/reaction loaded from an SDF or RDF or CDX file:
 
 -  ``IndigoObject.hasProperty`` (boolean) — checks if the object has the
    given property.
@@ -1215,9 +1444,11 @@ molecule/reaction loaded from an SDF or RDF file:
 -  ``IndigoObject.removeProperty`` — removes the given property from the
    object, or does nothing in case the object does not have it.
 
+-  **Note:** currently CDX annotations are used as CDX properties
+
 Java:
 
-::
+.. code-block:: java
 
     for (IndigoObject item : indigo.iterateSDFile("structures.sdf"))
        if (item.hasProperty("cdbregno"))
@@ -1225,7 +1456,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     foreach (IndigoObject item in indigo.iterateSDFile("structures.sdf"))
        if (item.hasProperty("cdbregno"))
@@ -1233,18 +1464,18 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     for item in indigo.iterateSDFile("structures.sdf"):
        if item.hasProperty("cdbregno"):
           print item.getProperty("cdbregno")
 
 It is also possible to iterate over all properties of a particular
-record in SDF or RDF file.
+record in SDF or RDF or CDX file.
 
 Java:
 
-::
+.. code-block:: java
 
     for (IndigoObject item : indigo.iterateRDfile("reactions.rdf"))
        for (IndigoObject prop : item.iterateProperties())
@@ -1252,7 +1483,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     foreach (IndigoObject item in indigo.iterateRDfile("reactions.rdf"))
        foreach (IndigoObject prop in item.iterateProperties())
@@ -1260,14 +1491,11 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     for item in indigo.iterateRDFile("reactions.rdf"):
        for prop in item.iterateProperties():
           print prop.name(), ":", prop.rawData()
-
-Writing Multiple Molecules or Reactions to a File
--------------------------------------------------
 
 Writing SDF Files
 ~~~~~~~~~~~~~~~~~
@@ -1277,7 +1505,7 @@ properties assigned.
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject saver = indigo.writeFile("structures.sdf");
 
@@ -1301,7 +1529,7 @@ called exactly once before anything is written into the RDF file.
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject f = indigo.writeFile("test.rdf");
     f.rdfHeader();
@@ -1322,7 +1550,7 @@ be called after all the molecules has been written.
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject f = indigo.writeFile("structures.cml");
     f.cmlHeader();
@@ -1337,7 +1565,7 @@ Writing Multiline SMILES Files
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject f = indigo.writeFile("test.smi");
     f.smilesAppend(mol);
@@ -1405,7 +1633,7 @@ and a string with the desired format, which is "sdf", "rdf", "cml", or
 
 Java:
 
-::
+.. code-block:: java
 
     IndigoObject saver = null;
     try
@@ -1422,7 +1650,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     using (IndigoObject saver = indigo.createFileSaver("reactions.cml", "cml"))
     {
@@ -1432,7 +1660,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     with indigo.createFileSaver("reactions.cml", "cml") as saver:
        saver.append(rxn1);
@@ -1448,7 +1676,7 @@ method to obtain the written data.
 
 Java, C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject buf = indigo.writeBuffer();
     mol.setProperty("name", "cyclobutane");
@@ -1461,75 +1689,43 @@ You can also create a generic saver on top of an existing buffer writer
 
 Java, C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject saver = indigo.createSaver(buf, "cml");
 
 Python: the same with the ``IndigoObject`` omitted.
 
-Enumeration of Submolecules
----------------------------
+Serialization
+~~~~~~~~~~~~~
 
-Indigo provides methods to enumerate submolecules of different kinds,
-namely:
+You can use the ``IndigoObject.serialize`` method to serialize a
+molecule or a reaction into a binary byte array. All molecule and
+reaction features are serialized, including atom coordinates,
+stereochemistry, bond orientations, highlighting, AAM numbers, etc. To
+restore the molecule/reaction back, use the ``Indigo.unserialize``
+method.
 
--  Smallest Set of Smallest Rings (SSSR) — ``iterateSSSR``.
--  All rings of size within a given interval — ``iterateRings``. The
-   method accepts the minimum and maximum amounts of the rings' atoms.
--  All subtrees of size within a given interval — ``iterateSubtrees``.
-   The method accepts the minimum and maximum amounts of the subtrees'
-   atoms.
--  All edge submolecules of size within a given interval —
-   ``iterateEdgeSubmolecules``. The method accepts the minimum and
-   maximum amounts of the submolecules' edges.
+-  **Note:** groups are not serialized (i.e. polymer brackets and data
+   s-groups will be lost during serialization)
+-  **Note:** Molecule/reaction name and SDF properties ate not
+   serialized
 
-The "submolecule" objects returned by these methods respond to the
-``countAtoms``, ``countBonds``, ``iterateAtoms``, and ``iterateBonds``
-calls. However, they can not be used as molecules. If you want to have a
-separate molecule representing the obtained submolecule, you should
-``clone`` it.
+Java, C#:
 
-Java:
+.. code-block:: csharp
 
-::
+    byte[] data = mol.serialize();
+    ...
+    IndigoObject mol2 = indigo.unserialize(data);
 
-    for (IndigoObject submol : mol.iterateEdgeSubmolecules(1, mol.countBonds())
-    {
-      System.out.printf("submolecule #%d: %s\n", submol.index(), submol.clone().smiles());
-      for (IndigoObject atom : item.iterateAtoms())
-        System.out.printf("%d ", atom.index());
-      System.out.printf("\n");
-      for (IndigoObject bond : item.iterateBonds())
-        System.out.printf("%d ", bond.index());
-      System.out.printf("\n");
-    }
+Python: the same with the ``IndigoObject`` omitted.
 
-C#:
 
-::
-
-    foreach (IndigoObject item in mol.iterateEdgeSubmolecules(1, mol.countAtoms()))
-    {
-      System.Console.WriteLine("{0} {1}", item.index(), item.clone().smiles());
-      foreach (IndigoObject atom in item.iterateAtoms())
-        System.Console.Write("{0} ", atom.index());
-      System.Console.WriteLine();
-      foreach (IndigoObject bond in item.iterateBonds())
-        System.Console.Write("{0} ", bond.index());
-      System.Console.WriteLine();
-    }
-
-Python:
-
-::
-
-    for submol in mol.iterateEdgeSubmolecules(1, mol.countBonds()):
-      print "submolecule", submol.index(), ":", submol.clone().smiles())
-      print [atom.index() for atom in item.iterateAtoms()]
-      print [bond.index() for bond in item.iterateBonds()]
+Match and Similarity
+--------------------
 
 Fingerprints
-------------
+~~~~~~~~~~~~
 
 The ``IndigoObject.fingerprint`` method works for molecules and
 reactions (including query molecules and query reactions) and returns a
@@ -1553,11 +1749,11 @@ type. The following fingerprint types are available:
    fingerprint types included
 
 The size of the fingerprint can be controlled via a number of
-`fingerprinting options <options.html#fingerprinting>`__.
+`fingerprinting options <../options/fingerprints.html>`__.
 
 Java:
 
-::
+.. code-block:: java
 
     fp1 = mol1.fingerprint("sim");
     fp2 = mol2.fingerprint("sim");
@@ -1572,7 +1768,7 @@ number of coincident nonzero bits in two fingerprints.
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     int bits1 = fp1.countBits();
     int bits2 = fp2.countBits();
@@ -1581,7 +1777,7 @@ Java and C#:
 Python: the same with the ``int`` omitted.
 
 Molecule and Reaction Similarity
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``Indigo.similarity`` method accepts two molecules, two reactions,
 or two fingerprints. It also accepts a "metrics" string and returns a
@@ -1602,7 +1798,7 @@ Where:
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     float sim1 = indigo.similarity(fp1, fp2, "tanimoto");
     float sim2 = indigo.similarity(rxn1, rxn2, "tversky");
@@ -1612,7 +1808,7 @@ Java and C#:
 Python: the same with the ``float`` omitted.
 
 Exact Match
------------
+~~~~~~~~~~~
 
 The ``Indigo.exactMatch`` method accepts two molecules or reactions and
 returns a "mapping" object — the result of the exact match of two given
@@ -1626,7 +1822,7 @@ mapping objects.
 ``exactMatch``.
 
 Exact Matching Flags for Molecules
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``Indigo.exactMatch`` method accepts an optional string. In this
 string, you can pass the following flags to the matching procedure:
@@ -1652,7 +1848,7 @@ string, you can pass the following flags to the matching procedure:
 +---------------+---------------------------------------------------------------------------+
 
 The flags should go in the parameters string separated by space. Each
-flag specifies a constraint for the matching procefure. The more flags
+flag specifies a constraint for the matching procedure. The more flags
 you set, the more restrictive the matching is. You can write the minus
 sign before the flag to exclude it from the 'ALL' flag. For example,
 'ALL -MAS' means that all the described features except the isotopes
@@ -1683,7 +1879,7 @@ from SMILES).
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject match = indigo.exactMatch(mol1, mol2, "ALL 0.1");
 
@@ -1698,18 +1894,18 @@ Java and C#:
 
 Python:
 
-::
+.. code-block:: python
 
     match = indigo.exactMatch(mol1, mol2, "ALL 0.1")
     if not match:
-       match = indigo.exactMatch(mol1, mol2) # eqiuvalent to ALL
+       match = indigo.exactMatch(mol1, mol2) # equivalent to ALL
     if not match:
        match = indigo.exactMatch(mol1, mol2, "ALL -STE") # equivalent to "ELE MAS FRA"
     if not match:
        match = indigo.exactMatch(mol1, mol2, "NONE")
 
 Exact Matching Flags for Reactions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When calling the ``Indigo.exactMatch`` method for reactions, you can
 pass it the "ELE", "MAS", and "STE" flags, which have the same meaning
@@ -1728,7 +1924,7 @@ flags:
 reactions.
 
 Molecule Substructure Matching
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``Indigo.substructureMatcher`` method accepts a molecule (but not a
 query molecule) and returns a "substructure matcher" object. The given
@@ -1736,7 +1932,7 @@ molecule is going to be the "target" molecule for the substructure
 match.
 
 Molecule Substructure Matching Flags
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``Indigo.substructureMatcher`` method accepts an optional string, in
 which you can specify one of the following flags:
@@ -1754,7 +1950,7 @@ which you can specify one of the following flags:
    page.
 
 Methods of Substructure Matcher
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  ``IndigoObject.ignoreAtom`` method accepts an atom of the target
    molecule and marks it as "ignored" for the substructure matcher. No
@@ -1776,11 +1972,11 @@ Methods of Substructure Matcher
    an iterator for unique matches ("mapping" objects).
 
 Also, please take a look on some
-`options <options.html#substructure-matching>`__ available for
+`options <../options/substructure-matching-options.html>`__ available for
 substructure matchers.
 
 Reaction Substructure Matching
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can pass a reaction to the ``Indigo.substructureMatcher`` method to
 obtain a "reaction substructure matcher" object. It responds to the
@@ -1797,7 +1993,7 @@ Rxnfiles.
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject rxn1 = indigo.loadReactionSmarts("[C:1][C:1]>>[C:1]");
     IndigoObject rxn2 = indigo.loadReaction("[CH3:7][CH3:8]>>[CH3:7][CH3:8]");
@@ -1810,7 +2006,7 @@ Python: the same with the ``IndigoObject`` omitted.
 methods are not supported by reaction substructure matcher.
 
 Converting the Substructure Query to the Aromatic Form
-------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your query is loaded from a Molfile or SMILES and its aromatic rings
 are represented in Kekule form, you should transform it to aromatic form
@@ -1819,7 +2015,7 @@ the target structure.
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject query = indigo.loadMoleculeFromFile("kekule.mol");
     query.aromatize();
@@ -1830,14 +2026,14 @@ Python: the same with the ``IndigoObject`` omitted.
 should not be called on them).
 
 Optimizing the Substructure Query
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you have a complex molecule or reaction SMARTS query, you can
 "optimize" it in-memory so that the matching performs faster.
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject query = indigo.loadSmarts("[$([a;r4,!R1&r3])]1:[$([a;r4,!R1&r3])]:[$([a;r4,!R1&r3])]:[$([a;r4,!R1&r3])]:1");
     query.optimize();
@@ -1845,7 +2041,7 @@ Java and C#:
 Python: the same with the ``IndigoObject`` omitted.
 
 Methods of "mapping" object
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can get the detailed information about the succeeded matching via
 the returned "mapping" ``IndigoObject``. It responds to the following
@@ -1855,7 +2051,7 @@ method calls:
    molecule/reaction and returns the corresponding atom from the target
    molecule/reaction. In case the query atom is unmapped (this can
    happen only with explicit hydrogens), it returns ``null``. You can
-   use ``IndigoObject.index`` method to get mapped atom intex.
+   use ``IndigoObject.index`` method to get mapped atom index.
 -  ``IndigoObject.mapBond`` method is similar to ``mapAtom``, but
    accepts a bond of the query and returns a bond of the target. It can
    also return ``null`` if the bond is unmapped (this can happen only
@@ -1875,11 +2071,11 @@ methods accepts only atoms, and not atom indices. Similarly, the
 only bonds and molecules respectively, and not their indices.
 
 Example 1 (mapping query molecule atoms)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Java:
 
-::
+.. code-block:: java
 
     IndigoObject match = indigo.substructureMatcher(mol).match(query);
 
@@ -1892,7 +2088,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject match = indigo.substructureMatcher(mol).match(query);
 
@@ -1905,7 +2101,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     match = indigo.substructureMatcher(mol).match(query)
 
@@ -1915,11 +2111,11 @@ Python:
           print "atom", atom.index(), "mapped to atom", match.mapAtom(atom).index())
 
 Example 2 (getting the highlighted target molecule)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Java:
 
-::
+.. code-block:: java
 
     IndigoObject matcher = indigo.substructureMatcher(mol);
     IndigoObject query = indigo.loadSmarts("O=[!C;R]");
@@ -1930,7 +2126,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject matcher = indigo.substructureMatcher(mol);
     IndigoObject query = indigo.loadSmarts("O=[!C;R]");
@@ -1941,7 +2137,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     matcher = indigo.substructureMatcher(mol)
     query = indigo.loadSmarts("O=[!C;R]")
@@ -1951,11 +2147,11 @@ Python:
        print match.highlightedTarget().smiles()
 
 Example 3 (exact match between reactions)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Java:
 
-::
+.. code-block:: java
 
     IndigoObject match = indigo.exactMatch(rxn1, rxn2, "ALL -AAM");
 
@@ -1977,7 +2173,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject match = indigo.exactMatch(rxn1, rxn2, "ALL -AAM");
 
@@ -2000,7 +2196,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     match = indigo.exactMatch(rxn1, rxn2, "ALL -AAM")
 
@@ -2016,7 +2212,7 @@ Python:
             print "bond #", bond.index(), "matched"
 
 Tautomer Matching Rules
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 -  By default, any chains that satisfy basic conditions of tautomerism,
    are considered tautomeric by he tautomer matcher. You can restrict
@@ -2045,7 +2241,7 @@ The following three rules are recommended and are used in examples:
    one of N, O at the other end
 
 Customizing the rules
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 ``Indigo`` provides thee methods to customize the rules:
 ``clearTautomerRules``, ``setTautomerRule``, and ``removeTautomerRule``.
@@ -2059,7 +2255,7 @@ The three rules defined above can be set in the following way:
 
 Java and C#:
 
-::
+.. code-block:: csharp
 
       indigo.setTautomerRule(1, "N,O,P,S,As,Se,Sb,Te", "N,O,P,S,As,Se,Sb,Te");
       indigo.setTautomerRule(2, "0C", "N,O,P,S");
@@ -2074,7 +2270,7 @@ Java and C#:
 Python: the same with ``IndigoObject`` omitted
 
 Highlighting Atoms and Bonds
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``IndigoObject.highlight`` and ``IndigoObject.unhighlight`` methods
 can be applied to an atom or a bond. Also, the
@@ -2089,7 +2285,7 @@ attached to the matched atoms.
 
 Java:
 
-::
+.. code-block:: java
 
     IndigoObject matcher = indigo.substructureMatcher(target);
     IndigoObject match = matcher.match(query);
@@ -2118,7 +2314,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
     IndigoObject matcher = indigo.substructureMatcher(target);
     IndigoObject match = matcher.match(query);
@@ -2147,7 +2343,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
     matcher = indigo.substructureMatcher(target)
     match = matcher.match(query)
@@ -2168,111 +2364,121 @@ Python:
     target.unhighlight()
     print target.smiles()
 
-Serialization
--------------
 
-You can use the ``IndigoObject.serialize`` method to serialize a
-molecule or a reaction into a binary byte array. All molecule and
-reaction features are serialized, including atom coordinates,
-stereochemistry, bond orientations, highlighting, AAM numbers, etc. To
-restore the molecule/reaction back, use the ``Indigo.unzerialize``
-method.
 
--  **Note:** groups are not serialized (i.e. polymer brackets and data
-   s-groups will be lost during serialization)
--  **Note:** Molecule/reaction name and SDF properties ate not
-   serialized
 
-Java, C#:
+Rendering
+---------
 
-::
+Rendering in Indigo is done by the ``IndigoRenderer`` plugin which is
+included in the Indigo distribution. The plugin is available for C (as a
+separate dynamic library), and has wrappers for all supported languages.
 
-    byte[] data = mol.serialize();
-    ...
-    IndigoObject mol2 = indigo.unserialize(data);
+To work with the rendering plugin in C#/Java/Python wrappers, one needs
+to create an instance of ``IndigoRenderer``, passing an existing
+``Indigo`` instance to it.
 
-Python: the same with the ``IndigoObject`` omitted.
+Java and C#:
 
-Alignment of Atoms
-------------------
+.. code-block:: csharp
 
-The ``IndigoObject.alignAtoms`` method can be used to calculate and
-apply the transformation (scale + rotatation + translation) of a
-molecule so that some subset of its atoms will become as close as
-possible to the desired positions. The method accepts an integer array
-of atom indices and a float array of desired coordinates (three times
-bigger that the array of indices, storing resired x,y,z coordinates for
-each atom).
+    IndigoRenderer renderer = new IndigoRenderer(indigo);
+
+A large number of `options <../options/rendering-options.html>`__ can be set for
+the rendering plugin. They are set via the ordinary ``Indigo`` instance.
+One of the options is obligatory: ``render-output-format`` tells which
+format the image should be rendered to.
+
+The ``IndigoRenderer.renderToBuffer`` accepts an ``IndigoObject`` and
+returns a byte buffer with PNG, SVG, or PDF image (on the Windows
+platform, EMF format is supported too). Similarly, the
+``IndigoRenderer.renderToFile`` method saves the image to a file.
+
+Java and C#:
+
+.. code-block:: csharp
+
+    indigo.setOption("render-output-format", "png");
+    indigo.setOption("render-margins", 10, 10);
+    mol1.layout();
+    indigo.setOption("render-comment", "N-Hydroxyaniline")
+    renderer.renderToFile(mol1, "mol.png");
+
+    indigo.setOption("render-output-format", "svg");
+    byte[] svg = renderer.renderToBuffer(rxn);
+
+Python: the same with the ``byte[]`` omitted.
+
+Rendering Multiple Items to Grid
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``IndigoRenderer.renderGridToFile`` and
+``IndigoRenderer.renderGridToBuffer`` methods can be used to render
+multiple molecules or reactions at once. The rendered items are placed
+in grid specified by its number of columns. Some
+`options <../options/rendering-options.html>`__ are available for placing
+titles under (or above) the items.
 
 Java:
 
-::
+.. code-block:: java
 
-      IndigoObject query = indigo.loadSmarts("[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2");
-      int[] atoms = new int[query.countAtoms()];
-      float[] xyz = new float[query.countAtoms() * 3];
+    IndigoObject arr = indigo.createArray();
 
-      for (IndigoObject structure : indigo.iterateSDFile("structures.sdf.gz"))
-      {
-         IndigoObject match = indigo.substructureMatcher(structure).match(query);
-         int i = 0;
+    for (IndigoObject item : indigo.iterateSDFile("structures.sdf"))
+       arr.arrayAdd(item);
 
-         if (structure.index() == 0)
-            for (IndigoObject atom : query.iterateAtoms())
-               System.arraycopy(match.mapAtom(atom).xyz(), 0, xyz, i++ * 3, 3);
-         else
-         {
-            for (IndigoObject atom : query.iterateAtoms())
-               atoms[i++] = match.mapAtom(atom).index();
-
-            structure.alignAtoms(atoms, xyz);
-         }
-      }
+    renderer.renderGridToFile(collection, null, 4, "structures.png");
 
 C#:
 
-::
+.. code-block:: csharp
 
-    IndigoObject query = indigo.loadSmarts("[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2");
-    int[] atoms = new int[query.countAtoms()];
-    float[] xyz = new float[query.countAtoms() * 3];
+    IndigoObject arr = indigo.createArray();
 
-    foreach (IndigoObject structure in indigo.iterateSDFile("structures.sdf.gz"))
-    {
-       IndigoObject match = indigo.substructureMatcher(structure).match(query);
-       int i = 0;
+    foreach (IndigoObject item in indigo.iterateSDFile("structures.sdf"))
+       arr.arrayAdd(item);
 
-       if (structure.index() == 0)
-          foreach (IndigoObject atom in query.iterateAtoms())
-             Array.Copy(match.mapAtom(atom).xyz(), 0, xyz, i++ * 3, 3);
-       else
-       {
-          foreach (IndigoObject atom in query.iterateAtoms())
-          atoms[i++] = match.mapAtom(atom).index();
-
-          structure.alignAtoms(atoms, xyz);
-       }
-    }
+    renderer.renderGridToFile(collection, null, 4, "structures.png");
 
 Python:
 
-::
+.. code-block:: python
 
-    query = indigo.loadSmarts("[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2");
-    xyz = []
-    for structure in indigo.iterateSDFile("structures.sdf.gz"):
-      match = indigo.substructureMatcher(structure).match(query)
-      if structure.index() == 0:
-        for atom in query.iterateAtoms():
-          xyz.extend(match.mapAtom(atom).xyz())
-      else:
-        atoms = []
-        for atom in query.iterateAtoms():
-          atoms.append(match.mapAtom(atom).index())
-        structure.alignAtoms(atoms, xyz);
+    arr = indigo.createArray();
+
+    for item in indigo.iterateSDFile("structures.sdf"):
+       arr.arrayAdd(item);
+
+    renderer.renderGridToFile(collection, None, 4, "structures.png")
+
+The second parameter of the ``IndigoRenderer.renderGridToFile`` and
+``IndigoRenderer.renderGridToBuffer`` methods is optional. You can
+specify it only for molecules, not for reactions. If this parameter is
+not ``null``, it has to be an integer array whose number of elements is
+equal to the number of given molecules. Each element of this array is
+the index of the "reference atom" in the corresponding molecule. The
+rendering is then done in such a way that the reference atoms are
+grid-aligned. You can see the examples of this at
+`CTR <http://ctr.wikia.com/wiki/Align_the_depiction_using_a_fixed_substructure>`__.
+
+Win32 and .NET Support
+~~~~~~~~~~~~~~~~~~~~~~
+
+In the .NET API, additional ``IndigoRenderer`` methods are available for
+working with Win32 HDC and ``System.Drawing`` objects directly:
+
+-  ``void renderToHDC (IndigoObject item, IntPtr hdc, bool printing)``
+-  ``Bitmap renderToBitmap (IndigoObject item)``
+-  ``Metafile renderToMetafile (IndigoObject item)``
+
+
+Scaffold Detection and R-Group Decomposition
+--------------------------------------------
+
 
 Scaffold Detection
-------------------
+~~~~~~~~~~~~~~~~~~
 
 The ``Indigo.extractCommonScaffold(mode [max_iterations])`` method
 searches MCS scaffold for given molecules array and returns an
@@ -2302,7 +2508,7 @@ method returns an array object.
 
 Java:
 
-::
+.. code-block:: java
 
       IndigoObject arr = indigo.createArray();
 
@@ -2319,7 +2525,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
       IndigoObject arr = indigo.createArray();
 
@@ -2336,7 +2542,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
       arr = indigo.createArray();
 
@@ -2352,7 +2558,7 @@ Python:
           print "current scaffold:" + scaffold.smiles()
 
 R-Group Decomposition
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 The R-Group decomposition algorithm separates given molecule into a
 scaffold (matches the given query molecule) and R-Groups. To start
@@ -2379,7 +2585,7 @@ a highlighted scaffold (``DecompositionItem`` object). The
 
 Java, C#:
 
-::
+.. code-block:: csharp
 
       IndigoObject deco = indigo.createDecomposer(scaf);
 
@@ -2398,7 +2604,7 @@ Java, C#:
 
 Python:
 
-::
+.. code-block:: python
 
       deco = indigo.createDecomposer(scaf);
 
@@ -2430,7 +2636,7 @@ matches:
 
 Python:
 
-::
+.. code-block:: python
 
       ...
 
@@ -2464,7 +2670,7 @@ The following example shows the usage user-defined scaffold:
 
 Python:
 
-::
+.. code-block:: python
 
       # prepare query scaffold (e.g. '(R1)C1CCCC(R2)C1')
       scaffold = indigo.loadQueryMoleculeFromFile("query_mol")
@@ -2493,7 +2699,7 @@ R2=NH2 (R1)C1CCCC(R2)C1, R1=NH2, R2=OH
 
 Java:
 
-::
+.. code-block:: java
 
       IndigoObject deco = indigo.decomposeMolecules(scaf, arr);
       deco.decomposedMoleculeHighlighted().saveMolfile("highlighted.mol");
@@ -2503,7 +2709,7 @@ Java:
 
 C#:
 
-::
+.. code-block:: csharp
 
       IndigoObject deco = indigo.decomposeMolecules(scaf, arr);
       deco.decomposedMoleculeHighlighted().saveMolfile("highlighted.mol");
@@ -2513,7 +2719,7 @@ C#:
 
 Python:
 
-::
+.. code-block:: python
 
       deco = indigo.decomposeMolecules(scaf, arr);
       deco.decomposedMoleculeHighlighted().saveMolfile("highlighted.mol");
@@ -2526,178 +2732,70 @@ Reaction Products Enumeration
 
 Java:
 
-::
+.. code-block:: java
 
-      IndigoObject reaction = indigo.loadQueryReactionFromFile(rxn_path);
+      IndigoObject reaction = indigo.loadQueryReaction("Cl[C:1]([*:3])=O.[OH:2][*:4]>>[*:4][O:2][C:1]([*:3])=O");
       IndigoObject monomers_table = indigo.createArray();
-      for (int i = 0; i < reaction.countReactants(); i++)
-      {
-         monomers_table.arrayAdd(indigo.createArray());
-
-         for (IndigoObject iterr : indigo.iterateSDFile(mon_paths[i])
-         {
-            monomers_table.at(i).arrayAdd(iterr.clone());
-         }
-      }
+      
+      monomers_table.arrayAdd(indigo.createArray());
+      monomers_table.at(0).arrayAdd(indigo.loadMolecule("CC(Cl)=O"));
+      monomers_table.at(0).arrayAdd(indigo.loadMolecule("OC1CCC(CC1)C(Cl)=O"));
+      
+      monomers_table.arrayAdd(indigo.createArray());
+      monomers_table.at(1).arrayAdd(indigo.loadMolecule("O[C@H]1[C@H](O)[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O"));
+      
       IndigoObject output_reactions = indigo.reactionProductEnumerate(reaction, monomers_table);
 
+Python:
+
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+
+    reaction = indigo.loadQueryReaction("Cl[C:1]([*:3])=O.[OH:2][*:4]>>[*:4][O:2][C:1]([*:3])=O")
+    
+    monomers_table = indigo.createArray()
+    
+    monomers_table.arrayAdd(indigo.createArray())
+    monomers_table.at(0).arrayAdd(indigo.loadMolecule("CC(Cl)=O"))
+    monomers_table.at(0).arrayAdd(indigo.loadMolecule("OC1CCC(CC1)C(Cl)=O"))
+    
+    monomers_table.arrayAdd(indigo.createArray())
+    monomers_table.at(1).arrayAdd(indigo.loadMolecule("O[C@H]1[C@H](O)[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O"))
+
+    output_reactions = indigo.reactionProductEnumerate(reaction, monomers_table)
+    
+    indigo.setOption("render-comment", "Results")
+    rxn_array = indigo.createArray();
+    for elem in output_reactions.iterateArray():
+        rxn = elem.clone();
+        rxn_array.arrayAdd(rxn)
+        
+    indigoRenderer.renderGridToFile(rxn_array, None, 2, 'result_rpe.png')
+
+
 Reaction-based Molecule Transformations
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Examples of usage are available
 `here <../concepts/transformation.html>`__.
 
 Java:
 
-::
+.. code-block:: java
 
-      IndigoObject reaction = indigo.loadQueryReaction("[NH:3]=[N:1]#[N:2]>>[NH:3]=[N+:1]=[#7-:2]");
-      IndigoObject molecule = indigo.loadMolecule("N#N=NC1=CC(=CC=C1)N=N#N");
+      IndigoObject reaction = indigo.loadQueryReaction("[*+:1][*-:2]>>[*:2]=[*:1]");
+      IndigoObject molecule = indigo.loadMolecule("[O-][C+]1CCCC1[N+]([O-])=O");
       indigo.transform(reaction, molecule);
-      System.out.println(molecule.smiles); // N(C1=CC=CC(N=[N+]=[N-])=C1)=[N+]=[N-]
-
-Rendering
----------
-
-Rendering in Indigo is done by the ``IndigoRenderer`` plugin which is
-included in the Indigo distribution. The plugin is available for C (as a
-separate dynamic library), and has wrappers for all supported languages.
-
-To work with the rendering plugin in C#/Java/Python wrappers, one needs
-to create an instance of ``IndigoRenderer``, passing an existing
-``Indigo`` instance to it.
-
-Java and C#:
-
-::
-
-    IndigoRenderer renderer = new IndigoRenderer(indigo);
-
-A large number of `options <options.html#rendering>`__ can be set for
-the rendering plugin. They are set via the ordinary ``Indigo`` instance.
-One of the options is obligatory: ``render-output-format`` tells which
-format the image should be rendered to.
-
-The ``IndigoRenderer.renderToBuffer`` accepts an ``IndigoObject`` and
-returns a byte buffer with PNG, SVG, or PDF image (on the Windows
-platform, EMF format is supported too). Similarly, the
-``IndigoRenderer.renderToFile`` method saves the image to a file.
-
-Java and C#:
-
-::
-
-    indigo.setOption("render-output-format", "png");
-    indigo.setOption("render-margins", 10, 10);
-    mol1.layout();
-    indigo.setOption("render-comment", "N-Hydroxyaniline")
-    renderer.renderToFile(mol1, "mol.png");
-
-    indigo.setOption("render-output-format", "svg");
-    byte[] svg = renderer.renderToBuffer(rxn);
-
-Python: the same with the ``byte[]`` omitted.
-
-Rendering Multiple Items to Grid
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``IndigoRenderer.renderGridToFile`` and
-``IndigoRenderer.renderGridToBuffer`` methods can be used to render
-multiple molecules or reactions at once. The rendered items are placed
-in grid specified by its number of columns. Some
-`options <options.html#rendering-in-grid>`__ are available for placing
-titles under (or above) the items.
-
-Java:
-
-::
-
-    IndigoObject arr = indigo.createArray();
-
-    for (IndigoObject item : indigo.iterateSDFile("structures.sdf"))
-       arr.arrayAdd(item);
-
-    renderer.renderGridToFile(collection, null, 4, "structures.png");
-
-C#:
-
-::
-
-    IndigoObject arr = indigo.createArray();
-
-    foreach (IndigoObject item in indigo.iterateSDFile("structures.sdf"))
-       arr.arrayAdd(item);
-
-    renderer.renderGridToFile(collection, null, 4, "structures.png");
-
+      System.out.println(molecule.smiles());
+      
 Python:
 
-::
-
-    arr = indigo.createArray();
-
-    for item in indigo.iterateSDFile("structures.sdf"):
-       arr.arrayAdd(item);
-
-    renderer.renderGridToFile(collection, None, 4, "structures.png")
-
-The second parameter of the ``IndigoRenderer.renderGridToFile`` and
-``IndigoRenderer.renderGridToBuffer`` methods is optional. You can
-specify it only for molecules, not for reactions. If this parameter is
-not ``null``, it has to be an integer array whose number of elements is
-equal to the number of given molecules. Each element of this array is
-the index of the "reference atom" in the corresponding molecule. The
-rendering is then done in such a way that the reference atoms are
-grid-aligned. You can see the examples of this at
-`CTR <http://ctr.wikia.com/wiki/Align_the_depiction_using_a_fixed_substructure>`__.
-
-Win32 and .NET Support
-~~~~~~~~~~~~~~~~~~~~~~
-
-In the .NET API, additional ``IndigoRenderer`` methods are available for
-working with Win32 HDC and ``System.Drawing`` objects directly:
-
--  ``void renderToHDC (IndigoObject item, IntPtr hdc, bool printing)``
--  ``Bitmap renderToBitmap (IndigoObject item)``
--  ``Metafile renderToMetafile (IndigoObject item)``
-
-InChI
------
-
-InChI support is done via IndigoInchi plugin. To work with the InChI
-plugin in C#/Java/Python wrappers, one needs to create an instance of
-IndigoInchi, passing an existing Indigo instance to it.
-
-Use ``IndigoInchi.loadMolecule`` method to convert InChI strings to a
-molecule, and ``IndigoInchi.getInchi`` method for the reverse operation.
-
-Python:
-
-::
-
-    indigo_inchi = IndigoInchi(indigo);
-
-    print(indigo_inchi.version())
-    m = indigo_inchi.loadMolecule("InChI=1S/C10H20N2O2/c11-7-1-5-2-8(12)10(14)4-6(5)3-9(7)13/h5-10,13-14H,1-4,11-12H2")
-    print(m.canonicalSmiles())
-    print(indigo_inchi.getInchi(m))
-    print(indigo_inchi.getWarning())
-
-    m = indigo.loadMolecule("C1CCCCCCC1")
-    print(indigo_inchi.getInchi(m))
-
-Options
-~~~~~~~
-
-You can pass any options supported by the official InChI library via
-``inchi-options`` option:
-
-::
-
-    indigo.setOption("inchi-options", "/DoNotAddH /SUU /SLUUD")
-
-One can use both ``-`` and ``/`` prefix for them:
-
-::
-
-    indigo.setOption("inchi-options", "-DoNotAddH /SUU -SLUUD")
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+    
+    reaction = indigo.loadQueryReaction("[*+:1][*-:2]>>[*:2]=[*:1]")
+    molecule = indigo.loadMolecule("[O-][C+]1CCCC1[N+]([O-])=O")
+    indigo.transform(reaction, molecule)
+    print(molecule.smiles())
