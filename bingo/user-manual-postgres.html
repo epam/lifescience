@@ -1,20 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  
+  
+  
+  
+
+
+<!DOCTYPE html>
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>User Manual: PostgreSQL &mdash; Life Sciences 0.1.0 documentation</title>
+    <title>User Manual: PostgreSQL &mdash; Life Sciences 0.3.0 documentation</title>
     
-    <link rel="stylesheet" href="../_static/elstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.1.0',
+        VERSION:     '0.3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -23,39 +32,1395 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-    <link rel="top" title="Life Sciences 0.1.0 documentation" href="../index.html" />
-    <link rel="up" title="Bingo" href="index.html" />
-    <link rel="next" title="Bingo Changelog" href="changelog.html" />
-    <link rel="prev" title="User Manual: SQL Server" href="user-manual-sqlserver.html" />
-   
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+    <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
+    <link rel="up" title="Bingo PostgreSQL" href="bingo-postgres.html" />
+    <link rel="next" title="Bingo SQL Server" href="bingo-sqlserver.html" />
+    <link rel="prev" title="Installation Manual: PostgreSQL" href="installation-manual-postgres.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
-  <body>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="changelog.html" title="Bingo Changelog"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="user-manual-sqlserver.html" title="User Manual: SQL Server"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Life Sciences 0.1.0 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Bingo</a> &raquo;</li> 
-      </ul>
-    </div>  
+  <body role="document">
+      
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
+        <a class="brand" href="../index.html"><img class="logo" src="../_static/logo.png" alt="Logo"/><p>Life Sciences</p></a>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+
+            <li class="divider-vertical"></li>
+
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Products <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Bingo</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bingo-oracle.html">Bingo Oracle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation-manual-oracle.html">Installation Manual: Oracle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-oracle.html#system-requirements">System Requirements</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#operating-systems">Operating Systems</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#database-servers">Database Servers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#tested-configurations">Tested Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-oracle.html#installation-prerequisites">Installation Prerequisites</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#all-systems">All Systems</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#windows">Windows</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#linux-32-bit-or-64-bit-or-solaris">Linux (32-bit or 64-bit) or Solaris</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#bit-linux-or-solaris-with-32-bit-extproc">64-bit Linux or Solaris, with 32-bit extproc</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#mac-os-x-64-bit">Mac OS X (64-bit)</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-oracle.html#installation-procedure">Installation Procedure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#id1">All Systems</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#id2">Windows</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#linux-solaris-or-mac-os-x">Linux, Solaris, or Mac OS X</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-oracle.html#checking-the-installation">Checking the Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-oracle.html#uninstalling-the-cartridge">Uninstalling the Cartridge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual-oracle.html">User Manual: Oracle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-oracle.html#basics">Basics</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#data-representation">Data representation</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#daylight-formats-with-chemaxon-extensions">Daylight Formats with ChemAxon Extensions</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#mdl-formats">MDL Formats</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#internal-binary-formats">Internal Binary Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#storage">Storage</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#choosing-the-format">Choosing the format</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#choosing-the-oracle-data-type">Choosing the Oracle Data Type</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#mixing-formats">Mixing formats</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#conversion">Conversion</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#performance-notice">Performance Notice</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#indices">Indices</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#creating-an-index">Creating an Index</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#index-parameters">Index Parameters</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#monitoring-the-index-creation-process">Monitoring the Index Creation Process</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#updating-and-dropping-index">Updating and Dropping Index</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#queries">Queries</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-oracle.html#molecules">Molecules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#conversion-to-smiles">Conversion to SMILES</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#converting-a-table">Converting a Table</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#conversion-to-binary-format">Conversion to Binary Format</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id1">Converting a Table</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#id2">Creating an Index</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#substructure-search">Substructure Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#description-and-syntax">Description and Syntax</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#substructure-query-features">Substructure Query Features</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#explicit-hydrogens">Explicit Hydrogens</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#charges-and-radicals">Charges and Radicals</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#isotopes">Isotopes</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#valence">Valence</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#preventing-hydrogen-substitutions">Preventing Hydrogen Substitutions</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#number-of-non-hydrogen-substitutions">Number of Non-Hydrogen Substitutions</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#unsaturation-flag">Unsaturation flag</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#ring-bond-count">Ring Bond Count</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#bond-topology">Bond Topology</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#query-atom-labels">Query Atom Labels</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#atom-lists">Atom Lists</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#query-bonds">Query Bonds</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#cis-trans-isomerism">Cis-trans Isomerism</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#chirality">Chirality</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#markush-search">Markush Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#aromaticity-in-substructure-search-and-markush-search">Aromaticity in Substructure Search and Markush Search</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#basic-queries">Basic Queries</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#queries-with-query-features">Queries with Query Features</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#aromaticity-and-markush-search">Aromaticity and Markush Search</a></li>
+<li class="toctree-l7"><a class="reference internal" href="user-manual-oracle.html#charge-and-aromaticity">Charge and Aromaticity</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#pseudo-atoms">Pseudo-atoms</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#resonance-search">Resonance Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#d-constraints">3D Constraints</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#affine-transformation-search">Affine Transformation Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#conformational-search">Conformational Search</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#smarts-search">SMARTS Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#differences-between-substructure-and-smarts-matching">Differences between substructure and SMARTS matching</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#exact-search">Exact Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#tautomer-search">Tautomer Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#syntax">Syntax</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#exact-tautomer-search">Exact Tautomer Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#tautomer-substructure-search">Tautomer Substructure Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#customizing-the-rules">Customizing the Rules</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#similarity-search">Similarity Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id3">Description and Syntax</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#gross-formula-search">Gross Formula Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id4">Description and Syntax</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id5">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#molecular-mass-search">Molecular Mass Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id6">Description and syntax</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id7">Examples</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#customization">Customization</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#other-kinds-of-molecular-weight">Other Kinds of Molecular Weight</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#canonical-smiles">Canonical SMILES</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#molecule-fingerprints">Molecule Fingerprints</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#inchi-and-inchikey">InChI and InChIKey</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-oracle.html#reactions">Reactions</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#conversion-to-reaction-smiles">Conversion to Reaction SMILES</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id8">Converting a Table</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#id9">Conversion to binary format</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id10">Converting a table</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#id11">Creating an Index</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#id12">Exact Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#id13">SMARTS Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#id14">Substructure Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id15">Description and Syntax</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id16">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#automatic-atom-to-atom-mapping">Automatic Atom-to-Atom Mapping</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id17">Description and Syntax</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-oracle.html#id18">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#reaction-fingerprints">Reaction Fingerprints</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-oracle.html#nonstandard-queries">Nonstandard Queries</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#finding-non-matches">Finding Non-Matches</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#fragment-highlighting">Fragment Highlighting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#multiple-conditions-and-joins">Multiple Conditions and Joins</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-oracle.html#importing-and-exporting-data">Importing and Exporting Data</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#importing-sdfiles-rdfiles-and-smiles-files">Importing SDFiles, RDFiles, and SMILES files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#exporting-sdfiles">Exporting SDFiles</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-oracle.html#utility-functions">Utility Functions</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#extracting-the-names-of-molecules-and-reactions">Extracting the Names of Molecules and Reactions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#conversion-to-molfiles-rxnfiles-and-cml">Conversion to Molfiles/Rxnfiles and CML</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#checking-molecules-and-reactions-for-correctness">Checking Molecules and Reactions for Correctness</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#reading-and-writing-files-on-server">Reading and Writing Files on Server</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#gzip-compression-and-decompression">GZip Compression and Decompression</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-oracle.html#maintenance">Maintenance</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#obtaining-the-bingo-version-number">Obtaining the Bingo Version Number</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-oracle.html#viewing-the-log-file">Viewing the Log File</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="performance-tips-oracle.html">Performance Tips: Oracle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="performance-tips-oracle.html#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="performance-tips-oracle.html#indexing">Indexing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="performance-tips-oracle.html#search">Search</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="building-from-source.html">Building from Source</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="building-from-source.html#unpack-the-source-code">Unpack the Source Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="building-from-source.html#copy-the-oci-files">Copy the OCI files</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="building-from-source.html#on-all-systems">On All Systems</a></li>
+<li class="toctree-l5"><a class="reference internal" href="building-from-source.html#on-32-bit-windows">On 32-bit Windows</a></li>
+<li class="toctree-l5"><a class="reference internal" href="building-from-source.html#on-64-bit-windows">On 64-bit Windows</a></li>
+<li class="toctree-l5"><a class="reference internal" href="building-from-source.html#on-mac-os-x">On Mac OS X</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="building-from-source.html#build">Build</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="bingo-postgres.html">Bingo PostgreSQL</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="installation-manual-postgres.html">Installation Manual: PostgreSQL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-postgres.html#system-requirements">System Requirements</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#operating-systems">Operating Systems</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#database-servers">Database Servers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#tested-configurations">Tested Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-postgres.html#installation-prerequisites">Installation Prerequisites</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#all-systems">All Systems</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#linux">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-postgres.html#installation-procedure">Installation Procedure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#id1">All Systems</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#id2">Linux</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#windows">Windows</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#mac-os-x">Mac OS X</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-postgres.html#checking-the-installation">Checking the Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-postgres.html#uninstalling-the-cartridge">Uninstalling the Cartridge</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">User Manual: PostgreSQL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basics">Basics</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#data-representation">Data representation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#storage">Storage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#queries">Queries</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#molecules">Molecules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#creating-an-index">Creating an Index</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#updating-and-dropping-index">Updating and Dropping Index</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#substructure-search">Substructure Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#smarts-search">SMARTS Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#exact-search">Exact Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#tautomer-search">Tautomer Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#customizing-the-rules">Customizing the Rules</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#similarity-search">Similarity Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#gross-formula-search">Gross Formula Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#molecular-weight-search">Molecular Weight Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#format-conversion">Format Conversion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#conversion-to-binary-format">Conversion to Binary Format</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#canonical-smiles-computation">Canonical SMILES computation</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#molecule-fingerprints">Molecule Fingerprints</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#inchi-and-inchikey">InChI and InChIKey</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#reactions">Reactions</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id1">Creating an Index</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#reaction-substructure-search">Reaction Substructure Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#reaction-smarts-search">Reaction SMARTS Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#reaction-exact-search">Reaction Exact Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#automatic-atom-to-atom-mapping">Automatic Atom-to-Atom mapping</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id2">Format Conversion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id3">Conversion to binary format</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#reaction-fingerprints">Reaction Fingerprints</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#importing-and-exporting-data">Importing and Exporting Data</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#importing-sdfiles-rdfiles-and-smiles">Importing SDFiles, RDFiles and SMILES</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#exporting-sdfiles-and-rdfiles">Exporting SDFiles and RDFiles</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#utility-functions">Utility functions</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#extracting-names">Extracting Names</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#calculating-molecule-properties">Calculating Molecule Properties</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#checking-for-correctness">Checking for Correctness</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#reading-files-on-server">Reading Files on Server</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-management">Permissions management</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#set-permissions-for-building-the-index">Set permissions for building the index</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#maintenance">Maintenance</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#obtaining-bingo-version-number">Obtaining Bingo Version Number</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#viewing-the-log-file">Viewing the Log File</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bingo-sqlserver.html">Bingo SQL Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation-manual-sqlserver.html">Installation Manual: SQL Server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-sqlserver.html#system-requirements">System Requirements</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-sqlserver.html#operating-systems">Operating Systems</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-sqlserver.html#database-servers">Database Servers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-sqlserver.html#tested-configurations">Tested Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-sqlserver.html#setting-up-a-server">Setting Up a Server</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-sqlserver.html#bit">32-bit</a></li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-sqlserver.html#id1">64-bit</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-sqlserver.html#installation-procedure">Installation Procedure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-sqlserver.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-sqlserver.html#uninstalling-the-cartridge">Uninstalling the Cartridge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-manual-sqlserver.html">User Manual: SQL Server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-sqlserver.html#basics">Basics</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#data-representation">Data representation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#storage">Storage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#queries">Queries</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-sqlserver.html#molecules">Molecules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#creating-an-index">Creating an Index</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#updating-and-dropping-index">Updating and Dropping Index</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#substructure-search">Substructure Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-sqlserver.html#highlighting-the-resulting-molecules">Highlighting the resulting molecules</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#smarts-search">SMARTS Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#exact-search">Exact Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#tautomer-search">Tautomer Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-sqlserver.html#customizing-the-rules">Customizing the Rules</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#similarity-search">Similarity Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#gross-formula-search">Gross Formula Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#molecular-weight-search">Molecular Weight Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#format-conversion">Format Conversion</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-sqlserver.html#canonical-smiles-computation">Canonical SMILES computation</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#molecule-fingerprints">Molecule Fingerprints</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#inchi-and-inchikey">InChI and InChIKey</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-sqlserver.html#reactions">Reactions</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#id1">Creating an Index</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#reaction-substructure-search">Reaction Substructure Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#id2">SMARTS Search</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#id3">Exact Search</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-sqlserver.html#highlighting-the-resulting-reactions">Highlighting the resulting reactions</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#automatic-atom-to-atom-mapping">Automatic Atom-to-Atom mapping</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#id4">Format Conversion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#reaction-fingerprints">Reaction Fingerprints</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-sqlserver.html#importing-and-exporting-data">Importing and Exporting Data</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#importing-sdfiles-rdfiles-and-smiles-files">Importing SDFiles, RDFiles, and SMILES files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#exporting-sdfiles">Exporting SDFiles</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-sqlserver.html#utility-functions">Utility functions</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#extracting-the-names-of-molecules-and-reactions">Extracting the Names of Molecules and Reactions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#calculating-molecule-properties">Calculating Molecule Properties</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#checking-molecules-and-reactions-for-correctness">Checking Molecules and Reactions for Correctness</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-sqlserver.html#permissions-management">Permissions management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-sqlserver.html#maintenance">Maintenance</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#obtaining-bingo-version-number">Obtaining Bingo Version Number</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-sqlserver.html#viewing-the-log-file">Viewing the Log File</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bingo-nosql.html">Bingo NoSQL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bingo-nosql.html#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bingo-nosql.html#structure">Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bingo-nosql.html#matchers">Matchers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bingo-nosql.html#files">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bingo-nosql.html#scalability">Scalability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bingo-nosql.html#license">License</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bingo-nosql.html#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bingo-nosql.html#manuals">Manuals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation-manual-nosql.html">Installation Manual: NoSQL</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-nosql.html#system-requirements">System Requirements</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="installation-manual-nosql.html#operating-systems">Operating Systems</a></li>
+<li class="toctree-l6"><a class="reference internal" href="installation-manual-nosql.html#tested-configurations">Tested Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="installation-manual-nosql.html#installation-procedure">Installation Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="user-manual-nosql.html">User Manual: NoSQL</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-nosql.html#basics">Basics</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#data-representation">Data representation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#storage">Storage</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#queries">Queries</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-nosql.html#molecules">Molecules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#creating-an-index">Creating an Index</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#updating-and-closing-index">Updating and Closing Index</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#loading-index">Loading Index</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#substructure-search">Substructure Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#exact-search">Exact Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#similarity-search">Similarity Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#gross-formula-search">Gross Formula Search</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-nosql.html#reactions">Reactions</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#id1">Creating an Index</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#id2">Updating and Closing Index</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#id3">Loading Index</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#reaction-substructure-search">Reaction Substructure Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#reaction-exact-search">Reaction Exact Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#reaction-similarity-search">Reaction Similarity Search</a></li>
+<li class="toctree-l6"><a class="reference internal" href="user-manual-nosql.html#reaction-gross-formula-search">Reaction Gross Formula Search</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-nosql.html#remaining-results-estimation">Remaining results estimation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-nosql.html#python-example">Python example:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="user-manual-nosql.html#c-interface">C Interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../download/bingo.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../download/bingo.html#bingo-1-7-10-dev6">Bingo 1.7.10-dev6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download/bingo.html#bingo-1-7-9">Bingo 1.7.9</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../download/bingo.html#bingo-1-7-8-beta2">Bingo 1.7.8-beta2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#why-select-bingo-as-your-molecular-search-cartridge">Why Select Bingo as Your Molecular Search Cartridge?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#commercial-availability">Commercial Availability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#changelog">Changelog</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/api/index.html">API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/c.html">Plain C</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/c.html#core-indigo-api">Core Indigo API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/index.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/index.html#basics">Basics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#system">System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#indigo-constructor">Indigo Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#getting-the-version-string">Getting the Version String</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/index.html#molecules">Molecules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#loading-molecules-and-query-molecules">Loading Molecules and Query Molecules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#instrumenting-molecules">Instrumenting Molecules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#instrumenting-query-atoms">Instrumenting Query Atoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#merging-molecules">Merging Molecules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#removing-atoms-and-bonds-from-molecules">Removing Atoms and Bonds from Molecules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#submolecules">Submolecules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#accessing-atoms-and-bonds">Accessing Atoms and Bonds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#getting-the-properties-of-atoms-and-bonds">Getting the Properties of Atoms and Bonds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#modifying-atoms-and-bonds">Modifying Atoms and Bonds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#accessing-neighbor-atoms">Accessing Neighbor Atoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#accessing-r-groups">Accessing R-Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#saving-molecules">Saving Molecules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/index.html#reactions">Reactions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#loading-reactions-and-query-reactions">Loading Reactions and Query Reactions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#instrumenting-reactions">Instrumenting Reactions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#accessing-reactions">Accessing Reactions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#saving-reactions">Saving Reactions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#reacting-centers">Reacting Centers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#reaction-atom-to-atom-mapping">Reaction Atom-to-Atom Mapping</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/index.html#calculating-properties">Calculating Properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#molecule-validation">Molecule Validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#working-with-connected-components">Working with Connected Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#canonical-smiles">Canonical SMILES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#attachment-points">Attachment points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#layout-2d-coordinates">Layout (2D coordinates)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#aromaticity">Aromaticity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#implicit-and-explicit-hydrogens">Implicit and Explicit Hydrogens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#stereochemistry">Stereochemistry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#enumeration-of-submolecules">Enumeration of Submolecules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#groups">Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#alignment-of-atoms">Alignment of Atoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#inchi">InChI</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#standardize-of-molecule">Standardize of Molecule</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/index.html#io">IO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#reading-sdf-rdf-cml-multiline-smiles-files-cdx-binary">Reading SDF, RDF, CML, multiline SMILES files, CDX (binary)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#indexed-access">Indexed access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#accessing-molecule-and-reaction-properties">Accessing Molecule and Reaction Properties</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#names">Names</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#sdf-rdf-cdx-properties">SDF/RDF/CDX Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#writing-sdf-files">Writing SDF Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#writing-rdf-files">Writing RDF Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#writing-cml-files">Writing CML Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#writing-multiline-smiles-files">Writing Multiline SMILES Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#closing-files">Closing Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#generic-interface-to-writing-files">Generic Interface to Writing Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#writing-into-a-memory-buffer">Writing into a Memory Buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#serialization">Serialization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/index.html#match-and-similarity">Match and Similarity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#fingerprints">Fingerprints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#molecule-and-reaction-similarity">Molecule and Reaction Similarity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#exact-match">Exact Match</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#exact-matching-flags-for-molecules">Exact Matching Flags for Molecules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#exact-matching-flags-for-reactions">Exact Matching Flags for Reactions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#molecule-substructure-matching">Molecule Substructure Matching</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#molecule-substructure-matching-flags">Molecule Substructure Matching Flags</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#methods-of-substructure-matcher">Methods of Substructure Matcher</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#reaction-substructure-matching">Reaction Substructure Matching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#converting-the-substructure-query-to-the-aromatic-form">Converting the Substructure Query to the Aromatic Form</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#optimizing-the-substructure-query">Optimizing the Substructure Query</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#methods-of-mapping-object">Methods of &#8220;mapping&#8221; object</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#example-1-mapping-query-molecule-atoms">Example 1 (mapping query molecule atoms)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#example-2-getting-the-highlighted-target-molecule">Example 2 (getting the highlighted target molecule)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#example-3-exact-match-between-reactions">Example 3 (exact match between reactions)</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#tautomer-matching-rules">Tautomer Matching Rules</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/api/index.html#customizing-the-rules">Customizing the rules</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#highlighting-atoms-and-bonds">Highlighting Atoms and Bonds</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/index.html#rendering">Rendering</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#rendering-multiple-items-to-grid">Rendering Multiple Items to Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#win32-and-net-support">Win32 and .NET Support</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/index.html#scaffold-detection-and-r-group-decomposition">Scaffold Detection and R-Group Decomposition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#scaffold-detection">Scaffold Detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#r-group-decomposition">R-Group Decomposition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/api/index.html#reaction-products-enumeration">Reaction Products Enumeration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/api/index.html#reaction-based-molecule-transformations">Reaction-based Molecule Transformations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/deco.html">R-Group Deconvolution Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/deco.html#example-1">Example 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/deco.html#example-2">Example 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/deco.html#example-3">Example 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/deco.html#example-4">Example 4</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/concepts/deco.html#aromatic-scaffold">Aromatic scaffold</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/concepts/deco.html#nonaromatic-scaffold">Nonaromatic scaffold</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/combichem.html">Reaction Enumeration Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/combichem.html#peptide-bond-formation">Peptide Bond Formation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/combichem.html#reactants-matching">Reactants Matching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/combichem.html#multistep-reactions">Multistep Reactions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/combichem.html#generation-modes">Generation Modes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/combichem.html#intramolecular-interactions">Intramolecular Interactions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/combichem.html#tetrahedral-stereochemistry">Tetrahedral Stereochemistry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/combichem.html#cis-trans-stereochemistry">Cis-trans stereochemistry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/combichem.html#functional-groups-with-2-connections">Functional Groups with 2 Connections</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/transformation.html">Transformation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/transformation.html#examples">Examples</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/concepts/transformation.html#charge-neutralization">Charge neutralization</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/concepts/transformation.html#abbreviation-expansion">Abbreviation expansion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/concepts/transformation.html#abbreviation-contraction">Abbreviation contraction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/concepts/transformation.html#other-examples">Other examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#file-formats">File Formats</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/index.html#daylight-formats-with-chemaxon-and-curlysmiles-extensions">Daylight Formats with ChemAxon and CurlySMILES Extensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/index.html#mdl-formats">MDL Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#molecules-and-query-molecules">Molecules and Query Molecules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#substructure-and-smarts-matching">Substructure and SMARTS Matching</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/index.html#differences-between-smarts-and-query-smiles">Differences between SMARTS and query SMILES</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#exact-matching">Exact Matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#molecule-similarity">Molecule Similarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#canonical-smiles">Canonical SMILES</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/concepts/index.html#useless-stereocenters">&#8216;Useless&#8217; stereocenters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#scaffold-detection">Scaffold Detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#r-group-deconvolution">R-Group Deconvolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#layout">Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/concepts/index.html#combinatorial-chemistry">Combinatorial Chemistry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/utilities.html">﻿Indigo Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/knime.html">Nodes for KNIME</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/knime.html#installation">Installation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/knime.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/knime.html#indigo-nodes">Indigo Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/knime.html#screenshots">Screenshots</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/knime.html#r-group-decomposition">R-Group Decomposition</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/knime.html#structure-validation">Structure Validation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/knime.html#fingerprint-based-clustering">Fingerprint-Based Clustering</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/knime.html#feedback">Feedback</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/legio.html">Legio</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/legio.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/legio.html#screenshots">Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/legio.html#options-description">Options Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/legio.html#portability">Portability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/legio.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/legio.html#license">License</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/legio.html#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/indigo-depict.html">indigo-depict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/indigo-cano.html">indigo-cano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/indigo-deco.html">indigo-deco</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/chemdiff.html">ChemDiff</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/chemdiff.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/chemdiff.html#screenshots">Screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/chemdiff.html#features">Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/chemdiff.html#more-screenshots">More screenshots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/chemdiff.html#portability">Portability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/chemdiff.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/chemdiff.html#license">License</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/chemdiff.html#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/utilities.html#knime-nodes">KNIME Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/utilities.html#java-gui-utilities">Java GUI Utilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/utilities.html#command-line-utilities">Command-Line Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../download/indigo/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../download/indigo/index.html#stable">Stable</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../download/indigo/index.html#indigo-1-2-1">Indigo 1.2.1</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../download/indigo/index.html#language-bindings">Language Bindings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../download/indigo/index.html#nightly-builds">Nightly Builds</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../download/indigo/dev.html">Indigo Development Releases</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../download/indigo/dev.html#indigo-1-2-1-dev">Indigo 1.2.1-dev</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../download/indigo/dev.html#language-bindings">Language Bindings</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/dev.html#python">Python</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/dev.html#java">Java</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/dev.html#net">.NET</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/dev.html#native-library">Native library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../download/indigo/dev.html#indigo-1-2-1-layout-dev">Indigo 1.2.1-layout-dev</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../download/indigo/dev.html#id1">Language Bindings</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/dev.html#id2">Python</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/dev.html#id3">Java</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/dev.html#id4">.NET</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../download/indigo/index.html#previous-versions">Previous Versions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../download/indigo/previous.html">Previous Releases</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../download/indigo/previous.html#indigo-1-1-12">Indigo 1.1.12</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../download/indigo/previous.html#language-bindings">Language Bindings</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/previous.html#python">Python</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/previous.html#java">Java</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/previous.html#net">.NET</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/previous.html#native-library">Native library</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../download/indigo/previous.html#source-code">Source code</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../download/indigo/previous.html#utilities">Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../download/indigo/previous.html#indigo-1-1-11">Indigo 1.1.11</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../download/indigo/previous.html#id1">Language Bindings</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/previous.html#id2">Python</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/previous.html#id3">Java</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/previous.html#id4">.NET</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../download/indigo/previous.html#id5">Native library</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../download/indigo/previous.html#id6">Source code</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../download/indigo/previous.html#id7">Utilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/build.html">Build</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/build.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/build.html#building">Building</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/build.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/build.html#language-bindings">Language Bindings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/build.html#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/build.html#java">Java</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/build.html#net">.NET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/build.html#native-library">Native library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/options/index.html">Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/input-output-options.html">Generic options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/input-output-options.html#ignore-noncritical-query-features">ignore-noncritical-query-features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/input-output-options.html#treat-x-as-pseudoatom">treat-x-as-pseudoatom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/input-output-options.html#skip-3d-chirality">skip-3d-chirality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/input-output-options.html#molfile-saving-mode">molfile-saving-mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/input-output-options.html#molfile-saving-no-chiral">molfile-saving-no-chiral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/input-output-options.html#molfile-saving-skip-date">molfile-saving-skip-date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/input-output-options.html#smiles-saving-write-name">smiles-saving-write-name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/input-output-options.html#filename-encoding">filename-encoding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/input-output-options.html#serialize-preserve-ordering">serialize-preserve-ordering</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/layout-options.html">Layout options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/layout-options.html#layout-max-iterations">layout-max-iterations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/rendering-options.html">Rendering options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/rendering-options.html#general">General</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-output-format">render-output-format</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-image-size">render-image-size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-bond-length">render-bond-length</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-relative-thickness">render-relative-thickness</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-image-width">render-image-width</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-image-height">render-image-height</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-image-max-width">render-image-max-width</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-image-max-height">render-image-max-height</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-margins">render-margins</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-coloring">render-coloring</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-base-color">render-base-color</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-background-color">render-background-color</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-label-mode">render-label-mode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-hdc-offset">render-hdc-offset</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/rendering-options.html#comments">Comments</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-comment">render-comment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-comment-font-size">render-comment-font-size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-comment-alignment">render-comment-alignment</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-comment-color">render-comment-color</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-bond-line-width">render-bond-line-width</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-comment-position">render-comment-position</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-comment-offset">render-comment-offset</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/rendering-options.html#chemistry">Chemistry</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-implicit-hydrogens-visible">render-implicit-hydrogens-visible</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-atom-ids-visible">render-atom-ids-visible</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-bond-ids-visible">render-bond-ids-visible</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-atom-bond-ids-from-one">render-atom-bond-ids-from-one</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-aam-color">render-aam-color</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-atom-color-property">render-atom-color-property</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-bold-bond-detection">render-bold-bond-detection</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-catalysts-placement">render-catalysts-placement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-center-double-bond-when-stereo-adjacent">render-center-double-bond-when-stereo-adjacent</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-data-sgroup-color">render-data-sgroup-color</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-stereo-style">render-stereo-style</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-superatom-mode">render-superatom-mode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-valences-visible">render-valences-visible</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/rendering-options.html#highlighting">Highlighting</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-highlight-color">render-highlight-color</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-highlight-color-enabled">render-highlight-color-enabled</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-highlight-thickness-enabled">render-highlight-thickness-enabled</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/rendering-options.html#render-highlighted-labels-visible">render-highlighted-labels-visible</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/grid-rendering-options.html">Grid rendering options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/grid-rendering-options.html#render-grid-margins">render-grid-margins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/grid-rendering-options.html#render-grid-title-property">render-grid-title-property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/grid-rendering-options.html#render-grid-title-alignment">render-grid-title-alignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/grid-rendering-options.html#render-grid-title-font-size">render-grid-title-font-size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/grid-rendering-options.html#render-grid-title-offset">render-grid-title-offset</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/substructure-matching-options.html">Substructure matching options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/substructure-matching-options.html#embedding-uniqueness">embedding-uniqueness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/substructure-matching-options.html#max-embeddings">max-embeddings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/stereocenters-options.html">Stereocenters options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/stereocenters-options.html#ignore-stereochemistry-errors">ignore-stereochemistry-errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/stereocenters-options.html#stereochemistry-bidirectional-mode">stereochemistry-bidirectional-mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/stereocenters-options.html#stereochemistry-detect-haworth-projection">stereochemistry-detect-haworth-projection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/fingerprints.html">Fingerprints options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/fingerprints.html#fp-ord-qwords">fp-ord-qwords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/fingerprints.html#fp-sim-qwords">fp-sim-qwords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/fingerprints.html#fp-any-qwords">fp-any-qwords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/fingerprints.html#fp-tau-qwords">fp-tau-qwords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/fingerprints.html#fp-ext-enabled">fp-ext-enabled</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/deconvolution.html">Deconvolution options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/deconvolution.html#deconvolution-aromatization">deconvolution-aromatization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/deconvolution.html#deco-save-ap-bond-orders">deco-save-ap-bond-orders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/deconvolution.html#deco-ignore-errors">deco-ignore-errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/aromaticity.html">Aromaticity options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/aromaticity.html#aromaticity-model">aromaticity-model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/aromaticity.html#dearomatize-verification">dearomatize-verification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/aromaticity.html#unique-dearomatization">unique-dearomatization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/timeout.html">Timeout options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/timeout.html#timeout">timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/timeout.html#aam-timeout">aam-timeout</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/reaction-product-enumeration.html">Reaction Products Enumeration and Transformation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/reaction-product-enumeration.html#rpe-max-depth">rpe-max-depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/reaction-product-enumeration.html#rpe-multistep-reactions">rpe-multistep-reactions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/reaction-product-enumeration.html#rpe-mode">rpe-mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/reaction-product-enumeration.html#rpe-self-reaction">rpe-self-reaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/reaction-product-enumeration.html#rpe-max-products-count">rpe-max-products-count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/reaction-product-enumeration.html#rpe-layout">rpe-layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/reaction-product-enumeration.html#transform-layout">transform-layout</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/inchi.html">InChI options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/inchi.html#inchi-options">inchi-options</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/standardize.html">Standardize options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/standardize.html#stereo">Stereo</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-stereo">standardize-stereo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-stereo">standardize-clear-stereo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-enhanced-stereo">standardize-clear-enhanced-stereo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-unknown-stereo">standardize-clear-unknown-stereo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-unknown-atom-stereo">standardize-clear-unknown-atom-stereo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-unknown-bond-stereo">standardize-clear-unknown-bond-stereo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-cis-trans">standardize-clear-cis-trans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-stereo-from-coordinates">standardize-stereo-from-coordinates</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-reposition-stereo-bonds">standardize-reposition-stereo-bonds</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-reposition-axial-stereo-bonds">standardize-reposition-axial-stereo-bonds</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-fix-direction-wedge-bonds">standardize-fix-direction-wedge-bonds</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/standardize.html#charges">Charges</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-charges">standardize-charges</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-charges">standardize-clear-charges</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-neutralize-zwitterions">standardize-neutralize-zwitterions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/standardize.html#geometry">Geometry</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-center-molecule">standardize-center-molecule</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-remove-single-atoms">standardize-remove-single-atoms</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-keep-smallest">standardize-keep-smallest</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-keep-largest">standardize-keep-largest</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-remove-largest">standardize-remove-largest</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-coordinates">standardize-clear-coordinates</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-straighten-triple-bonds">standardize-straighten-triple-bonds</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-straighten-allens">standardize-straighten-allens</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-molecule">standardize-clear-molecule</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/standardize.html#query">Query</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-make-non-h-to-c-atoms">standardize-make-non-h-to-c-atoms</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-make-non-h-to-a-atoms">standardize-make-non-h-to-a-atoms</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-make-non-h-c-to-q-atoms">standardize-make-non-h-c-to-q-atoms</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/options/standardize.html#misc">Misc</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-make-all-bonds-single">standardize-make-all-bonds-single</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-highlight-colors">standardize-highlight-colors</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-unusual-valences">standardize-clear-unusual-valences</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-isotopes">standardize-clear-isotopes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-dative-bonds">standardize-clear-dative-bonds</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-clear-hydrogen-bonds">standardize-clear-hydrogen-bonds</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-create-dative-bonds">standardize-create-dative-bonds</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/options/standardize.html#standardize-create-hydrogen-bonds">standardize-create-hydrogen-bonds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/options/index.html#options-table">Options Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.2.x/indigo-1.2.1.html">Indigo 1.2.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.2.x/indigo-1.2.1.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.2.x/indigo-1.2.1.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.2.x/indigo-1.2.1.html#bingo-nosql-plugin">Bingo NoSQL plugin</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.2.x/indigo-1.2.1.html#standardize">Standardize</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.2.x/indigo-1.2.1.html#cdx-format">CDX Format</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.2.x/indigo-1.2.1.html#stereo-better-support">Stereo better support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.12.html">Indigo 1.1.12</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.12.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.12.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.12.html#smiles-cis-trans-flags">Smiles cis-trans flags</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.12.html#bold-bonds-detection-and-rendering">Bold bonds detection and rendering</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.12.html#generic-saver">Generic saver</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.12.html#build-process">Build Process</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html">Indigo 1.1.11</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#maven-central-repository">Maven Central Repository</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#core-indigo-api-module">Core Indigo API module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#stereocenters-methods">Stereocenters methods</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#chirality-validation">Chirality validation</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#sgroup-methods">SGroup methods</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#buffers">Buffers</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#cdx-export">CDX Export</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#removebonds-method">removeBonds method</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#rendering-module">Rendering module</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#atom-coloring">Atom coloring</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.11.html#bond-line-width">Bond line width</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html">Previous Versions (before 1.1.11)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-10">Indigo 1.1.10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-9">Indigo 1.1.9</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-8">Indigo 1.1.8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-7">Indigo 1.1.7</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-6">Indigo 1.1.6</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-5">Indigo 1.1.5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-4">Indigo 1.1.4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-3">Indigo 1.1.3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-2">Indigo 1.1.2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-1">Indigo 1.1.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1">Indigo 1.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-release-candidate-3">Indigo 1.1 Release Candidate 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-release-candidate-2">Indigo 1.1 Release Candidate 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-release-candidate">Indigo 1.1 Release Candidate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-beta10">Indigo 1.1-beta10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-beta9">Indigo 1.1-beta9</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-beta8">Indigo 1.1-beta8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-beta7">Indigo 1.1-beta7</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-beta6">Indigo 1.1-beta6</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-beta5">Indigo 1.1-beta5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-beta4">Indigo 1.1-beta4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-alpha3">Indigo 1.1-alpha3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/examples/index.html">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/examples/atom-coloring.html">Atom Coloring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/atom-coloring.html#functional-groups-highlighting">Functional groups highlighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/atom-coloring.html#color-bar">Color bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/atom-coloring.html#rendering-a-set-of-molecules-in-a-grid">Rendering a set of molecules in a grid</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/examples/installation.html">SDK Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/installation.html#java">Java</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/installation.html#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/installation.html#net">.NET</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/examples/calculating-properties.html">Calculating Properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/calculating-properties.html#canonical-smiles">Canonical Smiles</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/examples/standardize.html">Standardize</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/standardize.html#stereo">Stereo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/standardize.html#charges">Charges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/standardize.html#geometry">Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/standardize.html#query">Query</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/examples/standardize.html#misc">Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#portability">Portability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#gcc-2010-presentation">GCC 2010 Presentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#knime-nodes">KNIME Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#java-gui-utilities">Java GUI Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#command-line-utilities">Command-Line Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#building-from-sources">Building from sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/index.html#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/editing-tips.html#hotkeys">Hotkeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/editing-tips.html#fast-atom-label-input">Fast Atom Label Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/editing-tips.html#properties-dialog">Properties Dialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/editing-tips.html#flipping-stereo-bonds">Flipping Stereo Bonds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/editing-tips.html#chains-and-templates">Chains and Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/developers-manual.html">Developer&#8217;s Manual</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/developers-manual.html#editor-mode">Editor Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ketcher/developers-manual.html#installation">Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ketcher/developers-manual.html#ketcher-object">Ketcher Object</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../ketcher/developers-manual.html#ketcher-setmolecule">ketcher.setMolecule()</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ketcher/developers-manual.html#ketcher-getsmiles">ketcher.getSmiles()</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ketcher/developers-manual.html#ketcher-getmolfile">ketcher.getMolfile()</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ketcher/developers-manual.html#ketcher-addfragment">ketcher.addFragment()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/developers-manual.html#ketcher-interaction-example">Ketcher interaction example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/developers-manual.html#ketcher-server">Ketcher Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/help.html">Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#ketcher-overview">Ketcher Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#drawing-atoms">Drawing Atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#drawing-bonds">Drawing Bonds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#using-templates">Using Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#drawing-r-groups">Drawing R-Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#r-group-logic">R-Group Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#marking-s-groups">Marking S-Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#changing-structure-display">Changing Structure Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#drawing-reactions">Drawing Reactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#working-with-files">Working with Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/help.html#hotkeys">Hotkeys</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/index.html#features">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/index.html#standalone-mode">Standalone mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/index.html#scalable-vector-graphics-svg-for-rendering">Scalable Vector Graphics (SVG) for rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/index.html#automatic-layout-clean-up-aam-atom-to-atom-mapping-and-de-aromatization">Automatic layout (clean up), AAM (atom-to-atom mapping) and (de)aromatization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/index.html#supported-file-formats">Supported file formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ketcher/index.html#other-features">Other features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/index.html#supported-browsers">Supported browsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/index.html#third-party-code">Third-party code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/index.html#online-demo">Online Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/index.html#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/index.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/index.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/index.html#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/changelog.html">Indigo ELN Changelog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/eln/changelog.html#indigo-eln-1-1-3">Indigo ELN 1.1.3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/eln/changelog.html#indigo-eln-1-1-1">Indigo ELN 1.1.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/eln/changelog.html#indigo-eln-1-1">Indigo ELN 1.1</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/index.html#why-select-indigo-eln-as-your-chemistry-eln">Why Select Indigo ELN as Your Chemistry ELN?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/eln/index.html#cost-benefits">Cost benefits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/eln/index.html#modern-technologies">Modern technologies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/eln/index.html#proven-solution-developed-and-used-by-pfizer-for-years">Proven solution developed and used by Pfizer for years</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/eln/index.html#integration-with-external-systems">Integration with external systems</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/index.html#core-indigo-eln-package">Core Indigo ELN Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/index.html#epam-s-open-source-products-to-complement-indigo-eln">EPAM&#8217;s Open-Source Products to Complement Indigo ELN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/index.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/index.html#support-and-development">Support and Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/index.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/index.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/index.html#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../imago/index.html">Imago OCR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../imago/examples.html">Features and Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../imago/examples.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../imago/examples.html#examples">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../imago/examples.html#superatoms-and-abbreviations-expansion">Superatoms and abbreviations expansion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/examples.html#aromatic-rings-and-2-connected-superatom">Aromatic rings and 2-connected superatom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/examples.html#stereobonds">Stereobonds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/examples.html#crossing-bonds-and-stereobonds">Crossing bonds and stereobonds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/examples.html#filtering-mobile-camera-photo">Filtering (mobile camera photo)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/report.html">Comparison Report</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../imago/report.html#diverse-dataset-report">Diverse Dataset Report</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/imago-gui.html">Imago OCR Visual Tool</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../imago/imago-gui.html#downloading-and-running-the-application">Downloading and Running the Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../imago/imago-gui.html#distribution">Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../imago/imago-gui.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/imago_console.html">Imago Console Application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../imago/imago_console.html#distribution">Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../imago/imago_console.html#command-line-parameters-reference">Command-line parameters reference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/c.html">C Library Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../imago/c.html#distribution">Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../imago/c.html#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/java.html">Java Bindings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../imago/java.html#distribution">Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../imago/java.html#workflow">Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../imago/java.html#imago-class-public-methods">Imago Class Public Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../imago/java.html#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/java.html#loading-the-image">Loading the Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/java.html#setting-the-options">Setting the Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/java.html#performing-the-recognition">Performing the Recognition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/java.html#getting-the-result">Getting the Result</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../imago/java.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/dependencies.html">Dependencies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../imago/dependencies.html#third-party-modules-used-in-the-imago-core-library">Third-party modules used in the Imago core library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../imago/dependencies.html#boost">Boost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/dependencies.html#opencv">OpenCV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/dependencies.html#picopng">picoPNG</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../imago/dependencies.html#third-party-modules-for-java-applications">Third-party modules for Java applications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../imago/dependencies.html#jna">JNA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/dependencies.html#java-advanced-imaging-jai-api">Java Advanced Imaging (JAI) API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/dependencies.html#pdfrenderer">PDFRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imago/dependencies.html#launch4j">Launch4j</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/changelog.html">Changelog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../imago/changelog.html#imago-ocr-2-0">Imago OCR 2.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../imago/changelog.html#imago-ocr-1-0">Imago OCR 1.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#recognizable-molecule-features">Recognizable Molecule Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#online-demo">Online Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#comparison-with-other-systems">Comparison with other systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#portability">Portability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../imago/index.html#list-of-dependencies">List of Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#supported-data-formats">Supported Data Formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/index.html#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../parso.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parso.html#why-select-parso-as-your-sas7bdat-file-reader">Why Select Parso as your SAS7BDAT File Reader?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parso.html#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parso.html#support-and-development">Support and Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parso.html#how-to-use">How to Use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parso.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parso.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parso.html#commercial-availability">Commercial Availability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../selenium.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../selenium.html#framework-features">Framework Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../selenium.html#how-to-use">How to Use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../selenium.html#demos">Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../selenium.html#download-sources">Download Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../selenium.html#license">License</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../download/index.html">Downloads</a></li>
+                <li><a href="../contact.html">Contact Info</a></li>
+            
+            
+            
+            
+            
+              <li></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form pull-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="container">
+        <div class="row">
+      <div class="span3">
+        <div id="sidebar" class="bs-sidenav well" data-spy="affix"><ul class="breadcrumbs">
+    
+    <li><a href="index.html">Bingo</a></li>
+    
+    <li><a href="bingo-postgres.html">Bingo PostgreSQL</a></li>
+    
+</ul>
+<ul class="nav bs-docs-sidenav localtoc">
+    <ul>
+<li><a class="reference internal" href="#">User Manual: PostgreSQL</a><ul>
+<li><a class="reference internal" href="#basics">Basics</a><ul>
+<li><a class="reference internal" href="#data-representation">Data representation</a></li>
+<li><a class="reference internal" href="#storage">Storage</a></li>
+<li><a class="reference internal" href="#queries">Queries</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#molecules">Molecules</a><ul>
+<li><a class="reference internal" href="#creating-an-index">Creating an Index</a></li>
+<li><a class="reference internal" href="#updating-and-dropping-index">Updating and Dropping Index</a></li>
+<li><a class="reference internal" href="#substructure-search">Substructure Search</a></li>
+<li><a class="reference internal" href="#smarts-search">SMARTS Search</a></li>
+<li><a class="reference internal" href="#exact-search">Exact Search</a></li>
+<li><a class="reference internal" href="#tautomer-search">Tautomer Search</a><ul>
+<li><a class="reference internal" href="#customizing-the-rules">Customizing the Rules</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#similarity-search">Similarity Search</a></li>
+<li><a class="reference internal" href="#gross-formula-search">Gross Formula Search</a></li>
+<li><a class="reference internal" href="#molecular-weight-search">Molecular Weight Search</a></li>
+<li><a class="reference internal" href="#format-conversion">Format Conversion</a></li>
+<li><a class="reference internal" href="#conversion-to-binary-format">Conversion to Binary Format</a><ul>
+<li><a class="reference internal" href="#canonical-smiles-computation">Canonical SMILES computation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#molecule-fingerprints">Molecule Fingerprints</a></li>
+<li><a class="reference internal" href="#inchi-and-inchikey">InChI and InChIKey</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reactions">Reactions</a><ul>
+<li><a class="reference internal" href="#id1">Creating an Index</a></li>
+<li><a class="reference internal" href="#reaction-substructure-search">Reaction Substructure Search</a></li>
+<li><a class="reference internal" href="#reaction-smarts-search">Reaction SMARTS Search</a></li>
+<li><a class="reference internal" href="#reaction-exact-search">Reaction Exact Search</a></li>
+<li><a class="reference internal" href="#automatic-atom-to-atom-mapping">Automatic Atom-to-Atom mapping</a></li>
+<li><a class="reference internal" href="#id2">Format Conversion</a></li>
+<li><a class="reference internal" href="#id3">Conversion to binary format</a></li>
+<li><a class="reference internal" href="#reaction-fingerprints">Reaction Fingerprints</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#importing-and-exporting-data">Importing and Exporting Data</a><ul>
+<li><a class="reference internal" href="#importing-sdfiles-rdfiles-and-smiles">Importing SDFiles, RDFiles and SMILES</a></li>
+<li><a class="reference internal" href="#exporting-sdfiles-and-rdfiles">Exporting SDFiles and RDFiles</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#utility-functions">Utility functions</a><ul>
+<li><a class="reference internal" href="#extracting-names">Extracting Names</a></li>
+<li><a class="reference internal" href="#calculating-molecule-properties">Calculating Molecule Properties</a></li>
+<li><a class="reference internal" href="#checking-for-correctness">Checking for Correctness</a></li>
+<li><a class="reference internal" href="#reading-files-on-server">Reading Files on Server</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#permissions-management">Permissions management</a><ul>
+<li><a class="reference internal" href="#set-permissions-for-building-the-index">Set permissions for building the index</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#maintenance">Maintenance</a><ul>
+<li><a class="reference internal" href="#obtaining-bingo-version-number">Obtaining Bingo Version Number</a></li>
+<li><a class="reference internal" href="#viewing-the-log-file">Viewing the Log File</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</ul>
+
+        </div>
+      </div>
+          <div class="span9 bingo/user-manual-postgres">
             
   <div class="section" id="user-manual-postgresql">
 <h1>User Manual: PostgreSQL<a class="headerlink" href="#user-manual-postgresql" title="Permalink to this headline">¶</a></h1>
@@ -71,23 +1436,23 @@ details.</p>
 </div>
 <div class="section" id="storage">
 <h3>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h3>
-<p>Suppose you have a table with a <tt class="docutils literal"><span class="pre">text</span></tt>, <tt class="docutils literal"><span class="pre">varchar</span></tt> or <tt class="docutils literal"><span class="pre">bytea</span></tt>
+<p>Suppose you have a table with a <code class="docutils literal"><span class="pre">text</span></code>, <code class="docutils literal"><span class="pre">varchar</span></code> or <code class="docutils literal"><span class="pre">bytea</span></code>
 column containing a Molfiles/Rxnfiles or SMILES with molecules or
 reactions.</p>
-<p>Once you have prepared your table, you can execute <tt class="docutils literal"><span class="pre">CheckMolecule</span></tt> or
-<tt class="docutils literal"><span class="pre">CheckReaction</span></tt> to ensure that all the records are valid. These
+<p>Once you have prepared your table, you can execute <code class="docutils literal"><span class="pre">CheckMolecule</span></code> or
+<code class="docutils literal"><span class="pre">CheckReaction</span></code> to ensure that all the records are valid. These
 functions return not null string with invalid records corresponding
 error messages. All molecules or reactions that are in this table will
 be excluded from the chemical index. You can update these molecules
 later after indexing.</p>
 <p>After you have prepared and checked your table, you can execute
-<tt class="docutils literal"><span class="pre">Create</span> <span class="pre">Index</span></tt> to make Bingo search procedures available for you
+<code class="docutils literal"><span class="pre">Create</span> <span class="pre">Index</span></code> to make Bingo search procedures available for you
 table. The more records the table contains, the longer it takes to
 create an index.</p>
 </div>
 <div class="section" id="queries">
 <h3>Queries<a class="headerlink" href="#queries" title="Permalink to this headline">¶</a></h3>
-<p>You can specify the query molecule as a <tt class="docutils literal"><span class="pre">varchar</span></tt> string containing a
+<p>You can specify the query molecule as a <code class="docutils literal"><span class="pre">varchar</span></code> string containing a
 Molfile (including various query features), a SMILES, or a SMARTS
 string. For reaction queries, use Rxnfiles, reaction SMILES, or reaction
 SMARTS.</p>
@@ -102,18 +1467,18 @@ SMARTS.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molecules in the
-column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$index</span></tt> is the name of the new index.</li>
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molecules in the
+column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$index</span></code> is the name of the new index.</li>
 </ul>
 <p>The following command creates the index for bytea (binary) column:</p>
 <div class="highlight-python"><div class="highlight"><pre>create index $index on $table using bingo_idx ($bcolumn bingo.bmolecule)
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molecules in the
-binary column <tt class="docutils literal"><span class="pre">$bcolumn</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$index</span></tt> is the name of the new index.</li>
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molecules in the
+binary column <code class="docutils literal"><span class="pre">$bcolumn</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$index</span></code> is the name of the new index.</li>
 </ul>
 </div>
 <div class="section" id="updating-and-dropping-index">
@@ -122,7 +1487,7 @@ binary column <tt class="docutils literal"><span class="pre">$bcolumn</span></tt
 created. Adding records does not slow down the queries, i.e. the
 performance will be the same as if you had indexed the whole table at
 once. No re- indexing is required after adding the records.</p>
-<p>After you delete, you must call <tt class="docutils literal"><span class="pre">autovacuum</span></tt> utility functions to
+<p>After you delete, you must call <code class="docutils literal"><span class="pre">autovacuum</span></code> utility functions to
 clean up the index.</p>
 </div>
 <div class="section" id="substructure-search">
@@ -132,11 +1497,11 @@ clean up the index.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molecules in the
-column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">text</span></tt> string containing the query molfile or
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molecules in the
+column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">text</span></code> string containing the query molfile or
 SMILES.</li>
-<li><tt class="docutils literal"><span class="pre">$parameters</span></tt> is a <tt class="docutils literal"><span class="pre">varchar</span></tt> string that can be empty or contain
+<li><code class="docutils literal"><span class="pre">$parameters</span></code> is a <code class="docutils literal"><span class="pre">varchar</span></code> string that can be empty or contain
 some options to pass to Bingo search engine.</li>
 </ul>
 <p>Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#substructure-search">Bingo User Manual for
@@ -153,11 +1518,11 @@ substructure search:</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molecules in the
-column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">text</span></tt> string containing the query molfile or
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molecules in the
+column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">text</span></code> string containing the query molfile or
 SMILES.</li>
-<li><tt class="docutils literal"><span class="pre">$parameters</span></tt> is a <tt class="docutils literal"><span class="pre">varchar</span></tt> string that can be empty or contain
+<li><code class="docutils literal"><span class="pre">$parameters</span></code> is a <code class="docutils literal"><span class="pre">varchar</span></code> string that can be empty or contain
 some options to pass to Bingo search engine.</li>
 </ul>
 <p>Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#smarts-search">Bingo User Manual for
@@ -171,29 +1536,29 @@ SMARTS matching in Bingo.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molecules in the
-column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">text</span></tt> string containing the query molfile or
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molecules in the
+column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">text</span></code> string containing the query molfile or
 SMILES.</li>
-<li><tt class="docutils literal"><span class="pre">$parameters</span></tt> is a <tt class="docutils literal"><span class="pre">varchar</span></tt> string that can be empty or contain
+<li><code class="docutils literal"><span class="pre">$parameters</span></code> is a <code class="docutils literal"><span class="pre">varchar</span></code> string that can be empty or contain
 some options to pass to Bingo search engine.</li>
 </ul>
 <p>Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#exact-search">Bingo User Manual for
 Oracle</a> to learn the rules of
-Bingo exact matching and various flags available for <tt class="docutils literal"><span class="pre">$parameters</span></tt>
+Bingo exact matching and various flags available for <code class="docutils literal"><span class="pre">$parameters</span></code>
 string.</p>
 </div>
 <div class="section" id="tautomer-search">
 <h3>Tautomer Search<a class="headerlink" href="#tautomer-search" title="Permalink to this headline">¶</a></h3>
 <p>Tautomer search is implemented within Substructure and Exact search
-functions, and requires <tt class="docutils literal"><span class="pre">TAU</span></tt> flag to be specified in <tt class="docutils literal"><span class="pre">$parameters</span></tt>
+functions, and requires <code class="docutils literal"><span class="pre">TAU</span></code> flag to be specified in <code class="docutils literal"><span class="pre">$parameters</span></code>
 string. Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#tautomer-search">Bingo User Manual for
 Oracle</a> to learn the rules
 of Bingo exact and substructure tautomer matching.</p>
 <div class="section" id="customizing-the-rules">
 <h4>Customizing the Rules<a class="headerlink" href="#customizing-the-rules" title="Permalink to this headline">¶</a></h4>
 <p>Your database (to which you have installed Bingo) contains a table
-called <tt class="docutils literal"><span class="pre">bingo.bingo_tau_config</span></tt>. By default it contains 3 records with
+called <code class="docutils literal"><span class="pre">bingo.bingo_tau_config</span></code>. By default it contains 3 records with
 predefined rules. You can add, remove, or update the defined rules.
 Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#tautomer-search">Bingo User Manual for
 Oracle</a> to learn the format
@@ -207,18 +1572,18 @@ of the tautomer matching rules.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molecules in the
-column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">text</span></tt> string containing the query molfile or
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molecules in the
+column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">text</span></code> string containing the query molfile or
 SMILES.</li>
-<li><tt class="docutils literal"><span class="pre">$metric</span></tt> is a <tt class="docutils literal"><span class="pre">varchar</span></tt> string defining the metric to use:
-<tt class="docutils literal"><span class="pre">Tanimoto</span></tt>, <tt class="docutils literal"><span class="pre">Tversky</span></tt>, or <tt class="docutils literal"><span class="pre">Euclid-sub</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$bottom</span></tt> and <tt class="docutils literal"><span class="pre">$top</span></tt> are real numbers that specify bottom and top
+<li><code class="docutils literal"><span class="pre">$metric</span></code> is a <code class="docutils literal"><span class="pre">varchar</span></code> string defining the metric to use:
+<code class="docutils literal"><span class="pre">Tanimoto</span></code>, <code class="docutils literal"><span class="pre">Tversky</span></code>, or <code class="docutils literal"><span class="pre">Euclid-sub</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$bottom</span></code> and <code class="docutils literal"><span class="pre">$top</span></code> are real numbers that specify bottom and top
 limits of the required similarity, respectively.</li>
 </ul>
 <p>By default, the bottom limit is zero and the top limit is 1, which is
-the maximum possible value of similarity. You can specify <tt class="docutils literal"><span class="pre">null</span></tt> in
-place of <tt class="docutils literal"><span class="pre">$bottom</span></tt> or <tt class="docutils literal"><span class="pre">$top</span></tt> to disable the lower or upper bound. In
+the maximum possible value of similarity. You can specify <code class="docutils literal"><span class="pre">null</span></code> in
+place of <code class="docutils literal"><span class="pre">$bottom</span></code> or <code class="docutils literal"><span class="pre">$top</span></code> to disable the lower or upper bound. In
 most cases, you may want to cancel the upper bound:</p>
 <div class="highlight-python"><div class="highlight"><pre>select * from $table where $column @ (0.8, null, &#39;$query&#39;, &#39;Tanimoto&#39;)::bingo.sim
 </pre></div>
@@ -234,11 +1599,11 @@ about the metrics.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molecules in the
-column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">text</span></tt> string which looks like ”&gt;= Cl6”, ”? C4 H4
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molecules in the
+column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">text</span></code> string which looks like ”&gt;= Cl6”, ”? C4 H4
 O”, or ”= C6 H6”.</li>
-<li><tt class="docutils literal"><span class="pre">$parameters</span></tt> is a <tt class="docutils literal"><span class="pre">varchar</span></tt> string that can be empty or contain
+<li><code class="docutils literal"><span class="pre">$parameters</span></code> is a <code class="docutils literal"><span class="pre">varchar</span></code> string that can be empty or contain
 some options to pass to Bingo search engine.</li>
 </ul>
 <p>Please see the corresponding section of the <a class="reference external" href="user-manual-oracle.html#gross-formula-search">Bingo User Manual for
@@ -256,9 +1621,9 @@ examples.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molecules in the
-column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$bottom</span></tt> and <tt class="docutils literal"><span class="pre">$top</span></tt> are numbers that specify the range to which
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molecules in the
+column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$bottom</span></code> and <code class="docutils literal"><span class="pre">$top</span></code> are numbers that specify the range to which
 the molecular weight of the resulting molecules must belong.</li>
 </ul>
 </div>
@@ -279,16 +1644,16 @@ coordinates of the resulting molecule.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li>$molecule is a <tt class="docutils literal"><span class="pre">text</span></tt> string or <tt class="docutils literal"><span class="pre">bytea</span></tt> containing the query
+<li>$molecule is a <code class="docutils literal"><span class="pre">text</span></code> string or <code class="docutils literal"><span class="pre">bytea</span></code> containing the query
 molfile or SMILES.</li>
 </ul>
 </div>
 <div class="section" id="conversion-to-binary-format">
 <h3>Conversion to Binary Format<a class="headerlink" href="#conversion-to-binary-format" title="Permalink to this headline">¶</a></h3>
-<p>The <tt class="docutils literal"><span class="pre">bingo.CompactMolecule()</span></tt> operator can be used for converting
+<p>The <code class="docutils literal"><span class="pre">bingo.CompactMolecule()</span></code> operator can be used for converting
 Molfiles and SMILES to the internal binary format. The operator works
-equally well with <tt class="docutils literal"><span class="pre">text</span></tt> and <tt class="docutils literal"><span class="pre">bytea</span></tt> operands. The operator always
-returns the <tt class="docutils literal"><span class="pre">bytea</span></tt> result.</p>
+equally well with <code class="docutils literal"><span class="pre">text</span></code> and <code class="docutils literal"><span class="pre">bytea</span></code> operands. The operator always
+returns the <code class="docutils literal"><span class="pre">bytea</span></code> result.</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.CompactMolecule($molfile, $xyz);
 
 select bingo.CompactMolecule($smiles, $xyz);
@@ -296,7 +1661,7 @@ select bingo.CompactMolecule($smiles, $xyz);
 select bingo.CompactMolecule($column, $xyz) FROM $table;
 </pre></div>
 </div>
-<p>The <tt class="docutils literal"><span class="pre">$xyz</span></tt> parameter must be 0 or 1. If it is 1, the positions of
+<p>The <code class="docutils literal"><span class="pre">$xyz</span></code> parameter must be 0 or 1. If it is 1, the positions of
 atoms are saved to the binary format. If it is zero, the positions are
 skipped.</p>
 <div class="section" id="canonical-smiles-computation">
@@ -314,14 +1679,14 @@ benefits of Bingo canonical SMILES format.</p>
 </div>
 <div class="section" id="molecule-fingerprints">
 <h3>Molecule Fingerprints<a class="headerlink" href="#molecule-fingerprints" title="Permalink to this headline">¶</a></h3>
-<p>You can generate a molecule fingerprint via <tt class="docutils literal"><span class="pre">bingo.Fingeprint</span></tt>
+<p>You can generate a molecule fingerprint via <code class="docutils literal"><span class="pre">bingo.Fingerprint</span></code>
 function. The syntax is the same as for Bingo for Oracle, and it is
 described <a class="reference external" href="user-manual-oracle.html#molecule-fingerprints">in this
 section</a>.</p>
 </div>
 <div class="section" id="inchi-and-inchikey">
 <h3>InChI and InChIKey<a class="headerlink" href="#inchi-and-inchikey" title="Permalink to this headline">¶</a></h3>
-<p>You can use <tt class="docutils literal"><span class="pre">bingo.InChI</span></tt> and <tt class="docutils literal"><span class="pre">bingo.InChIKey</span></tt> function to get InChI
+<p>You can use <code class="docutils literal"><span class="pre">bingo.InChI</span></code> and <code class="docutils literal"><span class="pre">bingo.InChIKey</span></code> function to get InChI
 and InChIKey strings. The syntax is the same as for Bingo for Oracle,
 and it is described <a class="reference external" href="user-manual-oracle.html#inchi-and-inchikey">in this
 section</a>.</p>
@@ -336,18 +1701,18 @@ section</a>.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing chemical reaction data
-in the column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$index</span></tt> is the name of the new index.</li>
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing chemical reaction data
+in the column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$index</span></code> is the name of the new index.</li>
 </ul>
 <p>The following command creates the index for bytea (binary) columns:</p>
 <div class="highlight-python"><div class="highlight"><pre>create index $index on $table using bingo_idx ($bcolumn bingo.breaction)
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing chemical reaction data
-in the binary column <tt class="docutils literal"><span class="pre">$bcolumn</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$index</span></tt> is the name of the new index.</li>
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing chemical reaction data
+in the binary column <code class="docutils literal"><span class="pre">$bcolumn</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$index</span></code> is the name of the new index.</li>
 </ul>
 </div>
 <div class="section" id="reaction-substructure-search">
@@ -357,11 +1722,11 @@ in the binary column <tt class="docutils literal"><span class="pre">$bcolumn</sp
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing chemical reaction data
-in the column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">text</span></tt> string containing the query Rxnfile or
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing chemical reaction data
+in the column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">text</span></code> string containing the query Rxnfile or
 reaction SMILES.</li>
-<li><tt class="docutils literal"><span class="pre">$parameters</span></tt> is a <tt class="docutils literal"><span class="pre">varchar</span></tt> string that can be empty or contain
+<li><code class="docutils literal"><span class="pre">$parameters</span></code> is a <code class="docutils literal"><span class="pre">varchar</span></code> string that can be empty or contain
 some options to pass to Bingo search engine.</li>
 </ul>
 <p>Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#substructure-search-1">Bingo User Manual for
@@ -377,11 +1742,11 @@ substructure search:</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing chemical reaction data
-in the column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">text</span></tt> string containing the query Rxnfile or
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing chemical reaction data
+in the column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">text</span></code> string containing the query Rxnfile or
 reaction SMILES.</li>
-<li><tt class="docutils literal"><span class="pre">$parameters</span></tt> is a <tt class="docutils literal"><span class="pre">varchar</span></tt> string that can be empty or contain
+<li><code class="docutils literal"><span class="pre">$parameters</span></code> is a <code class="docutils literal"><span class="pre">varchar</span></code> string that can be empty or contain
 some options to pass to Bingo search engine.</li>
 </ul>
 <p>Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#smarts-search-1">Bingo User Manual for
@@ -395,16 +1760,16 @@ of SMARTS matching in Bingo.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing chemical reaction data
-in the column <tt class="docutils literal"><span class="pre">$column</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">$query</span></tt> is a <tt class="docutils literal"><span class="pre">text</span></tt> string containing the query Rxnfile or
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing chemical reaction data
+in the column <code class="docutils literal"><span class="pre">$column</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">$query</span></code> is a <code class="docutils literal"><span class="pre">text</span></code> string containing the query Rxnfile or
 reaction SMILES.</li>
-<li><tt class="docutils literal"><span class="pre">$parameters</span></tt> is a <tt class="docutils literal"><span class="pre">varchar</span></tt> string that can be empty or contain
+<li><code class="docutils literal"><span class="pre">$parameters</span></code> is a <code class="docutils literal"><span class="pre">varchar</span></code> string that can be empty or contain
 some options to pass to Bingo search engine.</li>
 </ul>
 <p>Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#exact-search-1">Bingo User Manual for
 Oracle</a> to learn the rules of
-Bingo exact matching and various flags available for <tt class="docutils literal"><span class="pre">$parameters</span></tt>
+Bingo exact matching and various flags available for <code class="docutils literal"><span class="pre">$parameters</span></code>
 string.</p>
 </div>
 <div class="section" id="automatic-atom-to-atom-mapping">
@@ -414,17 +1779,17 @@ string.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$reaction</span></tt> is a <tt class="docutils literal"><span class="pre">text</span></tt> string containing reaction SMILES or
+<li><code class="docutils literal"><span class="pre">$reaction</span></code> is a <code class="docutils literal"><span class="pre">text</span></code> string containing reaction SMILES or
 Rxnfile.</li>
-<li><tt class="docutils literal"><span class="pre">$strategy</span></tt> is a <tt class="docutils literal"><span class="pre">varchar</span></tt> string defining the strategy to use:
-<tt class="docutils literal"><span class="pre">CLEAR</span></tt>, <tt class="docutils literal"><span class="pre">DISCARD</span></tt>, <tt class="docutils literal"><span class="pre">ALTER</span></tt> or <tt class="docutils literal"><span class="pre">KEEP</span></tt>.</li>
+<li><code class="docutils literal"><span class="pre">$strategy</span></code> is a <code class="docutils literal"><span class="pre">varchar</span></code> string defining the strategy to use:
+<code class="docutils literal"><span class="pre">CLEAR</span></code>, <code class="docutils literal"><span class="pre">DISCARD</span></code>, <code class="docutils literal"><span class="pre">ALTER</span></code> or <code class="docutils literal"><span class="pre">KEEP</span></code>.</li>
 <li>The return value is an Rxnfile. In case the given reaction is
 represented as a reaction SMILES, the automatic reaction layout is
 performed.</li>
 </ul>
 <p>The corresponding section of <a class="reference external" href="user-manual-oracle.html#automatic-atom-to-atom-mapping">Bingo User Manual for
 Oracle</a>
-describes the allowable values of the <tt class="docutils literal"><span class="pre">$strategy</span></tt> parameter and shows
+describes the allowable values of the <code class="docutils literal"><span class="pre">$strategy</span></code> parameter and shows
 some examples.</p>
 </div>
 <div class="section" id="id2">
@@ -444,16 +1809,16 @@ coordinates of the resulting reaction.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$reaction</span></tt> is a <tt class="docutils literal"><span class="pre">text</span></tt> string containing reaction SMILES or
+<li><code class="docutils literal"><span class="pre">$reaction</span></code> is a <code class="docutils literal"><span class="pre">text</span></code> string containing reaction SMILES or
 Rxnfile.</li>
 </ul>
 </div>
 <div class="section" id="id3">
 <h3>Conversion to binary format<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>The <tt class="docutils literal"><span class="pre">Bingo.CompactReaction()</span></tt> operator can be used for converting
+<p>The <code class="docutils literal"><span class="pre">Bingo.CompactReaction()</span></code> operator can be used for converting
 Rxnfiles and reaction SMILES to internal binary format. The operator
-works equally well with <tt class="docutils literal"><span class="pre">text</span></tt> and <tt class="docutils literal"><span class="pre">bytea</span></tt> operands. The operator
-always returns the <tt class="docutils literal"><span class="pre">bytea</span></tt> result.</p>
+works equally well with <code class="docutils literal"><span class="pre">text</span></code> and <code class="docutils literal"><span class="pre">bytea</span></code> operands. The operator
+always returns the <code class="docutils literal"><span class="pre">bytea</span></code> result.</p>
 <div class="highlight-python"><div class="highlight"><pre>SELECT Bingo.CompactReaction($rxnfile, $xyz) ;
 
 SELECT Bingo.CompactReaction($rsmiles, $xyz)L;
@@ -461,13 +1826,13 @@ SELECT Bingo.CompactReaction($rsmiles, $xyz)L;
 SELECT Bingo.CompactReaction($column, $xyz) FROM $table;
 </pre></div>
 </div>
-<p>The <tt class="docutils literal"><span class="pre">$xyz</span></tt> parameter must be 0 or 1. If it is 1, the positions of
+<p>The <code class="docutils literal"><span class="pre">$xyz</span></code> parameter must be 0 or 1. If it is 1, the positions of
 atoms are saved to the binary format. If it is zero, the positions are
 skipped.</p>
 </div>
 <div class="section" id="reaction-fingerprints">
 <h3>Reaction Fingerprints<a class="headerlink" href="#reaction-fingerprints" title="Permalink to this headline">¶</a></h3>
-<p>You can generate a reaction fingerprint via <tt class="docutils literal"><span class="pre">bingo.RFingeprint</span></tt>
+<p>You can generate a reaction fingerprint via <code class="docutils literal"><span class="pre">bingo.RFingeprint</span></code>
 function. The syntax is the same as for Bingo for Oracle, and it is
 described <a class="reference external" href="user-manual-oracle.html#reaction-fingerprints">in this
 section</a>.</p>
@@ -485,11 +1850,11 @@ select bingo.ImportSDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$sdf_id $id[, 
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molfiles in
-<tt class="docutils literal"><span class="pre">$column</span></tt></li>
-<li><tt class="docutils literal"><span class="pre">$id</span></tt> is another column of the table, containing unique integer
-identifiers, which are read from <tt class="docutils literal"><span class="pre">$sdf_id</span></tt> field of the SDF file.</li>
-<li><tt class="docutils literal"><span class="pre">$other_columns</span></tt> is the comma-separated list of space-separated
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molfiles in
+<code class="docutils literal"><span class="pre">$column</span></code></li>
+<li><code class="docutils literal"><span class="pre">$id</span></code> is another column of the table, containing unique integer
+identifiers, which are read from <code class="docutils literal"><span class="pre">$sdf_id</span></code> field of the SDF file.</li>
+<li><code class="docutils literal"><span class="pre">$other_columns</span></code> is the comma-separated list of space-separated
 &#8216;property-column&#8217; pairs that are to be imported. Each given SDF
 property is mapped to the given table column. You can specify an
 empty string if there are no properties to import.</li>
@@ -503,23 +1868,23 @@ filesystem</em>.</li>
 select bingo.ImportSDF(&#39;nci&#39;, &#39;molfile&#39;, &#39;nsc nsc&#39;, &#39;C:/Users/Administrator/july2008_2d.sdf&#39;);
 </pre></div>
 </div>
-<p>Importing RDF files is done with <tt class="docutils literal"><span class="pre">ImportRDF()</span></tt> function the same way
+<p>Importing RDF files is done with <code class="docutils literal"><span class="pre">ImportRDF()</span></code> function the same way
 as SDF files:</p>
 <div class="highlight-python"><div class="highlight"><pre>create table $table ($id int, $column text, ...);
 select bingo.ImportRDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$rdf_id $id[, $other_columns]&#39;, &#39;$filename.rdf[.gz]&#39;);
 </pre></div>
 </div>
 <p>Importing multi-line molecule or reaction SMILES file is done the
-similar way with the <tt class="docutils literal"><span class="pre">ImportSMILES()</span></tt> function:</p>
+similar way with the <code class="docutils literal"><span class="pre">ImportSMILES()</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.ImportSMILES(&#39;$table&#39;, &#39;$column&#39;, &#39;$id&#39;, &#39;$filename&#39;);
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt>, <tt class="docutils literal"><span class="pre">$column</span></tt>, and <tt class="docutils literal"><span class="pre">$filename</span></tt> have the usual meaning</li>
-<li><tt class="docutils literal"><span class="pre">$id</span></tt> is the column where molecule and reaction identifiers go. The
+<li><code class="docutils literal"><span class="pre">$table</span></code>, <code class="docutils literal"><span class="pre">$column</span></code>, and <code class="docutils literal"><span class="pre">$filename</span></code> have the usual meaning</li>
+<li><code class="docutils literal"><span class="pre">$id</span></code> is the column where molecule and reaction identifiers go. The
 identifier within SMILES string is anything that goes after the
 molecule or reaction, separated by space. It is allowed to pass an
-empty string or NULL as the <tt class="docutils literal"><span class="pre">$id</span></tt> parameter, if there are no
+empty string or NULL as the <code class="docutils literal"><span class="pre">$id</span></code> parameter, if there are no
 identifiers in the SMILES file subject to import.</li>
 </ul>
 <p><strong>Note:</strong> When you import the file contents to a table, the old table
@@ -536,11 +1901,11 @@ select bingo.ExportSDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$id[, $other_c
 </pre></div>
 </div>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">$table</span></tt> is the name of the table containing molfiles in
-<tt class="docutils literal"><span class="pre">$column</span></tt></li>
-<li><tt class="docutils literal"><span class="pre">$id</span></tt> is another column of the table, containing unique integer
-identifiers, which are written to <tt class="docutils literal"><span class="pre">$id</span></tt> field of the SDF file.</li>
-<li><tt class="docutils literal"><span class="pre">$other_columns</span></tt> is the comma-separated list of space-separated
+<li><code class="docutils literal"><span class="pre">$table</span></code> is the name of the table containing molfiles in
+<code class="docutils literal"><span class="pre">$column</span></code></li>
+<li><code class="docutils literal"><span class="pre">$id</span></code> is another column of the table, containing unique integer
+identifiers, which are written to <code class="docutils literal"><span class="pre">$id</span></code> field of the SDF file.</li>
+<li><code class="docutils literal"><span class="pre">$other_columns</span></code> is the comma-separated list of space-separated
 &#8216;property-column&#8217; pairs that are to be imported. Each given SDF
 property is mapped to the given table column. You can specify an
 empty string if there are no properties to export.</li>
@@ -555,7 +1920,7 @@ filesystem</em>.</li>
 select bingo.ExportSDF(&#39;nci&#39;, &#39;molfile&#39;, &#39;nsc&#39;, &#39;C:/Users/Administrator/july2008_2d.sdf&#39;);
 </pre></div>
 </div>
-<p>Exporting RDF files is done with <tt class="docutils literal"><span class="pre">ExportRDF()</span></tt> function the same way
+<p>Exporting RDF files is done with <code class="docutils literal"><span class="pre">ExportRDF()</span></code> function the same way
 as SDF files:</p>
 <div class="highlight-python"><div class="highlight"><pre>create table $table ($id int, $column text, ...);
 ...
@@ -568,7 +1933,7 @@ select bingo.ExportRDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$id[, $other_c
 <h2>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="extracting-names">
 <h3>Extracting Names<a class="headerlink" href="#extracting-names" title="Permalink to this headline">¶</a></h3>
-<p><tt class="docutils literal"><span class="pre">bingo.getName</span></tt> function extracts the molecule or reaction name from
+<p><code class="docutils literal"><span class="pre">bingo.getName</span></code> function extracts the molecule or reaction name from
 Molfile, Rxnfile, or SMILES string.</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.getName(molfile) from mytable;
 
@@ -578,32 +1943,32 @@ select bingo.getName(&#39;c1ccc2ccccc2c1 Naphthalene&#39;);
 </div>
 <div class="section" id="calculating-molecule-properties">
 <h3>Calculating Molecule Properties<a class="headerlink" href="#calculating-molecule-properties" title="Permalink to this headline">¶</a></h3>
-<p><tt class="docutils literal"><span class="pre">bingo.getMass</span></tt> function returns the molecular weight of the given
+<p><code class="docutils literal"><span class="pre">bingo.getMass</span></code> function returns the molecular weight of the given
 molecule, represented as a Molfile or SMILES string. It has an
 additional parameter which defines the &#8216;kind&#8217; of the resulting molecular
 mass value.</p>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">Bingo.getMass($molecule,</span> <span class="pre">'</span></tt> is a short for
-<tt class="docutils literal"><span class="pre">Bingo.getWeight($molecule,</span> <span class="pre">'molecular-weight')</span></tt>.</li>
-<li><tt class="docutils literal"><span class="pre">Bingo.getWeight($molecule,</span> <span class="pre">'molecular-weight')</span></tt> returns the
+<li><code class="docutils literal"><span class="pre">Bingo.getMass($molecule,</span> <span class="pre">'</span></code> is a short for
+<code class="docutils literal"><span class="pre">Bingo.getWeight($molecule,</span> <span class="pre">'molecular-weight')</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">Bingo.getWeight($molecule,</span> <span class="pre">'molecular-weight')</span></code> returns the
 molecular weight.</li>
-<li><tt class="docutils literal"><span class="pre">Bingo.getWeight($molecule,</span> <span class="pre">'most-abundant-mass')</span></tt> returns the
+<li><code class="docutils literal"><span class="pre">Bingo.getWeight($molecule,</span> <span class="pre">'most-abundant-mass')</span></code> returns the
 <a class="reference external" href="http://en.wikipedia.org/wiki/Mass%20%28mass%20spectrometry%29#Most%20abundant%20mass#Most%20abundant%20mass">most abundant
 mass</a>,
 which is calculated using most likely isotopic composition for a
 single random molecule.</li>
-<li><tt class="docutils literal"><span class="pre">Bingo.getWeight($molecule,</span> <span class="pre">'monoisotopic-mass')</span></tt> returns the
+<li><code class="docutils literal"><span class="pre">Bingo.getWeight($molecule,</span> <span class="pre">'monoisotopic-mass')</span></code> returns the
 <a class="reference external" href="http://en.wikipedia.org/wiki/Monoisotopic_mass">monoisotopic
 mass</a>, which is
 calculated using the most abundant isotope of each element.</li>
 </ul>
-<p>Here are some examples of using the <tt class="docutils literal"><span class="pre">Bingo.getMass()</span></tt> operator:</p>
+<p>Here are some examples of using the <code class="docutils literal"><span class="pre">Bingo.getMass()</span></code> operator:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.getMass(&#39;C1C=CC=CC=1&#39;, &#39;&#39;);
 
 select bingo.getWeight(molfile, &#39;most-abundant-mass&#39;) from mytable;
 </pre></div>
 </div>
-<p>Similarly, <tt class="docutils literal"><span class="pre">bingo.Gross()</span></tt> function returns the gross formula of the
+<p>Similarly, <code class="docutils literal"><span class="pre">bingo.Gross()</span></code> function returns the gross formula of the
 given molecule</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.Gross(&#39;C1C=CC=CC=1&#39;);
 
@@ -613,19 +1978,19 @@ select bingo.Gross(molfile) from mytable;
 </div>
 <div class="section" id="checking-for-correctness">
 <h3>Checking for Correctness<a class="headerlink" href="#checking-for-correctness" title="Permalink to this headline">¶</a></h3>
-<p>You can use the <tt class="docutils literal"><span class="pre">bingo.CheckMolecule()</span></tt> function to check that
+<p>You can use the <code class="docutils literal"><span class="pre">bingo.CheckMolecule()</span></code> function to check that
 molecules are presented in acceptable form. If the molecule has some
 problems (unsupported format, exceeded valence, incorrect
 stereochemistry), the functions returns a string with the description of
 the problem. Is the molecule is represented with a correct Molfile or
-SMILES string, the function returns <tt class="docutils literal"><span class="pre">null</span></tt>.</p>
+SMILES string, the function returns <code class="docutils literal"><span class="pre">null</span></code>.</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.CheckMolecule($molecule);
 
 select $table.*, bingo.CheckMolecule($column) from $table where bingo.CheckMolecule($column) is not null;
 </pre></div>
 </div>
 <p>Similarly, you can check reactions for correctness with the
-<tt class="docutils literal"><span class="pre">bingo.CheckReaction()</span></tt> function:</p>
+<code class="docutils literal"><span class="pre">bingo.CheckReaction()</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.CheckReaction($reaction);
 
 select $table.*, bingo.CheckReaction($column) from $table where bingo.CheckReaction($column) is not null;
@@ -634,7 +1999,7 @@ select $table.*, bingo.CheckReaction($column) from $table where bingo.CheckReact
 </div>
 <div class="section" id="reading-files-on-server">
 <h3>Reading Files on Server<a class="headerlink" href="#reading-files-on-server" title="Permalink to this headline">¶</a></h3>
-<p>The <tt class="docutils literal"><span class="pre">Bingo.FileToText()</span></tt> function accepts a text file path and loads a
+<p>The <code class="docutils literal"><span class="pre">Bingo.FileToText()</span></code> function accepts a text file path and loads a
 file from the server file system to PostgreSQL text.</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.FileToText($path);
 </pre></div>
@@ -643,7 +2008,7 @@ file from the server file system to PostgreSQL text.</p>
 <div class="highlight-python"><div class="highlight"><pre>select * form $table where $column @ (bingo.FileToText($path), &#39;&#39;)::bingo.sub;
 </pre></div>
 </div>
-<p>The <tt class="docutils literal"><span class="pre">Bingo.FileToBlob()</span></tt> function accepts a text file path and loads a
+<p>The <code class="docutils literal"><span class="pre">Bingo.FileToBlob()</span></code> function accepts a text file path and loads a
 file from the server file system to PostgreSQL bytea.</p>
 <div class="highlight-python"><div class="highlight"><pre>select bingo.FileToBlob($path);
 </pre></div>
@@ -700,128 +2065,30 @@ log as well.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper"><p class="logo">
-  <a href="../index.html">
-    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
-    <h1 class="logo logo-name">Life Sciences</h1>
-  </a>
-</p>
-<h3>Table Of Contents</h3>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Bingo</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="building-from-source.html">Building from Source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation-manual-oracle.html">Installation Manual: Oracle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation-manual-sqlserver.html">Installation Manual: SQL Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation-manual-postgres.html">Installation Manual: PostgreSQL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance-tips-oracle.html">Performance Tips: Oracle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user-manual-oracle.html">User Manual: Oracle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user-manual-sqlserver.html">User Manual: SQL Server</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">User Manual: PostgreSQL</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#basics">Basics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#data-representation">Data representation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#storage">Storage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#queries">Queries</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#molecules">Molecules</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#creating-an-index">Creating an Index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#updating-and-dropping-index">Updating and Dropping Index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#substructure-search">Substructure Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#smarts-search">SMARTS Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#exact-search">Exact Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tautomer-search">Tautomer Search</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#customizing-the-rules">Customizing the Rules</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#similarity-search">Similarity Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#gross-formula-search">Gross Formula Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#molecular-weight-search">Molecular Weight Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#format-conversion">Format Conversion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conversion-to-binary-format">Conversion to Binary Format</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#canonical-smiles-computation">Canonical SMILES computation</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#molecule-fingerprints">Molecule Fingerprints</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#inchi-and-inchikey">InChI and InChIKey</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#reactions">Reactions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Creating an Index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reaction-substructure-search">Reaction Substructure Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reaction-smarts-search">Reaction SMARTS Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reaction-exact-search">Reaction Exact Search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#automatic-atom-to-atom-mapping">Automatic Atom-to-Atom mapping</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">Format Conversion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">Conversion to binary format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reaction-fingerprints">Reaction Fingerprints</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#importing-and-exporting-data">Importing and Exporting Data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#importing-sdfiles-rdfiles-and-smiles">Importing SDFiles, RDFiles and SMILES</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#exporting-sdfiles-and-rdfiles">Exporting SDFiles and RDFiles</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#utility-functions">Utility functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#extracting-names">Extracting Names</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#calculating-molecule-properties">Calculating Molecule Properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#checking-for-correctness">Checking for Correctness</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reading-files-on-server">Reading Files on Server</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#permissions-management">Permissions management</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#set-permissions-for-building-the-index">Set permissions for building the index</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#maintenance">Maintenance</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#obtaining-bingo-version-number">Obtaining Bingo Version Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#viewing-the-log-file">Viewing the Log File</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html">Bingo Changelog</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#why-select-bingo-as-your-molecular-search-cartridge">Why Select Bingo as Your Molecular Search Cartridge?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#features">Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#download-and-install">Download and Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#license">License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#feedback">Feedback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#commercial-availability">Commercial Availability</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../ketcher/index.html">Ketcher</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../imago/index.html">Imago OCR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../parso.html">Parso</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Info</a></li>
-</ul>
-
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
     </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2014, EPAM Systems.
-    </div>
+    <p>
+        &copy; Copyright 2015, EPAM Systems.<br/>
+    <b>Version 0.3.0</b><br/>
+      Last updated on Apr 30, 2015.<br/>
+    </p>
+  </div>
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20662471-2']);
+  _gaq.push(['_trackPageview']);
 
-    
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</footer>
   </body>
 </html>
