@@ -4,6 +4,7 @@ Reaction Products Enumeration and Transformation
 
 .. code::
     :name: rpe-run-and-render
+    :hidden:
     
     def loadSdf (sdf_path):
       sdfiterator = indigo.iterateSDFile(sdf_path)

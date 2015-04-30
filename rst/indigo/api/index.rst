@@ -2730,6 +2730,8 @@ Python:
 Reaction Products Enumeration
 -----------------------------
 
+General API for the combinatorial chemistry capabilities of Indigo. More examples can be found `here <../concepts/combichem.html>`__. Also some examples available at `options <../options/reaction-product-enumeration.html>`__ page.
+
 Java:
 
 .. code-block:: java
@@ -2777,8 +2779,7 @@ Python:
 Reaction-based Molecule Transformations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Examples of usage are available
-`here <../concepts/transformation.html>`__.
+Usage examples are available `here <../concepts/transformation.html>`__.
 
 Java:
 
