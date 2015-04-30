@@ -8,6 +8,8 @@ Stable
 Indigo 1.2.1
 -------------
 
+Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.1.html>`__
+
 Language Bindings
 ~~~~~~~~~~~~~~~~~
 
@@ -22,60 +24,29 @@ Language Bindings
      - |image2| Mac OS
      - Universal
    * - |p-icon| Python 
-     - `zip <http://>`__
-     - `zip <http://>`__
-     - `zip <http://>`__
-     - `zip <http://>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-python-1.2.1-linux.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-python-1.2.1-win.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-python-1.2.1-mac.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-python-1.2.1-universal.zip>`__
    * - |j-icon| Java 
-     - `zip <http://>`__
-     - `zip <http://>`__
-     - `zip <http://>`__
-     - `zip <http://>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-java-1.2.1-linux.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-java-1.2.1-win.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-java-1.2.1-mac.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-java-1.2.1-universal.zip>`__
    * - |c-icon| .NET 
-     - `zip <http://>`__
-     - `zip <http://>`__
-     - `zip <http://>`__
-     - `zip <http://>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-dotnet-1.2.1-linux.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-dotnet-1.2.1-win.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-dotnet-1.2.1-mac.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-dotnet-1.2.1-universal.zip>`__
    * - |n-icon| C Shared Libraries 
-     - `zip <http://>`__
-     - `zip <http://>`__
-     - `zip <http://>`__
-     - `zip <http://>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-libs-1.2.1-linux-shared.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-libs-1.2.1-win-shared.zip>`__
+     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-libs-1.2.1-mac-shared.zip>`__
+     - \-
 
 
-Utilities
-~~~~~~~~~
-
-.. list-table:: 
-   :header-rows: 1
-   :stub-columns: 1
-   :widths: 28 24 24 24
-
-   * - 
-     - |image0| Linux
-     - |image1| Windows
-     - |image2| Mac OS
-   * - `ChemDiff <../../indigo/chemdiff.html>`__
-     - `installer <http://>`__
-     - `zip <http://>`__
-     - `zip <http://>`__
-   * - `Legio <../../indigo/legio.html>`__
-     - `installer <http://>`__
-     - `zip <http://>`__
-     - `zip <http://>`__
-   * - `indigo-depict <../../indigo/indigo-depict.html>`__, `indigo-deco <../../indigo/indigo-deco.html>`__, `indigo-cano <../../indigo/indigo-cano.html>`__
-     - `32bit <http://>`__, `64bit <http://>`__
-     - `32bit <http://>`__, `64bit <http://>`__
-     - `32bit <http://>`__, `64bit <http://>`__
-
-
-
-Source code
-~~~~~~~~~~~
-
-`Download ZIP <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.1.12/indigo-1.1.12-src.zip>`__
-
-`Repository on GitHub <http://github.com/ggasoftware/indigo>`__
+ 
+*Utilities and source code will be added soon*
 
 
 Nightly Builds

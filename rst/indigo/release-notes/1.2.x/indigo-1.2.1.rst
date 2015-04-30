@@ -2,7 +2,7 @@
 Indigo 1.2.1
 ############
 
-*2 April 2013*
+*30 April 2013*
 
 *******
 Summary
@@ -23,7 +23,7 @@ Summary
 
 * ChemDraw CDX reader was implemented ( :ref:`details <indigo-1.2.1-cdx>`)
 
-* New option for skipping layout while reaction product enumeration. ( ``TODO``)
+* Improvements for Reaction Product Enumeration. New option for skipping layout while enumeration was added.  (see `options <../../../indigo/options/reaction-product-enumeration.html>`__ .)
 
 * Stereo and cis-trans configuration better support ( :ref:`details <indigo-1.2.1-stereo>`)
 
