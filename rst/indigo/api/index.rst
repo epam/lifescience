@@ -2730,36 +2730,73 @@ Python:
 Reaction Products Enumeration
 -----------------------------
 
+General API for the combinatorial chemistry capabilities of Indigo. More examples can be found `here <../concepts/combichem.html>`__. Also some examples available at `options <../options/reaction-product-enumeration.html>`__ page.
+
 Java:
 
 .. code-block:: java
 
-      IndigoObject reaction = indigo.loadQueryReactionFromFile(rxn_path);
+      IndigoObject reaction = indigo.loadQueryReaction("Cl[C:1]([*:3])=O.[OH:2][*:4]>>[*:4][O:2][C:1]([*:3])=O");
       IndigoObject monomers_table = indigo.createArray();
-      for (int i = 0; i < reaction.countReactants(); i++)
-      {
-         monomers_table.arrayAdd(indigo.createArray());
-
-         for (IndigoObject iterr : indigo.iterateSDFile(mon_paths[i])
-         {
-            monomers_table.at(i).arrayAdd(iterr.clone());
-         }
-      }
+      
+      monomers_table.arrayAdd(indigo.createArray());
+      monomers_table.at(0).arrayAdd(indigo.loadMolecule("CC(Cl)=O"));
+      monomers_table.at(0).arrayAdd(indigo.loadMolecule("OC1CCC(CC1)C(Cl)=O"));
+      
+      monomers_table.arrayAdd(indigo.createArray());
+      monomers_table.at(1).arrayAdd(indigo.loadMolecule("O[C@H]1[C@H](O)[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O"));
+      
       IndigoObject output_reactions = indigo.reactionProductEnumerate(reaction, monomers_table);
+
+Python:
+
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+
+    reaction = indigo.loadQueryReaction("Cl[C:1]([*:3])=O.[OH:2][*:4]>>[*:4][O:2][C:1]([*:3])=O")
+    
+    monomers_table = indigo.createArray()
+    
+    monomers_table.arrayAdd(indigo.createArray())
+    monomers_table.at(0).arrayAdd(indigo.loadMolecule("CC(Cl)=O"))
+    monomers_table.at(0).arrayAdd(indigo.loadMolecule("OC1CCC(CC1)C(Cl)=O"))
+    
+    monomers_table.arrayAdd(indigo.createArray())
+    monomers_table.at(1).arrayAdd(indigo.loadMolecule("O[C@H]1[C@H](O)[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O"))
+
+    output_reactions = indigo.reactionProductEnumerate(reaction, monomers_table)
+    
+    indigo.setOption("render-comment", "Results")
+    rxn_array = indigo.createArray();
+    for elem in output_reactions.iterateArray():
+        rxn = elem.clone();
+        rxn_array.arrayAdd(rxn)
+        
+    indigoRenderer.renderGridToFile(rxn_array, None, 2, 'result_rpe.png')
 
 
 Reaction-based Molecule Transformations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Examples of usage are available
-`here <../concepts/transformation.html>`__.
+Usage examples are available `here <../concepts/transformation.html>`__.
 
 Java:
 
 .. code-block:: java
 
-      IndigoObject reaction = indigo.loadQueryReaction("[NH:3]=[N:1]#[N:2]>>[NH:3]=[N+:1]=[#7-:2]");
-      IndigoObject molecule = indigo.loadMolecule("N#N=NC1=CC(=CC=C1)N=N#N");
+      IndigoObject reaction = indigo.loadQueryReaction("[*+:1][*-:2]>>[*:2]=[*:1]");
+      IndigoObject molecule = indigo.loadMolecule("[O-][C+]1CCCC1[N+]([O-])=O");
       indigo.transform(reaction, molecule);
-      System.out.println(molecule.smiles); // N(C1=CC=CC(N=[N+]=[N-])=C1)=[N+]=[N-]
+      System.out.println(molecule.smiles());
+      
+Python:
 
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+    
+    reaction = indigo.loadQueryReaction("[*+:1][*-:2]>>[*:2]=[*:1]")
+    molecule = indigo.loadMolecule("[O-][C+]1CCCC1[N+]([O-])=O")
+    indigo.transform(reaction, molecule)
+    print(molecule.smiles())

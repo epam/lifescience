@@ -12,7 +12,7 @@ News
 Indigo 1.2.1 released
 ---------------------
 
-*2 April 2015*
+*30 April 2015*
 
 New Indigo stable version is available. It includes bugfixes and enhancements. 
 
@@ -26,7 +26,7 @@ New Indigo stable version is available. It includes bugfixes and enhancements.
 
 .. |indigo_1_2_1_downloads| raw:: html
 
-   <a href="download/indigo/index.html#indigo-1-1-12" target="_blank">Downloads</a>
+   <a href="download/indigo/index.html#indigo-1-2-1" target="_blank">Downloads</a>
 
 
 
