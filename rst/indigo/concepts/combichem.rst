@@ -12,67 +12,59 @@ Peptide Bond Formation
 
 Monomers were divided into two groups: acids and amines.
 
-**Acids:**
+.. list-table:: 
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 24 24 24 24
 
-A:
+   * - 
+     - A
+     - B
+     - C
+   * - Acids 
+     - |image2| 
+     - |image3| 
+     - |image4| 
+     
+.. list-table:: 
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 24 24 24 24
 
-|image2|
-
-B:
-
-|image3|
-
-C:
-
-|image4|
-
-**Amines:**
-
-X:
-
-|image5|
-
-Y:
-
-|image6|
-
-Z:
-
-|image7|
+   * - 
+     - X
+     - Y
+     - X
+   * - Amines 
+     - |image5| 
+     - |image6| 
+     - |image7| 
 
 Without the specification any additional options, Legio generates six
 products. Legio tries to perform specified reactions for each monomer
 from both the first group (acids) and the second group (amines):
 
-A
+.. list-table:: 
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 24 24 24 24
 
-B
-
-C
-
-X
-
-|image8|
-
-|image9|
-
-|image10|
-
-Y
-
-|image11|
-
-|image12|
-
-|image13|
-
-Z
-
-|image14|
-
-|image15|
-
-|image16|
+   * - 
+     - A
+     - B
+     - C
+   * - X
+     - |image8| 
+     - |image9| 
+     - |image10| 
+   * - Y
+     - |image11| 
+     - |image12| 
+     - |image13| 
+   * - Z
+     - |image14| 
+     - |image15| 
+     - |image16| 
 
 You can see that all the stereochemistry configurations are preserved
 during the reaction.
@@ -81,33 +73,37 @@ When the “all reactions” mode is specified, products can take place in
 another reaction too, but only with original monomers or their products.
 So with such options, three additional products are generated:
 
-B + X + X:
+.. list-table:: 
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 24 24
 
-|image17|
-
-B + Y + Y:
-
-|image18|
-
-B + Z + Z:
-
-|image19|
+   * - 
+     - 
+   * - B + X + X: 
+     - |image17| 
+   * - B + Y + Y: 
+     - |image18| 
+   * - B + Z + Z: 
+     - |image19| 
 
 When the “one tube” mode is specified, any monomers and their products
 can make another reaction. With this mode, it is imagined that all
 monomers are in one tube. Another three products are generated:
 
-B + X + Y:
+.. list-table:: 
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 24 24
 
-|image20|
-
-B + X + Z:
-
-|image21|
-
-B + Y + Z:
-
-|image22|
+   * - 
+     - 
+   * - B + X + Y: 
+     - |image20| 
+   * - B + X + Z: 
+     - |image21| 
+   * - B + Y + Z: 
+     - |image22| 
 
 Reactants Matching
 ~~~~~~~~~~~~~~~~~~
