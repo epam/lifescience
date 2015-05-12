@@ -1,6 +1,21 @@
 ﻿Indigo ELN Changelog
 ====================
 
+
+Indigo ELN 1.2
+----------------
+
+*08 May 2015*
+
+The major changes are the following
+ - Tomcat for application deployment instead of JBOSS application server
+ - Spring Remoting instead of EJB
+ - Maven code structure 
+ - Reporting: BIRT 3.7.2 instead of 2.5.2 
+ - Basic Application Security
+ - One deployment unit for both client and server side
+ - (Compound Registration Service) Spring Remoting instead of WebServices
+
 Indigo ELN 1.1.3
 ----------------
 
