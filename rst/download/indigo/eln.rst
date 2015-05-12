@@ -1,6 +1,25 @@
 Download Indigo ELN
 ===================
 
+
+Indigo ELN 1.2
+--------------
+
+-  `Indigo ELN: Installation Guide <>`__
+-  `Deployment\_Units with empty services <>`__
+-  `Deployment Units with GGA services <>`__
+-  `Database scripts for Windows <>`__
+-  `Sources <>`__ 
+-  User Tool: `universal binary <>`__
+   and `source files <>`__
+-  `Bingo Compound Registration and Search Services <>`__
+-  `Bingo Compound Registration and Search Services: Installation Guide <>`__
+-  `Indigo ELN: User Guide <>`__
+
+
+
+
+
 Indigo ELN 1.1.3
 ----------------
 
