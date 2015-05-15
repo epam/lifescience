@@ -5,17 +5,17 @@ Download Indigo ELN
 Indigo ELN 1.2
 --------------
 
--  `Indigo ELN: Installation Guide <>`__
--  `Deployment\_Units with empty services <>`__
--  `Deployment Units with GGA services <>`__
--  `Database scripts for Windows <>`__
--  `Sources <>`__ 
--  User Tool: `universal binary <>`__
-   and `source files <>`__
--  `Bingo Compound Registration and Search Services <>`__
--  `Bingo Compound Registration and Search Services: Installation Guide <>`__
--  `Indigo ELN: User Guide <>`__
+-  `Indigo ELN: Installation Guide <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.2/Indigo%20ELN%201%202%20Installation%20Guide.pdf>`__
+-  `Indigo ELN: User Guide <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.2/Indigo%20ELN%201.2%20User%20Guide.pdf>`__
+-  `Sources <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.2/IndigoELN-1.2-src.zip>`__ 
 
+Epam External Services for Indigo ELN
+
+   -  `Bingo Compound Registration and Search Service <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.2/IndigoELN-1.2-Epam_Services-src.zip>`__
+   -  `Bingo Compound Registration and Search Service: Installation Guide <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.2/Indigo%20ELN%201%202%20CRS%20Installation%20Guide.pdf>`__
+   -  `Indigo Signature Service <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.2/IndigoELN-1.2-Epam_Services-src.zip>`__
+   -  `Indigo Signature Service: Installation Guide <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.2/EPAM%20Indigo%20Signature%20Service%201.0%20Installation%20Guide.pdf>`__
+   -  `Indigo Signature Service: User Guide <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.2/EPAM%20Indigo%20Signature%20Service%201.0%20User%20Guide.pdf>`__
 
 
 
