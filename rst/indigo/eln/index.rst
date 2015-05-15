@@ -96,7 +96,7 @@ The core Indigo ELN package includes:
 
    -  Basic functionality and user interfaces for creating, describing,
       and managing singleton experiments and concept records.
-   -  Basic signature service to sign and witness experiments.
+   -  Signature service to sign and witness experiments.
    -  Reaction rendering and chemical properties calculation based on
       EPAM's open-source cheminformatics engine Indigo\ :sup:`©`.
    -  Compound registration and structure search services
@@ -169,9 +169,9 @@ Please go to the `Downloads <../../download/indigo/eln.html>`__ page
 for the installation package suitable for your system.
 
 For installation instructions, see the `Installation
-Guide <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.1.3/Indigo%20ELN%201.1.3%20Installation%20Guide.pdf>`__.
+Guide <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.2/Indigo%20ELN%201%202%20Installation%20Guide.pdf>`__.
 For user manual, see `User
-Guide <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.1.3/Indigo%20ELN%20User%20Guide.pdf>`__.
+Guide <http://www.epam.com/content/dam/epam/open-source/library/indigo-eln-1.2/Indigo%20ELN%201.2%20User%20Guide.pdf>`__.
 
 License
 -------
