@@ -8,6 +8,27 @@ News
     release-notes/index
 
 
+Indigo ELN 1.2 released
+-----------------------
+
+*08 May 2015*
+
+New stable version for Indigo Chemistry Electronic Lab Notebook is available. It includes the following general changes:
+
+* Using Maven as build system
+* Using Tomcat as application server instead of JBoss
+
+Also includes bugfixes, improved performance both with the stability and other enhancements. See detailed description |indigo_eln_1_2_notes|
+
+* |indigo_eln_1_2_downloads|
+
+.. |indigo_eln_1_2_notes| raw:: html
+
+   <a href="indigo/eln/changelog.html" target="_blank">here</a>
+
+.. |indigo_eln_1_2_downloads| raw:: html
+
+   <a href="download/indigo/eln.html" target="_blank">Downloads</a>
 
 Indigo 1.2.1 released
 ---------------------
