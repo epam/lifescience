@@ -11,6 +11,7 @@ Contents:
    installation
    calculating-properties
    standardize
+   scsr-transformations
 
 
 .. TODO

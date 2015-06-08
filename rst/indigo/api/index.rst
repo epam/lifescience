@@ -1130,18 +1130,28 @@ Python:
       print [atom.index() for atom in item.iterateAtoms()]
       print [bond.index() for bond in item.iterateBonds()]
 
-Groups
-~~~~~~
+SGroups
+~~~~~~~
 
 In a molecule loaded from a Molfile, arbitrary subsets of a its atoms
-and bonds can be joined in groups. There are many kinds of groups,
-Indigo supports five of them:
+and bonds can be joined in S-groups. There are many kinds of S-groups,
+Indigo supports all described in the format:
 
--  generic groups (GEN)
--  superatoms (SUP)
--  structure repeating units (SRU)
--  multiple groups (MUL)
--  data SGroups (DAT)
+-  generic SGroup (GEN)
+-  abbreviation (superatom) (SUP)
+-  structure repeating unit (SRU)
+-  multiple SGroup (MUL)
+-  data SGroup (DAT)
+-  monomer SGroup (MON)
+-  mer SGroup (MER)
+-  copolymer SGroup (COP)
+-  crosslink SGroup (CRO)
+-  modification SGroup (MOD)
+-  graft SGroup (GRA)
+-  component SGroup (COM)
+-  mixture SGroup (MIX)
+-  formulation SGroup (FOR)
+-  any polymer SGroup (ANY)
 
 The following methods of ``IndigoObject`` are available for reading
 molecule's groups:
@@ -1209,6 +1219,209 @@ To add a superatom use ``IndigoObject.addSuperatom()`` method:
     mol.addSuperatom(list_with_atom_indices, "Abbreviation")
 
 
+New set of methods is available for manipulation with S-groups. 
+You can create new S-group using "mapping" object received from matcher:
+
+- ``IndigoObject.createSGroup``
+
+Java:
+
+.. code-block:: java
+
+    IndigoObject match = indigo.substructureMatcher(mol).match(query);
+
+    if (match != null)
+    {
+       IndigoObject sgroup = mol.createSGroup("SUP", match, "Asx");
+    }
+
+C#:
+
+.. code-block:: csharp
+
+    IndigoObject match = indigo.substructureMatcher(mol).match(query);
+
+    if (match != null)
+    {
+       IndigoObject sgroup = mol.createSGroup("SUP", match, "Asx");
+    }
+
+Python:
+
+.. code-block:: python
+
+    match = indigo.substructureMatcher(mol).match(query)
+
+    if match:
+       sgroup = mol.createSGroup("SUP", match, "Asx")
+
+You can get and set different S-group's properties using the next methods: 
+
+-  ``getSGroupType`` - returns S-group type
+-  ``getSGroupIndex`` - returns S-group index
+-  ``setSGroupData`` - accepts S-group data (for S-groups of "DAT" type)
+-  ``setSGroupCoords`` accepts S-group coordinates, x and y values (for S-groups of "DAT" type)
+-  ``setSGroupDescription``- accepts S-group data field units or format (for S-groups of "DAT" type)
+-  ``setSGroupFieldName`` - accepts S-group data name (for S-groups of "DAT" type)
+-  ``setSGroupQueryCode`` - accepts S-group data query code (for S-groups of "DAT" type)
+-  ``setSGroupQueryOper`` - accepts S-group data query operation (for S-groups of "DAT" type)
+-  ``setSGroupDisplay`` - accepts S-group data display option (for S-groups of "DAT" type)
+-  ``setSGroupLocation`` - accepts S-group data display location (for S-groups of "DAT" type)
+-  ``setSGroupTag`` - accepts S-group data tag (for S-groups of "DAT" type)
+-  ``setSGroupTagAlign`` - accepts S-group data tag alignment (for S-groups of "DAT" type)
+-  ``setSGroupDataType`` - accepts S-group data type (for S-groups of "DAT" type)
+-  ``setSGroupXCoord`` - accepts S-group x coordinate (for S-groups of "DAT" type)
+-  ``setSGroupYCoord`` - accepts S-group y coordinate (for S-groups of "DAT" type)
+-  ``getSGroupClass`` - returns S-group class name (for S-groups of "SUP" type)
+-  ``setSGroupClass`` - accepts S-group class name (for S-groups of "SUP" type)
+-  ``getSGroupName`` - returns S-group label (for S-groups of "SUP" and "SRU" types)
+-  ``setSGroupName`` - accepts S-group label (for S-groups of "SUP" and "SRU" types)
+-  ``getSGroupNumCrossBonds`` - returns number of crossing bonds for sgroup
+-  ``addSGroupAttachmentPoint`` - accepts attachment point's description and creates it (for S-groups of "SUP" type)
+-  ``deleteSGroupAttachmentPoint`` - accepts attachment point's index and removes it (for S-groups of "SUP" type)
+-  ``getSGroupDisplayOption`` - returns display option for sgroup (for S-groups of "SUP" type)
+-  ``setSGroupDisplayOption`` - accepts display option for sgroup (for S-groups of "SUP" type)
+-  ``getSGroupMultiplier`` - returns multiplier value for sgroup (for S-groups of "MUL" type)
+-  ``setSGroupMultiplier`` - accepts multiplier value for sgroup (for S-groups of "MUL" type)
+-  ``setSGroupBrackets`` - accepts bracket style and brackets coordinates for sgroup (for S-groups of "GEN","MUL" and "SRU" types)
+
+**Note**: All properties and its values correspond to Molfile format.
+
+Python examples:
+
+.. code-block:: python
+
+    sg.setSGroupClass("AA")
+    print(sg.getSGroupName())
+    print(sg.getSGroupClass())
+    print(sg.getSGroupNumCrossBonds())
+    print(sg.getSGroupDisplayOption())
+    sg.setSGroupName("As")
+    sg.setSGroupDisplayOption(0)
+
+    mp = sg.getSGroupMultiplier()
+    sg.setSGroupMultiplier(mp + 1)
+    sg.setSGroupBrackets(1, 1.0, 1.0, 1.0, 2.0, 3.0, 1.0, 3.0, 2.0)
+
+    sg.setSGroupData("Test Data S-group")
+    sg.setSGroupCoords(1.0, 1.0)
+    sg.setSGroupDescription("SGroup Description (FIELDINFO)")
+    sg.setSGroupFieldName("SGroup (FIELDNAME)")
+    sg.setSGroupQueryCode("SGroup (QUERYTYPE)")
+    sg.setSGroupQueryOper("SGroup (QUERYOP)")
+    sg.setSGroupDisplay("attached")
+    sg.setSGroupLocation("relative")
+    sg.setSGroupTag("G")
+    sg.setSGroupTagAlign(9)
+    sg.setSGroupDataType("T")
+    sg.setSGroupXCoord(4.0)
+    sg.setSGroupYCoord(5.0)
+
+
+You can find in the ``IndigoObject`` S-groups using different criteria
+with correspoding values in S-group properties by type, by name, by class, by atoms or crossing bonds
+included in S-group:
+
+-  ``findSGroups``  - it accepts key and value for search and retuns iterator for collection of found sgroups
+
+Currently available keys are:
+
+-  ``SG_TYPE`` - find sgroups by type
+-  ``SG_CLASS`` - find sgroups by class
+-  ``SG_LABEL`` - find sgroups by name
+-  ``SG_DISPLAY_OPTION`` - find sgroups by display option
+-  ``SG_BRACKET_STYLE`` - find sgroups by bracket style
+-  ``SG_DATA`` - find sgroups which contains corresponding string in data field
+-  ``SG_DATA_NAME`` - find sgroups by data name
+-  ``SG_DATA_TYPE`` - find sgroups by data type
+-  ``SG_DATA_DESCRIPTION`` - find sgroups by data description
+-  ``SG_DATA_DISPLAY`` - find sgroups by data display option
+-  ``SG_DATA_LOCATION`` - find sgroups by data location
+-  ``SG_DATA_TAG`` - find sgroups by data tag
+-  ``SG_QUERY_CODE`` - find sgroups by query code
+-  ``SG_QUERY_OPER`` - find sgroups by query operation
+-  ``SG_PARENT`` - find sgroups by parent sgroup
+-  ``SG_CHILD`` - find sgroups by children sgroup
+-  ``SG_ATOMS`` - find sgroups containing list of atoms
+-  ``SG_BONDS`` - find sgroups contating list of crossing bonds
+
+
+.. code-block:: python
+
+    sgs = m.findSGroups("SG_TYPE", "SUP")
+
+    for sg in sgs:
+        print("Superatom with label %s found" % (m.getSuperatom(sg.getSGroupIndex())).getSGroupName());
+
+    sgs = m.findSGroups("SG_LABEL", "Z")
+    print("SGroups with label Z:")
+    for sg in sgs:
+        print("SGroup Index = %d " % sg.getSGroupIndex() + ", SGroup Type = %s" % sg.getSGroupType());
+    
+    sgs = m.findSGroups("SG_CLASS", "AA")
+    print("SGroups with class AA:")
+    for sg in sgs:
+        print("SGroup Index = %d " % sg.getSGroupIndex() + ", SGroup Type = %s" % sg.getSGroupType());
+    
+    sgs = m.findSGroups("SG_DISPLAY_OPTION", "0")
+    print("SGroups expanded:")
+    for sg in sgs:
+        print("SGroup Index = %d " % sg.getSGroupIndex() + ", SGroup Type = %s" % sg.getSGroupType());
+    
+    sgs = m.findSGroups("SG_BRACKET_STYLE", "0")
+    print("SGroups with square brackets:")
+    for sg in sgs:
+        print("SGroup Index = %d " % sg.getSGroupIndex() + ", SGroup Type = %s" % sg.getSGroupType());
+    
+    sgs = m.findSGroups("SG_DATA", "Selection")
+    print("SGroups with data contains Selection:")
+    for sg in sgs:
+        print("SGroup Index = %d " % sg.getSGroupIndex() + ", SGroup Type = %s" % sg.getSGroupType());
+    
+    sgs = m.findSGroups("SG_DATA_NAME", "comment")
+    print("SGroups with data field name comment:")
+    for sg in sgs:
+        print("SGroup Index = %d " % sg.getSGroupIndex() + ", SGroup Type = %s" % sg.getSGroupType());
+    
+    sgs = m.findSGroups("SG_DATA_DISPLAY", "detached")
+    print("SGroups with detached data field:")
+    for sg in sgs:
+        print("SGroup Index = %d " % sg.getSGroupIndex() + ", SGroup Type = %s" % sg.getSGroupType());
+    
+    sgs = m.findSGroups("SG_DATA_LOCATION", "relative")
+    print("SGroups with relative data field:")
+    for sg in sgs:
+        print("SGroup Index = %d " % sg.getSGroupIndex() + ", SGroup Type = %s" % sg.getSGroupType());
+    
+    sgs = m.findSGroups("SG_ATOMS", "103, 104")
+    print("SGroups with atoms 103 and 104:")
+    for sg in sgs:
+        print("SGroup Index = %d " % sg.getSGroupIndex() + ", SGroup Type = %s" % sg.getSGroupType());
+    
+    sgs = m.findSGroups("SG_BONDS", "249, 245")
+    print("SGroups with bonds 245 and 249:")
+    for sg in sgs:
+        print("SGroup Index = %d " % sg.getSGroupIndex() + ", SGroup Type = %s" % sg.getSGroupType());
+
+
+
+S-group can be removed from the ``IndigoObject`` using ``remove`` method. In that case just description of
+corresponding S-group will be removed (the atoms and bonds remain). 
+
+
+
+TGroups
+~~~~~~~
+
+Indigo supports the hybrid representation (SCSR) for a molecule loaded from a V3000 Molfile.
+SCSR uses TEMPLATE blocks to represent residues and this representation is widely used for biolgocal sequences.
+
+There are methods for transformation SCSR into full CTAB form and vise versa:
+
+-  ``transformSCSRtoCTAB`` - transforms SCSR into full CTAB representation (templates are transformed into S-groups)
+-  ``transformCTABtoSCSR`` - transforms CTAB into SCSR (accepts templates collection and replaces matched fragments by pseudoatoms and corresponding templates)
+
+Examples of usage these methods are in corresponding `Examples <../examples/scsr-transformations.html>`__ section.
 
 
 Alignment of Atoms
