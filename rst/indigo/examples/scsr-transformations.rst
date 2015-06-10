@@ -18,16 +18,16 @@ Transform SCSR into full CTAB representation
     mol1 = indigo.loadMoleculeFromFile(file)
     mol2 = mol1.clone();
 
-    mol1.transformSCSRtoCTAB()
-    mol1.layout()
+    mol2.transformSCSRtoCTAB()
+    mol2.layout()
 
     array = indigo.createArray()
 
-    mol1.setProperty("grid-comment", "after")
-    mol2.setProperty("grid-comment", "before")
+    mol1.setProperty("grid-comment", "before")
+    mol2.setProperty("grid-comment", "after")
     
-    array.arrayAdd(mol2)
     array.arrayAdd(mol1)
+    array.arrayAdd(mol2)
 
     indigo.setOption("render-grid-title-property", "grid-comment")
     indigo.setOption("render-grid-margins", "20, 10")
@@ -52,16 +52,16 @@ Transform CTAB into SCSR
 
     file2 = "data/scsr-templates.mol"
     templates = indigo.loadMoleculeFromFile(file2)
-    mol1.transformCTABtoSCSR(templates)
-    mol1.layout()
+    mol2.transformCTABtoSCSR(templates)
+    mol2.layout()
 
     array = indigo.createArray()
 
-    mol2.setProperty("grid-comment", "before")
-    mol1.setProperty("grid-comment", "after")
+    mol1.setProperty("grid-comment", "before")
+    mol2.setProperty("grid-comment", "after")
     
-    array.arrayAdd(mol2)
     array.arrayAdd(mol1)
+    array.arrayAdd(mol2)
 
     indigo.setOption("render-grid-title-property", "grid-comment")
     indigo.setOption("render-grid-margins", "20, 10")
