@@ -24,24 +24,24 @@ Language Bindings
      - |image2| Mac OS
      - Universal
    * - |p-icon| Python 
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-python-1.2.1-linux.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-python-1.2.1-win.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-python-1.2.1-mac.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-python-1.2.1-universal.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-python-1.2.1-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-python-1.2.1-win.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-python-1.2.1-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-python-1.2.1-universal.zip>`__
    * - |j-icon| Java 
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-java-1.2.1-linux.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-java-1.2.1-win.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-java-1.2.1-mac.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-java-1.2.1-universal.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-java-1.2.1-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-java-1.2.1-win.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-java-1.2.1-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-java-1.2.1-universal.zip>`__
    * - |c-icon| .NET 
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-dotnet-1.2.1-linux.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-dotnet-1.2.1-win.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-dotnet-1.2.1-mac.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-dotnet-1.2.1-universal.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-dotnet-1.2.1-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-dotnet-1.2.1-win.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-dotnet-1.2.1-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-dotnet-1.2.1-universal.zip>`__
    * - |n-icon| C Shared Libraries 
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-libs-1.2.1-linux-shared.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-libs-1.2.1-win-shared.zip>`__
-     - `zip <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2.1/indigo-libs-1.2.1-mac-shared.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-libs-1.2.1-linux-shared.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-libs-1.2.1-win-shared.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-libs-1.2.1-mac-shared.zip>`__
      - \-
 
 

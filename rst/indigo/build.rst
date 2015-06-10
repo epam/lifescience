@@ -3,7 +3,7 @@ Building from sources
 
 Sources can be obtained directly or from GitHub repository:
 
-   -  `Source code <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.1.12/indigo-1.1.12-src.zip>`__
+   -  `Source code <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.1.12/indigo-1.1.12-src.zip>`__
    -  `Repository on GitHub <http://github.com/ggasoftware/indigo>`__
 
 Requirements

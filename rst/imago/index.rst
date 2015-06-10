@@ -144,7 +144,7 @@ directory.
 
 You can run Imago OCR Visual Tool even without installing any files
 using Java Web Start technology. Open the `following
-JNLP-file <http://www.epam.com/content/dam/epam/open-source/library/imago-2.0.0/jnlp/imago-ocr-visual-tool.jnlp>`__
+JNLP-file <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/imago-2.0.0/jnlp/imago-ocr-visual-tool.jnlp>`__
 to execute Imago OCR Visual Tool.
 
 License

@@ -35,38 +35,38 @@ Language Bindings
 Python
 ^^^^^^
 
-`Windows <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-python-1.2.1dev-win.zip>`__,
-`Linux <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-python-1.2.1dev-linux.zip>`__,
+`Windows <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-python-1.2.1dev-win.zip>`__,
+`Linux <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-python-1.2.1dev-linux.zip>`__,
 `Mac OS
-X <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-python-1.2.1dev-mac.zip>`__,
-`Universal <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-python-1.2.1dev-universal.zip>`__
+X <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-python-1.2.1dev-mac.zip>`__,
+`Universal <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-python-1.2.1dev-universal.zip>`__
 
 Java
 ^^^^
 
-`Windows <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-java-1.2.1dev-win.zip>`__,
-`Linux <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-java-1.2.1dev-linux.zip>`__,
+`Windows <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-java-1.2.1dev-win.zip>`__,
+`Linux <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-java-1.2.1dev-linux.zip>`__,
 `Max OS
-X <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-java-1.2.1dev-mac.zip>`__,
-`Universal <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-java-1.2.1dev-universal.zip>`__
+X <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-java-1.2.1dev-mac.zip>`__,
+`Universal <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-java-1.2.1dev-universal.zip>`__
 
 .NET
 ^^^^
 
-`Windows <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-dotnet-1.2.1dev-win.zip>`__,
-`Linux <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-dotnet-1.2.1dev-linux.zip>`__,
+`Windows <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-dotnet-1.2.1dev-win.zip>`__,
+`Linux <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-dotnet-1.2.1dev-linux.zip>`__,
 `Max OS
-X <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-dotnet-1.2.1dev-mac.zip>`__,
-`Universal <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-dotnet-1.2.1dev-universal.zip>`__
+X <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-dotnet-1.2.1dev-mac.zip>`__,
+`Universal <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-dotnet-1.2.1dev-universal.zip>`__
 
 Native library
 ^^^^^^^^^^^^^^
 
 Shared libraries:
-`Windows <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-libs-1.2.1dev-win-shared.zip>`__,
-`Linux <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-libs-1.2.1dev-linux-shared.zip>`__,
+`Windows <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-libs-1.2.1dev-win-shared.zip>`__,
+`Linux <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-libs-1.2.1dev-linux-shared.zip>`__,
 `Mac OS
-X <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/indigo-1.2.1dev/indigo-libs-1.2.1dev-mac-shared.zip>`__
+X <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/indigo-1.2.1dev/indigo-libs-1.2.1dev-mac-shared.zip>`__
 
 Static libraries are not distributed because they depends on the
 compiler. You can build you version from the sources.
@@ -88,14 +88,14 @@ Language Bindings
 Python
 ^^^^^^
 
-`Windows <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/1.2.1-layout-dev/indigo-python-1.2.1-layout-dev-win.zip>`__
+`Windows <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/1.2.1-layout-dev/indigo-python-1.2.1-layout-dev-win.zip>`__
 
 Java
 ^^^^
 
-`Windows <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/1.2.1-layout-dev/indigo-java-1.2.1-layout-dev-win.zip>`__
+`Windows <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/1.2.1-layout-dev/indigo-java-1.2.1-layout-dev-win.zip>`__
 
 .NET
 ^^^^
 
-`Windows <http://www.epam.com/content/dam/epam/open-source/library/indigo-1.2-dev/1.2.1-layout-dev/indigo-dotnet-1.2.1-layout-dev-win.zip>`__
+`Windows <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2-dev/1.2.1-layout-dev/indigo-dotnet-1.2.1-layout-dev-win.zip>`__
