@@ -1,8 +1,8 @@
 from livereload import Server, shell
 import os, sys
 
-if os.path.isdir('indigo'):       # we have indigo libs
-  os.environ['PYTHONPATH'] = 'indigo'
+if os.path.isdir('Indigo'):       # we have indigo libs
+  os.environ['PYTHONPATH'] = 'Indigo'
 
 if hasattr(sys, 'real_prefix'):   # check whether we are called from virtualenv
   sphinx_build = os.path.join(sys.prefix, 'bin/sphinx-build')
