@@ -87,7 +87,7 @@ The following code prints activity value for a given structure:
     indigoRenderer.renderToFile(m, 'result.png')
      
 Let's assign a color for each atom based on its activity: negative values are 
-colored from blue to back, and positive values are colored from back to red. Indigo 
+colored from blue to black, and positive values are colored from black to red. Indigo 
 Renderer interprets data s-groups with a specified name as a color for the atoms. 
         
 .. code::
