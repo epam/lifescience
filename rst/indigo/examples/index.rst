@@ -12,6 +12,7 @@ Contents:
    calculating-properties
    standardize
    scsr-transformations
+   layout
 
 
 .. TODO
