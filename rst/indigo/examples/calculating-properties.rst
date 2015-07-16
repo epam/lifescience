@@ -54,7 +54,7 @@ The following code prints the list of tautomers for a given molecule:
     molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
 
     #print the list of tautomers for the molecule
-    iter = indigo.tautomerEnumerate(molecule, 'INCHI')
+    iter = indigo.iterateTautomers(molecule, '')
     lst = list()
     for mol in iter:
         lst.append(mol.clone().canonicalSmiles())
@@ -74,7 +74,7 @@ If the molecule is aromatized before enumeration, the list of tautomers will be 
     molecule.aromatize()
 
     #print the list of tautomers for the molecule
-    iter = indigo.tautomerEnumerate(molecule, 'INCHI')
+    iter = indigo.iterateTautomers(molecule, '')
     lst = list()
     for mol in iter:
         lst.append(mol.clone().canonicalSmiles())
