@@ -1126,9 +1126,46 @@ Python:
 .. code-block:: python
 
     for submol in mol.iterateEdgeSubmolecules(1, mol.countBonds()):
-      print "submolecule", submol.index(), ":", submol.clone().smiles())
+      print "submolecule", submol.index(), ":", submol.clone().smiles()
       print [atom.index() for atom in item.iterateAtoms()]
       print [bond.index() for bond in item.iterateBonds()]
+
+Enumeration of Tautomers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Indigo provides a method to enumerate tautomers of a selected molecule.
+The exact set of tautomers and the algorithm of enumeration is not specified as well as the order of records returned,
+however it is guaranteed that tautomers will consist of the same set of atoms as the initial molecule does.
+
+The ``iterateTautomers`` method returns an iterator for tautomers. It accepts a molecule and options as parameters.
+Currently the options shall be an empty string.
+
+Java:
+
+.. code-block:: java
+
+    for (IndigoObject tautomer : indigo.iterateTautomers(molecule, "")
+    {
+      System.out.printf("tautomer %d: %s\n", tautomer.index(), tautomer.clone().smiles());
+    }
+
+C#:
+
+.. code-block:: csharp
+
+    foreach (IndigoObject item in indigo.iterateTautomers(molecule, ""))
+    {
+      System.Console.WriteLine("tautomer {0}: {1}", item.index(), item.clone().smiles());
+    }
+
+Python:
+
+.. code-block:: python
+
+    for tautomer in indigo.iterateTautomers(molecule, ''):
+      print "tautomer", tautomer.index(), ":", tautomer.clone().smiles()
+
+Please see the :ref:`indigo-example-tautomer-enumeration` for detailed examples
 
 SGroups
 ~~~~~~~
