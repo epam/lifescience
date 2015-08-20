@@ -1335,6 +1335,116 @@ atom, and '0' means an aliphatic (non-aromatic) atom.
 **Note:** The ID numbers must be different and belong to the range from
 1 to 32.
 
+Tautomer Substructure Search Based on InChI or reaction SMARTS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This type of tautomer search is based on the tautomer enumeration procedure using one of supported methods (InChI or RSMARTS).
+
+The query syntax is the following (for InChI):
+
+::
+
+    SELECT * FROM $table WHERE Bingo.Sub($column, $query, 'TAU INCHI')=1;
+
+And for reaction SMARTS:
+::
+
+    SELECT * FROM $table WHERE Bingo.Sub($column, $query, 'TAU RSMARTS')=1;
+
+The output depends on the set of tautomers found by the selected enumeration procedure. For example for the following molecule/query the output differs:
+
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+    :nocode:
+
+    molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
+    query = indigo.loadQueryMolecule("O=CCCN")
+    molecule.setProperty("grid-comment", "Molecule")
+    query.setProperty("grid-comment", "Query")
+    array = indigo.createArray()
+    array.arrayAdd(molecule)
+    array.arrayAdd(query)
+
+    indigo.setOption("render-grid-margins", "20, 10")
+    indigo.setOption("render-grid-title-font-size", "10")
+    indigo.setOption("render-grid-title-property", "grid-comment")
+    indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
+
+
+Below is the set of possible tautomers for ``INCHI`` option and query mappings:
+
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+    :nocode:
+
+    molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
+
+    iter = indigo.iterateTautomers(molecule, 'INCHI')
+    array = indigo.createArray()
+    for imol in iter:
+        mol = imol.clone()
+        array.arrayAdd(mol)
+
+    indigo.setOption("render-bond-length", "20")
+    indigo.setOption("render-grid-margins", "20, 10")
+    indigoRenderer.renderGridToFile(array, None, 5, 'result.png')
+
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+    :nocode:
+
+    molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
+    query = indigo.loadQueryMolecule("O=CCCN")
+    matcher = indigo.substructureMatcher(molecule, "TAU INCHI")
+    matches = matcher.iterateMatches(query)
+    array = indigo.createArray()
+    for mapping in matches:
+        array.arrayAdd(mapping.highlightedTarget())
+
+    indigo.setOption("render-highlight-color", "0, 0, 1")
+    indigo.setOption("render-highlight-thickness-enabled", "True")
+    indigoRenderer.renderGridToFile(array, None, 4, 'result.png')
+
+The result for ``RSMARTS`` option (same molecule and query):
+
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+    :nocode:
+
+    molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
+
+    iter = indigo.iterateTautomers(molecule, 'RSMARTS')
+    array = indigo.createArray()
+    for imol in iter:
+        mol = imol.clone()
+        array.arrayAdd(mol)
+
+    indigo.setOption("render-bond-length", "20")
+    indigo.setOption("render-grid-margins", "20, 10")
+    indigoRenderer.renderGridToFile(array, None, 5, 'result.png')
+
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+    :nocode:
+
+    molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
+    query = indigo.loadQueryMolecule("O=CCCN")
+    matcher = indigo.substructureMatcher(molecule, "TAU RSMARTS")
+    matches = matcher.iterateMatches(query)
+    array = indigo.createArray()
+    for mapping in matches:
+        array.arrayAdd(mapping.highlightedTarget())
+
+    indigo.setOption("render-highlight-color", "0, 0, 1")
+    indigo.setOption("render-highlight-thickness-enabled", "True")
+    indigoRenderer.renderGridToFile(array, None, 4, 'result.png')
+
+
 Similarity Search
 ~~~~~~~~~~~~~~~~~
 

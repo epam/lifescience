@@ -1134,17 +1134,16 @@ Enumeration of Tautomers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Indigo provides a method to enumerate tautomers of a selected molecule.
-The exact set of tautomers and the algorithm of enumeration is not specified as well as the order of records returned,
-however it is guaranteed that tautomers will consist of the same set of atoms as the initial molecule does.
+Currently there are two algorithms to enumerate tautomers: based on InChI code and based on a set of reaction SMARTS rules.
 
 The ``iterateTautomers`` method returns an iterator for tautomers. It accepts a molecule and options as parameters.
-Currently the options shall be an empty string.
+There are two possible options: ``INCHI`` to use method based on InChI code ``RSMARTS`` that uses reaction SMARTS approach:
 
 Java:
 
 .. code-block:: java
 
-    for (IndigoObject tautomer : indigo.iterateTautomers(molecule, "")
+    for (IndigoObject tautomer : indigo.iterateTautomers(molecule, "RSMARTS")
     {
       System.out.printf("tautomer %d: %s\n", tautomer.index(), tautomer.clone().smiles());
     }
@@ -1153,7 +1152,7 @@ C#:
 
 .. code-block:: csharp
 
-    foreach (IndigoObject item in indigo.iterateTautomers(molecule, ""))
+    foreach (IndigoObject item in indigo.iterateTautomers(molecule, "RSMARTS"))
     {
       System.Console.WriteLine("tautomer {0}: {1}", item.index(), item.clone().smiles());
     }
@@ -1162,7 +1161,7 @@ Python:
 
 .. code-block:: python
 
-    for tautomer in indigo.iterateTautomers(molecule, ''):
+    for tautomer in indigo.iterateTautomers(molecule, 'RSMARTS'):
       print "tautomer", tautomer.index(), ":", tautomer.clone().smiles()
 
 Please see the :ref:`indigo-example-tautomer-enumeration` for detailed examples
@@ -2187,16 +2186,24 @@ Molecule Substructure Matching Flags
 The ``Indigo.substructureMatcher`` method accepts an optional string, in
 which you can specify one of the following flags:
 
--  ``RES`` — to turn on the chemical resonance matching mode (``C=N``
+-  ``RES`` — chemical resonance matching mode (``C=N``
    matches ``CN=O`` etc). You can read more about the resonance search
    and see examples on the `Bingo User
    Manual <../../bingo/user-manual-oracle.html#resonance-search>`__
    page.
 
--  ``TAU`` — to turn on the tautomer matching mode. You can read more
+-  ``TAU`` — tautomer matching mode. You can read more
    about the tautomer substructure search and see examples on the `Bingo
    User
    Manual <../../bingo/user-manual-oracle.html#tautomer-substructure-search>`__
+   page.
+
+-  ``TAU INCHI`` — tautomer matching mode based on `InChI code <../../resources.html#inchi-code>`__. Read more
+   about the tautomer substructure search and see examples on the `Bingo User Manual <../../bingo/user-manual-oracle.html#tautomer-substructure-search-based-on-inchi-or-reaction-smarts>`__
+   page.
+
+-  ``TAU RSMARTS`` — tautomer matching mode based on `RSMARTS rules <../../resources.html#rsmarts-rules>`__. Read more
+   about the tautomer substructure search and see examples on the `Bingo User Manual <../../bingo/user-manual-oracle.html#tautomer-substructure-search-based-on-inchi-or-reaction-smarts>`__
    page.
 
 Methods of Substructure Matcher

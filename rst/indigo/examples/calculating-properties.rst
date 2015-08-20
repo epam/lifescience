@@ -54,13 +54,24 @@ The following code prints the list of tautomers for a given molecule:
     molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
 
     #print the list of tautomers for the molecule
-    iter = indigo.iterateTautomers(molecule, '')
+    iter = indigo.iterateTautomers(molecule, 'INCHI')
     lst = list()
-    for mol in iter:
-        lst.append(mol.clone().canonicalSmiles())
+    array = indigo.createArray()
+    index = 1
+    for imol in iter:
+        mol = imol.clone()
+        lst.append(mol.canonicalSmiles())
+        mol.setProperty("grid-comment", str(index))
+        array.arrayAdd(mol)
+        index += 1
 
     lst.sort()
     print "\n".join(map(lambda x, y: str(x) + ") " + y, range(1, len(lst) + 1), lst))
+
+    indigo.setOption("render-grid-margins", "20, 10")
+    indigo.setOption("render-grid-title-offset", "5")
+    indigo.setOption("render-grid-title-property", "grid-comment")
+    indigoRenderer.renderGridToFile(array, None, 4, 'result.png')
 
 
 If the molecule is aromatized before enumeration, the list of tautomers will be aromatized (if possible):
@@ -74,13 +85,54 @@ If the molecule is aromatized before enumeration, the list of tautomers will be 
     molecule.aromatize()
 
     #print the list of tautomers for the molecule
-    iter = indigo.iterateTautomers(molecule, '')
+    iter = indigo.iterateTautomers(molecule, 'INCHI')
     lst = list()
-    for mol in iter:
-        lst.append(mol.clone().canonicalSmiles())
+    array = indigo.createArray()
+    index = 1
+    for imol in iter:
+        mol = imol.clone()
+        lst.append(mol.canonicalSmiles())
+        mol.setProperty("grid-comment", str(index))
+        array.arrayAdd(mol)
+        index += 1
 
     lst.sort()
     print "\n".join(map(lambda x, y: str(x) + ") " + y, range(1, len(lst) + 1), lst))
 
+    indigo.setOption("render-grid-margins", "20, 10")
+    indigo.setOption("render-grid-title-offset", "5")
+    indigo.setOption("render-grid-title-property", "grid-comment")
+    indigoRenderer.renderGridToFile(array, None, 4, 'result.png')
+
 Please notice that the number of tautomers could be different in aromatized and dearomatized forms.
 This happens because some aromatized forms could have different dearomatized representations.
+
+The following code uses reaction SMARTS algorithm (may give different set of tautomers):
+
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+
+    # Load structure
+    molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
+    molecule.aromatize()
+
+    #print the list of tautomers for the molecule
+    iter = indigo.iterateTautomers(molecule, 'RSMARTS')
+    lst = list()
+    array = indigo.createArray()
+    index = 1
+    for imol in iter:
+        mol = imol.clone()
+        lst.append(mol.canonicalSmiles())
+        mol.setProperty("grid-comment", str(index))
+        array.arrayAdd(mol)
+        index += 1
+
+    lst.sort()
+    print "\n".join(map(lambda x, y: str(x) + ") " + y, range(1, len(lst) + 1), lst))
+
+    indigo.setOption("render-grid-margins", "20, 10")
+    indigo.setOption("render-grid-title-offset", "5")
+    indigo.setOption("render-grid-title-property", "grid-comment")
+    indigoRenderer.renderGridToFile(array, None, 4, 'result.png')

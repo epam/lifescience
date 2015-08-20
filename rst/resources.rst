@@ -68,6 +68,25 @@ OCI <http://lj.rossia.org/users/ringill/5064.html>`__, while another
 Russian article covers the `performance of
 queries <http://shmat-razum.blogspot.com/2009/01/oracle.html>`__.
 
+Tautomer Methods
+----------------
+
+InChI Code
+^^^^^^^^^^
+
+The IUPAC International Chemical Identifier (InChI) is a textual identifier for chemical substances,
+designed to provide a standard and human-readable way to encode molecular information.
+Read more about `The IUPAC Chemical Identifier – Technical Manual <ftp://ftp.uk.freesbie.org/sites/downloads.sourceforge.net/n/ni/ninja/technical_manual/inchi-tech-manual-20060511/inchi_tech_man-20060511.pdf>`__.
+
+InChI code provides information about mobile H atoms with allows us enumerate all possible tautomers based on (1,3)-shifts for open-chain molecules
+and (1,n)-shifts (with n being an odd number >3) for ring systems. Please see :download:`Tautomer Identification and Tautomer Structure Generation Based on the InChI Code <assets/indigo/Inchi tautomers.pdf>` for details.
+
+
+RSMARTS Rules
+^^^^^^^^^^^^^
+
+RSMARTS rules is another approach to enumerate tautomers. Currently the set of rules is taken from the article :download:`Tautomerism in large databases <assets/indigo/Tautomerism in large databases.pdf>`.
+
 Cairo
 -----
 
