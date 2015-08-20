@@ -1137,7 +1137,7 @@ Indigo provides a method to enumerate tautomers of a selected molecule.
 Currently there are two algorithms to enumerate tautomers: based on InChI code and based on a set of reaction SMARTS rules.
 
 The ``iterateTautomers`` method returns an iterator for tautomers. It accepts a molecule and options as parameters.
-There are two possible options: ``INCHI`` to use method based on InChI code ``RSMARTS`` that uses reaction SMARTS approach:
+There are two possible options: ``INCHI`` to use method based on `InChI code <../../resources.html#inchi-code>`__, and ``RSMARTS`` to use `reaction SMARTS templates <../../resources.html#rsmarts-rules>`__:
 
 Java:
 
