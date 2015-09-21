@@ -166,7 +166,7 @@ There are 5 s-groups are support by Indigo, but several methods were missing [#f
     indigoRenderer.renderToFile(m, 'result_1.png')
     
     # print multiple group information by index
-    mul_group = m.getMultipleGroup(0)
+    mul_group = m.getMultipleGroup(1)
     print "Multiple group #", mul_group.index(), "atoms:"
     for atom in mul_group.iterateAtoms():
         print "  ", atom.index()

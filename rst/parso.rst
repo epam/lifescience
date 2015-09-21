@@ -150,7 +150,7 @@ Commercial Availability
 -----------------------
 
 If the GPL-licensed Parso does not satisfy your needs, please contact us
-at info@ggasoftware.com to discuss the possibility of a commercial
+at lifescience.opensource@epam.com to discuss the possibility of a commercial
 license.
 
 We hope that you decide to use the Parso library. At EPAM, we are
