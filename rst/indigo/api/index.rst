@@ -1602,6 +1602,46 @@ Java, C#, and Python:
     mol.standardize();
 
 
+Ionize of Molecule
+~~~~~~~~~~~~~~~~~~
+
+The ``IndigoObject.ionize`` method can be used for building protonated/deprotonated form
+of the molecule in accordance with pH and pH tollerance. pKa model for pKa esimation can be
+defined using corresponding `Options <../options/pka.html>`__ section).
+
+
+Java, C#, and Python:
+
+.. code-block:: python
+
+    indigo.setOption("pKa-model", "advanced")
+    indigo.setOption("pKa-model-level", 5)
+    indigo.setOption("pKa-model-min-level", 2)
+
+    mol.ionize(pH, ph_toll)
+
+
+pKa
+~~~
+
+The ``IndigoObject.getAcidPkaValue`` and ``IndigoObject.getBasicPkaValue`` method can be used for
+estimation pKa values for individual atoms in a molecule. PKa model for pKa esimation can be
+defined using corresponding `Options <../options/pka.html>`__ section).
+
+The ``IndigoObject.buildPkaModel`` method is used for building pKa model based on custom structures
+set.
+
+
+Java, C#, and Python:
+
+.. code-block:: python
+
+    level = indigo.buildPkaModel(10, 0.5, 'molecules/PkaModel.sdf')
+
+    a_pka = mol.getAcidPkaValue(atom, 5, 2)
+    b_pka = mol.getBasicPkaValue(atom, 5, 2)
+
+
 IO
 --
 

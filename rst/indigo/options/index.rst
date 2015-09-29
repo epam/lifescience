@@ -31,7 +31,8 @@ Indigo instance represents an environment for IndigoObjects. Many methods in Ind
     timeout.rst
     reaction-product-enumeration.rst
     inchi.rst
-    standardize
+    standardize.rst
+    pka.rst
 
 Options Table
 -------------
