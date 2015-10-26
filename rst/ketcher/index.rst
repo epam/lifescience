@@ -8,6 +8,7 @@
     editing-tips
     developers-manual
     help
+    demo
 
 Overview
 --------
@@ -112,8 +113,7 @@ Project <http://tango.freedesktop.org/Tango_Icon_Library>`__
 Online Demo
 -----------
 
-You can try Ketcher `here <TODO:ketcher-demo>`__ or a web page with
-embedded Ketcher `here <TODO:ketcher-demo>`__.
+You can try Ketcher `here <demo.html>`__
 
 Download
 --------
@@ -168,4 +168,4 @@ You may need the commercial license if you want to:
 -  Include Ketcher as a component in your proprietary software product
 
 .. |image0| image:: ../assets/ketcher/ketcher_2.png
-   :target: TODO:ketcher-demo
+   :target: demo.html

@@ -51,12 +51,13 @@ Products
 
 Services
 --------
+
+-  `Ketcher demo <ketcher/demo.html>`__: Edit molecules online
+
 *(Temporarily unavailable due to the server infrastructure changes).*
 
 -  `Bingo demo <TODO:bingo-demo>`__ : Search over PubChem and other databases
--  `Ketcher demo <TODO:ketcher-demo>`__: Edit molecules online
 -  `Imago OCR demo <TODO:imago-demo>`__: Recognize molecule images online
-
 
 
 Our objective has always been to develop products of high quality and
