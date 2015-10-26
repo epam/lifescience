@@ -567,8 +567,8 @@ div#newsfeed {
     display: block;
     float: left;
     border: none;
-    height: 430px;
-    width: 650px;
+    height: 500px;
+    width: 90%;
     margin: 0 20px 25px 0;
 }
 

@@ -52,7 +52,7 @@ Products
 Services
 --------
 
--  `Ketcher demo <ketcher/demo.html>`__: Edit molecules online
+-  `Ketcher 2.0 demo <ketcher/demo.html>`__: Edit molecules online
 
 *(Temporarily unavailable due to the server infrastructure changes).*
 

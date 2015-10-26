@@ -110,10 +110,18 @@ Ketcher makes use of `Raphael <http://raphaeljs.com/>`__ and
 The current icon set was taken from `Tango Desktop
 Project <http://tango.freedesktop.org/Tango_Icon_Library>`__
 
-Online Demo
+Ketcher 2.0
 -----------
 
-You can try Ketcher `here <demo.html>`__
+Right now the new version of Ketcher is developed. It includes modern interface, good performance 
+and lot of useful features. 
+
+|ketcher2|
+
+
+You can already try the `Ketcher 2.0 demo <demo.html>`__
+But please be informed, that it is unstable and not all browsers are supported
+
 
 Download
 --------
@@ -169,3 +177,5 @@ You may need the commercial license if you want to:
 
 .. |image0| image:: ../assets/ketcher/ketcher_2.png
    :target: demo.html
+
+.. |ketcher2| image:: ../assets/ketcher/2.0.0-alpha.1+r78.png 
