@@ -11,7 +11,7 @@ Java
 ----
 
 .. note::
-	Indigo packages support Intel x86 and x64 platforms, and Windows, Linux, Mac OS X operating systems. If you need to use Indigo on other platforms, please contact us at info@ggasoftware.com.
+	Indigo packages support Intel x86 and x64 platforms, and Windows, Linux, Mac OS X operating systems. If you need to use Indigo on other platforms, please contact us at lifescience.opensource@epam.com
 
 If your project use Maven, you can add Indigo dependency to your pom.xml:
 
