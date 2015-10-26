@@ -544,3 +544,15 @@ div#newsfeed {
   color: #000;
   padding: 0;
 }
+
+
+
+.ketcher-demo {
+    display: block;
+    float: left;
+    border: none;
+    height: 430px;
+    width: 650px;
+    margin: 0 20px 25px 0;
+}
+
