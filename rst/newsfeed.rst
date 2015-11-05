@@ -7,6 +7,20 @@ News
     newsfeed
     release-notes/index
 
+Indigo is available on GitHub
+-----------------------------
+
+*5 Nov 2015*
+
+Finally we moved our source code development on GitHub. 
+
+https://github.com/epam/Indigo
+
+Please see the |indigo_1_2_x_github| for the details
+
+.. |indigo_1_2_x_github| raw:: html
+
+   <a href="indigo/release-notes/1.2.x/indigo-github.html" target="_blank">Release Notes</a>
 
 Indigo ELN 1.2 released
 -----------------------

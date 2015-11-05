@@ -11,3 +11,8 @@ Contents:
     1.1.x/indigo-1.1.12
     1.1.x/indigo-1.1.11
     1.1.x/indigo-1.1.x
+
+.. toctree::
+    :hidden:
+
+    1.2.x/indigo-github
