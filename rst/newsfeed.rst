@@ -7,6 +7,25 @@ News
     newsfeed
     release-notes/index
 
+Indigo 1.2.2beta released
+-------------------------
+
+*13 Nov 2015*
+
+New Indigo version was released with new layout mode and other features and improvements
+
+* |indigo_1_2_2b_notes|
+
+* |indigo_1_2_2b_downloads|
+
+.. |indigo_1_2_2b_notes| raw:: html
+
+   <a href="indigo/release-notes/1.2.x/indigo-1.2.2b.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_2_2b_downloads| raw:: html
+
+   <a href="download/indigo/index.html#indigo-1-2-2b" target="_blank">Downloads</a>
+
 Indigo is available on GitHub
 -----------------------------
 
