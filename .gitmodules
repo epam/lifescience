@@ -1,3 +1,4 @@
 [submodule "Indigo"]
 	path = Indigo
 	url = https://github.com/epam/Indigo.git
+	ignore = dirty
