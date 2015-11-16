@@ -4,13 +4,11 @@
 Layout (2D coordinates)
 =======================
 
-This example shows work of automatic layout
-
 -----------------------
 Smart and simple layout
 -----------------------
 
-This examples shows difference beetwen "smart" and "simple" layout:
+This examples shows difference between "smart" and "simple" layout:
 
 .. indigorenderer::
     :indigoobjecttype: code
