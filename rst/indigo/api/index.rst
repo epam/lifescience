@@ -1131,7 +1131,7 @@ Python:
       print [bond.index() for bond in item.iterateBonds()]
 
 Enumeration of Tautomers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Indigo provides a method to enumerate tautomers of a selected molecule.
 Currently there are two algorithms to enumerate tautomers: based on InChI code and based on a set of reaction SMARTS rules.
@@ -1625,7 +1625,7 @@ pKa
 ~~~
 
 The ``IndigoObject.getAcidPkaValue`` and ``IndigoObject.getBasicPkaValue`` method can be used for
-estimation pKa values for individual atoms in a molecule. PKa model for pKa estimation can be
+estimation pKa values for individual atoms in a molecule. pKa model for pKa estimation can be
 defined using corresponding `Options <../options/pka.html>`__ section).
 
 The ``IndigoObject.buildPkaModel`` method is used for building pKa model based on custom structures

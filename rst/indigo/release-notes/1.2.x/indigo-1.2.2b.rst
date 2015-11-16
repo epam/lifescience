@@ -106,20 +106,39 @@ Examples of usage these methods are in corresponding `Examples <../../examples/s
 
 .. _indigo-1.2.2b-tautomer:
 
-======
-HEADER
-======
+========================
+Enumeration of Tautomers
+========================
 
-Text
+Indigo provides a method to enumerate tautomers of a selected molecule.
+Currently there are two algorithms to enumerate tautomers: based on InChIcode and based on a set of reaction SMARTS rules.
+
+The ``iterateTautomers`` method returns an iterator for tautomers. It accepts a molecule and options as parameters.
+There are two possible options: ``INCHI`` to use method based on `InChI code <../../../resources.html#inchi-code>`__, and ``RSMARTS`` to use `reaction SMARTS templates <../../../resources.html#rsmarts-rules>`__
+
+Please see the `API description <../../api/index.html#enumeration-of-tautomers>`__ or the :ref:`indigo-example-tautomer-enumeration` for detailed examples.
 
 
 .. _indigo-1.2.2b-pka:
 
-======
-HEADER
-======
+===========================
+Ionize and pKa calculations
+===========================
 
-Text
+The new ``IndigoObject.ionize`` method can be used for building protonated/deprotonated form
+of the molecule in accordance with pH and pH tolerance. pKa model for pKa estimation can be
+defined using corresponding `Options <../../options/pka.html>`__ section). 
+
+The ``IndigoObject.getAcidPkaValue`` and ``IndigoObject.getBasicPkaValue`` method can be used for
+estimation pKa values for individual atoms in a molecule. pKa model for pKa estimation can be
+defined using corresponding `Options <../../options/pka.html>`__ section).
+
+The ``IndigoObject.buildPkaModel`` method is used for building pKa model based on custom structures
+set.
+
+See `API methods <../../api/index.html#ionize-of-molecule>`__ for some examples
+
+
 
 .. _indigo-1.2.2b-maven:
 
