@@ -206,12 +206,12 @@ Core Indigo API
     CEXPORT int indigoOptimize (int query, const char *options);
 
     // Methods for structure normalization
-    // It neutrailzes charges, resolves 5-valence Nitrogen, removes hydrogens and etc.
+    // It neutralizes charges, resolves 5-valence Nitrogen, removes hydrogens and etc.
     // Default options is empty.
     CEXPORT int indigoNormalize (int structure, const char *options);
 
     // Method for molecule and query standardizing
-    // It stadrdize charges, stereo and etc.
+    // It standardize charges, stereo and etc.
     // Default options is empty.
     CEXPORT int indigoStandardize (int item);
 
@@ -840,7 +840,7 @@ Core Indigo API
 
     /* Reaction products enumeration */
 
-    // Accepts a query reaction with markd R-sites, and array of arrays
+    // Accepts a query reaction with marked R-sites, and array of arrays
     // of substituents corresponding to the R-Sites. Returns an array of
     // reactions with R-Sites replaced by the actual substituents.
     CEXPORT int indigoReactionProductEnumerate (int reaction, int monomers);
@@ -855,7 +855,7 @@ Core Indigo API
     // Internal breakpoint
     CEXPORT void indigoDbgBreakpoint (void);
 
-    // Methods that returns profiling infromation in a human readable format
+    // Methods that returns profiling information in a human readable format
     CEXPORT const char * indigoDbgProfiling (int /*bool*/ whole_session);
 
     // Reset profiling counters either for the current state or for the whole session

@@ -13,7 +13,7 @@ Deconvolution options
     :name: deco-save-ap-bond-orders
     :type: boolean
     :default: false
-    :short: Save attachement points as separate atoms with explicit bond connected.
+    :short: Save attachment points as separate atoms with explicit bond connected.
 
 .. indigo_option::
     :name: deco-ignore-errors

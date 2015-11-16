@@ -110,7 +110,7 @@ Renderer interprets data s-groups with a specified name as a color for the atoms
         
         return min_value, max_value
         
-Previous two methods can be wrapped into a single method that computes atom activities and colors molecule atoms accoring to these activities:        
+Previous two methods can be wrapped into a single method that computes atom activities and colors molecule atoms according to these activities:
         
 .. code::
     :name: ac-assignColorGroups
@@ -127,7 +127,7 @@ Previous two methods can be wrapped into a single method that computes atom acti
         return min_value, max_value
                     
 
-For the visualizations below we are going to use the following options:                    
+For the visualizations below we are going to use the following options:
 
 .. code::
     :name: ac-rendering
@@ -135,7 +135,7 @@ For the visualizations below we are going to use the following options:
     indigo.setOption("render-atom-color-property", "color")
     indigo.setOption('render-coloring', False)
     indigo.setOption('render-comment-font-size', 14.0)
-    indigo.setOption('render-bond-line-width', 2.0)        
+    indigo.setOption('render-bond-line-width', 2.0)
                     
 Wrapping all these method one can color and render an arbitrary molecule:
        
@@ -181,7 +181,7 @@ following code adds a color bar atoms right to the molecule:
         m.addDataSGroup([a1.index()], [], "color", "0, 0, 1")
         m.addDataSGroup([a3.index()], [], "color", "1, 0, 0")
 
-Standalone color bar looks in the following way:        
+Standalone color bar looks in the following way:
         
 .. indigorenderer::
     :indigoobjecttype: code

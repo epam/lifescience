@@ -358,7 +358,7 @@ Changes:
 -  Molfile atom lists now support pseudoatoms
 -  Global timeout for all the most time consuming operations:
    substructure search, canonical smiles generation and etc. Option is
-   called "timeout" and corresponts to milliseconds.
+   called "timeout" and corresponds to milliseconds.
 -  explicit hydrogen near Nitrogen is handled correctly to calculate
    cis-trans and tetrahedral stereo configuration.
 -  InChI plugin now have "version" methods to return an actual InChI
@@ -439,11 +439,11 @@ Usage example :
     IndigoObject molecule = indigo.loadMolecule("InChI=1S/C3H9NO/c1-3(5)2-4/h3,5H,2,4H2,1H3");
     String inchi_string = indigo.getInchi(molecule);
 
-New methods and functionallity:
+New methods and functionality:
 
 -  InChI support! (without stereochemistry yet)
 -  mapMolecule(queryReactoinMolecule) to retrieve mapped molecule for
-   the query reaction for the reaction substrcuture match object
+   the query reaction for the reaction substructure match object
 -  getMolecule(index) to get the reaction molecule
 -  QueryMolecules can now be constructed with the following methods:
 

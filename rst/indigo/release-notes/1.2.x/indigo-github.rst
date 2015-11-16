@@ -1,5 +1,5 @@
 #############
-Indigo Github
+Indigo GitHub
 #############
 
 *5 Nov 2015*

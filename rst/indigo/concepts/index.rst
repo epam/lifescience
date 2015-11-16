@@ -216,7 +216,7 @@ Indigo incorporates two algorithms (exact and approximate) of maximum
 common substructure (MCS) computation. Each of the algorithms can
 operate on an arbitrary amount of input structures. Thus, it is possible
 to pass the found scaffold to the `R-Group
-decovolution <#r-group-deconvolution>`__ procedure.
+deconvolution <#r-group-deconvolution>`__ procedure.
 
 Moreover, if the scaffold detection procedure has found more than one
 MCS, it is possible to obtain all of them.

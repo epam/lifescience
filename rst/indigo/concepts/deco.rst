@@ -130,8 +130,8 @@ The detected scaffold is:
 The molecules are identical (up to aromatization), so the R-Group
 deconvolution is trivial.
 
-Nonaromatic scaffold
-~~~~~~~~~~~~~~~~~~~~
+Non-aromatic scaffold
+~~~~~~~~~~~~~~~~~~~~~
 
 With ``-na`` option, the following scaffolds were found:
 

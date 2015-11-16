@@ -51,7 +51,7 @@ Details
 Maven Central Repository
 ========================
 
-All the Indigo Java packages are uploaded to `The Central Respository <http://search.maven.org/#search%7Cga%7C1%7Cggasoftware>`_.
+All the Indigo Java packages are uploaded to `The Central Repository <http://search.maven.org/#search%7Cga%7C1%7Cggasoftware>`_.
 
 ======================   ===============
 GroupId                  ArtifactId

@@ -539,7 +539,7 @@ Chemistry
     :name: render-superatom-mode
     :type: enum (expand, collapse)
     :default: expand
-    :short: Supertatoms rendering mode
+    :short: Superatoms rendering mode
 
     .. indigorenderer::
         :indigoobjecttype: code

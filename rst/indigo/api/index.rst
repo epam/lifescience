@@ -1355,7 +1355,7 @@ Python examples:
 
 
 You can find in the ``IndigoObject`` S-groups using different criteria
-with correspoding values in S-group properties by type, by name, by class, by atoms or crossing bonds
+with corresponding values in S-group properties by type, by name, by class, by atoms or crossing bonds
 included in S-group:
 
 -  ``findSGroups``  - it accepts key and value for search and retuns iterator for collection of found sgroups
@@ -1450,7 +1450,7 @@ TGroups
 ~~~~~~~
 
 Indigo supports the hybrid representation (SCSR) for a molecule loaded from a V3000 Molfile.
-SCSR uses TEMPLATE blocks to represent residues and this representation is widely used for biolgocal sequences.
+SCSR uses TEMPLATE blocks to represent residues and this representation is widely used for biological sequences.
 
 There are methods for transformation SCSR into full CTAB form and vise versa:
 
@@ -1606,7 +1606,7 @@ Ionize of Molecule
 ~~~~~~~~~~~~~~~~~~
 
 The ``IndigoObject.ionize`` method can be used for building protonated/deprotonated form
-of the molecule in accordance with pH and pH tollerance. pKa model for pKa esimation can be
+of the molecule in accordance with pH and pH tolerance. pKa model for pKa estimation can be
 defined using corresponding `Options <../options/pka.html>`__ section).
 
 
@@ -1625,7 +1625,7 @@ pKa
 ~~~
 
 The ``IndigoObject.getAcidPkaValue`` and ``IndigoObject.getBasicPkaValue`` method can be used for
-estimation pKa values for individual atoms in a molecule. PKa model for pKa esimation can be
+estimation pKa values for individual atoms in a molecule. PKa model for pKa estimation can be
 defined using corresponding `Options <../options/pka.html>`__ section).
 
 The ``IndigoObject.buildPkaModel`` method is used for building pKa model based on custom structures

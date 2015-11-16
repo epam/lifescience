@@ -17,6 +17,6 @@ Layout options
     :default: false
     :short: whether to use "smart" layout or "simple"
 
-    "Smart" layout is some slower then "simple" but much better. See exsamples.
+    "Smart" layout is some slower then "simple" but much better. See `examples <../examples/layout.html>`__.
 
 

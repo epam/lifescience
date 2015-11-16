@@ -44,7 +44,7 @@ Aromaticity options
     :default: true
     :short: Verify dearomatization method
 
-    In the dearomatization method Indigo enumerates possible single/double bonds configurations and checks that such configuration is aromatic. If there are no valid dearomatization for a given aromatic system, then Indigo leaves such aromatic system unchanged. With this option disabled Indigo dearomatizes such aromatic system, but without guarantee that this dearomatization is correct. It can be used to convert antiaromatic rings:
+    In the dearomatization method Indigo enumerates possible single/double bonds configurations and checks that such configuration is aromatic. If there are no valid dearomatization for a given aromatic system, then Indigo leaves such aromatic system unchanged. With this option disabled Indigo dearomatizes such aromatic system, but without guarantee that this dearomatization is correct. It can be used to convert anti-aromatic rings:
 
 .. indigorenderer::
     :indigoobjecttype: code
@@ -136,7 +136,7 @@ Aromaticity options
 
     Canonical SMILES computation throws an exception on such molecule because we cannot decided if it is (A) or (B).
 
-    Dearomtization method by default doesn't check uniqueness in terms of number of Hydrogens:
+    Dearomatization method by default doesn't check uniqueness in terms of number of Hydrogens:
 
     .. indigorenderer::
         :indigoobjecttype: code

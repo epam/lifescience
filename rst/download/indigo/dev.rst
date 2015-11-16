@@ -27,7 +27,7 @@ Main changes:
 -  C++ dependent libraries being statically linked with Indigo to avoid
    external dependency on libstd++ or libc++
 -  Indigo code uses C++11 standard with the build binaries are
-   absolutely portably across various Windows, Linux and Mac OS version
+   absolutely portable across various Windows, Linux and Mac OS version
 
 Language Bindings
 ~~~~~~~~~~~~~~~~~

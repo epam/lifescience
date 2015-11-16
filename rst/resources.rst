@@ -130,7 +130,7 @@ Web frameworks
 --------------
 
 Ketcher includes two JavaScript libraries:
-`Raphaël <http://raphaeljs.com/>`__ for vector graphics and
+`Raphael <http://raphaeljs.com/>`__ for vector graphics and
 `Prototype <http://prototypejs.org>`__ for overall code improvement.
 
 Code Examples

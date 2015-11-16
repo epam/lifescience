@@ -87,7 +87,7 @@ the ELN into the open-source community.
 
 The core Indigo ELN package includes:
 
--  Database tier – Oracle, Oracle Express edition or PostreSQL database
+-  Database tier – Oracle, Oracle Express edition or PostgreSQL database
    (In addition, Indigo ELN supports EPAM's open-source molecular search
    cartridge Bingo\ :sup:`©` for these databases).
 -  Core user interface for creation of singleton experiments and
@@ -116,7 +116,7 @@ open-source products with the core functionality of Indigo ELN. In this
 way, Indigo ELN becomes a complete solution:
 
 -  Search in the Indigo ELN database by using EPAM's molecular search
-   cartridge Bingo\ :sup:`©` for Oracle and PostreSQL databases.
+   cartridge Bingo\ :sup:`©` for Oracle and PostgreSQL databases.
 -  Integration with EPAM's chemistry drawing tool Ketcher\ :sup:`©`.
 -  Basic compound and batch registration service (these can be adapted
    to meet your requirements).
