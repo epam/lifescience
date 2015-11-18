@@ -2,6 +2,56 @@
 Download Indigo Toolkit
 =======================
 
+Beta
+====
+
+Indigo 1.2.2beta
+----------------
+
+Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.2b.html>`__
+
+Language Bindings
+~~~~~~~~~~~~~~~~~
+
+.. list-table:: 
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 28 24 24 24 24
+
+   * - 
+     - |image0| Linux
+     - |image1| Windows
+     - |image2| Mac OS
+     - Universal
+   * - |p-icon| Python 
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-python-1.2.2beta-r37-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-python-1.2.2beta-r37-win.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-python-1.2.2beta-r37-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-python-1.2.2beta-r37-universal.zip>`__
+   * - |j-icon| Java 
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-java-1.2.2beta-r37-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-java-1.2.2beta-r37-win.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-java-1.2.2beta-r37-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-java-1.2.2beta-r37-universal.zip>`__
+   * - |c-icon| .NET 
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-dotnet-1.2.2beta-r37-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-dotnet-1.2.2beta-r37-win.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-dotnet-1.2.2beta-r37-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-dotnet-1.2.2beta-r37-universal.zip>`__
+   * - |n-icon| C Shared Libraries 
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-libs-1.2.2beta-r37-linux-shared.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-libs-1.2.2beta-r37-win-shared.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-libs-1.2.2beta-r37-mac-shared.zip>`__
+     - \-
+
+Source code
+~~~~~~~~~~~
+
+`Source code zip <https://github.com/epam/Indigo/archive/indigo-1.2.2beta-r37.zip>`__
+
+`Repository on GitHub <https://github.com/epam/Indigo>`__
+
+
 Stable
 ======
 
@@ -77,7 +127,13 @@ Utilities
      - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/legio-1.2.1-mac.zip>`__
      - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/legio-1.2.1-universal.zip>`__
 
-*Source code will be added soon*
+
+Source code
+~~~~~~~~~~~
+
+`Source code <https://github.com/epam/Indigo/archive/indigo-1.2.1.zip>`__
+
+`Repository on GitHub <https://github.com/epam/Indigo>`__
 
 Nightly Builds
 ==============

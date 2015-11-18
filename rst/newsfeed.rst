@@ -10,7 +10,7 @@ News
 Indigo 1.2.2beta released
 -------------------------
 
-*13 Nov 2015*
+*18 Nov 2015*
 
 New Indigo version was released with new layout mode and other features and improvements
 

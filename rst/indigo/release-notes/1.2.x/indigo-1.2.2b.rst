@@ -2,14 +2,14 @@
 Indigo 1.2.2beta
 ################
 
-*12 November 2015*
+*18 November 2015*
 
 *******
 Summary
 *******
 
 
-Please note, in this **beta** version Indigo introduces very "new" and "novel" features and algorithms. We look forward to receiving any feedback on this features.
+Please note, in this **beta** version Indigo introduces very "new" and "novel" features and algorithms. We look forward to receiving any questions or notes for this version.
 
 **New features and improvements**:
 
