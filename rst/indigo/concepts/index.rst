@@ -308,3 +308,14 @@ The examples are available on a `separate page <combichem.html>`__.
 .. |image3| image:: ../../assets/indigo/concepts/cano_mol1.svg
 .. |image4| image:: ../../assets/indigo/concepts/cano_mol2.svg
 .. |image5| image:: ../../assets/indigo/concepts/cano_mol3.svg
+
+CIP Stereo Descriptors
+----------------------
+
+Indigo provides the CIP stereo descriptors calculations.
+These calculations correspond latest chemical nomenclature requrements
+(Nomenclature of Organic Chemistry - IUPAC Recommendations and Preferred Names (2013)).
+Current implememntation includes some simplifications and supports calculations only R/S and E/Z
+descriptors. 
+
+Please see the :ref:`indigo-example-cip-descriptors` for detailed examples.
