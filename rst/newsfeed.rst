@@ -24,7 +24,7 @@ New Indigo version was released with new layout mode and other features and impr
 
 .. |indigo_1_2_2b_downloads| raw:: html
 
-   <a href="download/indigo/index.html#indigo-1-2-2b" target="_blank">Downloads</a>
+   <a href="download/indigo/index.html#indigo-1-2-2beta" target="_blank">Downloads</a>
 
 Indigo is available on GitHub
 -----------------------------
