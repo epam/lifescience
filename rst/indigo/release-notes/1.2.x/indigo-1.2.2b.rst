@@ -9,7 +9,7 @@ Summary
 *******
 
 
-
+Please note, in this **beta** version Indigo introduces very "new" and "novel" features and algorithms. We look forward to receiving any feedback on this features.
 
 **New features and improvements**:
 
@@ -51,11 +51,13 @@ Details
 
 .. _indigo-1.2.2b-layout:
 
-======
-HEADER
-======
+==================
+Layout enhancement
+==================
 
-Text
+New original algorithm was implemented to improve layout procedure for the difficult cycle structures. New `option <../../examples/layout.html#smart-and-simple-layout>`__ ``SMART`` was added. By using this option, one can compare the layout procedures. 
+
+Please see `examples <../../examples/layout.html>`__ for more details  
 
 .. _indigo-1.2.2b-sgroups:
 
@@ -111,7 +113,7 @@ Enumeration of Tautomers
 ========================
 
 Indigo provides a method to enumerate tautomers of a selected molecule.
-Currently there are two algorithms to enumerate tautomers: based on InChIcode and based on a set of reaction SMARTS rules.
+Currently there are two algorithms to enumerate tautomers: based on InChI code and based on a set of reaction SMARTS rules.
 
 The ``iterateTautomers`` method returns an iterator for tautomers. It accepts a molecule and options as parameters.
 There are two possible options: ``INCHI`` to use method based on `InChI code <../../../resources.html#inchi-code>`__, and ``RSMARTS`` to use `reaction SMARTS templates <../../../resources.html#rsmarts-rules>`__
@@ -137,7 +139,6 @@ The ``IndigoObject.buildPkaModel`` method is used for building pKa model based o
 set.
 
 See `API methods <../../api/index.html#ionize-of-molecule>`__ for some examples
-
 
 
 .. _indigo-1.2.2b-maven:

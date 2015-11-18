@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1467 
+personal_ws-1.1 en 1469 
 DBA
 Kabsch's
 countMolecules
@@ -123,6 +123,7 @@ dsg
 indigoCreateReaction
 WebServices
 Reaxys
+ligands
 FileToBlob
 indigoIterateGenericSGroups
 indigoReleaseSessionId
@@ -779,6 +780,7 @@ stereoisomers
 dbass
 pseudoatoms
 fremovebonds
+heterocycles
 indigoArrayAdd
 indigoSetSGroupDescription
 renderToMetafile

@@ -307,7 +307,7 @@ mol file generation.
     indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
 
 There are also several examples for complicated structures when different software provides different
-CIP stereo descriptors estmations:
+CIP stereo descriptors estimations:
 
 The first case is the molecule with isotope inclusion.
 
