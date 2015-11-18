@@ -1586,6 +1586,18 @@ Java, C#, and Python:
     b_pka = mol.getBasicPkaValue(atom, 5, 2)
 
 
+CIP Stereo Descriptors
+~~~~~~~~~~~~~~~~~~~~~~
+
+Descriptors calculation is activated by corresponding Indigo option ``molfile-saving-add-stereo-desc``
+and descriptors are added into generated mol file as data S-groups with special name field
+``INDIGO_CIP_DESC``. Setting Indigo option  ``molfile-saving-add-stereo-desc`` to 0 (or false) (the
+default value) disables descriptors calculation and removes all such data S-groups during corresponding
+mol file generation.
+
+Please see the :ref:`indigo-example-cip-descriptors` for detailed examples.
+
+
 IO
 --
 

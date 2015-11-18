@@ -175,9 +175,15 @@ Please note: all Java packages were changed to use ``com.epam`` package
 
 .. _indigo-1.2.2b-cip:
 
-======
-HEADER
-======
+======================
+CIP Stereo Descriptors
+======================
 
-Text
+Indigo provides the CIP stereo descriptors calculations.
+These calculations correspond latest chemical nomenclature requirements
+(Nomenclature of Organic Chemistry - IUPAC Recommendations and Preferred Names (2013)).
+Current implementation includes some simplifications and supports calculations only R/S and E/Z
+descriptors. 
+
+Please see the :ref:`indigo-example-cip-descriptors` for detailed examples.
 
