@@ -183,6 +183,7 @@
 <li class="toctree-l6"><a class="reference internal" href="../../bingo/user-manual-oracle.html#exact-tautomer-search">Exact Tautomer Search</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../../bingo/user-manual-oracle.html#tautomer-substructure-search">Tautomer Substructure Search</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../../bingo/user-manual-oracle.html#customizing-the-rules">Customizing the Rules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../bingo/user-manual-oracle.html#tautomer-substructure-search-based-on-inchi-or-reaction-smarts">Tautomer Substructure Search Based on InChI or reaction SMARTS</a></li>
 </ul>
 </li>
 <li class="toctree-l5"><a class="reference internal" href="../../bingo/user-manual-oracle.html#similarity-search">Similarity Search</a><ul>
@@ -572,13 +573,18 @@
 <li class="toctree-l4"><a class="reference internal" href="../api/index.html#implicit-and-explicit-hydrogens">Implicit and Explicit Hydrogens</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/index.html#stereochemistry">Stereochemistry</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/index.html#enumeration-of-submolecules">Enumeration of Submolecules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api/index.html#groups">Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/index.html#enumeration-of-tautomers">Enumeration of Tautomers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/index.html#sgroups">SGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/index.html#tgroups">TGroups</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/index.html#alignment-of-atoms">Alignment of Atoms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/index.html#inchi">InChI</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../api/index.html#options">Options</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../api/index.html#standardize-of-molecule">Standardize of Molecule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/index.html#ionize-of-molecule">Ionize of Molecule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/index.html#pka">pKa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/index.html#cip-stereo-descriptors">CIP Stereo Descriptors</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../api/index.html#io">IO</a><ul>
@@ -651,7 +657,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../concepts/deco.html#example-3">Example 3</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../concepts/deco.html#example-4">Example 4</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../concepts/deco.html#aromatic-scaffold">Aromatic scaffold</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../concepts/deco.html#nonaromatic-scaffold">Nonaromatic scaffold</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../concepts/deco.html#non-aromatic-scaffold">Non-aromatic scaffold</a></li>
 </ul>
 </li>
 </ul>
@@ -698,6 +704,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../concepts/index.html#layout">Layout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../concepts/index.html#rendering">Rendering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../concepts/index.html#combinatorial-chemistry">Combinatorial Chemistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/index.html#cip-stereo-descriptors">CIP Stereo Descriptors</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../utilities.html">﻿Indigo Utilities</a><ul>
@@ -746,10 +753,19 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../download/indigo/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../download/indigo/index.html#beta">Beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../download/indigo/index.html#indigo-1-2-2beta">Indigo 1.2.2beta</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#language-bindings">Language Bindings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#source-code">Source code</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../download/indigo/index.html#stable">Stable</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../download/indigo/index.html#indigo-1-2-1">Indigo 1.2.1</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#language-bindings">Language Bindings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#id1">Language Bindings</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#utilities">Utilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#id2">Source code</a></li>
 </ul>
 </li>
 </ul>
@@ -841,6 +857,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="layout-options.html">Layout options</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="layout-options.html#layout-max-iterations">layout-max-iterations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="layout-options.html#smart-layout">smart-layout</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="rendering-options.html">Rendering options</a><ul>
@@ -1006,6 +1023,12 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="pka.html">pKa options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pka.html#pka-model">pKa-model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pka.html#pka-model-level">pKa-model-level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pka.html#pka-model-min-level">pKa-model-min-level</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#options-table">Options Table</a></li>
 </ul>
 </li>
@@ -1017,6 +1040,20 @@
 <li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.1.html#standardize">Standardize</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.1.html#cdx-format">CDX Format</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.1.html#stereo-better-support">Stereo better support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html">Indigo 1.2.2beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#layout-enhancement">Layout enhancement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#sgroups">SGroups</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#tgroups">TGroups</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#enumeration-of-tautomers">Enumeration of Tautomers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#ionize-and-pka-calculations">Ionize and pKa calculations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#maven-central-repository">Maven Central Repository</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#cip-stereo-descriptors">CIP Stereo Descriptors</a></li>
 </ul>
 </li>
 </ul>
@@ -1079,7 +1116,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-alpha3">Indigo 1.1-alpha3</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../release-notes/1.2.x/indigo-github.html">Indigo Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../release-notes/1.2.x/indigo-github.html">Indigo GitHub</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../release-notes/1.2.x/indigo-github.html#source-code">Source Code</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../release-notes/1.2.x/indigo-github.html#documentation">Documentation</a></li>
 </ul>
@@ -1101,6 +1138,9 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/calculating-properties.html">Calculating Properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../examples/calculating-properties.html#canonical-smiles">Canonical Smiles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/calculating-properties.html#enumeration-of-tautomers">Enumeration of Tautomers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/calculating-properties.html#sgroups-search">Sgroups search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/calculating-properties.html#cip-descriptors">CIP Descriptors</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/standardize.html">Standardize</a><ul>
@@ -1109,6 +1149,15 @@
 <li class="toctree-l4"><a class="reference internal" href="../examples/standardize.html#geometry">Geometry</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/standardize.html#query">Query</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/standardize.html#misc">Misc</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/scsr-transformations.html">SCSR Transformations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/scsr-transformations.html#transform-scsr-into-full-ctab-representation">Transform SCSR into full CTAB representation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/scsr-transformations.html#transform-ctab-into-scsr">Transform CTAB into SCSR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/layout.html">Layout (2D coordinates)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/layout.html#smart-and-simple-layout">Smart and simple layout</a></li>
 </ul>
 </li>
 </ul>
@@ -1393,6 +1442,7 @@
 <li class="toctree-l1"><a class="reference internal" href="reaction-product-enumeration.html">Reaction Products Enumeration and Transformation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inchi.html">InChI options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="standardize.html">Standardize options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pka.html">pKa options</a></li>
 </ul>
 </div>
 <div class="section" id="options-table">
@@ -1421,7 +1471,7 @@
 </tr>
 <tr class="row-odd"><td><a class="option reference external" href="deconvolution.html#deco-save-ap-bond-orders">deco-save-ap-bond-orders</a></td>
 <td>boolean</td>
-<td>Save attachement points as separate atoms with explicit bond connected.</td>
+<td>Save attachment points as separate atoms with explicit bond connected.</td>
 <td>false</td>
 </tr>
 <tr class="row-even"><td><a class="option reference external" href="deconvolution.html#deco-ignore-errors">deco-ignore-errors</a></td>
@@ -1497,6 +1547,46 @@
 <tr class="row-even"><td><a class="option reference external" href="layout-options.html#layout-max-iterations">layout-max-iterations</a></td>
 <td>int</td>
 <td>The maximum number of iterations allowed for the layout procedure to run</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td><a class="option reference external" href="layout-options.html#smart-layout">smart-layout</a></td>
+<td>boolean</td>
+<td>whether to use &#8220;smart&#8221; layout or &#8220;simple&#8221;</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pKa options">
+<h3>pKa options<a class="headerlink" href="#pKa options" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="7%" />
+<col width="58%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Short description</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="option reference external" href="pka.html#pka-model">pKa-model</a></td>
+<td>string</td>
+<td>pKa model type</td>
+<td>simple</td>
+</tr>
+<tr class="row-odd"><td><a class="option reference external" href="pka.html#pka-model-level">pKa-model-level</a></td>
+<td>int</td>
+<td>max level for advanced model</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td><a class="option reference external" href="pka.html#pka-model-min-level">pKa-model-min-level</a></td>
+<td>int</td>
+<td>min level for advanced model</td>
 <td>0</td>
 </tr>
 </tbody>
@@ -2157,7 +2247,7 @@ ignored when a non-query molecule is being loaded.</td>
 </tr>
 <tr class="row-even"><td><a class="option reference external" href="rendering-options.html#render-superatom-mode">render-superatom-mode</a></td>
 <td>enum (expand, collapse)</td>
-<td>Supertatoms rendering mode</td>
+<td>Superatoms rendering mode</td>
 <td>expand</td>
 </tr>
 <tr class="row-odd"><td><a class="option reference external" href="rendering-options.html#render-valences-visible">render-valences-visible</a></td>
@@ -2238,7 +2328,7 @@ ignored when a non-query molecule is being loaded.</td>
     </p>
     <p>
         &copy; Copyright 2015, EPAM Systems.<br/>
-      Last updated on Nov 06, 2015.<br/>
+      Last updated on Nov 18, 2015.<br/>
     </p>
   </div>
   

@@ -183,6 +183,7 @@
 <li class="toctree-l6"><a class="reference internal" href="../../bingo/user-manual-oracle.html#exact-tautomer-search">Exact Tautomer Search</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../../bingo/user-manual-oracle.html#tautomer-substructure-search">Tautomer Substructure Search</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../../bingo/user-manual-oracle.html#customizing-the-rules">Customizing the Rules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../bingo/user-manual-oracle.html#tautomer-substructure-search-based-on-inchi-or-reaction-smarts">Tautomer Substructure Search Based on InChI or reaction SMARTS</a></li>
 </ul>
 </li>
 <li class="toctree-l5"><a class="reference internal" href="../../bingo/user-manual-oracle.html#similarity-search">Similarity Search</a><ul>
@@ -572,13 +573,18 @@
 <li class="toctree-l4"><a class="reference internal" href="#implicit-and-explicit-hydrogens">Implicit and Explicit Hydrogens</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#stereochemistry">Stereochemistry</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#enumeration-of-submolecules">Enumeration of Submolecules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#groups">Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumeration-of-tautomers">Enumeration of Tautomers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sgroups">SGroups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tgroups">TGroups</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#alignment-of-atoms">Alignment of Atoms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#inchi">InChI</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#options">Options</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#standardize-of-molecule">Standardize of Molecule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ionize-of-molecule">Ionize of Molecule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pka">pKa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cip-stereo-descriptors">CIP Stereo Descriptors</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#io">IO</a><ul>
@@ -651,7 +657,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../concepts/deco.html#example-3">Example 3</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../concepts/deco.html#example-4">Example 4</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../concepts/deco.html#aromatic-scaffold">Aromatic scaffold</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../concepts/deco.html#nonaromatic-scaffold">Nonaromatic scaffold</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../concepts/deco.html#non-aromatic-scaffold">Non-aromatic scaffold</a></li>
 </ul>
 </li>
 </ul>
@@ -698,6 +704,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../concepts/index.html#layout">Layout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../concepts/index.html#rendering">Rendering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../concepts/index.html#combinatorial-chemistry">Combinatorial Chemistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/index.html#cip-stereo-descriptors">CIP Stereo Descriptors</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../utilities.html">﻿Indigo Utilities</a><ul>
@@ -746,10 +753,19 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../download/indigo/index.html">Downloads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../download/indigo/index.html#beta">Beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../download/indigo/index.html#indigo-1-2-2beta">Indigo 1.2.2beta</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#language-bindings">Language Bindings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#source-code">Source code</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../download/indigo/index.html#stable">Stable</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../download/indigo/index.html#indigo-1-2-1">Indigo 1.2.1</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#language-bindings">Language Bindings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#id1">Language Bindings</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#utilities">Utilities</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#id2">Source code</a></li>
 </ul>
 </li>
 </ul>
@@ -841,6 +857,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../options/layout-options.html">Layout options</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../options/layout-options.html#layout-max-iterations">layout-max-iterations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../options/layout-options.html#smart-layout">smart-layout</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../options/rendering-options.html">Rendering options</a><ul>
@@ -1006,6 +1023,12 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../options/pka.html">pKa options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../options/pka.html#pka-model">pKa-model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../options/pka.html#pka-model-level">pKa-model-level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../options/pka.html#pka-model-min-level">pKa-model-min-level</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../options/index.html#options-table">Options Table</a></li>
 </ul>
 </li>
@@ -1017,6 +1040,20 @@
 <li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.1.html#standardize">Standardize</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.1.html#cdx-format">CDX Format</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.1.html#stereo-better-support">Stereo better support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html">Indigo 1.2.2beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#layout-enhancement">Layout enhancement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#sgroups">SGroups</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#tgroups">TGroups</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#enumeration-of-tautomers">Enumeration of Tautomers</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#ionize-and-pka-calculations">Ionize and pKa calculations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#maven-central-repository">Maven Central Repository</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../release-notes/1.2.x/indigo-1.2.2b.html#cip-stereo-descriptors">CIP Stereo Descriptors</a></li>
 </ul>
 </li>
 </ul>
@@ -1079,7 +1116,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../release-notes/1.1.x/indigo-1.1.x.html#indigo-1-1-alpha3">Indigo 1.1-alpha3</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../release-notes/1.2.x/indigo-github.html">Indigo Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../release-notes/1.2.x/indigo-github.html">Indigo GitHub</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../release-notes/1.2.x/indigo-github.html#source-code">Source Code</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../release-notes/1.2.x/indigo-github.html#documentation">Documentation</a></li>
 </ul>
@@ -1101,6 +1138,9 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/calculating-properties.html">Calculating Properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../examples/calculating-properties.html#canonical-smiles">Canonical Smiles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/calculating-properties.html#enumeration-of-tautomers">Enumeration of Tautomers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/calculating-properties.html#sgroups-search">Sgroups search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/calculating-properties.html#cip-descriptors">CIP Descriptors</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/standardize.html">Standardize</a><ul>
@@ -1109,6 +1149,15 @@
 <li class="toctree-l4"><a class="reference internal" href="../examples/standardize.html#geometry">Geometry</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/standardize.html#query">Query</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/standardize.html#misc">Misc</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/scsr-transformations.html">SCSR Transformations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/scsr-transformations.html#transform-scsr-into-full-ctab-representation">Transform SCSR into full CTAB representation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/scsr-transformations.html#transform-ctab-into-scsr">Transform CTAB into SCSR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/layout.html">Layout (2D coordinates)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/layout.html#smart-and-simple-layout">Smart and simple layout</a></li>
 </ul>
 </li>
 </ul>
@@ -1399,13 +1448,18 @@
 <li><a class="reference internal" href="#implicit-and-explicit-hydrogens">Implicit and Explicit Hydrogens</a></li>
 <li><a class="reference internal" href="#stereochemistry">Stereochemistry</a></li>
 <li><a class="reference internal" href="#enumeration-of-submolecules">Enumeration of Submolecules</a></li>
-<li><a class="reference internal" href="#groups">Groups</a></li>
+<li><a class="reference internal" href="#enumeration-of-tautomers">Enumeration of Tautomers</a></li>
+<li><a class="reference internal" href="#sgroups">SGroups</a></li>
+<li><a class="reference internal" href="#tgroups">TGroups</a></li>
 <li><a class="reference internal" href="#alignment-of-atoms">Alignment of Atoms</a></li>
 <li><a class="reference internal" href="#inchi">InChI</a><ul>
 <li><a class="reference internal" href="#options">Options</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#standardize-of-molecule">Standardize of Molecule</a></li>
+<li><a class="reference internal" href="#ionize-of-molecule">Ionize of Molecule</a></li>
+<li><a class="reference internal" href="#pka">pKa</a></li>
+<li><a class="reference internal" href="#cip-stereo-descriptors">CIP Stereo Descriptors</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#io">IO</a><ul>
@@ -2445,23 +2499,60 @@ separate molecule representing the obtained submolecule, you should
 </div>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">submol</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateEdgeSubmolecules</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mol</span><span class="o">.</span><span class="n">countBonds</span><span class="p">()):</span>
-  <span class="k">print</span> <span class="s">&quot;submolecule&quot;</span><span class="p">,</span> <span class="n">submol</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s">&quot;:&quot;</span><span class="p">,</span> <span class="n">submol</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">())</span>
+  <span class="k">print</span> <span class="s">&quot;submolecule&quot;</span><span class="p">,</span> <span class="n">submol</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s">&quot;:&quot;</span><span class="p">,</span> <span class="n">submol</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
   <span class="k">print</span> <span class="p">[</span><span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span> <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">()]</span>
   <span class="k">print</span> <span class="p">[</span><span class="n">bond</span><span class="o">.</span><span class="n">index</span><span class="p">()</span> <span class="k">for</span> <span class="n">bond</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">()]</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="groups">
-<h3>Groups<a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="enumeration-of-tautomers">
+<h3>Enumeration of Tautomers<a class="headerlink" href="#enumeration-of-tautomers" title="Permalink to this headline">¶</a></h3>
+<p>Indigo provides a method to enumerate tautomers of a selected molecule.
+Currently there are two algorithms to enumerate tautomers: based on InChI code and based on a set of reaction SMARTS rules.</p>
+<p>The <code class="docutils literal"><span class="pre">iterateTautomers</span></code> method returns an iterator for tautomers. It accepts a molecule and options as parameters.
+There are two possible options: <code class="docutils literal"><span class="pre">INCHI</span></code> to use method based on <a class="reference external" href="../../resources.html#inchi-code">InChI code</a>, and <code class="docutils literal"><span class="pre">RSMARTS</span></code> to use <a class="reference external" href="../../resources.html#rsmarts-rules">reaction SMARTS templates</a>:</p>
+<p>Java:</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">tautomer</span> <span class="o">:</span> <span class="n">indigo</span><span class="o">.</span><span class="na">iterateTautomers</span><span class="o">(</span><span class="n">molecule</span><span class="o">,</span> <span class="s">&quot;RSMARTS&quot;</span><span class="o">)</span>
+<span class="o">{</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;tautomer %d: %s\n&quot;</span><span class="o">,</span> <span class="n">tautomer</span><span class="o">.</span><span class="na">index</span><span class="o">(),</span> <span class="n">tautomer</span><span class="o">.</span><span class="na">clone</span><span class="o">().</span><span class="na">smiles</span><span class="o">());</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="k">foreach</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="k">in</span> <span class="n">indigo</span><span class="p">.</span><span class="n">iterateTautomers</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="s">&quot;RSMARTS&quot;</span><span class="p">))</span>
+<span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;tautomer {0}: {1}&quot;</span><span class="p">,</span> <span class="n">item</span><span class="p">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">item</span><span class="p">.</span><span class="n">clone</span><span class="p">().</span><span class="n">smiles</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">tautomer</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateTautomers</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="s">&#39;RSMARTS&#39;</span><span class="p">):</span>
+  <span class="k">print</span> <span class="s">&quot;tautomer&quot;</span><span class="p">,</span> <span class="n">tautomer</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s">&quot;:&quot;</span><span class="p">,</span> <span class="n">tautomer</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Please see the <a class="reference internal" href="../examples/calculating-properties.html#indigo-example-tautomer-enumeration"><span>Enumeration of Tautomers</span></a> for detailed examples</p>
+</div>
+<div class="section" id="sgroups">
+<h3>SGroups<a class="headerlink" href="#sgroups" title="Permalink to this headline">¶</a></h3>
 <p>In a molecule loaded from a Molfile, arbitrary subsets of a its atoms
-and bonds can be joined in groups. There are many kinds of groups,
-Indigo supports five of them:</p>
+and bonds can be joined in S-groups. There are many kinds of S-groups,
+Indigo supports all described in the format:</p>
 <ul class="simple">
-<li>generic groups (GEN)</li>
-<li>superatoms (SUP)</li>
-<li>structure repeating units (SRU)</li>
-<li>multiple groups (MUL)</li>
-<li>data SGroups (DAT)</li>
+<li>generic SGroup (GEN)</li>
+<li>abbreviation (superatom) (SUP)</li>
+<li>structure repeating unit (SRU)</li>
+<li>multiple SGroup (MUL)</li>
+<li>data SGroup (DAT)</li>
+<li>monomer SGroup (MON)</li>
+<li>mer SGroup (MER)</li>
+<li>copolymer SGroup (COP)</li>
+<li>crosslink SGroup (CRO)</li>
+<li>modification SGroup (MOD)</li>
+<li>graft SGroup (GRA)</li>
+<li>component SGroup (COM)</li>
+<li>mixture SGroup (MIX)</li>
+<li>formulation SGroup (FOR)</li>
+<li>any polymer SGroup (ANY)</li>
 </ul>
 <p>The following methods of <code class="docutils literal"><span class="pre">IndigoObject</span></code> are available for reading
 molecule&#8217;s groups:</p>
@@ -2518,6 +2609,136 @@ the data SGroup object. To get a description of a data SGroup use method
 <div class="highlight-python"><div class="highlight"><pre><span class="n">mol</span><span class="o">.</span><span class="n">addSuperatom</span><span class="p">(</span><span class="n">list_with_atom_indices</span><span class="p">,</span> <span class="s">&quot;Abbreviation&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>New set of methods is available for manipulation with S-groups.
+You can create new S-group using &#8220;mapping&#8221; object received from matcher:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">IndigoObject.createSGroup</span></code></li>
+</ul>
+<p>Java:</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">substructureMatcher</span><span class="o">(</span><span class="n">mol</span><span class="o">).</span><span class="na">match</span><span class="o">(</span><span class="n">query</span><span class="o">);</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="n">match</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
+<span class="o">{</span>
+   <span class="n">IndigoObject</span> <span class="n">sgroup</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="na">createSGroup</span><span class="o">(</span><span class="s">&quot;SUP&quot;</span><span class="o">,</span> <span class="n">match</span><span class="o">,</span> <span class="s">&quot;Asx&quot;</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>C#:</p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">IndigoObject</span> <span class="n">match</span> <span class="p">=</span> <span class="n">indigo</span><span class="p">.</span><span class="n">substructureMatcher</span><span class="p">(</span><span class="n">mol</span><span class="p">).</span><span class="n">match</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">match</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">IndigoObject</span> <span class="n">sgroup</span> <span class="p">=</span> <span class="n">mol</span><span class="p">.</span><span class="n">createSGroup</span><span class="p">(</span><span class="s">&quot;SUP&quot;</span><span class="p">,</span> <span class="n">match</span><span class="p">,</span> <span class="s">&quot;Asx&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">substructureMatcher</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+   <span class="n">sgroup</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">createSGroup</span><span class="p">(</span><span class="s">&quot;SUP&quot;</span><span class="p">,</span> <span class="n">match</span><span class="p">,</span> <span class="s">&quot;Asx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can get and set different S-group&#8217;s properties using the next methods:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">getSGroupType</span></code> - returns S-group type</li>
+<li><code class="docutils literal"><span class="pre">getSGroupIndex</span></code> - returns S-group index</li>
+<li><code class="docutils literal"><span class="pre">setSGroupData</span></code> - accepts S-group data (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupCoords</span></code> accepts S-group coordinates, x and y values (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupDescription</span></code>- accepts S-group data field units or format (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupFieldName</span></code> - accepts S-group data name (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupQueryCode</span></code> - accepts S-group data query code (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupQueryOper</span></code> - accepts S-group data query operation (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupDisplay</span></code> - accepts S-group data display option (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupLocation</span></code> - accepts S-group data display location (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupTag</span></code> - accepts S-group data tag (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupTagAlign</span></code> - accepts S-group data tag alignment (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupDataType</span></code> - accepts S-group data type (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupXCoord</span></code> - accepts S-group x coordinate (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupYCoord</span></code> - accepts S-group y coordinate (for S-groups of &#8220;DAT&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">getSGroupClass</span></code> - returns S-group class name (for S-groups of &#8220;SUP&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupClass</span></code> - accepts S-group class name (for S-groups of &#8220;SUP&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">getSGroupName</span></code> - returns S-group label (for S-groups of &#8220;SUP&#8221; and &#8220;SRU&#8221; types)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupName</span></code> - accepts S-group label (for S-groups of &#8220;SUP&#8221; and &#8220;SRU&#8221; types)</li>
+<li><code class="docutils literal"><span class="pre">getSGroupNumCrossBonds</span></code> - returns number of crossing bonds for sgroup</li>
+<li><code class="docutils literal"><span class="pre">addSGroupAttachmentPoint</span></code> - accepts attachment point&#8217;s description and creates it (for S-groups of &#8220;SUP&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">deleteSGroupAttachmentPoint</span></code> - accepts attachment point&#8217;s index and removes it (for S-groups of &#8220;SUP&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">getSGroupDisplayOption</span></code> - returns display option for sgroup (for S-groups of &#8220;SUP&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupDisplayOption</span></code> - accepts display option for sgroup (for S-groups of &#8220;SUP&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">getSGroupMultiplier</span></code> - returns multiplier value for sgroup (for S-groups of &#8220;MUL&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupMultiplier</span></code> - accepts multiplier value for sgroup (for S-groups of &#8220;MUL&#8221; type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupBrackets</span></code> - accepts bracket style and brackets coordinates for sgroup (for S-groups of &#8220;GEN&#8221;,&#8221;MUL&#8221; and &#8220;SRU&#8221; types)</li>
+</ul>
+<p><strong>Note</strong>: All properties and its values correspond to Molfile format.</p>
+<p>Python examples:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sg</span><span class="o">.</span><span class="n">setSGroupClass</span><span class="p">(</span><span class="s">&quot;AA&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupName</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupClass</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupNumCrossBonds</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupDisplayOption</span><span class="p">())</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupName</span><span class="p">(</span><span class="s">&quot;As&quot;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupDisplayOption</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">mp</span> <span class="o">=</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupMultiplier</span><span class="p">()</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupMultiplier</span><span class="p">(</span><span class="n">mp</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupBrackets</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupData</span><span class="p">(</span><span class="s">&quot;Test Data S-group&quot;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupCoords</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupDescription</span><span class="p">(</span><span class="s">&quot;SGroup Description (FIELDINFO)&quot;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupFieldName</span><span class="p">(</span><span class="s">&quot;SGroup (FIELDNAME)&quot;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupQueryCode</span><span class="p">(</span><span class="s">&quot;SGroup (QUERYTYPE)&quot;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupQueryOper</span><span class="p">(</span><span class="s">&quot;SGroup (QUERYOP)&quot;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupDisplay</span><span class="p">(</span><span class="s">&quot;attached&quot;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupLocation</span><span class="p">(</span><span class="s">&quot;relative&quot;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupTag</span><span class="p">(</span><span class="s">&quot;G&quot;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupTagAlign</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupDataType</span><span class="p">(</span><span class="s">&quot;T&quot;</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupXCoord</span><span class="p">(</span><span class="mf">4.0</span><span class="p">)</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">setSGroupYCoord</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can find in the <code class="docutils literal"><span class="pre">IndigoObject</span></code> S-groups using different criteria
+with corresponding values in S-group properties by type, by name, by class, by atoms or crossing bonds
+included in S-group:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">findSGroups</span></code>  - it accepts key and value for search and retuns iterator for collection of found sgroups</li>
+</ul>
+<p>Currently available keys are:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">SG_TYPE</span></code> - find sgroups by type</li>
+<li><code class="docutils literal"><span class="pre">SG_CLASS</span></code> - find sgroups by class</li>
+<li><code class="docutils literal"><span class="pre">SG_LABEL</span></code> - find sgroups by name</li>
+<li><code class="docutils literal"><span class="pre">SG_DISPLAY_OPTION</span></code> - find sgroups by display option</li>
+<li><code class="docutils literal"><span class="pre">SG_BRACKET_STYLE</span></code> - find sgroups by bracket style</li>
+<li><code class="docutils literal"><span class="pre">SG_DATA</span></code> - find sgroups which contains corresponding string in data field</li>
+<li><code class="docutils literal"><span class="pre">SG_DATA_NAME</span></code> - find sgroups by data name</li>
+<li><code class="docutils literal"><span class="pre">SG_DATA_TYPE</span></code> - find sgroups by data type</li>
+<li><code class="docutils literal"><span class="pre">SG_DATA_DESCRIPTION</span></code> - find sgroups by data description</li>
+<li><code class="docutils literal"><span class="pre">SG_DATA_DISPLAY</span></code> - find sgroups by data display option</li>
+<li><code class="docutils literal"><span class="pre">SG_DATA_LOCATION</span></code> - find sgroups by data location</li>
+<li><code class="docutils literal"><span class="pre">SG_DATA_TAG</span></code> - find sgroups by data tag</li>
+<li><code class="docutils literal"><span class="pre">SG_QUERY_CODE</span></code> - find sgroups by query code</li>
+<li><code class="docutils literal"><span class="pre">SG_QUERY_OPER</span></code> - find sgroups by query operation</li>
+<li><code class="docutils literal"><span class="pre">SG_PARENT</span></code> - find sgroups by parent sgroup</li>
+<li><code class="docutils literal"><span class="pre">SG_CHILD</span></code> - find sgroups by children sgroup</li>
+<li><code class="docutils literal"><span class="pre">SG_ATOMS</span></code> - find sgroups containing list of atoms</li>
+<li><code class="docutils literal"><span class="pre">SG_BONDS</span></code> - find sgroups contating list of crossing bonds</li>
+</ul>
+<p>Please see the <a class="reference internal" href="../examples/calculating-properties.html#indigo-example-sgroups-search"><span>Sgroups search</span></a> for detailed examples</p>
+<p>S-group can be removed from the <code class="docutils literal"><span class="pre">IndigoObject</span></code> using <code class="docutils literal"><span class="pre">remove</span></code> method. In that case just description of
+corresponding S-group will be removed (the atoms and bonds remain).</p>
+</div>
+<div class="section" id="tgroups">
+<h3>TGroups<a class="headerlink" href="#tgroups" title="Permalink to this headline">¶</a></h3>
+<p>Indigo supports the hybrid representation (SCSR) for a molecule loaded from a V3000 Molfile.
+SCSR uses TEMPLATE blocks to represent residues and this representation is widely used for biological sequences.</p>
+<p>There are methods for transformation SCSR into full CTAB form and vise versa:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">transformSCSRtoCTAB</span></code> - transforms SCSR into full CTAB representation (templates are transformed into S-groups)</li>
+<li><code class="docutils literal"><span class="pre">transformCTABtoSCSR</span></code> - transforms CTAB into SCSR (accepts templates collection and replaces matched fragments by pseudoatoms and corresponding templates)</li>
+</ul>
+<p>Examples of usage these methods are in corresponding <a class="reference external" href="../examples/scsr-transformations.html">Examples</a> section.</p>
 </div>
 <div class="section" id="alignment-of-atoms">
 <h3>Alignment of Atoms<a class="headerlink" href="#alignment-of-atoms" title="Permalink to this headline">¶</a></h3>
@@ -2638,6 +2859,44 @@ corresponds to the order of the options in the list of available options</p>
 <span class="n">mol</span><span class="o">.</span><span class="n">standardize</span><span class="p">();</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="ionize-of-molecule">
+<h3>Ionize of Molecule<a class="headerlink" href="#ionize-of-molecule" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.ionize</span></code> method can be used for building protonated/deprotonated form
+of the molecule in accordance with pH and pH tolerance. pKa model for pKa estimation can be
+defined using corresponding <a class="reference external" href="../options/pka.html">Options</a> section).</p>
+<p>Java, C#, and Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s">&quot;pKa-model&quot;</span><span class="p">,</span> <span class="s">&quot;advanced&quot;</span><span class="p">)</span>
+<span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s">&quot;pKa-model-level&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s">&quot;pKa-model-min-level&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">mol</span><span class="o">.</span><span class="n">ionize</span><span class="p">(</span><span class="n">pH</span><span class="p">,</span> <span class="n">ph_toll</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pka">
+<h3>pKa<a class="headerlink" href="#pka" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.getAcidPkaValue</span></code> and <code class="docutils literal"><span class="pre">IndigoObject.getBasicPkaValue</span></code> method can be used for
+estimation pKa values for individual atoms in a molecule. pKa model for pKa estimation can be
+defined using corresponding <a class="reference external" href="../options/pka.html">Options</a> section).</p>
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.buildPkaModel</span></code> method is used for building pKa model based on custom structures
+set.</p>
+<p>Java, C#, and Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">level</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">buildPkaModel</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s">&#39;molecules/PkaModel.sdf&#39;</span><span class="p">)</span>
+
+<span class="n">a_pka</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">getAcidPkaValue</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">b_pka</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">getBasicPkaValue</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cip-stereo-descriptors">
+<h3>CIP Stereo Descriptors<a class="headerlink" href="#cip-stereo-descriptors" title="Permalink to this headline">¶</a></h3>
+<p>Descriptors calculation is activated by corresponding Indigo option <code class="docutils literal"><span class="pre">molfile-saving-add-stereo-desc</span></code>
+and descriptors are added into generated mol file as data S-groups with special name field
+<code class="docutils literal"><span class="pre">INDIGO_CIP_DESC</span></code>. Setting Indigo option  <code class="docutils literal"><span class="pre">molfile-saving-add-stereo-desc</span></code> to 0 (or false) (the
+default value) disables descriptors calculation and removes all such data S-groups during corresponding
+mol file generation.</p>
+<p>Please see the <a class="reference internal" href="../examples/calculating-properties.html#indigo-example-cip-descriptors"><span>CIP Descriptors</span></a> for detailed examples.</p>
 </div>
 </div>
 <div class="section" id="io">
@@ -3148,15 +3407,21 @@ match.</p>
 <p>The <code class="docutils literal"><span class="pre">Indigo.substructureMatcher</span></code> method accepts an optional string, in
 which you can specify one of the following flags:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">RES</span></code> — to turn on the chemical resonance matching mode (<code class="docutils literal"><span class="pre">C=N</span></code>
+<li><code class="docutils literal"><span class="pre">RES</span></code> — chemical resonance matching mode (<code class="docutils literal"><span class="pre">C=N</span></code>
 matches <code class="docutils literal"><span class="pre">CN=O</span></code> etc). You can read more about the resonance search
 and see examples on the <a class="reference external" href="../../bingo/user-manual-oracle.html#resonance-search">Bingo User
 Manual</a>
 page.</li>
-<li><code class="docutils literal"><span class="pre">TAU</span></code> — to turn on the tautomer matching mode. You can read more
+<li><code class="docutils literal"><span class="pre">TAU</span></code> — tautomer matching mode. You can read more
 about the tautomer substructure search and see examples on the <a class="reference external" href="../../bingo/user-manual-oracle.html#tautomer-substructure-search">Bingo
 User
 Manual</a>
+page.</li>
+<li><code class="docutils literal"><span class="pre">TAU</span> <span class="pre">INCHI</span></code> — tautomer matching mode based on <a class="reference external" href="../../resources.html#inchi-code">InChI code</a>. Read more
+about the tautomer substructure search and see examples on the <a class="reference external" href="../../bingo/user-manual-oracle.html#tautomer-substructure-search-based-on-inchi-or-reaction-smarts">Bingo User Manual</a>
+page.</li>
+<li><code class="docutils literal"><span class="pre">TAU</span> <span class="pre">RSMARTS</span></code> — tautomer matching mode based on <a class="reference external" href="../../resources.html#rsmarts-rules">RSMARTS rules</a>. Read more
+about the tautomer substructure search and see examples on the <a class="reference external" href="../../bingo/user-manual-oracle.html#tautomer-substructure-search-based-on-inchi-or-reaction-smarts">Bingo User Manual</a>
 page.</li>
 </ul>
 </div>
@@ -3919,7 +4184,7 @@ Output:<div class="output highlight-python"><div class="highlight"><pre><span cl
     </p>
     <p>
         &copy; Copyright 2015, EPAM Systems.<br/>
-      Last updated on Nov 06, 2015.<br/>
+      Last updated on Nov 18, 2015.<br/>
     </p>
   </div>
   
