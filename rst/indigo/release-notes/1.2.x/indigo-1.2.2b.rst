@@ -9,13 +9,11 @@ Summary
 *******
 
 
-Please note, in this **beta** version Indigo introduces very "new" and "novel" features and algorithms. We look forward to receiving any questions or notes for this version.
-
 **New features and improvements**:
 
 * New layout algorithm. ``SMART`` layout mode was added.( :ref:`details <indigo-1.2.2b-layout>`)
 
-* SGroup rich support was implemented.( Please see :ref:`details <indigo-1.2.2b-sgroups>`)
+* SGroup rich support was implemented.( :ref:`details <indigo-1.2.2b-sgroups>`)
 
 * TGroups and SCSR Transformations ( :ref:`details <indigo-1.2.2b-scsr>`)
 
@@ -181,7 +179,7 @@ CIP Stereo Descriptors
 ======================
 
 Indigo provides the CIP stereo descriptors calculations.
-These calculations correspond latest chemical nomenclature requirements
+These calculations correspond to latest chemical nomenclature requirements
 (Nomenclature of Organic Chemistry - IUPAC Recommendations and Preferred Names (2013)).
 Current implementation includes some simplifications and supports calculations only R/S and E/Z
 descriptors. 

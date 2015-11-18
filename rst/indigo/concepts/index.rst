@@ -313,7 +313,7 @@ CIP Stereo Descriptors
 ----------------------
 
 Indigo provides the CIP stereo descriptors calculations.
-These calculations correspond latest chemical nomenclature requirements
+These calculations correspond to latest chemical nomenclature requirements
 (Nomenclature of Organic Chemistry - IUPAC Recommendations and Preferred Names (2013)).
 Current implementation includes some simplifications and supports calculations only R/S and E/Z
 descriptors. 

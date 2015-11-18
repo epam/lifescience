@@ -12,11 +12,13 @@ Indigo 1.2.2beta released
 
 *18 Nov 2015*
 
-New Indigo version was released with new layout mode and other features and improvements
+New Indigo version was released with new layout mode, rich SGroup support and other features and improvements
 
 * |indigo_1_2_2b_notes|
 
 * |indigo_1_2_2b_downloads|
+
+Please note, in this **beta** version Indigo introduces very "new" and "novel" features and algorithms. We look forward to receiving any questions or notes for this version.
 
 .. |indigo_1_2_2b_notes| raw:: html
 
