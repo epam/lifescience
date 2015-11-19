@@ -35,9 +35,13 @@ Indigo is available on GitHub
 
 Finally we moved our source code development on GitHub. 
 
-https://github.com/epam/Indigo
+|indigo_1_2_x_github_url|
 
 Please see the |indigo_1_2_x_github| for the details
+
+.. |indigo_1_2_x_github_url| raw:: html
+
+   <a href="https://github.com/epam/Indigo" target="_blank">https://github.com/epam/Indigo</a>
 
 .. |indigo_1_2_x_github| raw:: html
 
