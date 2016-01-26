@@ -7,6 +7,27 @@ News
     newsfeed
     release-notes/index
 
+Indigo Nodes 2.0 for KNIME 3
+----------------------------
+
+*26 Jan 2016*
+
+New version of Indigo nodes for **KNIME 3** was released. The nodes are available via community contribution |knime_3_1_update_site|.
+
+
+* |indigo_knime_2_nodes_notes|
+
+
+.. |knime_3_1_update_site| raw:: html
+
+   <a href="http://update.knime.org/community-contributions/3.1" target="_blank">update site</a>
+
+.. |indigo_knime_2_nodes_notes| raw:: html
+
+   <a href="indigo/release-notes/knime/indigo_knime_2_nodes.html" target="_blank">Release Notes</a>
+
+
+
 Indigo 1.2.2beta released
 -------------------------
 
