@@ -1161,6 +1161,43 @@ Python:
       mol.clearCisTrans()
       print mol.smiles()
 
+
+
+``stereocenterGroup`` and ``setStereocenterGroup`` method to get/set stereocenter group:
+ 
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+
+    # Load structure
+    m = indigo.loadMoleculeFromFile('../release-notes/1.1.x/data/stereogroups.mol')
+    indigo.setOption('render-comment', 'Before')
+    indigoRenderer.renderToFile(m, 'result_1.png')
+    
+    for s in m.iterateStereocenters():
+        print "atom index =", s.index(), "group =", s.stereocenterGroup()
+        
+    m.getAtom(1).changeStereocenterType(Indigo.OR)
+    m.getAtom(1).setStereocenterGroup(1)
+    m.getAtom(5).setStereocenterGroup(1)
+    indigo.setOption('render-comment', 'Stereocenter groups and types were changed')
+    indigoRenderer.renderToFile(m, 'result_2.png')
+    
+The ``markStereobonds`` method set up/down bond marks if a stereoconfiguration were changed manually, or if it should be reset:
+    
+.. indigorenderer::
+    :indigoobjecttype: code
+    :indigoloadertype: code
+
+    m = indigo.loadMoleculeFromFile('../release-notes/1.1.x/data/stereobonds.mol')
+    indigo.setOption('render-comment', 'Before')
+    indigoRenderer.renderToFile(m, 'result_1.png')
+    
+    m.markStereobonds()
+    
+    indigo.setOption('render-comment', 'After')
+    indigoRenderer.renderToFile(m, 'result_2.png')
+
 Enumeration of Submolecules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
