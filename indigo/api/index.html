@@ -551,6 +551,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#modifying-atoms-and-bonds">Modifying Atoms and Bonds</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#accessing-neighbor-atoms">Accessing Neighbor Atoms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#accessing-r-groups">Accessing R-Groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#expand-abbreviations">Expand abbreviations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#saving-molecules">Saving Molecules</a></li>
 </ul>
 </li>
@@ -1430,6 +1431,7 @@
 <li><a class="reference internal" href="#modifying-atoms-and-bonds">Modifying Atoms and Bonds</a></li>
 <li><a class="reference internal" href="#accessing-neighbor-atoms">Accessing Neighbor Atoms</a></li>
 <li><a class="reference internal" href="#accessing-r-groups">Accessing R-Groups</a></li>
+<li><a class="reference internal" href="#expand-abbreviations">Expand abbreviations</a></li>
 <li><a class="reference internal" href="#saving-molecules">Saving Molecules</a></li>
 </ul>
 </li>
@@ -1927,6 +1929,133 @@ which in turn can be accessed via the <code class="docutils literal"><span class
   <span class="k">for</span> <span class="n">frag</span> <span class="ow">in</span> <span class="n">rg</span><span class="o">.</span><span class="n">iterateRGroupFragments</span><span class="p">():</span>
      <span class="k">print</span> <span class="s">&quot;  FRAGMENT #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
      <span class="k">print</span> <span class="n">frag</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="expand-abbreviations">
+<h3>Expand abbreviations<a class="headerlink" href="#expand-abbreviations" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">expandAbbreviations</span></code> function converts input structure using the abbreviations <strong>dictionary</strong> into the expanded form. By default, Indigo uses the following structures list:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Expansion</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>CO2</td>
+<td>[*:2]OC([*:1])=O</td>
+</tr>
+<tr class="row-odd"><td>Ph</td>
+<td>*C1=CC=CC=C1</td>
+</tr>
+<tr class="row-even"><td>CO</td>
+<td>[*:1]C([*:2])=O</td>
+</tr>
+<tr class="row-odd"><td>SO2</td>
+<td>[*:1]S(=O)(=O)[*:2]</td>
+</tr>
+<tr class="row-even"><td>Me</td>
+<td>*C</td>
+</tr>
+<tr class="row-odd"><td>Et</td>
+<td>*CC</td>
+</tr>
+<tr class="row-even"><td>Boc</td>
+<td>CC(C)(C)OC([*])=O</td>
+</tr>
+<tr class="row-odd"><td>Bz</td>
+<td>[*]C(=O)C1=CC=CC=C1</td>
+</tr>
+<tr class="row-even"><td>Cbz</td>
+<td>[*]C(=O)OCC1=CC=CC=C1</td>
+</tr>
+<tr class="row-odd"><td>Ac</td>
+<td>CC(=O)[*]</td>
+</tr>
+<tr class="row-even"><td>NO2</td>
+<td>[O-][N+]([*])=O</td>
+</tr>
+<tr class="row-odd"><td>NO</td>
+<td>*N=O</td>
+</tr>
+<tr class="row-even"><td>CN</td>
+<td>[*]C#N</td>
+</tr>
+<tr class="row-odd"><td>CHO</td>
+<td>[*]C=O</td>
+</tr>
+<tr class="row-even"><td>N3</td>
+<td>[*]N=[N+]=[N-]</td>
+</tr>
+<tr class="row-odd"><td>C2H5O</td>
+<td>[*]OCC</td>
+</tr>
+<tr class="row-even"><td>C6H11</td>
+<td>[*]C1CCCCC1</td>
+</tr>
+<tr class="row-odd"><td>PMB</td>
+<td>COC1=CC=C(C[*])C=C1</td>
+</tr>
+<tr class="row-even"><td>Bn</td>
+<td>[*]CC1=CC=CC=C1</td>
+</tr>
+<tr class="row-odd"><td>Ms</td>
+<td>CS([*])(=O)=O</td>
+</tr>
+<tr class="row-even"><td>Cys</td>
+<td>SC[C&#64;H](N[*:1])C([*:2])=O</td>
+</tr>
+<tr class="row-odd"><td>Pr</td>
+<td>*CCC</td>
+</tr>
+<tr class="row-even"><td>Ts</td>
+<td>CC1=CC=C(C=C1)S([*])(=O)=O</td>
+</tr>
+<tr class="row-odd"><td>t-Bu</td>
+<td>CC(C)(C)[*]</td>
+</tr>
+<tr class="row-even"><td>Bu</td>
+<td>CCCC[*]</td>
+</tr>
+<tr class="row-odd"><td>Tf</td>
+<td>FC(F)(F)S([*])(=O)=O</td>
+</tr>
+<tr class="row-even"><td>Tos</td>
+<td>CC1=CC=C(C=C1)S([*])(=O)=O</td>
+</tr>
+<tr class="row-odd"><td>FMOC</td>
+<td>[*]C(=O)OCC1C2=CC=CC=C2C2=C1C=CC=C2</td>
+</tr>
+<tr class="row-even"><td>SO3-</td>
+<td>[O-]S([*])(=O)=O</td>
+</tr>
+<tr class="row-odd"><td>SO3H</td>
+<td>[OH]S([*])(=O)=O</td>
+</tr>
+<tr class="row-even"><td>O-</td>
+<td>*[O-]</td>
+</tr>
+<tr class="row-odd"><td>NH3+</td>
+<td>*[NH3+]</td>
+</tr>
+<tr class="row-even"><td>SiPr</td>
+<td>CC(C)S[*]</td>
+</tr>
+<tr class="row-odd"><td>iPr</td>
+<td>CC(C)[*]</td>
+</tr>
+<tr class="row-even"><td>CHOH</td>
+<td>OC([*:1])[*:2]</td>
+</tr>
+</tbody>
+</table>
+<p>Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mol</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMolecule</span><span class="p">(</span><span class="s">&quot;molfile_with_alias.mol&quot;</span><span class="p">)</span>
+<span class="n">mol</span><span class="o">.</span><span class="n">expandAbbreviations</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2454,6 +2583,43 @@ cis-trans configuration in the resulting Molfile.</li>
 <span class="k">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
 </pre></div>
 </div>
+<p><code class="docutils literal"><span class="pre">stereocenterGroup</span></code> and <code class="docutils literal"><span class="pre">setStereocenterGroup</span></code> method to get/set stereocenter group:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Load structure</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMoleculeFromFile</span><span class="p">(</span><span class="s">&#39;../release-notes/1.1.x/data/stereogroups.mol&#39;</span><span class="p">)</span>
+<span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s">&#39;render-comment&#39;</span><span class="p">,</span> <span class="s">&#39;Before&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderToFile</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&#39;result_1.png&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">iterateStereocenters</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s">&quot;atom index =&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s">&quot;group =&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">stereocenterGroup</span><span class="p">()</span>
+
+<span class="n">m</span><span class="o">.</span><span class="n">getAtom</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">changeStereocenterType</span><span class="p">(</span><span class="n">Indigo</span><span class="o">.</span><span class="n">OR</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">getAtom</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">setStereocenterGroup</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">getAtom</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">setStereocenterGroup</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s">&#39;render-comment&#39;</span><span class="p">,</span> <span class="s">&#39;Stereocenter groups and types were changed&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderToFile</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&#39;result_2.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/indigorenderer_e2b61a77b9a68f5aeeca12da245bb3baef011f881.svg"><img src="../../_images/indigorenderer_e2b61a77b9a68f5aeeca12da245bb3baef011f881.svg" /></a>
+<a class="reference internal image-reference" href="../../_images/indigorenderer_e2b61a77b9a68f5aeeca12da245bb3baef011f882.svg"><img src="../../_images/indigorenderer_e2b61a77b9a68f5aeeca12da245bb3baef011f882.svg" /></a>
+<div class="line"><br /></div>
+Output:<div class="output highlight-python"><div class="highlight"><pre>atom index = 1 group = 0
+atom index = 2 group = 1
+atom index = 5 group = 2
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">markStereobonds</span></code> method set up/down bond marks if a stereoconfiguration were changed manually, or if it should be reset:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">m</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMoleculeFromFile</span><span class="p">(</span><span class="s">&#39;../release-notes/1.1.x/data/stereobonds.mol&#39;</span><span class="p">)</span>
+<span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s">&#39;render-comment&#39;</span><span class="p">,</span> <span class="s">&#39;Before&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderToFile</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&#39;result_1.png&#39;</span><span class="p">)</span>
+
+<span class="n">m</span><span class="o">.</span><span class="n">markStereobonds</span><span class="p">()</span>
+
+<span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s">&#39;render-comment&#39;</span><span class="p">,</span> <span class="s">&#39;After&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderToFile</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&#39;result_2.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/indigorenderer_b49732821eb4b39738446ec8bd0d91f726c22c591.svg"><img src="../../_images/indigorenderer_b49732821eb4b39738446ec8bd0d91f726c22c591.svg" /></a>
+<a class="reference internal image-reference" href="../../_images/indigorenderer_b49732821eb4b39738446ec8bd0d91f726c22c592.svg"><img src="../../_images/indigorenderer_b49732821eb4b39738446ec8bd0d91f726c22c592.svg" /></a>
 </div>
 <div class="section" id="enumeration-of-submolecules">
 <h3>Enumeration of Submolecules<a class="headerlink" href="#enumeration-of-submolecules" title="Permalink to this headline">¶</a></h3>
@@ -4187,8 +4353,8 @@ Output:<div class="output highlight-python"><div class="highlight"><pre><span cl
       
     </p>
     <p>
-        &copy; Copyright 2015, EPAM Systems.<br/>
-      Last updated on Jan 26, 2016.<br/>
+        &copy; Copyright 2016, EPAM Systems.<br/>
+      Last updated on Feb 15, 2016.<br/>
     </p>
   </div>
   
