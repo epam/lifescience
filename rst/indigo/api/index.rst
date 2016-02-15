@@ -461,6 +461,98 @@ Python:
 
 
 
+Expand abbreviations
+~~~~~~~~~~~~~~~~~~~~
+
+The ``expandAbbreviations`` function converts input structure using the abbreviations **dictionary** into the expanded form. By default, Indigo uses the following structures list:
+
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 50 50
+
+   * - Name
+     - Expansion
+   * - CO2
+     - [\*:2]OC([\*:1])=O
+   * - Ph
+     - \*C1=CC=CC=C1
+   * - CO   
+     - [\*:1]C([\*:2])=O
+   * - SO2
+     - [\*:1]S(=O)(=O)[\*:2]
+   * - Me
+     - \*C
+   * - Et
+     - \*CC
+   * - Boc
+     - CC(C)(C)OC([\*])=O
+   * - Bz
+     - [\*]C(=O)C1=CC=CC=C1
+   * - Cbz
+     - [\*]C(=O)OCC1=CC=CC=C1
+   * - Ac
+     - CC(=O)[\*]
+   * - NO2
+     - [O-][N+]([\*])=O
+   * - NO
+     - \*N=O
+   * - CN
+     - [\*]C#N
+   * - CHO
+     - [\*]C=O
+   * - N3
+     - [\*]N=[N+]=[N-]
+   * - C2H5O
+     - [\*]OCC
+   * - C6H11
+     - [\*]C1CCCCC1
+   * - PMB
+     - COC1=CC=C(C[\*])C=C1
+   * - Bn
+     - [\*]CC1=CC=CC=C1
+   * - Ms
+     - CS([\*])(=O)=O
+   * - Cys
+     - SC[C@H](N[\*:1])C([\*:2])=O
+   * - Pr
+     - \*CCC
+   * - Ts
+     - CC1=CC=C(C=C1)S([\*])(=O)=O
+   * - t-Bu
+     - CC(C)(C)[\*]
+   * - Bu
+     - CCCC[\*]
+   * - Tf
+     - FC(F)(F)S([\*])(=O)=O
+   * - Tos
+     - CC1=CC=C(C=C1)S([\*])(=O)=O
+   * - FMOC
+     - [\*]C(=O)OCC1C2=CC=CC=C2C2=C1C=CC=C2
+   * - SO3-
+     - [O-]S([\*])(=O)=O
+   * - SO3H
+     - [OH]S([\*])(=O)=O
+   * - O-
+     - \*[O-]
+   * - NH3+
+     - \*[NH3+]
+   * - SiPr
+     - CC(C)S[\*]
+   * - iPr
+     - CC(C)[\*]
+   * - CHOH
+     - OC([\*:1])[\*:2]
+
+
+Python:
+
+.. code-block:: python
+
+    mol = indigo.loadMolecule("molfile_with_alias.mol")
+    mol.expandAbbreviations()
+
+
 Saving Molecules
 ~~~~~~~~~~~~~~~~
 
