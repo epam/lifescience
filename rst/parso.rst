@@ -8,11 +8,11 @@ Parso is a lightweight Java library that is designed to read SAS7BDAT
 datasets. The Parso interfaces are analogous to those that belong to
 libraries designed to read table-storing files, for example, CSVReader
 library. Despite its small size, the Parso library is the only
-full-featured open-source solution to process SAS7BDAT datasets, both
-uncompressed and CHAR-compressed. It is effective in processing clinical
-and statistical data, which is often stored in SAS7BDAT format. In
-addition, the Parso library allows users to convert data into CSV
-format.
+full-featured open-source solution to process SAS7BDAT datasets
+(uncompressed, CHAR-compressed and BINARY-compressed). It is effective
+in processing clinical and statistical data, which is often stored
+in SAS7BDAT format. In addition, the Parso library allows users
+to convert data into CSV format.
 
 Why Select Parso as your SAS7BDAT File Reader?
 ----------------------------------------------
@@ -65,9 +65,9 @@ If you use Maven, add the following dependency into the pom.xml file:
 ::
 
         <dependency>
-            <groupId>com.ggasoftware</groupId>
+            <groupId>com.epam</groupId>
             <artifactId>parso</artifactId>
-            <version>1.2.1</version>
+            <version>2.0</version>
         </dependency>
 
 Create a variable of the SasFileReader class and indicate your
@@ -76,7 +76,7 @@ SasFileReader constructor:
 
 ::
 
-    com.ggasoftware.parso.SasFileReader sasFileReader = new SasFileReader(is);
+    com.epam.parso.SasFileReader sasFileReader = new SasFileReaderImpl(is);
 
 To get the properties of a SAS7BDAT file, use:
 
@@ -103,7 +103,7 @@ To convert the metadata of the file into CSV format, use:
 ::
 
     Writer writer = new StringWriter();
-    CSVMetadataWriter csvMetadataWriter = new CSVMetadataWriter(writer);
+    CSVMetadataWriter csvMetadataWriter = new CSVMetadataWriterImpl(writer);
     csvMetadataWriter.writeMetadata(sasFileReader.getColumns());
 
 To convert the data of the file into CSV format, use:
@@ -111,7 +111,7 @@ To convert the data of the file into CSV format, use:
 ::
 
     Writer writer = new StringWriter();
-    CSVDataWriter csvDataWriter = new CSVDataWriter(writer); 
+    CSVDataWriter csvDataWriter = new CSVDataWriterImpl(writer);
     csvDataWriter.writeColumnNames(sasFileReader.getColumns());
 
 To write all rows at once to the 'writer' variable:
