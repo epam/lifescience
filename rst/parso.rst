@@ -9,7 +9,7 @@ datasets. The Parso interfaces are analogous to those that belong to
 libraries designed to read table-storing files, for example, CSVReader
 library. Despite its small size, the Parso library is the only
 full-featured open-source solution to process SAS7BDAT datasets
-(uncompressed, CHAR-compressed and BINARY-compressed). It is effective
+(uncompressed, CHAR-compressed or BINARY-compressed). It is effective
 in processing clinical and statistical data, which is often stored
 in SAS7BDAT format. In addition, the Parso library allows users
 to convert data into CSV format.
