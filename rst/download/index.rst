@@ -10,6 +10,7 @@ Downloads
     Indigo <indigo/index>
     Indigo ELN <indigo/eln>
     imago
+    parso
 
 -  `Bingo <bingo.html>`__: Chemistry search engine for Oracle and MS SQL
    Server databases
