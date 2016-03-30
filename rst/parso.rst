@@ -62,7 +62,7 @@ How to Use
 
 If you use Maven, add the following dependency into the pom.xml file:
 
-::
+.. code-block:: xml
 
         <dependency>
             <groupId>com.epam</groupId>
@@ -74,25 +74,25 @@ Create a variable of the SasFileReader class and indicate your
 InputStream that contains the SAS7BDAT file as a parameter in the
 SasFileReader constructor:
 
-::
+.. code-block:: java
 
     com.epam.parso.SasFileReader sasFileReader = new SasFileReaderImpl(is);
 
 To get the properties of a SAS7BDAT file, use:
 
-::
+.. code-block:: java
 
     sasFileReader.getSasFileProperties();
 
 To get the description of the SAS7BDAT columns, use:
 
-::
+.. code-block:: java
 
     sasFileReader.getColumns();
 
 To get the data of the SAS7BDAT file, use:
 
-::
+.. code-block:: java
 
     sasFileReader.readAll(); //to read all rows at once
 
@@ -100,7 +100,7 @@ To get the data of the SAS7BDAT file, use:
 
 To convert the metadata of the file into CSV format, use:
 
-::
+.. code-block:: java
 
     Writer writer = new StringWriter();
     CSVMetadataWriter csvMetadataWriter = new CSVMetadataWriterImpl(writer);
@@ -108,7 +108,7 @@ To convert the metadata of the file into CSV format, use:
 
 To convert the data of the file into CSV format, use:
 
-::
+.. code-block:: java
 
     Writer writer = new StringWriter();
     CSVDataWriter csvDataWriter = new CSVDataWriterImpl(writer);
@@ -116,13 +116,13 @@ To convert the data of the file into CSV format, use:
 
 To write all rows at once to the 'writer' variable:
 
-::
+.. code-block:: java
 
     csvDataWriter.writeRowsArray(sasFileReader.getColumns(), sasFileReader.readAll());
 
 To write rows one by one to the 'writer' variable:
 
-::
+.. code-block:: java
 
     csvDataWriter.writeRow(sasFileReader.getColumns(), sasFileReader.readNext());
 
