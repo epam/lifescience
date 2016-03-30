@@ -1,6 +1,8 @@
 Parso Java library
 ==================
 
+
+
 Overview
 --------
 
@@ -15,7 +17,7 @@ in SAS7BDAT format. In addition, the Parso library allows users
 to convert data into CSV format.
 
 Why Select Parso as your SAS7BDAT File Reader?
-----------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Stability**: Successful processing in difficult cases (partially
 corrupt files, compression, etc.)
@@ -131,6 +133,14 @@ Download and Install
 
 Look at the `Downloads <download/index.html>`__ page for the
 installation package suitable for your system.
+
+Release Notes
+-------------
+
+.. toctree::
+
+    parso/changelog
+
 
 License
 -------
