@@ -19,8 +19,7 @@ Downloads
 -  `Indigo ELN <indigo/eln.html>`__: Open-Source Chemistry Electronic
    Lab Notebook
 -  `Imago OCR <imago.html>`__: Chemical optical recognition toolkit
--  `Parso <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/parso-1.2.1.jar>`__: Open-Source SAS7BDAT
-   datasets reader
+-  `Parso <parso.html>`__: Open-Source SAS7BDAT datasets reader
 
 
 Manual
