@@ -36,6 +36,9 @@ Also, our open-source chemical search engine
 `Bingo <../bingo/index.html>`__ is developed on top of the Indigo
 library.
 
+Why Select Indigo as Your Molecular SDK
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Indigo SDK does not make any restrictions for developers. Whatever your
 favorite platform is—Java, C#, or Python, not to mention plain C—you can
 easily integrate Indigo into your application. All problems you may be

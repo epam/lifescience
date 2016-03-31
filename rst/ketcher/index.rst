@@ -26,9 +26,13 @@ You can easily integrate Ketcher into your web application. The process
 of integration is very simple and
 `well-documented <developers-manual.html>`__.
 
+Note
+~~~~
+
 Ketcher is under active development. You can post us your `comments and
 suggestions <../contact.html#feedback-on-open-source-products>`__ and
 get timely replies from the developers' team.
+
 
 Features
 --------

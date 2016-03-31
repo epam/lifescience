@@ -34,7 +34,7 @@ Users can seamlessly combine chemical substructure, reaction, and exact
 structure searching with numeric and text SQL terms.
 
 Why Select Bingo as Your Molecular Search Cartridge?
-----------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Bingo has all the necessary features required by modern cheminformatics
@@ -56,6 +56,8 @@ re-allocations. Communication with the underlying database, especially
 LOB handling, is optimized as well. During substructure searches,
 molecules and reactions are stored in shared memory to speed up the
 access.
+
+
 
 Features
 --------
