@@ -5,7 +5,7 @@ Indigo ELN: The Open-Source Chemistry Electronic Lab Notebook
     :hidden:
     :includehidden:
 
-    changelog
+    Release Notes <changelog>
 
 
 **Professional. Proven. Free.**
@@ -37,8 +37,11 @@ Indigo ELN combines the best of both worlds: an application developed
 and refined at Pfizer and tested by thousands of chemists there, and an
 open-source application that is available at no cost.
 
-Why Select Indigo ELN as Your Chemistry ELN?
---------------------------------------------
+Indigo ELN
+----------
+
+**Why Select Indigo ELN as Your Chemistry ELN?**
+
 
 Cost benefits
 ~~~~~~~~~~~~~
