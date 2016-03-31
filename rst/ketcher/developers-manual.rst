@@ -1,11 +1,8 @@
 Developer's Manual
 ==================
 
-Editor Mode
------------
-
 Installation
-~~~~~~~~~~~~
+------------
 
 The installation package contains all required sources.
 
@@ -21,19 +18,19 @@ The installation package contains all required sources.
 
        <iframe id="ifKetcher" src="ketcher/ketcher.html" width="800" height="600"></iframe>
 
-Ketcher Object
-~~~~~~~~~~~~~~
+Access Ketcher
+--------------
 
 To access Ketcher from JavaScript, use the following code to obtain the
 object reference:
 
-::
+.. code-block:: javascript
 
     var ketcher = ketcherWindow.ketcher;
 
 where ``ketcherWindow`` is a separate Ketcher window or
 
-::
+.. code-block:: javascript
 
     var ketcherFrame = document.getElementById('ifKetcher');
     var ketcher = null;
@@ -45,36 +42,34 @@ where ``ketcherWindow`` is a separate Ketcher window or
 
 where ``ifKetcher`` is a Ketcher IFrame.
 
-ketcher.setMolecule()
-^^^^^^^^^^^^^^^^^^^^^
+
+- **setMolecule()**
+
 
 This method updates the current structure in the editor. Pass it a
 SMILES string or a Molfile/Rxnfile:
 
-::
+.. code-block:: javascript
 
     ketcher.setMolecule('c1ccccc1');
 
 **Note:** SMILES import is not available in the standalone mode.
 
-ketcher.getSmiles()
-^^^^^^^^^^^^^^^^^^^
+- **getSmiles()**
 
-Export current structure as a SMILES string.
+Exports current structure as a SMILES string.
 
-ketcher.getMolfile()
-^^^^^^^^^^^^^^^^^^^^
+- **getMolfile()**
 
-Export current structure as a Molfile/Rxnfile string.
+Exports current structure as a Molfile/Rxnfile string.
 
-ketcher.addFragment()
-^^^^^^^^^^^^^^^^^^^^^
+- **addFragment()**
 
 This method switches Ketcher to the fragment insertion mode where a user
 can specify where to the provided fragment. Pass it a SMILES string or a
 Molfile/Rxnfile:
 
-::
+.. code-block:: javascript
 
     ketcher.addFragment('c1ccccc1');
 
@@ -84,7 +79,7 @@ Ketcher interaction example
 ---------------------------
 
 You can look at the source a web page with embedded Ketcher
-`here <TODO:ketcher-demo>`__ where the web page interacts with a Ketcher
+`here <demo.html>`__ where the web page interacts with a Ketcher
 object using this API.
 
 Ketcher Server
