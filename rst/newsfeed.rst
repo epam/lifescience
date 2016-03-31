@@ -7,6 +7,31 @@ News
     newsfeed
     release-notes/index
 
+
+Parso 2.0
+---------
+
+*28 March 2016*
+
+New version of Open-Source SAS7BDAT datasets reader was released.
+
+* |parso_2_0_notes|
+
+* |parso_2_0_downloads|
+
+
+
+.. |parso_2_0_notes| raw:: html
+
+   <a href="parso/changelog.html" target="_blank">Release Notes</a>
+
+.. |parso_2_0_downloads| raw:: html
+
+   <a href="download/parso.html" target="_blank">Downloads</a>
+
+
+
+
 Indigo Nodes 2.0 for KNIME 3
 ----------------------------
 
