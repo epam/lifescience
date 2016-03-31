@@ -27,6 +27,9 @@ The core part of Imago is written from scratch in modern C++. It uses
 the best known algorithms for optical recognition. That guarantees
 Imago's outstanding portability and performance.
 
+Note
+~~~~
+
 Imago OCR project is under active development. You can post us your
 `comments and suggestions <#feedback>`__ and get timely replies from the
 developers' team.
@@ -93,7 +96,7 @@ provided, and a command-line utility
 `imago\_console <imago_console.html>`__ is provided as well.
 
 List of Dependencies
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 The dependencies are included into the distribution packages, and so you
 do not need to download any of them separately to run the programs or to
