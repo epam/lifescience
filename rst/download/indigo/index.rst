@@ -3,8 +3,6 @@ Download Indigo Toolkit
 =======================
 
 
-
-
 Stable
 ======
 
