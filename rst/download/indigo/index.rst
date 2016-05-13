@@ -2,18 +2,18 @@
 Download Indigo Toolkit
 =======================
 
-
+------
 Stable
-======
+------
 
 Indigo 1.2.3
-------------
+============
 
 Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.3.html>`__
 
 
-Language Bindings
-~~~~~~~~~~~~~~~~~
+**Language Bindings**
+---------------------
 
 .. list-table:: 
    :header-rows: 1
@@ -47,14 +47,52 @@ Language Bindings
      - \-
 
 
+**Source code**
+---------------
+
+`Source code zip <https://github.com/epam/Indigo/archive/indigo-1.2.3.zip>`__
+
+`Repository on GitHub <https://github.com/epam/Indigo>`__
+
+
+**Maven Central Repository**
+----------------------------
+
+All the Indigo Java packages are uploaded to `The Central Repository <http://search.maven.org/#search|ga|1|g%3A%22com.epam.indigo%22>`_.
+
+======================   ===============
+GroupId                  ArtifactId
+======================   ===============
+com.epam.indigo          indigo
+com.epam.indigo          indigo-inchi
+com.epam.indigo          indigo-renderer
+com.epam.indigo          bingo-nosql
+======================   ===============
+
+Just add a dependency to your Maven project to download Indigo Java API automatically:
+
+
+.. code-block:: xml
+
+    <dependencies>
+    ...
+    <dependency>
+      <groupId>com.epam.indigo</groupId>
+        <artifactId>indigo</artifactId>
+      <version>1.2.3.r0</version>
+    </dependency>
+    ...
+    </dependencies>
+
+
 
 Indigo 1.2.1
-------------
+============
 
 Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.1.html>`__
 
-Language Bindings
-~~~~~~~~~~~~~~~~~
+**Language Bindings**
+---------------------
 
 .. list-table:: 
    :header-rows: 1
@@ -87,8 +125,8 @@ Language Bindings
      - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/indigo-libs-1.2.1-mac-shared.zip>`__
      - \-
 
-Utilities
-~~~~~~~~~
+**Utilities**
+-------------
  
 .. list-table:: 
    :header-rows: 1
@@ -121,23 +159,26 @@ Utilities
      - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.1/legio-1.2.1-universal.zip>`__
 
 
-Source code
-~~~~~~~~~~~
+**Source code**
+---------------
 
 `Source code <https://github.com/epam/Indigo/archive/indigo-1.2.1.zip>`__
 
 `Repository on GitHub <https://github.com/epam/Indigo>`__
 
+
+--------------
 Nightly Builds
-==============
+--------------
 
 .. toctree::
     :includehidden:
 
     dev
 
+-----------------
 Previous Versions
-=================
+-----------------
 
 
 .. toctree::
