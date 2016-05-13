@@ -8,6 +8,7 @@ Contents:
     :maxdepth: 2
 
     knime/indigo_knime_2_nodes
+    1.2.x/indigo-1.2.3
     1.2.x/indigo-1.2.1
     1.2.x/indigo-1.2.2b
     1.1.x/indigo-1.1.12

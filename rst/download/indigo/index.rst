@@ -2,13 +2,17 @@
 Download Indigo Toolkit
 =======================
 
-Beta
-====
 
-Indigo 1.2.2beta
-----------------
 
-Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.2b.html>`__
+
+Stable
+======
+
+Indigo 1.2.3
+------------
+
+Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.3.html>`__
+
 
 Language Bindings
 ~~~~~~~~~~~~~~~~~
@@ -24,39 +28,30 @@ Language Bindings
      - |image2| Mac OS
      - Universal
    * - |p-icon| Python 
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-python-1.2.2beta-r37-linux.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-python-1.2.2beta-r37-win.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-python-1.2.2beta-r37-mac.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-python-1.2.2beta-r37-universal.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-python-1.2.3.r0-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-python-1.2.3.r0-win.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-python-1.2.3.r0-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-python-1.2.3.r0-universal.zip>`__
    * - |j-icon| Java 
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-java-1.2.2beta-r37-linux.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-java-1.2.2beta-r37-win.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-java-1.2.2beta-r37-mac.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-java-1.2.2beta-r37-universal.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-java-1.2.3.r0-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-java-1.2.3.r0-win.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-java-1.2.3.r0-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-java-1.2.3.r0-universal.zip>`__
    * - |c-icon| .NET 
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-dotnet-1.2.2beta-r37-linux.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-dotnet-1.2.2beta-r37-win.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-dotnet-1.2.2beta-r37-mac.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-dotnet-1.2.2beta-r37-universal.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-dotnet-1.2.3.r0-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-dotnet-1.2.3.r0-win.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-dotnet-1.2.3.r0-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-dotnet-1.2.3.r0-universal.zip>`__
    * - |n-icon| C Shared Libraries 
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-libs-1.2.2beta-r37-linux-shared.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-libs-1.2.2beta-r37-win-shared.zip>`__
-     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.2beta-r37/indigo-libs-1.2.2beta-r37-mac-shared.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-libs-1.2.3.r0-linux-shared.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-libs-1.2.3.r0-win-shared.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-libs-1.2.3.r0-mac-shared.zip>`__
      - \-
 
-Source code
-~~~~~~~~~~~
 
-`Source code zip <https://github.com/epam/Indigo/archive/indigo-1.2.2beta-r37.zip>`__
-
-`Repository on GitHub <https://github.com/epam/Indigo>`__
-
-
-Stable
-======
 
 Indigo 1.2.1
--------------
+------------
 
 Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.1.html>`__
 

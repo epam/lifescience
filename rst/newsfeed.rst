@@ -8,6 +8,28 @@ News
     release-notes/index
 
 
+Indigo 1.2.3 released
+-------------------------
+
+*13 May 2016*
+
+New Indigo version was released.
+
+* |indigo_1_2_3_notes|
+
+* |indigo_1_2_3_downloads|
+
+The version includes small bugfixes and improvements
+
+.. |indigo_1_2_3_notes| raw:: html
+
+   <a href="indigo/release-notes/1.2.x/indigo-1.2.3.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_2_3_downloads| raw:: html
+
+   <a href="download/indigo/index.html#indigo-1-2-3" target="_blank">Downloads</a>
+
+
 Parso 2.0
 ---------
 
@@ -72,7 +94,7 @@ Please note, in this **beta** version Indigo introduces very "new" and "novel" f
 
 .. |indigo_1_2_2b_downloads| raw:: html
 
-   <a href="download/indigo/index.html#indigo-1-2-2beta" target="_blank">Downloads</a>
+   <a href="download/indigo/previous.html#indigo-1-2-2beta" target="_blank">Downloads</a>
 
 Indigo is available on GitHub
 -----------------------------
