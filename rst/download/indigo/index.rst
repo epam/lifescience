@@ -119,6 +119,14 @@ Just add a dependency to your Maven project to download Indigo Java API automati
     </dependencies>
 
 
+**NuGet Repository**
+--------------------
+
+Indigo .NET packages now available at `Nuget <https://www.nuget.org/packages/Indigo.Net/>`__
+
+Just add ``Indigo.Net`` as a dependency into the project.
+
+**Note**: if you upgrade your existing Indigo.Net package please note that the package path was changed to ``com.epam.indigo.*``
 
 Indigo 1.2.1
 ============

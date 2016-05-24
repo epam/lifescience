@@ -11,7 +11,7 @@ News
 Indigo 1.2.3 released
 -------------------------
 
-*13 May 2016*
+*23 May 2016*
 
 New Indigo version was released.
 
