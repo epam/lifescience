@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Indigo GitHub &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>Indigo 1.2.3 &mdash; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -39,8 +39,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../../../index.html" />
     <link rel="up" title="Release Notes" href="../index.html" />
-    <link rel="next" title="Examples" href="../../examples/index.html" />
-    <link rel="prev" title="Previous Versions (before 1.1.11)" href="../1.1.x/indigo-1.1.x.html" />
+    <link rel="next" title="Indigo 1.2.1" href="indigo-1.2.1.html" />
+    <link rel="prev" title="Indigo KNIME Nodes 2.0" href="../knime/indigo_knime_2_nodes.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -1045,8 +1045,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="indigo-1.2.3.html">Indigo 1.2.3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="indigo-1.2.3.html#summary">Summary</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Indigo 1.2.3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="indigo-1.2.1.html">Indigo 1.2.1</a><ul>
@@ -1132,9 +1132,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../1.1.x/indigo-1.1.x.html#indigo-1-1-alpha3">Indigo 1.1-alpha3</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Indigo GitHub</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#source-code">Source Code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo-github.html">Indigo GitHub</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="indigo-github.html#source-code">Source Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="indigo-github.html#documentation">Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -1432,9 +1432,8 @@
 </ul>
 <ul class="nav bs-docs-sidenav localtoc">
     <ul>
-<li><a class="reference internal" href="#">Indigo GitHub</a><ul>
-<li><a class="reference internal" href="#source-code">Source Code</a></li>
-<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#">Indigo 1.2.3</a><ul>
+<li><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -1443,30 +1442,28 @@
 
         </div>
       </div>
-          <div class="span9 indigo/release-notes/1.2.x/indigo-github">
+          <div class="span9 indigo/release-notes/1.2.x/indigo-1.2.3">
             
-  <div class="section" id="indigo-github">
-<h1>Indigo GitHub<a class="headerlink" href="#indigo-github" title="Permalink to this headline">¶</a></h1>
-<p><em>5 Nov 2015</em></p>
-<div class="section" id="source-code">
-<h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
-<p>We have moved our development into GitHub.</p>
-<p><a class="reference external" href="https://github.com/epam/Indigo">https://github.com/epam/Indigo</a></p>
-<p>It already contains lot of changes since last release. Please be informed the following items:</p>
+  <div class="section" id="indigo-1-2-3">
+<h1>Indigo 1.2.3<a class="headerlink" href="#indigo-1-2-3" title="Permalink to this headline">¶</a></h1>
+<p><em>23 May 2016</em></p>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Except <a class="reference external" href="indigo-1.2.2b.html">1.2.2beta</a> changes, release includes the following changes</p>
+<p><strong>New features and improvements</strong>:</p>
 <ul class="simple">
-<li>Now all the development is done within GitHub.</li>
-<li>There is a mechanism called <code class="docutils literal"><span class="pre">Issues</span></code> available on GitHub which is used by Indigo. Right now it has not many tickets, but soon we will move our big <code class="docutils literal"><span class="pre">TODO</span></code> list into this section. One can easily create an issue and see a progress</li>
-<li>All the packages (Java, C#, Utilities) now under <strong>EPAM</strong> brand (&#8220;com.epam.*&#8221; package)</li>
-<li>Code was cleaned up. License was updated.</li>
+<li>Corrections and improvements CIP rules</li>
+<li>CML loader issues were <a class="reference external" href="https://github.com/epam/indigo/issues/27">fixed</a></li>
+<li>RGroups support was added for CML format</li>
+<li>Python bindings for CYGWIN were fixed</li>
+<li>Layout for small rings was <a class="reference external" href="https://github.com/epam/Indigo/issues/45">fixed</a></li>
+<li>Support for valence, radicals and charges was <a class="reference external" href="https://github.com/epam/Indigo/issues/39">added</a> into CML</li>
+<li>CML saver issues were fixed with <a class="reference external" href="https://github.com/epam/Indigo/issues/47">reactions</a> and <a class="reference external" href="https://github.com/epam/Indigo/issues/48">R sites</a></li>
 </ul>
-</div>
-<div class="section" id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
-<p>The general documentation is available under the EPAM Open Source portal</p>
-<p><a class="reference external" href="http://lifescience.opensource.epam.com">http://lifescience.opensource.epam.com</a></p>
-<p>And this documentation  is also available on GitHub (build on sphinx):</p>
-<p><a class="reference external" href="https://github.com/epam/lifescience">https://github.com/epam/lifescience</a></p>
-<p>If you notice any bug in documentation you can create an <code class="docutils literal"><span class="pre">Issue</span></code> or even a <code class="docutils literal"><span class="pre">Pull</span> <span class="pre">Request</span></code>.</p>
+<p><strong>NuGet Repository</strong></p>
+<p>Indigo .NET packages now available at <a class="reference external" href="https://www.nuget.org/packages/Indigo.Net/">Nuget</a></p>
+<p>Just add <code class="docutils literal"><span class="pre">Indigo.Net</span></code> as a dependency into the project.</p>
+<p><strong>Note</strong>: if you upgrade your existing Indigo.Net package please note that the package path was changed to <code class="docutils literal"><span class="pre">com.epam.indigo.*</span></code></p>
 </div>
 </div>
 
