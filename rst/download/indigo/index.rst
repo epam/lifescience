@@ -46,6 +46,40 @@ Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.3.html>`_
      - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-libs-1.2.3.r0-mac-shared.zip>`__
      - \-
 
+**Utilities**
+-------------
+ 
+.. list-table:: 
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 28 24 24 24 24
+
+   * - 
+     - |image0| Linux
+     - |image1| Windows
+     - |image2| Mac OS
+     - Universal
+   * - `Cano <../../indigo/indigo-cano.html>`__, `Deco <../../indigo/indigo-deco.html>`__ and `Depict <../../indigo/indigo-depict.html>`__
+     - `32bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-utils-1.2.3.r6-linux32.zip>`__,
+       `64bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-utils-1.2.3.r6-linux64.zip>`__
+     - `32bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-utils-1.2.3.r6-win32.zip>`__,
+       `64bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-utils-1.2.3.r6-win64.zip>`__
+     - `mac10.7.zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/indigo-utils-1.2.3.r6-mac10.7.zip>`__
+     - \-
+   * - `ChemDiff <../../indigo/chemdiff.html>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/chemdiff-1.2.3.r6-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/chemdiff-1.2.3.r6-win.zip>`__,
+       `installer <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/chemdiff-1.2.3.r6-win-installer.exe>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/chemdiff-1.2.3.r6-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/chemdiff-1.2.3.r6-universal.zip>`__
+   * - `Legio <../../indigo/legio.html>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/legio-1.2.3.r6-linux.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/legio-1.2.3.r6-win.zip>`__,
+       `installer <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/legio-1.2.3.r6-win-installer.exe>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/legio-1.2.3.r6-mac.zip>`__
+     - `zip <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.2.3/legio-1.2.3.r6-universal.zip>`__
+
+
 
 **Source code**
 ---------------
