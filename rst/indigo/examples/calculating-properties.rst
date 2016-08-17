@@ -18,6 +18,8 @@ The following code prints canonical smiles string for a given structure:
     :indigoobjecttype: code
     :indigoloadertype: code
     
+    # indigo = Indigo()
+    #
     # Load structure
     mol = indigo.loadMolecule('CC1=C(Cl)C=CC2=C1NS(=O)S2')
 
@@ -31,6 +33,8 @@ The example below prints canonical smiles string for a given reaction:
     :indigoobjecttype: code
     :indigoloadertype: code
 
+    # indigo = Indigo()
+    #
     # Load structure
     rxn = indigo.loadReaction('[CH2:1]=[CH:2][CH:3]=[CH:4][CH2:5][H:6]>>[H:6][CH2:1][CH:2]=[CH:3][CH:4]=[CH2:5]')
 
@@ -50,6 +54,9 @@ The following code prints the list of tautomers for a given molecule:
     :indigoobjecttype: code
     :indigoloadertype: code
 
+    # indigo = Indigo()
+    # indigoRenderer = IndigoRenderer(indigo)
+    # 
     # Load structure
     molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
 
@@ -80,6 +87,9 @@ If the molecule is aromatized before enumeration, the list of tautomers will be 
     :indigoobjecttype: code
     :indigoloadertype: code
 
+    # indigo = Indigo()
+    # indigoRenderer = IndigoRenderer(indigo)
+    # 
     # Load structure
     molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
     molecule.aromatize()
@@ -113,6 +123,9 @@ The following code uses reaction SMARTS algorithm (may give different set of tau
     :indigoobjecttype: code
     :indigoloadertype: code
 
+    # indigo = Indigo()
+    # indigoRenderer = IndigoRenderer(indigo)
+    # 
     # Load structure
     molecule = indigo.loadMolecule('OC1C2C=NNC=2N=CN=1')
     molecule.aromatize()
@@ -150,6 +163,8 @@ The following code prints results of SGroups search requests with different crit
     :indigoloadertype: code
     :downloads: data/all_features_mol.mol
     
+    # indigo = Indigo()
+    # 
     # Load structure
     indigo.setOption("molfile-saving-mode", "3000")
     file1 = "data/all_features_mol.mol"
@@ -229,6 +244,9 @@ mol file generation.
     :indigoloadertype: code
     :downloads: data/RS-example.mol
     
+    # indigo = Indigo()
+    # indigoRenderer = IndigoRenderer(indigo)
+    # 
     # Load structure
     file = "data/RS-example.mol"
     mol1 = indigo.loadMoleculeFromFile(file)
@@ -257,6 +275,9 @@ mol file generation.
     :indigoloadertype: code
     :downloads: data/ZE-example.mol
     
+    # indigo = Indigo()
+    # indigoRenderer = IndigoRenderer(indigo)
+    # 
     # Load structure
     file = "data/ZE-example.mol"
     mol1 = indigo.loadMoleculeFromFile(file)
@@ -284,6 +305,9 @@ mol file generation.
     :indigoloadertype: code
     :downloads: data/Z-example.mol
     
+    # indigo = Indigo()
+    # indigoRenderer = IndigoRenderer(indigo)
+    # 
     # Load structure
     file = "data/Z-example.mol"
     mol1 = indigo.loadMoleculeFromFile(file)
@@ -316,6 +340,9 @@ The first case is the molecule with isotope inclusion.
     :indigoloadertype: code
     :downloads: data/C14_R_iso.mol,data/C14_R_iso_2.mol
     
+    # indigo = Indigo()
+    # indigoRenderer = IndigoRenderer(indigo)
+    # 
     # Load structure
     file1 = "data/C14_R_iso.mol"
     file2 = "data/C14_R_iso_2.mol"
@@ -347,6 +374,9 @@ The second case is the molecule with cyclic ligands and heterocycles.
     :indigoloadertype: code
     :downloads: data/P-92_2_1_3_ex1.mol,data/P-92_2_1_3_ex2.mol
     
+    # indigo = Indigo()
+    # indigoRenderer = IndigoRenderer(indigo)
+    # 
     # Load structure
     file1 = "data/P-92_2_1_3_ex1.mol"
     file2 = "data/P-92_2_1_3_ex2.mol"
