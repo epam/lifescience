@@ -2,14 +2,14 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
-PAPER         ?=
-BUILDDIR      ?= build
+BUILDDIR ?= build
+ENVDIR ?= env
+SPHINXOPTS ?=
 
-# User-friendly check for sphinx-build
-ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
+ifeq ($(wildcard $(ENVDIR)/bin),)
+	SPHINXBUILD ?= sphinx-build
+else
+	SPHINXBUILD ?= $(ENVDIR)/bin/sphinx-build
 endif
 
 # Internal variables.
@@ -78,6 +78,9 @@ help:
 
 clean:
 	rm -rf $(BUILDDIR)/*
+env:
+	virtualenv --system-site-packages $(ENVDIR)
+	$(ENVDIR)/bin/pip install -r requirements.txt
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
@@ -206,13 +209,13 @@ pseudoxml:
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
 # Make a rule to build the PDFs
-images-pdf: $(PDFs) 
+images-pdf: $(PDFs)
 
 # Make a rule to build the PNGs
-#images-png: $(PNGs) 
+#images-png: $(PNGs)
 
 # Make a rule to build the images
-images: 
+images:
 	images-pdf #images-png
 
 clean-pdf:
@@ -221,7 +224,5 @@ clean-pdf:
 #clean-png:
 #	-rm $(PNGs)
 
-clean-images: 
+clean-images:
 	clean-pdf #clean-png
-
-
