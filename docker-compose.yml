@@ -1,0 +1,32 @@
+version: "2"
+networks:
+  indigo_docs:
+    driver: bridge
+
+services:
+  indigo:
+    build:
+      context: ./
+    volumes:
+      - ./:/opt
+    networks:
+      - indigo_docs
+    # command:
+    #   bash -c "useradd -m -s /bin/bash $USER || true && 
+    #      /bin/su -s /bin/bash -c 'cd /opt/Indigo && 
+    #                               python build_scripts/indigo-release-libs.py --preset=linux64 && 
+    #                               python build_scripts/indigo-make-by-libs.py --type=python &&
+    #                               unzip dist/indigo-python-* &&
+    #                               mv indigo-python-*/ ../indigo-python/' $USER"
+  portal:
+    build:
+      context: ./
+    volumes:
+      - ./:/opt
+    networks:
+      - indigo_docs
+    command:
+      bash -c "useradd -m -s /bin/bash $USER || true && 
+                cp -R /srv/indigo-python/ /opt/ && 
+                chown -R $USER:$USER /opt/indigo-python/ && 
+                /bin/su -s /bin/bash -c 'make html' $USER"
