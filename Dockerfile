@@ -32,11 +32,5 @@ RUN cd /srv && \
 WORKDIR /opt
 
 
-#RUN DEBIAN_FRONTEND=noninteractive apt-get autoremove -y && \
-#  rm -rf \
-#    /var/lib/apt/lists/* \
-#    /tmp/* \
-#    /var/tmp/* \
-#    mkdir /code
 
 

@@ -6,6 +6,10 @@ The repository contains sources for the EPAM Lifeciences Open Source portal.
 
 http://lifescience.opensource.epam.com
 
+## Build using Docker
+
+`docker-compose up'
+
 ## Build instructions
 
 To compile site install [Sphinx](http://sphinx-doc.org/) v1.3.1
