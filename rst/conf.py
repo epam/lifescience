@@ -20,10 +20,7 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 sys.path.append(os.path.abspath(os.curdir))
-sys.path.append('Indigo/api/python')
-sys.path.append('Indigo/api/plugins/renderer/python')
-sys.path.append('Indigo/api/plugins/inchi/python')
-sys.path.append('Indigo/api/plugins/bingo/python')
+sys.path.append('indigo-python')
 
 
 # -- General configuration ------------------------------------------------
