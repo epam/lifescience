@@ -11,8 +11,8 @@ Summary
 
 **New features and improvements**:
 
-* Lucene/SOLR cartdridge was added
-* Name to structure prototype method was added
+* Lucene/SOLR cartdridge was added. See `documentation <https://github.com/epam/Indigo/blob/master/bingo/lucene/README.md>`__
+* Name to structure prototype method was added. See :ref:`details <indigo-1.2.2b-layout>`
 * Updated set of rules for CIP descriptors calculations
 * Updated functionality for standardize method (option ``standardize-fix-direction-wedge-bonds`` ) for redirection stereo bonds out of cycle if it is possible. `fixed <https://github.com/epam/indigo/issues/49>`__ 
 * Rendering sgroups `fixed <https://github.com/epam/indigo/issues/8>`__ 
@@ -35,9 +35,27 @@ Summary
 * Added correct alias saving into V2000 molfile
 * CTAB -> SCSR transformation algorithm was modified
 * add reset settings method was `added <https://github.com/epam/indigo/issues/66>`__  for Indigo  
-* New methods checkValence, checkQuery were added
+* New methods checkValence, checkQuery were added. 
 
 **Maven  Repository**
+
+
+All the Indigo Java packages are uploaded to `The Central Repository <http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.epam.indigo%22%20AND%20v%3A%221.3.0beta.r16%22>`_.
+
+
+Just add a dependency to your Maven project to download Indigo Java API automatically:
+
+.. code-block:: xml
+
+    <dependencies>
+    	...
+        <dependency>
+            <groupId>com.epam.indigo</groupId>
+            <artifactId>indigo</artifactId>
+            <version>1.3.0beta.r16</version>
+        </dependency>
+        ...
+    </dependencies>
 
 
 **NuGet Repository**
@@ -46,5 +64,27 @@ Summary
 Indigo .NET packages now available at `Nuget <https://www.nuget.org/packages/Indigo.Net/>`__
 
 Just add ``Indigo.Net`` as a dependency into the project.
+
+*******
+Details
+*******
+
+.. _indigo-1.3.0b-name-to-structure:
+
+=================
+Name to Structure
+=================
+
+Currently, the following grammar elements are supported:
+
+* Alkanes (-enes, -ynes) and its derivatives
+* Locants expansion
+* Cyclic alkanes (-enes, -ynes) and its derivatives
+* Skeletal 'a' substitution
+* Basic elements (up to number 100)
+* Dictionary of trivial names (~150 names)
+* Relaxed vs. strict IUPAC grammar (penta-1,3-diene vs. 1,3-pentadiene)
+
+See some examples 
 
 
