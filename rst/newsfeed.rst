@@ -11,7 +11,7 @@ News
 Indigo 1.3.0 beta released
 --------------------------
 
-*23 Dec 2016*
+*31 Dec 2016*
 
 New Indigo version was released.
 
@@ -19,7 +19,6 @@ New Indigo version was released.
 
 * |indigo_1_3_0b_downloads|
 
-The version includes small bugfixes and improvements
 
 .. |indigo_1_3_0b_notes| raw:: html
 
@@ -27,7 +26,7 @@ The version includes small bugfixes and improvements
 
 .. |indigo_1_3_0b_downloads| raw:: html
 
-   <a href="download/indigo/index.html#indigo-1-3-0b" target="_blank">Downloads</a>
+   <a href="download/indigo/index.html#indigo-1-3-0-beta" target="_blank">Downloads</a>
 
 
 Indigo 1.2.3 released
