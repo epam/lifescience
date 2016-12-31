@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>indigo-depict &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>indigo-depict &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Indigo Utilities" href="utilities.html" />
     <link rel="next" title="indigo-cano" href="indigo-cano.html" />
@@ -736,7 +738,7 @@
 <li class="toctree-l4"><a class="reference internal" href="legio.html#commercial-availability">Commercial Availability</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">indigo-depict</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">indigo-depict</a></li>
 <li class="toctree-l3"><a class="reference internal" href="indigo-cano.html">indigo-cano</a></li>
 <li class="toctree-l3"><a class="reference internal" href="indigo-deco.html">indigo-deco</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chemdiff.html">ChemDiff</a><ul>
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1443,81 +1454,81 @@
             
   <div class="section" id="indigo-depict">
 <h1>indigo-depict<a class="headerlink" href="#indigo-depict" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python"><div class="highlight"><pre>Usage: indigo-depict infile.{mol,rxn,smi} outfile.{png,svg,pdf} [parameters]
-       indigo-depict infile.{sdf,rdf,smi} outfile_%s.{png,svg,pdf} [parameters]
-       indigo-depict infile.{sdf,rdf}.gz outfile_%s.{png,svg,pdf} [parameters]
-       indigo-depict infile.smi outfile.{mol,rxn} [parameters]
-       indigo-depict infile.smi outfile.{sdf} [parameters]
-       indigo-depict - SMILES outfile.{png,svg,pdf} [parameters]
-       indigo-depict - SMILES outfile.{mol,rxn} [parameters]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span> <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="n">infile</span><span class="o">.</span><span class="p">{</span><span class="n">mol</span><span class="p">,</span><span class="n">rxn</span><span class="p">,</span><span class="n">smi</span><span class="p">}</span> <span class="n">outfile</span><span class="o">.</span><span class="p">{</span><span class="n">png</span><span class="p">,</span><span class="n">svg</span><span class="p">,</span><span class="n">pdf</span><span class="p">}</span> <span class="p">[</span><span class="n">parameters</span><span class="p">]</span>
+       <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="n">infile</span><span class="o">.</span><span class="p">{</span><span class="n">sdf</span><span class="p">,</span><span class="n">rdf</span><span class="p">,</span><span class="n">smi</span><span class="p">}</span> <span class="n">outfile_</span><span class="o">%</span><span class="n">s</span><span class="o">.</span><span class="p">{</span><span class="n">png</span><span class="p">,</span><span class="n">svg</span><span class="p">,</span><span class="n">pdf</span><span class="p">}</span> <span class="p">[</span><span class="n">parameters</span><span class="p">]</span>
+       <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="n">infile</span><span class="o">.</span><span class="p">{</span><span class="n">sdf</span><span class="p">,</span><span class="n">rdf</span><span class="p">}</span><span class="o">.</span><span class="n">gz</span> <span class="n">outfile_</span><span class="o">%</span><span class="n">s</span><span class="o">.</span><span class="p">{</span><span class="n">png</span><span class="p">,</span><span class="n">svg</span><span class="p">,</span><span class="n">pdf</span><span class="p">}</span> <span class="p">[</span><span class="n">parameters</span><span class="p">]</span>
+       <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="n">infile</span><span class="o">.</span><span class="n">smi</span> <span class="n">outfile</span><span class="o">.</span><span class="p">{</span><span class="n">mol</span><span class="p">,</span><span class="n">rxn</span><span class="p">}</span> <span class="p">[</span><span class="n">parameters</span><span class="p">]</span>
+       <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="n">infile</span><span class="o">.</span><span class="n">smi</span> <span class="n">outfile</span><span class="o">.</span><span class="p">{</span><span class="n">sdf</span><span class="p">}</span> <span class="p">[</span><span class="n">parameters</span><span class="p">]</span>
+       <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="o">-</span> <span class="n">SMILES</span> <span class="n">outfile</span><span class="o">.</span><span class="p">{</span><span class="n">png</span><span class="p">,</span><span class="n">svg</span><span class="p">,</span><span class="n">pdf</span><span class="p">}</span> <span class="p">[</span><span class="n">parameters</span><span class="p">]</span>
+       <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="o">-</span> <span class="n">SMILES</span> <span class="n">outfile</span><span class="o">.</span><span class="p">{</span><span class="n">mol</span><span class="p">,</span><span class="n">rxn</span><span class="p">}</span> <span class="p">[</span><span class="n">parameters</span><span class="p">]</span>
 
-Parameters:
--w
-   Picture width in pixels
--h
-   Picture height in pixels
--bond
-   Average bond length in pixels (conflicts with -w and -h)
--margins
-   Horizontal and vertical margins, in pixels. No margins by default
--commentmargins
-   Horizontal and vertical margins around comment. No margins by default
--thickness
-   Set relative thickness factor. Default is 1.0
--hydro
-   Set implicit hydrogen display mode (default is terminalhetero)
--label
-   Set atom label display mode (default is normal)
--[de]arom
-   Force [de]aromatization
--stereo
-   Stereogroups display mode (default is &#39;old&#39;)
--cdbwsa
-   Center double bonds which have an adjacent stereo bond (disabled by default)
--query
-   Treat the input as a query molecule or reaction (disabled by default)
--idfield
-   SDF/RDF field to be put in place of &#39;%s&#39; in the names of saved files
-   (default is molecule/reaction number)
--comment
-   Text comment to be put above the molecule or reaction. No default value
--commentfield
-   Use specified SDF/RDF field as a comment
--commentname
-   Use molecule/reaction name as a comment
--commentsize
-   Text comment font size factor relative to bond thickness (default 6)
--commentpos
-   Text comment position (bottom by default)
--commentalign
-   Text comment alignment (center by default)
--coloring
-   Enable/disable coloring (enabled by default)
--hlthick
-   Enable highlighting with thick lines and bold characters
--hlcolor
-   Enable highlighting with color. Component values must be in range [0..255]
--bgcolor
-   Set the background color. Component values must be in range [0..255]
--basecolor
-   Set the default foreground color. Component values must be in range [0..255]
--aamcolor
-   Set the color of AAM indices. Component values must be in range [0..255]
--commentcolor
-   Set the color of the comment. Component values must be in range [0..255]
--atomnumbers
-   Show atom numbers (for debugging purposes only)
--bondnumbers
-   Show bond numbers (for debugging purposes only)
--help
-   Print this help message
+<span class="n">Parameters</span><span class="p">:</span>
+<span class="o">-</span><span class="n">w</span>
+   <span class="n">Picture</span> <span class="n">width</span> <span class="ow">in</span> <span class="n">pixels</span>
+<span class="o">-</span><span class="n">h</span>
+   <span class="n">Picture</span> <span class="n">height</span> <span class="ow">in</span> <span class="n">pixels</span>
+<span class="o">-</span><span class="n">bond</span>
+   <span class="n">Average</span> <span class="n">bond</span> <span class="n">length</span> <span class="ow">in</span> <span class="n">pixels</span> <span class="p">(</span><span class="n">conflicts</span> <span class="k">with</span> <span class="o">-</span><span class="n">w</span> <span class="ow">and</span> <span class="o">-</span><span class="n">h</span><span class="p">)</span>
+<span class="o">-</span><span class="n">margins</span>
+   <span class="n">Horizontal</span> <span class="ow">and</span> <span class="n">vertical</span> <span class="n">margins</span><span class="p">,</span> <span class="ow">in</span> <span class="n">pixels</span><span class="o">.</span> <span class="n">No</span> <span class="n">margins</span> <span class="n">by</span> <span class="n">default</span>
+<span class="o">-</span><span class="n">commentmargins</span>
+   <span class="n">Horizontal</span> <span class="ow">and</span> <span class="n">vertical</span> <span class="n">margins</span> <span class="n">around</span> <span class="n">comment</span><span class="o">.</span> <span class="n">No</span> <span class="n">margins</span> <span class="n">by</span> <span class="n">default</span>
+<span class="o">-</span><span class="n">thickness</span>
+   <span class="n">Set</span> <span class="n">relative</span> <span class="n">thickness</span> <span class="n">factor</span><span class="o">.</span> <span class="n">Default</span> <span class="ow">is</span> <span class="mf">1.0</span>
+<span class="o">-</span><span class="n">hydro</span>
+   <span class="n">Set</span> <span class="n">implicit</span> <span class="n">hydrogen</span> <span class="n">display</span> <span class="n">mode</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="n">terminalhetero</span><span class="p">)</span>
+<span class="o">-</span><span class="n">label</span>
+   <span class="n">Set</span> <span class="n">atom</span> <span class="n">label</span> <span class="n">display</span> <span class="n">mode</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="n">normal</span><span class="p">)</span>
+<span class="o">-</span><span class="p">[</span><span class="n">de</span><span class="p">]</span><span class="n">arom</span>
+   <span class="n">Force</span> <span class="p">[</span><span class="n">de</span><span class="p">]</span><span class="n">aromatization</span>
+<span class="o">-</span><span class="n">stereo</span>
+   <span class="n">Stereogroups</span> <span class="n">display</span> <span class="n">mode</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="s1">&#39;old&#39;</span><span class="p">)</span>
+<span class="o">-</span><span class="n">cdbwsa</span>
+   <span class="n">Center</span> <span class="n">double</span> <span class="n">bonds</span> <span class="n">which</span> <span class="n">have</span> <span class="n">an</span> <span class="n">adjacent</span> <span class="n">stereo</span> <span class="n">bond</span> <span class="p">(</span><span class="n">disabled</span> <span class="n">by</span> <span class="n">default</span><span class="p">)</span>
+<span class="o">-</span><span class="n">query</span>
+   <span class="n">Treat</span> <span class="n">the</span> <span class="nb">input</span> <span class="k">as</span> <span class="n">a</span> <span class="n">query</span> <span class="n">molecule</span> <span class="ow">or</span> <span class="n">reaction</span> <span class="p">(</span><span class="n">disabled</span> <span class="n">by</span> <span class="n">default</span><span class="p">)</span>
+<span class="o">-</span><span class="n">idfield</span>
+   <span class="n">SDF</span><span class="o">/</span><span class="n">RDF</span> <span class="n">field</span> <span class="n">to</span> <span class="n">be</span> <span class="n">put</span> <span class="ow">in</span> <span class="n">place</span> <span class="n">of</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">names</span> <span class="n">of</span> <span class="n">saved</span> <span class="n">files</span>
+   <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="n">molecule</span><span class="o">/</span><span class="n">reaction</span> <span class="n">number</span><span class="p">)</span>
+<span class="o">-</span><span class="n">comment</span>
+   <span class="n">Text</span> <span class="n">comment</span> <span class="n">to</span> <span class="n">be</span> <span class="n">put</span> <span class="n">above</span> <span class="n">the</span> <span class="n">molecule</span> <span class="ow">or</span> <span class="n">reaction</span><span class="o">.</span> <span class="n">No</span> <span class="n">default</span> <span class="n">value</span>
+<span class="o">-</span><span class="n">commentfield</span>
+   <span class="n">Use</span> <span class="n">specified</span> <span class="n">SDF</span><span class="o">/</span><span class="n">RDF</span> <span class="n">field</span> <span class="k">as</span> <span class="n">a</span> <span class="n">comment</span>
+<span class="o">-</span><span class="n">commentname</span>
+   <span class="n">Use</span> <span class="n">molecule</span><span class="o">/</span><span class="n">reaction</span> <span class="n">name</span> <span class="k">as</span> <span class="n">a</span> <span class="n">comment</span>
+<span class="o">-</span><span class="n">commentsize</span>
+   <span class="n">Text</span> <span class="n">comment</span> <span class="n">font</span> <span class="n">size</span> <span class="n">factor</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">bond</span> <span class="n">thickness</span> <span class="p">(</span><span class="n">default</span> <span class="mi">6</span><span class="p">)</span>
+<span class="o">-</span><span class="n">commentpos</span>
+   <span class="n">Text</span> <span class="n">comment</span> <span class="n">position</span> <span class="p">(</span><span class="n">bottom</span> <span class="n">by</span> <span class="n">default</span><span class="p">)</span>
+<span class="o">-</span><span class="n">commentalign</span>
+   <span class="n">Text</span> <span class="n">comment</span> <span class="n">alignment</span> <span class="p">(</span><span class="n">center</span> <span class="n">by</span> <span class="n">default</span><span class="p">)</span>
+<span class="o">-</span><span class="n">coloring</span>
+   <span class="n">Enable</span><span class="o">/</span><span class="n">disable</span> <span class="n">coloring</span> <span class="p">(</span><span class="n">enabled</span> <span class="n">by</span> <span class="n">default</span><span class="p">)</span>
+<span class="o">-</span><span class="n">hlthick</span>
+   <span class="n">Enable</span> <span class="n">highlighting</span> <span class="k">with</span> <span class="n">thick</span> <span class="n">lines</span> <span class="ow">and</span> <span class="n">bold</span> <span class="n">characters</span>
+<span class="o">-</span><span class="n">hlcolor</span>
+   <span class="n">Enable</span> <span class="n">highlighting</span> <span class="k">with</span> <span class="n">color</span><span class="o">.</span> <span class="n">Component</span> <span class="n">values</span> <span class="n">must</span> <span class="n">be</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">[</span><span class="mf">0.</span><span class="o">.</span><span class="mi">255</span><span class="p">]</span>
+<span class="o">-</span><span class="n">bgcolor</span>
+   <span class="n">Set</span> <span class="n">the</span> <span class="n">background</span> <span class="n">color</span><span class="o">.</span> <span class="n">Component</span> <span class="n">values</span> <span class="n">must</span> <span class="n">be</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">[</span><span class="mf">0.</span><span class="o">.</span><span class="mi">255</span><span class="p">]</span>
+<span class="o">-</span><span class="n">basecolor</span>
+   <span class="n">Set</span> <span class="n">the</span> <span class="n">default</span> <span class="n">foreground</span> <span class="n">color</span><span class="o">.</span> <span class="n">Component</span> <span class="n">values</span> <span class="n">must</span> <span class="n">be</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">[</span><span class="mf">0.</span><span class="o">.</span><span class="mi">255</span><span class="p">]</span>
+<span class="o">-</span><span class="n">aamcolor</span>
+   <span class="n">Set</span> <span class="n">the</span> <span class="n">color</span> <span class="n">of</span> <span class="n">AAM</span> <span class="n">indices</span><span class="o">.</span> <span class="n">Component</span> <span class="n">values</span> <span class="n">must</span> <span class="n">be</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">[</span><span class="mf">0.</span><span class="o">.</span><span class="mi">255</span><span class="p">]</span>
+<span class="o">-</span><span class="n">commentcolor</span>
+   <span class="n">Set</span> <span class="n">the</span> <span class="n">color</span> <span class="n">of</span> <span class="n">the</span> <span class="n">comment</span><span class="o">.</span> <span class="n">Component</span> <span class="n">values</span> <span class="n">must</span> <span class="n">be</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">[</span><span class="mf">0.</span><span class="o">.</span><span class="mi">255</span><span class="p">]</span>
+<span class="o">-</span><span class="n">atomnumbers</span>
+   <span class="n">Show</span> <span class="n">atom</span> <span class="n">numbers</span> <span class="p">(</span><span class="k">for</span> <span class="n">debugging</span> <span class="n">purposes</span> <span class="n">only</span><span class="p">)</span>
+<span class="o">-</span><span class="n">bondnumbers</span>
+   <span class="n">Show</span> <span class="n">bond</span> <span class="n">numbers</span> <span class="p">(</span><span class="k">for</span> <span class="n">debugging</span> <span class="n">purposes</span> <span class="n">only</span><span class="p">)</span>
+<span class="o">-</span><span class="n">help</span>
+   <span class="n">Print</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span>
 
-Examples:
-   indigo-depict infile.mol outfile.png -coloring off -arom
-   indigo-depict database.sdf molecule_%s.png -idfield cdbregno -thickness 1.1
-   indigo-depict database.smi database.sdf
-   indigo-depict - &quot;CC.[O-][*-]([O-])=O&quot; query.png -query
-   indigo-depict - &quot;OCO&gt;&gt;CC(C)N&quot; reaction.rxn
+<span class="n">Examples</span><span class="p">:</span>
+   <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="n">infile</span><span class="o">.</span><span class="n">mol</span> <span class="n">outfile</span><span class="o">.</span><span class="n">png</span> <span class="o">-</span><span class="n">coloring</span> <span class="n">off</span> <span class="o">-</span><span class="n">arom</span>
+   <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="n">database</span><span class="o">.</span><span class="n">sdf</span> <span class="n">molecule_</span><span class="o">%</span><span class="n">s</span><span class="o">.</span><span class="n">png</span> <span class="o">-</span><span class="n">idfield</span> <span class="n">cdbregno</span> <span class="o">-</span><span class="n">thickness</span> <span class="mf">1.1</span>
+   <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="n">database</span><span class="o">.</span><span class="n">smi</span> <span class="n">database</span><span class="o">.</span><span class="n">sdf</span>
+   <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="o">-</span> <span class="s2">&quot;CC.[O-][*-]([O-])=O&quot;</span> <span class="n">query</span><span class="o">.</span><span class="n">png</span> <span class="o">-</span><span class="n">query</span>
+   <span class="n">indigo</span><span class="o">-</span><span class="n">depict</span> <span class="o">-</span> <span class="s2">&quot;OCO&gt;&gt;CC(C)N&quot;</span> <span class="n">reaction</span><span class="o">.</span><span class="n">rxn</span>
 </pre></div>
 </div>
 </div>
@@ -1534,7 +1545,7 @@ Examples:
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

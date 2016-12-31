@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation Manual: Oracle &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>Installation Manual: Oracle &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Bingo Oracle" href="bingo-oracle.html" />
     <link rel="next" title="User Manual: Oracle" href="user-manual-oracle.html" />
@@ -75,7 +77,7 @@
     ><ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Bingo</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="bingo-oracle.html">Bingo Oracle</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">Installation Manual: Oracle</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Installation Manual: Oracle</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#system-requirements">System Requirements</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#operating-systems">Operating Systems</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#database-servers">Database Servers</a></li>
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1612,31 +1623,31 @@ library in the Oracle system directory (default).</li>
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <p>The configuration is the same for all 32-bit and 64-bit Windows
 distributions.</p>
-<div class="highlight-python"><div class="highlight"><pre>SID_LIST_LISTENER =
-  (SID_LIST =
-    (SID_DESC =
-      (PROGRAM = extproc)
-      (SID_NAME = PLSExtProc)
-      (GLOBAL_DBNAME = orcl)
-      (ORACLE_HOME = C:\oracle\product\10.2.0\db_1)
-      (ENVS=&quot;EXTPROC_DLLS=ANY&quot;)
-    )
-  )
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SID_LIST_LISTENER</span> <span class="o">=</span>
+  <span class="p">(</span><span class="n">SID_LIST</span> <span class="o">=</span>
+    <span class="p">(</span><span class="n">SID_DESC</span> <span class="o">=</span>
+      <span class="p">(</span><span class="n">PROGRAM</span> <span class="o">=</span> <span class="n">extproc</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">SID_NAME</span> <span class="o">=</span> <span class="n">PLSExtProc</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">GLOBAL_DBNAME</span> <span class="o">=</span> <span class="n">orcl</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">ORACLE_HOME</span> <span class="o">=</span> <span class="n">C</span><span class="p">:</span>\<span class="n">oracle</span>\<span class="n">product</span>\<span class="mf">10.2</span><span class="o">.</span><span class="mi">0</span>\<span class="n">db_1</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">ENVS</span><span class="o">=</span><span class="s2">&quot;EXTPROC_DLLS=ANY&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="linux-32-bit-or-64-bit-or-solaris">
 <h3>Linux (32-bit or 64-bit) or Solaris<a class="headerlink" href="#linux-32-bit-or-64-bit-or-solaris" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre>SID_LIST_LISTENER =
-  (SID_LIST =
-    (SID_DESC =
-      (PROGRAM = extproc)
-      (SID_NAME = PLSExtProc)
-      (GLOBAL_DBNAME = orcl)
-      (ORACLE_HOME = /home/oracle/product/10.2.0/db_1)
-      (ENVS = &quot;EXTPROC_DLLS=ANY&quot;)
-    )
-  )
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SID_LIST_LISTENER</span> <span class="o">=</span>
+  <span class="p">(</span><span class="n">SID_LIST</span> <span class="o">=</span>
+    <span class="p">(</span><span class="n">SID_DESC</span> <span class="o">=</span>
+      <span class="p">(</span><span class="n">PROGRAM</span> <span class="o">=</span> <span class="n">extproc</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">SID_NAME</span> <span class="o">=</span> <span class="n">PLSExtProc</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">GLOBAL_DBNAME</span> <span class="o">=</span> <span class="n">orcl</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">ORACLE_HOME</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">oracle</span><span class="o">/</span><span class="n">product</span><span class="o">/</span><span class="mf">10.2</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">db_1</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">ENVS</span> <span class="o">=</span> <span class="s2">&quot;EXTPROC_DLLS=ANY&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1644,31 +1655,31 @@ distributions.</p>
 <h3>64-bit Linux or Solaris, with 32-bit extproc<a class="headerlink" href="#bit-linux-or-solaris-with-32-bit-extproc" title="Permalink to this headline">¶</a></h3>
 <p>If you have 64-bit Oracle but want to keep the 32-bit <code class="docutils literal"><span class="pre">extproc</span></code> for
 some reason, you can still use the 32-bit version of Bingo.</p>
-<div class="highlight-python"><div class="highlight"><pre>SID_LIST_LISTENER =
-  (SID_LIST =
-    (SID_DESC =
-      (SID_NAME = PLSExtProc)
-      (GLOBAL_DBNAME = orcl)
-      (ORACLE_HOME = /oracle/11.1)
-      (PROGRAM = extproc32)
-      (ENVS = &quot;EXTPROC_DLLS=ANY,LD_LIBRARY_PATH=/oracle/11.1/lib32&quot;)
-    )
-  )
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SID_LIST_LISTENER</span> <span class="o">=</span>
+  <span class="p">(</span><span class="n">SID_LIST</span> <span class="o">=</span>
+    <span class="p">(</span><span class="n">SID_DESC</span> <span class="o">=</span>
+      <span class="p">(</span><span class="n">SID_NAME</span> <span class="o">=</span> <span class="n">PLSExtProc</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">GLOBAL_DBNAME</span> <span class="o">=</span> <span class="n">orcl</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">ORACLE_HOME</span> <span class="o">=</span> <span class="o">/</span><span class="n">oracle</span><span class="o">/</span><span class="mf">11.1</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">PROGRAM</span> <span class="o">=</span> <span class="n">extproc32</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">ENVS</span> <span class="o">=</span> <span class="s2">&quot;EXTPROC_DLLS=ANY,LD_LIBRARY_PATH=/oracle/11.1/lib32&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="mac-os-x-64-bit">
 <h3>Mac OS X (64-bit)<a class="headerlink" href="#mac-os-x-64-bit" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre>SID_LIST_LISTENER =
-  (SID_LIST =
-    (SID_DESC =
-      (PROGRAM = extproc)
-      (SID_NAME = PLSExtProc)
-      (GLOBAL_DBNAME = orcl)
-      (ORACLE_HOME = /Users/oracle/product/10.2.0/db_1)
-      (ENVS = &quot;EXTPROC_DLLS=ANY&quot;)
-    )
-  )
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SID_LIST_LISTENER</span> <span class="o">=</span>
+  <span class="p">(</span><span class="n">SID_LIST</span> <span class="o">=</span>
+    <span class="p">(</span><span class="n">SID_DESC</span> <span class="o">=</span>
+      <span class="p">(</span><span class="n">PROGRAM</span> <span class="o">=</span> <span class="n">extproc</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">SID_NAME</span> <span class="o">=</span> <span class="n">PLSExtProc</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">GLOBAL_DBNAME</span> <span class="o">=</span> <span class="n">orcl</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">ORACLE_HOME</span> <span class="o">=</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">oracle</span><span class="o">/</span><span class="n">product</span><span class="o">/</span><span class="mf">10.2</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">db_1</span><span class="p">)</span>
+      <span class="p">(</span><span class="n">ENVS</span> <span class="o">=</span> <span class="s2">&quot;EXTPROC_DLLS=ANY&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
 </pre></div>
 </div>
 <p>In addition to the kernel parameters described in <a class="reference external" href="http://download.oracle.com/docs/cd/B19306_01/install.102/b25286/pre_install.htm#BABCHAED">Oracle® Database
@@ -1676,7 +1687,7 @@ Installation Guide 10g Release 2 (10.2) for Apple Mac OS
 X</a>
 you should change <code class="docutils literal"><span class="pre">kern.sysv.shmseg</span></code> from its default value, which is
 too low. Add the following line to <code class="docutils literal"><span class="pre">/etc/sysctl.conf</span></code> file:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">kern</span><span class="o">.</span><span class="n">sysv</span><span class="o">.</span><span class="n">shmseg</span><span class="o">=</span><span class="mi">256</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">kern</span><span class="o">.</span><span class="n">sysv</span><span class="o">.</span><span class="n">shmseg</span><span class="o">=</span><span class="mi">256</span>
 </pre></div>
 </div>
 </div>
@@ -1711,7 +1722,7 @@ flag. In the latter case, you should have the <code class="docutils literal"><sp
 set up properly.</p>
 <p>Run the <code class="docutils literal"><span class="pre">bingo-oracle-install.bat</span></code> file located in the Bingo
 installation file set. The help message from the script follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-oracle-install.bat [parameters]
+<div class="highlight-default"><div class="highlight"><pre><span></span>Usage: bingo-oracle-install.bat [parameters]
 Parameters:
   -?, -help
     Print this help message
@@ -1745,7 +1756,7 @@ rights to log in as <code class="docutils literal"><span class="pre">oracle</spa
 <p>Run the <code class="docutils literal"><span class="pre">bingo-oracle-install.sh</span></code> file located in the <code class="docutils literal"><span class="pre">sql</span></code> folder
 of the Bingo installation file set. The help message from the script is
 the following:</p>
-<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-oracle-install.sh [parameters]
+<div class="highlight-default"><div class="highlight"><pre><span></span>Usage: bingo-oracle-install.sh [parameters]
 Parameters:
   -?, -help
     Print this help message
@@ -1774,30 +1785,30 @@ Parameters:
 <p>For the most simple installation, the defaults are taken:
 <code class="docutils literal"><span class="pre">$ORACLE_HOME/lib</span></code> directory for binary, &#8216;orcl&#8217; instance, &#8216;system&#8217; DBA
 account, and &#8216;bingo/bingo&#8217; pseudo-user.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
 <p>If you do not have access to the <code class="docutils literal"><span class="pre">$ORACLE_HOME/lib</span></code> directory, you can
 install the Bingo binary in your home directory:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">libdir</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myself</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">libdir</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myself</span>
 </pre></div>
 </div>
 <p>When you install on Oracle XE, the instance is usually called <code class="docutils literal"><span class="pre">xe</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-oracle-install.sh -instance xe
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">instance</span> <span class="n">xe</span>
 </pre></div>
 </div>
 <p>You can install Bingo to an Oracle user other than &#8216;bingo&#8217;:</p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-oracle-install.sh -bingoname bingo2
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">bingoname</span> <span class="n">bingo2</span>
 </pre></div>
 </div>
 <p>To run in the non-interactive mode, you must specify &#8216;-y&#8217; and
 &#8216;-dbapass&#8217;:</p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-oracle-install.sh -dbaname system -dbapass admin -y
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">dbaname</span> <span class="n">system</span> <span class="o">-</span><span class="n">dbapass</span> <span class="n">admin</span> <span class="o">-</span><span class="n">y</span>
 </pre></div>
 </div>
 <p>In Windows, you often do not have the <code class="docutils literal"><span class="pre">%ORACLE_HOME%</span></code> setting, and so
 you have to specify the library directory manually:</p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-oracle-install.bat -libdir C:\oracle\product\11.1.0\bin -dbaname system -dbapass admin -y
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">bat</span> <span class="o">-</span><span class="n">libdir</span> <span class="n">C</span><span class="p">:</span>\<span class="n">oracle</span>\<span class="n">product</span>\<span class="mf">11.1</span><span class="o">.</span><span class="mi">0</span>\<span class="nb">bin</span> <span class="o">-</span><span class="n">dbaname</span> <span class="n">system</span> <span class="o">-</span><span class="n">dbapass</span> <span class="n">admin</span> <span class="o">-</span><span class="n">y</span>
 </pre></div>
 </div>
 </div>
@@ -1805,21 +1816,21 @@ you have to specify the library directory manually:</p>
 <h3>Checking the Installation<a class="headerlink" href="#checking-the-installation" title="Permalink to this headline">¶</a></h3>
 <p>If the installation has succeeded, the following report will be printed
 at the end:</p>
-<div class="highlight-python"><div class="highlight"><pre>--------- REPORT ---------
-Tables:             7
-Views:              0
-Packages:           4
-Procedures:         45
-Functions:          69
-Sequences:          1
---------------------------
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">---------</span> <span class="n">REPORT</span> <span class="o">---------</span>
+<span class="n">Tables</span><span class="p">:</span>             <span class="mi">7</span>
+<span class="n">Views</span><span class="p">:</span>              <span class="mi">0</span>
+<span class="n">Packages</span><span class="p">:</span>           <span class="mi">4</span>
+<span class="n">Procedures</span><span class="p">:</span>         <span class="mi">45</span>
+<span class="n">Functions</span><span class="p">:</span>          <span class="mi">69</span>
+<span class="n">Sequences</span><span class="p">:</span>          <span class="mi">1</span>
+<span class="o">--------------------------</span>
 
-DB check executed.
+<span class="n">DB</span> <span class="n">check</span> <span class="n">executed</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>To check that the shared library file is loaded properly by Oracle, you
 can try this simple query:</p>
-<div class="highlight-python"><div class="highlight"><pre>SELECT Bingo.GetVersion from DUAL;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">Bingo</span><span class="o">.</span><span class="n">GetVersion</span> <span class="kn">from</span> <span class="nn">DUAL</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -1853,7 +1864,7 @@ if you are willing to reinstall Bingo afterwards.</li>
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

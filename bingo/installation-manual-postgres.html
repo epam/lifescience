@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation Manual: PostgreSQL &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>Installation Manual: PostgreSQL &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Bingo PostgreSQL" href="bingo-postgres.html" />
     <link rel="next" title="User Manual: PostgreSQL" href="user-manual-postgres.html" />
@@ -280,7 +282,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="bingo-postgres.html">Bingo PostgreSQL</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">Installation Manual: PostgreSQL</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Installation Manual: PostgreSQL</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#system-requirements">System Requirements</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#operating-systems">Operating Systems</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#database-servers">Database Servers</a></li>
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1551,7 +1562,7 @@
 <p>The shared buffer parameter in the PostgreSQL database configuration
 file (postgresql.conf) should be increased. For the optimal performance
 it is recommended to increase the value .</p>
-<div class="highlight-python"><div class="highlight"><pre>shared_buffers=128MB
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">shared_buffers</span><span class="o">=</span><span class="mi">128</span><span class="n">MB</span>
 </pre></div>
 </div>
 </div>
@@ -1560,13 +1571,13 @@ it is recommended to increase the value .</p>
 <p>The Bingo engine requires a lot of shared memory. For linux systems our team
 recommends to change kernel.shmmax and kernel.shmall</p>
 <p>Add the following line to <code class="docutils literal"><span class="pre">/etc/sysctl.conf</span></code> file:</p>
-<div class="highlight-python"><div class="highlight"><pre>kernel.shmmax=&lt;value&gt;
-kernel.shmall=&lt;value&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">kernel</span><span class="o">.</span><span class="n">shmmax</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+<span class="n">kernel</span><span class="o">.</span><span class="n">shmall</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>The recommended value is appr. 50% of the RAM (in bytes)</p>
 <p>Execute (with the root privileges)</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">sysctl</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="o">.</span><span class="n">conf</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sysctl</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
 </div>
 </div>
@@ -1622,7 +1633,7 @@ say, if you have PostgreSQL 9.1 and the Bingo library for the version
 <p>Run the <code class="docutils literal"><span class="pre">bingo-pg-install.sh</span></code> file located in the root folder of the
 Bingo installation file set. The help message from the script is the
 following:</p>
-<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-pg-install.sh [parameters]
+<div class="highlight-default"><div class="highlight"><pre><span></span>Usage: bingo-pg-install.sh [parameters]
 Parameters:
 -?, -help
   Print this help message
@@ -1644,7 +1655,7 @@ Parameters:
 <p>Run the <code class="docutils literal"><span class="pre">bingo-pg-install.bat</span></code> file located in the root folder of the
 Bingo installation file set. The help message from the script is the
 following:</p>
-<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-pg-install.bat [parameters]
+<div class="highlight-default"><div class="highlight"><pre><span></span>Usage: bingo-pg-install.bat [parameters]
 Parameters:
 -?, -help
   Print this help message
@@ -1666,7 +1677,7 @@ Parameters:
 <p>Run the <code class="docutils literal"><span class="pre">bingo-pg-install.sh</span></code> file located in the root folder of the
 Bingo installation file set. The help message from the script is the
 following:</p>
-<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-pg-install.sh [parameters]
+<div class="highlight-default"><div class="highlight"><pre><span></span>Usage: bingo-pg-install.sh [parameters]
 Parameters:
 -?, -help
   Print this help message
@@ -1688,20 +1699,20 @@ Parameters:
 <p>For the most simple installation, the defaults are taken:
 <code class="docutils literal"><span class="pre">CURRENT_DIR/bin</span></code> directory for binary, <code class="docutils literal"><span class="pre">bingo</span></code> for the schema name,
 <code class="docutils literal"><span class="pre">test</span></code> for the database name and <code class="docutils literal"><span class="pre">postgres</span></code> for the admin user.</p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-pg-install.sh
-psql -U postgres -d test -f bingo_install.sql
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">pg</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">bingo_install</span><span class="o">.</span><span class="n">sql</span>
 </pre></div>
 </div>
 <p>If you have copied the library to the directory &#8216;/home/myself/&#8217;:</p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-pg-install.sh -libdir /home/myself
-psql -U postgres -d test -f bingo_install.sql
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">pg</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">libdir</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myself</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">bingo_install</span><span class="o">.</span><span class="n">sql</span>
 </pre></div>
 </div>
 <p>If you have copied the library to the PostgreSQL package directory
 &#8216;/usr/lib/postgresql/9.0/lib/&#8217; and want to create another <code class="docutils literal"><span class="pre">bingo2</span></code>
 schema for storing the procedures :</p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-pg-install.sh -pglibdir -schema bingo2
-psql -U postgres -d test -f bingo_install.sql
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">pg</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">pglibdir</span> <span class="o">-</span><span class="n">schema</span> <span class="n">bingo2</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">bingo_install</span><span class="o">.</span><span class="n">sql</span>
 </pre></div>
 </div>
 </div>
@@ -1709,7 +1720,7 @@ psql -U postgres -d test -f bingo_install.sql
 <h3>Checking the Installation<a class="headerlink" href="#checking-the-installation" title="Permalink to this headline">¶</a></h3>
 <p>To check that the shared library file is loaded properly by Postgres,
 you can try this simple query:</p>
-<div class="highlight-python"><div class="highlight"><pre>SELECT Bingo.GetVersion();
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">Bingo</span><span class="o">.</span><span class="n">GetVersion</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -1736,7 +1747,7 @@ your database.</li>
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

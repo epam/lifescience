@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>indigo-cano &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>indigo-cano &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Indigo Utilities" href="utilities.html" />
     <link rel="next" title="indigo-deco" href="indigo-deco.html" />
@@ -737,7 +739,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="indigo-depict.html">indigo-depict</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">indigo-cano</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">indigo-cano</a></li>
 <li class="toctree-l3"><a class="reference internal" href="indigo-deco.html">indigo-deco</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chemdiff.html">ChemDiff</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="chemdiff.html#overview">Overview</a></li>
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1443,21 +1454,21 @@
             
   <div class="section" id="indigo-cano">
 <h1>indigo-cano<a class="headerlink" href="#indigo-cano" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python"><div class="highlight"><pre>Usage:
-  indigo-cano filename.{mol,smi,sdf,sdf.gz,rdf,rdf.gz} [parameters]
-  indigo-cano - SMILES [parameters]
-Parameters:
-  -smiles          Output canonical SMILES (default)
-  -layered         Output canonical layered code
-  -id      ID field in SDF file
-  -no-arom         Do not aromatize molecules
-  -no-tetrahedral  Ignore tetrahedral stereocenters
-  -no-cistrans     Ignore cis-trans bonds information
-Examples:
-   indigo-cano infile.sdf
-   indigo-cano infile.sdf.gz -id molregno &gt; results.txt
-   indigo-cano infile.smi -layered -no-cistrans
-   indigo-cano - &#39;NC1C=CC(O)=CC=1&#39;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span>
+  <span class="n">indigo</span><span class="o">-</span><span class="n">cano</span> <span class="n">filename</span><span class="o">.</span><span class="p">{</span><span class="n">mol</span><span class="p">,</span><span class="n">smi</span><span class="p">,</span><span class="n">sdf</span><span class="p">,</span><span class="n">sdf</span><span class="o">.</span><span class="n">gz</span><span class="p">,</span><span class="n">rdf</span><span class="p">,</span><span class="n">rdf</span><span class="o">.</span><span class="n">gz</span><span class="p">}</span> <span class="p">[</span><span class="n">parameters</span><span class="p">]</span>
+  <span class="n">indigo</span><span class="o">-</span><span class="n">cano</span> <span class="o">-</span> <span class="n">SMILES</span> <span class="p">[</span><span class="n">parameters</span><span class="p">]</span>
+<span class="n">Parameters</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">smiles</span>          <span class="n">Output</span> <span class="n">canonical</span> <span class="n">SMILES</span> <span class="p">(</span><span class="n">default</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">layered</span>         <span class="n">Output</span> <span class="n">canonical</span> <span class="n">layered</span> <span class="n">code</span>
+  <span class="o">-</span><span class="nb">id</span>      <span class="n">ID</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">SDF</span> <span class="n">file</span>
+  <span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">arom</span>         <span class="n">Do</span> <span class="ow">not</span> <span class="n">aromatize</span> <span class="n">molecules</span>
+  <span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">tetrahedral</span>  <span class="n">Ignore</span> <span class="n">tetrahedral</span> <span class="n">stereocenters</span>
+  <span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">cistrans</span>     <span class="n">Ignore</span> <span class="n">cis</span><span class="o">-</span><span class="n">trans</span> <span class="n">bonds</span> <span class="n">information</span>
+<span class="n">Examples</span><span class="p">:</span>
+   <span class="n">indigo</span><span class="o">-</span><span class="n">cano</span> <span class="n">infile</span><span class="o">.</span><span class="n">sdf</span>
+   <span class="n">indigo</span><span class="o">-</span><span class="n">cano</span> <span class="n">infile</span><span class="o">.</span><span class="n">sdf</span><span class="o">.</span><span class="n">gz</span> <span class="o">-</span><span class="nb">id</span> <span class="n">molregno</span> <span class="o">&gt;</span> <span class="n">results</span><span class="o">.</span><span class="n">txt</span>
+   <span class="n">indigo</span><span class="o">-</span><span class="n">cano</span> <span class="n">infile</span><span class="o">.</span><span class="n">smi</span> <span class="o">-</span><span class="n">layered</span> <span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">cistrans</span>
+   <span class="n">indigo</span><span class="o">-</span><span class="n">cano</span> <span class="o">-</span> <span class="s1">&#39;NC1C=CC(O)=CC=1&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1474,7 +1485,7 @@ Examples:
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

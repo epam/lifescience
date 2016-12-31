@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>User Manual: PostgreSQL &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>User Manual: PostgreSQL &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Bingo PostgreSQL" href="bingo-postgres.html" />
     <link rel="next" title="Bingo SQL Server" href="bingo-sqlserver.html" />
@@ -304,7 +306,7 @@
 <li class="toctree-l4"><a class="reference internal" href="installation-manual-postgres.html#uninstalling-the-cartridge">Uninstalling the Cartridge</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">User Manual: PostgreSQL</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">User Manual: PostgreSQL</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#basics">Basics</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#data-representation">Data representation</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#storage">Storage</a></li>
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1544,7 +1555,7 @@ SMARTS.</p>
 <div class="section" id="creating-an-index">
 <h3>Creating an Index<a class="headerlink" href="#creating-an-index" title="Permalink to this headline">¶</a></h3>
 <p>The following command creates the index for text column:</p>
-<div class="highlight-python"><div class="highlight"><pre>create index $index on $table using bingo_idx ($column bingo.molecule)
+<div class="highlight-default"><div class="highlight"><pre><span></span>create index $index on $table using bingo_idx ($column bingo.molecule)
 </pre></div>
 </div>
 <ul class="simple">
@@ -1553,7 +1564,7 @@ column <code class="docutils literal"><span class="pre">$column</span></code>.</
 <li><code class="docutils literal"><span class="pre">$index</span></code> is the name of the new index.</li>
 </ul>
 <p>The following command creates the index for bytea (binary) column:</p>
-<div class="highlight-python"><div class="highlight"><pre>create index $index on $table using bingo_idx ($bcolumn bingo.bmolecule)
+<div class="highlight-default"><div class="highlight"><pre><span></span>create index $index on $table using bingo_idx ($bcolumn bingo.bmolecule)
 </pre></div>
 </div>
 <ul class="simple">
@@ -1574,7 +1585,7 @@ clean up the index.</p>
 <div class="section" id="substructure-search">
 <h3>Substructure Search<a class="headerlink" href="#substructure-search" title="Permalink to this headline">¶</a></h3>
 <p>The general form of substructure search query is as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.sub
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.sub
 </pre></div>
 </div>
 <ul class="simple">
@@ -1595,7 +1606,7 @@ features available.</p>
 <h3>SMARTS Search<a class="headerlink" href="#smarts-search" title="Permalink to this headline">¶</a></h3>
 <p>The syntax of SMARTS expression search is similar to the ordinary
 substructure search:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.smarts
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.smarts
 </pre></div>
 </div>
 <ul class="simple">
@@ -1613,7 +1624,7 @@ SMARTS matching in Bingo.</p>
 <div class="section" id="exact-search">
 <h3>Exact Search<a class="headerlink" href="#exact-search" title="Permalink to this headline">¶</a></h3>
 <p>The general form of exact search query is as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.exact
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.exact
 </pre></div>
 </div>
 <ul class="simple">
@@ -1649,7 +1660,7 @@ of the tautomer matching rules.</p>
 <div class="section" id="similarity-search">
 <h3>Similarity Search<a class="headerlink" href="#similarity-search" title="Permalink to this headline">¶</a></h3>
 <p>The general form of similarity search query is as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * from $table where $column @ ($bottom, $top, &#39;$query&#39;, &#39;$metric&#39;)::bingo.sim
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * from $table where $column @ ($bottom, $top, &#39;$query&#39;, &#39;$metric&#39;)::bingo.sim
 </pre></div>
 </div>
 <ul class="simple">
@@ -1666,7 +1677,7 @@ limits of the required similarity, respectively.</li>
 the maximum possible value of similarity. You can specify <code class="docutils literal"><span class="pre">null</span></code> in
 place of <code class="docutils literal"><span class="pre">$bottom</span></code> or <code class="docutils literal"><span class="pre">$top</span></code> to disable the lower or upper bound. In
 most cases, you may want to cancel the upper bound:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * from $table where $column @ (0.8, null, &#39;$query&#39;, &#39;Tanimoto&#39;)::bingo.sim
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * from $table where $column @ (0.8, null, &#39;$query&#39;, &#39;Tanimoto&#39;)::bingo.sim
 </pre></div>
 </div>
 <p>Please see the corresponding section of <a class="reference external" href="user-manual-oracle.html#similarity-search">Bingo User Manual for
@@ -1676,7 +1687,7 @@ about the metrics.</p>
 <div class="section" id="gross-formula-search">
 <h3>Gross Formula Search<a class="headerlink" href="#gross-formula-search" title="Permalink to this headline">¶</a></h3>
 <p>The general form of gross formula search query is as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.gross
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.gross
 </pre></div>
 </div>
 <ul class="simple">
@@ -1694,11 +1705,11 @@ examples.</p>
 <div class="section" id="molecular-weight-search">
 <h3>Molecular Weight Search<a class="headerlink" href="#molecular-weight-search" title="Permalink to this headline">¶</a></h3>
 <p>The general form of molecular weight query is as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.getWeight(&#39;$molecule&#39;, &#39;$mass_type&#39;)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">getWeight</span><span class="p">(</span><span class="s1">&#39;$molecule&#39;</span><span class="p">,</span> <span class="s1">&#39;$mass_type&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To use the bingo index the search query is:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * from $table where $column &gt; &#39;$bottom&#39;::bingo.mass AND $column &lt; &#39;$top&#39;::bingo.mass
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * from $table where $column &gt; &#39;$bottom&#39;::bingo.mass AND $column &lt; &#39;$top&#39;::bingo.mass
 </pre></div>
 </div>
 <ul class="simple">
@@ -1711,17 +1722,17 @@ the molecular weight of the resulting molecules must belong.</li>
 <div class="section" id="format-conversion">
 <h3>Format Conversion<a class="headerlink" href="#format-conversion" title="Permalink to this headline">¶</a></h3>
 <p>You can convert a molecule to SMILES string using the function:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.SMILES(&#39;$molecule&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">SMILES</span><span class="p">(</span><span class="s1">&#39;$molecule&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can convert a molecule to Molfile using the function:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.Molfile(&#39;$molecule&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">Molfile</span><span class="p">(</span><span class="s1">&#39;$molecule&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The automatic layout procedure is performed to calculate the 2D
 coordinates of the resulting molecule.</p>
 <p>You can convert a molecule to CML format using the function:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.CML(&#39;$molecule&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">CML</span><span class="p">(</span><span class="s1">&#39;$molecule&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1735,7 +1746,7 @@ molfile or SMILES.</li>
 Molfiles and SMILES to the internal binary format. The operator works
 equally well with <code class="docutils literal"><span class="pre">text</span></code> and <code class="docutils literal"><span class="pre">bytea</span></code> operands. The operator always
 returns the <code class="docutils literal"><span class="pre">bytea</span></code> result.</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.CompactMolecule($molfile, $xyz);
+<div class="highlight-default"><div class="highlight"><pre><span></span>select bingo.CompactMolecule($molfile, $xyz);
 
 select bingo.CompactMolecule($smiles, $xyz);
 
@@ -1748,7 +1759,7 @@ skipped.</p>
 <div class="section" id="canonical-smiles-computation">
 <h4>Canonical SMILES computation<a class="headerlink" href="#canonical-smiles-computation" title="Permalink to this headline">¶</a></h4>
 <p>You can use the function:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.CanSMILES(&#39;$molecule&#39;)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">CanSMILES</span><span class="p">(</span><span class="s1">&#39;$molecule&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>to generate canonical SMILES strings for molecules represented as
@@ -1778,7 +1789,7 @@ section</a>.</p>
 <div class="section" id="id1">
 <h3>Creating an Index<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>The following command creates the index for text columns:</p>
-<div class="highlight-python"><div class="highlight"><pre>create index $index on $table using bingo_idx ($column bingo.reaction)
+<div class="highlight-default"><div class="highlight"><pre><span></span>create index $index on $table using bingo_idx ($column bingo.reaction)
 </pre></div>
 </div>
 <ul class="simple">
@@ -1787,7 +1798,7 @@ in the column <code class="docutils literal"><span class="pre">$column</span></c
 <li><code class="docutils literal"><span class="pre">$index</span></code> is the name of the new index.</li>
 </ul>
 <p>The following command creates the index for bytea (binary) columns:</p>
-<div class="highlight-python"><div class="highlight"><pre>create index $index on $table using bingo_idx ($bcolumn bingo.breaction)
+<div class="highlight-default"><div class="highlight"><pre><span></span>create index $index on $table using bingo_idx ($bcolumn bingo.breaction)
 </pre></div>
 </div>
 <ul class="simple">
@@ -1799,7 +1810,7 @@ in the binary column <code class="docutils literal"><span class="pre">$bcolumn</
 <div class="section" id="reaction-substructure-search">
 <h3>Reaction Substructure Search<a class="headerlink" href="#reaction-substructure-search" title="Permalink to this headline">¶</a></h3>
 <p>The general form of reaction substructure search query is as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.rsub
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.rsub
 </pre></div>
 </div>
 <ul class="simple">
@@ -1819,7 +1830,7 @@ available.</p>
 <h3>Reaction SMARTS Search<a class="headerlink" href="#reaction-smarts-search" title="Permalink to this headline">¶</a></h3>
 <p>The syntax of SMARTS expression search is similar to the ordinary
 substructure search:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.rsmarts
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.rsmarts
 </pre></div>
 </div>
 <ul class="simple">
@@ -1837,7 +1848,7 @@ of SMARTS matching in Bingo.</p>
 <div class="section" id="reaction-exact-search">
 <h3>Reaction Exact Search<a class="headerlink" href="#reaction-exact-search" title="Permalink to this headline">¶</a></h3>
 <p>The general form of exact search query is as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.rexact
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * from $table where $column @ (&#39;$query&#39;, &#39;$parameters&#39;)::bingo.rexact
 </pre></div>
 </div>
 <ul class="simple">
@@ -1856,7 +1867,7 @@ string.</p>
 <div class="section" id="automatic-atom-to-atom-mapping">
 <h3>Automatic Atom-to-Atom mapping<a class="headerlink" href="#automatic-atom-to-atom-mapping" title="Permalink to this headline">¶</a></h3>
 <p>You can compute reaction AAM by calling the function:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.AAM(&#39;$reaction&#39;, &#39;$strategy&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">AAM</span><span class="p">(</span><span class="s1">&#39;$reaction&#39;</span><span class="p">,</span> <span class="s1">&#39;$strategy&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1876,17 +1887,17 @@ some examples.</p>
 <div class="section" id="id2">
 <h3>Format Conversion<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>You can convert a reaction to reaction SMILES string using the function:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.RSMILES(&#39;$reaction&#39;)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">RSMILES</span><span class="p">(</span><span class="s1">&#39;$reaction&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>You can convert a reaction SMILES string to Rxnfile using the function:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.Rxnfile(&#39;$reaction&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">Rxnfile</span><span class="p">(</span><span class="s1">&#39;$reaction&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The automatic layout procedure is performed to calculate the 2D
 coordinates of the resulting reaction.</p>
 <p>You can convert a reaction to a reaction CML using the function:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.RCML(&#39;$reaction&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">RCML</span><span class="p">(</span><span class="s1">&#39;$reaction&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1900,7 +1911,7 @@ Rxnfile.</li>
 Rxnfiles and reaction SMILES to internal binary format. The operator
 works equally well with <code class="docutils literal"><span class="pre">text</span></code> and <code class="docutils literal"><span class="pre">bytea</span></code> operands. The operator
 always returns the <code class="docutils literal"><span class="pre">bytea</span></code> result.</p>
-<div class="highlight-python"><div class="highlight"><pre>SELECT Bingo.CompactReaction($rxnfile, $xyz) ;
+<div class="highlight-default"><div class="highlight"><pre><span></span>SELECT Bingo.CompactReaction($rxnfile, $xyz) ;
 
 SELECT Bingo.CompactReaction($rsmiles, $xyz)L;
 
@@ -1926,7 +1937,7 @@ section</a>.</p>
 <p>You can import a molecule or reaction table from an SDF file. You can
 also import SDF fields corresponding to each record in the SDF file.
 Prior to importing, you have to create the table manually:</p>
-<div class="highlight-python"><div class="highlight"><pre>create table $table ($id int, $column text, ...);
+<div class="highlight-default"><div class="highlight"><pre><span></span>create table $table ($id int, $column text, ...);
 select bingo.ImportSDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$sdf_id $id[, $other_columns]&#39;, &#39;$filename.sdf[.gz]&#39;);
 </pre></div>
 </div>
@@ -1945,19 +1956,19 @@ filesystem</em>.</li>
 <p>A simple example of importing the
 <a class="reference external" href="http://dtp.nci.nih.gov/docs/3d_database/Structural_information/structural_data.html">NCI</a>
 2D compound database would be the following:</p>
-<div class="highlight-python"><div class="highlight"><pre>create table nci (nsc int, molfile text);
-select bingo.ImportSDF(&#39;nci&#39;, &#39;molfile&#39;, &#39;nsc nsc&#39;, &#39;C:/Users/Administrator/july2008_2d.sdf&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">create</span> <span class="n">table</span> <span class="n">nci</span> <span class="p">(</span><span class="n">nsc</span> <span class="nb">int</span><span class="p">,</span> <span class="n">molfile</span> <span class="n">text</span><span class="p">);</span>
+<span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">ImportSDF</span><span class="p">(</span><span class="s1">&#39;nci&#39;</span><span class="p">,</span> <span class="s1">&#39;molfile&#39;</span><span class="p">,</span> <span class="s1">&#39;nsc nsc&#39;</span><span class="p">,</span> <span class="s1">&#39;C:/Users/Administrator/july2008_2d.sdf&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Importing RDF files is done with <code class="docutils literal"><span class="pre">ImportRDF()</span></code> function the same way
 as SDF files:</p>
-<div class="highlight-python"><div class="highlight"><pre>create table $table ($id int, $column text, ...);
+<div class="highlight-default"><div class="highlight"><pre><span></span>create table $table ($id int, $column text, ...);
 select bingo.ImportRDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$rdf_id $id[, $other_columns]&#39;, &#39;$filename.rdf[.gz]&#39;);
 </pre></div>
 </div>
 <p>Importing multi-line molecule or reaction SMILES file is done the
 similar way with the <code class="docutils literal"><span class="pre">ImportSMILES()</span></code> function:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.ImportSMILES(&#39;$table&#39;, &#39;$column&#39;, &#39;$id&#39;, &#39;$filename&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">ImportSMILES</span><span class="p">(</span><span class="s1">&#39;$table&#39;</span><span class="p">,</span> <span class="s1">&#39;$column&#39;</span><span class="p">,</span> <span class="s1">&#39;$id&#39;</span><span class="p">,</span> <span class="s1">&#39;$filename&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1976,7 +1987,7 @@ same table.</p>
 <h3>Exporting SDFiles and RDFiles<a class="headerlink" href="#exporting-sdfiles-and-rdfiles" title="Permalink to this headline">¶</a></h3>
 <p>You can export a molecule table to a SDF file. You can also export table
 fields corresponding to each record in the SDF file:</p>
-<div class="highlight-python"><div class="highlight"><pre>create table $table ($id int, $column text, ...);
+<div class="highlight-default"><div class="highlight"><pre><span></span>create table $table ($id int, $column text, ...);
 ...
 select bingo.ExportSDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$id[, $other_columns]&#39;, &#39;$filename.sdf&#39;);
 </pre></div>
@@ -1996,14 +2007,14 @@ filesystem</em>.</li>
 <p>A simple example of exporting the
 <a class="reference external" href="http://dtp.nci.nih.gov/docs/3d_database/Structural_information/structural_data.html">NCI</a>
 2D compound database would be the following:</p>
-<div class="highlight-python"><div class="highlight"><pre>create table nci (nsc int, molfile text);
-...
-select bingo.ExportSDF(&#39;nci&#39;, &#39;molfile&#39;, &#39;nsc&#39;, &#39;C:/Users/Administrator/july2008_2d.sdf&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">create</span> <span class="n">table</span> <span class="n">nci</span> <span class="p">(</span><span class="n">nsc</span> <span class="nb">int</span><span class="p">,</span> <span class="n">molfile</span> <span class="n">text</span><span class="p">);</span>
+<span class="o">...</span>
+<span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">ExportSDF</span><span class="p">(</span><span class="s1">&#39;nci&#39;</span><span class="p">,</span> <span class="s1">&#39;molfile&#39;</span><span class="p">,</span> <span class="s1">&#39;nsc&#39;</span><span class="p">,</span> <span class="s1">&#39;C:/Users/Administrator/july2008_2d.sdf&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Exporting RDF files is done with <code class="docutils literal"><span class="pre">ExportRDF()</span></code> function the same way
 as SDF files:</p>
-<div class="highlight-python"><div class="highlight"><pre>create table $table ($id int, $column text, ...);
+<div class="highlight-default"><div class="highlight"><pre><span></span>create table $table ($id int, $column text, ...);
 ...
 select bingo.ExportRDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$id[, $other_columns]&#39;, &#39;$filename.rdf&#39;);
 </pre></div>
@@ -2016,9 +2027,9 @@ select bingo.ExportRDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$id[, $other_c
 <h3>Extracting Names<a class="headerlink" href="#extracting-names" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">bingo.getName</span></code> function extracts the molecule or reaction name from
 Molfile, Rxnfile, or SMILES string.</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.getName(molfile) from mytable;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">getName</span><span class="p">(</span><span class="n">molfile</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">mytable</span><span class="p">;</span>
 
-select bingo.getName(&#39;c1ccc2ccccc2c1 Naphthalene&#39;);
+<span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">getName</span><span class="p">(</span><span class="s1">&#39;c1ccc2ccccc2c1 Naphthalene&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -2044,16 +2055,16 @@ mass</a>, which is
 calculated using the most abundant isotope of each element.</li>
 </ul>
 <p>Here are some examples of using the <code class="docutils literal"><span class="pre">Bingo.getMass()</span></code> operator:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.getMass(&#39;C1C=CC=CC=1&#39;, &#39;&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">getMass</span><span class="p">(</span><span class="s1">&#39;C1C=CC=CC=1&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
 
-select bingo.getWeight(molfile, &#39;most-abundant-mass&#39;) from mytable;
+<span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">getWeight</span><span class="p">(</span><span class="n">molfile</span><span class="p">,</span> <span class="s1">&#39;most-abundant-mass&#39;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">mytable</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Similarly, <code class="docutils literal"><span class="pre">bingo.Gross()</span></code> function returns the gross formula of the
 given molecule</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.Gross(&#39;C1C=CC=CC=1&#39;);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">Gross</span><span class="p">(</span><span class="s1">&#39;C1C=CC=CC=1&#39;</span><span class="p">);</span>
 
-select bingo.Gross(molfile) from mytable;
+<span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">Gross</span><span class="p">(</span><span class="n">molfile</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">mytable</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -2065,14 +2076,14 @@ problems (unsupported format, exceeded valence, incorrect
 stereochemistry), the functions returns a string with the description of
 the problem. Is the molecule is represented with a correct Molfile or
 SMILES string, the function returns <code class="docutils literal"><span class="pre">null</span></code>.</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.CheckMolecule($molecule);
+<div class="highlight-default"><div class="highlight"><pre><span></span>select bingo.CheckMolecule($molecule);
 
 select $table.*, bingo.CheckMolecule($column) from $table where bingo.CheckMolecule($column) is not null;
 </pre></div>
 </div>
 <p>Similarly, you can check reactions for correctness with the
 <code class="docutils literal"><span class="pre">bingo.CheckReaction()</span></code> function:</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.CheckReaction($reaction);
+<div class="highlight-default"><div class="highlight"><pre><span></span>select bingo.CheckReaction($reaction);
 
 select $table.*, bingo.CheckReaction($column) from $table where bingo.CheckReaction($column) is not null;
 </pre></div>
@@ -2082,16 +2093,16 @@ select $table.*, bingo.CheckReaction($column) from $table where bingo.CheckReact
 <h3>Reading Files on Server<a class="headerlink" href="#reading-files-on-server" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">Bingo.FileToText()</span></code> function accepts a text file path and loads a
 file from the server file system to PostgreSQL text.</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.FileToText($path);
+<div class="highlight-default"><div class="highlight"><pre><span></span>select bingo.FileToText($path);
 </pre></div>
 </div>
 <p>Usually you may want to load the query molecule in the following way:</p>
-<div class="highlight-python"><div class="highlight"><pre>select * form $table where $column @ (bingo.FileToText($path), &#39;&#39;)::bingo.sub;
+<div class="highlight-default"><div class="highlight"><pre><span></span>select * form $table where $column @ (bingo.FileToText($path), &#39;&#39;)::bingo.sub;
 </pre></div>
 </div>
 <p>The <code class="docutils literal"><span class="pre">Bingo.FileToBlob()</span></code> function accepts a text file path and loads a
 file from the server file system to PostgreSQL bytea.</p>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.FileToBlob($path);
+<div class="highlight-default"><div class="highlight"><pre><span></span>select bingo.FileToBlob($path);
 </pre></div>
 </div>
 </div>
@@ -2117,9 +2128,9 @@ permissions on the schema <strong>bingo</strong></li>
 </ul>
 <div class="section" id="set-permissions-for-building-the-index">
 <h3>Set permissions for building the index<a class="headerlink" href="#set-permissions-for-building-the-index" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre>grant usage on schema bingo to test_user;
-grant select on table bingo.bingo_config to test_user;
-grant select on table bingo.bingo_tau_config to test_user;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">grant</span> <span class="n">usage</span> <span class="n">on</span> <span class="n">schema</span> <span class="n">bingo</span> <span class="n">to</span> <span class="n">test_user</span><span class="p">;</span>
+<span class="n">grant</span> <span class="n">select</span> <span class="n">on</span> <span class="n">table</span> <span class="n">bingo</span><span class="o">.</span><span class="n">bingo_config</span> <span class="n">to</span> <span class="n">test_user</span><span class="p">;</span>
+<span class="n">grant</span> <span class="n">select</span> <span class="n">on</span> <span class="n">table</span> <span class="n">bingo</span><span class="o">.</span><span class="n">bingo_tau_config</span> <span class="n">to</span> <span class="n">test_user</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -2128,7 +2139,7 @@ grant select on table bingo.bingo_tau_config to test_user;
 <h2>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="obtaining-bingo-version-number">
 <h3>Obtaining Bingo Version Number<a class="headerlink" href="#obtaining-bingo-version-number" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre>select bingo.GetVersion();
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">bingo</span><span class="o">.</span><span class="n">GetVersion</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -2154,7 +2165,7 @@ log as well.</p>
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

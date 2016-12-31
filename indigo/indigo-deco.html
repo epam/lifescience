@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>indigo-deco &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>indigo-deco &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Indigo Utilities" href="utilities.html" />
     <link rel="next" title="ChemDiff" href="chemdiff.html" />
@@ -738,7 +740,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="indigo-depict.html">indigo-depict</a></li>
 <li class="toctree-l3"><a class="reference internal" href="indigo-cano.html">indigo-cano</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">indigo-deco</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">indigo-deco</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chemdiff.html">ChemDiff</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="chemdiff.html#overview">Overview</a></li>
 <li class="toctree-l4"><a class="reference internal" href="chemdiff.html#screenshots">Screenshots</a></li>
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1443,35 +1454,35 @@
             
   <div class="section" id="indigo-deco">
 <h1>indigo-deco<a class="headerlink" href="#indigo-deco" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python"><div class="highlight"><pre>Usage:
-  indigo-deco files [options]
-Performs molecule scaffold detection and R-group deconvolution
-Accepted formats are: Molfile, SDFile, RDFile, SMILES
-Options:
--h         print this help message
--a         calculate approximate scaffold (default is exact)
--s   write maximum found scaffold to molfile
--S   write all found scaffolds to SD-file
--d   do not calculate scaffold, but load it from file
--o   write resulting highlighted molecules to file
--r   write resulting molecules with separated r-groups to file
--na        no aromatic consideration
---         marks end of options
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span>
+  <span class="n">indigo</span><span class="o">-</span><span class="n">deco</span> <span class="n">files</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">Performs</span> <span class="n">molecule</span> <span class="n">scaffold</span> <span class="n">detection</span> <span class="ow">and</span> <span class="n">R</span><span class="o">-</span><span class="n">group</span> <span class="n">deconvolution</span>
+<span class="n">Accepted</span> <span class="n">formats</span> <span class="n">are</span><span class="p">:</span> <span class="n">Molfile</span><span class="p">,</span> <span class="n">SDFile</span><span class="p">,</span> <span class="n">RDFile</span><span class="p">,</span> <span class="n">SMILES</span>
+<span class="n">Options</span><span class="p">:</span>
+<span class="o">-</span><span class="n">h</span>         <span class="nb">print</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span>
+<span class="o">-</span><span class="n">a</span>         <span class="n">calculate</span> <span class="n">approximate</span> <span class="n">scaffold</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="n">exact</span><span class="p">)</span>
+<span class="o">-</span><span class="n">s</span>   <span class="n">write</span> <span class="n">maximum</span> <span class="n">found</span> <span class="n">scaffold</span> <span class="n">to</span> <span class="n">molfile</span>
+<span class="o">-</span><span class="n">S</span>   <span class="n">write</span> <span class="nb">all</span> <span class="n">found</span> <span class="n">scaffolds</span> <span class="n">to</span> <span class="n">SD</span><span class="o">-</span><span class="n">file</span>
+<span class="o">-</span><span class="n">d</span>   <span class="n">do</span> <span class="ow">not</span> <span class="n">calculate</span> <span class="n">scaffold</span><span class="p">,</span> <span class="n">but</span> <span class="n">load</span> <span class="n">it</span> <span class="kn">from</span> <span class="nn">file</span>
+<span class="o">-</span><span class="n">o</span>   <span class="n">write</span> <span class="n">resulting</span> <span class="n">highlighted</span> <span class="n">molecules</span> <span class="n">to</span> <span class="n">file</span>
+<span class="o">-</span><span class="n">r</span>   <span class="n">write</span> <span class="n">resulting</span> <span class="n">molecules</span> <span class="k">with</span> <span class="n">separated</span> <span class="n">r</span><span class="o">-</span><span class="n">groups</span> <span class="n">to</span> <span class="n">file</span>
+<span class="o">-</span><span class="n">na</span>        <span class="n">no</span> <span class="n">aromatic</span> <span class="n">consideration</span>
+<span class="o">--</span>         <span class="n">marks</span> <span class="n">end</span> <span class="n">of</span> <span class="n">options</span>
 
-Examples:
+<span class="n">Examples</span><span class="p">:</span>
 
-indigo-deco *.mol -o hl.sdf -s scaf.sdf
-  read molecules from molfiles in the current directory
-  save maximum found scaffold to scaf.mol
-  save highlighted molecules to hl.sdf
-indigo-deco structure.mol many.sdf -s scaf.mol -S allscafs.sdf -r rg.sdf
-  read one molecule from structure.mol and multiple molecules from many.sdf
-  save molecules with r-rgoups to rg.sdf
-  save all found scaffolds to allscafs.sdf
-indigo-deco *.smi -d readyscaf.mol -o hl.sdf
-  read multiple molecules from every SMILES file in the current directory
-  read scaffold from readyscaf.mol
-  save highlighted molecules to hl.sdf
+<span class="n">indigo</span><span class="o">-</span><span class="n">deco</span> <span class="o">*.</span><span class="n">mol</span> <span class="o">-</span><span class="n">o</span> <span class="n">hl</span><span class="o">.</span><span class="n">sdf</span> <span class="o">-</span><span class="n">s</span> <span class="n">scaf</span><span class="o">.</span><span class="n">sdf</span>
+  <span class="n">read</span> <span class="n">molecules</span> <span class="kn">from</span> <span class="nn">molfiles</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">current</span> <span class="n">directory</span>
+  <span class="n">save</span> <span class="n">maximum</span> <span class="n">found</span> <span class="n">scaffold</span> <span class="n">to</span> <span class="n">scaf</span><span class="o">.</span><span class="n">mol</span>
+  <span class="n">save</span> <span class="n">highlighted</span> <span class="n">molecules</span> <span class="n">to</span> <span class="n">hl</span><span class="o">.</span><span class="n">sdf</span>
+<span class="n">indigo</span><span class="o">-</span><span class="n">deco</span> <span class="n">structure</span><span class="o">.</span><span class="n">mol</span> <span class="n">many</span><span class="o">.</span><span class="n">sdf</span> <span class="o">-</span><span class="n">s</span> <span class="n">scaf</span><span class="o">.</span><span class="n">mol</span> <span class="o">-</span><span class="n">S</span> <span class="n">allscafs</span><span class="o">.</span><span class="n">sdf</span> <span class="o">-</span><span class="n">r</span> <span class="n">rg</span><span class="o">.</span><span class="n">sdf</span>
+  <span class="n">read</span> <span class="n">one</span> <span class="n">molecule</span> <span class="kn">from</span> <span class="nn">structure.mol</span> <span class="ow">and</span> <span class="n">multiple</span> <span class="n">molecules</span> <span class="kn">from</span> <span class="nn">many.sdf</span>
+  <span class="n">save</span> <span class="n">molecules</span> <span class="k">with</span> <span class="n">r</span><span class="o">-</span><span class="n">rgoups</span> <span class="n">to</span> <span class="n">rg</span><span class="o">.</span><span class="n">sdf</span>
+  <span class="n">save</span> <span class="nb">all</span> <span class="n">found</span> <span class="n">scaffolds</span> <span class="n">to</span> <span class="n">allscafs</span><span class="o">.</span><span class="n">sdf</span>
+<span class="n">indigo</span><span class="o">-</span><span class="n">deco</span> <span class="o">*.</span><span class="n">smi</span> <span class="o">-</span><span class="n">d</span> <span class="n">readyscaf</span><span class="o">.</span><span class="n">mol</span> <span class="o">-</span><span class="n">o</span> <span class="n">hl</span><span class="o">.</span><span class="n">sdf</span>
+  <span class="n">read</span> <span class="n">multiple</span> <span class="n">molecules</span> <span class="kn">from</span> <span class="nn">every</span> <span class="n">SMILES</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">current</span> <span class="n">directory</span>
+  <span class="n">read</span> <span class="n">scaffold</span> <span class="kn">from</span> <span class="nn">readyscaf.mol</span>
+  <span class="n">save</span> <span class="n">highlighted</span> <span class="n">molecules</span> <span class="n">to</span> <span class="n">hl</span><span class="o">.</span><span class="n">sdf</span>
 </pre></div>
 </div>
 </div>
@@ -1488,7 +1499,7 @@ indigo-deco *.smi -d readyscaf.mol -o hl.sdf
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

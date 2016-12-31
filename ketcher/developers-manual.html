@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Developer’s Manual &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>Developer’s Manual &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Ketcher" href="index.html" />
     <link rel="next" title="Help" href="help.html" />
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1205,7 +1215,7 @@
 <li class="toctree-l3"><a class="reference internal" href="editing-tips.html#chains-and-templates">Chains and Templates</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Developer&#8217;s Manual</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Developer&#8217;s Manual</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#access-ketcher">Access Ketcher</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ketcher-interaction-example">Ketcher interaction example</a></li>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1452,12 +1463,12 @@
 <p>The installation package contains all required sources.</p>
 <ul>
 <li><p class="first">To run Ketcher in a separate page, use <code class="docutils literal"><span class="pre">ketcher/ketcher.html</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;a href=&quot;ketcher/ketcher.html&quot;&gt;Ketcher&lt;/a&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;ketcher/ketcher.html&quot;</span><span class="o">&gt;</span><span class="n">Ketcher</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">To embed Ketcher in another page, use IFrame:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;iframe id=&quot;ifKetcher&quot; src=&quot;ketcher/ketcher.html&quot; width=&quot;800&quot; height=&quot;600&quot;&gt;&lt;/iframe&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">iframe</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;ifKetcher&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;ketcher/ketcher.html&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;800&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="o">&gt;&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </li>
@@ -1467,11 +1478,11 @@
 <h2>Access Ketcher<a class="headerlink" href="#access-ketcher" title="Permalink to this headline">¶</a></h2>
 <p>To access Ketcher from JavaScript, use the following code to obtain the
 object reference:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">ketcher</span> <span class="o">=</span> <span class="nx">ketcherWindow</span><span class="p">.</span><span class="nx">ketcher</span><span class="p">;</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">ketcher</span> <span class="o">=</span> <span class="nx">ketcherWindow</span><span class="p">.</span><span class="nx">ketcher</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal"><span class="pre">ketcherWindow</span></code> is a separate Ketcher window or</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">ketcherFrame</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;ifKetcher&#39;</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">ketcherFrame</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;ifKetcher&#39;</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">ketcher</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;contentDocument&#39;</span> <span class="k">in</span> <span class="nx">ketcherFrame</span><span class="p">)</span>
@@ -1486,7 +1497,7 @@ object reference:</p>
 </ul>
 <p>This method updates the current structure in the editor. Pass it a
 SMILES string or a Molfile/Rxnfile:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">ketcher</span><span class="p">.</span><span class="nx">setMolecule</span><span class="p">(</span><span class="s1">&#39;c1ccccc1&#39;</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">ketcher</span><span class="p">.</span><span class="nx">setMolecule</span><span class="p">(</span><span class="s1">&#39;c1ccccc1&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>Note:</strong> SMILES import is not available in the standalone mode.</p>
@@ -1504,7 +1515,7 @@ SMILES string or a Molfile/Rxnfile:</p>
 <p>This method switches Ketcher to the fragment insertion mode where a user
 can specify where to the provided fragment. Pass it a SMILES string or a
 Molfile/Rxnfile:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">ketcher</span><span class="p">.</span><span class="nx">addFragment</span><span class="p">(</span><span class="s1">&#39;c1ccccc1&#39;</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">ketcher</span><span class="p">.</span><span class="nx">addFragment</span><span class="p">(</span><span class="s1">&#39;c1ccccc1&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>Note:</strong> SMILES import is not available in the standalone mode.</p>
@@ -1594,7 +1605,7 @@ application and also can run under WSGI.</p>
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

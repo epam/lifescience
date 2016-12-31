@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation Manual: SQL Server &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>Installation Manual: SQL Server &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Bingo SQL Server" href="bingo-sqlserver.html" />
     <link rel="next" title="User Manual: SQL Server" href="user-manual-sqlserver.html" />
@@ -370,7 +372,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="bingo-sqlserver.html">Bingo SQL Server</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">Installation Manual: SQL Server</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Installation Manual: SQL Server</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#system-requirements">System Requirements</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#operating-systems">Operating Systems</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#database-servers">Database Servers</a></li>
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1520,13 +1531,13 @@ connections and it should return the correct server name. If multiple
 SQL Server instances are installed, then &#64;&#64;SERVERNAME should contain the
 service name as well. To get the server name, you can execute the
 following code:</p>
-<div class="highlight-python"><div class="highlight"><pre>select @@SERVERNAME
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="o">@</span><span class="nd">@SERVERNAME</span>
 </pre></div>
 </div>
 <p>If it returns an invalid name, you should execute the following
 commands:</p>
-<div class="highlight-python"><div class="highlight"><pre>sp_dropserver &lt;invalid server name returned by @@SERVERNAME or from executing sp_helpserver procedure&gt;
-sp_addserver &lt;valid server name&gt;, &#39;local&#39;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sp_dropserver</span> <span class="o">&lt;</span><span class="n">invalid</span> <span class="n">server</span> <span class="n">name</span> <span class="n">returned</span> <span class="n">by</span> <span class="o">@</span><span class="nd">@SERVERNAME</span> <span class="ow">or</span> <span class="kn">from</span> <span class="nn">executing</span> <span class="n">sp_helpserver</span> <span class="n">procedure</span><span class="o">&gt;</span>
+<span class="n">sp_addserver</span> <span class="o">&lt;</span><span class="n">valid</span> <span class="n">server</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="s1">&#39;local&#39;</span>
 </pre></div>
 </div>
 <p>&#8216;SQL Server Browser&#8217; service should be started for accepting connections
@@ -1542,7 +1553,7 @@ architecture that you are using.</p>
 <p>By default MS SQL Server provides the possibility to allocate only 256Mb
 in all CLR code. If the memory limit is reached, then you will get the
 following exception:</p>
-<div class="highlight-python"><div class="highlight"><pre>.NET Framework execution was aborted by escalation policy because of out of memory.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">NET</span> <span class="n">Framework</span> <span class="n">execution</span> <span class="n">was</span> <span class="n">aborted</span> <span class="n">by</span> <span class="n">escalation</span> <span class="n">policy</span> <span class="n">because</span> <span class="n">of</span> <span class="n">out</span> <span class="n">of</span> <span class="n">memory</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>To adjust the memory limit for CLR you have to specify the -g switch in
@@ -1562,11 +1573,11 @@ internal SQL Server cache.</p>
 the system. Sometimes (mostly on large databases), when the CLR engine
 underlying the SQL Server tries to allocate some memory for Bingo, you
 will get the same exception:</p>
-<div class="highlight-python"><div class="highlight"><pre>.NET Framework execution was aborted by escalation policy because of out of memory.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">NET</span> <span class="n">Framework</span> <span class="n">execution</span> <span class="n">was</span> <span class="n">aborted</span> <span class="n">by</span> <span class="n">escalation</span> <span class="n">policy</span> <span class="n">because</span> <span class="n">of</span> <span class="n">out</span> <span class="n">of</span> <span class="n">memory</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>And the following message will be logged to the system log:</p>
-<div class="highlight-python"><div class="highlight"><pre>AppDomain &lt;name&gt; is marked for unload due to memory pressure.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">AppDomain</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="n">marked</span> <span class="k">for</span> <span class="n">unload</span> <span class="n">due</span> <span class="n">to</span> <span class="n">memory</span> <span class="n">pressure</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>To restrict the amount of memory that MS SQL Server can take (thus
@@ -1581,7 +1592,7 @@ memory minus 1 GB.</p>
 <p>Log in as Administrator. Run the <code class="docutils literal"><span class="pre">bingo-sqlserver-install.bat</span></code> file
 located in the Bingo installation file set. The help message from the
 script is the following:</p>
-<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-sqlserver-install.bat [parameters]
+<div class="highlight-default"><div class="highlight"><pre><span></span>Usage: bingo-sqlserver-install.bat [parameters]
 Parameters:
   -?, -help
     Print this help message
@@ -1612,20 +1623,20 @@ restart the database prior to the installation.</p>
 <p>For the simplest installation, the defaults are taken, including
 <code class="docutils literal"><span class="pre">C:\bingo</span></code> directory for binaries. You have to specify only the
 <code class="docutils literal"><span class="pre">-database</span></code> flag with the name of your database:</p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">sqlserver</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">bat</span> <span class="o">-</span><span class="n">database</span> <span class="n">mydb</span>
 </pre></div>
 </div>
 <p>If you use an SQL Server user account for the DBA user (normally &#8216;sa&#8217;),
 you have to specify it with the <code class="docutils literal"><span class="pre">-dbaname</span></code> option:</p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb -dbaname sa
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">sqlserver</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">bat</span> <span class="o">-</span><span class="n">database</span> <span class="n">mydb</span> <span class="o">-</span><span class="n">dbaname</span> <span class="n">sa</span>
 </pre></div>
 </div>
 <p>To run in the non-interactive mode, you must specify <code class="docutils literal"><span class="pre">-y</span></code></p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb -y
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">sqlserver</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">bat</span> <span class="o">-</span><span class="n">database</span> <span class="n">mydb</span> <span class="o">-</span><span class="n">y</span>
 </pre></div>
 </div>
 <p>(and also <code class="docutils literal"><span class="pre">-dbass</span></code> when you specify <code class="docutils literal"><span class="pre">-dbaname</span></code>)</p>
-<div class="highlight-python"><div class="highlight"><pre>bingo-sqlserver-install.bat -database mydb -dbaname sa -dbapass pwd123 -y
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">sqlserver</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">bat</span> <span class="o">-</span><span class="n">database</span> <span class="n">mydb</span> <span class="o">-</span><span class="n">dbaname</span> <span class="n">sa</span> <span class="o">-</span><span class="n">dbapass</span> <span class="n">pwd123</span> <span class="o">-</span><span class="n">y</span>
 </pre></div>
 </div>
 </div>
@@ -1641,7 +1652,7 @@ you have to specify it with the <code class="docutils literal"><span class="pre"
 installer.</li>
 </ol>
 <p>The help message from the uninstall script is the following:</p>
-<div class="highlight-python"><div class="highlight"><pre>Usage: bingo-sqlserver-uninstall.bat [parameters]
+<div class="highlight-default"><div class="highlight"><pre><span></span>Usage: bingo-sqlserver-uninstall.bat [parameters]
 Parameters:
   -?, -help
     Print this help message
@@ -1673,7 +1684,7 @@ Parameters:
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

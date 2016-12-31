@@ -545,14 +545,34 @@ div#newsfeed {
   padding: 0;
 }
 
-
-
 .ketcher-demo {
     display: block;
-    float: left;
-    border: none;
-    height: 500px;
-    width: 90%;
-    margin: 0 20px 25px 0;
+    position: relative;
+    border: 0;
+    height: 600px;
+    width: 100%;
+    margin-top: 40px;
 }
 
+/* mimic media queries above */
+/* calculation formula: - @navbar-width - @navbar-margin + @left-padding */
+@media (min-width: 768px) {
+    .ketcher-demo {
+      left: -180px; // -166px -20px + 6px;
+      width: 760px;
+    }
+}
+
+@media (min-width: 980px) {
+    .ketcher-demo {
+      left: -230px; // -220px -20px + 10px;
+      width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ketcher-demo {
+      left: -280px; // -270px -30px + 20px;
+      width: 1140px;
+    }
+}

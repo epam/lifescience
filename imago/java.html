@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Java Bindings &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>Java Bindings &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Imago OCR" href="index.html" />
     <link rel="next" title="Dependencies" href="dependencies.html" />
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1306,7 +1316,7 @@
 <li class="toctree-l3"><a class="reference internal" href="c.html#interface">Interface</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Java Bindings</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Java Bindings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#distribution">Distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#workflow">Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#imago-class-public-methods">Imago Class Public Methods</a><ul>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1489,40 +1500,40 @@ recognized as a molecule.</p>
 <h2>Imago Class Public Methods<a class="headerlink" href="#imago-class-public-methods" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="constructor">
 <h3>Constructor<a class="headerlink" href="#constructor" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">Imago</span> <span class="p">();</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Imago</span> <span class="p">();</span>
 </pre></div>
 </div>
 <p>Instances are independent and are safe to be used in parallel.</p>
 </div>
 <div class="section" id="loading-the-image">
 <h3>Loading the Image<a class="headerlink" href="#loading-the-image" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre>void loadImage (byte[] buf);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">loadImage</span> <span class="p">(</span><span class="n">byte</span><span class="p">[]</span> <span class="n">buf</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Loads a supported image from the memory buffer.</p>
-<div class="highlight-python"><div class="highlight"><pre>void loadImage (String filename);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">loadImage</span> <span class="p">(</span><span class="n">String</span> <span class="n">filename</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Loads a supported type image from file.</p>
 </div>
 <div class="section" id="setting-the-options">
 <h3>Setting the Options<a class="headerlink" href="#setting-the-options" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre>void setFilter (String filter_name);
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">setFilter</span> <span class="p">(</span><span class="n">String</span> <span class="n">filter_name</span><span class="p">);</span>
 
-void setConfig (String config_name);
+<span class="n">void</span> <span class="n">setConfig</span> <span class="p">(</span><span class="n">String</span> <span class="n">config_name</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Sets one of the pre-loaded configuration parameter sets.</p>
 </div>
 <div class="section" id="performing-the-recognition">
 <h3>Performing the Recognition<a class="headerlink" href="#performing-the-recognition" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre>void recognize ();
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">recognize</span> <span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="getting-the-result">
 <h3>Getting the Result<a class="headerlink" href="#getting-the-result" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre>string getResult ();
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="n">getResult</span> <span class="p">();</span>
 </pre></div>
 </div>
 <p>Returns a string with the recognized molecule in Molfile format.</p>
@@ -1530,12 +1541,12 @@ void setConfig (String config_name);
 </div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>com.gga.imago.Imago imago = new com.gga.imago.Imago();
-imago.setFilter(&quot;prefilter_basic&quot;);  // optional
-imago.setConfig(&quot;config_indigo_render.txt&quot;); // optional
-imago.loadImage(&quot;my-image.png&quot;);
-imago.recognize();
-System.out.println(imago.getResult());
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">com</span><span class="o">.</span><span class="n">gga</span><span class="o">.</span><span class="n">imago</span><span class="o">.</span><span class="n">Imago</span> <span class="n">imago</span> <span class="o">=</span> <span class="n">new</span> <span class="n">com</span><span class="o">.</span><span class="n">gga</span><span class="o">.</span><span class="n">imago</span><span class="o">.</span><span class="n">Imago</span><span class="p">();</span>
+<span class="n">imago</span><span class="o">.</span><span class="n">setFilter</span><span class="p">(</span><span class="s2">&quot;prefilter_basic&quot;</span><span class="p">);</span>  <span class="o">//</span> <span class="n">optional</span>
+<span class="n">imago</span><span class="o">.</span><span class="n">setConfig</span><span class="p">(</span><span class="s2">&quot;config_indigo_render.txt&quot;</span><span class="p">);</span> <span class="o">//</span> <span class="n">optional</span>
+<span class="n">imago</span><span class="o">.</span><span class="n">loadImage</span><span class="p">(</span><span class="s2">&quot;my-image.png&quot;</span><span class="p">);</span>
+<span class="n">imago</span><span class="o">.</span><span class="n">recognize</span><span class="p">();</span>
+<span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">imago</span><span class="o">.</span><span class="n">getResult</span><span class="p">());</span>
 </pre></div>
 </div>
 </div>
@@ -1553,7 +1564,7 @@ System.out.println(imago.getResult());
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

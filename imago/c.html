@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>C Library Reference &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>C Library Reference &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Imago OCR" href="index.html" />
     <link rel="next" title="Java Bindings" href="java.html" />
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../indigo/release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../indigo/release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1301,7 +1311,7 @@
 <li class="toctree-l3"><a class="reference internal" href="imago_console.html#command-line-parameters-reference">Command-line parameters reference</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">C Library Reference</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">C Library Reference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#distribution">Distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a></li>
 </ul>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1460,108 +1471,108 @@ dependencies (only in Windows distribution)</li>
 <div class="section" id="interface">
 <h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
 <p>The function headers from <code class="docutils literal"><span class="pre">imago.h</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre>/* All functions return 0 on error, and a nonzero value on success */
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/*</span> <span class="n">All</span> <span class="n">functions</span> <span class="k">return</span> <span class="mi">0</span> <span class="n">on</span> <span class="n">error</span><span class="p">,</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">nonzero</span> <span class="n">value</span> <span class="n">on</span> <span class="n">success</span> <span class="o">*/</span>
 
-/* Imago library acts as a state machine.
- * You can use multiple Imago instances simultaneously, using the
- * &#39;session ID-s&#39; (see below). It is obligatory to allocate at least one
- * instance to get Imago library work properly.
- */
+<span class="o">/*</span> <span class="n">Imago</span> <span class="n">library</span> <span class="n">acts</span> <span class="k">as</span> <span class="n">a</span> <span class="n">state</span> <span class="n">machine</span><span class="o">.</span>
+ <span class="o">*</span> <span class="n">You</span> <span class="n">can</span> <span class="n">use</span> <span class="n">multiple</span> <span class="n">Imago</span> <span class="n">instances</span> <span class="n">simultaneously</span><span class="p">,</span> <span class="n">using</span> <span class="n">the</span>
+ <span class="o">*</span> <span class="s1">&#39;session ID-s&#39;</span> <span class="p">(</span><span class="n">see</span> <span class="n">below</span><span class="p">)</span><span class="o">.</span> <span class="n">It</span> <span class="ow">is</span> <span class="n">obligatory</span> <span class="n">to</span> <span class="n">allocate</span> <span class="n">at</span> <span class="n">least</span> <span class="n">one</span>
+ <span class="o">*</span> <span class="n">instance</span> <span class="n">to</span> <span class="n">get</span> <span class="n">Imago</span> <span class="n">library</span> <span class="n">work</span> <span class="n">properly</span><span class="o">.</span>
+ <span class="o">*/</span>
 
-/* Get the version of Imago.*/
-CEXPORT const char *imagoGetVersion();
+<span class="o">/*</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">version</span> <span class="n">of</span> <span class="n">Imago</span><span class="o">.*/</span>
+<span class="n">CEXPORT</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">imagoGetVersion</span><span class="p">();</span>
 
-/* Get the last error message.
- * This can be called if some other function returned zero value.
- */
-CEXPORT const char *imagoGetLastError();
+<span class="o">/*</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">last</span> <span class="n">error</span> <span class="n">message</span><span class="o">.</span>
+ <span class="o">*</span> <span class="n">This</span> <span class="n">can</span> <span class="n">be</span> <span class="n">called</span> <span class="k">if</span> <span class="n">some</span> <span class="n">other</span> <span class="n">function</span> <span class="n">returned</span> <span class="n">zero</span> <span class="n">value</span><span class="o">.</span>
+ <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">imagoGetLastError</span><span class="p">();</span>
 
-/* Allocate an instance. All instances are independent, that is,
- * they have separate images, configurations settings, resulting
- * molfiles, and error messages.
- * Using Imago library without allocation an instance will cause an error.
- */
-CEXPORT qword imagoAllocSessionId();
+<span class="o">/*</span> <span class="n">Allocate</span> <span class="n">an</span> <span class="n">instance</span><span class="o">.</span> <span class="n">All</span> <span class="n">instances</span> <span class="n">are</span> <span class="n">independent</span><span class="p">,</span> <span class="n">that</span> <span class="ow">is</span><span class="p">,</span>
+ <span class="o">*</span> <span class="n">they</span> <span class="n">have</span> <span class="n">separate</span> <span class="n">images</span><span class="p">,</span> <span class="n">configurations</span> <span class="n">settings</span><span class="p">,</span> <span class="n">resulting</span>
+ <span class="o">*</span> <span class="n">molfiles</span><span class="p">,</span> <span class="ow">and</span> <span class="n">error</span> <span class="n">messages</span><span class="o">.</span>
+ <span class="o">*</span> <span class="n">Using</span> <span class="n">Imago</span> <span class="n">library</span> <span class="n">without</span> <span class="n">allocation</span> <span class="n">an</span> <span class="n">instance</span> <span class="n">will</span> <span class="n">cause</span> <span class="n">an</span> <span class="n">error</span><span class="o">.</span>
+ <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="n">qword</span> <span class="n">imagoAllocSessionId</span><span class="p">();</span>
 
-/* Set the ID of the instance you are working with from current thread. */
-CEXPORT void imagoSetSessionId( qword id );
+<span class="o">/*</span> <span class="n">Set</span> <span class="n">the</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">the</span> <span class="n">instance</span> <span class="n">you</span> <span class="n">are</span> <span class="n">working</span> <span class="k">with</span> <span class="kn">from</span> <span class="nn">current</span> <span class="n">thread</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="n">void</span> <span class="n">imagoSetSessionId</span><span class="p">(</span> <span class="n">qword</span> <span class="nb">id</span> <span class="p">);</span>
 
-/* Release a previously allocated instance. */
-CEXPORT void imagoReleaseSessionId( qword id );
+<span class="o">/*</span> <span class="n">Release</span> <span class="n">a</span> <span class="n">previously</span> <span class="n">allocated</span> <span class="n">instance</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="n">void</span> <span class="n">imagoReleaseSessionId</span><span class="p">(</span> <span class="n">qword</span> <span class="nb">id</span> <span class="p">);</span>
 
-/* Set one of predefined configuration sets.
- * The given name should be selected from imagoGetConfigsList() results
- * Empty string as parameter means config auto-detection. */
-CEXPORT int imagoSetConfig( const char *name );
+<span class="o">/*</span> <span class="n">Set</span> <span class="n">one</span> <span class="n">of</span> <span class="n">predefined</span> <span class="n">configuration</span> <span class="n">sets</span><span class="o">.</span>
+ <span class="o">*</span> <span class="n">The</span> <span class="n">given</span> <span class="n">name</span> <span class="n">should</span> <span class="n">be</span> <span class="n">selected</span> <span class="kn">from</span> <span class="nn">imagoGetConfigsList</span><span class="p">()</span> <span class="n">results</span>
+ <span class="o">*</span> <span class="n">Empty</span> <span class="n">string</span> <span class="k">as</span> <span class="n">parameter</span> <span class="n">means</span> <span class="n">config</span> <span class="n">auto</span><span class="o">-</span><span class="n">detection</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoSetConfig</span><span class="p">(</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">name</span> <span class="p">);</span>
 
-/* Get the list of available predefined configuration sets separated by comma. */
-CEXPORT const char* imagoGetConfigsList();
+<span class="o">/*</span> <span class="n">Get</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">available</span> <span class="n">predefined</span> <span class="n">configuration</span> <span class="n">sets</span> <span class="n">separated</span> <span class="n">by</span> <span class="n">comma</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="n">const</span> <span class="n">char</span><span class="o">*</span> <span class="n">imagoGetConfigsList</span><span class="p">();</span>
 
-/* Choose the filter to process image before call imagoFilterImage()
- * name can be &quot;prefilter_binarized&quot;, &quot;prefilter_basic&quot;, or something else.
- * For the exact information see the filters_list.cpp file.
- * By default, filter from current config will be used. */
-CEXPORT int imagoSetFilter( const char *name );
+<span class="o">/*</span> <span class="n">Choose</span> <span class="n">the</span> <span class="nb">filter</span> <span class="n">to</span> <span class="n">process</span> <span class="n">image</span> <span class="n">before</span> <span class="n">call</span> <span class="n">imagoFilterImage</span><span class="p">()</span>
+ <span class="o">*</span> <span class="n">name</span> <span class="n">can</span> <span class="n">be</span> <span class="s2">&quot;prefilter_binarized&quot;</span><span class="p">,</span> <span class="s2">&quot;prefilter_basic&quot;</span><span class="p">,</span> <span class="ow">or</span> <span class="n">something</span> <span class="k">else</span><span class="o">.</span>
+ <span class="o">*</span> <span class="n">For</span> <span class="n">the</span> <span class="n">exact</span> <span class="n">information</span> <span class="n">see</span> <span class="n">the</span> <span class="n">filters_list</span><span class="o">.</span><span class="n">cpp</span> <span class="n">file</span><span class="o">.</span>
+ <span class="o">*</span> <span class="n">By</span> <span class="n">default</span><span class="p">,</span> <span class="nb">filter</span> <span class="kn">from</span> <span class="nn">current</span> <span class="n">config</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoSetFilter</span><span class="p">(</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">name</span> <span class="p">);</span>
 
-/* Image loading functions. */
-CEXPORT int imagoLoadImageFromBuffer( const char *buf, const int buf_size );
-CEXPORT int imagoLoadImageFromFile( const char *FileName );
+<span class="o">/*</span> <span class="n">Image</span> <span class="n">loading</span> <span class="n">functions</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoLoadImageFromBuffer</span><span class="p">(</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="n">const</span> <span class="nb">int</span> <span class="n">buf_size</span> <span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoLoadImageFromFile</span><span class="p">(</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">FileName</span> <span class="p">);</span>
 
-/* PNG image saving function. */
-CEXPORT int imagoSaveImageToFile( const char *FileName );
+<span class="o">/*</span> <span class="n">PNG</span> <span class="n">image</span> <span class="n">saving</span> <span class="n">function</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoSaveImageToFile</span><span class="p">(</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">FileName</span> <span class="p">);</span>
 
-/* Load raw grayscale image - byte array of length width*height. */
-CEXPORT int imagoLoadGreyscaleRawImage( const char *buf, const int width, const int height );
+<span class="o">/*</span> <span class="n">Load</span> <span class="n">raw</span> <span class="n">grayscale</span> <span class="n">image</span> <span class="o">-</span> <span class="n">byte</span> <span class="n">array</span> <span class="n">of</span> <span class="n">length</span> <span class="n">width</span><span class="o">*</span><span class="n">height</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoLoadGreyscaleRawImage</span><span class="p">(</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="n">const</span> <span class="nb">int</span> <span class="n">width</span><span class="p">,</span> <span class="n">const</span> <span class="nb">int</span> <span class="n">height</span> <span class="p">);</span>
 
-/* Enable or disable global log printing */
-/* Modes are: 0 - disabled, 1 - enable log to file, 2 - enable log to virtual fs*/
-/* WARNING: affects all threads/IDS */
-CEXPORT int imagoSetLogging( int mode );
+<span class="o">/*</span> <span class="n">Enable</span> <span class="ow">or</span> <span class="n">disable</span> <span class="k">global</span> <span class="n">log</span> <span class="n">printing</span> <span class="o">*/</span>
+<span class="o">/*</span> <span class="n">Modes</span> <span class="n">are</span><span class="p">:</span> <span class="mi">0</span> <span class="o">-</span> <span class="n">disabled</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">enable</span> <span class="n">log</span> <span class="n">to</span> <span class="n">file</span><span class="p">,</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">enable</span> <span class="n">log</span> <span class="n">to</span> <span class="n">virtual</span> <span class="n">fs</span><span class="o">*/</span>
+<span class="o">/*</span> <span class="n">WARNING</span><span class="p">:</span> <span class="n">affects</span> <span class="nb">all</span> <span class="n">threads</span><span class="o">/</span><span class="n">IDS</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoSetLogging</span><span class="p">(</span> <span class="nb">int</span> <span class="n">mode</span> <span class="p">);</span>
 
-/* Attach some arbitrary data to the current Imago instance. */
-CEXPORT int imagoSetSessionSpecificData( void *data );
-CEXPORT int imagoGetSessionSpecificData( void **data );
+<span class="o">/*</span> <span class="n">Attach</span> <span class="n">some</span> <span class="n">arbitrary</span> <span class="n">data</span> <span class="n">to</span> <span class="n">the</span> <span class="n">current</span> <span class="n">Imago</span> <span class="n">instance</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoSetSessionSpecificData</span><span class="p">(</span> <span class="n">void</span> <span class="o">*</span><span class="n">data</span> <span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoGetSessionSpecificData</span><span class="p">(</span> <span class="n">void</span> <span class="o">**</span><span class="n">data</span> <span class="p">);</span>
 
-/* Main recognition routine. Image must be loaded &amp; filtered previously.
-   Returns count of recognition warnings in warningsCountDataOut value (if specified) */
-CEXPORT int imagoRecognize( int *warningsCountDataOut /* = NULL */);
+<span class="o">/*</span> <span class="n">Main</span> <span class="n">recognition</span> <span class="n">routine</span><span class="o">.</span> <span class="n">Image</span> <span class="n">must</span> <span class="n">be</span> <span class="n">loaded</span> <span class="o">&amp;</span> <span class="n">filtered</span> <span class="n">previously</span><span class="o">.</span>
+   <span class="n">Returns</span> <span class="n">count</span> <span class="n">of</span> <span class="n">recognition</span> <span class="n">warnings</span> <span class="ow">in</span> <span class="n">warningsCountDataOut</span> <span class="n">value</span> <span class="p">(</span><span class="k">if</span> <span class="n">specified</span><span class="p">)</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoRecognize</span><span class="p">(</span> <span class="nb">int</span> <span class="o">*</span><span class="n">warningsCountDataOut</span> <span class="o">/*</span> <span class="o">=</span> <span class="n">NULL</span> <span class="o">*/</span><span class="p">);</span>
 
-/* Molfile (.mol) output functions. */
-CEXPORT int imagoSaveMolToBuffer( char **buf, int *buf_size );
-CEXPORT int imagoSaveMolToFile( const char *fileName );
+<span class="o">/*</span> <span class="n">Molfile</span> <span class="p">(</span><span class="o">.</span><span class="n">mol</span><span class="p">)</span> <span class="n">output</span> <span class="n">functions</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoSaveMolToBuffer</span><span class="p">(</span> <span class="n">char</span> <span class="o">**</span><span class="n">buf</span><span class="p">,</span> <span class="nb">int</span> <span class="o">*</span><span class="n">buf_size</span> <span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoSaveMolToFile</span><span class="p">(</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">fileName</span> <span class="p">);</span>
 
-/* Process image filtering. */
-CEXPORT int imagoFilterImage();
+<span class="o">/*</span> <span class="n">Process</span> <span class="n">image</span> <span class="n">filtering</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoFilterImage</span><span class="p">();</span>
 
-/* Returns filtered image ink percentage (0.0 .. 1.0) */
-CEXPORT int imagoGetInkPercentage( double *result );
+<span class="o">/*</span> <span class="n">Returns</span> <span class="n">filtered</span> <span class="n">image</span> <span class="n">ink</span> <span class="n">percentage</span> <span class="p">(</span><span class="mf">0.0</span> <span class="o">..</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoGetInkPercentage</span><span class="p">(</span> <span class="n">double</span> <span class="o">*</span><span class="n">result</span> <span class="p">);</span>
 
-/* returns filtered image dimensions */
-CEXPORT int imagoGetPrefilteredImageSize( int *width, int *height );
+<span class="o">/*</span> <span class="n">returns</span> <span class="n">filtered</span> <span class="n">image</span> <span class="n">dimensions</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoGetPrefilteredImageSize</span><span class="p">(</span> <span class="nb">int</span> <span class="o">*</span><span class="n">width</span><span class="p">,</span> <span class="nb">int</span> <span class="o">*</span><span class="n">height</span> <span class="p">);</span>
 
-/* returns filtered image data */
-CEXPORT int imagoGetPrefilteredImage( unsigned char **data, int *width, int *height );
+<span class="o">/*</span> <span class="n">returns</span> <span class="n">filtered</span> <span class="n">image</span> <span class="n">data</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoGetPrefilteredImage</span><span class="p">(</span> <span class="n">unsigned</span> <span class="n">char</span> <span class="o">**</span><span class="n">data</span><span class="p">,</span> <span class="nb">int</span> <span class="o">*</span><span class="n">width</span><span class="p">,</span> <span class="nb">int</span> <span class="o">*</span><span class="n">height</span> <span class="p">);</span>
 
-/* returns count of files contained in log vfs. */
-CEXPORT int imagoGetLogCount( int *count );
+<span class="o">/*</span> <span class="n">returns</span> <span class="n">count</span> <span class="n">of</span> <span class="n">files</span> <span class="n">contained</span> <span class="ow">in</span> <span class="n">log</span> <span class="n">vfs</span><span class="o">.</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoGetLogCount</span><span class="p">(</span> <span class="nb">int</span> <span class="o">*</span><span class="n">count</span> <span class="p">);</span>
 
-/* returns it&#39;s file name, length and content */
-CEXPORT int imagoGetLogRecord( int it, char **filename, int *lengths, char **data );
+<span class="o">/*</span> <span class="n">returns</span> <span class="n">it</span><span class="s1">&#39;s file name, length and content */</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoGetLogRecord</span><span class="p">(</span> <span class="nb">int</span> <span class="n">it</span><span class="p">,</span> <span class="n">char</span> <span class="o">**</span><span class="n">filename</span><span class="p">,</span> <span class="nb">int</span> <span class="o">*</span><span class="n">lengths</span><span class="p">,</span> <span class="n">char</span> <span class="o">**</span><span class="n">data</span> <span class="p">);</span>
 
-/* clears all current vfs log content */
-CEXPORT int imagoClearLog();
+<span class="o">/*</span> <span class="n">clears</span> <span class="nb">all</span> <span class="n">current</span> <span class="n">vfs</span> <span class="n">log</span> <span class="n">content</span> <span class="o">*/</span>
+<span class="n">CEXPORT</span> <span class="nb">int</span> <span class="n">imagoClearLog</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>The correct API functions calling order is:</p>
-<div class="highlight-python"><div class="highlight"><pre>imagoAllocSessionId()
-imagoSetSessionId(id)
-imagoLoadImageFromFile() / imagoLoadImageFromBuffer / imagoLoadGreyscaleRawImage
-imagoSetFilter() [optional]
-imagoFilterImage()
-    imagoSetConfig() [optional]
-    imagoRecognize()
-    imagoSaveMolToFile() / imagoSaveMolToBuffer()
-imagoReleaseSessionId(id)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">imagoAllocSessionId</span><span class="p">()</span>
+<span class="n">imagoSetSessionId</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="n">imagoLoadImageFromFile</span><span class="p">()</span> <span class="o">/</span> <span class="n">imagoLoadImageFromBuffer</span> <span class="o">/</span> <span class="n">imagoLoadGreyscaleRawImage</span>
+<span class="n">imagoSetFilter</span><span class="p">()</span> <span class="p">[</span><span class="n">optional</span><span class="p">]</span>
+<span class="n">imagoFilterImage</span><span class="p">()</span>
+    <span class="n">imagoSetConfig</span><span class="p">()</span> <span class="p">[</span><span class="n">optional</span><span class="p">]</span>
+    <span class="n">imagoRecognize</span><span class="p">()</span>
+    <span class="n">imagoSaveMolToFile</span><span class="p">()</span> <span class="o">/</span> <span class="n">imagoSaveMolToBuffer</span><span class="p">()</span>
+<span class="n">imagoReleaseSessionId</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1579,7 +1590,7 @@ imagoReleaseSessionId(id)
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

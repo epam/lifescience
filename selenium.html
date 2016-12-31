@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>GGA Selenium Framework &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>GGA Selenium Framework &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="index.html" />
     <link rel="prev" title="Release Notes" href="parso/changelog.html" />
 <meta charset='utf-8'>
@@ -1039,6 +1041,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="indigo/release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="indigo/release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="indigo/release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="indigo/release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="indigo/release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="indigo/release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="indigo/release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1377,7 +1387,7 @@
 <li class="toctree-l2"><a class="reference internal" href="parso.html#commercial-availability">Commercial Availability</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Selenium Framework</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Selenium Framework</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#framework-features">Framework Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-use">How to Use</a></li>
@@ -1413,6 +1423,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1451,22 +1462,22 @@ substantial test development instead of tiresome testware maintenance.</p>
 <li><p class="first">Change the <code class="docutils literal"><span class="pre">pom.xml</span></code> file of Maven project:</p>
 <ul>
 <li><p class="first">Add the following dependencies:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;dependency&gt;
-      &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-      &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
-      &lt;version&gt;2.42.2&lt;/version&gt;
-  &lt;/dependency&gt;
-  &lt;dependency&gt;
-      &lt;groupId&gt;com.ggasoftware.uitest&lt;/groupId&gt;
-      &lt;artifactId&gt;gga-selenium-framework-core&lt;/artifactId&gt;
-      &lt;version&gt;1.0&lt;/version&gt;
-  &lt;/dependency&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="o">.</span><span class="n">seleniumhq</span><span class="o">.</span><span class="n">selenium</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">selenium</span><span class="o">-</span><span class="n">java</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">2.42</span><span class="o">.</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">com</span><span class="o">.</span><span class="n">ggasoftware</span><span class="o">.</span><span class="n">uitest</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">gga</span><span class="o">-</span><span class="n">selenium</span><span class="o">-</span><span class="n">framework</span><span class="o">-</span><span class="n">core</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.0</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Add the XML suit file and listener to the
 <code class="docutils literal"><span class="pre">maven-surefire-plugin</span></code> configuration:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;suiteXmlFiles&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;suiteXmlFiles&gt;
     &lt;suiteXmlFile&gt;src/test/resources/${testng_xml}&lt;/suiteXmlFile&gt;
 &lt;/suiteXmlFiles&gt;
 &lt;property&gt;
@@ -1481,17 +1492,17 @@ substantial test development instead of tiresome testware maintenance.</p>
 </li>
 <li><p class="first">Create base class that extends the <code class="docutils literal"><span class="pre">TestBaseWebDriver</span></code> class with
 <code class="docutils literal"><span class="pre">TestNG</span></code> annotations:</p>
-<div class="highlight-python"><div class="highlight"><pre>@BeforeTest
-public void setUp() throws MalformedURLException {
-    setBrowserType(&quot;firefox&quot;);
-    initWebDriver();
-    WebDriverWrapper.open(&quot;https://www.google.com&quot;);
-}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@BeforeTest</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">setUp</span><span class="p">()</span> <span class="n">throws</span> <span class="n">MalformedURLException</span> <span class="p">{</span>
+    <span class="n">setBrowserType</span><span class="p">(</span><span class="s2">&quot;firefox&quot;</span><span class="p">);</span>
+    <span class="n">initWebDriver</span><span class="p">();</span>
+    <span class="n">WebDriverWrapper</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;https://www.google.com&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
-@AfterTest
-public void quit() {
-    WebDriverWrapper.quit();
-}
+<span class="nd">@AfterTest</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">quit</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">WebDriverWrapper</span><span class="o">.</span><span class="n">quit</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </li>
@@ -1500,8 +1511,8 @@ browsers, please, download appropriate drivers (<a class="reference external" hr
 Selenium</a>) and add
 environment variables.</p>
 <p>For project base class it could be like:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s">&quot;webdriver.chrome.driver&quot;</span><span class="p">,</span> <span class="n">chromeDriverPath</span><span class="p">);</span>
-<span class="n">System</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s">&quot;webdriver.ie.driver&quot;</span><span class="p">,</span> <span class="n">ieDriverPath</span><span class="p">);</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;webdriver.chrome.driver&quot;</span><span class="p">,</span> <span class="n">chromeDriverPath</span><span class="p">);</span>
+<span class="n">System</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;webdriver.ie.driver&quot;</span><span class="p">,</span> <span class="n">ieDriverPath</span><span class="p">);</span>
 </pre></div>
 </div>
 </li>
@@ -1509,7 +1520,7 @@ environment variables.</p>
 Downloads</a>)
 and add environment variable.</p>
 <p>For project base class it is:</p>
-<div class="highlight-python"><div class="highlight"><pre>System.setProperty(&quot;AutoItX3.dll.path&quot;, autoItDllPath));
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="n">setProperty</span><span class="p">(</span><span class="s2">&quot;AutoItX3.dll.path&quot;</span><span class="p">,</span> <span class="n">autoItDllPath</span><span class="p">));</span>
 </pre></div>
 </div>
 </li>
@@ -1558,7 +1569,7 @@ this program. If you did not, please see <a class="reference external" href="htt
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   

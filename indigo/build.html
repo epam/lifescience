@@ -12,7 +12,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Building from sources &mdash; Life Sciences 0.3.0 documentation</title>
+    <title>Building from sources &#8212; Life Sciences 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -37,6 +37,8 @@
     <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Life Sciences 0.3.0 documentation" href="../index.html" />
     <link rel="up" title="Indigo Toolkit" href="index.html" />
     <link rel="next" title="Options" href="options/index.html" />
@@ -835,7 +837,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Build</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Build</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building">Building</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
@@ -1041,6 +1043,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release-notes/index.html">Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html">Indigo 1.3.0 beta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#details">Details</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="release-notes/1.3.x/indigo-1.3.0b.html#name-to-structure">Name to Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="release-notes/knime/indigo_knime_2_nodes.html">Indigo KNIME Nodes 2.0</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release-notes/knime/indigo_knime_2_nodes.html#summary">Summary</a></li>
 </ul>
@@ -1415,6 +1425,7 @@
   <input type="hidden" name="area" value="default" />
 </form>
           
+            <div class="navbar-right"><a href="https://groups.google.com/forum/#!forum/indigo-general"> Google Groups </a><a href="https://github.com/epam">GitHub</a> </div>
         </div>
       </div>
     </div>
@@ -1474,36 +1485,36 @@
 <div class="section" id="building">
 <h2>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h2>
 <p>To build Indigo sources go to the <code class="docutils literal"><span class="pre">build_scripts</span></code> folder and run <code class="docutils literal"><span class="pre">indigo-release-libs.py</span></code> script:</p>
-<div class="highlight-python"><div class="highlight"><pre>Usage: indigo-release-libs.py [options]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span> <span class="n">indigo</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="n">libs</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 
-Indigo libraries build script
+<span class="n">Indigo</span> <span class="n">libraries</span> <span class="n">build</span> <span class="n">script</span>
 
-Options:
-  -h, --help            show this help message and exit
-  --generator=GENERATOR
-                        this option is passed as -G option for cmake
-  --params=PARAMS       additional build parameters
-  --config=CONFIG       project configuration
-  --nobuild             configure without building
-  --clean               delete all the build data
-  --preset=PRESET       build preset [&#39;linux32-universal&#39;, &#39;win32-mingw&#39;,
-                        &#39;mac10.10&#39;, &#39;win64-2012&#39;, &#39;win64&#39;, &#39;win32&#39;, &#39;mac10.9&#39;,
-                        &#39;linux64&#39;, &#39;mac10.7&#39;, &#39;linux64-universal&#39;,
-                        &#39;win32-2013&#39;, &#39;win32-2012&#39;, &#39;mac-universal&#39;,
-                        &#39;win64-2013&#39;, &#39;mac10.8&#39;, &#39;linux32&#39;, &#39;mac10.6&#39;]
-  --with-static         Build Indigo static libraries
-  --verbose             Show verbose build information
-  --cairo-gl            Build Cairo with OpenGL support
-  --cairo-vg            Build Cairo with CairoVG support
-  --cairo-egl           Build Cairo with EGL support
-  --cairo-glesv2        Build Cairo with GLESv2 support
-  --find-cairo          Find and use system Cairo
-  --find-pixman         Find and use system Pixman
+<span class="n">Options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+  <span class="o">--</span><span class="n">generator</span><span class="o">=</span><span class="n">GENERATOR</span>
+                        <span class="n">this</span> <span class="n">option</span> <span class="ow">is</span> <span class="n">passed</span> <span class="k">as</span> <span class="o">-</span><span class="n">G</span> <span class="n">option</span> <span class="k">for</span> <span class="n">cmake</span>
+  <span class="o">--</span><span class="n">params</span><span class="o">=</span><span class="n">PARAMS</span>       <span class="n">additional</span> <span class="n">build</span> <span class="n">parameters</span>
+  <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">CONFIG</span>       <span class="n">project</span> <span class="n">configuration</span>
+  <span class="o">--</span><span class="n">nobuild</span>             <span class="n">configure</span> <span class="n">without</span> <span class="n">building</span>
+  <span class="o">--</span><span class="n">clean</span>               <span class="n">delete</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">build</span> <span class="n">data</span>
+  <span class="o">--</span><span class="n">preset</span><span class="o">=</span><span class="n">PRESET</span>       <span class="n">build</span> <span class="n">preset</span> <span class="p">[</span><span class="s1">&#39;linux32-universal&#39;</span><span class="p">,</span> <span class="s1">&#39;win32-mingw&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;mac10.10&#39;</span><span class="p">,</span> <span class="s1">&#39;win64-2012&#39;</span><span class="p">,</span> <span class="s1">&#39;win64&#39;</span><span class="p">,</span> <span class="s1">&#39;win32&#39;</span><span class="p">,</span> <span class="s1">&#39;mac10.9&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;linux64&#39;</span><span class="p">,</span> <span class="s1">&#39;mac10.7&#39;</span><span class="p">,</span> <span class="s1">&#39;linux64-universal&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;win32-2013&#39;</span><span class="p">,</span> <span class="s1">&#39;win32-2012&#39;</span><span class="p">,</span> <span class="s1">&#39;mac-universal&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;win64-2013&#39;</span><span class="p">,</span> <span class="s1">&#39;mac10.8&#39;</span><span class="p">,</span> <span class="s1">&#39;linux32&#39;</span><span class="p">,</span> <span class="s1">&#39;mac10.6&#39;</span><span class="p">]</span>
+  <span class="o">--</span><span class="k">with</span><span class="o">-</span><span class="n">static</span>         <span class="n">Build</span> <span class="n">Indigo</span> <span class="n">static</span> <span class="n">libraries</span>
+  <span class="o">--</span><span class="n">verbose</span>             <span class="n">Show</span> <span class="n">verbose</span> <span class="n">build</span> <span class="n">information</span>
+  <span class="o">--</span><span class="n">cairo</span><span class="o">-</span><span class="n">gl</span>            <span class="n">Build</span> <span class="n">Cairo</span> <span class="k">with</span> <span class="n">OpenGL</span> <span class="n">support</span>
+  <span class="o">--</span><span class="n">cairo</span><span class="o">-</span><span class="n">vg</span>            <span class="n">Build</span> <span class="n">Cairo</span> <span class="k">with</span> <span class="n">CairoVG</span> <span class="n">support</span>
+  <span class="o">--</span><span class="n">cairo</span><span class="o">-</span><span class="n">egl</span>           <span class="n">Build</span> <span class="n">Cairo</span> <span class="k">with</span> <span class="n">EGL</span> <span class="n">support</span>
+  <span class="o">--</span><span class="n">cairo</span><span class="o">-</span><span class="n">glesv2</span>        <span class="n">Build</span> <span class="n">Cairo</span> <span class="k">with</span> <span class="n">GLESv2</span> <span class="n">support</span>
+  <span class="o">--</span><span class="n">find</span><span class="o">-</span><span class="n">cairo</span>          <span class="n">Find</span> <span class="ow">and</span> <span class="n">use</span> <span class="n">system</span> <span class="n">Cairo</span>
+  <span class="o">--</span><span class="n">find</span><span class="o">-</span><span class="n">pixman</span>         <span class="n">Find</span> <span class="ow">and</span> <span class="n">use</span> <span class="n">system</span> <span class="n">Pixman</span>
 </pre></div>
 </div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre>python indigo-release-libs.py --preset=win64-2012
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">indigo</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="n">libs</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">preset</span><span class="o">=</span><span class="n">win64</span><span class="o">-</span><span class="mi">2012</span>
 </pre></div>
 </div>
 </div>
@@ -1514,11 +1525,11 @@ Options:
 <h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
 <p>Go to the <code class="docutils literal"><span class="pre">api/python</span></code> directory and run <code class="docutils literal"><span class="pre">copy-libs.py</span></code> script. After that <code class="docutils literal"><span class="pre">libs</span></code> directory will appear.
 To use Indigo API and its plugins in python script import them as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;path_to_indigo/api/python&#39;</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;path_to_indigo/api/inchi/python&#39;</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;path_to_indigo/api/renderer/python&#39;</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;path_to_indigo/api/bingo/python&#39;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;path_to_indigo/api/python&#39;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;path_to_indigo/api/inchi/python&#39;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;path_to_indigo/api/renderer/python&#39;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;path_to_indigo/api/bingo/python&#39;</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">indigo</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">indigo_inchi</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">indigo_renderer</span> <span class="kn">import</span> <span class="o">*</span>
@@ -1529,7 +1540,7 @@ To use Indigo API and its plugins in python script import them as follows:</p>
 <div class="section" id="java">
 <h3>Java<a class="headerlink" href="#java" title="Permalink to this headline">¶</a></h3>
 <p>Run <code class="docutils literal"><span class="pre">indigo-make-by-libs.py</span></code> script:</p>
-<div class="highlight-python"><div class="highlight"><pre>python indigo-make-by-libs.py
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">indigo</span><span class="o">-</span><span class="n">make</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">libs</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>It will create <code class="docutils literal"><span class="pre">indigo-java-</span> <span class="pre">...</span> <span class="pre">.zip</span></code> archive in <code class="docutils literal"><span class="pre">dist</span></code> directory which will contain jar files with Indigo and its plugins.</p>
@@ -1555,7 +1566,7 @@ To use Indigo API and its plugins in python script import them as follows:</p>
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on May 24, 2016.<br/>
+      Last updated on Dec 31, 2016.<br/>
     </p>
   </div>
   
