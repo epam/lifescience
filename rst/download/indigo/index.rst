@@ -27,24 +27,24 @@ Changelog available `here <../../indigo/release-notes/1.3.x/indigo-1.3.0b.html>`
      - |image2| Mac OS
      - Universal
    * - |p-icon| Python 
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-python-1.3.0beta.r16-linux.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-python-1.3.0beta.r16-win.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-python-1.3.0beta.r16-mac.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-python-1.3.0beta.r16-universal.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-python-1.3.0beta.r16-linux.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-python-1.3.0beta.r16-win.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-python-1.3.0beta.r16-mac.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-python-1.3.0beta.r16-universal.zip>`__
    * - |j-icon| Java 
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-java-1.3.0beta.r16-linux.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-java-1.3.0beta.r16-win.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-java-1.3.0beta.r16-mac.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-java-1.3.0beta.r16-universal.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-java-1.3.0beta.r16-linux.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-java-1.3.0beta.r16-win.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-java-1.3.0beta.r16-mac.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-java-1.3.0beta.r16-universal.zip>`__
    * - |c-icon| .NET 
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-dotnet-1.3.0beta.r16-linux.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-dotnet-1.3.0beta.r16-win.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-dotnet-1.3.0beta.r16-mac.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-dotnet-1.3.0beta.r16-universal.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-dotnet-1.3.0beta.r16-linux.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-dotnet-1.3.0beta.r16-win.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-dotnet-1.3.0beta.r16-mac.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-dotnet-1.3.0beta.r16-universal.zip>`__
    * - |n-icon| C Shared Libraries 
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-libs-1.3.0beta.r16-linux-shared.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-libs-1.3.0beta.r16-win-shared.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-libs-1.3.0beta.r16-mac-shared.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-libs-1.3.0beta.r16-linux-shared.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-libs-1.3.0beta.r16-win-shared.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-libs-1.3.0beta.r16-mac-shared.zip>`__
      - \-
 
 **Utilities**
@@ -61,24 +61,24 @@ Changelog available `here <../../indigo/release-notes/1.3.x/indigo-1.3.0b.html>`
      - |image2| Mac OS
      - Universal
    * - `Cano <../../indigo/indigo-cano.html>`__, `Deco <../../indigo/indigo-deco.html>`__ and `Depict <../../indigo/indigo-depict.html>`__
-     - `32bit <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-linux32.zip>`__,
-       `64bit <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-linux64.zip>`__
-     - `32bit <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-win32.zip>`__,
-       `64bit <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-win64.zip>`__
-     - `mac10.7.zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-mac10.7.zip>`__
+     - `32bit <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-linux32.zip>`__,
+       `64bit <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-linux64.zip>`__
+     - `32bit <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-win32.zip>`__,
+       `64bit <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-win64.zip>`__
+     - `mac10.7.zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-mac10.7.zip>`__
      - \-
    * - `ChemDiff <../../indigo/chemdiff.html>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-linux.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-win.zip>`__,
-       `installer <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-win-installer.exe>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-mac.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-universal.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-linux.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-win.zip>`__,
+       `installer <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-win-installer.exe>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-mac.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-universal.zip>`__
    * - `Legio <../../indigo/legio.html>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-linux.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-win.zip>`__,
-       `installer <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-win-installer.exe>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-mac.zip>`__
-     - `zip <http://indigoweb.epm-lsop.projects.epam.com/content/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-universal.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-linux.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-win.zip>`__,
+       `installer <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-win-installer.exe>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-mac.zip>`__
+     - `zip <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-universal.zip>`__
 
 
 
