@@ -93,7 +93,7 @@ Changelog available `here <../../indigo/release-notes/1.3.x/indigo-1.3.0b.html>`
 **Maven  Repository**
 
 
-All the Indigo Java packages are uploaded to `The Central Repository <http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.epam.indigo%22%20AND%20v%3A%221.3.0beta.r16%22>`_.
+All the Indigo Java packages are uploaded to `Maven Central Repository <http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.epam.indigo%22%20AND%20v%3A%221.3.0beta.r16%22>`_.
 
 
 Just add a dependency to your Maven project to download Indigo Java API automatically:
