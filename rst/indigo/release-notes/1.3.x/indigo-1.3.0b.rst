@@ -59,6 +59,6 @@ Currently, the following grammar elements are supported:
 * Dictionary of trivial names (~150 names)
 * Relaxed vs. strict IUPAC grammar (penta-1,3-diene vs. 1,3-pentadiene)
 
-See some examples 
+See some `examples <../../examples/name-to-structure.html>`__
 
 

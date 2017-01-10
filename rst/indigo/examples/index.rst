@@ -13,6 +13,7 @@ Contents:
    standardize
    scsr-transformations
    layout
+   name-to-structure
 
 
 .. TODO
