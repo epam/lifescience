@@ -530,10 +530,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="indigo/index.html">Indigo Toolkit</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="indigo/api/index.html">API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="indigo/api/c.html">Plain C</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="indigo/api/c.html#core-indigo-api">Core Indigo API</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="indigo/api/index.html#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="indigo/api/index.html#basics">Basics</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="indigo/api/index.html#system">System</a></li>
@@ -649,6 +645,20 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="indigo/api/index.html#reaction-products-enumeration">Reaction Products Enumeration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="indigo/api/index.html#reaction-based-molecule-transformations">Reaction-based Molecule Transformations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="indigo/api/reference.html">API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="indigo/api/reference.html#python">Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="indigo/api/reference.html#indigo">Indigo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="indigo/api/reference.html#indigoobject">IndigoObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="indigo/api/reference.html#indigorenderer">IndigoRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="indigo/api/reference.html#indigoinchi">IndigoInchi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="indigo/api/reference.html#plain-c">Plain C</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="indigo/api/reference.html#core-indigo-api">Core Indigo API</a></li>
 </ul>
 </li>
 </ul>
@@ -770,7 +780,7 @@
 <li class="toctree-l5"><a class="reference internal" href="download/indigo/index.html#id1"><strong>Language Bindings</strong></a></li>
 <li class="toctree-l5"><a class="reference internal" href="download/indigo/index.html#id2"><strong>Utilities</strong></a></li>
 <li class="toctree-l5"><a class="reference internal" href="download/indigo/index.html#id3"><strong>Source code</strong></a></li>
-<li class="toctree-l5"><a class="reference internal" href="download/indigo/index.html#maven-central-repository"><strong>Maven Central Repository</strong></a></li>
+<li class="toctree-l5"><a class="reference internal" href="download/indigo/index.html#id4"><strong>Maven Central Repository</strong></a></li>
 <li class="toctree-l5"><a class="reference internal" href="download/indigo/index.html#nuget-repository"><strong>NuGet Repository</strong></a></li>
 </ul>
 </li>
@@ -847,16 +857,21 @@
 <li class="toctree-l2"><a class="reference internal" href="indigo/build.html">Build</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="indigo/build.html#requirements">Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="indigo/build.html#building">Building</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="indigo/build.html#example">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="indigo/build.html#native-library">Native library</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="indigo/build.html#language-bindings">Language Bindings</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="indigo/build.html#python">Python</a></li>
 <li class="toctree-l4"><a class="reference internal" href="indigo/build.html#java">Java</a></li>
 <li class="toctree-l4"><a class="reference internal" href="indigo/build.html#net">.NET</a></li>
-<li class="toctree-l4"><a class="reference internal" href="indigo/build.html#native-library">Native library</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="indigo/installation.html">SDK Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="indigo/installation.html#java">Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo/installation.html#python">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="indigo/installation.html#net">.NET</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="indigo/options/index.html">Options</a><ul>
@@ -1163,12 +1178,6 @@
 <li class="toctree-l4"><a class="reference internal" href="indigo/examples/atom-coloring.html#rendering-a-set-of-molecules-in-a-grid">Rendering a set of molecules in a grid</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="indigo/examples/installation.html">SDK Installation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="indigo/examples/installation.html#java">Java</a></li>
-<li class="toctree-l4"><a class="reference internal" href="indigo/examples/installation.html#python">Python</a></li>
-<li class="toctree-l4"><a class="reference internal" href="indigo/examples/installation.html#net">.NET</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="indigo/examples/calculating-properties.html">Calculating Properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="indigo/examples/calculating-properties.html#canonical-smiles">Canonical Smiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="indigo/examples/calculating-properties.html#enumeration-of-tautomers">Enumeration of Tautomers</a></li>
@@ -1191,6 +1200,11 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="indigo/examples/layout.html">Layout (2D coordinates)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="indigo/examples/layout.html#smart-and-simple-layout">Smart and simple layout</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="indigo/examples/name-to-structure.html">Name To Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="indigo/examples/name-to-structure.html#use-nametostructure">Use nameToStructure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="indigo/examples/name-to-structure.html#use-loadmolecule">Use loadMolecule</a></li>
 </ul>
 </li>
 </ul>
@@ -1446,8 +1460,1736 @@
 <h1 id="index">Index</h1>
 
 <div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
  
 </div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.ABS">ABS (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addAtom">addAtom() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addBond">addBond() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addCatalyst">addCatalyst() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addConstraint">addConstraint() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addConstraintNot">addConstraintNot() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addConstraintOr">addConstraintOr() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addDataSGroup">addDataSGroup() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addDecomposition">addDecomposition() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addProduct">addProduct() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addReactant">addReactant() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addRSite">addRSite() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addSGroupAttachmentPoint">addSGroupAttachmentPoint() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addStereocenter">addStereocenter() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.addSuperatom">addSuperatom() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.alignAtoms">alignAtoms() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.ALLENE">ALLENE (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.allScaffolds">allScaffolds() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.AND">AND (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.append">append() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.aromatize">aromatize() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.arrayAdd">arrayAdd() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.at">at() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.atomicNumber">atomicNumber() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.atomMappingNumber">atomMappingNumber() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.automap">automap() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.bond">bond() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.bondOrder">bondOrder() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.bondStereo">bondStereo() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.buildPkaModel">buildPkaModel() (indigo.Indigo method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.canonicalSmarts">canonicalSmarts() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.canonicalSmiles">canonicalSmiles() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.cdxml">cdxml() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.CHAIN">CHAIN (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.changeStereocenterType">changeStereocenterType() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.charge">charge() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.checkAmbiguousH">checkAmbiguousH() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.checkBadValence">checkBadValence() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.checkQuery">checkQuery() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.checkRGroups">checkRGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.checkValence">checkValence() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.CIS">CIS (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.clean2d">clean2d() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.clear">clear() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.clearAAM">clearAAM() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.clearAlleneCenters">clearAlleneCenters() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.clearAttachmentPoints">clearAttachmentPoints() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.clearCisTrans">clearCisTrans() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.clearProperties">clearProperties() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.clearStereocenters">clearStereocenters() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.clearTautomerRules">clearTautomerRules() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.clone">clone() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.close">close() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.cml">cml() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.cmlAppend">cmlAppend() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.cmlFooter">cmlFooter() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.cmlHeader">cmlHeader() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.commonBits">commonBits() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.component">component() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.componentIndex">componentIndex() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.convertToArray">convertToArray() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.correctReactingCenters">correctReactingCenters() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.count">count() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countAlleneCenters">countAlleneCenters() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countAtoms">countAtoms() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countAttachmentPoints">countAttachmentPoints() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countBits">countBits() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countBonds">countBonds() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countCatalysts">countCatalysts() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countComponents">countComponents() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countDataSGroups">countDataSGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countGenericSGroups">countGenericSGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countHeavyAtoms">countHeavyAtoms() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countHydrogens">countHydrogens() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countImplicitHydrogens">countImplicitHydrogens() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countMatches">countMatches() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countMatchesWithLimit">countMatchesWithLimit() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countMolecules">countMolecules() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countMultipleGroups">countMultipleGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countProducts">countProducts() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countPseudoatoms">countPseudoatoms() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countReactants">countReactants() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.countReferences">countReferences() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countRepeatingUnits">countRepeatingUnits() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countRGroups">countRGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countRSites">countRSites() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countSSSR">countSSSR() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countStereocenters">countStereocenters() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.countSuperatoms">countSuperatoms() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.createArray">createArray() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.createDecomposer">createDecomposer() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.createEdgeSubmolecule">createEdgeSubmolecule() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.createFileSaver">createFileSaver() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.createMolecule">createMolecule() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.createQueryMolecule">createQueryMolecule() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.createQueryReaction">createQueryReaction() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.createReaction">createReaction() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.createSaver">createSaver() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.createSGroup">createSGroup() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.createSubmolecule">createSubmolecule() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.data">data() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.dbgBreakpoint">dbgBreakpoint() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.dbgInternalType">dbgInternalType() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.dearomatize">dearomatize() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.decomposedMoleculeHighlighted">decomposedMoleculeHighlighted() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.decomposedMoleculeScaffold">decomposedMoleculeScaffold() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.decomposedMoleculeWithRGroups">decomposedMoleculeWithRGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.decomposeMolecule">decomposeMolecule() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.decomposeMolecules">decomposeMolecules() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.degree">degree() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.deleteSGroupAttachmentPoint">deleteSGroupAttachmentPoint() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.description">description() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.destination">destination() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.dispose">dispose() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.dllpath">dllpath (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.DOUBLET">DOUBLET (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.DOWN">DOWN (indigo.Indigo attribute)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.EITHER">EITHER (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.exactMatch">exactMatch() (indigo.Indigo method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.expandAbbreviations">expandAbbreviations() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.extractCommonScaffold">extractCommonScaffold() (indigo.Indigo method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.findSGroups">findSGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.fingerprint">fingerprint() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.foldHydrogens">foldHydrogens() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getAcidPkaValue">getAcidPkaValue() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getAtom">getAtom() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_inchi.IndigoInchi.getAuxInfo">getAuxInfo() (indigo_inchi.IndigoInchi method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getBasicPkaValue">getBasicPkaValue() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getBond">getBond() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getDataSGroup">getDataSGroup() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getExplicitValence">getExplicitValence() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.getFragmentedMolecule">getFragmentedMolecule() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getGenericSGroup">getGenericSGroup() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_inchi.IndigoInchi.getInchi">getInchi() (indigo_inchi.IndigoInchi method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_inchi.IndigoInchi.getInchiKey">getInchiKey() (indigo_inchi.IndigoInchi method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_inchi.IndigoInchi.getLog">getLog() (indigo_inchi.IndigoInchi method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getMolecule">getMolecule() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getMultipleGroup">getMultipleGroup() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getProperty">getProperty() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getRepeatingUnit">getRepeatingUnit() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getRepeatingUnitConnectivity">getRepeatingUnitConnectivity() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getRepeatingUnitSubscript">getRepeatingUnitSubscript() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSGroupClass">getSGroupClass() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSGroupDisplayOption">getSGroupDisplayOption() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSGroupIndex">getSGroupIndex() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSGroupMultiplier">getSGroupMultiplier() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSGroupName">getSGroupName() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSGroupNumCrossBonds">getSGroupNumCrossBonds() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSGroupOriginalId">getSGroupOriginalId() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSGroupParentId">getSGroupParentId() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSGroupSeqId">getSGroupSeqId() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSGroupType">getSGroupType() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSubmolecule">getSubmolecule() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.getSuperatom">getSuperatom() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_inchi.IndigoInchi.getWarning">getWarning() (indigo_inchi.IndigoInchi method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.grossFormula">grossFormula() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.hasCoord">hasCoord() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.hasNext">hasNext() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.hasProperty">hasProperty() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.hasZCoord">hasZCoord() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.highlight">highlight() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.highlightedTarget">highlightedTarget() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.ignoreAtom">ignoreAtom() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.index">index() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo">Indigo (class in indigo)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_inchi.IndigoInchi">IndigoInchi (class in indigo_inchi)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject">IndigoObject (class in indigo)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_renderer.IndigoRenderer">IndigoRenderer (class in indigo_renderer)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.invertStereo">invertStereo() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.ionize">ionize() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.isChiral">isChiral() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.isHighlighted">isHighlighted() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.isotope">isotope() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.isPossibleFischerProjection">isPossibleFischerProjection() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.isPseudoatom">isPseudoatom() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.isRSite">isRSite() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateAlleneCenters">iterateAlleneCenters() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateArray">iterateArray() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateAtoms">iterateAtoms() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateAttachmentPoints">iterateAttachmentPoints() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateBonds">iterateBonds() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateCatalysts">iterateCatalysts() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateCDX">iterateCDX() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateCDXFile">iterateCDXFile() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateCML">iterateCML() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateCMLFile">iterateCMLFile() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateComponents">iterateComponents() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateDataSGroups">iterateDataSGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateDecomposedMolecules">iterateDecomposedMolecules() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateDecompositions">iterateDecompositions() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateEdgeSubmolecules">iterateEdgeSubmolecules() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateGenericSGroups">iterateGenericSGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateMatches">iterateMatches() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateMolecules">iterateMolecules() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateMultipleGroups">iterateMultipleGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateNeighbors">iterateNeighbors() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateProducts">iterateProducts() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateProperties">iterateProperties() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iteratePseudoatoms">iteratePseudoatoms() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateRDF">iterateRDF() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateRDFile">iterateRDFile() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateReactants">iterateReactants() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateRepeatingUnits">iterateRepeatingUnits() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateRGroupFragments">iterateRGroupFragments() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateRGroups">iterateRGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateRings">iterateRings() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateRSites">iterateRSites() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateSDF">iterateSDF() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateSDFile">iterateSDFile() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateSGroups">iterateSGroups() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateSmiles">iterateSmiles() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateSmilesFile">iterateSmilesFile() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateSSSR">iterateSSSR() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateStereocenters">iterateStereocenters() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateSubtrees">iterateSubtrees() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.iterateSuperatoms">iterateSuperatoms() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.iterateTautomers">iterateTautomers() (indigo.Indigo method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.layeredCode">layeredCode() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.layout">layout() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadBuffer">loadBuffer() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadMolecule">loadMolecule() (indigo.Indigo method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="indigo/api/reference.html#indigo_inchi.IndigoInchi.loadMolecule">(indigo_inchi.IndigoInchi method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadMoleculeFromFile">loadMoleculeFromFile() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadQueryMolecule">loadQueryMolecule() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadQueryMoleculeFromFile">loadQueryMoleculeFromFile() (indigo.Indigo method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadQueryReaction">loadQueryReaction() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadQueryReactionFromFile">loadQueryReactionFromFile() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadReaction">loadReaction() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadReactionFromFile">loadReactionFromFile() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadReactionSmarts">loadReactionSmarts() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadReactionSmartsFromFile">loadReactionSmartsFromFile() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadSmarts">loadSmarts() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadSmartsFromFile">loadSmartsFromFile() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.loadString">loadString() (indigo.Indigo method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.mapAtom">mapAtom() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.mapBond">mapBond() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.mapMolecule">mapMolecule() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.markEitherCisTrans">markEitherCisTrans() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.markStereobonds">markStereobonds() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.massComposition">massComposition() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.match">match() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.mdlct">mdlct() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.merge">merge() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.molecularWeight">molecularWeight() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.molfile">molfile() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.monoisotopicMass">monoisotopicMass() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.mostAbundantMass">mostAbundantMass() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.name">name() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.nameToStructure">nameToStructure() (indigo.Indigo method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.next">next() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.normalize">normalize() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.oneBitsList">oneBitsList() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.optimize">optimize() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.OR">OR (indigo.Indigo attribute)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.radical">radical() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.radicalElectrons">radicalElectrons() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.rawData">rawData() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.RC_CENTER">RC_CENTER (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.RC_MADE_OR_BROKEN">RC_MADE_OR_BROKEN (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.RC_NOT_CENTER">RC_NOT_CENTER (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.RC_ORDER_CHANGED">RC_ORDER_CHANGED (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.RC_UNCHANGED">RC_UNCHANGED (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.RC_UNMARKED">RC_UNMARKED (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.rdfAppend">rdfAppend() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.rdfHeader">rdfHeader() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.reactingCenter">reactingCenter() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.reactionProductEnumerate">reactionProductEnumerate() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.remove">remove() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.removeAtoms">removeAtoms() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.removeBonds">removeBonds() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.removeConstraints">removeConstraints() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.removeProperty">removeProperty() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.removeTautomerRule">removeTautomerRule() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_renderer.IndigoRenderer.renderGridToBuffer">renderGridToBuffer() (indigo_renderer.IndigoRenderer method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_renderer.IndigoRenderer.renderGridToFile">renderGridToFile() (indigo_renderer.IndigoRenderer method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_renderer.IndigoRenderer.renderToBuffer">renderToBuffer() (indigo_renderer.IndigoRenderer method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo_renderer.IndigoRenderer.renderToFile">renderToFile() (indigo_renderer.IndigoRenderer method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.resetAtom">resetAtom() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.resetCharge">resetCharge() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.resetExplicitValence">resetExplicitValence() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.resetIsotope">resetIsotope() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.resetOptions">resetOptions() (indigo.Indigo method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="indigo/api/reference.html#indigo_inchi.IndigoInchi.resetOptions">(indigo_inchi.IndigoInchi method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.resetRadical">resetRadical() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.resetStereo">resetStereo() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.resetSymmetricCisTrans">resetSymmetricCisTrans() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.resetSymmetricStereocenters">resetSymmetricStereocenters() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.rgroupComposition">rgroupComposition() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.RING">RING (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.rxnfile">rxnfile() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.saveCdxml">saveCdxml() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.saveCml">saveCml() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.saveMDLCT">saveMDLCT() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.saveMolfile">saveMolfile() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.saveRxnfile">saveRxnfile() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.sdfAppend">sdfAppend() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.serialize">serialize() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setAtomMappingNumber">setAtomMappingNumber() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setAttachmentPoint">setAttachmentPoint() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setBondOrder">setBondOrder() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setCharge">setCharge() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setDataSGroupXY">setDataSGroupXY() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setExplicitValence">setExplicitValence() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setImplicitHCount">setImplicitHCount() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setIsotope">setIsotope() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setName">setName() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.setOption">setOption() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setProperty">setProperty() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setRadical">setRadical() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setReactingCenter">setReactingCenter() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setRSite">setRSite() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupBrackets">setSGroupBrackets() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupClass">setSGroupClass() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupCoords">setSGroupCoords() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupData">setSGroupData() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupDataType">setSGroupDataType() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupDescription">setSGroupDescription() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupDisplay">setSGroupDisplay() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupDisplayOption">setSGroupDisplayOption() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupFieldName">setSGroupFieldName() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupLocation">setSGroupLocation() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupMultiplier">setSGroupMultiplier() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupName">setSGroupName() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupOriginalId">setSGroupOriginalId() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupParentId">setSGroupParentId() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupQueryCode">setSGroupQueryCode() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupQueryOper">setSGroupQueryOper() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupTag">setSGroupTag() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupTagAlign">setSGroupTagAlign() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupXCoord">setSGroupXCoord() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setSGroupYCoord">setSGroupYCoord() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setStereocenterGroup">setStereocenterGroup() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.setTautomerRule">setTautomerRule() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.setXYZ">setXYZ() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_ANY">SG_TYPE_ANY (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_COM">SG_TYPE_COM (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_COP">SG_TYPE_COP (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_CRO">SG_TYPE_CRO (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_DAT">SG_TYPE_DAT (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_FOR">SG_TYPE_FOR (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_GEN">SG_TYPE_GEN (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_GRA">SG_TYPE_GRA (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_MER">SG_TYPE_MER (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_MIX">SG_TYPE_MIX (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_MOD">SG_TYPE_MOD (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_MON">SG_TYPE_MON (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_MUL">SG_TYPE_MUL (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_SRU">SG_TYPE_SRU (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SG_TYPE_SUP">SG_TYPE_SUP (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.similarity">similarity() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.singleAllowedRGroup">singleAllowedRGroup() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.SINGLET">SINGLET (indigo.Indigo attribute)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.smarts">smarts() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.smiles">smiles() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.smilesAppend">smilesAppend() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.source">source() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.standardize">standardize() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.stereocenterGroup">stereocenterGroup() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.stereocenterPyramid">stereocenterPyramid() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.stereocenterType">stereocenterType() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.substructureMatcher">substructureMatcher() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.symbol">symbol() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.symmetryClasses">symmetryClasses() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.tell">tell() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.toBuffer">toBuffer() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.topology">topology() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.toString">toString() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.TRANS">TRANS (indigo.Indigo attribute)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.transform">transform() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.transformCTABtoSCSR">transformCTABtoSCSR() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.transformHELMtoSCSR">transformHELMtoSCSR() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.transformSCSRtoCTAB">transformSCSRtoCTAB() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.TRIPLET">TRIPLET (indigo.Indigo attribute)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.unfoldHydrogens">unfoldHydrogens() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.unhighlight">unhighlight() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.unignoreAllAtoms">unignoreAllAtoms() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.unignoreAtom">unignoreAtom() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.unserialize">unserialize() (indigo.Indigo method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.UP">UP (indigo.Indigo attribute)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.valence">valence() (indigo.IndigoObject method)</a>
+  </dt>
+
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.validateChirality">validateChirality() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.version">version() (indigo.Indigo method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="indigo/api/reference.html#indigo_inchi.IndigoInchi.version">(indigo_inchi.IndigoInchi method)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.writeBuffer">writeBuffer() (indigo.Indigo method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.Indigo.writeFile">writeFile() (indigo.Indigo method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="indigo/api/reference.html#indigo.IndigoObject.xyz">xyz() (indigo.IndigoObject method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
 
 
           </div>
@@ -1461,7 +3203,7 @@
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on Dec 31, 2016.<br/>
+      Last updated on Jan 11, 2017.<br/>
     </p>
   </div>
   

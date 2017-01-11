@@ -532,10 +532,6 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Indigo Toolkit</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../api/c.html">Plain C</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../api/c.html#core-indigo-api">Core Indigo API</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="../api/index.html#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/index.html#basics">Basics</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../api/index.html#system">System</a></li>
@@ -651,6 +647,20 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../api/index.html#reaction-products-enumeration">Reaction Products Enumeration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../api/index.html#reaction-based-molecule-transformations">Reaction-based Molecule Transformations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/reference.html">API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/reference.html#python">Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/reference.html#indigo">Indigo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/reference.html#indigoobject">IndigoObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/reference.html#indigorenderer">IndigoRenderer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/reference.html#indigoinchi">IndigoInchi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api/reference.html#plain-c">Plain C</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/reference.html#core-indigo-api">Core Indigo API</a></li>
 </ul>
 </li>
 </ul>
@@ -772,7 +782,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#id1"><strong>Language Bindings</strong></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#id2"><strong>Utilities</strong></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#id3"><strong>Source code</strong></a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#maven-central-repository"><strong>Maven Central Repository</strong></a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#id4"><strong>Maven Central Repository</strong></a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../download/indigo/index.html#nuget-repository"><strong>NuGet Repository</strong></a></li>
 </ul>
 </li>
@@ -849,16 +859,21 @@
 <li class="toctree-l2"><a class="reference internal" href="../build.html">Build</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../build.html#requirements">Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../build.html#building">Building</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../build.html#example">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../build.html#native-library">Native library</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../build.html#language-bindings">Language Bindings</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../build.html#python">Python</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../build.html#java">Java</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../build.html#net">.NET</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../build.html#native-library">Native library</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html">SDK Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#java">Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#python">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#net">.NET</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Options</a><ul class="current">
@@ -1165,12 +1180,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../examples/atom-coloring.html#rendering-a-set-of-molecules-in-a-grid">Rendering a set of molecules in a grid</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../examples/installation.html">SDK Installation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../examples/installation.html#java">Java</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../examples/installation.html#python">Python</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../examples/installation.html#net">.NET</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/calculating-properties.html">Calculating Properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../examples/calculating-properties.html#canonical-smiles">Canonical Smiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../examples/calculating-properties.html#enumeration-of-tautomers">Enumeration of Tautomers</a></li>
@@ -1193,6 +1202,11 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/layout.html">Layout (2D coordinates)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../examples/layout.html#smart-and-simple-layout">Smart and simple layout</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/name-to-structure.html">Name To Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/name-to-structure.html#use-nametostructure">Use nameToStructure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/name-to-structure.html#use-loadmolecule">Use loadMolecule</a></li>
 </ul>
 </li>
 </ul>
@@ -1599,7 +1613,7 @@ Input:     <a class="reference download internal" href="../../_downloads/pubchem
     </p>
     <p>
         &copy; Copyright 2016, EPAM Systems.<br/>
-      Last updated on Dec 31, 2016.<br/>
+      Last updated on Jan 11, 2017.<br/>
     </p>
   </div>
   
