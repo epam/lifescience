@@ -33,12 +33,13 @@ sys.path.append('indigo-python')
 # ones.
 extensions = [
     'sphinx.ext.todo',
-#    'sphinx.ext.mathjax',
+    'sphinx.ext.autodoc',
     'sphinx.ext.ifconfig',
     'indigorenderer',
     'codeblockimport',
     'indigoimage',
     'options_node'
+    #    'sphinx.ext.mathjax',
 ]
 
 # The suffix of source filenames.

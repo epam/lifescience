@@ -6,6 +6,7 @@
     :includehidden:
 
     API <api/index>
+    API Reference <api/reference>
     Concepts <concepts/index>
     ﻿Indigo Utilities <utilities>
     Downloads <../download/indigo/index>

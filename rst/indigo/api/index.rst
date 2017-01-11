@@ -1,12 +1,6 @@
 API
 ===
 
-.. toctree::
-    :hidden:
-    :includehidden:
-
-    c
-
 Overview
 --------
 
