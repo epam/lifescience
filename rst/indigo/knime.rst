@@ -24,7 +24,7 @@ Indigo Nodes
 ~~~~~~~~~~~~
 
 You need to add the KNIME's `Community Contributions Nightly
-Updates <http://tech.knime.org/update/community-contributions/nightly>`__
+Updates <http://update.knime.org/community-contributions/trunk>`__
 site to tour "software sites" list
 (`instructions <http://tech.knime.org/community-contributions-info>`__).
 Then, you need to download the "Indigo KNIME Integration" package.
