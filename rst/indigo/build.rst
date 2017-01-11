@@ -1,10 +1,8 @@
 Building from sources
 ---------------------
 
-Sources can be obtained directly or from GitHub repository:
+Sources can be obtained directly or from `Repository on GitHub <http://github.com/epam/indigo>`__
 
-   -  `Source code <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-1.1.12/indigo-1.1.12-src.zip>`__
-   -  `Repository on GitHub <http://github.com/epam/indigo>`__
 
 Requirements
 ^^^^^^^^^^^^
@@ -12,7 +10,7 @@ Requirements
 1) Cmake (minimum required version is 2.8)
 2) Make
 3) Python (version 2.7)
-4) MSVC compiler for Windows and gcc for Linux
+4) MSVC compiler 12+ for Windows and gcc 4.8+ for Linux, CLang for mac
 
 Building
 ^^^^^^^^
@@ -47,17 +45,37 @@ To build Indigo sources go to the ``build_scripts`` folder and run ``indigo-rele
      --find-cairo          Find and use system Cairo
      --find-pixman         Find and use system Pixman
 
-Example
-"""""""
+
+Native library
+""""""""""""""
+
+Windows:
+
 ::
 
-   python indigo-release-libs.py --preset=win64-2012
+   python indigo-release-libs.py --preset=win64-2013
+
+Linux:
+
+::
+
+   python indigo-release-libs.py --preset=linux64
 
      
 Language Bindings
 ^^^^^^^^^^^^^^^^^
+
+Run ``indigo-make-by-libs.py`` script with ``type`` parameter:
+
 Python
 """"""
+
+::
+
+   python indigo-release-libs.py --type=python
+
+
+*Debug*
 Go to the ``api/python`` directory and run ``copy-libs.py`` script. After that ``libs`` directory will appear.
 To use Indigo API and its plugins in python script import them as follows:
 
@@ -76,18 +94,16 @@ To use Indigo API and its plugins in python script import them as follows:
 Java
 """"
 
-Run ``indigo-make-by-libs.py`` script:
-
 ::
 
-   python indigo-make-by-libs.py
-   
-It will create ``indigo-java- ... .zip`` archive in ``dist`` directory which will contain jar files with Indigo and its plugins.
+   python indigo-release-libs.py --type=java
+
+It will create ``indigo-java- ... .zip`` archive in ``dist`` directory which will contain jar files with Indigo and plugins.
 
 .NET
 """"
+::
 
-Native library
-""""""""""""""
+   python indigo-release-libs.py --type=dotnet
 
 

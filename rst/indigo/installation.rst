@@ -1,5 +1,3 @@
-.. _indigo-example-api-usage:
-
 ================
 SDK Installation
 ================
