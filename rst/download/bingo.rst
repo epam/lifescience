@@ -97,13 +97,13 @@ The changelog is available `on this page <../bingo/changelog.html>`__
      - `10.6 <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1.7.9/bingo-postgres9.0-1.7.9-mac10.6.zip>`__
    * - Microsoft SQL Server
      - \-
-     - `2005 and 2008 <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source-sqlserver/bingo-1.7.9/bingo-sqlserver-1.7.9.zip>`__
+     - `2005 and 2008 <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1.7.9/bingo-sqlserver-1.7.9.zip>`__
      - \-
 
 `Source
-code <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source-sqlserver/bingo-1.7.9/bingo-1.7.9-src.zip>`__
+code <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1.7.9/bingo-1.7.9-src.zip>`__
 
-`Source code on GitHub <http://github.com/ggasoftware/indigo>`__
+`Source code on GitHub <http://github.com/epam/indigo>`__
 
 Bingo 1.7.8-beta2
 -----------------
@@ -149,7 +149,7 @@ The changelog is available `on this page <../bingo/changelog.html>`__
        `10.6 <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1.7.8b2/bingo-postgres9.0-1.7.8b2-mac10.6.zip>`__
    * - Microsoft SQL Server
      - \-
-     - `2005 and 2008 <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source-sqlserver/bingo-1.7.8b2/bingo-sqlserver-1.7.8b2.zip>`__
+     - `2005 and 2008 <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1.7.8b2/bingo-sqlserver-1.7.8b2.zip>`__
      - \-
 
 .. |image0| image:: ../assets/Linux.png
