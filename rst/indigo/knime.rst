@@ -1,8 +1,7 @@
 Nodes for KNIME
 ===============
 
-Since May 2011, our team provides Indigo-powered
-cheminformatics nodes nodes for KNIME. The overview of the nodes is
+Since May 2011, Indigo team provides cheminformatics nodes for KNIME. The overview of the nodes is
 available at `KNIME Tech <http://tech.knime.org/community/indigo>`__.
 
 Installation
