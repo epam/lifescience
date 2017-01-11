@@ -10,7 +10,7 @@ Requirements
 1) Cmake (minimum required version is 2.8)
 2) Make
 3) Python (version 2.7)
-4) MSVC compiler 12+ for Windows and gcc 4.8+ for Linux, CLang for mac
+4) MSVC compiler 12+ for Windows and gcc 4.8+ for Linux, Clang for mac
 
 Building
 ^^^^^^^^

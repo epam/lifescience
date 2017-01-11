@@ -38,6 +38,6 @@ So, please, use Indigo 2 nodes to create new workflows working with KNIME 3.x (t
 
 In the near future we plan to add more nodes based on Indigo toolkit .
 
-Hope all that modifiacations and additions will be usefull and you will injoy using it.  We will greatly appreciate any comments, thoughts, notes and proposals.
+Hope all that modifications and additions will be useful and you will enjoy using it.  We will greatly appreciate any comments, thoughts, notes and proposals.
 
  

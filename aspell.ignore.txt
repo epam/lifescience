@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1469 
+personal_ws-1.1 en 1484 
 DBA
 Kabsch's
 countMolecules
@@ -203,6 +203,7 @@ GPL
 idx
 indigoSetExplicitValence
 decomposedMoleculeScaffold
+Nuget
 recognize
 Affero
 Freetype
@@ -295,7 +296,7 @@ changelogs
 LLC
 zipfiles
 NetworkService
-Javascript
+javascript
 writeBuffer
 dearomatizes
 bool
@@ -378,6 +379,7 @@ imagoRecognize
 indigoSetProperty
 indigoLoadQueryReactionFromBuffer
 dearomatize
+hexaene
 nsc
 ONc
 indigoInvertStereo
@@ -537,6 +539,7 @@ indigoCountAttachmentPoints
 DropIndex
 tmp
 indigoSetSGroupClass
+CSVDataWriterImpl
 dbaname
 rxn
 automapping
@@ -570,6 +573,7 @@ datafiles
 indigoSetSGroupBrackets
 iterateGenericSGroups
 const
+butene
 indigoLoadReactionSmartsFromBuffer
 indigoMapAtom
 indigoIsotope
@@ -667,8 +671,10 @@ CN
 ExactHi
 indigoLoadReactionSmartsFromString
 filenames
+trisiladecane
 cr
 parallelize
+cyclooctane
 indigoDecomposedMoleculeHighlighted
 indigoResetAtom
 explicitValence
@@ -757,6 +763,7 @@ InChi
 inchi
 InChI
 varbinary
+CSVMetadataWriterImpl
 indigoResetCharge
 indigoUnserialize
 xe
@@ -807,6 +814,7 @@ colorbar
 indigoAddCatalyst
 countGenericSGroups
 linux
+nameToStructure
 mostAbundantMass
 iterateComponents
 SearchRSubHi
@@ -857,6 +865,7 @@ inchikey
 indigoCountComponents
 createQueryReaction
 Dalke
+SasFileReaderImpl
 Ivanov
 imagoFilterImage
 grossFormula
@@ -1058,6 +1067,7 @@ indigoLoadReactionFromString
 imagoLoadImageFromBuffer
 indigoFreeAllObjects
 indigoXYZ
+dimethyl
 SLUUD
 idfield
 molweight
@@ -1105,6 +1115,7 @@ indigoSetCharge
 unignoreAtom
 indigoLoadBuffer
 indigoSetOptionInt
+cyclododeca
 CheckMolecule
 indigoIterateAttachmentPoints
 indigoSaveRxnfile
@@ -1125,6 +1136,7 @@ getAtom
 aromatized
 CheckReactionTable
 cmlHeader
+Standardizer
 indigoLoadMoleculeFromBuffer
 indigoHighlightedTarget
 indigoCountBits
@@ -1155,6 +1167,7 @@ Chemdraw
 licensors
 setSGroupData
 protonated
+diethyl
 optimize
 destructor
 indigoCountHydrogens
@@ -1170,6 +1183,7 @@ indigoRemoveBonds
 renderMolfileWithOptions
 commentname
 indigoCountSuperatoms
+splitter
 indigoDecomposeMolecules
 mapAtom
 indigoFree
@@ -1459,6 +1473,7 @@ saveCml
 indigoSetSession
 firefox
 CBO
+pentyl
 CCl
 CBr
 unignoreAllAtoms
