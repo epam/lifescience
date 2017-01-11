@@ -15,27 +15,29 @@ Java
 
 If your project use Maven, you can add Indigo dependency to your pom.xml:
 
-::
 
-	<dependencies>
-	    ...
-	    <dependency>
-	        <groupId>com.ggasoftware</groupId>
-	        <artifactId>indigo</artifactId>
-	        <version>1.1.12</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>com.ggasoftware.indigo</groupId>
-	        <artifactId>indigo-inchi</artifactId>
-	        <version>1.1.12</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>com.ggasoftware.indigo</groupId>
-	        <artifactId>indigo-renderer</artifactId>
-	        <version>1.1.12</version>
-	    </dependency>
-	    ...
-	</dependencies>
+.. code-block:: xml
+
+    <dependencies>
+      ...
+        <dependency>
+            <groupId>com.epam.indigo</groupId>
+            <artifactId>indigo</artifactId>
+            <version>1.3.0beta.r16</version>
+        </dependency>
+        <dependency>
+            <groupId>com.epam.indigo</groupId>
+            <artifactId>indigo-inchi</artifactId>
+            <version>1.3.0beta.r16</version>
+        </dependency>
+        <dependency>
+            <groupId>com.epam.indigo</groupId>
+            <artifactId>indigo-renderer</artifactId>
+            <version>1.3.0beta.r16</version>
+        </dependency>
+        ...
+    </dependencies>
+
 
 On Debian starting from Wheezy and Ubuntu starting from 12.10 you can install stable version of Indigo SDK with the following command:
 
@@ -71,6 +73,16 @@ To add Indigo assembly DLL to your Visual Studio project you need to [#dotnet]_:
 1. Right-click the name of your project in **Solution Explorer** and then select **Add Reference**. A dialog should appear.
 2. Select the **Browse** tab.
 3. Browse to the folder that contains Indigo, select the **indigo-dotnet.dll** and **indigo-inchi-dotnet.dll**, **indigo-renderer-dotnet.dll** if you need, and then click **OK**.
+
+
+**NuGet Repository**
+
+
+Indigo .NET packages now available at `Nuget <https://www.nuget.org/packages/Indigo.Net/>`__
+
+Just add ``Indigo.Net`` as a dependency into the project.
+
+
 
 .. rubric:: Footnotes
 

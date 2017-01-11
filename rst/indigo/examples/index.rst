@@ -8,7 +8,6 @@ Contents:
    :maxdepth: 2
 
    atom-coloring
-   installation
    calculating-properties
    standardize
    scsr-transformations

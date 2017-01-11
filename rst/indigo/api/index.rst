@@ -67,7 +67,7 @@ Java:
 
 .. code-block:: java
 
-    import com.ggasoftware.indigo.*;
+    import com.epam.indigo.*;
     ...
     Indigo indigo = new Indigo();
 
@@ -75,7 +75,7 @@ C#:
 
 .. code-block:: csharp
 
-    using com.ggasoftware.indigo;
+    using com.epam.indigo;
     ....
     Indigo indigo = new Indigo();
 
