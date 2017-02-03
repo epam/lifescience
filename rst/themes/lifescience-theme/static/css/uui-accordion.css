@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'Oswald Regular';
+  src: url(../fonts/font-oswald/oswald-regular.eot);
+  src: url(../fonts/font-oswald/oswald-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/font-oswald/oswald-regular.woff) format('woff'), url(../fonts/font-oswald/oswald-regular.ttf) format('truetype'), url(../fonts/font-oswald/oswald-regular.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald Bold';
+  src: url(../fonts/font-oswald/oswald-bold.eot);
+  src: url(../fonts/font-oswald/oswald-bold.eot?#iefix) format('embedded-opentype'), url(../fonts/font-oswald/oswald-bold.woff) format('woff'), url(../fonts/font-oswald/oswald-bold.ttf) format('truetype'), url(../fonts/font-oswald/oswald-bold.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald Light';
+  src: url(../fonts/font-oswald/oswald-light.eot);
+  src: url(../fonts/font-oswald/oswald-light.eot?#iefix) format('embedded-opentype'), url(../fonts/font-oswald/oswald-light.woff) format('woff'), url(../fonts/font-oswald/oswald-light.ttf) format('truetype'), url(../fonts/font-oswald/oswald-light.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro Regular';
+  src: url(../fonts/font-sourcesanspro/sourcesanspro-regular.eot);
+  src: url(../fonts/font-sourcesanspro/sourcesanspro-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/font-sourcesanspro/sourcesanspro-regular.woff) format('woff'), url(../fonts/font-sourcesanspro/sourcesanspro-regular.ttf) format('truetype'), url(../fonts/font-sourcesanspro/sourcesanspro-regular.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro Light';
+  src: url(../fonts/font-sourcesanspro/sourcesanspro-light.eot);
+  src: url(../fonts/font-sourcesanspro/sourcesanspro-light.eot?#iefix) format('embedded-opentype'), url(../fonts/font-sourcesanspro/sourcesanspro-light.woff) format('woff'), url(../fonts/font-sourcesanspro/sourcesanspro-light.ttf) format('truetype'), url(../fonts/font-sourcesanspro/sourcesanspro-light.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro Bold';
+  src: url(../fonts/font-sourcesanspro/sourcesanspro-bold.eot);
+  src: url(../fonts/font-sourcesanspro/sourcesanspro-bold.eot?#iefix) format('embedded-opentype'), url(../fonts/font-sourcesanspro/sourcesanspro-bold.woff) format('woff'), url(../fonts/font-sourcesanspro/sourcesanspro-bold.ttf) format('truetype'), url(../fonts/font-sourcesanspro/sourcesanspro-bold.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro Semibold';
+  src: url(../fonts/font-sourcesanspro/sourcesanspro-semibold.eot);
+  src: url(../fonts/font-sourcesanspro/sourcesanspro-semibold.eot?#iefix) format('embedded-opentype'), url(../fonts/font-sourcesanspro/sourcesanspro-semibold.woff) format('woff'), url(../fonts/font-sourcesanspro/sourcesanspro-semibold.ttf) format('truetype'), url(../fonts/font-sourcesanspro/sourcesanspro-semibold.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro Italic';
+  src: url(../fonts/font-sourcesanspro/sourcesanspro-it.eot);
+  src: url(../fonts/font-sourcesanspro/sourcesanspro-it.eot?#iefix) format('embedded-opentype'), url(../fonts/font-sourcesanspro/sourcesanspro-it.woff) format('woff'), url(../fonts/font-sourcesanspro/sourcesanspro-it.ttf) format('truetype'), url(../fonts/font-sourcesanspro/sourcesanspro-it.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Basic - Primary */
+/* Basic - Secondary */
+/* Additionally */
+.uui-accordion .panel.accordion-item {
+  border-radius: 0;
+  margin: 0 0 5px 0;
+  padding: 0;
+  box-shadow: none;
+  border: 1px solid #cccccc;
+}
+.uui-accordion .panel.accordion-item:last-child {
+  margin: 0;
+}
+.uui-accordion .panel.accordion-item .accordion-heading {
+  background: #ffffff;
+  border: none;
+}
+.uui-accordion .panel.accordion-item .accordion-heading .accordion-title {
+  margin: 0;
+}
+.uui-accordion .panel.accordion-item .accordion-heading .accordion-title .accordion-toggle {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 15px;
+  font-family: 'Source Sans Pro Regular', Arial, sans-serif;
+  font-size: 16px;
+  color: #666666;
+  text-decoration: none;
+}
+.uui-accordion .panel.accordion-item .accordion-collapse {
+  background: #ffffff;
+}
+.uui-accordion .panel.accordion-item .accordion-collapse .accordion-body {
+  border: none;
+  padding: 3px 15px 15px 15px;
+  color: #999999;
+  font-size: 14px;
+  font-family: 'Source Sans Pro Regular', Arial, sans-serif;
+  line-height: 18px;
+}
+.uui-accordion.cards-accordion .panel.accordion-item {
+  border: none;
+  box-shadow: 0 1px 3px 0 rgba(51, 51, 51, 0.2);
+}
+.uui-accordion.cards-accordion .panel.accordion-item .accordion-heading {
+  border: none;
+}
+.uui-accordion.cards-accordion .panel.accordion-item .accordion-collapse .accordion-body {
+  border: none;
+}
