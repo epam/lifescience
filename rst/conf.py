@@ -109,7 +109,7 @@ keep_warnings = True
 # a list of builtin themes.
 
 html_theme_path = ['./themes']
-html_theme = 'bootstrap'
+html_theme = 'lifescience-theme'
 html_sidebars = {
    '*/**': [
        'navbartoc.html'
@@ -122,15 +122,7 @@ html_sidebars = {
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'navbar_title': "Life Sciences",
-    'navbar_sidebarrel': False,
-    'bootstrap_version': "2",
-    'globaltoc_depth': 7,
-    'navbar_links' : [
-        ("Resources", "resources"),
-        ("Downloads", "download/index"),
-        ("Contact Info", "contact"),
-    ],
+
 }
 
 html_copy_source = False

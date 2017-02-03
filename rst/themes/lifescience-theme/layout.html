@@ -1,0 +1,49 @@
+{%- block doctype -%}
+<!DOCTYPE html>
+{%- endblock %}
+
+<html lang="en">
+{% include "head.html" %}
+
+<body>
+    <div class="wrapper">
+        {% include "header.html" %}
+
+        <div class="uui-main-container">
+            <main>
+                {% if pagename == "index" %}
+                <section class="promo-section promo-section-intro">
+                    <div class="container">
+                        <h1 class="uui-promo-heading">Life Sciences Open Source</h1>
+                        <div class="uui-big-text">
+                            EPAM Life Sciences has extensive experience and expertise in developing organic chemistry software products for use in life science companies, research institutes, and universities. Before joining EPAM Systems in June 2014 and becoming EPAM Life Sciences, GGA Software Services developed internally a series of cheminformatics tools, and decided to make these tools available to the open-source community. We are continuing to undertake this open-source initiative through EPAM, and we look forward to improving the existing tools and to developing new tools for your use.
+                        </div>
+                    </div>
+                </section>
+                {% else %}
+                <section class="promo-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-3" role="complementary">
+                                {% include "sidenav.html" %}
+                            </div>
+                            <div class="col-xs-12 col-md-9" role="main">
+                                {%- block body -%}{%- endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {% endif %}
+            </main>
+        </div>
+
+        {% include "footer.html" %}
+
+    </div>
+
+    <script>
+        UUI.Navigation.init();
+        UUI.Global_Search.init();
+    </script>
+</body>
+</html>

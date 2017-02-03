@@ -1,0 +1,117 @@
+<header>
+    <div class="uui-header">
+        <nav>
+            <!--Responsive html-layout-->
+            <div class="uui-responsive-header">
+                <div class="responsive-header">
+                    <div class="responsive-toggle-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="responsive-hide-menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="" class="responsive-brand-logo">
+                        <span class="arrow fa fa-angle-left"></span>
+                        <span class="logo">
+                            <img src="{{ pathto('_static/images/Logo_Epam_Color.svg', 1) }}" alt=""/>
+                        </span>
+                        <span class="title">Life Sciences</span>
+                    </a>
+                    <ul class="responsive-header-tools nav navbar-nav">
+                        <li class="responsive-header-icon search-icon">
+                            <a href="#" onclick="return false">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="responsive-menu">
+                    <div class="menu-wrapper">
+                        <div class="menu-scroll">
+                            <ul class="nav navbar-nav">
+                                <li class="sub-menu active">
+                                    <a href="{{ pathto(master_doc) }}">
+                                        <span>Products</span>
+                                        <div class="arrow fa fa-angle-right"></div>
+                                    </a>
+                                    <ul class="sub">
+                                        <li class="sub-menu">
+                                            <a href="#">
+                                                <span>Bingo</span>
+                                                <div class="arrow fa fa-angle-right"></div>
+                                            </a>
+                                            <ul class="sub">
+                                                <li><a href="#"><span>Bingo Oracle</span></a></li>
+                                                <li><a href="#"><span>Bingo PostgreSQL</span></a></li>
+                                                <li><a href="#"><span>Bingo SQL Server</span></a></li>
+                                                <li><a href="#"><span>Bingo NoSQL</span></a></li>
+                                                <li><a href="#"><span>Overview</span></a></li>
+                                                <li><a href="#"><span>Downloads</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><span>Indigo Toolkit</span></a></li>
+                                        <li><a href="#"><span>Ketcher</span></a></li>
+                                        <li><a href="#"><span>Indigo ELN</span></a></li>
+                                        <li><a href="#"><span>Imago OCR</span></a></li>
+                                        <li><a href="#"><span>Parso</span></a></li>
+                                        <li><a href="#"><span>Selenium Framework</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ pathto('resources.html', 1) }}">Resources</a></li>
+                                <li><a href="{{ pathto('download/index.html', 1) }}">Downloads</a></li>
+                                <li><a href="{{ pathto('contact.html', 1) }}">Contact Info</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-global-search">
+                    <div class="search-header">
+                        <div class="header-wrapper">
+                            <div class="search-field">
+                                <label></label>
+                                <input type="search" class="uui-search" placeholder="Search"/>
+                            </div>
+                            <div class="hide-search">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="header-container">
+                <a href="{{ pathto(master_doc) }}" class="brand-logo">
+                    <span class="logo">
+                        <img src="{{ pathto('_static/images/Logo_Epam_Color.svg', 1) }}" alt=""/>
+                    </span>
+                    <span class="title">
+                      Life Sciences Open Source
+                    </span>
+                </a>
+                <ul class="uui-navigation nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                            Products
+                        </a>
+                        {% include "globaltoc.html" %}
+                    </li>
+                    <li><a href="{{ pathto('resources.html', 1) }}">Resources</a></li>
+                    <li><a href="{{ pathto('download/index.html', 1) }}">Downloads</a></li>
+                    <li><a href="{{ pathto('contact.html', 1) }}">Contact Info</a></li>
+                </ul>
+                <ul class="uui-header-tools nav navbar-nav">
+                    <li class="uui-global-search">
+                        <div class="search-field">
+                            <label></label>
+                            <input type="search" class="uui-search" placeholder="Search"/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
