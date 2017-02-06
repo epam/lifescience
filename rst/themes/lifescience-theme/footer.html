@@ -4,14 +4,14 @@
             <div class="epam-logo">
                 <img src="{{ pathto('_static/images/Logo_Epam_Color.svg', 1) }}" alt="" />
             </div>
-            <p class="copyright">© 2016 EPAM Systems. All Rights Reserved.</p>
+            <p class="copyright">© {{copyright}}. All Rights Reserved.</p>
         </div>
         <div class="footer-navigation">
             <ul class="uui-footer-navigation">
-                <li><a href="{{ pathto(master_doc) }}">Products</a></li>
-                <li><a href="{{ pathto('resources.html', 1) }}">Resources</a></li>
-                <li><a href="{{ pathto('download/index.html', 1) }}">Downloads</a></li>
-                <li><a href="{{ pathto('contact.html', 1) }}">Contact Info</a></li>
+                <li><a href="{{ pathto(master_doc) }}">{{theme_navbar_title}}</a></li>
+                {%- for title, doc in theme_navbar_links %}
+                <li><a href="{{ pathto(doc) }}">{{ title }}</a></li>
+                {%- endfor %}
             </ul>
         </div>
     </div>

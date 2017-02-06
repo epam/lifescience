@@ -1346,7 +1346,11 @@ header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-s
 header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li {
   margin: 0;
 }
-header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li > a span {
+header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li .current {
+  color: #3cc2d7;
+}
+header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li > a {
+  padding-top: 10px;
   text-transform: none;
   font-family: 'Oswald Light', Arial, sans-serif;
   font-size: 18px;
@@ -1355,7 +1359,7 @@ header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-s
   max-width: none;
   letter-spacing: .15px;
 }
-header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li.active > a span {
+header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li.active > a {
   color: #3cc2d7;
 }
 header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li.active:hover > a,
@@ -1364,8 +1368,8 @@ header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-s
 }
 header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li.active:hover > a i,
 header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li.active:focus > a i,
-header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li.active:hover > a span,
-header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li.active:focus > a span {
+header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li.active:hover > a,
+header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li.active:focus > a {
   color: #ffffff;
 }
 header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .responsive-header-button {
@@ -4542,8 +4546,8 @@ footer .uui-promo-footer {
   background-color: #f5f5f5;
 }
 .section {
-  margin-top: 26px;
-  margin-bottom: 26px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .sub-section {
   margin-top: 16px;

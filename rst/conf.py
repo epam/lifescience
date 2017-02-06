@@ -122,7 +122,11 @@ html_sidebars = {
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-
+    'navbar_links' : [
+        ("Resources", "resources"),
+        ("Downloads", "download/index"),
+        ("Contact Info", "contact"),
+    ]
 }
 
 html_copy_source = False

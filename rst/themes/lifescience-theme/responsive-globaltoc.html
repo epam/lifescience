@@ -1,0 +1,8 @@
+{% set tree = toctree(titles_only=true, maxdepth=2, collapse=False, includehidden=true) %}
+
+{{ tree
+    | replace(' class="current"', '')
+    | replace('<ul>', '<ul class="sub">')
+    | replace('<li class="toctree-l">', '<li class="sub-menu">')
+    | replace('<li class="toctree-l1">', '<li class="sub-menu">') }}
+

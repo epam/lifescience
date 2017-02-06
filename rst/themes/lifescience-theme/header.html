@@ -13,12 +13,12 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <a href="" class="responsive-brand-logo">
+                    <a href="{{ pathto(master_doc) }}" class="responsive-brand-logo">
                         <span class="arrow fa fa-angle-left"></span>
                         <span class="logo">
-                            <img src="{{ pathto('_static/images/Logo_Epam_Color.svg', 1) }}" alt=""/>
-                        </span>
-                        <span class="title">Life Sciences</span>
+                        <img src="{{ pathto('_static/images/Logo_Epam_Color.svg', 1) }}" alt=""/>
+                    </span>
+                        <span class="title">{{project}}</span>
                     </a>
                     <ul class="responsive-header-tools nav navbar-nav">
                         <li class="responsive-header-icon search-icon">
@@ -34,35 +34,14 @@
                             <ul class="nav navbar-nav">
                                 <li class="sub-menu active">
                                     <a href="{{ pathto(master_doc) }}">
-                                        <span>Products</span>
+                                        <span>{{theme_navbar_title}}</span>
                                         <div class="arrow fa fa-angle-right"></div>
                                     </a>
-                                    <ul class="sub">
-                                        <li class="sub-menu">
-                                            <a href="#">
-                                                <span>Bingo</span>
-                                                <div class="arrow fa fa-angle-right"></div>
-                                            </a>
-                                            <ul class="sub">
-                                                <li><a href="#"><span>Bingo Oracle</span></a></li>
-                                                <li><a href="#"><span>Bingo PostgreSQL</span></a></li>
-                                                <li><a href="#"><span>Bingo SQL Server</span></a></li>
-                                                <li><a href="#"><span>Bingo NoSQL</span></a></li>
-                                                <li><a href="#"><span>Overview</span></a></li>
-                                                <li><a href="#"><span>Downloads</span></a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#"><span>Indigo Toolkit</span></a></li>
-                                        <li><a href="#"><span>Ketcher</span></a></li>
-                                        <li><a href="#"><span>Indigo ELN</span></a></li>
-                                        <li><a href="#"><span>Imago OCR</span></a></li>
-                                        <li><a href="#"><span>Parso</span></a></li>
-                                        <li><a href="#"><span>Selenium Framework</span></a></li>
-                                    </ul>
+                                    {% include "responsive-globaltoc.html" %}
                                 </li>
-                                <li><a href="{{ pathto('resources.html', 1) }}">Resources</a></li>
-                                <li><a href="{{ pathto('download/index.html', 1) }}">Downloads</a></li>
-                                <li><a href="{{ pathto('contact.html', 1) }}">Contact Info</a></li>
+                                {%- for title, doc in theme_navbar_links %}
+                                <li><a href="{{ pathto(doc) }}"><span>{{ title }}</span></a></li>
+                                {%- endfor %}
                             </ul>
                         </div>
                     </div>
@@ -89,19 +68,17 @@
                         <img src="{{ pathto('_static/images/Logo_Epam_Color.svg', 1) }}" alt=""/>
                     </span>
                     <span class="title">
-                      Life Sciences Open Source
+                      {{theme_project_full}}
                     </span>
                 </a>
                 <ul class="uui-navigation nav navbar-nav">
                     <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                            Products
-                        </a>
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">{{theme_navbar_title}}</a>
                         {% include "globaltoc.html" %}
                     </li>
-                    <li><a href="{{ pathto('resources.html', 1) }}">Resources</a></li>
-                    <li><a href="{{ pathto('download/index.html', 1) }}">Downloads</a></li>
-                    <li><a href="{{ pathto('contact.html', 1) }}">Contact Info</a></li>
+                    {%- for title, doc in theme_navbar_links %}
+                    <li><a href="{{ pathto(doc) }}"><span>{{ title }}</span></a></li>
+                    {%- endfor %}
                 </ul>
                 <ul class="uui-header-tools nav navbar-nav">
                     <li class="uui-global-search">
