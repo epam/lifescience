@@ -126,6 +126,15 @@ html_theme_options = {
         ("Resources", "resources"),
         ("Downloads", "download/index"),
         ("Contact Info", "contact"),
+    ],
+    'index_tiles': [
+        ("Bingo", "Cheminformatics", "Bingo.jpg", "Chemistry search engine for Oracle, Microsoft SQL Server and PostgreSQL databases", "bingo/index.html"),
+        ("Ketcher", "Cheminformatics", "Ketcher.jpg", "Web-based molecule sketcher", "ketcher/index.html"),
+        ("Indigo Toolkit", "Cheminformatics", "Indigo-Toolkit.jpg", "Universal cheminformatics toolkit and <a href=\"indigo/api/index.html\">API</a>", "indigo/index.html"),
+        ("Indigo ELN", "Cheminformatics", "Indigo-ELN.jpg", "Open-Source Chemistry Electronic Lab Notebook", "indigo/eln/index.html"),
+        ("Imago OCR", "Cheminformatics", "Imago-OCR.jpg", "Chemical optical recognition toolkit", "imago/index.html"),
+        ("Parso", "Data processing", "Parso.jpg", "Parso Java library", "parso.html"),
+        ("EPAM Selenium Framework", "Software development", "JDI.jpg", "Test automation using Selenium WebDriver", "selenium.html")
     ]
 }
 

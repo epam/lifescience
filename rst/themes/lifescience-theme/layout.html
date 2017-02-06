@@ -14,9 +14,35 @@
                 {% if pagename == "index" %}
                 <section class="promo-section promo-section-intro">
                     <div class="container">
-                        <h1 class="uui-promo-heading">Life Sciences Open Source</h1>
+                        <h1 class="uui-promo-heading">{{ theme_project_full }}</h1>
                         <div class="uui-big-text">
-                            EPAM Life Sciences has extensive experience and expertise in developing organic chemistry software products for use in life science companies, research institutes, and universities. Before joining EPAM Systems in June 2014 and becoming EPAM Life Sciences, GGA Software Services developed internally a series of cheminformatics tools, and decided to make these tools available to the open-source community. We are continuing to undertake this open-source initiative through EPAM, and we look forward to improving the existing tools and to developing new tools for your use.
+                            {{ theme_project_description }}
+                        </div>
+                    </div>
+                </section>
+                <section class="promo-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-8">
+                                <div class="row">
+                                    {%- for title, tag, image, description, link in theme_index_tiles %}
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="tile" onclick="location.href='{{link}}'">
+                                            <div class="tile-image">
+                                                <img src="{{ pathto('_static/images/pics/' + image, 1) }}" alt="">
+                                            </div>
+                                            <div class="tile-content">
+                                                <div class="tile-text">
+                                                    <div class="tile-label">{{tag}}</div>
+                                                    <h3>{{title}}</h3>
+                                                    <p>{{description}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {%- endfor %}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
