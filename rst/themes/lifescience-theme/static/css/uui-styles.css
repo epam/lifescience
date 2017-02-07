@@ -3362,6 +3362,7 @@ header .uui-header .uui-responsive-header .responsive-global-search .search-list
   background: #e5e5e5;
   border-color: #cccccc;
   cursor: default;
+  pointer-events: none;
 }
 /* Lime green */
 .uui-pagination.lime-green li .pagination-items > li:hover:not(.active):not(.disable) > a {
@@ -4745,6 +4746,11 @@ header .dropdown-menu li > a:hover {
   height: 2px;
   background-color: #999999;
 }
+.news {
+  border: 0;
+  max-height: 1000px;
+  width: 100%;
+}
 .news-container {
   background-color: #f5f5f5;
 }
@@ -4768,7 +4774,7 @@ header .dropdown-menu li > a:hover {
   border: 1px solid #cccccc;
   border-top: none;
 }
-.news-title {
+.news-article h2 {
   margin-bottom: 5px;
 }
 .news-date {
@@ -4780,6 +4786,9 @@ header .dropdown-menu li > a:hover {
   text-align: center;
   border: 1px solid #cccccc;
   border-top: none;
+}
+.invisible {
+  display: none;
 }
 @media (min-width: 992px) {
   .sidenav {

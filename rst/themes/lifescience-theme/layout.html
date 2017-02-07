@@ -6,6 +6,7 @@
 {% include "head.html" %}
 
 <body>
+    {% if pagename != "newsfeed" %}
     <div class="wrapper">
         {% include "header.html" %}
 
@@ -23,7 +24,7 @@
                 <section class="promo-section">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xs-12 col-md-8">
+                            <div class="col-xs-12 col-md-8" id="main-tiles">
                                 <div class="row">
                                     {%- for title, tag, image, description, link in theme_index_tiles %}
                                     <div class="col-xs-12 col-sm-6">
@@ -43,6 +44,12 @@
                                     {%- endfor %}
                                 </div>
                             </div>
+                            <div class="col-xs-12 col-md-4">
+                                {% trans path=pathto('newsfeed') %}<iframe class="news" src="{{ path }}" scrolling="no"></iframe>{% endtrans %}
+                            </div>
+                            <script>
+                                $('.news').height($('#main-tiles').height());
+                            </script>
                         </div>
                     </div>
                 </section>
@@ -71,5 +78,9 @@
         UUI.Navigation.init();
         UUI.Global_Search.init();
     </script>
+
+    {% else %}
+        {% include "newsfeed.html" %}
+    {% endif %}
 </body>
 </html>

@@ -1,0 +1,70 @@
+<div class="news-container">
+    {{ body
+        | replace('<h1>', '<div class="news-heading">')
+        | replace('</h1>', '</div>')
+        | replace('div class="section"', 'div class="news-content"', 1)
+        | replace('div class="section"', 'div class="news-article"')
+        | replace('ul class="simple"', 'ul class="uui-inline-list"')
+        | replace('<p><em>', '<div class="news-date">')
+        | replace('</em></p>', '</div>') }}
+
+    <div class="news-pagination">
+        <ul class="uui-pagination">
+            <li class="actions-wrapper">
+                <ul class="pagination-items">
+                    <li id="prev-page" class="prev-page disable">
+                        <a onclick="paginationClick(null, -1)"><i class="fa fa-angle-left"></i></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pages-wrapper">
+                <ul class="pagination-items">
+                    <li id="pagination-0" class="active"><a onclick="paginationClick(0)">1</a></li>
+                    <li id="pagination-1"><a onclick="paginationClick(1)">2</a></li>
+                    <li id="pagination-2"><a onclick="paginationClick(2)">3</a></li>
+                    <li id="pagination-3"><a onclick="paginationClick(3)">4</a></li>
+                </ul>
+            </li>
+            <li class="actions-wrapper">
+                <ul class="pagination-items">
+                    <li id="next-page" class="next-page">
+                        <a onclick="paginationClick(null, 1)"><i class="fa fa-angle-right"></i></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    var currentPage = 0;
+    var articles = [];
+    var firstDisabledPage;
+    var newsContent = document.getElementsByClassName("news-content")[0];
+    for (var i = 0; i < newsContent.children.length; i++) {
+        if (newsContent.children[i].localName == 'div' && newsContent.children[i].classList.contains('news-article')) {
+            articles.push(newsContent.children[i]);
+            if (articles.indexOf(newsContent.children[i]) >= 3)
+                newsContent.children[i].classList.toggle('invisible');
+        }
+    }
+    firstDisabledPage = (articles.length / 3).toFixed();
+    for (i = firstDisabledPage; i < 3; i++) {
+        $('#pagination-' + i).toggleClass('disable');
+    }
+
+    function paginationClick(number, offset) {
+        if (number == null) number = currentPage + offset;
+
+        $('#pagination-' + currentPage).toggleClass('active');
+        $('#pagination-' + number).toggleClass('active');
+        for (var i = 0; i < articles.length; i++) {
+            if (i >= currentPage * 3 && i < currentPage * 3 + 3
+                || i >= number * 3 && i < number * 3 + 3)
+                articles[i].classList.toggle('invisible')
+        }
+        if (number == 0 || currentPage == 0) $('#prev-page').toggleClass('disable');
+        if (number == firstDisabledPage-1 || currentPage == firstDisabledPage-1) $('#next-page').toggleClass('disable');
+        currentPage = number;
+    }
+</script>
