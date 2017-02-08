@@ -2,6 +2,7 @@ $(document).ready(function() {
     var toc = document.getElementById("local-toc");
     if (!toc) return;
     var data = getTocObject(toc);
+    if (!data.ul) return;
     data = data.ul.length > 1 ? data : data.ul[0];
 
     var htmlstring =

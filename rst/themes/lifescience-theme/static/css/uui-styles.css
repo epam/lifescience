@@ -317,6 +317,9 @@ a {
   color: #1a9cb0;
   text-decoration: none;
 }
+a.headerlink {
+  visibility: hidden;
+}
 a:active,
 a:hover,
 a:focus {
@@ -4852,4 +4855,44 @@ header .dropdown-menu li > a:hover {
 }
 .sidenav .uui-accordion .panel.accordion-item .accordion-body ul li a:hover {
   color: #64c0d4;
+}
+.highlighted {
+  background: #fded96;
+}
+.search-form {
+  position: relative;
+}
+.search-form .uui-search {
+  width: 300px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+  border: 1px solid #333333;
+  padding: 0 5px 0 35px;
+  border-radius: 25px;
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  -ms-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
+  margin-bottom: 0;
+  line-height: normal;
+  font-weight: normal;
+}
+.search-icon:before {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  content: '\f002';
+  font-family: 'FontAwesome';
+  color: #333;
+  font-size: 16px;
 }

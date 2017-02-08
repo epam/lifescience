@@ -9,6 +9,28 @@
     <!-- jQuery Core -->
     <script src="{{ pathto('_static/js/lib/jquery-1.12.0.min.js', 1) }}"></script>
 
+    <!--Sphinx files-->
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    './',
+            VERSION:     '0.3.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+    <script src="{{ pathto('_static/underscore.js', 1) }}"></script>
+    <script src="{{ pathto('_static/doctools.js', 1) }}"></script>
+
+    {% if pagename == "search" %}
+    <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+    <script type="text/javascript">
+        jQuery(function () {
+            Search.loadIndex("{{ pathto('searchindex.js', 1) }}");
+        });
+    </script>
+    {% endif %}
+
     <!-- Bootstrap Core -->
     <link rel="stylesheet" href="{{ pathto('_static/bootstrap/css/bootstrap.min.css', 1) }}"/>
     <script src="{{ pathto('_static/bootstrap/js/bootstrap.min.js', 1) }}"></script>
@@ -18,7 +40,6 @@
     <script src="{{ pathto('_static/js/uui-global-search.min.js', 1) }}" type="text/javascript"></script>
 
     <!-- EPAM UUI Styles Core -->
-    <!-- <link rel="stylesheet" href="css/uui-styles.min.css" /> -->
     <link rel="stylesheet" href="{{ pathto('_static/css/uui-styles.css', 1) }}"/>
 
     <!-- Scroll for UUI Sidebar -->
