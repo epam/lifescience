@@ -54,6 +54,19 @@
                     </div>
                 </section>
                 {% else %}
+                <section class="uui-breadcrumbs-container">
+                    <div class="container">
+                        <div class="row">
+                            <ol class="uui-breadcrumbs">
+                                <li><a href="{{ pathto(master_doc) }}">Home</a></li>
+                                {% for doc in parents %}
+                                <li><a href="{{ doc.link|e }}">{{ doc.title }}</a></li>
+                                {% endfor %}
+                                <li class="active"><a href="#">{{ title }}</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
                 <section class="promo-section">
                     <div class="container">
                         <div class="row">

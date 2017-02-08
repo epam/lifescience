@@ -54,6 +54,7 @@
     }
 
     function paginationClick(number, offset) {
+        if (number == currentPage) return;
         if (number == null) number = currentPage + offset;
 
         $('#pagination-' + currentPage).toggleClass('active');
