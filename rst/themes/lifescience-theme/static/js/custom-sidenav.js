@@ -12,10 +12,10 @@ $(document).ready(function() {
         '    <div class="accordion-heading">' +
         '        <p class="accordion-title">' +
         '           <a data-toggle="collapse" data-parent="#accordion1"' +
-        '               class="accordion-toggle" href="#item{{@index}}">{{text}}</a>' +
+        '               class="accordion-toggle collapsed" href="#item{{@index}}">{{text}}</a>' +
         '        </p>' +
         '    </div>' +
-        '    <div class="accordion-collapse collapse in" id="item{{@index}}">' +
+        '    <div class="accordion-collapse collapse" id="item{{@index}}">' +
         '        <div class="accordion-body">' +
         '            <ul>' +
         '                {{#each ul}}' +

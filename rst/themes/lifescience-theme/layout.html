@@ -38,6 +38,11 @@
                                                     <div class="tile-label">{{tag}}</div>
                                                     <h3>{{title}}</h3>
                                                     <p>{{description}}</p>
+                                                    <div class="tile-description">
+                                                        <!--<ul class="uui-unstyled-list">-->
+                                                            <!--<li><a href="indigo/knime.html">KNIME</a> nodes</li>-->
+                                                        <!--</ul>-->
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -49,7 +54,9 @@
                                 {% trans path=pathto('newsfeed') %}<iframe class="news" src="{{ path }}" scrolling="no"></iframe>{% endtrans %}
                             </div>
                             <script>
-                                $('.news').height($('#main-tiles').height());
+                                $(document).ready(function () {
+                                    $('.news').height($('#main-tiles').height())
+                                });
                             </script>
                         </div>
                     </div>
@@ -71,12 +78,18 @@
                 <section class="promo-section">
                     <div class="container">
                         <div class="row">
-                            {% block sidenav %}
-                            <div class="col-xs-12 col-md-3" role="complementary">
-                                {% include "sidenav.html" %}
-                            </div>
-                            {% endblock %}
-                            <div class="col-xs-12 col-md-9" role="main">
+                            {% if pagename != "ketcher/demo" %}
+                                {% block sidenav %}
+                                <div class="col-xs-12 col-md-3" role="complementary">
+                                    {% include "sidenav.html" %}
+                                </div>
+                                {% endblock %}
+                            {% endif %}
+                            {% if pagename != "ketcher/demo" %}
+                                <div class="col-xs-12 col-md-9" role="main">
+                            {% else %}
+                                <div class="col-xs-12" role="main">
+                            {% endif %}
                                 {%- block body -%}{%- endblock %}
                             </div>
                         </div>

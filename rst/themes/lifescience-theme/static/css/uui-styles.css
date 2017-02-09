@@ -1353,11 +1353,10 @@ header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-s
   color: #3cc2d7;
 }
 header .uui-header .uui-responsive-header .responsive-menu .menu-wrapper .menu-scroll ul > li.sub-menu .sub > li > a {
-  padding-top: 10px;
   text-transform: none;
   font-family: 'Oswald Light', Arial, sans-serif;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 50px;
   white-space: normal;
   max-width: none;
   letter-spacing: .15px;
@@ -4876,7 +4875,7 @@ header .dropdown-menu li > a:hover {
   -ms-transition: width 0.3s ease;
   transition: width 0.3s ease;
 }
-.search-icon {
+.search-label {
   position: absolute;
   top: 50%;
   left: 15px;
@@ -4887,12 +4886,38 @@ header .dropdown-menu li > a:hover {
   line-height: normal;
   font-weight: normal;
 }
-.search-icon:before {
+.search-label:before {
   width: 16px;
   height: 16px;
   display: inline-block;
   content: '\f002';
   font-family: 'FontAwesome';
-  color: #333;
+  color: #ccc;
   font-size: 16px;
+}
+img {
+  max-width: 100%;
+}
+div.note {
+  padding: 20px;
+  font-size: 16px;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+}
+.ketcher-demo {
+  display: block;
+  border: 0;
+  height: 600px;
+  width: 100%;
+  margin-top: 40px;
+}
+@media (max-width: 1200px) {
+  .ketcher-demo {
+    width: 970px;
+  }
+}
+@media (max-width: 980px) {
+  .ketcher-demo {
+    width: 800px
+  }
 }

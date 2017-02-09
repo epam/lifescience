@@ -4,5 +4,5 @@
     | replace(' class="current"', '')
     | replace('<ul>', '<ul class="sub">')
     | replace('<li class="toctree-l">', '<li class="sub-menu">')
-    | replace('<li class="toctree-l1">', '<li class="sub-menu">') }}
-
+    | replace('<li class="toctree-l1">', '<li class="sub-menu">')
+    | replace('</a><ul class="sub">', '<div class="arrow fa fa-angle-right"></div></a><ul class="sub">') }}
