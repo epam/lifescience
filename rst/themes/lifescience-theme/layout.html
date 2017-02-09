@@ -53,11 +53,6 @@
                             <div class="col-xs-12 col-md-4">
                                 {% trans path=pathto('newsfeed') %}<iframe class="news" src="{{ path }}" scrolling="no"></iframe>{% endtrans %}
                             </div>
-                            <script>
-                                $(document).ready(function () {
-                                    $('.news').height($('#main-tiles').height())
-                                });
-                            </script>
                         </div>
                     </div>
                 </section>
@@ -100,13 +95,7 @@
         </div>
 
         {% include "footer.html" %}
-
     </div>
-
-    <script>
-        UUI.Navigation.init();
-        UUI.Global_Search.init();
-    </script>
 
     {% else %}
         {% include "newsfeed.html" %}

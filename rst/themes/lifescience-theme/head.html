@@ -52,4 +52,12 @@
     <!-- Custom sidenav -->
     <script src="{{ pathto('_static/js/custom-sidenav.js', 1) }}"></script>
 
+    <script type="text/javascript">
+        $(window).load(function () {
+            UUI.Navigation.init();
+            UUI.Global_Search.init();
+
+            $('.news').height($('#main-tiles').height())
+        });
+    </script>
 </head>
