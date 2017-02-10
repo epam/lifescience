@@ -17,35 +17,53 @@ Cheminformatics
 
 -  `Bingo <bingo/index.html>`__ Chemistry search engine for Oracle, Microsoft SQL Server and PostgreSQL databases |image1|
 
-   -  `Bingo demo <TODO:bingo-demo>`__ : Search over PubChem and other databases
+   -  Bingo is a RDBMS data cartridge that provides the industry’s
+      next-generation, fast, scalable, and efficient storage and searching
+      solution for chemical information.
+   -  Bingo seamlessly integrates the chemistry into Oracle, Microsoft SQL
+      Server and PostgreSQL databases. Its extensible indexing is designed to
+      enable scientists to store, index, and search chemical moieties
+      alongside numbers and text within one underlying relational database
+      server
 
 -  `Ketcher <ketcher/index.html>`__ Web-based molecule sketcher |image2|
 
+   -  Ketcher is a web-based chemical structure editor.
+   -  Since Ketcher is written in pure Javascript, it incorporates high
+      performance, good portability and light weight. You will not need any
+      Java or Flash plugins to use it in your browser. Ketcher is completely
+      free and open-source, while also available on a commercial basis.
    -  `Ketcher 2.0 demo <ketcher/demo.html>`__: Edit molecules online
 
 -  `Indigo Toolkit <indigo/index.html>`__ Universal cheminformatics
-   toolkit and `API <indigo/api/index.html>`__ |image3|
+   toolkit and API |image3|
 
-   -  `KNIME <indigo/knime.html>`__ nodes
-   -  `Legio <indigo/legio.html>`__: GUI application for combinatorial
-      chemistry
-   -  `ChemDiff <indigo/chemdiff.html>`__: Visual comparison of two SDF
-      or SMILES files
-   -  `indigo-depict <indigo/indigo-depict.html>`__: Molecule and
-      reaction rendering utility
-   -  `indigo-cano <indigo/indigo-cano.html>`__: Canonical SMILES
-      generator
-   -  `indigo-deco <indigo/indigo-deco.html>`__: R-Group deconvolution
-      utility
+   -  Indigo is a universal organic chemistry toolkit. It contains first-class
+      tools for end users, as well as a documented `API <indigo/api/index.html>`__
+      for developers. Indigo it is completely free and open-source, while also
+      available on a commercial basis.
+   -  Indigo-based command-line `utilities <indigo/index.html#command-line-utilities>`__
+   -  Number of freely available cheminformatics `KNIME nodes <indigo/knime.html>`__
+   -  Indigo-based `Java GUI applications <indigo/index.html#java-gui-utilities>`__
 
 -  `Indigo ELN <indigo/eln/index.html>`__ Open-Source Chemistry Electronic Lab Notebook |image4|
+
+   -  Indigo ELN allows scientists to prepare, plan, and analyze experiments,
+      access relevant information, and develop new methods in the areas of
+      synthetic chemistry, analytical chemistry, and process chemistry.
+   -  Indigo ELN combines the best of both worlds: an application developed
+      and refined at Pfizer and tested by thousands of chemists there, and an
+      open-source application that is available at no cost.
+
 -  `Imago OCR <imago/index.html>`__ Chemical optical recognition toolkit |image5|
 
-   -  `imago-console <imago/imago_console.html>`__: Command-line
-      application for recognizing images
-   -  `Imago OCR Visual Tool <imago/imago-gui.html>`__: GUI application
-      for recognizing structures from documents
-   -  `Imago OCR demo <TODO:imago-demo>`__: Recognize molecule images online
+   -  Imago OCR is a toolkit for 2D chemical structure image recognition. It
+      contains a `GUI <imago-gui.html>`__ program and a `command-line
+      utility <imago_console.html>`__, as well as a documented
+      `API <c.html>`__ for developers. Imago is completely free and
+      open-source, while also available on a commercial basis.
+
+   -  `Imago OCR demo <ketcher/demo.html>`__: Recognize molecule images online (use Ketcher `Recognize` button)
 
 
 Data processing
