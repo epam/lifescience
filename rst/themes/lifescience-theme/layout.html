@@ -26,28 +26,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 col-md-8" id="main-tiles">
-                                <div class="row">
-                                    {%- for title, tag, image, description, link in theme_index_tiles %}
-                                    <div class="col-xs-12 col-sm-6">
-                                        <div class="tile" onclick="location.href='{{link}}'">
-                                            <div class="tile-image">
-                                                <img src="{{ pathto('_static/images/pics/' + image, 1) }}" alt="">
-                                            </div>
-                                            <div class="tile-content">
-                                                <div class="tile-text">
-                                                    <div class="tile-label">{{tag}}</div>
-                                                    <h3>{{title}}</h3>
-                                                    <p>{{description}}</p>
-                                                    <div class="tile-description">
-                                                        <!--<ul class="uui-unstyled-list">-->
-                                                            <!--<li><a href="indigo/knime.html">KNIME</a> nodes</li>-->
-                                                        <!--</ul>-->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {%- endfor %}
+                                <div class="row" id="index-tiles">
+                                    <div style="display: none;">{{body}}</div>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-4">

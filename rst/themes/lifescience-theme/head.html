@@ -52,6 +52,10 @@
     <!-- Custom sidenav -->
     <script src="{{ pathto('_static/js/custom-sidenav.js', 1) }}"></script>
 
+    {% if pagename == "index" %}
+    <script src="{{ pathto('_static/js/index-tiles.js', 1) }}"></script>
+    {% endif %}
+
     <script type="text/javascript">
         $(window).load(function () {
             UUI.Navigation.init();
