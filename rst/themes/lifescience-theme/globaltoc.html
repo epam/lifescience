@@ -2,19 +2,6 @@
 
 <div class="dropdown-menu" role="menu">
     <div class="container">
-        <div class="row">
-            <h2>Cheminformatics</h2>
-            <hr>
-            <div class="row">
-                {{ tree
-                | replace(' class="current"', '')
-                | replace(' current', '')
-                | replace('<ul>', '', 1)
-                | replace('<li class="toctree-l1">', '<div class="col-md-2 col-sm-6"><span class="nav-subtitle">')
-                | replace('</a><ul>', ' &raquo;</a></span><ul>')
-                | replace('</ul>\n</li>', '</ul></div>')
-                | replace('</a></li>\n</ul>\n', ' &raquo;</a></span></div>') }}
-            </div>
-        </div>
+        {{ tree | convert_to_flat }}
     </div>
 </div>
