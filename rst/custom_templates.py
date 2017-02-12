@@ -18,19 +18,11 @@ GROUP_MAP = {
 "Selenium Framework": "Software development"
 }
 
-group_cache = dict()
 
-def convert_to_flat(s):
-    print("********** start")
-    if s in group_cache:
-        return group_cache[s]
 
-    print("********** parse")
-    
+def lifesciences_menu(s):
     ins = s.encode("utf-8")
-    # print(ins)
     root = ET.fromstring(ins)
-    # print("********** parsed")
 
     group_products = dict()
 
@@ -49,40 +41,42 @@ def convert_to_flat(s):
         for elem_sub in p_refs:
             elem_sub_ref = elem_sub.find('a')
             p['refs'].append({"name": elem_sub_ref.text, "href": elem_sub_ref.attrib["href"]})
-        # print (product_ref.text)
-        # print(elem.tag)
-    # print(group_products)
 
-    flat_root = ET.fromstring('<div class="row"></div>')
-
+    flat_root = ET.fromstring('<div class="container"></div>')
 
     for g in GROUPS:
-        h = ET.SubElement(flat_root, 'h2')
+        div_row = ET.SubElement(flat_root, 'div', attrib={'class':'row'} )
+        h = ET.SubElement(div_row, 'h2')
         h.text = g
-        ET.SubElement(flat_root, 'hr')
+        ET.SubElement(div_row, 'hr')
+
         prods = group_products[g]
         for p in prods:
-            divr = ET.SubElement(flat_root, 'div', attrib={'class':'row'} )
-            div = ET.SubElement(divr, 'div', attrib={'class':'col-md-2 col-sm-6'} )
-            span = ET.SubElement(divr, 'span', attrib={'class':'nav-subtitle'} )
+            div = ET.SubElement(div_row, 'div', attrib={'class':'col-md-2 col-sm-5'} )
+            span = ET.SubElement(div, 'span', attrib={'class':'nav-subtitle'} )
             a = ET.SubElement(span, 'a', attrib={'class':"reference internal", 'href': p['href']} )
             a.text = p['name']
+            if 'refs' in p:
+                ul = ET.SubElement(div, 'ul')
+                for r in p['refs']:
+                    li = ET.SubElement(ul, 'li')
+                    a2 = ET.SubElement(li, 'a', attrib={'class':"reference internal",
+                                                         'href': r['href']})
+                    a2.text = r['name']
 
-    # res = '\n<div class="col-md-2 col-sm-6"><span class="nav-subtitle"><a class="reference internal" href="selenium.html">Selenium Framework &raquo;</a></span></div>'
     res = ET.tostring(flat_root, encoding="UTF-8", method="html")
-    group_cache[s] = res
+    return res
 
-    # return ET.tostring(flat_root, encoding="UTF-8", method="html")
-    return res 
-def add_jinja_filters(app):
-    app.builder.templates.environment.filters['convert_to_flat'] = convert_to_flat
+
+def add_filters(app):
+    app.builder.templates.environment.filters['lifesciences_menu'] = lifesciences_menu
 
 def setup(app):
-    app.connect("builder-inited", add_jinja_filters)
+    app.connect("builder-inited", add_filters)
 
 def local_test():
     with open('/opt/repo/lifescience/in2.xml', 'r') as f:
-        s = convert_to_flat(f.read())
+        s = lifesciences_menu(f.read())
         print(s)
 
 

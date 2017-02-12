@@ -1,7 +1,5 @@
 {% set tree = toctree(titles_only=true, maxdepth=2, collapse=False, includehidden=true) %}
 
 <div class="dropdown-menu" role="menu">
-    <div class="container">
-        {{ tree | convert_to_flat }}
-    </div>
+    {{ tree | lifesciences_menu }}
 </div>

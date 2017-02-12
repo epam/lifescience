@@ -1,5 +1,5 @@
-Developer's Manual
-==================
+Developers Manual
+=================
 
 Installation
 ------------

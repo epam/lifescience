@@ -1,4 +1,4 @@
-﻿Indigo Utilities
+Indigo Utilities
 ================
 
 .. toctree::
