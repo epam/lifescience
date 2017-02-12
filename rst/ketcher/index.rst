@@ -9,6 +9,7 @@
     developers-manual
     help
     demo
+    Downloads <../download/ketcher>
 
 Overview
 --------

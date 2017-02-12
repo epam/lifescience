@@ -13,6 +13,7 @@
     java
     dependencies
     changelog
+    Downloads <../download/imago>
 
 Overview
 --------

@@ -6,6 +6,7 @@ Indigo ELN: The Open-Source Chemistry Electronic Lab Notebook
     :includehidden:
 
     Release Notes <changelog>
+    Downloads <../../download/indigo/eln>
 
 
 **Professional. Proven. Free.**
