@@ -38,7 +38,8 @@ extensions = [
     'indigorenderer',
     'codeblockimport',
     'indigoimage',
-    'options_node'
+    'options_node',
+    'custom_templates'
     #    'sphinx.ext.mathjax',
 ]
 
