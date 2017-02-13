@@ -32,7 +32,7 @@ def lifesciences_menu(s):
     for elem in root:
         product_ref = elem.find('a')
         g = GROUP_MAP[product_ref.text]
-        p = {"name": product_ref.text, "href": product_ref.attrib["href"]}
+        p = {"name": product_ref.text + " &raquo;", "href": product_ref.attrib["href"]}
         group_products[g].append(p)
         p_refs = elem.find('ul')
         if p_refs is None:
@@ -64,7 +64,7 @@ def lifesciences_menu(s):
                                                          'href': r['href']})
                     a2.text = r['name']
 
-    res = ET.tostring(flat_root, encoding="UTF-8", method="html")
+    res = ET.tostring(flat_root, encoding="UTF-8", method="html").replace('&amp;', '&')
     return res
 
 
