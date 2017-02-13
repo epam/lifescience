@@ -1,7 +1,12 @@
 Parso Java library
 ==================
 
+.. toctree::
+    :hidden:
+    :includehidden:
 
+    parso/changelog
+    Downloads <download/parso>
 
 Overview
 --------
@@ -137,9 +142,7 @@ installation package suitable for your system.
 Release Notes
 -------------
 
-.. toctree::
-
-    parso/changelog
+Please see the `Changelog <parso/changelog.html>`__ page
 
 
 License

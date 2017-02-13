@@ -94,7 +94,7 @@ Windows, and Mac OS X operating systems. The rendering is done via
 Cairo. `tinyxml <http://www.grinninglizard.com/tinyxml/>`__ is used to
 parse CML files. No other third-party components are used.
 
-Indigo exposes the `C interface <api/c.html>`__ to applications. Java
+Indigo exposes the `C interface <api/reference.html#plain-c>`__ to applications. Java
 and Python wrappers are available for all of the supported platforms.
 For Windows, there is also a .NET wrapper.
 
@@ -107,7 +107,7 @@ Documentation
 To understand Indigo's scope, start with the
 `Concepts <concepts/index.html>`__ page. A quick reference of the API
 for all supported languages is provided in the `API <api/index.html>`__
-page. A separate page deals with the `C interface <api/c.html>`__.
+page. A separate page deals with the `C interface <api/reference.html#plain-c>`__.
 Various options that can be passed to the library are explained on the
 `Options <options/index.html>`__ page.
 

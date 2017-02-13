@@ -58,9 +58,9 @@ Cheminformatics
 -  `Imago OCR <imago/index.html>`__ Chemical optical recognition toolkit |image5|
 
    -  Imago OCR is a toolkit for 2D chemical structure image recognition. It
-      contains a `GUI <imago-gui.html>`__ program and a `command-line
-      utility <imago_console.html>`__, as well as a documented
-      `API <c.html>`__ for developers. Imago is completely free and
+      contains a `GUI <imago/imago-gui.html>`__ program and a `command-line
+      utility <imago/imago_console.html>`__, as well as a documented
+      `API <imago/c.html>`__ for developers. Imago is completely free and
       open-source, while also available on a commercial basis.
 
    -  `Imago OCR demo <ketcher/demo.html>`__: Recognize molecule images online (use Ketcher `Recognize` button)
