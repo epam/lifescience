@@ -71,10 +71,23 @@ Data processing
 
 -  `Parso <parso.html>`__ Parso Java library |image6|
 
+   -  Parso is a lightweight Java library that is designed to read SAS7BDAT
+      datasets. The Parso interfaces are analogous to those that belong to
+      libraries designed to read table-storing files
+   -  Despite its small size, the Parso library is the only
+      full-featured open-source solution to process SAS7BDAT datasets
+
 Software development
 --------------------
 
 -  `EPAM Selenium Framework <selenium.html>`__ Test automation using Selenium WebDriver |image7|
+    
+   -  Selenium Framework is a Java library developed for test automation
+      using Selenium WebDriver. It is based on Maven structure and integrates
+      with the TestNG testing framework. 
+   -  Selenium Framework provides
+      rapid test automation for Web applications and allows focusing on
+      substantial test development instead of tiresome testware maintenance.
 
 .. |image1| image:: themes/lifescience-theme/static/images/pics/Bingo.jpg
 .. |image2| image:: themes/lifescience-theme/static/images/pics/Ketcher.jpg
