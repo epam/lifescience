@@ -159,3 +159,37 @@ you want to:
 -  Receive ongoing support and maintenance of our code
 -  Include our code in your proprietary software product
 
+
+Contributors
+------------
+
+Indigo Toolkit and Bingo
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Core team: Aleksandr Savelev, Iurii Puzanov, Valerii Samoilov, Vladislav Karnaukhov
+* Java Lucene: Artem Malykh
+* KNIME Nodes: Anton Pikhtin 
+* QA, Devops: Irina Tuzkova, Mikhail Kviatkovskii
+
+Ketcher
+^^^^^^^
+
+* Core team: Sergei Gelmetdinov, Nikolay Kuznetsov, Nikita Ryzhov
+* QA: Irina Tuzkova
+
+Indigo ELN
+^^^^^^^^^^
+
+Nikita Karuze, Vladislav Alekseev, Evgeniia Demianchuk
+
+Parso
+^^^^^
+
+Petr Tsurinov, Igor Printsev
+
+Lifesciences Portal
+^^^^^^^^^^^^^^^^^^^
+
+* Design: Iuliia Nikolskaia, Daniil Nosenko, Alexander Telenkov
+* Page-proofs, UX and implementation: Ekaterina Leonteva, Egor Tarakanov, Nikita Ryzhov
+
