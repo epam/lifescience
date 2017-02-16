@@ -4637,7 +4637,7 @@ header .dropdown-menu .col-imago {
 }
 header .dropdown-menu h2 {
   margin: 0;
-  font-family: 'Oswald Bold', Arial, sans-serif;
+  font-family: 'Source Sans Pro Bold', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #999;
@@ -4645,7 +4645,7 @@ header .dropdown-menu h2 {
 }
 header .dropdown-menu hr {
   margin: 3px 0 15px;
-  border-top: 1px solid #999;
+  border-top: 1px solid rgba(153, 153, 153, 0.4);
 }
 header .dropdown-menu .nav-subtitle > a {
   margin-bottom: 7px;
@@ -4713,7 +4713,7 @@ header .dropdown-menu li > a:hover {
   -webkit-transition: all 600ms ease-in-out;
   transition: all 600ms ease-in-out;
 }
-.tile-content:hover {
+.tile:hover .tile-content {
   top: 0;
   margin-top: 0;
 }
@@ -4777,6 +4777,7 @@ header .dropdown-menu li > a:hover {
   border-top: none;
 }
 .news-article h2 {
+  margin-top: 0;
   margin-bottom: 5px;
 }
 .news-date {
