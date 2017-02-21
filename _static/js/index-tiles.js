@@ -17,9 +17,9 @@ $(document).ready(function() {
         '                   <div class="tile-label">{{label}}</div>' +
         '                   <h3>{{title}}</h3>' +
         '                   <p>{{{text}}}</p>' +
-        '                   <div class="tile-description">' +
+        '                   <ul class="tile-description">' +
         '                       {{{description}}}' +
-        '                   </div>' +
+        '                   </ul>' +
         '               </div>' +
         '           </div>' +
         '       </div>' +
