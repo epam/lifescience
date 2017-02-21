@@ -53,14 +53,14 @@
                 <section class="promo-section">
                     <div class="container">
                         <div class="row">
-                            {% if pagename != "ketcher/demo" %}
+                            {% if pagename != "ketcher/demo" and pagename != "download/index" and pagename != "contact" %}
                                 {% block sidenav %}
                                 <div class="col-xs-12 col-md-3" role="complementary">
                                     {% include "sidenav.html" %}
                                 </div>
                                 {% endblock %}
                             {% endif %}
-                            {% if pagename != "ketcher/demo" %}
+                            {% if pagename != "ketcher/demo" and pagename != "download/index" and pagename != "contact" %}
                                 <div class="col-xs-12 col-md-9" role="main">
                             {% else %}
                                 <div class="col-xs-12" role="main">

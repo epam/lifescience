@@ -309,9 +309,11 @@ i.violet,
 span.violet {
   color: #8b5a9f;
 }
-.highlight-text {
-  background: #fded96;
-  padding: 2px 4px;
+code {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #fded96;
+  color: inherit;
 }
 a {
   color: #1a9cb0;
@@ -328,19 +330,22 @@ a:focus {
   outline: 0;
 }
 .uui-ordered-list,
-.uui-unordered-list {
+.uui-unordered-list,
+.simple {
   margin-left: 15px;
   margin-bottom: 10px;
 }
 .uui-ordered-list li,
-.uui-unordered-list li {
+.uui-unordered-list li,
+.simple li {
   font-size: 14px;
   line-height: 18px;
-  color: #1a9cb0;
+  color: inherit;
   margin-bottom: 10px;
 }
 .uui-ordered-list li span,
-.uui-unordered-list li span {
+.uui-unordered-list li span,
+.simple li span {
   color: #333333;
 }
 /* Dark green */
@@ -2744,7 +2749,7 @@ header .uui-header .uui-header-tools > li.uui-global-search .search-field .uui-s
   color: #cccccc;
 }
 header .uui-header .uui-header-tools > li.uui-global-search .search-field .uui-search:focus {
-  width: 400px;
+  width: 240px;
   background-color: #ffffff;
   color: #464547;
 }
@@ -3241,6 +3246,7 @@ header .uui-header .uui-responsive-header .responsive-global-search .search-list
 }
 .uui-breadcrumbs > li {
   display: inline-block;
+  margin-bottom: 0;
 }
 .uui-breadcrumbs > li + li:before {
   padding: 0 5px;
@@ -3287,10 +3293,12 @@ header .uui-header .uui-responsive-header .responsive-global-search .search-list
 .uui-pagination li .pagination-items {
   display: inline-block;
   list-style: none;
+  margin: 0;
 }
 .uui-pagination li .pagination-items > li {
   float: left;
   margin: 0;
+  line-height: 1;
 }
 .uui-pagination li .pagination-items > li > a {
   display: inline-block;
@@ -3309,6 +3317,7 @@ header .uui-header .uui-responsive-header .responsive-global-search .search-list
   margin-right: -1px;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .uui-pagination li .pagination-items > li > a span {
   display: inline-block;
@@ -3948,7 +3957,7 @@ a.uui-button:active {
 }
 .uui-accordion .panel.accordion-item .accordion-collapse .accordion-body {
   border: none;
-  padding: 3px 15px 15px 15px;
+  padding: 0 15px 10px 15px;
   color: #999999;
   font-size: 14px;
   font-family: 'Source Sans Pro Regular', Arial, sans-serif;
@@ -4473,11 +4482,13 @@ ul ul {
   margin-top: 5px;
 }
 .uui-unordered-list li,
-.uui-ordered-list li {
+.uui-ordered-list li,
+ul li, ol li {
   color: inherit;
 }
 .uui-unordered-list li span,
-.uui-ordered-list li span {
+.uui-ordered-list li span,
+ul li span, ol li span {
   color: inherit;
 }
 .uui-unstyled-list {
@@ -4488,6 +4499,8 @@ ul ul {
 }
 .uui-inline-list {
   list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 .uui-inline-list li {
   display: inline-block;
@@ -4521,8 +4534,16 @@ a[href$=".pdf"]::after {
   -moz-osx-font-smoothing: grayscale;
   color: red;
 }
-a .fa-download {
+.news-article a[href^="download/"]::before {
+  content: "\f019";
+  display: inline-block;
+  vertical-align: baseline;
   margin-right: 3px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 12px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .header-container {
   max-width: 1170px;
@@ -4545,9 +4566,6 @@ footer .uui-promo-footer {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.promo-section div[role=main] {
-  padding-left: 50px;
-}
 .promo-section div[role=main] *:target {
   padding-top: 60px;
   margin-top: -60px;
@@ -4559,17 +4577,33 @@ footer .uui-promo-footer {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.section + .section {
+  margin-top: 26px;
+}
+
 .sub-section {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-address {
+
+.address {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
   margin-top: 16px;
 }
-address + iframe {
+.address:last-child {
+  margin-right: 0;
+}
+.address address {
+  line-height: 1.5;
+}
+.address iframe {
   margin-top: 26px;
   max-width: 400px;
 }
+
 header .uui-header .uui-responsive-header .responsive-header .responsive-brand-logo .logo,
 header .uui-header .brand-logo .logo {
   height: 30px;
@@ -4619,8 +4653,8 @@ header .uui-header .uui-navigation > li.dropdown > a::after {
   margin: auto;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
   border-bottom: 10px solid #333;
 }
 header .uui-header .uui-navigation > li .dropdown-menu {
@@ -4647,6 +4681,7 @@ header .dropdown-menu hr {
   margin: 3px 0 15px;
   border-top: 1px solid rgba(153, 153, 153, 0.4);
 }
+
 header .dropdown-menu .nav-subtitle > a {
   margin-bottom: 7px;
   display: inline-block;
@@ -4679,6 +4714,17 @@ header .dropdown-menu li > a {
 header .dropdown-menu li > a:hover {
   color: #fff;
   text-decoration: none;
+}
+.dropdown-menu-row {
+  display: table;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.dropdown-menu-row:last-child {
+  margin-bottom: 0;
+}
+.dropdown-menu-column {
+  display: table-cell;
 }
 .promo-section-intro {
   padding-top: 60px;
@@ -4737,8 +4783,10 @@ header .dropdown-menu li > a:hover {
 .tile-description {
   position: absolute;
   left: 0;
-  bottom: 0;
-  padding: 16px;
+  bottom: 16px;
+  margin: 0;
+  padding: 0 16px;
+  list-style-type: none;
 }
 .tile-description::before {
   content: " ";
@@ -4747,6 +4795,17 @@ header .dropdown-menu li > a:hover {
   width: 45px;
   height: 2px;
   background-color: #999999;
+}
+.tile-description li:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .tile-content {
+    font-size: 12px;
+  }
+  .tile-description::before {
+    display: none;
+  }
 }
 .news {
   border: 0;
@@ -4797,10 +4856,16 @@ header .dropdown-menu li > a:hover {
   .sidenav {
     width: 213px;
   }
+  .promo-section div[role=complementary] + div[role=main] {
+    padding-left: 30px;
+  }
 }
 @media (min-width: 1200px) {
   .sidenav {
     width: 263px;
+  }
+  .promo-section div[role=complementary] + div[role=main] {
+    padding-left: 50px;
   }
 }
 .sidenav .uui-accordion .panel.accordion-item {
@@ -4809,45 +4874,55 @@ header .dropdown-menu li > a:hover {
   border-color: #aedee8;
 }
 .sidenav .uui-accordion .panel.accordion-item .accordion-heading .accordion-title .accordion-toggle {
-  background-color: #e0f2f6;
+  background-color: #c1e6ee;
   color: #333333;
-  font-family: 'Oswald Regular', Arial, sans-serif;
-  text-transform: uppercase;
+  font-family: 'Source Sans Pro Bold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+.sidenav .uui-accordion .panel.accordion-item .accordion-heading .accordion-title .accordion-toggle:hover {
+  text-decoration: none;
+  background-color: #64c0d4;
+  color: #fff;
 }
 .sidenav .uui-accordion .panel.accordion-item .accordion-heading .accordion-title .accordion-toggle[data-toggle="collapse"] {
   position: relative;
 }
 .sidenav .uui-accordion .panel.accordion-item .accordion-heading .accordion-title .accordion-toggle[data-toggle="collapse"]:after {
   content: "\f107";
-  display: inline-block;
+  display: block;
   vertical-align: baseline;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 14px;
-  float: right;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -7px;
 }
-.sidenav .uui-accordion .panel.accordion-item .accordion-heading .accordion-title .accordion-toggle.collapsed {
-  background-color: #c1e6ee;
+.sidenav .uui-accordion .panel.accordion-item .accordion-heading .accordion-title .accordion-toggle[data-toggle="collapse"]:not(.collapsed) {
+  background-color: #e0f2f6;
 }
-.sidenav .uui-accordion .panel.accordion-item .accordion-heading .accordion-title .accordion-toggle.collapsed:hover {
-  text-decoration: none;
-  background-color: #64c0d4;
-  color: #fff;
+.sidenav .uui-accordion .panel.accordion-item .accordion-heading .accordion-title .accordion-toggle[data-toggle="collapse"]:not(.collapsed):hover {
+  color: #64c0d4;
 }
 .sidenav .uui-accordion .panel.accordion-item .accordion-heading .accordion-title .accordion-toggle.collapsed[data-toggle="collapse"]:after {
   content: "\f105";
 }
 .sidenav .uui-accordion .panel.accordion-item .accordion-body {
   background-color: #e0f2f6;
-  font-family: 'Oswald Light', Arial, sans-serif;
+  font-family: 'Source Sans Pro Regular', Arial, sans-serif;
 }
 .sidenav .uui-accordion .panel.accordion-item .accordion-body ul {
   list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+.sidenav .uui-accordion .panel.accordion-item .accordion-body ul li {
   margin-bottom: 0;
 }
 .sidenav .uui-accordion .panel.accordion-item .accordion-body ul li a {
   display: block;
-  padding-left: 10px;
-  padding-bottom: 15px;
+  padding: 6px 0 6px 10px;
   font-size: 18px;
   line-height: 24px;
   text-decoration: none;

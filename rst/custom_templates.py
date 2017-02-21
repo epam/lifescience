@@ -45,14 +45,14 @@ def lifesciences_menu(s):
     flat_root = ET.fromstring('<div class="container"></div>')
 
     for g in GROUPS:
-        div_row = ET.SubElement(flat_root, 'div', attrib={'class':'row'} )
-        h = ET.SubElement(div_row, 'h2')
+        h = ET.SubElement(flat_root, 'h2')
         h.text = g
-        ET.SubElement(div_row, 'hr')
+        ET.SubElement(flat_root, 'hr')
+        div_row = ET.SubElement(flat_root, 'div', attrib={'class':'dropdown-menu-row'} )
 
         prods = group_products[g]
         for p in prods:
-            div = ET.SubElement(div_row, 'div', attrib={'class':'col-md-2 col-sm-5'} )
+            div = ET.SubElement(div_row, 'div', attrib={'class':'dropdown-menu-column'} )
             span = ET.SubElement(div, 'span', attrib={'class':'nav-subtitle'} )
             a = ET.SubElement(span, 'a', attrib={'class':"reference internal", 'href': p['href']} )
             a.text = p['name']
