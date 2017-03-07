@@ -4991,9 +4991,23 @@ div.note {
   .ketcher-demo {
     width: 970px;
   }
+  .imago-report {
+    width: 970px;
+  }
 }
 @media (max-width: 980px) {
   .ketcher-demo {
     width: 800px
   }
+  .imago-report {
+    width: 800px
+  }
 }
+
+.imago-report {
+  display: block;
+  height: 600px;
+  width: 100%;
+  margin-top: 40px;
+}
+

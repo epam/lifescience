@@ -61,14 +61,14 @@ Online Demo
 -----------
 
 You can evaluate the Imago OCR recognition quality on the `Imago Demo
-web page <TODO:imago-demo>`__.
+web page <../ketcher/demo.html>`__.
 
 Comparison with other systems
 -----------------------------
 
 We created a detailed report with sets of different images that compares
 Imago OCR with other publicly available solutions. The report is
-available on a `separate web page <TODO:imago-report>`__. The scripts
+available on a `separate web page <imago-report.html>`__. The scripts
 and the image sets are available in the `download
 section <../download/imago.html>`__.
 
@@ -198,4 +198,4 @@ You may need the commercial license if you want to:
 .. |image2| image:: ../assets/imago/4_source_USRE039991-20080101-C00100.*
 .. |image3| image:: ../assets/imago/4_result_USRE039991-20080101-C00100.png.imago-2.0.*
 .. |Report| image:: ../assets/imago/imago-report-small.png
-   :target: TODO:imago-report
+   :target: imago-report.html
