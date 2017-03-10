@@ -11,7 +11,7 @@ Prerequisites
 ~~~~~~~~~~~~~~
 
 First, you need to add the `KNIME update
-site <http://www.knime.org/update/2.3/>`__ into your "software sites"
+site <http://update.knime.org/analytics-platform/3.3/>`__ into your "software sites"
 list, if it is not already there
 (`instructions <http://www.knime.org/downloads/update>`__). From that
 site, you need to download the *Base Chemistry Types & Nodes* (needed
@@ -23,10 +23,10 @@ of the provided Indigo examples to work).
 Indigo Nodes
 ~~~~~~~~~~~~
 
-You need to add the KNIME's `Community Contributions Nightly
-Updates <http://update.knime.org/community-contributions/trunk>`__
+You need to add the KNIME's `Community Contributions
+Updates <http://update.knime.org/community-contributions/3.3>`__
 site to tour "software sites" list
-(`instructions <http://tech.knime.org/community-contributions-info>`__).
+(`instructions <https://tech.knime.org/community>`__).
 Then, you need to download the "Indigo KNIME Integration" package.
 
 |image1|
@@ -35,9 +35,8 @@ Then, you need to download the "Indigo KNIME Integration" package.
 ignore it.
 
 After you successfully install the Indigo nodes and restart Eclipse, you
-should be able to see the new nodes in the "Community Nodes/Indigo"
-section. Also, some example workflows are available in
-099\_Community/07\_Indigo directory of the KNIME Example Flow Server.
+should be able to see the new nodes in the "Community Nodes/Indigo 2"
+section. 
 
 |image2|
 
@@ -65,8 +64,7 @@ Feedback
 You are welcome to post your bug-reports and suggestions about our KNIME
 nodes to the `Indigo forum <http://tech.knime.org/forum/indigo>`__ at
 the KNIME Tech. Topics related to the core Indigo library may, as
-always, be posted into our `Google
-groups <../contact.html#feedback-on-open-source-software>`__.
+always, be posted into our `Google groups <../contact.html#feedback-on-open-source-software>`__.
 
 .. |image0| image:: ../assets/indigo/knime-install-01.png
 .. |image1| image:: ../assets/indigo/knime-install-02.png
