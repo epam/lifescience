@@ -188,11 +188,11 @@ Report issues to https://github.com/epam/NGB/issues or contact us: NGB@epam.com
 
 
 .. |alignments| image:: ../assets/ngb/NGB_alignments.png
-.. |variations| image:: ../assets/ngb/NGB_variations.PNG
+.. |variations| image:: ../assets/ngb/NGB_variations.png
 .. |inv_comment| image:: ../assets/ngb/NGB_inv_comment.png
 .. |inv_support| image:: ../assets/ngb/NGB_inv_support.png
-.. |NGB_splitview| image:: ../assets/ngb/NGB_splitview.PNG
-.. |NGB_RNASeq1| image:: ../assets/ngb/NGB_RNASeq1_small.PNG
-.. |NGB_RNASeq2| image:: ../assets/ngb/NGB_RNASeq2_small.PNG
-.. |NGB_proteinviewer| image:: ../assets/ngb/NGB_proteinviewer.PNG
+.. |NGB_splitview| image:: ../assets/ngb/NGB_splitview.png
+.. |NGB_RNASeq1| image:: ../assets/ngb/NGB_RNASeq1_small.png
+.. |NGB_RNASeq2| image:: ../assets/ngb/NGB_RNASeq2_small.png
+.. |NGB_proteinviewer| image:: ../assets/ngb/NGB_proteinviewer.png
 
