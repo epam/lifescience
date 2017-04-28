@@ -109,6 +109,6 @@ Software development
 .. |image5| image:: themes/lifescience-theme/static/images/pics/Imago-OCR.jpg
 .. |image6| image:: themes/lifescience-theme/static/images/pics/Parso.jpg
 .. |image7| image:: themes/lifescience-theme/static/images/pics/JDI.jpg
-.. |image8| image:: themes/lifescience-theme/static/images/pics/NGB3.jpg
+.. |image8| image:: themes/lifescience-theme/static/images/pics/NGB3.JPG
 
 
