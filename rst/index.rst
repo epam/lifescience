@@ -5,19 +5,31 @@ Life Sciences Open Source
     :hidden:
 
     Bingo <bingo/index>
+    NGB <ngb/index>
     Indigo Toolkit <indigo/index>
     Ketcher <ketcher/index>
     Indigo ELN <indigo/eln/index>
     Imago OCR <imago/index>
     Parso <parso>
     Selenium Framework <selenium>
+    
+Bioinformatics
+--------------
+
+-  `New Genome Browser <ngb/index.html>`__ Web at a speed and functionality of desktop |image8|
+
+   -  Visualiszation of Alignments, Variations, Structural Variations
+   -  Embedded Protein structure viewer 
+   -  Integration with ENSEMBL, UniPROT, etc. and internal databases
+   -  Fast access to huge (500 Gb and more) data files and to cloud data (Amazon S3, Hadoop, etc.)
+   -  Try the `NGB demo <http://ngb.opensource.epam.com/catgenome>`__: Analize genome online
 
 Cheminformatics
 ---------------
 
 -  `Bingo <bingo/index.html>`__ Chemistry search engine for Oracle, Microsoft SQL Server and PostgreSQL databases |image1|
 
-   -  Bingo is a RDBMS data cartridge that provides the industry’s
+   -  Bingo is a RDBMS data cartridge that provides the industry's
       next-generation, fast, scalable, and efficient storage and searching
       solution for chemical information.
    -  Bingo seamlessly integrates the chemistry into Oracle, Microsoft SQL
@@ -89,6 +101,7 @@ Software development
       rapid test automation for Web applications and allows focusing on
       substantial test development instead of tiresome testware maintenance.
 
+                                
 .. |image1| image:: themes/lifescience-theme/static/images/pics/Bingo.jpg
 .. |image2| image:: themes/lifescience-theme/static/images/pics/Ketcher.jpg
 .. |image3| image:: themes/lifescience-theme/static/images/pics/Indigo-Toolkit.jpg
@@ -96,3 +109,6 @@ Software development
 .. |image5| image:: themes/lifescience-theme/static/images/pics/Imago-OCR.jpg
 .. |image6| image:: themes/lifescience-theme/static/images/pics/Parso.jpg
 .. |image7| image:: themes/lifescience-theme/static/images/pics/JDI.jpg
+.. |image8| image:: themes/lifescience-theme/static/images/pics/NGB3.jpg
+
+
