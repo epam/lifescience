@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
+    
+    <link rel="icon" type="image/png" href="../_static/images/icons/favicon-16.png">
+
+    <!-- jQuery Core -->
+    <script src="../_static/js/lib/jquery-1.12.0.min.js"></script>
+
+    <!--Sphinx files-->
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    './',
+            VERSION:     '0.3.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+
+    
+
+    <!-- Bootstrap Core -->
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css"/>
+    <script src="../_static/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- EPAM UUI JavaScript Core -->
+    <script src="../_static/js/uui-core.min.js" type="text/javascript"></script>
+    <script src="../_static/js/uui-global-search.min.js" type="text/javascript"></script>
+
+    <!-- EPAM UUI Styles Core -->
+    <link rel="stylesheet" href="../_static/css/uui-styles.css"/>
+
+    <!-- Scroll for UUI Sidebar -->
+    <link rel="stylesheet" href="../_static/css/lib/jquery.mCustomScrollbar.min.css"/>
+    <script src="../_static/js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Handlebars -->
+    <script src="../_static/js/handlebars.js"></script>
+
+    <!-- Custom sidenav -->
+    <script src="../_static/js/custom-sidenav.js"></script>
+
+    <!-- Pygments -->
+    <link rel="stylesheet" href="../_static/css/pygments.css"/>
+
+    
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            document.title = "New Genome Browser - NGB"
+            UUI.Navigation.init();
+            UUI.Global_Search.init();
+
+            $('.news').height($('#main-tiles').height())
+        });
+    </script>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+
+        <header>
+    <div class="uui-header">
+        <nav>
+            <!--Responsive html-layout-->
+            <div class="uui-responsive-header">
+                <div class="responsive-header">
+                    <div class="responsive-toggle-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="responsive-hide-menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="../index.html" class="responsive-brand-logo">
+                        <span class="arrow fa fa-angle-left"></span>
+                        <span class="logo">
+                        <img src="../_static/images/Logo_Epam_Color.svg" alt=""/>
+                    </span>
+                        <span class="title">Life Sciences</span>
+                    </a>
+                    <ul class="responsive-header-tools nav navbar-nav">
+                        <li class="responsive-header-icon search-icon">
+                            <a href="#" onclick="return false">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="responsive-menu">
+                    <div class="menu-wrapper">
+                        <div class="menu-scroll">
+                            <ul class="nav navbar-nav">
+                                <li class="sub-menu active">
+                                    <a href="../index.html">
+                                        <span>Products</span>
+                                        <div class="arrow fa fa-angle-right"></div>
+                                    </a>
+                                    
+
+<ul class="sub">
+<li class="sub-menu"><a class="reference internal" href="../bingo/index.html">Bingo<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-oracle.html">Bingo Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-nosql.html">Bingo NoSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/bingo.html">Downloads</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NGB</a></li>
+<li class="sub-menu"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../indigo/api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/api/reference.html">API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/utilities.html">Indigo Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/indigo/index.html">Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/build.html">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/installation.html">SDK Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/options/index.html">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/examples/index.html">Examples</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../ketcher/index.html">Ketcher<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/developers-manual.html">Developers Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/help.html">Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/demo.html">Ketcher 2.0 Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ketcher.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/changelog.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/indigo/eln.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../imago/index.html">Imago OCR<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../imago/examples.html">Features and Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/report.html">Comparison Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/imago-gui.html">Imago OCR Visual Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/imago_console.html">Imago Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/c.html">C Library Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/java.html">Java Bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/dependencies.html">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/changelog.html">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/imago.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../parso.html">Parso<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../parso/changelog.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/parso.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+</ul>
+
+                                </li>
+                                <li><a href="../resources.html"><span>Resources</span></a></li>
+                                <li><a href="../download/index.html"><span>Downloads</span></a></li>
+                                <li><a href="../contact.html"><span>Contact Info</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-global-search">
+                    <div class="search-header">
+                        <div class="header-wrapper">
+                            <div class="search-field">
+                                <label></label>
+                                <form action="../search.html" method="get">
+    <input type="search" name="q" class="uui-search" placeholder="Search"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+</form>
+                            </div>
+                            <div class="hide-search">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="header-container">
+                <a href="../index.html" class="brand-logo">
+                    <span class="logo">
+                        <img src="../_static/images/Logo_Epam_Color.svg" alt=""/>
+                    </span>
+                    <span class="title">
+                      Life Sciences Open Source
+                    </span>
+                </a>
+                <ul class="uui-navigation nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Products</a>
+                        
+
+<div class="dropdown-menu" role="menu">
+    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="../bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="../bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="../download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="../indigo/api/index.html">API</a></li><li><a class="reference internal" href="../indigo/api/reference.html">API Reference</a></li><li><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a></li><li><a class="reference internal" href="../indigo/utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="../download/indigo/index.html">Downloads</a></li><li><a class="reference internal" href="../indigo/build.html">Build</a></li><li><a class="reference internal" href="../indigo/installation.html">SDK Installation</a></li><li><a class="reference internal" href="../indigo/options/index.html">Options</a></li><li><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="../indigo/examples/index.html">Examples</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="../ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="../ketcher/help.html">Help</a></li><li><a class="reference internal" href="../ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="../download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="../indigo/eln/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../download/indigo/eln.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="../imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="../imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="../imago/imago-gui.html">Imago OCR Visual Tool</a></li><li><a class="reference internal" href="../imago/imago_console.html">Imago Console Application</a></li><li><a class="reference internal" href="../imago/c.html">C Library Reference</a></li><li><a class="reference internal" href="../imago/java.html">Java Bindings</a></li><li><a class="reference internal" href="../imago/dependencies.html">Dependencies</a></li><li><a class="reference internal" href="../imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="../download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="#">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="../parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
+</div>
+                    </li>
+                    <li><a href="../resources.html"><span>Resources</span></a></li>
+                    <li><a href="../download/index.html"><span>Downloads</span></a></li>
+                    <li><a href="../contact.html"><span>Contact Info</span></a></li>
+                </ul>
+                <ul class="uui-header-tools nav navbar-nav">
+                    <li class="uui-global-search">
+                        <div class="search-field">
+                            <label></label>
+                            <form action="../search.html" method="get">
+    <input type="search" name="q" class="uui-search" placeholder="Search"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+</form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+        <div class="uui-main-container">
+            <main>
+                
+                <section class="uui-breadcrumbs-container">
+                    <div class="container">
+                        <div class="row">
+                            <ol class="uui-breadcrumbs">
+                                <li><a href="../index.html">Home</a></li>
+                                
+                                <li class="active"><a href="#">New Genome Browser - NGB</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                <section class="promo-section">
+                    <div class="container">
+                        <div class="row">
+                            
+                                
+                                <div class="col-xs-12 col-md-3" role="complementary">
+                                    <div class="sidenav hidden-print hidden-xs hidden-sm affix-top" data-spy="affix" data-offset-top="0"
+     data-offset-bottom="0">
+    <section class="uui-accordion" id="accordion1">
+
+        <!-- Filled in static/js/custom-sidenav.js -->
+        <div id="local-toc" style="display: none;"><ul>
+<li><a class="reference internal" href="#">New Genome Browser - NGB</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#key-features">Key Features</a></li>
+<li><a class="reference internal" href="#fast-and-comfortable">Fast and comfortable</a></li>
+<li><a class="reference internal" href="#alignment-visualization">Alignment visualization</a></li>
+<li><a class="reference internal" href="#variation-visualization">Variation visualization</a></li>
+<li><a class="reference internal" href="#structural-variations-visualization">Structural variations visualization</a></li>
+<li><a class="reference internal" href="#split-view-mode">Split-view mode</a></li>
+<li><a class="reference internal" href="#rnaseq">RNASeq</a></li>
+<li><a class="reference internal" href="#integrated-protein-structure-viewer">Integrated protein structure viewer</a></li>
+<li><a class="reference internal" href="#try-in-one-click">Try in one click</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#source-code-and-quick-start-guide">Source code and Quick start guide</a></li>
+<li><a class="reference internal" href="#feedback">Feedback</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+    </section>
+</div>
+                                </div>
+                                
+                            
+                            
+                                <div class="col-xs-12 col-md-9" role="main">
+                            
+  <div class="section" id="new-genome-browser-ngb">
+<h1>New Genome Browser - NGB<a class="headerlink" href="#new-genome-browser-ngb" title="Permalink to this headline">¶</a></h1>
+<p>Web at a speed and functionality of a powerful desktop</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>NGB is a genome browser working via Web on virtually any computer, requiring no installations / updates and providing the functionality and speed compared to the best desktop genome browsers.</p>
+</div>
+<div class="section" id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#alignments">Alignments</a> and <a class="reference internal" href="#variations">variations</a> visualization</li>
+<li>Visualization of <a class="reference internal" href="#structural-variations">Structural Variations</a> (SVs) and their supporting reads</li>
+<li><a class="reference internal" href="#rnaseq-specific">RNASeq-specific</a> visualization</li>
+<li>Embedded <a class="reference internal" href="#protein-structure-viewer">protein structure viewer</a></li>
+<li>Integration with ENSEMBL, UniPROT, etc. and internal databases</li>
+<li>CRAM format support</li>
+</ul>
+</div>
+<div class="section" id="fast-and-comfortable">
+<h2>Fast and comfortable<a class="headerlink" href="#fast-and-comfortable" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="#split-view">Split-view</a> of extensive genomic rearrangement</li>
+<li>“Variants” table for rapid review of filtered subsets of variants</li>
+<li>Fast and scalable big/cloud genome data analysis</li>
+<li>Hotkeys for fast sorting, grouping, coloring, scaling, etc.</li>
+<li>Dockable panels, saving and sharing sessions, etc.</li>
+<li>Fast access to huge (500 Gb and more) data files</li>
+<li>Easy access to cloud data (Amazon S3, Hadoop, etc.)</li>
+</ul>
+</div>
+<div class="section" id="alignment-visualization">
+<span id="alignments"></span><h2>Alignment visualization<a class="headerlink" href="#alignment-visualization" title="Permalink to this headline">¶</a></h2>
+<p>NGB provides a rich set of tools for viewing alignments in BAM/CRAM format:</p>
+<ul class="simple">
+<li>Responsive visualization up to 150 kb</li>
+<li>Collapsed view for high-coverage samples (one-pixel height read)</li>
+<li>Sorting and grouping reads by chromosome of mate, pair orientation, insert size, base, etc.</li>
+<li>Coloring reads by read strand, pair orientation, insert size, first in pair strand, etc.</li>
+<li>Softclipped reads</li>
+<li>Coverage visualization</li>
+</ul>
+<p><img alt="alignments" src="../_images/NGB_alignments.png" /></p>
+</div>
+<div class="section" id="variation-visualization">
+<span id="variations"></span><h2>Variation visualization<a class="headerlink" href="#variation-visualization" title="Permalink to this headline">¶</a></h2>
+<p>NGB has set of powerful mechanisms to simplify working with variations: searching, analyzing and reporting.</p>
+<ul class="simple">
+<li>“Variants” table for quick filtering/search by wide set of fields</li>
+<li>Jump between variations using arrow buttons/keys</li>
+<li>Grouped/stacked variations view on small scale</li>
+<li>Detailed variation info on demand (screenshot!)</li>
+<li>Links to external databases (dbSNP, etc.)</li>
+<li>Viewing variation effect on protein domains</li>
+</ul>
+<p><img alt="variations" src="../_images/NGB_variations.png" /></p>
+</div>
+<div class="section" id="structural-variations-visualization">
+<span id="structural-variations"></span><h2>Structural variations visualization<a class="headerlink" href="#structural-variations-visualization" title="Permalink to this headline">¶</a></h2>
+<p>Alongside with common variations NGB supports structural variations according to VCF4.3 format: Long insertions and deletions, inversions, breakpoins. NGB also provides several very useful visualizations for structural variations.</p>
+<ul class="simple">
+<li>Variation type size and direction</li>
+<li>Detailed variation info including the table view for ANN field</li>
+<li>Displaying fusion proteins with domains/exons structure</li>
+<li>Visualizing the DNA rearrangement and the resulting hybrid proteins/domains/exons</li>
+<li>NGB downloads information about protein domains from Uniprot database and displays domain structure on rearrangement scheme</li>
+</ul>
+<p><img alt="inv_comment" src="../_images/NGB_inv_comment.png" />
+<img alt="inv_support" src="../_images/NGB_inv_support.png" /></p>
+</div>
+<div class="section" id="split-view-mode">
+<span id="split-view"></span><h2>Split-view mode<a class="headerlink" href="#split-view-mode" title="Permalink to this headline">¶</a></h2>
+<p>NBG can show data at two locations simultaneously for effective analysis of extensive genomic rearrangements. User can easily open split view for viewing mate reads or both end of a structural variation, or just open split view for any desired location.
+The position, scale and track mode can be set up for each view independently.</p>
+<p><img alt="NGB_splitview" src="../_images/NGB_splitview.png" /></p>
+</div>
+<div class="section" id="rnaseq">
+<span id="rnaseq-specific"></span><h2>RNASeq<a class="headerlink" href="#rnaseq" title="Permalink to this headline">¶</a></h2>
+<p>NGB has special modes for working with RNAseq data, including split reads and spice junctions.</p>
+<p>Shorten introns (exome only) view hides all introns (except short flanking regions) and shows only a part of a reference that corresponds to gene exons.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><img alt="NGB_RNASeq1" src="../_images/NGB_RNASeq1_small.png" /></td>
+<td><img alt="NGB_RNASeq2" src="../_images/NGB_RNASeq2_small.png" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="integrated-protein-structure-viewer">
+<span id="protein-structure-viewer"></span><h2>Integrated protein structure viewer<a class="headerlink" href="#integrated-protein-structure-viewer" title="Permalink to this headline">¶</a></h2>
+<p>Embedded molecular viewer showing proteins that correspond to genes/transcripts displayed in genome browser and highlighting regions of interest, e.g. mutations, domains, etc.</p>
+<p><img alt="NGB_proteinviewer" src="../_images/NGB_proteinviewer.png" /></p>
+</div>
+<div class="section" id="try-in-one-click">
+<h2>Try in one click<a class="headerlink" href="#try-in-one-click" title="Permalink to this headline">¶</a></h2>
+<p>You can try the <a class="reference external" href="http://ngb.opensource.epam.com/catgenome">NGB demo</a>
+But please be informed, that not all browsers are supported</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Copyright © 2010-2017 LifeSciences unit of EPAM Systems, Inc.</p>
+<p>EPAM NGB is licensed under the MIT License.
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.</p>
+<p>Permissions</p>
+<ul class="simple">
+<li>Commercial use</li>
+<li>Modification</li>
+<li>Distribution</li>
+<li>Private use</li>
+</ul>
+<p>Conditions</p>
+<ul class="simple">
+<li>License and copyright notice</li>
+</ul>
+<p>Limitations</p>
+<ul class="simple">
+<li>Liability</li>
+<li>Warranty</li>
+</ul>
+<p>This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero
+General Public License for more details.</p>
+<p>MIT License</p>
+<p>Copyright (c) 2016 EPAM Systems
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &#8220;Software&#8221;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+</div>
+<div class="section" id="source-code-and-quick-start-guide">
+<h2>Source code and Quick start guide<a class="headerlink" href="#source-code-and-quick-start-guide" title="Permalink to this headline">¶</a></h2>
+<p>NGB source code, documentation, guides how to build and start NGB is accessible at the web-based hosting service Github - <a class="reference external" href="https://github.com/epam/NGB">https://github.com/epam/NGB</a></p>
+</div>
+<div class="section" id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h2>
+<p>Do you need assistance using our tools? Do you need a feature? Do you
+want to send a patch to us? Did you find a bug?
+Report issues to <a class="reference external" href="https://github.com/epam/NGB/issues">https://github.com/epam/NGB/issues</a> or contact us: <a class="reference external" href="mailto:NGB&#37;&#52;&#48;epam&#46;com">NGB<span>&#64;</span>epam<span>&#46;</span>com</a></p>
+</div>
+</div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+
+        <footer>
+    <div class="uui-promo-footer">
+        <div class="footer-logo-copyright">
+            <div class="epam-logo">
+                <img src="../_static/images/Logo_Epam_Color.svg" alt="" />
+            </div>
+            <p class="copyright">© 2017, EPAM Systems. All Rights Reserved.</p>
+        </div>
+        <div class="footer-navigation">
+            <ul class="uui-footer-navigation">
+                <li><a href="../index.html">Products</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../download/index.html">Downloads</a></li>
+                <li><a href="../contact.html">Contact Info</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20662471-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    
+</body>
+</html>
