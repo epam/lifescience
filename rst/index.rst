@@ -18,7 +18,7 @@ Bioinformatics
 
 -  `New Genome Browser <ngb/index.html>`__ Web at a speed and functionality of desktop |image8|
 
-   -  Visualiszation of Alignments, Variations, Structural Variations
+   -  Visualization of Alignments, Variations, Structural Variations
    -  Embedded Protein structure viewer 
    -  Integration with ENSEMBL, UniPROT, etc. and internal databases
    -  Fast access to huge (500 Gb and more) data files and to cloud data (Amazon S3, Hadoop, etc.)
