@@ -4,6 +4,7 @@ import xml.sax.saxutils as saxutils
 
 GROUPS = [
     "Cheminformatics",
+    "Bioinformatics",
     "Data processing",
     "Software development"
 ]
@@ -15,7 +16,8 @@ GROUP_MAP = {
 "Indigo ELN": "Cheminformatics",
 "Imago OCR": "Cheminformatics",
 "Parso": "Data processing",
-"Selenium Framework": "Software development"
+"Selenium Framework": "Software development",
+"NGB": "Bioinformatics"
 }
 
 
