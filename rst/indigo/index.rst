@@ -19,10 +19,12 @@ Indigo Toolkit
 Overview
 --------
 
-Indigo is a universal organic chemistry toolkit. It contains first-class
-tools for end users, as well as a documented `API <api/index.html>`__
-for developers. Indigo it is completely free and open-source, while also
-available on a commercial basis.
+Indigo is a universal molecular toolkit that can be used for molecular 
+fingerprinting, substructure search, and molecular visualization. 
+Also capable of performing a molecular similarity search, 
+it is 100% open source and provides enhanced stereochemistry support for end users, 
+as well as a documented `API <api/index.html>`__ for developers.
+
 
 Indigo is based on a cheminformatics library that incorporates a number
 of `unique algorithms <../resources.html#algorithms>`__ developed by
