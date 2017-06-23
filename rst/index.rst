@@ -5,6 +5,7 @@ Life Sciences Open Source
     :hidden:
 
     Bingo <bingo/index>
+    Miew <miew/index>
     NGB <ngb/index>
     Indigo Toolkit <indigo/index>
     Ketcher <ketcher/index>
@@ -12,9 +13,20 @@ Life Sciences Open Source
     Imago OCR <imago/index>
     Parso <parso>
     Selenium Framework <selenium>
-    
+
 Bioinformatics
 --------------
+
+-  `Miew – 3D Molecular Viewer <miew/>`__ High performance web tool for advanced visualization and manipulation of molecular structures |image9|
+
+   -  Miew provides a full-featured set of tools for 3D visualization and
+      editing of small molecules as well as large molecular complexes,
+      including abilities to view, analyze, and modify the 3D structure of a
+      molecule.
+   -  Miew functions as a standalone HTML5 web application or integrates as a
+      component into your pages. The latest versions of WebGL-enabled desktop
+      and mobile browsers are supported.
+   -  Try the `Miew demo <http://miew.opensource.epam.com/>`__ online.
 
 -  `New Genome Browser <ngb/index.html>`__ Web at a speed and functionality of desktop |image8|
 
@@ -110,5 +122,6 @@ Software development
 .. |image6| image:: themes/lifescience-theme/static/images/pics/Parso.jpg
 .. |image7| image:: themes/lifescience-theme/static/images/pics/JDI.jpg
 .. |image8| image:: themes/lifescience-theme/static/images/pics/NGB3.JPG
+.. |image9| image:: themes/lifescience-theme/static/images/pics/miew.jpg
 
 

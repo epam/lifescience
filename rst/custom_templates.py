@@ -17,6 +17,7 @@ GROUP_MAP = {
 "Imago OCR": "Cheminformatics",
 "Parso": "Data processing",
 "Selenium Framework": "Software development",
+"Miew": "Bioinformatics",
 "NGB": "Bioinformatics"
 }
 
