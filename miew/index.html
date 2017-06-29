@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
+    
+    <link rel="icon" type="image/png" href="../_static/images/icons/favicon-16.png">
+
+    <!-- jQuery Core -->
+    <script src="../_static/js/lib/jquery-1.12.0.min.js"></script>
+
+    <!--Sphinx files-->
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    './',
+            VERSION:     '0.3.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+
+    
+
+    <!-- Bootstrap Core -->
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css"/>
+    <script src="../_static/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- EPAM UUI JavaScript Core -->
+    <script src="../_static/js/uui-core.min.js" type="text/javascript"></script>
+    <script src="../_static/js/uui-global-search.min.js" type="text/javascript"></script>
+
+    <!-- EPAM UUI Styles Core -->
+    <link rel="stylesheet" href="../_static/css/uui-styles.css"/>
+
+    <!-- Scroll for UUI Sidebar -->
+    <link rel="stylesheet" href="../_static/css/lib/jquery.mCustomScrollbar.min.css"/>
+    <script src="../_static/js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Handlebars -->
+    <script src="../_static/js/handlebars.js"></script>
+
+    <!-- Custom sidenav -->
+    <script src="../_static/js/custom-sidenav.js"></script>
+
+    <!-- Pygments -->
+    <link rel="stylesheet" href="../_static/css/pygments.css"/>
+
+    
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            document.title = "Miew – 3D Molecular Viewer"
+            UUI.Navigation.init();
+            UUI.Global_Search.init();
+
+            $('.news').height($('#main-tiles').height())
+        });
+    </script>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+
+        <header>
+    <div class="uui-header">
+        <nav>
+            <!--Responsive html-layout-->
+            <div class="uui-responsive-header">
+                <div class="responsive-header">
+                    <div class="responsive-toggle-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="responsive-hide-menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="../index.html" class="responsive-brand-logo">
+                        <span class="arrow fa fa-angle-left"></span>
+                        <span class="logo">
+                        <img src="../_static/images/Logo_Epam_Color.svg" alt=""/>
+                    </span>
+                        <span class="title">Life Sciences</span>
+                    </a>
+                    <ul class="responsive-header-tools nav navbar-nav">
+                        <li class="responsive-header-icon search-icon">
+                            <a href="#" onclick="return false">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="responsive-menu">
+                    <div class="menu-wrapper">
+                        <div class="menu-scroll">
+                            <ul class="nav navbar-nav">
+                                <li class="sub-menu active">
+                                    <a href="../index.html">
+                                        <span>Products</span>
+                                        <div class="arrow fa fa-angle-right"></div>
+                                    </a>
+                                    
+
+<ul class="sub">
+<li class="sub-menu"><a class="reference internal" href="../bingo/index.html">Bingo<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-oracle.html">Bingo Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-nosql.html">Bingo NoSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/bingo.html">Downloads</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Miew<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="embed.html">Embedding the Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selectors.html">Selection Language</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../ngb/index.html">NGB</a></li>
+<li class="sub-menu"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../indigo/api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/api/reference.html">API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/utilities.html">Indigo Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/indigo/index.html">Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/build.html">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/installation.html">SDK Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/options/index.html">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/examples/index.html">Examples</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../ketcher/index.html">Ketcher<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/developers-manual.html">Developers Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/help.html">Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/demo.html">Ketcher 2.0 Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ketcher.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/changelog.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/indigo/eln.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../imago/index.html">Imago OCR<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../imago/examples.html">Features and Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/report.html">Comparison Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/imago-gui.html">Imago OCR Visual Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/imago_console.html">Imago Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/c.html">C Library Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/java.html">Java Bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/dependencies.html">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/changelog.html">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/imago.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../parso.html">Parso<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../parso/changelog.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/parso.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+</ul>
+
+                                </li>
+                                <li><a href="../resources.html"><span>Resources</span></a></li>
+                                <li><a href="../download/index.html"><span>Downloads</span></a></li>
+                                <li><a href="../contact.html"><span>Contact Info</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-global-search">
+                    <div class="search-header">
+                        <div class="header-wrapper">
+                            <div class="search-field">
+                                <label></label>
+                                <form action="../search.html" method="get">
+    <input type="search" name="q" class="uui-search" placeholder="Search"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+</form>
+                            </div>
+                            <div class="hide-search">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="header-container">
+                <a href="../index.html" class="brand-logo">
+                    <span class="logo">
+                        <img src="../_static/images/Logo_Epam_Color.svg" alt=""/>
+                    </span>
+                    <span class="title">
+                      Life Sciences Open Source
+                    </span>
+                </a>
+                <ul class="uui-navigation nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Products</a>
+                        
+
+<div class="dropdown-menu" role="menu">
+    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="../bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="../bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="../download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="../indigo/api/index.html">API</a></li><li><a class="reference internal" href="../indigo/api/reference.html">API Reference</a></li><li><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a></li><li><a class="reference internal" href="../indigo/utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="../download/indigo/index.html">Downloads</a></li><li><a class="reference internal" href="../indigo/build.html">Build</a></li><li><a class="reference internal" href="../indigo/installation.html">SDK Installation</a></li><li><a class="reference internal" href="../indigo/options/index.html">Options</a></li><li><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="../indigo/examples/index.html">Examples</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="../ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="../ketcher/help.html">Help</a></li><li><a class="reference internal" href="../ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="../download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="../indigo/eln/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../download/indigo/eln.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="../imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="../imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="../imago/imago-gui.html">Imago OCR Visual Tool</a></li><li><a class="reference internal" href="../imago/imago_console.html">Imago Console Application</a></li><li><a class="reference internal" href="../imago/c.html">C Library Reference</a></li><li><a class="reference internal" href="../imago/java.html">Java Bindings</a></li><li><a class="reference internal" href="../imago/dependencies.html">Dependencies</a></li><li><a class="reference internal" href="../imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="../download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="#">Miew &raquo;</a></span><ul><li><a class="reference internal" href="embed.html">Embedding the Viewer</a></li><li><a class="reference internal" href="selectors.html">Selection Language</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../ngb/index.html">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="../parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
+</div>
+                    </li>
+                    <li><a href="../resources.html"><span>Resources</span></a></li>
+                    <li><a href="../download/index.html"><span>Downloads</span></a></li>
+                    <li><a href="../contact.html"><span>Contact Info</span></a></li>
+                </ul>
+                <ul class="uui-header-tools nav navbar-nav">
+                    <li class="uui-global-search">
+                        <div class="search-field">
+                            <label></label>
+                            <form action="../search.html" method="get">
+    <input type="search" name="q" class="uui-search" placeholder="Search"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+</form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20662471-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</header>
+
+        <div class="uui-main-container">
+            <main>
+                
+                <section class="uui-breadcrumbs-container">
+                    <div class="container">
+                        <div class="row">
+                            <ol class="uui-breadcrumbs">
+                                <li><a href="../index.html">Home</a></li>
+                                
+                                <li class="active"><a href="#">Miew – 3D Molecular Viewer</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                <section class="promo-section">
+                    <div class="container">
+                        <div class="row">
+                            
+                                
+                                <div class="col-xs-12 col-md-3" role="complementary">
+                                    <div class="sidenav hidden-print hidden-xs hidden-sm affix-top" data-spy="affix" data-offset-top="0"
+     data-offset-bottom="0">
+    <section class="uui-accordion" id="accordion1">
+
+        <!-- Filled in static/js/custom-sidenav.js -->
+        <div id="local-toc" style="display: none;"><ul>
+<li><a class="reference internal" href="#">Miew – 3D Molecular Viewer</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#note">Note</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#features">Features</a><ul>
+<li><a class="reference internal" href="#import-data-from-protein-bank-url-or-local-file">Import data from Protein Bank, URL or local file</a></li>
+<li><a class="reference internal" href="#visualize-structures-electron-density-dynamics-results">Visualize structures, electron density, dynamics results</a></li>
+<li><a class="reference internal" href="#examine-a-3d-molecular-structure-in-various-modes">Examine a 3D molecular structure in various modes</a></li>
+<li><a class="reference internal" href="#execute-commands-in-the-built-in-terminal">Execute commands in the built-in terminal</a></li>
+<li><a class="reference internal" href="#highlight-sites-of-interest-and-attach-annotations">Highlight sites of interest and attach annotations</a></li>
+<li><a class="reference internal" href="#share-a-link-to-visualizations-created">Share a link to visualizations created</a></li>
+<li><a class="reference internal" href="#edit-parts-of-the-molecule">Edit parts of the molecule</a></li>
+<li><a class="reference internal" href="#integrate-into-your-page-or-application">Integrate into your page or application</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#augmented-and-virtual-reality">Augmented and Virtual Reality</a></li>
+<li><a class="reference internal" href="#source-code">Source Code</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#feedback">Feedback</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+    </section>
+</div>
+                                </div>
+                                
+                            
+                            
+                                <div class="col-xs-12 col-md-9" role="main">
+                            
+  <div class="section" id="miew-3d-molecular-viewer">
+<h1>Miew – 3D Molecular Viewer<a class="headerlink" href="#miew-3d-molecular-viewer" title="Permalink to this headline">¶</a></h1>
+<style>
+img.align-center, .figure.align-center img { display: block; margin: 1em auto }
+.figure.align-center { text-align: center }
+.section:target h2 {
+    padding: 16px;
+    margin: 10px -16px 0;
+    animation: highlight 3s;
+}
+.section:target h3 {
+    padding: 10px;
+    margin: -10px -10px 0;
+    animation: highlight 3s;
+}
+@keyframes highlight {
+    0% { background-color: #c1e6ee; color: white }
+    20% { color: #333 }
+    100% { background-color: none; }
+}
+</style><div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Miew is a high performance web tool for advanced visualization and manipulation of molecular structures.</p>
+<p>It covers a wide range of applications in chemistry, pharmacy, biology, bioinformatics. Scientists and researchers can
+examine molecular structure or properties, visualize ligand docking and protein folding, analyze mutations, and display
+results in a friendly interactive environment.</p>
+<img alt="../_images/miew-overview.jpg" class="align-center" src="../_images/miew-overview.jpg" />
+<p>Miew provides a full-featured set of tools for 3D visualization and editing of small molecules as well as large
+molecular complexes, including means to view, analyze, and modify the 3D structure of a molecule. It works as a
+standalone HTML5 web application or integrates as a component into your web pages.
+The <a class="reference external" href="https://browsehappy.com/">latest versions</a> of WebGL-enabled desktop (Chrome, Firefox, Safari, Opera, Edge, IE11)
+and mobile (iOS, Android) browsers are supported.</p>
+<p>Miew is going to be a <a class="reference external" href="#license">free and open source</a> software.
+Try the <a class="reference external" href="http://miew.opensource.epam.com/">Miew demo</a> online.</p>
+<div class="section" id="note">
+<h3>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+<p>Miew is under active development. You can <a class="reference external" href="#feedback">post us your comments and suggestions</a> and get timely replies
+from the developers&#8217; team.</p>
+</div>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="import-data-from-protein-bank-url-or-local-file">
+<h3>Import data from Protein Bank, URL or local file<a class="headerlink" href="#import-data-from-protein-bank-url-or-local-file" title="Permalink to this headline">¶</a></h3>
+<p>You can fetch proteins right from <a class="reference external" href="http://www.rcsb.org/">RCSB</a> by their PDB ID, or retrieve 3D conformers of simpler
+chemical structures from <a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>. If you&#8217;d like to use a different server you
+may specify a fully-qualified URL of the data file to load. You may also wish to browse to a local file on your
+computer.</p>
+<img alt="../_images/miew-load.jpg" class="align-center" src="../_images/miew-load.jpg" />
+</div>
+<div class="section" id="visualize-structures-electron-density-dynamics-results">
+<h3>Visualize structures, electron density, dynamics results<a class="headerlink" href="#visualize-structures-electron-density-dynamics-results" title="Permalink to this headline">¶</a></h3>
+<p>The data could be atom positions (PDB, CIF, MMTF, CML), electron density fields (CCP4), or atom trajectories. The list
+of supported file formats is growing.</p>
+</div>
+<div class="section" id="examine-a-3d-molecular-structure-in-various-modes">
+<h3>Examine a 3D molecular structure in various modes<a class="headerlink" href="#examine-a-3d-molecular-structure-in-various-modes" title="Permalink to this headline">¶</a></h3>
+<p>Miew is capable of displaying a molecule using one of 10+ different modes including but not limited to Balls and Sticks,
+Cartoon, Surface.</p>
+<img alt="../_images/miew-modes.jpg" class="align-center" src="../_images/miew-modes.jpg" />
+<p>Various coloring algorithms (by element, secondary structure, hydrophobicity, etc.) can be applied to each mode
+increasing the number of combinations.</p>
+<img alt="../_images/miew-colors.jpg" class="align-center" src="../_images/miew-colors.jpg" />
+<p>User is free to combine different representations in one picture if that&#8217;s what you need for your research. Just pick
+atoms and/or residues with a mouse or use the specially designed selection language to extract certain parts of the
+complex as a separate representation.</p>
+<img alt="../_images/miew-combinations.jpg" class="align-center" src="../_images/miew-combinations.jpg" />
+</div>
+<div class="section" id="execute-commands-in-the-built-in-terminal">
+<h3>Execute commands in the built-in terminal<a class="headerlink" href="#execute-commands-in-the-built-in-terminal" title="Permalink to this headline">¶</a></h3>
+<p>Simplify the creation of visual representations and fine-tune mode parameter using the scripting ability of Miew.
+Get access to the rich API through the built-in command line.</p>
+<img alt="../_images/miew-terminal.jpg" class="align-center" src="../_images/miew-terminal.jpg" />
+</div>
+<div class="section" id="highlight-sites-of-interest-and-attach-annotations">
+<h3>Highlight sites of interest and attach annotations<a class="headerlink" href="#highlight-sites-of-interest-and-attach-annotations" title="Permalink to this headline">¶</a></h3>
+<p>Use mode combinations to emphasize different parts of the structure for further analysis, presentation, etc.
+The picture below shows GDP bound Human K-Ras
+(PDB ID: <a class="reference external" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=4obe">4OBE</a>), E98* nonsense mutation is denoted by
+black.</p>
+<img alt="../_images/miew-KRAS-E98.jpg" class="align-center" src="../_images/miew-KRAS-E98.jpg" />
+</div>
+<div class="section" id="share-a-link-to-visualizations-created">
+<h3>Share a link to visualizations created<a class="headerlink" href="#share-a-link-to-visualizations-created" title="Permalink to this headline">¶</a></h3>
+<p>Your customization is encoded in a (long) URL ready to be passed to your colleagues. You can send the link as is, use a
+third-party service to shorten it, and even generate QR-code.</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/miew-KRAS-E98-url.jpg" src="../_images/miew-KRAS-E98-url.jpg" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="http://epa.ms/miew-kras">epa.ms/miew-kras</a></span></p>
+</div>
+</div>
+<div class="section" id="edit-parts-of-the-molecule">
+<h3>Edit parts of the molecule<a class="headerlink" href="#edit-parts-of-the-molecule" title="Permalink to this headline">¶</a></h3>
+<p>Miew can run in EDIT mode which allows moving and rotating molecules and their fragments.</p>
+</div>
+<div class="section" id="integrate-into-your-page-or-application">
+<h3>Integrate into your page or application<a class="headerlink" href="#integrate-into-your-page-or-application" title="Permalink to this headline">¶</a></h3>
+<p>Embed the viewer into a DIV element of your web page, pass parameters via data attributes. You may also prefer to use
+JavaScript API executing commands and showing exactly the picture you&#8217;d like to.</p>
+<p>As an example, open <a class="reference external" href="http://ngb.opensource.epam.com/catgenome/#/GRCh38/6/117336964/117337328?tracks=%5B%7B%22b%22:%22GRCh38%22,%22p%22:%22SV_Sample2%22,%22h%22:20,%22s%22:%7B%7D%7D,%7B%22b%22:%22GRCh38_Genes%22,%22p%22:%22SV_Sample2%22,%22h%22:254,%22s%22:%7B%22g%22:%22collapsed%22%7D%7D,%7B%22b%22:%22sample_2-lumpy.vcf%22,%22p%22:%22SV_Sample2%22,%22h%22:131,%22s%22:%7B%22v%22:%22Collapsed%22%7D%7D,%7B%22b%22:%22sv_sample_2.bam%22,%22p%22:%22SV_Sample2%22,%22h%22:500,%22s%22:%7B%22a%22:true,%22aa%22:true,%22c%22:%22insertSize%22,%22c1%22:true,%22d%22:true,%22g1%22:%22chromosomeOfMate%22,%22i%22:true,%22m%22:true,%22r%22:0,%22s1%22:false,%22s2%22:true,%22s3%22:false,%22v1%22:false,%22cls%22:false,%22csm%22:%22default%22%7D%7D%5D">public NGB instance</a>,
+click on ROS1 gene track and select &#8220;Show 3D structure&#8221; from the context menu. MOLECULAR VIEWER panel appears allowing
+you to examine the corresponding protein structure.</p>
+</div>
+</div>
+<div class="section" id="augmented-and-virtual-reality">
+<h2>Augmented and Virtual Reality<a class="headerlink" href="#augmented-and-virtual-reality" title="Permalink to this headline">¶</a></h2>
+<p>The team at EPAM Life Sciences has also developed <a class="reference external" href="https://www.epam.com/ideas/videos/vr-ar-molecular-visualization-apps">VR/AR molecular visualization apps</a>.
+These modern technologies provide a deeper immersion, thus giving scientists and researchers a better way of studying
+and analyzing molecular structures.</p>
+<style>
+/* https://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio */
+.aspect-ratio-wrapper {
+  max-width: 720px;
+  width: 100%;
+  display: block;
+  position: relative;
+  margin: 1em auto;
+}
+.aspect-ratio-wrapper:after {
+  padding-top: 56.25%; /* = 100%/(640/360) */
+  display: block;
+  content: '';
+}
+.aspect-ratio-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+<div class="aspect-ratio-wrapper"><iframe src="https://www.youtube.com/embed/NhOl9mxTOMM"></iframe></div><p>Even a web browser application can take advantage of AR/VR algorithms.</p>
+<img alt="../_images/miew-AR-VR.jpg" class="align-center" src="../_images/miew-AR-VR.jpg" />
+</div>
+<div class="section" id="source-code">
+<h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
+<p>Miew source code, documentation, and guides on how to get started with Miew are going to be available at GitHub.</p>
+<p>Until then, you may preview selected parts of the documentation here:</p>
+<ul class="simple">
+<li><a class="reference external" href="embed.html">Embedding the Viewer</a></li>
+<li><a class="reference external" href="selectors.html">Selection Language</a></li>
+</ul>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://opensource.org/licenses/MIT">MIT License</a> is pending.</p>
+<p>Copyright (c) 2015-2017 EPAM Systems, Inc.</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &#8220;Software&#8221;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &#8220;AS IS&#8221;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+</div>
+<div class="section" id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h2>
+<p>Do you need assistance with our tools? Do you need a feature? Do you want to send a patch to us? Did you find a bug?
+Report issues at GitHub when it is available or contact us directly at <a class="reference external" href="mailto:miew&#37;&#52;&#48;epam&#46;com">miew<span>&#64;</span>epam<span>&#46;</span>com</a></p>
+</div>
+</div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+
+        <footer>
+    <div class="uui-promo-footer">
+        <div class="footer-logo-copyright">
+            <div class="epam-logo">
+                <img src="../_static/images/Logo_Epam_Color.svg" alt="" />
+            </div>
+            <p class="copyright">© 2017, EPAM Systems. All Rights Reserved.</p>
+        </div>
+        <div class="footer-navigation">
+            <ul class="uui-footer-navigation">
+                <li><a href="../index.html">Products</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../download/index.html">Downloads</a></li>
+                <li><a href="../contact.html">Contact Info</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20662471-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    
+</body>
+</html>

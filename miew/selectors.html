@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
+    
+    <link rel="icon" type="image/png" href="../_static/images/icons/favicon-16.png">
+
+    <!-- jQuery Core -->
+    <script src="../_static/js/lib/jquery-1.12.0.min.js"></script>
+
+    <!--Sphinx files-->
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    './',
+            VERSION:     '0.3.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+
+    
+
+    <!-- Bootstrap Core -->
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css"/>
+    <script src="../_static/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- EPAM UUI JavaScript Core -->
+    <script src="../_static/js/uui-core.min.js" type="text/javascript"></script>
+    <script src="../_static/js/uui-global-search.min.js" type="text/javascript"></script>
+
+    <!-- EPAM UUI Styles Core -->
+    <link rel="stylesheet" href="../_static/css/uui-styles.css"/>
+
+    <!-- Scroll for UUI Sidebar -->
+    <link rel="stylesheet" href="../_static/css/lib/jquery.mCustomScrollbar.min.css"/>
+    <script src="../_static/js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Handlebars -->
+    <script src="../_static/js/handlebars.js"></script>
+
+    <!-- Custom sidenav -->
+    <script src="../_static/js/custom-sidenav.js"></script>
+
+    <!-- Pygments -->
+    <link rel="stylesheet" href="../_static/css/pygments.css"/>
+
+    
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            document.title = "Selection Language"
+            UUI.Navigation.init();
+            UUI.Global_Search.init();
+
+            $('.news').height($('#main-tiles').height())
+        });
+    </script>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+
+        <header>
+    <div class="uui-header">
+        <nav>
+            <!--Responsive html-layout-->
+            <div class="uui-responsive-header">
+                <div class="responsive-header">
+                    <div class="responsive-toggle-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="responsive-hide-menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="../index.html" class="responsive-brand-logo">
+                        <span class="arrow fa fa-angle-left"></span>
+                        <span class="logo">
+                        <img src="../_static/images/Logo_Epam_Color.svg" alt=""/>
+                    </span>
+                        <span class="title">Life Sciences</span>
+                    </a>
+                    <ul class="responsive-header-tools nav navbar-nav">
+                        <li class="responsive-header-icon search-icon">
+                            <a href="#" onclick="return false">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="responsive-menu">
+                    <div class="menu-wrapper">
+                        <div class="menu-scroll">
+                            <ul class="nav navbar-nav">
+                                <li class="sub-menu active">
+                                    <a href="../index.html">
+                                        <span>Products</span>
+                                        <div class="arrow fa fa-angle-right"></div>
+                                    </a>
+                                    
+
+<ul class="sub">
+<li class="sub-menu"><a class="reference internal" href="../bingo/index.html">Bingo<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-oracle.html">Bingo Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-nosql.html">Bingo NoSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/bingo.html">Downloads</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Miew<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="embed.html">Embedding the Viewer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Selection Language</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../ngb/index.html">NGB</a></li>
+<li class="sub-menu"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../indigo/api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/api/reference.html">API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/utilities.html">Indigo Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/indigo/index.html">Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/build.html">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/installation.html">SDK Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/options/index.html">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/examples/index.html">Examples</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../ketcher/index.html">Ketcher<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/developers-manual.html">Developers Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/help.html">Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/demo.html">Ketcher 2.0 Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ketcher.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/changelog.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/indigo/eln.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../imago/index.html">Imago OCR<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../imago/examples.html">Features and Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/report.html">Comparison Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/imago-gui.html">Imago OCR Visual Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/imago_console.html">Imago Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/c.html">C Library Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/java.html">Java Bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/dependencies.html">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/changelog.html">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/imago.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../parso.html">Parso<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../parso/changelog.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/parso.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+</ul>
+
+                                </li>
+                                <li><a href="../resources.html"><span>Resources</span></a></li>
+                                <li><a href="../download/index.html"><span>Downloads</span></a></li>
+                                <li><a href="../contact.html"><span>Contact Info</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-global-search">
+                    <div class="search-header">
+                        <div class="header-wrapper">
+                            <div class="search-field">
+                                <label></label>
+                                <form action="../search.html" method="get">
+    <input type="search" name="q" class="uui-search" placeholder="Search"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+</form>
+                            </div>
+                            <div class="hide-search">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="header-container">
+                <a href="../index.html" class="brand-logo">
+                    <span class="logo">
+                        <img src="../_static/images/Logo_Epam_Color.svg" alt=""/>
+                    </span>
+                    <span class="title">
+                      Life Sciences Open Source
+                    </span>
+                </a>
+                <ul class="uui-navigation nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Products</a>
+                        
+
+<div class="dropdown-menu" role="menu">
+    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="../bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="../bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="../download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="../indigo/api/index.html">API</a></li><li><a class="reference internal" href="../indigo/api/reference.html">API Reference</a></li><li><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a></li><li><a class="reference internal" href="../indigo/utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="../download/indigo/index.html">Downloads</a></li><li><a class="reference internal" href="../indigo/build.html">Build</a></li><li><a class="reference internal" href="../indigo/installation.html">SDK Installation</a></li><li><a class="reference internal" href="../indigo/options/index.html">Options</a></li><li><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="../indigo/examples/index.html">Examples</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="../ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="../ketcher/help.html">Help</a></li><li><a class="reference internal" href="../ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="../download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="../indigo/eln/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../download/indigo/eln.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="../imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="../imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="../imago/imago-gui.html">Imago OCR Visual Tool</a></li><li><a class="reference internal" href="../imago/imago_console.html">Imago Console Application</a></li><li><a class="reference internal" href="../imago/c.html">C Library Reference</a></li><li><a class="reference internal" href="../imago/java.html">Java Bindings</a></li><li><a class="reference internal" href="../imago/dependencies.html">Dependencies</a></li><li><a class="reference internal" href="../imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="../download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="index.html">Miew &raquo;</a></span><ul><li><a class="reference internal" href="embed.html">Embedding the Viewer</a></li><li><a class="reference internal" href="#">Selection Language</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../ngb/index.html">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="../parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
+</div>
+                    </li>
+                    <li><a href="../resources.html"><span>Resources</span></a></li>
+                    <li><a href="../download/index.html"><span>Downloads</span></a></li>
+                    <li><a href="../contact.html"><span>Contact Info</span></a></li>
+                </ul>
+                <ul class="uui-header-tools nav navbar-nav">
+                    <li class="uui-global-search">
+                        <div class="search-field">
+                            <label></label>
+                            <form action="../search.html" method="get">
+    <input type="search" name="q" class="uui-search" placeholder="Search"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+</form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20662471-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</header>
+
+        <div class="uui-main-container">
+            <main>
+                
+                <section class="uui-breadcrumbs-container">
+                    <div class="container">
+                        <div class="row">
+                            <ol class="uui-breadcrumbs">
+                                <li><a href="../index.html">Home</a></li>
+                                
+                                <li><a href="index.html">Miew – 3D Molecular Viewer</a></li>
+                                
+                                <li class="active"><a href="#">Selection Language</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                <section class="promo-section">
+                    <div class="container">
+                        <div class="row">
+                            
+                                
+                                <div class="col-xs-12 col-md-3" role="complementary">
+                                    <div class="sidenav hidden-print hidden-xs hidden-sm affix-top" data-spy="affix" data-offset-top="0"
+     data-offset-bottom="0">
+    <section class="uui-accordion" id="accordion1">
+
+        <!-- Filled in static/js/custom-sidenav.js -->
+        <div id="local-toc" style="display: none;"><ul>
+<li><a class="reference internal" href="#">Selection Language</a><ul>
+<li><a class="reference internal" href="#quick-examples">Quick Examples</a></li>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#keywords-list">Keywords list</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+    </section>
+</div>
+                                </div>
+                                
+                            
+                            
+                                <div class="col-xs-12 col-md-9" role="main">
+                            
+  <div class="section" id="selection-language">
+<h1>Selection Language<a class="headerlink" href="#selection-language" title="Permalink to this headline">¶</a></h1>
+<p>Miew allows to view different molecule parts (subsets of atoms) using
+specific visualizations. To select these subsets one should use a
+<em>Selection Language</em>; its syntax is described below.</p>
+<div class="section" id="quick-examples">
+<h2>Quick Examples<a class="headerlink" href="#quick-examples" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">chain</span> <span class="pre">A</span> <span class="pre">and</span> <span class="pre">not</span> <span class="pre">hetatm</span></code> <br/>
+select all atoms in chain A except for HETATM PDB records.</li>
+<li><code class="docutils literal"><span class="pre">residue</span> <span class="pre">ALA</span></code> <br/>
+select all residues named <code class="docutils literal"><span class="pre">ALA</span></code> (alanine).</li>
+<li><code class="docutils literal"><span class="pre">serial</span> <span class="pre">1:10,</span> <span class="pre">20:30</span> <span class="pre">and</span> <span class="pre">type</span> <span class="pre">C,</span> <span class="pre">N</span></code> <br/>
+select Carbon and Nitrogen atoms with atom indices in range 1 through
+10 or 20 through 30 inclusively.</li>
+</ul>
+</div>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>An <em>Expression</em> in Miew selection language consists of a <em>Selector</em> or a
+set of <em>Expressions</em> joined with logical operations <code class="docutils literal"><span class="pre">AND</span></code>, <code class="docutils literal"><span class="pre">OR</span></code>,
+<code class="docutils literal"><span class="pre">NOT</span></code> and brackets for grouping.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Expression</span> <span class="p">::</span><span class="o">=</span>
+  <span class="n">Selector</span> <span class="o">|</span>
+  <span class="n">Expression</span> <span class="s1">&#39;AND&#39;</span> <span class="n">Expression</span> <span class="o">|</span>
+  <span class="n">Expression</span> <span class="s1">&#39;OR&#39;</span> <span class="n">Expression</span> <span class="o">|</span>
+  <span class="s1">&#39;NOT&#39;</span> <span class="n">Expression</span> <span class="o">|</span>
+  <span class="s1">&#39;(&#39;</span> <span class="n">Expression</span> <span class="s1">&#39;)&#39;</span>
+</pre></div>
+</div>
+<p><em>Selector</em> consists of a keyword followed by an optional comma separated
+parameter list. Some keywords accept integer parameters (e.g. atom or
+residue indices), others accept strings (e.g. atom or residue names).
+Keywords are <strong>case insensitive</strong>.</p>
+<p>Integer parameter can be a single value or range of values, where range
+borders are delimited by a colon. Example: <code class="docutils literal"><span class="pre">3:7</span></code> defines an integer
+range: 3, 4, 5, 6, and 7).</p>
+<p>String parameters should be flanked by quotation marks unless the string
+consists of letters, digits and underscores only.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Selector</span> <span class="p">::</span><span class="o">=</span>
+  <span class="n">Keyword</span> <span class="o">|</span>
+  <span class="n">Keyword</span> <span class="n">IntegerList</span> <span class="o">|</span>
+  <span class="n">Keyword</span> <span class="n">StringList</span>
+
+<span class="n">IntegerList</span> <span class="p">::</span><span class="o">=</span> <span class="n">Range</span> <span class="o">|</span> <span class="n">IntegerList</span> <span class="s1">&#39;,&#39;</span> <span class="n">Range</span>
+<span class="n">Range</span> <span class="p">::</span><span class="o">=</span> <span class="n">Number</span> <span class="o">|</span> <span class="n">Number</span> <span class="s1">&#39;:&#39;</span> <span class="n">Number</span>
+
+<span class="n">StringList</span> <span class="p">::</span><span class="o">=</span> <span class="n">String</span> <span class="o">|</span> <span class="n">StringList</span> <span class="s1">&#39;,&#39;</span> <span class="n">String</span>
+<span class="n">String</span> <span class="p">::</span><span class="o">=</span> <span class="n">AlphaNumericString</span> <span class="o">|</span> <span class="n">QuotedString</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="keywords-list">
+<h2>Keywords list<a class="headerlink" href="#keywords-list" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="44%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Keyword</th>
+<th class="head">Description</th>
+<th class="head">Example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>all</strong></td>
+<td>all atoms</td>
+<td><code class="docutils literal"><span class="pre">all</span></code></td>
+</tr>
+<tr class="row-odd"><td><strong>none</strong></td>
+<td>empty subset</td>
+<td><code class="docutils literal"><span class="pre">none</span></code></td>
+</tr>
+<tr class="row-even"><td><strong>hetatm</strong></td>
+<td>atoms defined as HETATM in PDB-file</td>
+<td><code class="docutils literal"><span class="pre">not</span> <span class="pre">hetatm</span></code></td>
+</tr>
+<tr class="row-odd"><td><strong>water</strong></td>
+<td>water residues (WAT, HOH, H2O)</td>
+<td><code class="docutils literal"><span class="pre">hetatm</span> <span class="pre">and</span> <span class="pre">not</span> <span class="pre">water</span></code></td>
+</tr>
+<tr class="row-even"><td><strong>serial</strong> <em>int</em></td>
+<td>atoms by serial numbers</td>
+<td><code class="docutils literal"><span class="pre">serial</span> <span class="pre">1:10,</span> <span class="pre">13,</span> <span class="pre">25:37</span></code></td>
+</tr>
+<tr class="row-odd"><td><strong>name</strong> <em>str</em></td>
+<td>atoms by names</td>
+<td><code class="docutils literal"><span class="pre">name</span> <span class="pre">CA,</span> <span class="pre">CB</span></code></td>
+</tr>
+<tr class="row-even"><td><strong>elem</strong> <em>str</em></td>
+<td>atoms by chemical elements</td>
+<td><code class="docutils literal"><span class="pre">elem</span> <span class="pre">O,</span> <span class="pre">N,</span> <span class="pre">H</span></code></td>
+</tr>
+<tr class="row-odd"><td><strong>type</strong> <em>str</em></td>
+<td><em>deprecated!</em> superseded by <strong>elem</strong></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><strong>altloc</strong> <em>str</em></td>
+<td>atoms by alternative location
+(conformation)</td>
+<td><code class="docutils literal"><span class="pre">altloc</span> <span class="pre">&quot;</span> <span class="pre">&quot;,</span> <span class="pre">A</span></code></td>
+</tr>
+<tr class="row-odd"><td><strong>residue</strong> <em>str</em></td>
+<td>residues by names</td>
+<td><code class="docutils literal"><span class="pre">residue</span> <span class="pre">ALA,</span> <span class="pre">CYS</span></code></td>
+</tr>
+<tr class="row-even"><td><strong>sequence</strong> <em>int</em></td>
+<td>residues by indices in a sequence</td>
+<td><code class="docutils literal"><span class="pre">sequence</span> <span class="pre">35:37</span></code></td>
+</tr>
+<tr class="row-odd"><td><strong>residx</strong> <em>int</em></td>
+<td>residues by ordinal index</td>
+<td><code class="docutils literal"><span class="pre">residx</span> <span class="pre">1327</span></code></td>
+</tr>
+<tr class="row-even"><td><strong>icode</strong> <em>str</em></td>
+<td>residues by insertion code</td>
+<td><code class="docutils literal"><span class="pre">sequence</span> <span class="pre">409</span> <span class="pre">and</span> <span class="pre">icode</span> <span class="pre">B</span></code></td>
+</tr>
+<tr class="row-odd"><td><strong>protein</strong></td>
+<td>one of 22 common amino acid residues</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><strong>basic</strong></td>
+<td>basic amino acid residue: ARG, HIS, LYS</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><strong>acidic</strong></td>
+<td>acidic amino acid residue: ASP, GLU</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><strong>charged</strong></td>
+<td>basic or acidic residue</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><strong>polar</strong></td>
+<td>polar amino acid residue: ASN, CYS,
+GLN, SER, THR, TYR</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><strong>nonpolar</strong></td>
+<td>non-polar amino acid residue: ALA, ILE,
+LEU, MET, PHE, PRO, TRP, VAL</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><strong>aromatic</strong></td>
+<td>aromatic amino acid residue: PHE, TRP,
+TYR</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><strong>nucleic</strong></td>
+<td>nucleic residue</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><strong>purine</strong></td>
+<td>purine nucleic residue: A, G, I and
+variations</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><strong>pyrimidine</strong></td>
+<td>pyrimidine nucleic residue: C, T, U
+and variations</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><strong>chain</strong> <em>str</em></td>
+<td>chain by name</td>
+<td><code class="docutils literal"><span class="pre">chain</span> <span class="pre">A,</span> <span class="pre">C,</span> <span class="pre">E</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+
+        <footer>
+    <div class="uui-promo-footer">
+        <div class="footer-logo-copyright">
+            <div class="epam-logo">
+                <img src="../_static/images/Logo_Epam_Color.svg" alt="" />
+            </div>
+            <p class="copyright">© 2017, EPAM Systems. All Rights Reserved.</p>
+        </div>
+        <div class="footer-navigation">
+            <ul class="uui-footer-navigation">
+                <li><a href="../index.html">Products</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../download/index.html">Downloads</a></li>
+                <li><a href="../contact.html">Contact Info</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20662471-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    
+</body>
+</html>
