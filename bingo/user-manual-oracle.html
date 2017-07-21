@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>User Manual: Oracle</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "User Manual: Oracle"
+            //document.title = "User Manual: Oracle"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -503,9 +505,9 @@ format are supported, including:</p>
 </ul>
 <p>The only features that are not supported are:</p>
 <ul class="simple">
-<li>Constraint &#8220;h&#8221; (implicit hydrogen count). Hydrogens can be stored
+<li>Constraint “h” (implicit hydrogen count). Hydrogens can be stored
 implicitly or explicitly in the database, and we believe that this
-difference should not affect the search results. &#8220;H&#8221; (total hydrogen
+difference should not affect the search results. “H” (total hydrogen
 count) may be used instead</li>
 <li>All features of SMILES format that are not supported</li>
 </ul>
@@ -963,7 +965,7 @@ Not Retrieved</th>
 </tr>
 <tr class="row-even"><td><img alt="image24" src="../_images/sub_h_02q.svg" /></td>
 <td><img alt="image25" src="../_images/sub_h_02t.svg" /></td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -1229,7 +1231,7 @@ hydrogen of the target.</p>
 <li>Double or aromatic</li>
 <li>Any</li>
 </ul>
-<p>Below is an example with &#8216;Single or Double&#8217; bonds. Such bonds cannot
+<p>Below is an example with ‘Single or Double’ bonds. Such bonds cannot
 match aromatic target bonds.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1366,7 +1368,7 @@ Not Retrieved</th>
 </tr>
 <tr class="row-odd"><td><img alt="image154" src="../_images/sub_stereo_06q.svg" /></td>
 <td><img alt="image155" src="../_images/sub_stereo_06t.svg" /></td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -1640,7 +1642,7 @@ in the target structure. The matching is case-sensitive.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> &#8216;X&#8217; atom is treated as &#8216;any halogen&#8217; query atom by default,
+<p><strong>Note:</strong> ‘X’ atom is treated as ‘any halogen’ query atom by default,
 but there is an option to treat it as pseudo-atom. In order to treat it
 so, please run the following SQL statement prior to table indexing:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">exec</span> <span class="n">Bingo</span><span class="o">.</span><span class="n">TreatXAsPseudoatom</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
@@ -1946,18 +1948,18 @@ expression match with the following query:</p>
 <p>While a lot of SMARTS notation is allowed in <code class="docutils literal"><span class="pre">Sub()</span></code> operator queries
 as well, there are differences between substructure and SMARTS search:</p>
 <ul class="simple">
-<li>SMARTS fragments $(...) are not allowed in ordinary substructure
+<li>SMARTS fragments $(…) are not allowed in ordinary substructure
 search</li>
-<li>Empty bond designator (like &#8216;CC&#8217; or &#8216;cc&#8217;) denotes &#8216;single or
-aromatic&#8217; bond in <code class="docutils literal"><span class="pre">SMARTS()</span></code>. In <code class="docutils literal"><span class="pre">Sub()</span></code>, it denotes aromatic
+<li>Empty bond designator (like ‘CC’ or ‘cc’) denotes ‘single or
+aromatic’ bond in <code class="docutils literal"><span class="pre">SMARTS()</span></code>. In <code class="docutils literal"><span class="pre">Sub()</span></code>, it denotes aromatic
 bond, if it belongs to a ring and has both end atoms aromatic
 (lowercase); otherwise, it denotes a single bond.</li>
-<li>&#8216;C&#8217; within <code class="docutils literal"><span class="pre">SMARTS()</span></code> means aliphatic carbon, while &#8216;C&#8217; within
-<code class="docutils literal"><span class="pre">Sub()</span></code> means any carbon. The same applies to &#8216;B&#8217;, &#8216;N&#8217;, &#8216;O&#8217;, &#8216;S&#8217;,
-&#8216;P&#8217;. &#8216;C1~C~C~C~C~C~1&#8217; won&#8217;t match &#8216;c1ccccc1&#8217; in <code class="docutils literal"><span class="pre">SMARTS()</span></code>, but it
+<li>‘C’ within <code class="docutils literal"><span class="pre">SMARTS()</span></code> means aliphatic carbon, while ‘C’ within
+<code class="docutils literal"><span class="pre">Sub()</span></code> means any carbon. The same applies to ‘B’, ‘N’, ‘O’, ‘S’,
+‘P’. ‘C1~C~C~C~C~C~1’ won’t match ‘c1ccccc1’ in <code class="docutils literal"><span class="pre">SMARTS()</span></code>, but it
 will do so in <code class="docutils literal"><span class="pre">Sub()</span></code>.</li>
-<li>SMARTS queries are not fed to aromaticity matcher. &#8216;c1-c=c-c=c-c=1&#8217;
-won&#8217;t match &#8216;c1ccccc1&#8217; in <code class="docutils literal"><span class="pre">SMARTS()</span></code>, but it will do so in
+<li>SMARTS queries are not fed to aromaticity matcher. ‘c1-c=c-c=c-c=1’
+won’t match ‘c1ccccc1’ in <code class="docutils literal"><span class="pre">SMARTS()</span></code>, but it will do so in
 <code class="docutils literal"><span class="pre">Sub()</span></code>.</li>
 <li>Tautomer (<code class="docutils literal"><span class="pre">TAU</span></code>) and resonance (<code class="docutils literal"><span class="pre">RES</span></code>) matching options are not
 allowed within <code class="docutils literal"><span class="pre">SMARTS()</span></code> operator.</li>
@@ -2021,8 +2023,8 @@ some characteristics of the molecule:</p>
 <p>The flags, which can be combined in any way, should go in the parameters
 string separated by space. The <code class="docutils literal"><span class="pre">rms</span></code> number, if present, should go
 after the flags; for example: <code class="docutils literal"><span class="pre">ALL</span> <span class="pre">0.1</span></code>. You can write the minus sign
-before the flag to exclude it from the &#8216;ALL&#8217; flag. For example, &#8216;ALL
--MAS&#8217; means that all the described features except the isotopes must
+before the flag to exclude it from the ‘ALL’ flag. For example, ‘ALL
+-MAS’ means that all the described features except the isotopes must
 match. The <code class="docutils literal"><span class="pre">NONE</span></code> flag, if present, must be single.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -2039,27 +2041,27 @@ match. The <code class="docutils literal"><span class="pre">NONE</span></code> f
 <tbody valign="top">
 <tr class="row-even"><td><img alt="image319" src="../_images/flex_01q.svg" /></td>
 <td><img alt="image320" src="../_images/flex_01n.svg" /></td>
-<td>Matches with &#8216;ALL -MAS&#8217;, does not match with &#8216;ALL&#8217; or &#8216;MAS&#8217;</td>
+<td>Matches with ‘ALL -MAS’, does not match with ‘ALL’ or ‘MAS’</td>
 </tr>
 <tr class="row-odd"><td><img alt="image321" src="../_images/flex_03q.svg" /></td>
 <td><img alt="image322" src="../_images/flex_03n.svg" /></td>
-<td>Matches with &#8216;ALL -ELE&#8217;, does not match with &#8216;ALL&#8217; or &#8216;ELE&#8217;</td>
+<td>Matches with ‘ALL -ELE’, does not match with ‘ALL’ or ‘ELE’</td>
 </tr>
 <tr class="row-even"><td><img alt="image323" src="../_images/flex_02q.svg" /></td>
 <td>C</td>
-<td>Matches with &#8216;ALL&#8217;</td>
+<td>Matches with ‘ALL’</td>
 </tr>
 <tr class="row-odd"><td><img alt="image324" src="../_images/flex_04q.svg" /></td>
 <td><img alt="image325" src="../_images/flex_04n.svg" /></td>
-<td>Matches with &#8216;ALL -FRA&#8217;, does not match with &#8216;ALL&#8217; or &#8216;FRA&#8217;</td>
+<td>Matches with ‘ALL -FRA’, does not match with ‘ALL’ or ‘FRA’</td>
 </tr>
 <tr class="row-even"><td><img alt="image326" src="../_images/flex_05q.svg" /></td>
 <td><img alt="image327" src="../_images/flex_05n.svg" /></td>
-<td>Matches with &#8216;ALL -STE&#8217;, does not match with &#8216;ALL&#8217; or &#8216;STE&#8217;</td>
+<td>Matches with ‘ALL -STE’, does not match with ‘ALL’ or ‘STE’</td>
 </tr>
 <tr class="row-odd"><td><img alt="image328" src="../_images/flex_06q.svg" /></td>
 <td><img alt="image329" src="../_images/flex_06n.svg" /></td>
-<td>Matches with &#8216;ALL&#8217;, does not match with &#8216;0.1&#8217; or &#8216;ALL 0.1&#8217;</td>
+<td>Matches with ‘ALL’, does not match with ‘0.1’ or ‘ALL 0.1’</td>
 </tr>
 </tbody>
 </table>
@@ -2080,7 +2082,7 @@ difference between single and double bonds that form the aromatic rings.</p>
 <tbody valign="top">
 <tr class="row-even"><td><img alt="image332" src="../_images/flex_07q.svg" /></td>
 <td><img alt="image333" src="../_images/flex_07t.svg" /></td>
-<td>Matches with &#8216;ALL&#8217;</td>
+<td>Matches with ‘ALL’</td>
 </tr>
 </tbody>
 </table>
@@ -2241,8 +2243,8 @@ defined above are contained in this table:</p>
 </div>
 <p>You can add, remove or update the defined rules. VARCHAR2 strings
 <code class="docutils literal"><span class="pre">BEG</span></code> and <code class="docutils literal"><span class="pre">END</span></code> refer to the ends of the tautomeric chain. Allowed
-elements are separated by commas. &#8216;1&#8217; at the beginning means an aromatic
-atom, and &#8216;0&#8217; means an aliphatic (non-aromatic) atom.</p>
+elements are separated by commas. ‘1’ at the beginning means an aromatic
+atom, and ‘0’ means an aliphatic (non-aromatic) atom.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>INSERT INTO Bingo.TAUTOMER_RULES values($id, $beg, $end);
 </pre></div>
 </div>
@@ -2309,7 +2311,7 @@ SELECT * FROM $table WHERE Bingo.Sim($column, $query, $metric) BETWEEN $min AND 
 <li><code class="docutils literal"><span class="pre">$max</span></code> is the upper limit.</li>
 <li><code class="docutils literal"><span class="pre">$metric</span></code> is a string specifying the metric to use: <code class="docutils literal"><span class="pre">tanimoto</span></code> ,
 <code class="docutils literal"><span class="pre">tversky</span></code>, or <code class="docutils literal"><span class="pre">euclid-sub</span></code>. In case of Tversky metric, there are
-optional &#8220;alpha&#8221; and &#8220;beta&#8221; parameters: <code class="docutils literal"><span class="pre">tversky</span> <span class="pre">0.9</span> <span class="pre">0.1</span></code> denotes
+optional “alpha” and “beta” parameters: <code class="docutils literal"><span class="pre">tversky</span> <span class="pre">0.9</span> <span class="pre">0.1</span></code> denotes
 alpha = 0.9, beta = 0.1. The default is alpha = beta = 0.5 (Dice
 index).</li>
 </ul>
@@ -2500,7 +2502,7 @@ atom masses separated by semicolons, for example:
 <div class="section" id="other-kinds-of-molecular-weight">
 <h4>Other Kinds of Molecular Weight<a class="headerlink" href="#other-kinds-of-molecular-weight" title="Permalink to this headline">¶</a></h4>
 <p>The <code class="docutils literal"><span class="pre">Bingo.Mass</span></code> has an optional <code class="docutils literal"><span class="pre">VARCHAR2</span></code> parameter, which defines
-the &#8216;kind&#8217; of the resulting molecular mass value:</p>
+the ‘kind’ of the resulting molecular mass value:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'molecular-weight')</span></code> returns the molecular
 weight (this is the default).</li>
@@ -2566,15 +2568,15 @@ the Indigo SDK described
 <a class="reference external" href="../indigo/api/index.html#fingerprints">here</a>.</p>
 <p>The following fingerprint types are available:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">sim</span></code> — &#8220;Similarity fingerprint&#8221;, useful for calculating similarity
+<li><code class="docutils literal"><span class="pre">sim</span></code> — “Similarity fingerprint”, useful for calculating similarity
 measures (the default)</li>
-<li><code class="docutils literal"><span class="pre">sub</span></code> — &#8220;Substructure fingerprint&#8221;, useful for substructure
+<li><code class="docutils literal"><span class="pre">sub</span></code> — “Substructure fingerprint”, useful for substructure
 screening</li>
-<li><code class="docutils literal"><span class="pre">sub-res</span></code> — &#8220;Resonance substructure fingerprint&#8221;, useful for
+<li><code class="docutils literal"><span class="pre">sub-res</span></code> — “Resonance substructure fingerprint”, useful for
 resonance substructure screening</li>
-<li><code class="docutils literal"><span class="pre">sub-tau</span></code> — &#8220;Tautomer substructure fingerprint&#8221;, useful for
+<li><code class="docutils literal"><span class="pre">sub-tau</span></code> — “Tautomer substructure fingerprint”, useful for
 tautomer substructure screening</li>
-<li><code class="docutils literal"><span class="pre">full</span></code> — &#8220;Full fingerprint&#8221;, which has all the mentioned
+<li><code class="docutils literal"><span class="pre">full</span></code> — “Full fingerprint”, which has all the mentioned
 fingerprint types included</li>
 </ul>
 </div>
@@ -2787,7 +2789,7 @@ some characteristics of the molecule:</p>
 </table>
 <p>The flags, which can be combined in any way, should go in the parameters
 string separated by space. You can write the minus sign before the flag
-to exclude it from the &#8216;ALL&#8217; flag. For example, &#8216;ALL -MAS -AAM&#8217; means
+to exclude it from the ‘ALL’ flag. For example, ‘ALL -MAS -AAM’ means
 that all the described features except the isotopes and the AAM numbers
 must match. The <code class="docutils literal"><span class="pre">NONE</span></code> flag, if present, must be single.</p>
 </div>
@@ -2885,7 +2887,7 @@ only the existing reaction centers.</li>
 reaction but may change the existing mapping.</li>
 <li><code class="docutils literal"><span class="pre">CLEAR</span></code>: removes the mappings from the reaction.</li>
 </ul>
-<p><strong>Note:</strong> In the &#8216;KEEP&#8217; and &#8216;ALTER&#8217; modes, any possible contradictions
+<p><strong>Note:</strong> In the ‘KEEP’ and ‘ALTER’ modes, any possible contradictions
 between the existing mapping and the reaction centers are resolved by
 correcting the reacting centers.</p>
 <p>As a result, the operator always returns CLOB with Rxnfile.</p>
@@ -2937,11 +2939,11 @@ the Indigo SDK described
 <a class="reference external" href="../indigo/api/index.html#fingerprints">here</a>.</p>
 <p>The following fingerprint types are available:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">sim</span></code> — &#8220;Similarity fingerprint&#8221;, useful for calculating similarity
+<li><code class="docutils literal"><span class="pre">sim</span></code> — “Similarity fingerprint”, useful for calculating similarity
 measures (the default)</li>
-<li><code class="docutils literal"><span class="pre">sub</span></code> — &#8220;Substructure fingerprint&#8221;, useful for substructure
+<li><code class="docutils literal"><span class="pre">sub</span></code> — “Substructure fingerprint”, useful for substructure
 screening</li>
-<li><code class="docutils literal"><span class="pre">full</span></code> — &#8220;Full fingerprint&#8221;, which has all the mentioned
+<li><code class="docutils literal"><span class="pre">full</span></code> — “Full fingerprint”, which has all the mentioned
 fingerprint types included</li>
 </ul>
 </div>
@@ -3031,7 +3033,7 @@ restrict the set of fetched results:</p>
 </pre></div>
 </div>
 <p><strong>Note:</strong> In case <code class="docutils literal"><span class="pre">$query</span></code> is a VARCHAR2 string, Bingo is able to make
-use of Oracle&#8217;s Cost-Based Optimizer (CBO) capability. This capability
+use of Oracle’s Cost-Based Optimizer (CBO) capability. This capability
 allows Oracle to call single operator functions rather than to use the
 index implementation, if the former gives higher performance
 expectations.</p>
@@ -3058,7 +3060,7 @@ schema qualifier</em>.</li>
 <li><code class="docutils literal"><span class="pre">$column</span></code> is the name of the CLOB column containing the data in
 Molfile or Rxnfile format.</li>
 <li><code class="docutils literal"><span class="pre">$other_columns</span></code> is the comma-separated list of space-separated
-&#8216;property-column&#8217; pairs that are to be imported. Each given SDF
+‘property-column’ pairs that are to be imported. Each given SDF
 property is mapped to the given table column. You can specify an
 empty string or NULL if there are no properties to import.</li>
 <li><code class="docutils literal"><span class="pre">$filename</span></code> is the location of the resulting file on the <em>server

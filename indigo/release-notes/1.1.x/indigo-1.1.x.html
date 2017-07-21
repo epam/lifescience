@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Previous Versions (before 1.1.11)</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../../../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Previous Versions (before 1.1.11)"
+            //document.title = "Previous Versions (before 1.1.11)"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -330,8 +332,8 @@ Society of Chemistry (<a class="reference external" href="http://www.rsc.org">ht
 localize and fix several stability issues in our .NET version.</li>
 <li>Indigo now understand aromatic rings with external double bonds such
 as O=C1C=CC=CC=C1. To enable this mode you have to set
-&#8220;aromaticity-model&#8221; option to &#8220;generic&#8221; (while default version is
-&#8220;basic&#8221;).</li>
+“aromaticity-model” option to “generic” (while default version is
+“basic”).</li>
 </ol>
 <p>All changes:</p>
 <ul>
@@ -341,7 +343,7 @@ Thanks to Dimitry Ivanov for various suggestions:
 <a class="reference external" href="https://groups.google.com/d/msg/indigo-dev/ObLkSecXrOw/g2RGOojqjosJ">https://groups.google.com/d/msg/indigo-dev/ObLkSecXrOw/g2RGOojqjosJ</a></p>
 </li>
 <li><p class="first">Indigo Renderer automatically selects output format based on the file
-extension. It is not necessary to specify &#8220;render-output-format&#8221;
+extension. It is not necessary to specify “render-output-format”
 option if you are rendering into a file.</p>
 </li>
 <li><p class="first">Original hydrogens are not folded during molecule transformations.
@@ -354,16 +356,16 @@ Thanks to Ken for the bug report:
 </div>
 </li>
 <li><p class="first">Indigo Renderer now has additional options for partial image size
-specification. These options are: &#8220;render-image-width&#8221;,
-&#8220;render-image-height&#8221;, &#8220;render-image-max-width&#8221;,
-&#8220;render-image-max-height&#8221;</p>
+specification. These options are: “render-image-width”,
+“render-image-height”, “render-image-max-width”,
+“render-image-max-height”</p>
 </li>
 <li><div class="first line-block">
 <div class="line">Fixed an issue in the SMILES loader module that set invalid number of implicit hydrogens:</div>
 <div class="line"><a class="reference external" href="https://groups.google.com/d/msg/indigo-bugs/i7g3hoSXxhI/XaXsEOVJ8_cJ">https://groups.google.com/d/msg/indigo-bugs/i7g3hoSXxhI/XaXsEOVJ8_cJ</a></div>
 </div>
 </li>
-<li><p class="first">Generic aromaticity model that can be enabled by &#8220;aromaticity-model&#8221;
+<li><p class="first">Generic aromaticity model that can be enabled by “aromaticity-model”
 option. Thanks to Daniel for pushing us to implement this
 functionality.</p>
 </li>
@@ -372,7 +374,7 @@ Indigo cannot dearomatize a structure. For example Indigo cannot
 dearomatize the structure c1ccc2c(ccc2)cc1, because there are no
 bonds configuration such that the structure is aromatic. But you can
 try to find approximate kekulize configuration if you specify option
-&#8220;dearomatize-verification&#8221; to &#8220;false&#8221;.</p>
+“dearomatize-verification” to “false”.</p>
 </li>
 <li><p class="first">Indigo now uses dearomatization module to find number of hydrogens in
 aromatic rings in the IndigoObject.canonicalSmiles() method. If
@@ -380,7 +382,7 @@ hydrogens configuration is ambiguous then Indigo throws an exception
 about this.</p>
 </li>
 <li><div class="first line-block">
-<div class="line">Additional &#8220;unique-dearomatization&#8221; option. If this option is set to true Indigo will throw an exception of dearomatization configuration is ambiguous (that means that canonical SMILES cannot be generated):</div>
+<div class="line">Additional “unique-dearomatization” option. If this option is set to true Indigo will throw an exception of dearomatization configuration is ambiguous (that means that canonical SMILES cannot be generated):</div>
 <div class="line"><a class="reference external" href="https://groups.google.com/d/msg/indigo-bugs/WIH8bWQpVHs/Z8VLlXR2U28J">https://groups.google.com/d/msg/indigo-bugs/WIH8bWQpVHs/Z8VLlXR2U28J</a></div>
 </div>
 </li>
@@ -389,7 +391,7 @@ about this.</p>
 <div class="line">Thanks to Nico: <a class="reference external" href="http://tech.knime.org/forum/indigo/inchi-conversion-into-2d-structure#comment-28514">http://tech.knime.org/forum/indigo/inchi-conversion-into-2d-structure#comment-28514</a></div>
 </div>
 </li>
-<li><p class="first">Indigo Renderer doesn&#8217;t have a dependency on the new GLIBC any more.
+<li><p class="first">Indigo Renderer doesn’t have a dependency on the new GLIBC any more.
 This dependency prevented loading of Indigo Renderer on CentOS 5.9
 and less.</p>
 </li>
@@ -427,7 +429,7 @@ stereocenters that are not real stereocenters like in
 <li>Implicit hydrogens are rendered better if they are on the bottom of
 an aromatic ring</li>
 <li>Missing dependency file msvcp100.dll is loaded automatically.</li>
-<li>Smiles saver doesn&#8217;t throw exception about implicit hydrogens if they
+<li>Smiles saver doesn’t throw exception about implicit hydrogens if they
 are not saving in SMILES</li>
 <li>Workaround for a clang 3.2 compiler bug that caused incorrect
 similarity values on Mac OS X platforms</li>
@@ -518,7 +520,7 @@ quality based on reference files.</p>
 <div class="line"><a class="reference external" href="https://groups.google.com/d/msg/indigo-general/MlBa6Wc31L8/03i5Yfe0FP4J">https://groups.google.com/d/msg/indigo-general/MlBa6Wc31L8/03i5Yfe0FP4J</a></div>
 </div>
 </li>
-<li><p class="first">molecule dearomatization with radicals doesn&#8217;t work</p>
+<li><p class="first">molecule dearomatization with radicals doesn’t work</p>
 </li>
 <li><p class="first">several issues in reaction product enumerator</p>
 </li>
@@ -545,7 +547,7 @@ if problem still appear.</p>
 </li>
 <li><p class="first">issue with tautomer substructure matching for the aromatic compounds</p>
 </li>
-<li><p class="first">molecule aromatization method doesn&#8217;t affect R-group fragments</p>
+<li><p class="first">molecule aromatization method doesn’t affect R-group fragments</p>
 </li>
 </ul>
 </div>
@@ -577,7 +579,7 @@ if problem still appear.</p>
 </div>
 </li>
 <li><div class="first line-block">
-<div class="line">Options passed to the InChI plugin are being automatically corrected independent of OS. You can use both &#8216;-&#8216; and &#8216;/&#8217; prefixes on all the systems.</div>
+<div class="line">Options passed to the InChI plugin are being automatically corrected independent of OS. You can use both ‘-‘ and ‘/’ prefixes on all the systems.</div>
 <div class="line">Look more at <a class="reference external" href="http://ggasoftware.com/opensource/indigo/api#options">http://ggasoftware.com/opensource/indigo/api#options</a></div>
 <div class="line">Thanks to Karen for the suggestion: <a class="reference external" href="https://groups.google.com/d/msg/indigo-general/XxPC2EuT0-g/7kNUasWWpz0J">https://groups.google.com/d/msg/indigo-general/XxPC2EuT0-g/7kNUasWWpz0J</a></div>
 </div>
@@ -606,7 +608,7 @@ molecule is passed in an aromatic form that cannot be dearomatized</li>
 case there are not atom coordinates</li>
 <li>Aromatic [si] can be loaded from SMILES</li>
 <li>Dearomatization improvements for B, Si, P atoms. There was an issue
-that the dearomatization method didn&#8217;t work with the molecule
+that the dearomatization method didn’t work with the molecule
 CB1OB(C)OB(C)O1 if it was loaded from SMILES in aromatic form.</li>
 </ul>
 <p>New methods:</p>
@@ -670,7 +672,7 @@ are greater than 165 degrees.</p>
 <p><em>10 July 2012</em></p>
 <ul>
 <li><div class="first line-block">
-<div class="line">Layout algorithm now doesn&#8217;t apply Fischer projection for atoms with 4 bonds. For example, now the CC(C)(C)C(C)(C)C(C)(C)C(C)(C)C molecule is cleaned up in a zigzag way.</div>
+<div class="line">Layout algorithm now doesn’t apply Fischer projection for atoms with 4 bonds. For example, now the CC(C)(C)C(C)(C)C(C)(C)C(C)(C)C molecule is cleaned up in a zigzag way.</div>
 </div>
 </li>
 <li><div class="first line-block">
@@ -760,7 +762,7 @@ and product molecules.</p>
 <div class="line">Thanks to James: <a class="reference external" href="http://tech.knime.org/forum/indigo/reaction-automapper-bond-highlighting">http://tech.knime.org/forum/indigo/reaction-automapper-bond-highlighting</a></div>
 </div>
 </li>
-<li><p class="first">&#8220;timeout&#8221; option is used for MCS computation.</p>
+<li><p class="first">“timeout” option is used for MCS computation.</p>
 </li>
 </ul>
 <p>Fixes:</p>
@@ -798,25 +800,25 @@ object before garbage collection.</p>
 </li>
 <li><p class="first">Global timeout for all the most time consuming operations:
 substructure search, canonical smiles generation and etc. Option is
-called &#8220;timeout&#8221; and corresponds to milliseconds.</p>
+called “timeout” and corresponds to milliseconds.</p>
 </li>
 <li><p class="first">explicit hydrogen near Nitrogen is handled correctly to calculate
 cis-trans and tetrahedral stereo configuration.</p>
 </li>
-<li><p class="first">InChI plugin now have &#8220;version&#8221; methods to return an actual InChI
+<li><p class="first">InChI plugin now have “version” methods to return an actual InChI
 implementation version</p>
 </li>
 <li><p class="first">Arial font is used on Linux systems to render molecules. Previously
 this font was used only on Windows and Mac OS X, and rendered images
 on Windows and Linux were different.</p>
 </li>
-<li><p class="first">&#8220;deco-ignore-errors&#8221; option was added. Now there are no exceptions
-like &#8216;no embeddings obtained&#8217; during the RGroup Decomposition if the
+<li><p class="first">“deco-ignore-errors” option was added. Now there are no exceptions
+like ‘no embeddings obtained’ during the RGroup Decomposition if the
 flag set true. Exception is raised only for the end getters (e.g.
 decomposedMoleculeWithRGroups())</p>
 </li>
 <li><div class="first line-block">
-<div class="line">&#8220;deco-save-ap-bond-orders&#8221; option was added. Within the option output molecule RGroup attachment points are saved as pseudo atoms (named &#8216;AP1&#8217;, &#8216;AP2&#8217; etc). Therefore, the option allows to save initial bond orders.</div>
+<div class="line">“deco-save-ap-bond-orders” option was added. Within the option output molecule RGroup attachment points are saved as pseudo atoms (named ‘AP1’, ‘AP2’ etc). Therefore, the option allows to save initial bond orders.</div>
 <div class="line">Thanks to Mederich: <a class="reference external" href="http://groups.google.com/group/indigo-general/browse_thread/thread/c4bca8b97ca54a87">http://groups.google.com/group/indigo-general/browse_thread/thread/c4bca8b97ca54a87</a></div>
 </div>
 </li>
@@ -862,7 +864,7 @@ rendered any more.</p>
 <li><p class="first">molecules with bad valences and charges can be serialized now</p>
 </li>
 <li><div class="first line-block">
-<div class="line">timeout option was added for AAM. A new option was added named &#8220;aam-timeout&#8221;. The integer parameter (time in milliseconds) corresponds for the AAM algorithm working time. The automap method returns a current state solution for a reaction when time is over.</div>
+<div class="line">timeout option was added for AAM. A new option was added named “aam-timeout”. The integer parameter (time in milliseconds) corresponds for the AAM algorithm working time. The automap method returns a current state solution for a reaction when time is over.</div>
 <div class="line">Thanks to Daniel: <a class="reference external" href="http://groups.google.com/group/indigo-dev/browse_thread/thread/4430412b9864f3fd">http://groups.google.com/group/indigo-dev/browse_thread/thread/4430412b9864f3fd</a></div>
 </div>
 </li>
@@ -1038,7 +1040,7 @@ substructure matching.</p>
 <li><p class="first">Highlighting is taken into account for the computation of canonical
 SMILES</p>
 </li>
-<li><p class="first">Indigo.countHydrogens method doesn&#8217;t throw an exception is case of
+<li><p class="first">Indigo.countHydrogens method doesn’t throw an exception is case of
 existence of R-groups and pseudoatoms.</p>
 </li>
 <li><p class="first">Fixed some issues with loading and saving of polymer repetition in
@@ -1111,7 +1113,7 @@ changed in the next version.</p>
 <ul>
 <li><div class="first line-block">
 <div class="line">New methods for Indigo: resetAtom, setRSite, isHighlighted for atoms.</div>
-<div class="line">Code example: atom.resetAtom(&#8220;N&#8221;), atom.setRSite(&#8220;R1, R3&#8221;), atom.isHighlighted()</div>
+<div class="line">Code example: atom.resetAtom(“N”), atom.setRSite(“R1, R3”), atom.isHighlighted()</div>
 </div>
 </li>
 <li><p class="first">Reaction product enumerator now supports recursive SMARTS</p>
@@ -1173,7 +1175,7 @@ directories might cause error messages</p>
 </li>
 <li><p class="first">Reaction substructure match throws an exception in some cases when
 these is no pair of AAM numbers. For example, reactant has AAM number
-while product hasn&#8217;t it.</p>
+while product hasn’t it.</p>
 </li>
 </ul>
 </div>

@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>API</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "API"
+            //document.title = "API"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -370,7 +372,7 @@
 <li><a class="reference internal" href="#reaction-substructure-matching">Reaction Substructure Matching</a></li>
 <li><a class="reference internal" href="#converting-the-substructure-query-to-the-aromatic-form">Converting the Substructure Query to the Aromatic Form</a></li>
 <li><a class="reference internal" href="#optimizing-the-substructure-query">Optimizing the Substructure Query</a></li>
-<li><a class="reference internal" href="#methods-of-mapping-object">Methods of &#8220;mapping&#8221; object</a><ul>
+<li><a class="reference internal" href="#methods-of-mapping-object">Methods of “mapping” object</a><ul>
 <li><a class="reference internal" href="#example-1-mapping-query-molecule-atoms">Example 1 (mapping query molecule atoms)</a></li>
 <li><a class="reference internal" href="#example-2-getting-the-highlighted-target-molecule">Example 2 (getting the highlighted target molecule)</a></li>
 <li><a class="reference internal" href="#example-3-exact-match-between-reactions">Example 3 (exact match between reactions)</a></li>
@@ -432,7 +434,7 @@ our team.</p>
 <li>Error handling facility</li>
 </ul>
 <p>It is possible to use more than one Indigo instance at a time. In plain
-C API, the &#8220;active&#8221; instance can be switched with <code class="docutils literal"><span class="pre">indigoSetSession</span></code>
+C API, the “active” instance can be switched with <code class="docutils literal"><span class="pre">indigoSetSession</span></code>
 call, while in Python, Java, and C#, the instance is represented as an
 object of class <code class="docutils literal"><span class="pre">Indigo</span></code>.</p>
 <p>The objects that belong to the Indigo state machine are represented as
@@ -583,25 +585,25 @@ specified type.</li>
 </ul>
 <p>The following self-explaining integer constraint types are supported:</p>
 <ul class="simple">
-<li>&#8220;atomic-number&#8221;</li>
-<li>&#8220;charge&#8221;</li>
-<li>&#8220;isotope&#8221;</li>
-<li>&#8220;radical&#8221;</li>
-<li>&#8220;valence&#8221;</li>
-<li>&#8220;connectivity&#8221;</li>
-<li>&#8220;total-bond-order&#8221;</li>
-<li>&#8220;hydrogens&#8221;</li>
-<li>&#8220;substituents&#8221;</li>
-<li>&#8220;ring&#8221;</li>
-<li>&#8220;smallest-ring-size&#8221;</li>
-<li>&#8220;ring-bonds&#8221;</li>
-<li>&#8220;rsite-mask&#8221;</li>
-<li>&#8220;rsite&#8221;</li>
+<li>“atomic-number”</li>
+<li>“charge”</li>
+<li>“isotope”</li>
+<li>“radical”</li>
+<li>“valence”</li>
+<li>“connectivity”</li>
+<li>“total-bond-order”</li>
+<li>“hydrogens”</li>
+<li>“substituents”</li>
+<li>“ring”</li>
+<li>“smallest-ring-size”</li>
+<li>“ring-bonds”</li>
+<li>“rsite-mask”</li>
+<li>“rsite”</li>
 </ul>
 <p>Other constraints:</p>
 <ul class="simple">
-<li>&#8220;aromaticity&#8221; = &#8220;aliphatic&#8221; or &#8220;aromatic&#8221;</li>
-<li>&#8220;smarts&#8221; — any single-atom SMARTS expression</li>
+<li>“aromaticity” = “aliphatic” or “aromatic”</li>
+<li>“smarts” — any single-atom SMARTS expression</li>
 </ul>
 <p>Code example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">createQueryMolecule</span><span class="p">()</span>
@@ -616,7 +618,7 @@ specified type.</li>
 <h3>Merging Molecules<a class="headerlink" href="#merging-molecules" title="Permalink to this headline">¶</a></h3>
 <p>You can merge one molecule into another using the <code class="docutils literal"><span class="pre">merge</span></code> method of a
 molecule. This method accepts a molecule that is to be merged into the
-first molecule, and returns a &#8220;mapping&#8221; object. You can call the
+first molecule, and returns a “mapping” object. You can call the
 <code class="docutils literal"><span class="pre">mapAtom</span></code> method of the mapping object to know what is the (new) atom
 of the first molecule that was transferred from the second molecule.</p>
 <p>Java and C#:</p>
@@ -663,7 +665,7 @@ pseudoatoms and R-sites.</li>
 </div>
 <div class="section" id="getting-the-properties-of-atoms-and-bonds">
 <h3>Getting the Properties of Atoms and Bonds<a class="headerlink" href="#getting-the-properties-of-atoms-and-bonds" title="Permalink to this headline">¶</a></h3>
-<p>The following methods of a molecule&#8217;s atom can be called to obtain
+<p>The following methods of a molecule’s atom can be called to obtain
 information:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">atomicNumber</span></code> — returns zero if the atomic number is undefined or
@@ -690,15 +692,15 @@ query atoms.</li>
 <li><code class="docutils literal"><span class="pre">isRSite</span></code> — returns <code class="docutils literal"><span class="pre">true</span></code> if the atom is a pseudoatom, <code class="docutils literal"><span class="pre">false</span></code>
 otherwise.</li>
 <li><code class="docutils literal"><span class="pre">symbol</span></code> — returns a string containing the atom symbol. It is
-either a symbol the periodic table (&#8220;C&#8221;, &#8220;Na&#8221;), or a pseudoatom label
-(&#8220;Res&#8221;), or an R-site mark (&#8220;R1&#8221;).</li>
+either a symbol the periodic table (“C”, “Na”), or a pseudoatom label
+(“Res”), or an R-site mark (“R1”).</li>
 <li><code class="docutils literal"><span class="pre">xyz</span></code> —returns an array of three <code class="docutils literal"><span class="pre">float</span></code> numbers, which define the
 position of the atom.</li>
 <li><code class="docutils literal"><span class="pre">singleAllowedRGroup</span></code> — R-Group index allowed on R-Site (usually
 there is a single allowed index). This method can be applied
 exclusively to R-sites.</li>
 </ul>
-<p>The following <code class="docutils literal"><span class="pre">IndigoObject</span></code> methods can be applied to molecule&#8217;s
+<p>The following <code class="docutils literal"><span class="pre">IndigoObject</span></code> methods can be applied to molecule’s
 bonds:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">bondOrder</span></code> — returns 1/2/3 if the bond is a single/double/triple
@@ -713,7 +715,7 @@ ambiguous (query bond).</li>
 </div>
 <div class="section" id="modifying-atoms-and-bonds">
 <h3>Modifying Atoms and Bonds<a class="headerlink" href="#modifying-atoms-and-bonds" title="Permalink to this headline">¶</a></h3>
-<p>The following methods of a molecule&#8217;s atom can be called to modify the
+<p>The following methods of a molecule’s atom can be called to modify the
 atom:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">resetCharge</span></code></li>
@@ -732,7 +734,7 @@ single/double/triple/aromatic)</li>
 <div class="section" id="accessing-neighbor-atoms">
 <h3>Accessing Neighbor Atoms<a class="headerlink" href="#accessing-neighbor-atoms" title="Permalink to this headline">¶</a></h3>
 <p>With <code class="docutils literal"><span class="pre">iterateNeighbors</span></code> method you can access the neighbors atoms of
-an atom. Also, these &#8220;neighbor&#8221; objects respond to the <code class="docutils literal"><span class="pre">bond</span></code> method,
+an atom. Also, these “neighbor” objects respond to the <code class="docutils literal"><span class="pre">bond</span></code> method,
 which returns the bond connecting the atom with the neighbor.</p>
 <p>Java:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
@@ -765,8 +767,8 @@ which returns the bond connecting the atom with the neighbor.</p>
 <div class="section" id="accessing-r-groups">
 <h3>Accessing R-Groups<a class="headerlink" href="#accessing-r-groups" title="Permalink to this headline">¶</a></h3>
 <p><strong>Note</strong>: This section applies exclusively to query molecules.</p>
-<p>The <code class="docutils literal"><span class="pre">iterateRGroups</span></code> method iterates over a query molecule&#8217;s R-groups.
-Each of the R-groups has a collection of possible &#8220;R-group fragments&#8221;,
+<p>The <code class="docutils literal"><span class="pre">iterateRGroups</span></code> method iterates over a query molecule’s R-groups.
+Each of the R-groups has a collection of possible “R-group fragments”,
 which in turn can be accessed via the <code class="docutils literal"><span class="pre">iterateRGroupFragments</span></code> method.</p>
 <p>Java:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">rg</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateRGroups</span><span class="o">())</span>
@@ -804,7 +806,7 @@ which in turn can be accessed via the <code class="docutils literal"><span class
 <div class="section" id="expand-abbreviations">
 <h3>Expand abbreviations<a class="headerlink" href="#expand-abbreviations" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">expandAbbreviations</span></code> function converts input structure using the abbreviations <strong>dictionary</strong> into the expanded form. By default, Indigo uses the following structures list:</p>
-<table border="1" class="docutils">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -1158,7 +1160,7 @@ and R-sites.</li>
 <li><code class="docutils literal"><span class="pre">grossFormula</span></code> — returns a string with the gross formula.</li>
 <li><code class="docutils literal"><span class="pre">molecularWeight</span></code> — returns the molecular weight (a floating-point
 number).</li>
-<li><code class="docutils literal"><span class="pre">mostAbundantMass</span></code> — returns the &#8220;most abundant isotopes mass&#8221; (a
+<li><code class="docutils literal"><span class="pre">mostAbundantMass</span></code> — returns the “most abundant isotopes mass” (a
 floating-point number).</li>
 <li><code class="docutils literal"><span class="pre">monoisotopicMass</span></code> — returns the monoisotopic mass (a
 floating-point number).</li>
@@ -1167,7 +1169,7 @@ coordinates, <code class="docutils literal"><span class="pre">false</span></code
 <li><code class="docutils literal"><span class="pre">hasZCoord</span></code> — returns <code class="docutils literal"><span class="pre">true</span></code> if the given molecule has 3D
 coordinates, <code class="docutils literal"><span class="pre">false</span></code> otherwise.</li>
 <li><code class="docutils literal"><span class="pre">isChiral</span></code> — returns <code class="docutils literal"><span class="pre">true</span></code> if the molecule was loaded from a
-Molfile, and if it had the &#8216;Chiral&#8217; flag set.</li>
+Molfile, and if it had the ‘Chiral’ flag set.</li>
 <li><code class="docutils literal"><span class="pre">countHeavyAtoms</span></code> — returns the number of atoms in the molecule,
 excluding hydrogen atoms. Hydrogen isotopes are excluded too.</li>
 <li><code class="docutils literal"><span class="pre">countImplicitHydrogens</span></code> — returns the total number of implicit
@@ -1192,10 +1194,10 @@ empty string if molecule is correct.</p>
 <p>You can use the <code class="docutils literal"><span class="pre">countComponents</span></code> method to calculate the number of
 connected components in a structure. Via the <code class="docutils literal"><span class="pre">componentIndex</span></code> method,
 you can obtain the number of the component to which the given atom
-belongs. Also, you can obtain the whole &#8220;component&#8221; object via the
+belongs. Also, you can obtain the whole “component” object via the
 <code class="docutils literal"><span class="pre">component</span></code> method. You can also iterate over the components using the
 <code class="docutils literal"><span class="pre">iterateComponents</span></code> method.</p>
-<p>The &#8220;component&#8221; objects respond to the <code class="docutils literal"><span class="pre">countAtoms</span></code>, <code class="docutils literal"><span class="pre">countBonds</span></code>,
+<p>The “component” objects respond to the <code class="docutils literal"><span class="pre">countAtoms</span></code>, <code class="docutils literal"><span class="pre">countBonds</span></code>,
 <code class="docutils literal"><span class="pre">iterateAtoms</span></code>, and <code class="docutils literal"><span class="pre">iterateBonds</span></code> calls. However, they can not be
 used as molecules. If you want to have a separate molecule representing
 a connected component, you should <code class="docutils literal"><span class="pre">clone</span></code> it.</p>
@@ -1342,30 +1344,30 @@ methods.</p>
 <div class="section" id="stereochemistry">
 <h3>Stereochemistry<a class="headerlink" href="#stereochemistry" title="Permalink to this headline">¶</a></h3>
 <p>The following methods of <code class="docutils literal"><span class="pre">IndigoObject</span></code> are available for accessing
-molecule&#8217;s stereo configuration:</p>
+molecule’s stereo configuration:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">countStereocenters</span></code> returns the number of the chiral atoms in a
 molecule</li>
-<li><code class="docutils literal"><span class="pre">iterateStereocenters</span></code> returns an iterator for molecule&#8217;s atoms
+<li><code class="docutils literal"><span class="pre">iterateStereocenters</span></code> returns an iterator for molecule’s atoms
 that are stereocenters</li>
 <li><code class="docutils literal"><span class="pre">countAlleneCenters</span></code> returns the number of allene-like stereo
 fragments</li>
-<li><code class="docutils literal"><span class="pre">iterateAlleneCenters</span></code> returns an iterator for molecule&#8217;s atoms
-that are centers of allene fragments (the middle &#8216;C&#8217; in &#8216;C=C=C&#8217;)</li>
+<li><code class="docutils literal"><span class="pre">iterateAlleneCenters</span></code> returns an iterator for molecule’s atoms
+that are centers of allene fragments (the middle ‘C’ in ‘C=C=C’)</li>
 <li><code class="docutils literal"><span class="pre">bondStereo</span></code> returns one of the following constants:<ul>
-<li><code class="docutils literal"><span class="pre">Indigo.UP</span></code> — stereo &#8220;up&#8221; bond</li>
-<li><code class="docutils literal"><span class="pre">Indigo.DOWN</span></code> — stereo &#8220;down&#8221; bond</li>
-<li><code class="docutils literal"><span class="pre">Indigo.EITHER</span></code> — stereo &#8220;either&#8221; bond</li>
-<li><code class="docutils literal"><span class="pre">Indigo.CIS</span></code> — &#8220;Cis&#8221; double bond</li>
-<li><code class="docutils literal"><span class="pre">Indigo.TRANS</span></code> — &#8220;Trans&#8221; double bond</li>
+<li><code class="docutils literal"><span class="pre">Indigo.UP</span></code> — stereo “up” bond</li>
+<li><code class="docutils literal"><span class="pre">Indigo.DOWN</span></code> — stereo “down” bond</li>
+<li><code class="docutils literal"><span class="pre">Indigo.EITHER</span></code> — stereo “either” bond</li>
+<li><code class="docutils literal"><span class="pre">Indigo.CIS</span></code> — “Cis” double bond</li>
+<li><code class="docutils literal"><span class="pre">Indigo.TRANS</span></code> — “Trans” double bond</li>
 <li>zero — not a stereo bond of any kind</li>
 </ul>
 </li>
 <li><code class="docutils literal"><span class="pre">stereocenterType</span></code> returns one of the following constants:<ul>
-<li><code class="docutils literal"><span class="pre">Indigo.ABS</span></code> — &#8220;absolute&#8221; stereocenter</li>
-<li><code class="docutils literal"><span class="pre">Indigo.OR</span></code> — &#8220;or&#8221; stereocenter</li>
-<li><code class="docutils literal"><span class="pre">Indigo.AND</span></code> — &#8220;and&#8221; stereocenter</li>
-<li><code class="docutils literal"><span class="pre">Indigo.EITHER</span></code> — &#8220;any&#8221; stereocenter</li>
+<li><code class="docutils literal"><span class="pre">Indigo.ABS</span></code> — “absolute” stereocenter</li>
+<li><code class="docutils literal"><span class="pre">Indigo.OR</span></code> — “or” stereocenter</li>
+<li><code class="docutils literal"><span class="pre">Indigo.AND</span></code> — “and” stereocenter</li>
+<li><code class="docutils literal"><span class="pre">Indigo.EITHER</span></code> — “any” stereocenter</li>
 <li>zero — not a stereocenter</li>
 </ul>
 </li>
@@ -1376,10 +1378,10 @@ to a specified type</li>
 <li><code class="docutils literal"><span class="pre">addStereocenter(type,</span> <span class="pre">idx1,</span> <span class="pre">idx2,</span> <span class="pre">idx3,</span> <span class="pre">[idx4])</span></code> adds new
 stereocenter build on a atom pyramid with a specified atom indices</li>
 <li><code class="docutils literal"><span class="pre">clearStereocenters</span></code> resets the chiral configurations of a
-molecule&#8217;s atoms</li>
+molecule’s atoms</li>
 <li><code class="docutils literal"><span class="pre">clearAlleneCenters</span></code> resets the chiral configurations of a
-molecule&#8217;s allene-like fragments</li>
-<li><code class="docutils literal"><span class="pre">clearCisTrans</span></code> resets the cis-trans configurations of a molecule&#8217;s
+molecule’s allene-like fragments</li>
+<li><code class="docutils literal"><span class="pre">clearCisTrans</span></code> resets the cis-trans configurations of a molecule’s
 bonds</li>
 </ul>
 <p>The following methods are useful for keeping cis-trans stereochemistry
@@ -1497,15 +1499,15 @@ namely:</p>
 <ul class="simple">
 <li>Smallest Set of Smallest Rings (SSSR) — <code class="docutils literal"><span class="pre">iterateSSSR</span></code>.</li>
 <li>All rings of size within a given interval — <code class="docutils literal"><span class="pre">iterateRings</span></code>. The
-method accepts the minimum and maximum amounts of the rings&#8217; atoms.</li>
+method accepts the minimum and maximum amounts of the rings’ atoms.</li>
 <li>All subtrees of size within a given interval — <code class="docutils literal"><span class="pre">iterateSubtrees</span></code>.
-The method accepts the minimum and maximum amounts of the subtrees&#8217;
+The method accepts the minimum and maximum amounts of the subtrees’
 atoms.</li>
 <li>All edge submolecules of size within a given interval —
 <code class="docutils literal"><span class="pre">iterateEdgeSubmolecules</span></code>. The method accepts the minimum and
-maximum amounts of the submolecules&#8217; edges.</li>
+maximum amounts of the submolecules’ edges.</li>
 </ul>
-<p>The &#8220;submolecule&#8221; objects returned by these methods respond to the
+<p>The “submolecule” objects returned by these methods respond to the
 <code class="docutils literal"><span class="pre">countAtoms</span></code>, <code class="docutils literal"><span class="pre">countBonds</span></code>, <code class="docutils literal"><span class="pre">iterateAtoms</span></code>, and <code class="docutils literal"><span class="pre">iterateBonds</span></code>
 calls. However, they can not be used as molecules. If you want to have a
 separate molecule representing the obtained submolecule, you should
@@ -1594,7 +1596,7 @@ Indigo supports all described in the format:</p>
 <li>any polymer SGroup (ANY)</li>
 </ul>
 <p>The following methods of <code class="docutils literal"><span class="pre">IndigoObject</span></code> are available for reading
-molecule&#8217;s groups:</p>
+molecule’s groups:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">countGenericSGroups</span></code></li>
 <li><code class="docutils literal"><span class="pre">countSuperatoms</span></code></li>
@@ -1609,7 +1611,7 @@ molecule&#8217;s groups:</p>
 <li><code class="docutils literal"><span class="pre">getSuperatom(index)</span></code></li>
 <li><code class="docutils literal"><span class="pre">getDataSGroup(index)</span></code></li>
 </ul>
-<p>The iterator methods return &#8220;group&#8221; objects. Each &#8220;group&#8221; object
+<p>The iterator methods return “group” objects. Each “group” object
 responds to <code class="docutils literal"><span class="pre">IndigoObject.iterateAtoms</span></code> and
 <code class="docutils literal"><span class="pre">IndigoObject.iterateBonds</span></code> methods.</p>
 <p>Java:</p>
@@ -1639,8 +1641,8 @@ responds to <code class="docutils literal"><span class="pre">IndigoObject.iterat
 </div>
 <p>You can also add data SGroups to an existing structure using
 <code class="docutils literal"><span class="pre">IndigoObject.addDataSGroup()</span></code> method. It returns the added group. By
-default, the data SGroup is added in &#8220;attached&#8221; mode — that is, the data
-is attached to each of the group&#8217;s atoms. To make the data SGroup
+default, the data SGroup is added in “attached” mode — that is, the data
+is attached to each of the group’s atoms. To make the data SGroup
 detached, you can call the <code class="docutils literal"><span class="pre">IndigoObject.setDataSGroupXY</span></code> method of
 the data SGroup object. To get a description of a data SGroup use method
 <code class="docutils literal"><span class="pre">IndigoObject.description()</span></code>.</p>
@@ -1649,7 +1651,7 @@ the data SGroup object. To get a description of a data SGroup use method
 </pre></div>
 </div>
 <p>New set of methods is available for manipulation with S-groups.
-You can create new S-group using &#8220;mapping&#8221; object received from matcher:</p>
+You can create new S-group using “mapping” object received from matcher:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">IndigoObject.createSGroup</span></code></li>
 </ul>
@@ -1678,35 +1680,35 @@ You can create new S-group using &#8220;mapping&#8221; object received from matc
    <span class="n">sgroup</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">createSGroup</span><span class="p">(</span><span class="s2">&quot;SUP&quot;</span><span class="p">,</span> <span class="n">match</span><span class="p">,</span> <span class="s2">&quot;Asx&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can get and set different S-group&#8217;s properties using the next methods:</p>
+<p>You can get and set different S-group’s properties using the next methods:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">getSGroupType</span></code> - returns S-group type</li>
 <li><code class="docutils literal"><span class="pre">getSGroupIndex</span></code> - returns S-group index</li>
-<li><code class="docutils literal"><span class="pre">setSGroupData</span></code> - accepts S-group data (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupCoords</span></code> accepts S-group coordinates, x and y values (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupDescription</span></code>- accepts S-group data field units or format (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupFieldName</span></code> - accepts S-group data name (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupQueryCode</span></code> - accepts S-group data query code (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupQueryOper</span></code> - accepts S-group data query operation (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupDisplay</span></code> - accepts S-group data display option (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupLocation</span></code> - accepts S-group data display location (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupTag</span></code> - accepts S-group data tag (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupTagAlign</span></code> - accepts S-group data tag alignment (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupDataType</span></code> - accepts S-group data type (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupXCoord</span></code> - accepts S-group x coordinate (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupYCoord</span></code> - accepts S-group y coordinate (for S-groups of &#8220;DAT&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">getSGroupClass</span></code> - returns S-group class name (for S-groups of &#8220;SUP&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupClass</span></code> - accepts S-group class name (for S-groups of &#8220;SUP&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">getSGroupName</span></code> - returns S-group label (for S-groups of &#8220;SUP&#8221; and &#8220;SRU&#8221; types)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupName</span></code> - accepts S-group label (for S-groups of &#8220;SUP&#8221; and &#8220;SRU&#8221; types)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupData</span></code> - accepts S-group data (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupCoords</span></code> accepts S-group coordinates, x and y values (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupDescription</span></code>- accepts S-group data field units or format (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupFieldName</span></code> - accepts S-group data name (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupQueryCode</span></code> - accepts S-group data query code (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupQueryOper</span></code> - accepts S-group data query operation (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupDisplay</span></code> - accepts S-group data display option (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupLocation</span></code> - accepts S-group data display location (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupTag</span></code> - accepts S-group data tag (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupTagAlign</span></code> - accepts S-group data tag alignment (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupDataType</span></code> - accepts S-group data type (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupXCoord</span></code> - accepts S-group x coordinate (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupYCoord</span></code> - accepts S-group y coordinate (for S-groups of “DAT” type)</li>
+<li><code class="docutils literal"><span class="pre">getSGroupClass</span></code> - returns S-group class name (for S-groups of “SUP” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupClass</span></code> - accepts S-group class name (for S-groups of “SUP” type)</li>
+<li><code class="docutils literal"><span class="pre">getSGroupName</span></code> - returns S-group label (for S-groups of “SUP” and “SRU” types)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupName</span></code> - accepts S-group label (for S-groups of “SUP” and “SRU” types)</li>
 <li><code class="docutils literal"><span class="pre">getSGroupNumCrossBonds</span></code> - returns number of crossing bonds for sgroup</li>
-<li><code class="docutils literal"><span class="pre">addSGroupAttachmentPoint</span></code> - accepts attachment point&#8217;s description and creates it (for S-groups of &#8220;SUP&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">deleteSGroupAttachmentPoint</span></code> - accepts attachment point&#8217;s index and removes it (for S-groups of &#8220;SUP&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">getSGroupDisplayOption</span></code> - returns display option for sgroup (for S-groups of &#8220;SUP&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupDisplayOption</span></code> - accepts display option for sgroup (for S-groups of &#8220;SUP&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">getSGroupMultiplier</span></code> - returns multiplier value for sgroup (for S-groups of &#8220;MUL&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupMultiplier</span></code> - accepts multiplier value for sgroup (for S-groups of &#8220;MUL&#8221; type)</li>
-<li><code class="docutils literal"><span class="pre">setSGroupBrackets</span></code> - accepts bracket style and brackets coordinates for sgroup (for S-groups of &#8220;GEN&#8221;,&#8221;MUL&#8221; and &#8220;SRU&#8221; types)</li>
+<li><code class="docutils literal"><span class="pre">addSGroupAttachmentPoint</span></code> - accepts attachment point’s description and creates it (for S-groups of “SUP” type)</li>
+<li><code class="docutils literal"><span class="pre">deleteSGroupAttachmentPoint</span></code> - accepts attachment point’s index and removes it (for S-groups of “SUP” type)</li>
+<li><code class="docutils literal"><span class="pre">getSGroupDisplayOption</span></code> - returns display option for sgroup (for S-groups of “SUP” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupDisplayOption</span></code> - accepts display option for sgroup (for S-groups of “SUP” type)</li>
+<li><code class="docutils literal"><span class="pre">getSGroupMultiplier</span></code> - returns multiplier value for sgroup (for S-groups of “MUL” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupMultiplier</span></code> - accepts multiplier value for sgroup (for S-groups of “MUL” type)</li>
+<li><code class="docutils literal"><span class="pre">setSGroupBrackets</span></code> - accepts bracket style and brackets coordinates for sgroup (for S-groups of “GEN”,”MUL” and “SRU” types)</li>
 </ul>
 <p><strong>Note</strong>: All properties and its values correspond to Molfile format.</p>
 <p>Python examples:</p>
@@ -1885,7 +1887,7 @@ molecule, and <code class="docutils literal"><span class="pre">IndigoInchi.getIn
 </div>
 <div class="section" id="standardize-of-molecule">
 <h3>Standardize of Molecule<a class="headerlink" href="#standardize-of-molecule" title="Permalink to this headline">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">IndigoObject.standardize</span></code> method can be used to the &#8220;standardizing&#8221;
+<p>The <code class="docutils literal"><span class="pre">IndigoObject.standardize</span></code> method can be used to the “standardizing”
 of the molecule or query (stereo, charges, geometry, valences, atoms and bonds properties)
 in accordance with requirements. The list of applied modifications is defined by
 options activated in Indigo (full list of available standardize options is described
@@ -2113,7 +2115,7 @@ be called after all the molecules has been written.</p>
 </div>
 <div class="section" id="closing-files">
 <h3>Closing Files<a class="headerlink" href="#closing-files" title="Permalink to this headline">¶</a></h3>
-<p>The file output stream is closed on the object&#8217;s destructor. However,
+<p>The file output stream is closed on the object’s destructor. However,
 you may need to close it explicitly. You can use the <code class="docutils literal"><span class="pre">close</span></code> method:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">();</span>
 </pre></div>
@@ -2134,14 +2136,14 @@ in <code class="docutils literal"><span class="pre">finally</span></code> block:
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>In C#, the &#8220;using&#8221; statement can make the job easier:</p>
+<p>In C#, the “using” statement can make the job easier:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">f</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">writeFile</span><span class="p">(</span><span class="s2">&quot;test.sdf&quot;</span><span class="p">))</span>
 <span class="p">{</span>
   <span class="n">f</span><span class="o">.</span><span class="n">sdfAppend</span><span class="p">(</span><span class="n">mol</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>In Python, the &#8220;with&#8221; syntax serves the same purpose:</p>
+<p>In Python, the “with” syntax serves the same purpose:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">indigo</span><span class="o">.</span><span class="n">writeFile</span><span class="p">(</span><span class="s2">&quot;test.sdf&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
   <span class="n">f</span><span class="o">.</span><span class="n">sdfAppend</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
 </pre></div>
@@ -2156,8 +2158,8 @@ and then append items to it (<code class="docutils literal"><span class="pre">In
 about header and footer — the saver will write them for you
 automatically.</p>
 <p>The <code class="docutils literal"><span class="pre">IndigoObject.createFileSaver</span></code> method accepts the output file name
-and a string with the desired format, which is &#8220;sdf&#8221;, &#8220;rdf&#8221;, &#8220;cml&#8221;, or
-&#8220;smi&#8221;.</p>
+and a string with the desired format, which is “sdf”, “rdf”, “cml”, or
+“smi”.</p>
 <p>Java:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">saver</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 <span class="k">try</span>
@@ -2245,15 +2247,15 @@ respectively.</p>
 <p>The <code class="docutils literal"><span class="pre">fingerprint</span></code> method accepts a string with a requested fingerprint
 type. The following fingerprint types are available:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">sim</span></code> — &#8220;Similarity fingerprint&#8221;, useful for calculating similarity
+<li><code class="docutils literal"><span class="pre">sim</span></code> — “Similarity fingerprint”, useful for calculating similarity
 measures (the default)</li>
-<li><code class="docutils literal"><span class="pre">sub</span></code> — &#8220;Substructure fingerprint&#8221;, useful for substructure
+<li><code class="docutils literal"><span class="pre">sub</span></code> — “Substructure fingerprint”, useful for substructure
 screening</li>
-<li><code class="docutils literal"><span class="pre">sub-res</span></code> — &#8220;Resonance substructure fingerprint&#8221;, useful for
+<li><code class="docutils literal"><span class="pre">sub-res</span></code> — “Resonance substructure fingerprint”, useful for
 resonance substructure screening</li>
-<li><code class="docutils literal"><span class="pre">sub-tau</span></code> — &#8220;Tautomer substructure fingerprint&#8221;, useful for
+<li><code class="docutils literal"><span class="pre">sub-tau</span></code> — “Tautomer substructure fingerprint”, useful for
 tautomer substructure screening</li>
-<li><code class="docutils literal"><span class="pre">full</span></code> — &#8220;Full fingerprint&#8221;, which has all the mentioned
+<li><code class="docutils literal"><span class="pre">full</span></code> — “Full fingerprint”, which has all the mentioned
 fingerprint types included</li>
 </ul>
 <p>The size of the fingerprint can be controlled via a number of
@@ -2280,7 +2282,7 @@ number of coincident nonzero bits in two fingerprints.</p>
 <div class="section" id="molecule-and-reaction-similarity">
 <h3>Molecule and Reaction Similarity<a class="headerlink" href="#molecule-and-reaction-similarity" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">Indigo.similarity</span></code> method accepts two molecules, two reactions,
-or two fingerprints. It also accepts a &#8220;metrics&#8221; string and returns a
+or two fingerprints. It also accepts a “metrics” string and returns a
 float value — the similarity measure between the two given items. There
 are three available metrics, which are calculated in the following way:</p>
 <ul class="simple">
@@ -2292,9 +2294,9 @@ are three available metrics, which are calculated in the following way:</p>
 </ul>
 <p>Where:</p>
 <ul class="simple">
-<li>&#8220;a&#8221; is the number of nonzero bits in the first fingerprint</li>
-<li>&#8220;b&#8221; is the number of nonzero bits in the second fingerprint</li>
-<li>&#8220;c&#8221; is the number of coincident bits in the two fingerprints</li>
+<li>“a” is the number of nonzero bits in the first fingerprint</li>
+<li>“b” is the number of nonzero bits in the second fingerprint</li>
+<li>“c” is the number of coincident bits in the two fingerprints</li>
 </ul>
 <p>Java and C#:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="kt">float</span> <span class="n">sim1</span> <span class="p">=</span> <span class="n">indigo</span><span class="p">.</span><span class="n">similarity</span><span class="p">(</span><span class="n">fp1</span><span class="p">,</span> <span class="n">fp2</span><span class="p">,</span> <span class="s">&quot;tanimoto&quot;</span><span class="p">);</span>
@@ -2308,7 +2310,7 @@ are three available metrics, which are calculated in the following way:</p>
 <div class="section" id="exact-match">
 <h3>Exact Match<a class="headerlink" href="#exact-match" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">Indigo.exactMatch</span></code> method accepts two molecules or reactions and
-returns a &#8220;mapping&#8221; object — the result of the exact match of two given
+returns a “mapping” object — the result of the exact match of two given
 molecules or reactions. If match is not possible, it returns <code class="docutils literal"><span class="pre">null</span></code>.
 If you are interested only in does the match exist or not, you can just
 check if the result of the method is <code class="docutils literal"><span class="pre">null</span></code>. Otherwise, please check
@@ -2360,8 +2362,8 @@ string, you can pass the following flags to the matching procedure:</p>
 <p>The flags should go in the parameters string separated by space. Each
 flag specifies a constraint for the matching procedure. The more flags
 you set, the more restrictive the matching is. You can write the minus
-sign before the flag to exclude it from the &#8216;ALL&#8217; flag. For example,
-&#8216;ALL -MAS&#8217; means that all the described features except the isotopes
+sign before the flag to exclude it from the ‘ALL’ flag. For example,
+‘ALL -MAS’ means that all the described features except the isotopes
 must match.</p>
 <p>The <code class="docutils literal"><span class="pre">TAU</span></code> flag stands for tautomer matching. It can not be combined
 with any other flags. You can see examples of exact matching, <a class="reference external" href="../../bingo/user-manual-oracle.html#affine-transformation-search">affine
@@ -2380,7 +2382,7 @@ optimal affine transformation (translation+rotation+scale) is applied to
 one of the molecules to make it as close as possible to the other
 molecule.</p>
 <p><strong>Note</strong>: Affine transformation matching is not possible when the
-molecule&#8217;s atoms do not have coordinates (e.g. the molecule was loaded
+molecule’s atoms do not have coordinates (e.g. the molecule was loaded
 from SMILES).</p>
 <p>Java and C#:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">match</span> <span class="p">=</span> <span class="n">indigo</span><span class="p">.</span><span class="n">exactMatch</span><span class="p">(</span><span class="n">mol1</span><span class="p">,</span> <span class="n">mol2</span><span class="p">,</span> <span class="s">&quot;ALL 0.1&quot;</span><span class="p">);</span>
@@ -2409,7 +2411,7 @@ from SMILES).</p>
 <div class="section" id="exact-matching-flags-for-reactions">
 <h4>Exact Matching Flags for Reactions<a class="headerlink" href="#exact-matching-flags-for-reactions" title="Permalink to this headline">¶</a></h4>
 <p>When calling the <code class="docutils literal"><span class="pre">Indigo.exactMatch</span></code> method for reactions, you can
-pass it the &#8220;ELE&#8221;, &#8220;MAS&#8221;, and &#8220;STE&#8221; flags, which have the same meaning
+pass it the “ELE”, “MAS”, and “STE” flags, which have the same meaning
 as in molecule exact matching. You can also pass two reaction-specific
 flags:</p>
 <table border="1" class="docutils">
@@ -2438,8 +2440,8 @@ reactions.</p>
 <div class="section" id="molecule-substructure-matching">
 <h3>Molecule Substructure Matching<a class="headerlink" href="#molecule-substructure-matching" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">Indigo.substructureMatcher</span></code> method accepts a molecule (but not a
-query molecule) and returns a &#8220;substructure matcher&#8221; object. The given
-molecule is going to be the &#8220;target&#8221; molecule for the substructure
+query molecule) and returns a “substructure matcher” object. The given
+molecule is going to be the “target” molecule for the substructure
 match.</p>
 <div class="section" id="molecule-substructure-matching-flags">
 <h4>Molecule Substructure Matching Flags<a class="headerlink" href="#molecule-substructure-matching-flags" title="Permalink to this headline">¶</a></h4>
@@ -2468,14 +2470,14 @@ page.</li>
 <h4>Methods of Substructure Matcher<a class="headerlink" href="#methods-of-substructure-matcher" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">IndigoObject.ignoreAtom</span></code> method accepts an atom of the target
-molecule and marks it as &#8220;ignored&#8221; for the substructure matcher. No
+molecule and marks it as “ignored” for the substructure matcher. No
 atom of any query will be mapped to this atom.</li>
 <li><code class="docutils literal"><span class="pre">IndigoObject.unignoreAtom</span></code> method cancels the effect of the
 <code class="docutils literal"><span class="pre">ignoreAtom</span></code> method for the given atom.</li>
 <li><code class="docutils literal"><span class="pre">IndigoObject.unignoreAllAtoms</span></code> method cancels the effect of
 previous <code class="docutils literal"><span class="pre">ignoreAtom</span></code> calls.</li>
 <li><code class="docutils literal"><span class="pre">IndigoObject.match</span></code> accepts a query molecule and returns a
-&#8220;mapping&#8221; object if the matching has succeeded. If multiple matches
+“mapping” object if the matching has succeeded. If multiple matches
 are possible, the first one is taken. If no match is possible, it
 returns <code class="docutils literal"><span class="pre">null</span></code>.</li>
 <li><code class="docutils literal"><span class="pre">IndigoObject.countMatches</span></code> accepts a query molecule and returns
@@ -2484,7 +2486,7 @@ the number or unique matches.</li>
 but also accepts an additional integer parameter for limiting the
 number of matches.</li>
 <li><code class="docutils literal"><span class="pre">IndigoObject.iterateMatches</span></code> accepts a query molecule and returns
-an iterator for unique matches (&#8220;mapping&#8221; objects).</li>
+an iterator for unique matches (“mapping” objects).</li>
 </ul>
 <p>Also, please take a look on some
 <a class="reference external" href="../options/substructure-matching-options.html">options</a> available for
@@ -2494,13 +2496,13 @@ substructure matchers.</p>
 <div class="section" id="reaction-substructure-matching">
 <h3>Reaction Substructure Matching<a class="headerlink" href="#reaction-substructure-matching" title="Permalink to this headline">¶</a></h3>
 <p>You can pass a reaction to the <code class="docutils literal"><span class="pre">Indigo.substructureMatcher</span></code> method to
-obtain a &#8220;reaction substructure matcher&#8221; object. It responds to the
+obtain a “reaction substructure matcher” object. It responds to the
 <code class="docutils literal"><span class="pre">IndigoObject.match</span></code> method similarly to the molecule matcher. This
-method returns a &#8220;reaction match&#8221; object, or <code class="docutils literal"><span class="pre">null</span></code> if the matching is
+method returns a “reaction match” object, or <code class="docutils literal"><span class="pre">null</span></code> if the matching is
 not possible.</p>
 <p>You can specify optional <code class="docutils literal"><span class="pre">DAYLIGHT-AAM</span></code> flag to the matcher. When this
 flag is present, the matching of the atom-atom mapping (reaction AAM) is
-following the Daylight&#8217;s rules for <a class="reference external" href="http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html">reaction
+following the Daylight’s rules for <a class="reference external" href="http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html">reaction
 SMARTS</a>.
 Otherwise, it follows ordinary rules that are normal for matching
 Rxnfiles.</p>
@@ -2533,7 +2535,7 @@ should not be called on them).</p>
 <div class="section" id="optimizing-the-substructure-query">
 <h3>Optimizing the Substructure Query<a class="headerlink" href="#optimizing-the-substructure-query" title="Permalink to this headline">¶</a></h3>
 <p>If you have a complex molecule or reaction SMARTS query, you can
-&#8220;optimize&#8221; it in-memory so that the matching performs faster.</p>
+“optimize” it in-memory so that the matching performs faster.</p>
 <p>Java and C#:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">query</span> <span class="p">=</span> <span class="n">indigo</span><span class="p">.</span><span class="n">loadSmarts</span><span class="p">(</span><span class="s">&quot;[$([a;r4,!R1&amp;r3])]1:[$([a;r4,!R1&amp;r3])]:[$([a;r4,!R1&amp;r3])]:[$([a;r4,!R1&amp;r3])]:1&quot;</span><span class="p">);</span>
 <span class="n">query</span><span class="p">.</span><span class="n">optimize</span><span class="p">();</span>
@@ -2542,9 +2544,9 @@ should not be called on them).</p>
 <p>Python: the same with the <code class="docutils literal"><span class="pre">IndigoObject</span></code> omitted.</p>
 </div>
 <div class="section" id="methods-of-mapping-object">
-<h3>Methods of &#8220;mapping&#8221; object<a class="headerlink" href="#methods-of-mapping-object" title="Permalink to this headline">¶</a></h3>
+<h3>Methods of “mapping” object<a class="headerlink" href="#methods-of-mapping-object" title="Permalink to this headline">¶</a></h3>
 <p>You can get the detailed information about the succeeded matching via
-the returned &#8220;mapping&#8221; <code class="docutils literal"><span class="pre">IndigoObject</span></code>. It responds to the following
+the returned “mapping” <code class="docutils literal"><span class="pre">IndigoObject</span></code>. It responds to the following
 method calls:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">IndigoObject.mapAtom</span></code> method accepts an atom of the query
@@ -2700,8 +2702,8 @@ only bonds and molecules respectively, and not their indices.</p>
 are considered tautomeric by he tautomer matcher. You can restrict
 the tautomer matching by enabling conditions for boundary atoms in
 tautomeric chains. Each rule consists of two conditions, for two
-boundary atoms of the chain. The rules are numbered (1,2,...), and
-the numbers can be used in matcher&#8217;s parameter string after the
+boundary atoms of the chain. The rules are numbered (1,2,…), and
+the numbers can be used in matcher’s parameter string after the
 <code class="docutils literal"><span class="pre">TAU</span></code> specifier (<code class="docutils literal"><span class="pre">TAU</span> <span class="pre">R1</span> <span class="pre">R2</span></code>). The more rules you specify, the
 more flexibility you receive in the search; <em>but</em> when you specify no
 rules at all (<code class="docutils literal"><span class="pre">TAU</span></code>), you get the most flexible search because no
@@ -2729,8 +2731,8 @@ one of N, O at the other end</li>
 There are no rules by default. The <code class="docutils literal"><span class="pre">Indigo.setTautomerRule</span></code> method
 accepts an ID number of the rule (must be from 1 to 32), and two strings
 (for two bound atoms of the chain), containing allowed elements are
-separated by commas. &#8216;1&#8217; at the beginning means an aromatic atom, and
-&#8216;0&#8217; means an aliphatic (non-aromatic) atom.</p>
+separated by commas. ‘1’ at the beginning means an aromatic atom, and
+‘0’ means an aliphatic (non-aromatic) atom.</p>
 <p>The three rules defined above can be set in the following way:</p>
 <p>Java and C#:</p>
 <div class="highlight-csharp"><div class="highlight"><pre><span></span><span class="n">indigo</span><span class="p">.</span><span class="n">setTautomerRule</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">&quot;N,O,P,S,As,Se,Sb,Te&quot;</span><span class="p">,</span> <span class="s">&quot;N,O,P,S,As,Se,Sb,Te&quot;</span><span class="p">);</span>
@@ -2756,7 +2758,7 @@ reaction to dismiss the highlighting on the whole molecule or reaction.
 You can check if object is highlighted using
 <code class="docutils literal"><span class="pre">IndigoObject.isHighlighted</span></code> method.</p>
 <p>The following example shows how to highlight the matched atoms and bonds
-on a substructure matcher&#8217;s target, along with explicit hydrogens
+on a substructure matcher’s target, along with explicit hydrogens
 attached to the matched atoms.</p>
 <p>Java:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">substructureMatcher</span><span class="o">(</span><span class="n">target</span><span class="o">);</span>
@@ -2907,7 +2909,7 @@ titles under (or above) the items.</p>
 specify it only for molecules, not for reactions. If this parameter is
 not <code class="docutils literal"><span class="pre">null</span></code>, it has to be an integer array whose number of elements is
 equal to the number of given molecules. Each element of this array is
-the index of the &#8220;reference atom&#8221; in the corresponding molecule. The
+the index of the “reference atom” in the corresponding molecule. The
 rendering is then done in such a way that the reference atoms are
 grid-aligned. You can see the examples of this at
 <a class="reference external" href="http://ctr.wikia.com/wiki/Align_the_depiction_using_a_fixed_substructure">CTR</a>.</p>
@@ -2941,8 +2943,8 @@ the approximate algorithm is 1000.</p>
 <p>Indigo searches MCS in terms of a largest induced molecule1 subgraph
 isomorphic to an induced molecule2 subgraph. Largest means that a result
 subgraph can not be extended by the adding a vertex (atom). E.g. there
-are three possible mcs for the molecules &#8216;NCOCCCS&#8217; and &#8216;NCCOCCS&#8217; which
-can not be extended: &#8216;CCOC&#8217;, &#8216;NC&#8217; and &#8216;CCS&#8217;. Indigo stores all the
+are three possible mcs for the molecules ‘NCOCCCS’ and ‘NCCOCCS’ which
+can not be extended: ‘CCOC’, ‘NC’ and ‘CCS’. Indigo stores all the
 intermediate subgraphs, which can be a result MCS. Thus, after a
 searching is finished, there is an array (all the solutions) of
 submolecules available. In the end, the result molecules array is sorted

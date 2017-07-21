@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Atom Coloring</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Atom Coloring"
+            //document.title = "Atom Coloring"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -376,7 +378,7 @@ Output:<div class="output highlight-default"><div class="highlight"><pre><span><
 <span class="n">Atom</span> <span class="mi">8</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.50</span>
 </pre></div>
 </div>
-<p>Let&#8217;s assign a color for each atom based on its activity: negative values are
+<p>Let’s assign a color for each atom based on its activity: negative values are
 colored from blue to black, and positive values are colored from black to red. Indigo
 Renderer interprets data s-groups with a specified name as a color for the atoms.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addColorSGroups</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">atom_values</span><span class="p">):</span>

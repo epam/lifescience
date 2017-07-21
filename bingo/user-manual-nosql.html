@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>User Manual: NoSQL</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "User Manual: NoSQL"
+            //document.title = "User Manual: NoSQL"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -382,12 +384,12 @@ To load and insert molecules to database you can do:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo_db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">mol1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Exception will be thrown if id &#8216;100&#8217; is already has been used.</p>
+<p>Exception will be thrown if id ‘100’ is already has been used.</p>
 <p>The following function will remove record from database:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo_db</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">id1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>To close database when you&#8217;ve done working with it call next function:</p>
+<p>To close database when you’ve done working with it call next function:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo_db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -454,9 +456,9 @@ To load and insert molecules to database you can do:</p>
 <li><code class="docutils literal"><span class="pre">bingo_db</span></code> is the current database object</li>
 <li><code class="docutils literal"><span class="pre">query</span></code> is the query molecule</li>
 <li><code class="docutils literal"><span class="pre">sim_type</span></code> is the string that defines similarity measure type:<ul>
-<li><code class="docutils literal"><span class="pre">'tanimoto'</span></code> - Tanimoto&#8217;s measure</li>
-<li><code class="docutils literal"><span class="pre">'tversky'</span></code> - Tversky&#8217;s measure</li>
-<li><code class="docutils literal"><span class="pre">'euclid'</span></code> - Euclid&#8217;s measure</li>
+<li><code class="docutils literal"><span class="pre">'tanimoto'</span></code> - Tanimoto’s measure</li>
+<li><code class="docutils literal"><span class="pre">'tversky'</span></code> - Tversky’s measure</li>
+<li><code class="docutils literal"><span class="pre">'euclid'</span></code> - Euclid’s measure</li>
 </ul>
 </li>
 </ul>
@@ -473,7 +475,7 @@ To load and insert molecules to database you can do:</p>
 <li><code class="docutils literal"><span class="pre">sim_matcher.getIndigoObject()</span></code> will return object that will contain result target molecule at each iteration</li>
 <li><code class="docutils literal"><span class="pre">sim_matcher.getCurrentId()</span></code> will return current result record id</li>
 <li><code class="docutils literal"><span class="pre">sim_matcher.getCurrentSimilarityValue()</span></code> will return similarity value of current result and query</li>
-<li><code class="docutils literal"><span class="pre">cur_mol.smiles()</span></code> is the Indigo&#8217;s function that return smiles string for an object</li>
+<li><code class="docutils literal"><span class="pre">cur_mol.smiles()</span></code> is the Indigo’s function that return smiles string for an object</li>
 </ul>
 </div>
 <div class="section" id="gross-formula-search">
@@ -526,19 +528,19 @@ To load and insert reactions to database you can do:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo_db</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">rxn1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Exception will be thrown if id &#8216;100&#8217; is already has been used.</p>
+<p>Exception will be thrown if id ‘100’ is already has been used.</p>
 <p>The following function will remove record from database:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo_db</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">id1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>To close database when you&#8217;ve done working with it call next function:</p>
+<p>To close database when you’ve done working with it call next function:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo_db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id3">
 <h3>Loading Index<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>Follow the steps described in &#8216;Molecules&#8217; section <a class="reference external" href="user-manual-nosql.html#loading-index">Loading Index</a></p>
+<p>Follow the steps described in ‘Molecules’ section <a class="reference external" href="user-manual-nosql.html#loading-index">Loading Index</a></p>
 </div>
 <div class="section" id="reaction-substructure-search">
 <h3>Reaction Substructure Search<a class="headerlink" href="#reaction-substructure-search" title="Permalink to this headline">¶</a></h3>
@@ -547,19 +549,19 @@ To load and insert reactions to database you can do:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadQueryMolecule</span><span class="p">(</span><span class="s1">&#39;CC&gt;&gt;CN&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And then follow the steps described in &#8216;Molecules&#8217; section <a class="reference external" href="user-manual-nosql.html#substructure-search">Substructure Search</a></p>
+<p>And then follow the steps described in ‘Molecules’ section <a class="reference external" href="user-manual-nosql.html#substructure-search">Substructure Search</a></p>
 </div>
 <div class="section" id="reaction-exact-search">
 <h3>Reaction Exact Search<a class="headerlink" href="#reaction-exact-search" title="Permalink to this headline">¶</a></h3>
-<p>Follow the steps described in &#8216;Molecules&#8217; section <a class="reference external" href="user-manual-nosql.html#exact-search">Exact Search</a></p>
+<p>Follow the steps described in ‘Molecules’ section <a class="reference external" href="user-manual-nosql.html#exact-search">Exact Search</a></p>
 </div>
 <div class="section" id="reaction-similarity-search">
 <h3>Reaction Similarity Search<a class="headerlink" href="#reaction-similarity-search" title="Permalink to this headline">¶</a></h3>
-<p>Follow the steps described in &#8216;Molecules&#8217; section <a class="reference external" href="user-manual-nosql.html#similarity-search">Similarity Search</a></p>
+<p>Follow the steps described in ‘Molecules’ section <a class="reference external" href="user-manual-nosql.html#similarity-search">Similarity Search</a></p>
 </div>
 <div class="section" id="reaction-gross-formula-search">
 <h3>Reaction Gross Formula Search<a class="headerlink" href="#reaction-gross-formula-search" title="Permalink to this headline">¶</a></h3>
-<p>Follow the steps described in &#8216;Molecules&#8217; section <a class="reference external" href="user-manual-nosql.html#gross-formula-search">Gross Formula Search</a></p>
+<p>Follow the steps described in ‘Molecules’ section <a class="reference external" href="user-manual-nosql.html#gross-formula-search">Gross Formula Search</a></p>
 </div>
 </div>
 <div class="section" id="remaining-results-estimation">

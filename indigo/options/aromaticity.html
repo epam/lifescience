@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Aromaticity options</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Aromaticity options"
+            //document.title = "Aromaticity options"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -389,7 +391,7 @@
 </tr>
 </tbody>
 </table>
-<p>Molfile format doesn&#8217;t store information about hydrogens in aromatic rings and this leads to a situation when two different (tautomers) structure has the same aromatization.</p>
+<p>Molfile format doesn’t store information about hydrogens in aromatic rings and this leads to a situation when two different (tautomers) structure has the same aromatization.</p>
 <a class="reference internal image-reference" href="../../_images/indigorenderer_92997ca46105f8d8f120747a8852eaa2a02fba521.svg"><img alt="../../_images/indigorenderer_92997ca46105f8d8f120747a8852eaa2a02fba521.svg" src="../../_images/indigorenderer_92997ca46105f8d8f120747a8852eaa2a02fba521.svg" /></a>
 <a class="reference internal image-reference" href="../../_images/indigorenderer_92997ca46105f8d8f120747a8852eaa2a02fba522.svg"><img alt="../../_images/indigorenderer_92997ca46105f8d8f120747a8852eaa2a02fba522.svg" src="../../_images/indigorenderer_92997ca46105f8d8f120747a8852eaa2a02fba522.svg" /></a>
 <div class="line"><br /></div>
@@ -403,11 +405,11 @@
 </pre></div>
 </div>
 <div class="line"><br /></div>
-<p>Let&#8217;s consider that we loaded a molecule (A) or (B) in an aromatic form from molfile. If explicit hydrogens are not saved into molfile then we get the following structure:</p>
+<p>Let’s consider that we loaded a molecule (A) or (B) in an aromatic form from molfile. If explicit hydrogens are not saved into molfile then we get the following structure:</p>
 <a class="reference internal image-reference" href="../../_images/indigorenderer_2d8db7fdcd7c9c858037d63ee71e35b7bcaa202a3.svg"><img alt="../../_images/indigorenderer_2d8db7fdcd7c9c858037d63ee71e35b7bcaa202a3.svg" src="../../_images/indigorenderer_2d8db7fdcd7c9c858037d63ee71e35b7bcaa202a3.svg" /></a>
 <div class="line"><br /></div>
 <p>Canonical SMILES computation throws an exception on such molecule because we cannot decided if it is (A) or (B).</p>
-<p>Dearomatization method by default doesn&#8217;t check uniqueness in terms of number of Hydrogens:</p>
+<p>Dearomatization method by default doesn’t check uniqueness in terms of number of Hydrogens:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">m3</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMoleculeFromFile</span><span class="p">(</span><span class="s1">&#39;data/ambiguous_arom3.mol&#39;</span><span class="p">)</span>
 <span class="n">m3</span><span class="o">.</span><span class="n">dearomatize</span><span class="p">()</span>
 

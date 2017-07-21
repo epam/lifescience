@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Concepts</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Concepts"
+            //document.title = "Concepts"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -293,7 +295,7 @@
 <li><a class="reference internal" href="#exact-matching">Exact Matching</a></li>
 <li><a class="reference internal" href="#molecule-similarity">Molecule Similarity</a></li>
 <li><a class="reference internal" href="#canonical-smiles">Canonical SMILES</a><ul>
-<li><a class="reference internal" href="#useless-stereocenters">&#8216;Useless&#8217; stereocenters</a></li>
+<li><a class="reference internal" href="#useless-stereocenters">‘Useless’ stereocenters</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#scaffold-detection">Scaffold Detection</a></li>
@@ -345,7 +347,7 @@ format are supported, including:</p>
 </ul>
 <p>The only features that are not supported are:</p>
 <ul class="simple">
-<li>&#8220;Up or unspecified&#8221;, &#8220;down or unspecified&#8221; notation (&#8220;/?&#8221;, &#8220;\?&#8221;)</li>
+<li>“Up or unspecified”, “down or unspecified” notation (“/?”, “\?”)</li>
 <li>Square-planar, trigonal-bipyramidal, and octahedral stereo
 configurations.</li>
 </ul>
@@ -361,9 +363,9 @@ format are supported, including:</p>
 </ul>
 <p>The only features that are not supported are:</p>
 <ul class="simple">
-<li>Constraint &#8220;h&#8221; (implicit hydrogen count). Hydrogens can be stored
+<li>Constraint “h” (implicit hydrogen count). Hydrogens can be stored
 implicitly or explicitly in the database, and this difference should
-not affect the search results. &#8220;H&#8221; (total hydrogen count) may be used
+not affect the search results. “H” (total hydrogen count) may be used
 instead</li>
 <li>All features of SMILES format that are not supported</li>
 </ul>
@@ -380,8 +382,8 @@ are supported:</p>
 <a class="reference external" href="http://www.jcheminf.com/content/3/1/1">CurlySMILES</a> format are
 supported:</p>
 <ul class="simple">
-<li>Simple polymers: {-}...{+n}</li>
-<li>Multiple groups: {-}...{+nn=5}</li>
+<li>Simple polymers: {-}…{+n}</li>
+<li>Multiple groups: {-}…{+nn=5}</li>
 </ul>
 </div>
 <div class="section" id="mdl-formats">
@@ -409,31 +411,31 @@ supported, including:</p>
 </div>
 <div class="section" id="molecules-and-query-molecules">
 <h2>Molecules and Query Molecules<a class="headerlink" href="#molecules-and-query-molecules" title="Permalink to this headline">¶</a></h2>
-<p>Indigo treats &#8220;real&#8221; molecules different from query molecules in certain
+<p>Indigo treats “real” molecules different from query molecules in certain
 ways.</p>
 <ul class="simple">
-<li>Only a query molecule can contain query features like &#8220;any&#8221; atoms,
+<li>Only a query molecule can contain query features like “any” atoms,
 atom lists, etc.</li>
 <li>Only a query molecule can contain R-Groups (although R-Sites can be
-present in &#8220;real&#8221; molecule too)</li>
+present in “real” molecule too)</li>
 <li>Only a query molecule can be matched as a substructure</li>
-<li>Only a &#8220;real&#8221; molecule can be matched against by the substructure
+<li>Only a “real” molecule can be matched against by the substructure
 matcher.</li>
-<li>Only &#8220;real&#8221; molecules can be subject to MCS/common scaffold
+<li>Only “real” molecules can be subject to MCS/common scaffold
 computation.</li>
-<li>Canonical SMILES can be calculated only on &#8220;real&#8221; molecules.</li>
+<li>Canonical SMILES can be calculated only on “real” molecules.</li>
 </ul>
-<p>Similar rules apply to &#8220;real&#8221; reactions and query reactions:</p>
+<p>Similar rules apply to “real” reactions and query reactions:</p>
 <ul class="simple">
 <li>Only a query reaction can be matched as a substructure in the
 reaction substructure matcher.</li>
-<li>Only a &#8220;real&#8221; reaction can be matched against by the reaction
+<li>Only a “real” reaction can be matched against by the reaction
 substructure matcher.</li>
 </ul>
 <p>There is never an ambiguity whether a particular object is a
 molecule/reaction or query molecule/reaction. While most input formats
 (Molfile/Rxnfile, SMILES) can store both types, different calls are
-provided for loading them as &#8220;real&#8221; or query objects. SMARTS strings
+provided for loading them as “real” or query objects. SMARTS strings
 always are loaded as query molecules, for obvious reasons.</p>
 </div>
 <div class="section" id="substructure-and-smarts-matching">
@@ -448,17 +450,17 @@ can find examples of substructure matches.</p>
 <p>While a lot of SMARTS notation is allowed when loading SMILES as a
 query, there are differences between SMARTS and query SMILES:</p>
 <ul class="simple">
-<li>SMARTS fragments $(...) are not allowed in query SMILES.</li>
-<li>Empty bond designator (like &#8216;CC&#8217; or &#8216;cc&#8217;) denotes &#8216;single or
-aromatic&#8217; bond in SMARTS. In query SMILES, it denotes aromatic bond,
+<li>SMARTS fragments $(…) are not allowed in query SMILES.</li>
+<li>Empty bond designator (like ‘CC’ or ‘cc’) denotes ‘single or
+aromatic’ bond in SMARTS. In query SMILES, it denotes aromatic bond,
 if it belongs to a ring and has both end atoms aromatic (lowercase);
 otherwise, it denotes a single bond.</li>
-<li>&#8216;C&#8217; within SMARTS means aliphatic carbon, while &#8216;C&#8217; within query
-SMILES means any carbon. The same applies to &#8216;B&#8217;, &#8216;N&#8217;, &#8216;O&#8217;, &#8216;S&#8217;, &#8216;P&#8217;.
-&#8216;C1~C~C~C~C~C~1&#8217; won&#8217;t match &#8216;c1ccccc1&#8217; as SMARTS, but it will do so
+<li>‘C’ within SMARTS means aliphatic carbon, while ‘C’ within query
+SMILES means any carbon. The same applies to ‘B’, ‘N’, ‘O’, ‘S’, ‘P’.
+‘C1~C~C~C~C~C~1’ won’t match ‘c1ccccc1’ as SMARTS, but it will do so
 as query SMILES.</li>
-<li>SMARTS queries are not fed to aromaticity matcher. &#8216;c1-c=c-c=c-c=1&#8217;
-won&#8217;t match &#8216;c1ccccc1&#8217; as SMARTS, but it will do so as query SMILES.</li>
+<li>SMARTS queries are not fed to aromaticity matcher. ‘c1-c=c-c=c-c=1’
+won’t match ‘c1ccccc1’ as SMARTS, but it will do so as query SMILES.</li>
 </ul>
 </div>
 </div>
@@ -487,7 +489,7 @@ explicit/implicit hydrogens). So, the equality of the canonical SMILES
 of two molecules guarantees that these molecules are the same, and vice
 versa.</p>
 <div class="section" id="useless-stereocenters">
-<h3>&#8216;Useless&#8217; stereocenters<a class="headerlink" href="#useless-stereocenters" title="Permalink to this headline">¶</a></h3>
+<h3>‘Useless’ stereocenters<a class="headerlink" href="#useless-stereocenters" title="Permalink to this headline">¶</a></h3>
 <p>Stereocenter is not considered useful when it does not provide any
 information for distinguishing stereoisomers. Such useless stereocenters
 are ignored in canonical SMILES generated by Indigo.</p>
@@ -541,7 +543,7 @@ MCS, it is possible to obtain all of them.</p>
 <p>With a collection of structures and a scaffold that is common for these
 structures, it is possible to perform the R-Group deconvolution (R-Group
 decomposition). The result of this procedure will be a scaffold with
-marked R-sites (R1, R2, ...), and the actual substituents for these
+marked R-sites (R1, R2, …), and the actual substituents for these
 R-sites for each of the input structures.</p>
 <p>Examples are available on a <a class="reference external" href="deco.html">separate page</a>.</p>
 </div>

@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Indigo KNIME Nodes 2.0</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../../../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Indigo KNIME Nodes 2.0"
+            //document.title = "Indigo KNIME Nodes 2.0"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -306,14 +308,14 @@
 <ul class="simple">
 <li>Now Indigo nodes use the concept of adapter cell allowing to store several representations of entity into one cell;</li>
 <li>As a result there is no need anymore to make user transform data from or to Indigo type to process input and get output. This is the reason why the nodes for transformation data are excluded. It means that the standard types (Mol, Smiles, Rxn, etc.) should be used as input and expected as output. Nodes changing input data use Indigo renderer by default;</li>
-<li>Settings from the deprecated transformation nodes (e.g. &#8220;Ignore stereochemistry errors&#8221;) moved into settings dialog for every nodes as this still makes sense;</li>
+<li>Settings from the deprecated transformation nodes (e.g. “Ignore stereochemistry errors”) moved into settings dialog for every nodes as this still makes sense;</li>
 <li>All the functional nodes are still available. But you can find that structure of nodes in Node repository had been changed.</li>
 </ul>
 <p>Beside this, six more functional nodes are available:</p>
-<ul>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt>Molecule Nodes category:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Formula filter</li>
 <li>Organic splitter</li>
 <li>Weight splitter</li>
@@ -323,7 +325,7 @@
 </li>
 <li><dl class="first docutils">
 <dt>Manipulators category:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Standardizer</li>
 </ul>
 </dd>
@@ -331,7 +333,7 @@
 </li>
 <li><dl class="first docutils">
 <dt>Properties:</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Canonical SMILES  (with new Reaction support)</li>
 <li>InChi</li>
 </ul>
@@ -339,8 +341,8 @@
 </dl>
 </li>
 </ul>
-<p>Descriptions for this nodes are in correspondent node&#8217;s descriptions.</p>
-<p><strong>NOTE:</strong> it&#8217;s important to note that the new version of nodes is incompatible with previous one. All the old nodes were marked as &#8216;deprecated&#8217; and are not supposed to be supported in KNIME 3.x and higher anymore.
+<p>Descriptions for this nodes are in correspondent node’s descriptions.</p>
+<p><strong>NOTE:</strong> it’s important to note that the new version of nodes is incompatible with previous one. All the old nodes were marked as ‘deprecated’ and are not supposed to be supported in KNIME 3.x and higher anymore.
 So, please, use Indigo 2 nodes to create new workflows working with KNIME 3.x (to be exact 3.1 and higher). Previous version of Indigo nodes is still available under KNIME 2.x.</p>
 <p>In the near future we plan to add more nodes based on Indigo toolkit .</p>
 <p>Hope all that modifications and additions will be useful and you will enjoy using it.  We will greatly appreciate any comments, thoughts, notes and proposals.</p>

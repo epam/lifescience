@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Grid rendering options</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Grid rendering options"
+            //document.title = "Grid rendering options"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -327,11 +329,11 @@
 </tr>
 <tr class="field-even field"><th class="field-name">default:</th><td class="field-body">none</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">description:</th><td class="field-body">The name of the molecule&#8217;s property that defines the title that is put under each molecule.</td>
+<tr class="field-odd field"><th class="field-name">description:</th><td class="field-body">The name of the molecule’s property that defines the title that is put under each molecule.</td>
 </tr>
 </tbody>
 </table>
-<p>If not defined, no titles are shown. The special value &#8220;^NAME&#8221; means to use the molecule&#8217;s name as its title.</p>
+<p>If not defined, no titles are shown. The special value “^NAME” means to use the molecule’s name as its title.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">array</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">createArray</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateSDFile</span><span class="p">(</span><span class="s1">&#39;data/pubchem-subset.sdf&#39;</span><span class="p">):</span>
     <span class="n">array</span><span class="o">.</span><span class="n">arrayAdd</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>

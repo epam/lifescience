@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Installation Manual: PostgreSQL</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Installation Manual: PostgreSQL"
+            //document.title = "Installation Manual: PostgreSQL"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -428,7 +430,7 @@ recommends to change kernel.shmmax and kernel.shmall</p>
 <div class="section" id="id1">
 <h3>All Systems<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Download and unzip the cartridge archive. The Bingo library is located
-in the &#8216;bin&#8217; directory (bingo_postgres.dll for WINDOWS, or
+in the ‘bin’ directory (bingo_postgres.dll for WINDOWS, or
 bingo_postgres.so for LINUX, or bingo_postgres.dylib for MacOSX). The
 Bingo library is built with specific PostgreSQL headers, so there is no
 need to run the building procedure. You can simply run the pre-generated
@@ -544,13 +546,13 @@ Parameters:
 <span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">bingo_install</span><span class="o">.</span><span class="n">sql</span>
 </pre></div>
 </div>
-<p>If you have copied the library to the directory &#8216;/home/myself/&#8217;:</p>
+<p>If you have copied the library to the directory ‘/home/myself/’:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">pg</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">libdir</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">myself</span>
 <span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">bingo_install</span><span class="o">.</span><span class="n">sql</span>
 </pre></div>
 </div>
 <p>If you have copied the library to the PostgreSQL package directory
-&#8216;/usr/lib/postgresql/9.0/lib/&#8217; and want to create another <code class="docutils literal"><span class="pre">bingo2</span></code>
+‘/usr/lib/postgresql/9.0/lib/’ and want to create another <code class="docutils literal"><span class="pre">bingo2</span></code>
 schema for storing the procedures :</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">pg</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">pglibdir</span> <span class="o">-</span><span class="n">schema</span> <span class="n">bingo2</span>
 <span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">bingo_install</span><span class="o">.</span><span class="n">sql</span>

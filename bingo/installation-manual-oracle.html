@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Installation Manual: Oracle</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Installation Manual: Oracle"
+            //document.title = "Installation Manual: Oracle"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -624,8 +626,8 @@ Parameters:
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <p>For the most simple installation, the defaults are taken:
-<code class="docutils literal"><span class="pre">$ORACLE_HOME/lib</span></code> directory for binary, &#8216;orcl&#8217; instance, &#8216;system&#8217; DBA
-account, and &#8216;bingo/bingo&#8217; pseudo-user.</p>
+<code class="docutils literal"><span class="pre">$ORACLE_HOME/lib</span></code> directory for binary, ‘orcl’ instance, ‘system’ DBA
+account, and ‘bingo/bingo’ pseudo-user.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
@@ -638,12 +640,12 @@ install the Bingo binary in your home directory:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">instance</span> <span class="n">xe</span>
 </pre></div>
 </div>
-<p>You can install Bingo to an Oracle user other than &#8216;bingo&#8217;:</p>
+<p>You can install Bingo to an Oracle user other than ‘bingo’:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">bingoname</span> <span class="n">bingo2</span>
 </pre></div>
 </div>
-<p>To run in the non-interactive mode, you must specify &#8216;-y&#8217; and
-&#8216;-dbapass&#8217;:</p>
+<p>To run in the non-interactive mode, you must specify ‘-y’ and
+‘-dbapass’:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">oracle</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">dbaname</span> <span class="n">system</span> <span class="o">-</span><span class="n">dbapass</span> <span class="n">admin</span> <span class="o">-</span><span class="n">y</span>
 </pre></div>
 </div>

@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Embedding the Viewer</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Embedding the Viewer"
+            //document.title = "Embedding the Viewer"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -309,7 +311,7 @@ thus being compatible with the most popular module loading schemes:</p>
 <a class="reference external" href="http://browserify.org/">Browserify</a>, and
 <a class="reference external" href="https://webpack.github.io/">Webpack</a>.</li>
 </ul>
-<p>Please note that Miew doesn&#8217;t work under
+<p>Please note that Miew doesn’t work under
 <a class="reference external" href="https://nodejs.org/">Node.js</a> directly since the major viewer
 requirement is WebGL rendering. However, it still can be installed via
 <a class="reference external" href="https://www.npmjs.com/">NPM</a> and <code class="docutils literal"><span class="pre">require</span></code>-ed in your browserify

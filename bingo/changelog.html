@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Bingo Changelog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Bingo Changelog"
+            //document.title = "Bingo Changelog"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -342,7 +344,7 @@ molecules. Also this change makes substructure search more efficient
 in case of rare atoms in a query.</li>
 <li>Timeout parameter for exact search method for a single structure.
 Default value is 1 min.</li>
-<li>Smiles saver doesn&#8217;t throw exception about implicit hydrogens if they
+<li>Smiles saver doesn’t throw exception about implicit hydrogens if they
 are not saving in SMILES</li>
 </ul>
 <p>Bingo PostgreSQL-specific changes:</p>
@@ -399,18 +401,18 @@ syntax:</p>
 fingerprints. The options are the same as we have for the
 IndigoObject.fingerprint method in Indigo:</p>
 </li>
-<li><p class="first">sim - &#8220;Similarity fingerprint&#8221;, useful for calculating similarity
+<li><p class="first">sim - “Similarity fingerprint”, useful for calculating similarity
 measures (the default)</p>
 </li>
-<li><p class="first">sub - &#8220;Substructure fingerprint&#8221;, useful for substructure screening</p>
+<li><p class="first">sub - “Substructure fingerprint”, useful for substructure screening</p>
 </li>
-<li><p class="first">sub-res - &#8220;Resonance substructure fingerprint&#8221;, useful for resonance
+<li><p class="first">sub-res - “Resonance substructure fingerprint”, useful for resonance
 substructure screening</p>
 </li>
-<li><p class="first">sub-tau - &#8220;Tautomer substructure fingerprint&#8221;, useful for tautomer
+<li><p class="first">sub-tau - “Tautomer substructure fingerprint”, useful for tautomer
 substructure screening</p>
 </li>
-<li><p class="first">full - &#8220;Full fingerprint&#8221;, which has all the mentioned fingerprint
+<li><p class="first">full - “Full fingerprint”, which has all the mentioned fingerprint
 types included</p>
 </li>
 </ul>

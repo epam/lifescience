@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>User Manual: PostgreSQL</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "User Manual: PostgreSQL"
+            //document.title = "User Manual: PostgreSQL"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -788,7 +790,7 @@ select bingo.ImportSDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$sdf_id $id[, 
 <li><code class="docutils literal"><span class="pre">$id</span></code> is another column of the table, containing unique integer
 identifiers, which are read from <code class="docutils literal"><span class="pre">$sdf_id</span></code> field of the SDF file.</li>
 <li><code class="docutils literal"><span class="pre">$other_columns</span></code> is the comma-separated list of space-separated
-&#8216;property-column&#8217; pairs that are to be imported. Each given SDF
+‘property-column’ pairs that are to be imported. Each given SDF
 property is mapped to the given table column. You can specify an
 empty string if there are no properties to import.</li>
 <li>$filename is the location of the resulting file on the <em>server
@@ -839,7 +841,7 @@ select bingo.ExportSDF (&#39;$table&#39;, &#39;$column&#39;, &#39;$id[, $other_c
 <li><code class="docutils literal"><span class="pre">$id</span></code> is another column of the table, containing unique integer
 identifiers, which are written to <code class="docutils literal"><span class="pre">$id</span></code> field of the SDF file.</li>
 <li><code class="docutils literal"><span class="pre">$other_columns</span></code> is the comma-separated list of space-separated
-&#8216;property-column&#8217; pairs that are to be imported. Each given SDF
+‘property-column’ pairs that are to be imported. Each given SDF
 property is mapped to the given table column. You can specify an
 empty string if there are no properties to export.</li>
 <li>$filename is the location of the resulting file on the <em>server
@@ -878,7 +880,7 @@ Molfile, Rxnfile, or SMILES string.</p>
 <h3>Calculating Molecule Properties<a class="headerlink" href="#calculating-molecule-properties" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">bingo.getMass</span></code> function returns the molecular weight of the given
 molecule, represented as a Molfile or SMILES string. It has an
-additional parameter which defines the &#8216;kind&#8217; of the resulting molecular
+additional parameter which defines the ‘kind’ of the resulting molecular
 mass value.</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">Bingo.getMass($molecule,</span> <span class="pre">'</span></code> is a short for

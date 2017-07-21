@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Parso Java library</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Parso Java library"
+            //document.title = "Parso Java library"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -394,11 +396,11 @@ SasFileReader constructor:</p>
 <span class="n">csvDataWriter</span><span class="o">.</span><span class="na">writeColumnNames</span><span class="o">(</span><span class="n">sasFileReader</span><span class="o">.</span><span class="na">getColumns</span><span class="o">());</span>
 </pre></div>
 </div>
-<p>To write all rows at once to the &#8216;writer&#8217; variable:</p>
+<p>To write all rows at once to the ‘writer’ variable:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">csvDataWriter</span><span class="o">.</span><span class="na">writeRowsArray</span><span class="o">(</span><span class="n">sasFileReader</span><span class="o">.</span><span class="na">getColumns</span><span class="o">(),</span> <span class="n">sasFileReader</span><span class="o">.</span><span class="na">readAll</span><span class="o">());</span>
 </pre></div>
 </div>
-<p>To write rows one by one to the &#8216;writer&#8217; variable:</p>
+<p>To write rows one by one to the ‘writer’ variable:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">csvDataWriter</span><span class="o">.</span><span class="na">writeRow</span><span class="o">(</span><span class="n">sasFileReader</span><span class="o">.</span><span class="na">getColumns</span><span class="o">(),</span> <span class="n">sasFileReader</span><span class="o">.</span><span class="na">readNext</span><span class="o">());</span>
 </pre></div>
 </div>

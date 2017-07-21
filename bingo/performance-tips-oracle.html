@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Performance Tips: Oracle</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Performance Tips: Oracle"
+            //document.title = "Performance Tips: Oracle"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -332,8 +334,8 @@ manual</a> for details.</li>
 <li>While running search queries, try not to close your SQL session until
 you really need to close it. See the note in the <a class="reference external" href="user-manual-oracle.html#queries">user
 manual</a> for details.</li>
-<li>Please increase Oracle&#8217;s “database buffers” parameter as much as you
-can, given the extent of server&#8217;s memory. This step may require
+<li>Please increase Oracle’s “database buffers” parameter as much as you
+can, given the extent of server’s memory. This step may require
 activation of <a class="reference external" href="http://download.oracle.com/docs/cd/B19306_01/server.102/b14220/memory.htm">manual memory
 management</a>
 in Oracle.</li>

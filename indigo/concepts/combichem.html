@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Reaction Enumeration Examples</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Reaction Enumeration Examples"
+            //document.title = "Reaction Enumeration Examples"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -461,10 +463,10 @@ existing monomers or produced products can take place in the reaction.</p>
 <div class="section" id="generation-modes">
 <h2>Generation Modes<a class="headerlink" href="#generation-modes" title="Permalink to this headline">¶</a></h2>
 <p>Legio supports two generation modes for multistep reactions. In the
-&#8220;grid mode&#8221;, only one monomer from each group can react. This can be
+“grid mode”, only one monomer from each group can react. This can be
 represented as a matrix where the columns correspond to the first group
 and the rows correspond to the second group. The reaction is performed
-in each cell. In the &#8220;one tube&#8221; mode, all of the monomers are in the
+in each cell. In the “one tube” mode, all of the monomers are in the
 same tube.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -509,7 +511,7 @@ same tube.</p>
 </tr>
 </tbody>
 </table>
-<p>When the &#8220;grid mode&#8221; is on, each product can react with monomers from
+<p>When the “grid mode” is on, each product can react with monomers from
 the same cell and with other products, formed earlier in this cell. For
 example:</p>
 <table border="1" class="docutils">
@@ -526,7 +528,7 @@ example:</p>
 </tr>
 </tbody>
 </table>
-<p>When the &#8220;one tube&#8221; mode is active, all of the products and monomers are
+<p>When the “one tube” mode is active, all of the products and monomers are
 contained in one tube and can react together. Legio generates the
 following new products:</p>
 <table border="1" class="docutils">

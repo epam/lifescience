@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>Installation Manual: SQL Server</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "Installation Manual: SQL Server"
+            //document.title = "Installation Manual: SQL Server"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -381,7 +383,7 @@ commands:</p>
 <span class="n">sp_addserver</span> <span class="o">&lt;</span><span class="n">valid</span> <span class="n">server</span> <span class="n">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="s1">&#39;local&#39;</span>
 </pre></div>
 </div>
-<p>&#8216;SQL Server Browser&#8217; service should be started for accepting connections
+<p>‘SQL Server Browser’ service should be started for accepting connections
 that are created during the Bingo indexing operation. If this service is
 not started, then you might get the error during index creation
 indicating that the connection cannot be established.</p>
@@ -467,7 +469,7 @@ restart the database prior to the installation.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">sqlserver</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">bat</span> <span class="o">-</span><span class="n">database</span> <span class="n">mydb</span>
 </pre></div>
 </div>
-<p>If you use an SQL Server user account for the DBA user (normally &#8216;sa&#8217;),
+<p>If you use an SQL Server user account for the DBA user (normally ‘sa’),
 you have to specify it with the <code class="docutils literal"><span class="pre">-dbaname</span></code> option:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bingo</span><span class="o">-</span><span class="n">sqlserver</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">bat</span> <span class="o">-</span><span class="n">database</span> <span class="n">mydb</span> <span class="o">-</span><span class="n">dbaname</span> <span class="n">sa</span>
 </pre></div>

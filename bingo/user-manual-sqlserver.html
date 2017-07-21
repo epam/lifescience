@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>User Manual: SQL Server</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
 
     <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
     
@@ -57,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "User Manual: SQL Server"
+            //document.title = "User Manual: SQL Server"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -371,7 +373,7 @@ Oracle</a> for details.</p>
 </div>
 <div class="section" id="storage">
 <h3>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h3>
-<p>Suppose you have a table with a <code class="docutils literal"><span class="pre">nvarchar</span></code>, <code class="docutils literal"><span class="pre">varchar</span></code> or &#8216;varbinary&#8217;
+<p>Suppose you have a table with a <code class="docutils literal"><span class="pre">nvarchar</span></code>, <code class="docutils literal"><span class="pre">varchar</span></code> or ‘varbinary’
 column containing a Molfiles/Rxnfiles or SMILES with molecules or
 reactions. In order to make Bingo work with your table, you would need a
 column in your table containing a unique integer number for each
@@ -843,7 +845,7 @@ exec bingo.ImportSDF &#39;$table&#39;, &#39;$column&#39;, &#39;$filename.sdf[.gz
 <li><code class="docutils literal"><span class="pre">$id</span></code> is another column of the table, containing unique integer
 identifiers, which are read from <code class="docutils literal"><span class="pre">$sdf_id</span></code> field of the SDF file.</li>
 <li><code class="docutils literal"><span class="pre">$other_columns</span></code> is the comma-separated list of space-separated
-&#8216;property-column&#8217; pairs that are to be imported. Each given SDF
+‘property-column’ pairs that are to be imported. Each given SDF
 property is mapped to the given table column. You can specify an
 empty string if there are no properties to import.</li>
 <li>$filename is the location of the resulting file on the <em>server
@@ -910,7 +912,7 @@ Molfile, Rxnfile, or SMILES string.</p>
 <h3>Calculating Molecule Properties<a class="headerlink" href="#calculating-molecule-properties" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">bingo.Mass</span></code> function returns the molecular weight of the given
 molecule, represented as a Molfile or SMILES string. It has an
-additional parameter which defines the &#8216;kind&#8217; of the resulting molecular
+additional parameter which defines the ‘kind’ of the resulting molecular
 mass value.</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">Bingo.Mass($molecule,</span> <span class="pre">'</span></code> is a short for
@@ -996,7 +998,7 @@ create tables in the database. Every procedure and every function of
 Bingo has has both current user permissions and <strong>bingo</strong> user
 permissions during execution.</li>
 <li><strong>bingo_reader</strong> user role. This user role has permissions to
-execute Bingo functions because functions don&#8217;t have side effects.</li>
+execute Bingo functions because functions don’t have side effects.</li>
 <li><strong>bingo_operator</strong> user role. This user role has permissions to
 execute public Bingo procedures and functions. <strong>bingo_operator</strong>
 also inherits <strong>bingo_reader</strong> permissions.</li>
