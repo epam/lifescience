@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -6,14 +6,14 @@ RUN apt-get update -qq
 
 RUN apt-get install -y --no-install-recommends \
     build-essential libfreetype6-dev libfontconfig1-dev cmake\
-    curl ca-certificates libssl-dev git unzip zip
-    
+    curl ca-certificates libssl-dev git unzip zip wget
 
 RUN apt-get install -y --no-install-recommends \
-	python-sphinx
+	python-pip python-setuptools
 
-RUN apt-get install -y --no-install-recommends \
-	wget
+
+RUN pip install Sphinx==1.6.3
+
 
 # Build indigo
 RUN mkdir -p /opt/indigo
