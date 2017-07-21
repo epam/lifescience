@@ -1,8 +1,13 @@
 <head>
     <meta charset="utf-8"/>
-    <title></title>
+    <title>{{ title }}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    {% if title == "Indigo Toolkit" %}
+    <meta name="description" content="Indigo is a universal molecular toolkit that can be used for molecular fingerprinting, substructure search, and molecular visualization. Also capable of performing a molecular similarity search, it is 100% open source and provides enhanced stereochemistry support for end users, as well as a documented API for developers"/>
+    <meta name="keywords" content="Indigo, molecular toolkit, molecular fingerprint, substructure search, molecular visualization, molecular similarity search, enhanced stereochemistry"/>
+    {% endif %}
 
     <link rel="stylesheet" href="{{ pathto('_static/fonts/font-awesome/css/font-awesome.min.css', 1) }}"/>
     
@@ -63,7 +68,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            document.title = "{{ title }}"
+            //document.title = "{{ title }}"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
