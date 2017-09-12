@@ -8,7 +8,8 @@ thus being compatible with the most popular module loading schemes:
 - `Require.js <http://requirejs.org/>`__ AMD module ``Miew``,
 - CommonJS module for `Node.js <https://nodejs.org/>`__,
   `Browserify <http://browserify.org/>`__, and
-  `Webpack <https://webpack.github.io/>`__.
+  `Webpack <https://webpack.js.org/>`__,
+- ES2015 module for `Rollup <https://rollupjs.org/>`__.
 
 Please note that Miew doesn't work under
 `Node.js <https://nodejs.org/>`__ directly since the major viewer
@@ -30,6 +31,7 @@ Browser Globals
       <title>Miew via Global</title>
       
       <link rel="stylesheet" href="Miew.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
       <script src="Miew.min.js"></script>
     </head>
     <body>
@@ -64,7 +66,8 @@ Require.js Module
       <title>Miew via Require.js</title>
 
       <link rel="stylesheet" href="Miew.min.css">
-      <script src="require.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     </head>
     <body>
       <div class="miew-container" style="width:640px; height:480px"></div>
@@ -108,6 +111,7 @@ Browserify
       <title>Miew via Browserify</title>
 
       <link rel="stylesheet" href="Miew.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
       <script src="bundle.js"></script>
     </head>
     <body>
@@ -145,6 +149,7 @@ Webpack
       <meta charset="UTF-8">
       <title>Miew via Webpack</title>
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
       <script src="bundle.js"></script>
     </head>
     <body>
@@ -156,7 +161,7 @@ Webpack
 
 .. code-block:: js
 
-    require('miew/dist/Miew.min.css');
+    require('Miew.min.css');
 
     var Miew = require('miew');
 
