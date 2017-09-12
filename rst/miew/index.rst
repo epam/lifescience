@@ -50,7 +50,7 @@ standalone HTML5 web application or integrates as a component into your web page
 The `latest versions <https://browsehappy.com/>`__ of WebGL-enabled desktop (Chrome, Firefox, Safari, Opera, Edge, IE11)
 and mobile (iOS, Android) browsers are supported.
 
-Miew is going to be a `free and open source <#license>`__ software.
+Miew is a `free and open source <#license>`__ software.
 Try the `Miew demo <http://miew.opensource.epam.com/>`__ online.
 
 
@@ -201,9 +201,9 @@ Even a web browser application can take advantage of AR/VR algorithms.
 Source Code
 -----------
 
-Miew source code, documentation, and guides on how to get started with Miew are going to be available at GitHub.
+Miew source code, documentation, and guides on how to get started with Miew are available at `GitHub <https://github.com/epam/miew>`__.
 
-Until then, you may preview selected parts of the documentation here:
+You may preview selected parts of the documentation here:
 
 - `Embedding the Viewer <embed.html>`__
 - `Selection Language <selectors.html>`__
@@ -212,7 +212,7 @@ Until then, you may preview selected parts of the documentation here:
 License
 -------
 
-`MIT License <https://opensource.org/licenses/MIT>`__ is pending.
+`MIT License <https://opensource.org/licenses/MIT>`__
 
 Copyright (c) 2015-2017 EPAM Systems, Inc.
 
@@ -239,4 +239,4 @@ Feedback
 --------
 
 Do you need assistance with our tools? Do you need a feature? Do you want to send a patch to us? Did you find a bug?
-Report issues at GitHub when it is available or contact us directly at miew@epam.com
+`Report issues at GitHub <https://github.com/epam/miew/issues>`__ or contact us directly at miew@epam.com

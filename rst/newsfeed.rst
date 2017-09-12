@@ -8,6 +8,20 @@ News
     release-notes/index
 
 
+Miew is available on GitHub
+---------------------------
+
+*6 Sep 2017*
+
+Finally we moved our 3D Molecular Viewer source code development on GitHub.
+
+|miew_github_url|
+
+.. |miew_github_url| raw:: html
+
+   <a href="https://github.com/epam/miew" target="_blank">https://github.com/epam/miew</a>
+
+
 Indigo 1.3.0 beta released
 --------------------------
 
