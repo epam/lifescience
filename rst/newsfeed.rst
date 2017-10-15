@@ -8,6 +8,22 @@ News
     release-notes/index
 
 
+Ketcher is available on GitHub with a new License
+-------------------------------------------------
+
+*27 Sep 2017*
+
+We are glad to announce that Ketcher is available on GitHub via Apache License v2.
+
+* |ketcher_github_notes|
+
+
+.. |ketcher_github_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-github.html" target="_blank">Release Notes</a>
+
+
+
 Miew is available on GitHub
 ---------------------------
 
