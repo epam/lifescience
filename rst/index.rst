@@ -5,6 +5,7 @@ Life Sciences Open Source
     :hidden:
 
     Bingo <bingo/index>
+    Web3D DICOM Viewer <mri/index>
     Miew <miew/index>
     NGB <ngb/index>
     Indigo Toolkit <indigo/index>
@@ -16,6 +17,17 @@ Life Sciences Open Source
 
 Bioinformatics
 --------------
+
+-  `Web3D DICOM Viewer <mri/>`__ High performance web tool for advanced visualization and manipulation of medical images: MRI, CT, etc. |image10|
+
+   -  Web3D DICOM Viewer creates a 3D model of a body part based on the set
+      of plane images. It provides a crucial means for performing visual
+      analysis of a patient’s anatomy for diagnosis, preoperative planning,
+      and surgical training.
+   -  Unique rendering algorithms and GPU processing approach provide high
+      performance, smooth interaction and ability to convenient working
+      regardless location and time.
+   -  Try the `Web3D DICOM Viewer demo <http://epa.ms/mri>`__ online.
 
 -  `Miew – 3D Molecular Viewer <miew/>`__ High performance web tool for advanced visualization and manipulation of molecular structures |image9|
 
@@ -123,5 +135,6 @@ Software development
 .. |image7| image:: themes/lifescience-theme/static/images/pics/JDI.jpg
 .. |image8| image:: themes/lifescience-theme/static/images/pics/NGB3.JPG
 .. |image9| image:: themes/lifescience-theme/static/images/pics/miew.jpg
+.. |image10| image:: themes/lifescience-theme/static/images/pics/mri.jpg
 
 
