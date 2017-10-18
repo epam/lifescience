@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Web3D DICOM Viewer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
+
+    <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
+    
+    <link rel="icon" type="image/png" href="../_static/images/icons/favicon-16.png">
+
+    <!-- jQuery Core -->
+    <script src="../_static/js/lib/jquery-1.12.0.min.js"></script>
+
+    <!--Sphinx files-->
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    './',
+            VERSION:     '0.3.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+
+    
+
+    <!-- Bootstrap Core -->
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css"/>
+    <script src="../_static/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- EPAM UUI JavaScript Core -->
+    <script src="../_static/js/uui-core.min.js" type="text/javascript"></script>
+    <script src="../_static/js/uui-global-search.min.js" type="text/javascript"></script>
+
+    <!-- EPAM UUI Styles Core -->
+    <link rel="stylesheet" href="../_static/css/uui-styles.css"/>
+
+    <!-- Scroll for UUI Sidebar -->
+    <link rel="stylesheet" href="../_static/css/lib/jquery.mCustomScrollbar.min.css"/>
+    <script src="../_static/js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Handlebars -->
+    <script src="../_static/js/handlebars.js"></script>
+
+    <!-- Custom sidenav -->
+    <script src="../_static/js/custom-sidenav.js"></script>
+
+    <!-- Pygments -->
+    <link rel="stylesheet" href="../_static/css/pygments.css"/>
+
+    
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            //document.title = "Web3D DICOM Viewer"
+            UUI.Navigation.init();
+            UUI.Global_Search.init();
+
+            $('.news').height($('#main-tiles').height())
+        });
+    </script>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+
+        <header>
+    <div class="uui-header">
+        <nav>
+            <!--Responsive html-layout-->
+            <div class="uui-responsive-header">
+                <div class="responsive-header">
+                    <div class="responsive-toggle-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="responsive-hide-menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="../index.html" class="responsive-brand-logo">
+                        <span class="arrow fa fa-angle-left"></span>
+                        <span class="logo">
+                        <img src="../_static/images/Logo_Epam_Color.svg" alt=""/>
+                    </span>
+                        <span class="title">Life Sciences</span>
+                    </a>
+                    <ul class="responsive-header-tools nav navbar-nav">
+                        <li class="responsive-header-icon search-icon">
+                            <a href="#" onclick="return false">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="responsive-menu">
+                    <div class="menu-wrapper">
+                        <div class="menu-scroll">
+                            <ul class="nav navbar-nav">
+                                <li class="sub-menu active">
+                                    <a href="../index.html">
+                                        <span>Products</span>
+                                        <div class="arrow fa fa-angle-right"></div>
+                                    </a>
+                                    
+
+<ul class="sub">
+<li class="sub-menu"><a class="reference internal" href="../bingo/index.html">Bingo<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-oracle.html">Bingo Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-nosql.html">Bingo NoSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/bingo.html">Downloads</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Web3D DICOM Viewer<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="papers.html">Research and Development</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../miew/index.html">Miew<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../miew/embed.html">Embedding the Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miew/selectors.html">Selection Language</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../ngb/index.html">NGB</a></li>
+<li class="sub-menu"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../indigo/api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/api/reference.html">API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/utilities.html">Indigo Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/indigo/index.html">Downloads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/build.html">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/installation.html">SDK Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/options/index.html">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/examples/index.html">Examples</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../ketcher/index.html">Ketcher<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/developers-manual.html">Developers Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/help.html">Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/demo.html">Ketcher 2.0 Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ketcher.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/changelog.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/indigo/eln.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../imago/index.html">Imago OCR<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../imago/examples.html">Features and Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/report.html">Comparison Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/imago-gui.html">Imago OCR Visual Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/imago_console.html">Imago Console Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/c.html">C Library Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/java.html">Java Bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/dependencies.html">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/changelog.html">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/imago.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../parso.html">Parso<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../parso/changelog.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/parso.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+</ul>
+
+                                </li>
+                                <li><a href="../resources.html"><span>Resources</span></a></li>
+                                <li><a href="../download/index.html"><span>Downloads</span></a></li>
+                                <li><a href="../contact.html"><span>Contact Info</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-global-search">
+                    <div class="search-header">
+                        <div class="header-wrapper">
+                            <div class="search-field">
+                                <label></label>
+                                <form action="../search.html" method="get">
+    <input type="search" name="q" class="uui-search" placeholder="Search"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+</form>
+                            </div>
+                            <div class="hide-search">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="header-container">
+                <a href="../index.html" class="brand-logo">
+                    <span class="logo">
+                        <img src="../_static/images/Logo_Epam_Color.svg" alt=""/>
+                    </span>
+                    <span class="title">
+                      Life Sciences Open Source
+                    </span>
+                </a>
+                <ul class="uui-navigation nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Products</a>
+                        
+
+<div class="dropdown-menu" role="menu">
+    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="../bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="../bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="../download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="../indigo/api/index.html">API</a></li><li><a class="reference internal" href="../indigo/api/reference.html">API Reference</a></li><li><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a></li><li><a class="reference internal" href="../indigo/utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="../download/indigo/index.html">Downloads</a></li><li><a class="reference internal" href="../indigo/build.html">Build</a></li><li><a class="reference internal" href="../indigo/installation.html">SDK Installation</a></li><li><a class="reference internal" href="../indigo/options/index.html">Options</a></li><li><a class="reference internal" href="../indigo/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="../indigo/examples/index.html">Examples</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="../ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="../ketcher/help.html">Help</a></li><li><a class="reference internal" href="../ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="../download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="../indigo/eln/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../download/indigo/eln.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="../imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="../imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="../imago/imago-gui.html">Imago OCR Visual Tool</a></li><li><a class="reference internal" href="../imago/imago_console.html">Imago Console Application</a></li><li><a class="reference internal" href="../imago/c.html">C Library Reference</a></li><li><a class="reference internal" href="../imago/java.html">Java Bindings</a></li><li><a class="reference internal" href="../imago/dependencies.html">Dependencies</a></li><li><a class="reference internal" href="../imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="../download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="#">Web3D DICOM Viewer &raquo;</a></span><ul><li><a class="reference internal" href="papers.html">Research and Development</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../miew/index.html">Miew &raquo;</a></span><ul><li><a class="reference internal" href="../miew/embed.html">Embedding the Viewer</a></li><li><a class="reference internal" href="../miew/selectors.html">Selection Language</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../ngb/index.html">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="../parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
+</div>
+                    </li>
+                    <li><a href="../resources.html"><span>Resources</span></a></li>
+                    <li><a href="../download/index.html"><span>Downloads</span></a></li>
+                    <li><a href="../contact.html"><span>Contact Info</span></a></li>
+                </ul>
+                <ul class="uui-header-tools nav navbar-nav">
+                    <li class="uui-global-search">
+                        <div class="search-field">
+                            <label></label>
+                            <form action="../search.html" method="get">
+    <input type="search" name="q" class="uui-search" placeholder="Search"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+</form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20662471-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</header>
+
+        <div class="uui-main-container">
+            <main>
+                
+                <section class="uui-breadcrumbs-container">
+                    <div class="container">
+                        <div class="row">
+                            <ol class="uui-breadcrumbs">
+                                <li><a href="../index.html">Home</a></li>
+                                
+                                <li class="active"><a href="#">Web3D DICOM Viewer</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                <section class="promo-section">
+                    <div class="container">
+                        <div class="row">
+                            
+                                
+                                <div class="col-xs-12 col-md-3" role="complementary">
+                                    <div class="sidenav hidden-print hidden-xs hidden-sm affix-top" data-spy="affix" data-offset-top="0"
+     data-offset-bottom="0">
+    <section class="uui-accordion" id="accordion1">
+
+        <!-- Filled in static/js/custom-sidenav.js -->
+        <div id="local-toc" style="display: none;"><ul>
+<li><a class="reference internal" href="#">Web3D DICOM Viewer</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#key-features">Key Features</a></li>
+<li><a class="reference internal" href="#fast-and-comfortable">Fast and Comfortable</a></li>
+<li><a class="reference internal" href="#simple-user-interface">Simple User Interface</a></li>
+<li><a class="reference internal" href="#d-visualization">3D Visualization</a><ul>
+<li><a class="reference internal" href="#isosurface-visualization">Isosurface visualization</a></li>
+<li><a class="reference internal" href="#volume-visualization">Volume visualization</a></li>
+<li><a class="reference internal" href="#max-intensity-projection-mip">Max Intensity Projection (MIP)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1">2D Visualization</a></li>
+<li><a class="reference internal" href="#dicom-tags">DICOM Tags</a></li>
+<li><a class="reference internal" href="#try-in-one-click">Try in One Click</a></li>
+<li><a class="reference internal" href="#source-code">Source Code</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#feedback">Feedback</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+    </section>
+</div>
+                                </div>
+                                
+                            
+                            
+                                <div class="col-xs-12 col-md-9" role="main">
+                            
+  <div class="section" id="web3d-dicom-viewer">
+<h1>Web3D DICOM Viewer<a class="headerlink" href="#web3d-dicom-viewer" title="Permalink to this headline">¶</a></h1>
+<style>
+img.align-center, .figure.align-center img { display: block; margin: 1em auto }
+.figure.align-center { text-align: center }
+.section:target h2 {
+    padding: 16px;
+    margin: 10px -16px 0;
+    animation: highlight 3s;
+}
+.section:target h3 {
+    padding: 10px;
+    margin: -10px -10px 0;
+    animation: highlight 3s;
+}
+@keyframes highlight {
+    0% { background-color: #c1e6ee; color: white }
+    20% { color: #333 }
+    100% { background-color: none; }
+}
+</style><div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Web3D DICOM Viewer creates a 3D model of a body part based on the set of plane images (DICOM, NIfTI, etc. file formats)
+and shows 2D/3D views via a web browser without any installations. Web3D DICOM Viewer will please you with speed and
+convenience in comparison even with desktop analogues. Fast smooth 3D visualization based on unique rendering algorithms
+developed at EPAM, which don’t require data preprocessing, thus visualization starts right after the data loading.</p>
+<p>EPAM DICOM 3D Viewer is going to be a free opensource software.</p>
+<p>Try the DICOM 3D Viewer online — <a class="reference external" href="epa.ms/mri">epa.ms/mri</a>.</p>
+<p><strong>We have not found similar web-tool.</strong> We have developed <a class="reference external" href="papers.html">unique optimization of isosurface rendering algorithm</a>.</p>
+</div>
+<div class="section" id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>DICOM, NIfTI, KTX formats support.</li>
+<li>5 view modes, 3D and 2D visualization.</li>
+<li>Real-time adjustment of Isosurface and transfer function levels in 3D views.</li>
+<li>Measurement of distances, angles, areas in 2D views.</li>
+<li>Viewing sample in any standard projection.</li>
+<li>DICOM tags displaying.</li>
+<li>Real time volume clipping to open areas of interest.</li>
+<li>Javascript + WebGL.</li>
+</ol>
+</div>
+<div class="section" id="fast-and-comfortable">
+<h2>Fast and Comfortable<a class="headerlink" href="#fast-and-comfortable" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Simple user interface without rarely-used functions.</li>
+<li>Combined surface and volume visualization mode.</li>
+<li>Support for diverse data sources: a local computer, CD/DVD, a server, or a cloud.</li>
+<li>No installation on a user computer required.</li>
+<li>Compatibility with all popular desktop OSs.</li>
+</ol>
+</div>
+<div class="section" id="simple-user-interface">
+<h2>Simple User Interface<a class="headerlink" href="#simple-user-interface" title="Permalink to this headline">¶</a></h2>
+<p>The functionality depends on the selected visualization mode (2D or 3D), and in case of 3D mode on the selected
+visualization method. There is a 3D visualization mode with a volume render method on the screenshot below. In this case
+the interface provides the ability to select areas of interest inside the volume, brightness and contrast adjustment, as
+well as the ability to use the near clipping plane position.</p>
+<img alt="../_images/mri-ui.jpg" class="align-center" src="../_images/mri-ui.jpg" />
+</div>
+<div class="section" id="d-visualization">
+<h2>3D Visualization<a class="headerlink" href="#d-visualization" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="isosurface-visualization">
+<h3>Isosurface visualization<a class="headerlink" href="#isosurface-visualization" title="Permalink to this headline">¶</a></h3>
+<p>This method suits for bones, skin surface and segmented areas visualization. The base of this method is a search of the
+intersection points between the rays corresponding to pixels and the isosurface. The user selects the level of the
+isosurface and the near clipping plane position with sliders.</p>
+<img alt="../_images/mri-surf.jpg" class="align-center" src="../_images/mri-surf.jpg" />
+</div>
+<div class="section" id="volume-visualization">
+<h3>Volume visualization<a class="headerlink" href="#volume-visualization" title="Permalink to this headline">¶</a></h3>
+<p>This method suits for studying the initial data volume and the soft tissues visualization. It allows to choose an area
+of the interest by specifying the transfer function, which assigns the amount of the initial data to the amount of the
+transparency and color. To simplify the transfer function, the user uses a function in the application, which he can
+define by adjusting three parameters (a, b and c) with sliders. The function is nonzero only if the intensity <em>i</em>
+satisfies the conditions <em>a &lt; i &lt; b</em> or <em>i &gt; c</em>. When the function satisfies the first condition, the user can determine
+the transparency value by the value of the additional slider, and when it satisfies the second, the transparency value
+is considered equal to 1. Such a subset of transfer functions is sufficient to visualize the overwhelming array of
+medical data. The base of this method is the calculation of the volume integral along the rays passing through the
+pixels.</p>
+<img alt="../_images/mri-volume.jpg" class="align-center" src="../_images/mri-volume.jpg" />
+</div>
+<div class="section" id="max-intensity-projection-mip">
+<h3>Max Intensity Projection (MIP)<a class="headerlink" href="#max-intensity-projection-mip" title="Permalink to this headline">¶</a></h3>
+<p>The method suits for the primary analysis of the initial data, as it does not require setting of values of any
+parameters. The bas of this method is the computation of the maximum values of the intensities of the original data
+along the rays passing through the pixels.</p>
+<img alt="../_images/mri-mip.jpg" class="align-center" src="../_images/mri-mip.jpg" />
+</div>
+</div>
+<div class="section" id="id1">
+<h2>2D Visualization<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Use this mode to view raw data sections in different projections and to measure the linear and angular dimensions of
+fragments of this data.</p>
+<img alt="../_images/mri-2d.jpg" class="align-center" src="../_images/mri-2d.jpg" />
+</div>
+<div class="section" id="dicom-tags">
+<h2>DICOM Tags<a class="headerlink" href="#dicom-tags" title="Permalink to this headline">¶</a></h2>
+<p>DICOM Tags contain information about the source data such as patient data, date of data production, distance between
+images, and so on.</p>
+<img alt="../_images/mri-tags.jpg" class="align-center" src="../_images/mri-tags.jpg" />
+</div>
+<div class="section" id="try-in-one-click">
+<h2>Try in One Click<a class="headerlink" href="#try-in-one-click" title="Permalink to this headline">¶</a></h2>
+<p>You can try the <a class="reference external" href="http://epa.ms/mri">Web3D DICOM Viewer demo</a> online. But please be informed, that not all browsers
+and video cards are supported yet.</p>
+<p>The product is under development. More features to come in future releases: automated segmentation, volume cut,
+automated ROI detection, and complex colored transfer functions, etc.</p>
+</div>
+<div class="section" id="source-code">
+<h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
+<p>Web3D DICOM Viewer is under active development and locates in the private repository.</p>
+<p>We are striving to publish it before end of 2017.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Web3D DICOM 3D Viewer is going to be opensource software under Apache License version 2.</p>
+</div>
+<div class="section" id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h2>
+<p>Do you need assistance with our tools? Do you need a feature? Do you want to send a patch to us? Did you find a bug?
+Report issues or contact us: <a class="reference external" href="mailto:mri&#37;&#52;&#48;epam&#46;com">mri<span>&#64;</span>epam<span>&#46;</span>com</a></p>
+</div>
+</div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+
+        <footer>
+    <div class="uui-promo-footer">
+        <div class="footer-logo-copyright">
+            <div class="epam-logo">
+                <img src="../_static/images/Logo_Epam_Color.svg" alt="" />
+            </div>
+            <p class="copyright">© 2017, EPAM Systems. All Rights Reserved.</p>
+        </div>
+        <div class="footer-navigation">
+            <ul class="uui-footer-navigation">
+                <li><a href="../index.html">Products</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../download/index.html">Downloads</a></li>
+                <li><a href="../contact.html">Contact Info</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20662471-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    
+</body>
+</html>
