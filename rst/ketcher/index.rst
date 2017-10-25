@@ -124,6 +124,7 @@ and lot of useful features.
 
 |ketcher2|
 
+On the backend Ketcher 2.0 uses `Indigo Service <../indigo/service/index.html>`
 
 You can already try the `Ketcher 2.0 demo <demo.html>`__
 But please be informed, that it is unstable and not all browsers are supported
