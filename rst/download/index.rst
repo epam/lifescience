@@ -11,6 +11,7 @@ Downloads
     Indigo ELN <indigo/eln>
     imago
     parso
+    service
 
 -  `Bingo <bingo.html>`__: Chemistry search engine for Oracle and MS SQL
    Server databases
@@ -21,7 +22,7 @@ Downloads
    Lab Notebook
 -  `Imago OCR <imago.html>`__: Chemical optical recognition toolkit
 -  `Parso <parso.html>`__: Open-Source SAS7BDAT datasets reader
-
+-  `Indigo Service <service.html>`__: RESTful API for Indigo toolkit
 
 Manual
 ======
