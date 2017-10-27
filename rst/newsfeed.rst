@@ -11,7 +11,7 @@ News
 Ketcher is available on GitHub with a new License
 -------------------------------------------------
 
-*27 Sep 2017*
+*27 Oct 2017*
 
 We are glad to announce that Ketcher is available on GitHub via Apache License v2.
 
