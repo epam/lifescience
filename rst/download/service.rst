@@ -6,7 +6,7 @@ Indigo service
 --------------
 
 
-`Docker image <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/ketcher/ketcher-2.0.0-alpha.3.zip>`__
+`Docker image <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/indigo-service/indigo_service_0.2-269-gfa0acb1.tar.gz>`__
 
 **Note**: 
 
