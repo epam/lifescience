@@ -23,7 +23,7 @@ In this release the license change was made. Ketcher version 2 is available via 
 * 3D Viewer integrated with editor
 * Recognizing structures from images
 * Settings dialog with configuration parameters
-* CML and SMARST format support
+* CML and SMARTS format support
 * Calculating CIP for structures
 * Name to structure was added into the structure loader
 * Calculating properties functionality
