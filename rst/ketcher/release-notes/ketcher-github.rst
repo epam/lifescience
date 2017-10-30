@@ -20,10 +20,14 @@ In this release the license change was made. Ketcher version 2 is available via 
 * Rewritten core engine with ES5 standard and new Javascript libraries
 * New interface with modern icons and windows. User interface was ported to Redux
 * Templates support including user defined structures
+* 3D Viewer integrated with editor
+* Recognizing structures from images
+* Settings dialog with configuration parameters
+* CML and SMARST format support
 * Calculating CIP for structures
 * Name to structure was added into the structure loader
 * Calculating properties functionality
 * Check structure functionality with different options
 * Clean up function for small layout corrections
-* New features for S-Group and R-Group tools
+* New features for Atom, S-Group and R-Group tools
 * Many others fixes and updates...
