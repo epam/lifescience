@@ -13,7 +13,7 @@ Ketcher is available on GitHub with a new License
 
 *27 Oct 2017*
 
-We are glad to announce that Ketcher is available on GitHub via Apache License v2.
+We are glad to announce that Ketcher is available on GitHub via Apache License v2. The new version provides extendend capabilities and user experience
 
 * |ketcher_github_notes|
 
