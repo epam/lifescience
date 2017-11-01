@@ -41,7 +41,7 @@ developed at EPAM, which don't require data preprocessing, thus visualization st
 
 EPAM DICOM 3D Viewer is going to be a free opensource software.
 
-Try the DICOM 3D Viewer online --- `epa.ms/mri <epa.ms/mri>`__.
+Try the DICOM 3D Viewer online --- `epa.ms/mri <http://epa.ms/mri>`__.
 
 **We have not found similar web-tool.** We have developed `unique optimization of isosurface rendering algorithm <papers.html>`__.
 
