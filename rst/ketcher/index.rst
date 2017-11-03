@@ -124,7 +124,7 @@ and lot of useful features.
 
 |ketcher2|
 
-On the backend Ketcher 2.0 uses `Indigo Service <../indigo/service/index.html>`
+On the backend Ketcher 2.0 uses `Indigo Service <../indigo/service/index.html>`__
 
 You can already try the `Ketcher 2.0 demo <demo.html>`__
 But please be informed, that it is unstable and not all browsers are supported
@@ -135,7 +135,7 @@ Download
 
 Look at the `Downloads <../download/ketcher.html>`__ page for the
 `installation <developers-manual.html#installation>`__ package and a
-sample `server <developers-manual.html#ketcher-server>`__
+sample `Server v1 <developers-manual.html#ketcher-server>`__ , `Server v2 <../indigo/service/index.html>`__
 implementation.
 
 License

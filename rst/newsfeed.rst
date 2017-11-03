@@ -8,6 +8,22 @@ News
     release-notes/index
 
 
+Mobile Ketcher now available at Google Play
+-------------------------------------------
+
+*2 Nov 2017*
+
+We are pleased to announce the Ketcher application for Android devices. Now chemists, biologists, pharmacologists, scientists, researchers and students can do their favorite work anywhere and anytime.
+
+* |ketcher_mobile_notes|
+
+
+.. |ketcher_mobile_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-mobile.html" target="_blank">Release Notes</a>
+
+
+
 Ketcher is available on GitHub with a new License
 -------------------------------------------------
 
