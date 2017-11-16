@@ -192,13 +192,3 @@ Public License for more details.
 You should receive a copy of the GNU General Public License along with
 this program. If you did not, please see http://www.gnu.org/licenses/.
 
-Commercial Availability
------------------------
-
-If the GPL-licensed Indigo ELN does not satisfy your needs, please
-contact us to discuss the possibility of a
-commercial license.
-
-We hope that you decide to download and use Indigo ELN. At EPAM, we are
-available to help you install, use, integrate, customize, and support
-and maintain Indigo ELN.
