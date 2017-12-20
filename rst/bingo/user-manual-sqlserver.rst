@@ -152,11 +152,7 @@ parameters string:
     select $table.* from $table, bingo.SearchSub('$table', $query, '$parameters') t
        where $table.$id = t.id;
 
-Please see the corresponding section of `Bingo User Manual for
-Oracle <user-manual-oracle.html#substructure-search>`__ to learn the
-rules of Bingo substructure matching (including Resonance search,
-Conformation search, Affine transformation search), and various query
-features available.
+.. include:: bingo-options.rst
 
 Highlighting the resulting molecules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -831,3 +827,10 @@ output path to the log file.
 All operation of Bingo is logged. All error and warning messages (not
 necessarily visible in SQL session) are logged. Some performance
 measures of the SQL queries are written to the log as well.
+
+.. |code_treat_x_as_pseudoatom_1| replace:: exec Bingo.TreatXAsPseudoatom(1);
+.. |code_treat_x_as_pseudoatom_0| replace:: exec Bingo.TreatXAsPseudoatom(0);
+.. |code_select_resonance_option| replace:: select $table.* from $table, bingo.SearchSub('$table', $query, 'RES; TOP $n') t where $table.$id = t.id;
+.. |code_select_affine_option| replace:: select $table.* from $table, bingo.SearchSub('$table', $query, 'AFF $rms; TOP $n') t where $table.$id = t.id;
+.. |code_select_conformational_option| replace:: select $table.* from $table, bingo.SearchSub('$table', $query, 'CONF $rms; TOP $n') t where $table.$id = t.id;
+  

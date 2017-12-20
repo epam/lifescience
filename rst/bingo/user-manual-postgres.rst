@@ -93,11 +93,8 @@ The general form of substructure search query is as follows:
 -  ``$parameters`` is a ``varchar`` string that can be empty or contain
    some options to pass to Bingo search engine.
 
-Please see the corresponding section of `Bingo User Manual for
-Oracle <user-manual-oracle.html#substructure-search>`__ to learn the
-rules of Bingo substructure matching (including Resonance search,
-Conformation search, Affine transformation search), and various query
-features available.
+
+.. include:: bingo-options.rst
 
 SMARTS Search
 ~~~~~~~~~~~~~
@@ -726,3 +723,13 @@ All operation of Bingo is logged into the PostgreSQL native LOG. All
 error and warning messages (not necessarily visible in SQL session) are
 logged. Some performance measures of the SQL queries are written to the
 log as well.
+
+.. |code_treat_x_as_pseudoatom_1| replace:: select Bingo.TreatXAsPseudoatom(1);
+
+.. |code_treat_x_as_pseudoatom_0| replace:: select Bingo.TreatXAsPseudoatom(0);
+
+.. |code_select_resonance_option| replace:: select * from $table where $column @ ('$query', 'RES')::bingo.sub;
+
+.. |code_select_affine_option| replace:: select * from $table where $column @ ('$query', 'AFF $rms')::bingo.sub;
+
+.. |code_select_conformational_option| replace:: select * from $table where $column @ ('$query', 'CONF $rms')::bingo.sub;
