@@ -9,7 +9,9 @@ Summary
 
 We are glad to announce that a new Ketcher version **2.0.0 beta** is released. 
 
-`Source code <https://github.com/epam/ketcher>`__
+`Source code <https://github.com/epam/ketcher/releases/tag/2.0.0-beta.1>`__
+
+Please also use the latest `indigo service <../../download/service.html>`__ version.
 
 Our team sends best wishes for the Holiday Season!
 
@@ -18,13 +20,13 @@ Our team sends best wishes for the Holiday Season!
 
 * Add the possibility to Save structure as Extended SMILE
 
-* Incorrect rendering (in Marvin) Ketcher SMILE for AND Enantiomer 
+* Incorrect rendering (in Marvin) Ketcher SMILES for AND Enantiomer 
 
 * Create saveSmiles() for Ketcher 
 
 * Change the Bond type for several bonds at the same time 
 
-* Structure cannot be fused bond to bond 
+* Structure can be fused bond to bond 
 
 * Moving the structure with attached data 
 
@@ -48,7 +50,7 @@ Our team sends best wishes for the Holiday Season!
 
 * Incorrect order of "OK" and "Cancel" buttons in the "Settings" window. 
 
-* The hyphen in the SMILE string for the aromatic structures 
+* The hyphen in the SMILES string for the aromatic structures 
 
 * The application buttons are rendered incorrectly 
 
