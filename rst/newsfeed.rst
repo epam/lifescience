@@ -8,6 +8,21 @@ News
     release-notes/index
 
 
+
+Ketcher 2.0.0 beta is released
+------------------------------
+
+*29 Dec 2017*
+
+New Ketcher version was released. It includes lot of bugfixes and improvements 
+
+* |ketcher_2_0_0_b_notes|
+
+.. |ketcher_2_0_0_b_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.0.0b.html" target="_blank">Release Notes</a>
+
+
 Mobile Ketcher now available at Google Play
 -------------------------------------------
 
