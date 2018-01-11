@@ -7,6 +7,23 @@ News
     newsfeed
     release-notes/index
 
+Bingo 1.8.0 beta released
+-------------------------
+
+New Bingo version was released. It includes PostgreSQL 9.6 and 10.1 support, `ignore_bad_valence` option and many other improvements and bugfixes
+
+* |bingo_1_8_0b_notes|
+
+* |bingo_1_8_0b_downloads|
+
+.. |bingo_1_8_0b_notes| raw:: html
+
+   <a href="bingo/changelog.html" target="_blank">Release Notes</a>
+
+.. |bingo_1_8_0b_downloads| raw:: html
+
+   <a href="download/bingo.html" target="_blank">Downloads</a>
+
 
 
 Ketcher 2.0.0 beta is released

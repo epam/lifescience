@@ -7,6 +7,18 @@ Bingo Changelog
 
     changelog
 
+
+Bingo 1.8.0 beta
+----------------
+
+*11 January 2018*
+
+
+Bingo PostgreSQL-specific changes:
+
+-  PostgreSQL 9.5, 9.6 and 10.1 versions support was added
+
+
 Bingo 1.7.10 dev6
 -----------------
 
@@ -14,7 +26,7 @@ Bingo 1.7.10 dev6
 
 General changes:
 
--  Indigo now understand aromatic rings with external double bonds such
+-  Indigo now understands aromatic rings with external double bonds such
    as O=C1C=CC=CC=C1. 
 -  Either cis/trans bond marked is preserved during molfile loading even
    if substitutes are collinear.
