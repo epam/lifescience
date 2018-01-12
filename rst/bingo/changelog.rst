@@ -11,12 +11,32 @@ Bingo Changelog
 Bingo 1.8.0 beta
 ----------------
 
-*11 January 2018*
+*12 January 2018*
+
+We are glad to announce a new version for Bingo cartridges. As always, installation artifacts can be found in `Downloads <../download/bingo.html>`__
+
+**General changes:**
+
+- Indigo-core changes and bugfixes. 
+- New configuration option was added ``ingore_bad_valence``. Together with ``ignore-stereochemistry-errors`` this option allows to ignore almost all existing errors for the molecular databases. This caused the significant changes for the internal indexation and search engines to be able work with 'incorrect' structures
+- Add timeout support for utility functions
+- getMass() precision was changed to double
+- Standardize method was added. Standardization description can be found `here <../indigo/options/standardize.html>`__
+- Add stabilizations for bingo-core search engine. Add ``reject-invalid-structures`` for general methods. 
 
 
-Bingo PostgreSQL-specific changes:
+**Bingo engine-specific changes:**
 
--  PostgreSQL 9.5, 9.6 and 10.1 versions support was added
+- PostgreSQL 9.5, 9.6 and 10.1 versions support was added and tested
+- Microsoft SQL Server 2017 was added and tested
+
+
+**Roadmap to a stable version:**
+
+- Document and add descriptions with examples for all the changes and new options 
+- Create more regression tests for the new functionallity
+- Resolve current Bingo bug requests from `GitHub repo <https://github.com/epam/Indigo/issues>`__
+
 
 
 Bingo 1.7.10 dev6

@@ -10,7 +10,9 @@ News
 Bingo 1.8.0 beta released
 -------------------------
 
-New Bingo version was released. It includes PostgreSQL 9.6 and 10.1 support, `ignore_bad_valence` option and many other improvements and bugfixes
+*12 Jan 2018*
+
+New Bingo version was released. It includes PostgreSQL 9.6 and 10.1 support,  *ignore_bad_valence* option and many other improvements and bugfixes
 
 * |bingo_1_8_0b_notes|
 
