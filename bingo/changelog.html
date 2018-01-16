@@ -285,6 +285,7 @@
         <!-- Filled in static/js/custom-sidenav.js -->
         <div id="local-toc" style="display: none;"><ul>
 <li><a class="reference internal" href="#">Bingo Changelog</a><ul>
+<li><a class="reference internal" href="#bingo-1-8-0-beta">Bingo 1.8.0 beta</a></li>
 <li><a class="reference internal" href="#bingo-1-7-10-dev6">Bingo 1.7.10 dev6</a></li>
 <li><a class="reference internal" href="#bingo-1-7-9">Bingo 1.7.9</a></li>
 <li><a class="reference internal" href="#bingo-1-7-8b2">Bingo 1.7.8b2</a></li>
@@ -311,12 +312,37 @@
 <h1>Bingo Changelog<a class="headerlink" href="#bingo-changelog" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
+<div class="section" id="bingo-1-8-0-beta">
+<h2>Bingo 1.8.0 beta<a class="headerlink" href="#bingo-1-8-0-beta" title="Permalink to this headline">¶</a></h2>
+<p><em>12 January 2018</em></p>
+<p>We are glad to announce a new version for Bingo cartridges. As always, installation artifacts can be found in <a class="reference external" href="../download/bingo.html">Downloads</a></p>
+<p><strong>General changes:</strong></p>
+<ul class="simple">
+<li>Indigo-core changes and bugfixes.</li>
+<li>New configuration option was added <code class="docutils literal"><span class="pre">ingore_bad_valence</span></code>. Together with <code class="docutils literal"><span class="pre">ignore-stereochemistry-errors</span></code> this option allows to ignore almost all existing errors for the molecular databases. This caused the significant changes for the internal indexation and search engines to be able work with ‘incorrect’ structures</li>
+<li>Add timeout support for utility functions</li>
+<li>getMass() precision was changed to double</li>
+<li>Standardize method was added. Standardization description can be found <a class="reference external" href="../indigo/options/standardize.html">here</a></li>
+<li>Add stabilizations for bingo-core search engine. Add <code class="docutils literal"><span class="pre">reject-invalid-structures</span></code> for general methods.</li>
+</ul>
+<p><strong>Bingo engine-specific changes:</strong></p>
+<ul class="simple">
+<li>PostgreSQL 9.5, 9.6 and 10.1 versions support was added and tested</li>
+<li>Microsoft SQL Server 2017 was added and tested</li>
+</ul>
+<p><strong>Roadmap to a stable version:</strong></p>
+<ul class="simple">
+<li>Document and add descriptions with examples for all the changes and new options</li>
+<li>Create more regression tests for the new functionallity</li>
+<li>Resolve current Bingo bug requests from <a class="reference external" href="https://github.com/epam/Indigo/issues">GitHub repo</a></li>
+</ul>
+</div>
 <div class="section" id="bingo-1-7-10-dev6">
 <h2>Bingo 1.7.10 dev6<a class="headerlink" href="#bingo-1-7-10-dev6" title="Permalink to this headline">¶</a></h2>
 <p><em>28 December 2014</em></p>
 <p>General changes:</p>
 <ul class="simple">
-<li>Indigo now understand aromatic rings with external double bonds such
+<li>Indigo now understands aromatic rings with external double bonds such
 as O=C1C=CC=CC=C1.</li>
 <li>Either cis/trans bond marked is preserved during molfile loading even
 if substitutes are collinear.</li>
