@@ -22,11 +22,11 @@ The changelog is available `on this page <../bingo/changelog.html>`__
    * - PostgreSQL 10.1
      - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_8_0beta/bingo-postgres10.1-1.8.0beta.r1-linux64.zip>`__
      - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_8_0beta/bingo-postgres10.1-1.8.0beta.r1-win64.zip>`__
-     - \-   
+     - `10.13 <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_8_0beta/bingo-postgres10.1-1.8.0beta.r4-mac10.13.zip>`__  
    * - PostgreSQL 9.6
      - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_8_0beta/bingo-postgres9.6-1.8.0beta.r1-linux64.zip>`__
      - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_8_0beta/bingo-postgres9.6-1.8.0beta.r1-win64.zip>`__
-     - \-   
+     - `10.13 <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_8_0beta/bingo-postgres9.6-1.8.0beta.r4-mac10.13.zip>`__
    * - PostgreSQL 9.5
      - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_8_0beta/bingo-postgres9.5-1.8.0beta.r1-linux64.zip>`__
      - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_8_0beta/bingo-postgres9.5-1.8.0beta.r1-win64.zip>`__
