@@ -42,6 +42,20 @@ New Ketcher version was released. It includes lot of bugfixes and improvements
    <a href="ketcher/release-notes/ketcher-2.0.0b.html" target="_blank">Release Notes</a>
 
 
+Med3Web is available on GitHub
+------------------------------
+
+*25 Dec 2017*
+
+Good news! The project is available on GitHub for collaboration.
+
+|mri_github_url|
+
+.. |mri_github_url| raw:: html
+
+   <a href="https://github.com/epam/med3web" target="_blank">https://github.com/epam/med3web</a>
+
+
 Mobile Ketcher now available at Google Play
 -------------------------------------------
 

@@ -39,7 +39,7 @@ and shows 2D/3D views via a web browser without any installations. Web3D DICOM V
 convenience in comparison even with desktop analogues. Fast smooth 3D visualization based on unique rendering algorithms
 developed at EPAM, which don't require data preprocessing, thus visualization starts right after the data loading.
 
-EPAM DICOM 3D Viewer is going to be a free opensource software.
+EPAM DICOM 3D Viewer is a `free and open source <#license>`__ software.
 
 Try the DICOM 3D Viewer online --- `epa.ms/mri <http://epa.ms/mri>`__.
 
@@ -157,19 +157,29 @@ automated ROI detection, and complex colored transfer functions, etc.
 Source Code
 -----------
 
-Web3D DICOM Viewer is under active development and locates in the private repository.
-
-We are striving to publish it before end of 2017.
+Web3D DICOM Viewer is under active development and its source code is available at `GitHub <https://github.com/epam/med3web>`__.
 
 
 License
 -------
 
-Web3D DICOM 3D Viewer is going to be opensource software under Apache License version 2.
+Copyright 2016-2018 EPAM Systems, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 
 Feedback
 --------
 
 Do you need assistance with our tools? Do you need a feature? Do you want to send a patch to us? Did you find a bug?
-Report issues or contact us: mri@epam.com
+`Report issues at GitHub <https://github.com/epam/med3web/issues>`__ or contact us directly at mri@epam.com
