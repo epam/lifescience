@@ -334,7 +334,7 @@ JOURNAL OF ELECTRONIC SCIENCE AND TECHNOLOGY.</p>
 <h3>Approach<a class="headerlink" href="#approach" title="Permalink to this headline">¶</a></h3>
 <p>One of the methods for medical data visualization is direct isosurface volume rendering. It is based on the search of
 the intersection points between the rays corresponding to pixels on the screen and the isosurface. This article
-describes a two-pass algorithm for accelerating the runtime of this method on a GPU. On the first pass, it founds the
+describes a two-pass algorithm for accelerating the runtime of this method on a GPU. On the first pass, it finds the
 intersections with the isosurface only for a small number of rays; it works by rendering into a lower-resolution
 texture. On the second pass, the algorithm uses the obtained information to efficiently calculate the intersection
 points of all the rays when rendering into the frame buffer.</p>
@@ -342,7 +342,8 @@ points of all the rays when rendering into the frame buffer.</p>
 </div>
 <div class="section" id="result">
 <h3>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h3>
-<p>New approach allows <strong>to significantly speed up isosuface visualization without quality loss</strong>.</p>
+<p>New approach allows <strong>to significantly speed up isosuface visualization without quality loss</strong>
+(depends on data being visualized, 6 to 12 times for the optimal texture resolution ratio).</p>
 </div>
 </div>
 </div>
