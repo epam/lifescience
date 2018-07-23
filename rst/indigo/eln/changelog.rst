@@ -1,9 +1,22 @@
 ﻿Indigo ELN Changelog
 ====================
 
+Indigo ELN v2.0
+---------------
+
+*23 July 2018*
+
+The major changes are the following:
+
+- Web-based ELN functionality without using any proprietary services or commercial third-party products
+- Support of extended user management system (users and roles, entities sharing)
+- Hierarchy of logical and database entities (projects, notebooks, experiments, components)
+- Mechanism of templates to create different types of experiments without the need to change the code
+
+
 
 Indigo ELN 1.2
-----------------
+--------------
 
 *08 May 2015*
 

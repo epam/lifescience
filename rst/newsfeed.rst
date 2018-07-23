@@ -7,6 +7,28 @@ News
     newsfeed
     release-notes/index
 
+
+
+Indigo ELN v2.0 released
+------------------------
+
+*23 July 2018*
+
+
+Indigo ELN v 2.0 is the next version of EPAM open-source Indigo ELN based on a completely different technology stack than v.1.0 and providing a new interface, new features, at the same time retaining all the functionality previously implemented.
+
+Indigo ELN is a viable free-of-charge alternative to commercial electronic notebooks providing the same set of functionality.
+
+
+* |indigo_eln_2_0_notes|
+
+.. |indigo_eln_2_0_notes| raw:: html
+
+   <a href="indigo/eln/changelog.html" target="_blank">Release Notes</a>
+
+
+
+
 Bingo 1.8.0 beta released
 -------------------------
 

@@ -6,7 +6,7 @@ Indigo ELN v2.0: The Open-Source Electronic Lab Notebook
     :includehidden:
 
     changelog
-    
+
 
 Professional. Proven. Free
 
@@ -175,14 +175,14 @@ Major factors affecting the service pricing include:
 Download and Installation
 --------------------------
 
-Please visit the GIT page for the installation package and documents.
+Please visit the  `GitHub page <https://github.com/epam/Indigo-ELN-v.-2.0>`__ for the installation package and documents.
 For installation instructions, see the Installation Guide. For user manual, see User Guide.
 
 Feedback
 --------
 
 Do you need assistance using our tools? Do you need a integration set up or new component development? Do you want to send a patch to us? Did you find a bug? 
-Report issues to https://github.com/epam/Indigo-ELN-v.-2.0/issues or contact us: indigoeln@epam.com
+Report `issues <https://github.com/epam/Indigo-ELN-v.-2.0/issues>`__  or contact us: indigoeln@epam.com
 
 License
 -------
