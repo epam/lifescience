@@ -84,11 +84,17 @@ Cheminformatics
 
 -  `Indigo ELN <indigo/eln/index.html>`__ Open-Source Chemistry Electronic Lab Notebook |image4|
 
-   -  Indigo ELN allows scientists to prepare, plan,manage and access relevant information regarding research work. Application  helps to analyze and share research information. Flexiable experiment template allows to support various experiment type. New components can be included in the application without the need to change the core code.
-   
-   -  Indigo ELN v 2.0 is the next version of EPAM open-source Indigo ELN based on a completely different technology stack than v.1.0 and providing a new interface, new features, at the same time retaining all the functionality previously implemented.
+   -  Indigo ELN allows scientists to prepare, plan,manage and access relevant 
+      information regarding research work. Application  helps to analyze and share 
+      research information. Flexiable experiment template allows to support various 
+      experiment type. New components can be included in the application without 
+      the need to change the core code.
 
-   -  Indigo ELN is a viable free-of-charge alternative to commercial electronic notebooks providing the same set of functionality.Indigo ELN allows scientists to prepare, plan, and analyze experiments, access relevant information, and develop new methods in the areas of synthetic chemistry, analytical chemistry, and process chemistry.
+   -  Indigo ELN v 2.0 is the next version of EPAM open-source Indigo ELN based 
+      on a completely different technology stack than v.1.0 and providing a new 
+      interface, new features, at the same time retaining all the functionality 
+      previously implemented.
+
 
 
 
