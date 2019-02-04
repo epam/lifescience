@@ -50,7 +50,7 @@ standalone HTML5 web application or integrates as a component into your web page
 The `latest versions <https://browsehappy.com/>`__ of WebGL-enabled desktop (Chrome, Firefox, Safari, Opera, Edge, IE11)
 and mobile (iOS, Android) browsers are supported.
 
-Miew is a `free and open source <#license>`__ software.
+Miew is a `free and open-source <#license>`__ software.
 Try the `Miew demo <http://miew.opensource.epam.com/>`__ online.
 
 
@@ -80,8 +80,8 @@ computer.
 Visualize structures, electron density, dynamics results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The data could be atom positions (PDB, CIF, MMTF, CML), electron density fields (CCP4), or atom trajectories. The list
-of supported file formats is growing.
+The data could be atom positions (PDB, CIF, MMTF, XYZ, SDF, CML), electron density fields (CCP4, MAP, MRC, DSN6), or atom trajectories.
+The list of supported file formats is growing.
 
 
 Examine a 3D molecular structure in various modes
@@ -214,7 +214,7 @@ License
 
 `MIT License <https://opensource.org/licenses/MIT>`__
 
-Copyright (c) 2015-2017 EPAM Systems, Inc.
+Copyright (c) 2015-2019 EPAM Systems, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
