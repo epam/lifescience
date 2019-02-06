@@ -590,6 +590,31 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="indigo.Indigo.getOption">
+<code class="descname">getOption</code><span class="sig-paren">(</span><em>option</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.getOption" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.Indigo.getOptionBool">
+<code class="descname">getOptionBool</code><span class="sig-paren">(</span><em>option</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.getOptionBool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.Indigo.getOptionFloat">
+<code class="descname">getOptionFloat</code><span class="sig-paren">(</span><em>option</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.getOptionFloat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.Indigo.getOptionInt">
+<code class="descname">getOptionInt</code><span class="sig-paren">(</span><em>option</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.getOptionInt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.Indigo.getOptionType">
+<code class="descname">getOptionType</code><span class="sig-paren">(</span><em>option</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.getOptionType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="indigo.Indigo.iterateCDX">
 <code class="descname">iterateCDX</code><span class="sig-paren">(</span><em>reader</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.iterateCDX" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -650,9 +675,89 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="indigo.Indigo.loadFingerprintFromBuffer">
+<code class="descname">loadFingerprintFromBuffer</code><span class="sig-paren">(</span><em>buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.loadFingerprintFromBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a fingerprint from the supplied binary data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>buffer</strong> – a list of bytes</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a fingerprint object</td>
+</tr>
+</tbody>
+</table>
+<p>Since version 1.3.0</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="indigo.Indigo.loadFingerprintFromDescriptors">
+<code class="descname">loadFingerprintFromDescriptors</code><span class="sig-paren">(</span><em>descriptors</em>, <em>size</em>, <em>density</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.loadFingerprintFromDescriptors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Packs a list of molecule descriptors into a fingerprint object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>descriptors</strong> – list of normalized numbers (roughly) between 0.0 and 1.0</li>
+<li><strong>size</strong> – size of the fingerprint in bytes</li>
+<li><strong>density</strong> – approximate density of ‘1’s vs <a href="#id1"><span class="problematic" id="id2">`</span></a>0`s in the fingerprint</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">a fingerprint object</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Since version 1.3.0</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="indigo.Indigo.loadMolecule">
 <code class="descname">loadMolecule</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.loadMolecule" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.Indigo.loadMoleculeFromBuffer">
+<code class="descname">loadMoleculeFromBuffer</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.loadMoleculeFromBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads molecule from given buffer. Automatically detects input format</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>buf - byte array</li>
+</ul>
+</dd>
+<dt>Usage:</dt>
+<dd><p class="first"><a href="#id3"><span class="problematic" id="id4">``</span></a>`
+with open (..), ‘rb’) as f:</p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/opt/indigo-python/indigo.py:docstring of indigo.Indigo.loadMoleculeFromBuffer</tt>, line 7); <em><a href="#id4">backlink</a></em></p>
+Inline literal start-string without end-string.</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/opt/indigo-python/indigo.py:docstring of indigo.Indigo.loadMoleculeFromBuffer</tt>, line 9)</p>
+Unexpected indentation.</div>
+<blockquote>
+<div>m = indigo.loadMoleculeFromBuffer(f.read())</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/opt/indigo-python/indigo.py:docstring of indigo.Indigo.loadMoleculeFromBuffer</tt>, line 10)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/opt/indigo-python/indigo.py:docstring of indigo.Indigo.loadMoleculeFromBuffer</tt>, line 10); <em><a href="#id6">backlink</a></em></p>
+Inline literal start-string without end-string.</div>
+<div class="last system-message" id="id7">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/opt/indigo-python/indigo.py:docstring of indigo.Indigo.loadMoleculeFromBuffer</tt>, line 10); <em><a href="#id8">backlink</a></em></p>
+Inline interpreted text or phrase reference start-string without end-string.</div>
+</dd>
+<dt>Raises:</dt>
+<dd>Exception if structure format is incorrect</dd>
+</dl>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Since</span> <span class="n">version</span> <span class="mf">1.3</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="indigo.Indigo.loadMoleculeFromFile">
@@ -715,9 +820,38 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="indigo.Indigo.loadStructure">
+<code class="descname">loadStructure</code><span class="sig-paren">(</span><em>structureStr</em>, <em>parameter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.loadStructure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.Indigo.loadStructureFromBuffer">
+<code class="descname">loadStructureFromBuffer</code><span class="sig-paren">(</span><em>structureData</em>, <em>parameter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.loadStructureFromBuffer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.Indigo.loadStructureFromFile">
+<code class="descname">loadStructureFromFile</code><span class="sig-paren">(</span><em>filename</em>, <em>parameter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.loadStructureFromFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="indigo.Indigo.nameToStructure">
 <code class="descname">nameToStructure</code><span class="sig-paren">(</span><em>name</em>, <em>params=None</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.nameToStructure" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Converts a chemical name into a corresponding structure</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><ul class="first last simple">
+<li>name - a name to parse</li>
+<li>params - a string containing parsing options or nullptr if no options are changed</li>
+</ul>
+</dd>
+<dt>Raises:</dt>
+<dd>Exception if parsing fails or no structure is found</dd>
+</dl>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Since</span> <span class="n">version</span> <span class="mf">1.3</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="indigo.Indigo.reactionProductEnumerate">
@@ -767,7 +901,10 @@
 <dl class="method">
 <dt id="indigo.Indigo.transformHELMtoSCSR">
 <code class="descname">transformHELMtoSCSR</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.Indigo.transformHELMtoSCSR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Since</span> <span class="n">version</span> <span class="mf">1.3</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="indigo.Indigo.unserialize">
@@ -797,7 +934,8 @@
 <dl class="class">
 <dt id="indigo.IndigoObject">
 <em class="property">class </em><code class="descclassname">indigo.</code><code class="descname">IndigoObject</code><span class="sig-paren">(</span><em>dispatcher</em>, <em>id</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
+<dd><p>Docstring for class IndigoObject.</p>
+<dl class="method">
 <dt id="indigo.IndigoObject.addAtom">
 <code class="descname">addAtom</code><span class="sig-paren">(</span><em>symbol</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.addAtom" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -865,6 +1003,11 @@
 <dl class="method">
 <dt id="indigo.IndigoObject.addSuperatom">
 <code class="descname">addSuperatom</code><span class="sig-paren">(</span><em>atoms</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.addSuperatom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.IndigoObject.addTemplate">
+<code class="descname">addTemplate</code><span class="sig-paren">(</span><em>templates</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.addTemplate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -953,6 +1096,14 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="indigo.IndigoObject.check3DStereo">
+<code class="descname">check3DStereo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.check3DStereo" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Since</span> <span class="n">version</span> <span class="mf">1.3</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="indigo.IndigoObject.checkAmbiguousH">
 <code class="descname">checkAmbiguousH</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.checkAmbiguousH" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -963,19 +1114,44 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="indigo.IndigoObject.checkChirality">
+<code class="descname">checkChirality</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.checkChirality" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Since</span> <span class="n">version</span> <span class="mf">1.3</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="indigo.IndigoObject.checkQuery">
 <code class="descname">checkQuery</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.checkQuery" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Since</span> <span class="n">version</span> <span class="mf">1.3</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="indigo.IndigoObject.checkRGroups">
 <code class="descname">checkRGroups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.checkRGroups" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Since</span> <span class="n">version</span> <span class="mf">1.3</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="indigo.IndigoObject.checkStereo">
+<code class="descname">checkStereo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.checkStereo" title="Permalink to this definition">¶</a></dt>
+<dd><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Since</span> <span class="n">version</span> <span class="mf">1.3</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="indigo.IndigoObject.checkValence">
 <code class="descname">checkValence</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.checkValence" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Since</span> <span class="n">version</span> <span class="mf">1.3</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="indigo.IndigoObject.clean2d">
@@ -1278,6 +1454,11 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="indigo.IndigoObject.findTemplate">
+<code class="descname">findTemplate</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.findTemplate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="indigo.IndigoObject.fingerprint">
 <code class="descname">fingerprint</code><span class="sig-paren">(</span><em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.fingerprint" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1358,6 +1539,22 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="indigo.IndigoObject.getSGroupCoords">
+<code class="descname">getSGroupCoords</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.getSGroupCoords" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Returns:</dt>
+<dd>XY coordinates for Data sgroup</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/opt/indigo-python/indigo.py:docstring of indigo.IndigoObject.getSGroupCoords</tt>, line 3)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<dl class="docutils">
+<dt>::</dt>
+<dd>Since 1.3.0</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="indigo.IndigoObject.getSGroupDisplayOption">
 <code class="descname">getSGroupDisplayOption</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.getSGroupDisplayOption" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1410,6 +1607,26 @@
 <dl class="method">
 <dt id="indigo.IndigoObject.getSuperatom">
 <code class="descname">getSuperatom</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.getSuperatom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.IndigoObject.getTGroupAlias">
+<code class="descname">getTGroupAlias</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.getTGroupAlias" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.IndigoObject.getTGroupClass">
+<code class="descname">getTGroupClass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.getTGroupClass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.IndigoObject.getTGroupName">
+<code class="descname">getTGroupName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.getTGroupName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.IndigoObject.getTemplateAtomClass">
+<code class="descname">getTemplateAtomClass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.getTemplateAtomClass" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1490,6 +1707,11 @@
 <dl class="method">
 <dt id="indigo.IndigoObject.isRSite">
 <code class="descname">isRSite</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.isRSite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.IndigoObject.isTemplateAtom">
+<code class="descname">isTemplateAtom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.isTemplateAtom" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1648,6 +1870,11 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="indigo.IndigoObject.iterateTGroups">
+<code class="descname">iterateTGroups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.iterateTGroups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="indigo.IndigoObject.layeredCode">
 <code class="descname">layeredCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.layeredCode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1800,6 +2027,11 @@
 <dl class="method">
 <dt id="indigo.IndigoObject.removeProperty">
 <code class="descname">removeProperty</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.removeProperty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="indigo.IndigoObject.removeTemplate">
+<code class="descname">removeTemplate</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.removeTemplate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -2053,6 +2285,11 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="indigo.IndigoObject.setTemplateAtomClass">
+<code class="descname">setTemplateAtomClass</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.setTemplateAtomClass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="indigo.IndigoObject.setXYZ">
 <code class="descname">setXYZ</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#indigo.IndigoObject.setXYZ" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -2279,7 +2516,7 @@
 <span class="cp">#define __indigo__</span>
 
 <span class="cp">#if defined(_WIN32)  &amp;&amp; !defined(__MINGW32__)</span>
-<span class="cp">#define qword unsigned _int64</span>
+<span class="cp">#define qword unsigned __int64</span>
 <span class="cp">#else</span>
 <span class="cp">#define qword unsigned long long</span>
 <span class="cp">#endif</span>
@@ -2356,6 +2593,15 @@
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoSetOptionXY</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoResetOptions</span> <span class="p">();</span>
 
+<span class="n">CEXPORT</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="nf">indigoGetOption</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoGetOptionInt</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">value</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoGetOptionBool</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">value</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoGetOptionFloat</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="kt">float</span><span class="o">*</span> <span class="n">value</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoGetOptionColor</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="kt">float</span><span class="o">*</span> <span class="n">r</span><span class="p">,</span> <span class="kt">float</span><span class="o">*</span> <span class="n">g</span><span class="p">,</span> <span class="kt">float</span><span class="o">*</span> <span class="n">b</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoGetOptionXY</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">y</span><span class="p">);</span>
+
+<span class="n">CEXPORT</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="nf">indigoGetOptionType</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">);</span>
+
 <span class="cm">/* Basic input-output */</span>
 
 <span class="c1">// indigoRead*** return a new reader object.</span>
@@ -2421,6 +2667,10 @@
 
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoCreateMolecule</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoCreateQueryMolecule</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoLoadStructureFromString</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">string</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">params</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoLoadStructureFromBuffer</span> <span class="p">(</span><span class="k">const</span> <span class="n">byte</span> <span class="o">*</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bufferSize</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">params</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoLoadStructureFromFile</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">filename</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">params</span><span class="p">);</span>
 
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoLoadMolecule</span>  <span class="p">(</span><span class="kt">int</span> <span class="n">source</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoLoadMoleculeFromString</span> <span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">string</span><span class="p">);</span>
@@ -2605,6 +2855,7 @@
 
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoIsPseudoatom</span> <span class="p">(</span><span class="kt">int</span> <span class="n">atom</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoIsRSite</span> <span class="p">(</span><span class="kt">int</span> <span class="n">atom</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoIsTemplateAtom</span> <span class="p">(</span><span class="kt">int</span> <span class="n">atom</span><span class="p">);</span>
 
 <span class="c1">// returns INDIGO_{ABS,OR,AND,EITHER}</span>
 <span class="c1">// or zero if the atom is not a stereoatom</span>
@@ -2725,6 +2976,7 @@
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoGetSGroupDisplayOption</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sgroup</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoSetSGroupDisplayOption</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sgroup</span><span class="p">,</span> <span class="kt">int</span> <span class="n">option</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoGetSGroupSeqId</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sgroup</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">float</span> <span class="o">*</span> <span class="nf">indigoGetSGroupCoords</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sgroup</span><span class="p">);</span>
 
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoGetSGroupMultiplier</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sgroup</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoSetSGroupMultiplier</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sgroup</span><span class="p">,</span> <span class="kt">int</span> <span class="n">multiplier</span><span class="p">);</span>
@@ -2744,6 +2996,14 @@
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoSetSGroupOriginalId</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sgroup</span><span class="p">,</span> <span class="kt">int</span> <span class="n">original</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoGetSGroupParentId</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sgroup</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoSetSGroupParentId</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sgroup</span><span class="p">,</span> <span class="kt">int</span> <span class="n">parent</span><span class="p">);</span>
+
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoAddTemplate</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">,</span> <span class="kt">int</span> <span class="n">templates</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">tname</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoRemoveTemplate</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">tname</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoFindTemplate</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">tname</span><span class="p">);</span>
+
+<span class="n">CEXPORT</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="nf">indigoGetSTroupClass</span> <span class="p">(</span><span class="kt">int</span> <span class="n">tgroup</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="nf">indigoGetSTroupName</span> <span class="p">(</span><span class="kt">int</span> <span class="n">tgroup</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="nf">indigoGetSTroupAlias</span> <span class="p">(</span><span class="kt">int</span> <span class="n">tgroup</span><span class="p">);</span>
 
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoTransformSCSRtoCTAB</span> <span class="p">(</span><span class="kt">int</span> <span class="n">item</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoTransformCTABtoSCSR</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">,</span> <span class="kt">int</span> <span class="n">templates</span><span class="p">);</span>
@@ -2814,6 +3074,9 @@
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoAddAtom</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">symbol</span><span class="p">);</span>
 <span class="c1">// Set a new atom instead of specified</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoResetAtom</span> <span class="p">(</span><span class="kt">int</span> <span class="n">atom</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">symbol</span><span class="p">);</span>
+
+<span class="n">CEXPORT</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="nf">indigoGetTemplateAtomClass</span> <span class="p">(</span><span class="kt">int</span> <span class="n">atom</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoSetTemplateAtomClass</span> <span class="p">(</span><span class="kt">int</span> <span class="n">atom</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">);</span>
 
 <span class="c1">// Accepts Rsite name &quot;R&quot; (or just &quot;&quot;), &quot;R1&quot;, &quot;R2&quot; or list with names &quot;R1 R3&quot;</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoAddRSite</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">);</span>
@@ -2889,6 +3152,9 @@
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoHasCoord</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoHasZCoord</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">);</span>
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoIsChiral</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoCheckChirality</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoCheck3DStereo</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">);</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoCheckStereo</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">);</span>
 
 <span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoIsPossibleFischerProjection</span> <span class="p">(</span><span class="kt">int</span> <span class="n">molecule</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">options</span><span class="p">);</span>
 
@@ -3007,6 +3273,12 @@
 
 <span class="c1">//Return one bits string for the fingerprint object</span>
 <span class="n">CEXPORT</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="nf">indigoOneBitsList</span> <span class="p">(</span><span class="kt">int</span> <span class="n">fingerprint</span><span class="p">);</span>
+
+<span class="c1">// Returns a &#39;fingerprint&#39; object with data from &#39;buffer&#39;</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoLoadFingerprintFromBuffer</span><span class="p">(</span><span class="k">const</span> <span class="n">byte</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">);</span>
+
+<span class="c1">// Constructs a &#39;fingerprint&#39; object from a normalized array of double descriptors</span>
+<span class="n">CEXPORT</span> <span class="kt">int</span> <span class="nf">indigoLoadFingerprintFromDescriptors</span><span class="p">(</span><span class="k">const</span> <span class="kt">double</span> <span class="o">*</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">arr_len</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">double</span> <span class="n">density</span><span class="p">);</span>
 
 <span class="c1">// Accepts two molecules, two reactions, or two fingerprints.</span>
 <span class="c1">// Returns the similarity measure between them.</span>

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Web3D DICOM Viewer</title>
+    <title>Med3web Viewer and Editor</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
@@ -59,7 +59,7 @@
 
     <script type="text/javascript">
         $(window).load(function () {
-            //document.title = "Web3D DICOM Viewer"
+            //document.title = "Med3web Viewer and Editor"
             UUI.Navigation.init();
             UUI.Global_Search.init();
 
@@ -266,7 +266,7 @@
                             <ol class="uui-breadcrumbs">
                                 <li><a href="../index.html">Home</a></li>
                                 
-                                <li class="active"><a href="#">Web3D DICOM Viewer</a></li>
+                                <li class="active"><a href="#">Med3web Viewer and Editor</a></li>
                             </ol>
                         </div>
                     </div>
@@ -283,19 +283,25 @@
 
         <!-- Filled in static/js/custom-sidenav.js -->
         <div id="local-toc" style="display: none;"><ul>
-<li><a class="reference internal" href="#">Web3D DICOM Viewer</a><ul>
+<li><a class="reference internal" href="#">Med3web Viewer and Editor</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
 <li><a class="reference internal" href="#key-features">Key Features</a></li>
 <li><a class="reference internal" href="#fast-and-comfortable">Fast and Comfortable</a></li>
 <li><a class="reference internal" href="#simple-user-interface">Simple User Interface</a></li>
 <li><a class="reference internal" href="#d-visualization">3D Visualization</a><ul>
-<li><a class="reference internal" href="#isosurface-visualization">Isosurface visualization</a></li>
-<li><a class="reference internal" href="#volume-visualization">Volume visualization</a></li>
+<li><a class="reference internal" href="#isosurface-visualization">Isosurface Visualization</a></li>
+<li><a class="reference internal" href="#volume-visualization">Volume Visualization</a></li>
 <li><a class="reference internal" href="#max-intensity-projection-mip">Max Intensity Projection (MIP)</a></li>
+<li><a class="reference internal" href="#segmented-data-visualization">Segmented Data Visualization</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#id1">2D Visualization</a></li>
 <li><a class="reference internal" href="#dicom-tags">DICOM Tags</a></li>
+<li><a class="reference internal" href="#edit-advanced-view-functionality">Edit/Advanced View functionality</a><ul>
+<li><a class="reference internal" href="#automatic-segmentation">Automatic Segmentation</a></li>
+<li><a class="reference internal" href="#semi-automatic-methods-for-opening-areas-of-interest">Semi-automatic Methods for Opening Areas of Interest</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#try-in-one-click">Try in One Click</a></li>
 <li><a class="reference internal" href="#source-code">Source Code</a></li>
 <li><a class="reference internal" href="#license">License</a></li>
@@ -313,8 +319,8 @@
                             
                                 <div class="col-xs-12 col-md-9" role="main">
                             
-  <div class="section" id="web3d-dicom-viewer">
-<h1>Web3D DICOM Viewer<a class="headerlink" href="#web3d-dicom-viewer" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="med3web-viewer-and-editor">
+<h1>Med3web Viewer and Editor<a class="headerlink" href="#med3web-viewer-and-editor" title="Permalink to this headline">¶</a></h1>
 <style>
 img.align-center, .figure.align-center img { display: block; margin: 1em auto }
 .figure.align-center { text-align: center }
@@ -337,25 +343,31 @@ img.align-center, .figure.align-center img { display: block; margin: 1em auto }
 </div>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>Web3D DICOM Viewer creates a 3D model of a body part based on the set of plane images (DICOM, NIfTI, etc. file formats)
-and shows 2D/3D views via a web browser without any installations. Web3D DICOM Viewer will please you with speed and
-convenience in comparison even with desktop analogues. Fast smooth 3D visualization based on unique rendering algorithms
-developed at EPAM, which don’t require data preprocessing, thus visualization starts right after the data loading.</p>
-<p>EPAM DICOM 3D Viewer is a <a class="reference external" href="#license">free and open source</a> software.</p>
-<p>Try the DICOM 3D Viewer online — <a class="reference external" href="http://epa.ms/mri">epa.ms/mri</a>.</p>
-<p><strong>We have not found similar web-tool.</strong> We have developed <a class="reference external" href="papers.html">unique optimization of isosurface rendering algorithm</a>.</p>
+<p>Med3web is a web-based viewer for DICOM and other formats.
+It creates a 3D model of a body part based on a set of plane images (DICOM, NIfTI, HDR, KTX, etc. file formats)
+and shows 2D/3D views via a web browser without any installations. Med3web will please you with speed and
+convenience in comparison even with desktop analogues. Fast smooth 3D visualization is based on unique rendering algorithms
+developed at EPAM. These algorithms do not require data preprocessing, thus visualization starts right after data loading.</p>
+<p>Med3web can edit volumetric data in order to select areas of interest.
+This functionality is implemented with automatic and semi-automatic segmentation methods.</p>
+<p>The viewer is a <a class="reference external" href="#license">free and open-source</a> software.
+Try Med3web demo online — <a class="reference external" href="http://epa.ms/mri">epa.ms/mri</a>.</p>
+<p><strong>We did not find a similar web-tool.</strong> We have developed <a class="reference external" href="papers.html">a unique optimization of isosurface rendering algorithm</a>.</p>
 </div>
 <div class="section" id="key-features">
 <h2>Key Features<a class="headerlink" href="#key-features" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>DICOM, NIfTI, KTX formats support.</li>
-<li>5 view modes, 3D and 2D visualization.</li>
-<li>Real-time adjustment of Isosurface and transfer function levels in 3D views.</li>
-<li>Measurement of distances, angles, areas in 2D views.</li>
+<li>DICOM, NIfTI, KTX, and HDR formats support.</li>
+<li>Five view modes, 3D and 2D visualization.</li>
+<li>Real-time adjustment of isosurface and transfer function levels in 3D views.</li>
+<li>Measurement of distances, angles, and areas in 2D views.</li>
 <li>Viewing sample in any standard projection.</li>
 <li>DICOM tags displaying.</li>
-<li>Real time volume clipping to open areas of interest.</li>
-<li>Javascript + WebGL.</li>
+<li>Real-time volume clipping to open areas of interest.</li>
+<li>Automatic volume segmentation.</li>
+<li>Semi-automatic methods for areas of interest opening/selection.</li>
+<li>Segmentation data visualization.</li>
+<li>JavaScript + WebGL.</li>
 </ol>
 </div>
 <div class="section" id="fast-and-comfortable">
@@ -371,7 +383,7 @@ developed at EPAM, which don’t require data preprocessing, thus visualization 
 <div class="section" id="simple-user-interface">
 <h2>Simple User Interface<a class="headerlink" href="#simple-user-interface" title="Permalink to this headline">¶</a></h2>
 <p>The functionality depends on the selected visualization mode (2D or 3D), and in case of 3D mode on the selected
-visualization method. There is a 3D visualization mode with a volume render method on the screenshot below. In this case
+visualization method. The screenshot below shows a 3D visualization mode with a volume render method. In this case,
 the interface provides the ability to select areas of interest inside the volume, brightness and contrast adjustment, as
 well as the ability to use the near clipping plane position.</p>
 <img alt="../_images/mri-ui.jpg" class="align-center" src="../_images/mri-ui.jpg" />
@@ -379,20 +391,20 @@ well as the ability to use the near clipping plane position.</p>
 <div class="section" id="d-visualization">
 <h2>3D Visualization<a class="headerlink" href="#d-visualization" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="isosurface-visualization">
-<h3>Isosurface visualization<a class="headerlink" href="#isosurface-visualization" title="Permalink to this headline">¶</a></h3>
-<p>This method suits for bones, skin surface and segmented areas visualization. The base of this method is a search of the
+<h3>Isosurface Visualization<a class="headerlink" href="#isosurface-visualization" title="Permalink to this headline">¶</a></h3>
+<p>This method suits for bones, skin surface and segmented areas visualization. The base of this method is a search of
 intersection points between the rays corresponding to pixels and the isosurface. The user selects the level of the
-isosurface and the near clipping plane position with sliders.</p>
+isosurface and the clipping plane position with sliders.</p>
 <img alt="../_images/mri-surf.jpg" class="align-center" src="../_images/mri-surf.jpg" />
 </div>
 <div class="section" id="volume-visualization">
-<h3>Volume visualization<a class="headerlink" href="#volume-visualization" title="Permalink to this headline">¶</a></h3>
+<h3>Volume Visualization<a class="headerlink" href="#volume-visualization" title="Permalink to this headline">¶</a></h3>
 <p>This method suits for studying the initial data volume and the soft tissues visualization. It allows to choose an area
 of the interest by specifying the transfer function, which assigns the amount of the initial data to the amount of the
-transparency and color. To simplify the transfer function, the user uses a function in the application, which he can
-define by adjusting three parameters (a, b and c) with sliders. The function is nonzero only if the intensity <em>i</em>
+transparency and color. To simplify the transfer function, the user uses a function in the application. The user can
+define this function by adjusting three parameters (a, b, and c) with sliders. The function is nonzero only if the intensity <em>i</em>
 satisfies the conditions <em>a &lt; i &lt; b</em> or <em>i &gt; c</em>. When the function satisfies the first condition, the user can determine
-the transparency value by the value of the additional slider, and when it satisfies the second, the transparency value
+the transparency value by the value of the additional slider, and when it satisfies the second one, the transparency value
 is considered equal to 1. Such a subset of transfer functions is sufficient to visualize the overwhelming array of
 medical data. The base of this method is the calculation of the volume integral along the rays passing through the
 pixels.</p>
@@ -400,10 +412,15 @@ pixels.</p>
 </div>
 <div class="section" id="max-intensity-projection-mip">
 <h3>Max Intensity Projection (MIP)<a class="headerlink" href="#max-intensity-projection-mip" title="Permalink to this headline">¶</a></h3>
-<p>The method suits for the primary analysis of the initial data, as it does not require setting of values of any
-parameters. The bas of this method is the computation of the maximum values of the intensities of the original data
+<p>The method suits for the primary analysis of the initial data, as it does not require setting values of any
+parameters. This method is based on computation of the maximum values for intensities of the original data
 along the rays passing through the pixels.</p>
 <img alt="../_images/mri-mip.jpg" class="align-center" src="../_images/mri-mip.jpg" />
+</div>
+<div class="section" id="segmented-data-visualization">
+<h3>Segmented Data Visualization<a class="headerlink" href="#segmented-data-visualization" title="Permalink to this headline">¶</a></h3>
+<p>User can select ROI (Region of Interest) during segmented data visualization.</p>
+<img alt="../_images/mri-roi.jpg" class="align-center" src="../_images/mri-roi.jpg" />
 </div>
 </div>
 <div class="section" id="id1">
@@ -418,20 +435,36 @@ fragments of this data.</p>
 images, and so on.</p>
 <img alt="../_images/mri-tags.jpg" class="align-center" src="../_images/mri-tags.jpg" />
 </div>
+<div class="section" id="edit-advanced-view-functionality">
+<h2>Edit/Advanced View functionality<a class="headerlink" href="#edit-advanced-view-functionality" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="automatic-segmentation">
+<h3>Automatic Segmentation<a class="headerlink" href="#automatic-segmentation" title="Permalink to this headline">¶</a></h3>
+<p>Special automatic segmentation methods are implemented for the lungs data and skull tissues separation from brain.</p>
+<img alt="../_images/mri-seg.jpg" class="align-center" src="../_images/mri-seg.jpg" />
+</div>
+<div class="section" id="semi-automatic-methods-for-opening-areas-of-interest">
+<h3>Semi-automatic Methods for Opening Areas of Interest<a class="headerlink" href="#semi-automatic-methods-for-opening-areas-of-interest" title="Permalink to this headline">¶</a></h3>
+<p>Med3web has two methods for opening/selection areas of interest.
+The first one allows to clear volumetric data, which obstructs area of interest.</p>
+<img alt="../_images/mri-clear.jpg" class="align-center" src="../_images/mri-clear.jpg" />
+<p>The second method allows to cut the area of interest from the source volume using deformable 3D triangle mesh.</p>
+<img alt="../_images/mri-cut.jpg" class="align-center" src="../_images/mri-cut.jpg" />
+</div>
+</div>
 <div class="section" id="try-in-one-click">
 <h2>Try in One Click<a class="headerlink" href="#try-in-one-click" title="Permalink to this headline">¶</a></h2>
-<p>You can try the <a class="reference external" href="http://epa.ms/mri">Web3D DICOM Viewer demo</a> online. But please be informed, that not all browsers
+<p>You can try the <a class="reference external" href="http://epa.ms/mri">Med3web demo</a> online. Please note that not all browsers
 and video cards are supported yet.</p>
-<p>The product is under development. More features to come in future releases: automated segmentation, volume cut,
-automated ROI detection, and complex colored transfer functions, etc.</p>
+<p>The product is under development. More features are planned for future releases: automated segmentation, volume cut,
+automated ROI detection, complex colored transfer functions, etc.</p>
 </div>
 <div class="section" id="source-code">
 <h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
-<p>Web3D DICOM Viewer is under active development and its source code is available at <a class="reference external" href="https://github.com/epam/med3web">GitHub</a>.</p>
+<p>Med3web is under active development and its source code is available at <a class="reference external" href="https://github.com/epam/med3web">GitHub</a>.</p>
 </div>
 <div class="section" id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>Copyright 2016-2018 EPAM Systems, Inc.</p>
+<p>Copyright 2016-2019 EPAM Systems, Inc.</p>
 <p>Licensed under the Apache License, Version 2.0 (the “License”);
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at</p>
