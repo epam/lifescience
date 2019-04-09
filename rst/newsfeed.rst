@@ -9,6 +9,44 @@ News
 
 
 
+Miew recent updates
+-------------------
+
+*5 April 2019*
+
+
+In recent months, we have significantly improved our 3D Molecular Viewer, both in terms of quality and quantity. More file formats are supported now, not to mention the further development of volumetric rendering (electron density maps).
+
+
+* |miew_releases|
+
+* |miew_app|
+
+.. |miew_releases| raw:: html
+
+   <a href="https://github.com/epam/miew/releases" target="_blank">Release Notes</a>
+
+.. |miew_app| raw:: html
+
+   <a href="https://epa.ms/miew-app/" target="_blank">Demo</a>
+
+
+
+Med3web has got new features
+----------------------------
+
+*7 Feb 2019*
+
+Automatic segmentation methods support lungs data and brain separation from skull tissues. Semi-automatic methods can clear volumetric data, as well as separate the area of interest from the source volume using deformable 3D triangle mesh. Also Med3web supports HDR files format now. 
+
+* |mri_app|
+
+.. |mri_app| raw:: html
+
+   <a href="https://epa.ms/mri/" target="_blank">Demo</a>
+
+
+
 Indigo ELN v2.0 released
 ------------------------
 
