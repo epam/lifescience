@@ -27,7 +27,7 @@ Bioinformatics
    -  Unique rendering algorithms and GPU processing approach provide high
       performance, smooth interaction and ability to convenient working
       regardless location and time.
-   -  Try the `Med3web demo <http://epa.ms/mri>`__ online.
+   -  Try the `Med3web demo <https://epa.ms/mri>`__ online.
 
 -  `Miew – 3D Molecular Viewer <miew/>`__ High performance web tool for advanced visualization and manipulation of molecular structures |image9|
 
@@ -35,10 +35,9 @@ Bioinformatics
       editing of small molecules as well as large molecular complexes,
       including abilities to view, analyze, and modify the 3D structure of a
       molecule.
-   -  Miew functions as a standalone HTML5 web application or integrates as a
-      component into your pages. The latest versions of WebGL-enabled desktop
+   -  Miew integrates as a component into your pages or functions as a standalone HTML5 web application. The latest versions of WebGL-enabled desktop
       and mobile browsers are supported.
-   -  Try the `Miew demo <http://miew.opensource.epam.com/>`__ online.
+   -  Try the `Miew demo <https://epa.ms/miew-app>`__ online.
 
 -  `New Genome Browser <ngb/index.html>`__ Web at a speed and functionality of desktop |image8|
 
