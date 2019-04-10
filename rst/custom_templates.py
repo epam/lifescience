@@ -17,7 +17,8 @@ GROUP_MAP = {
 "Imago OCR": "Cheminformatics",
 "Parso": "Data processing",
 "Selenium Framework": "Software development",
-"Web3D DICOM Viewer": "Bioinformatics",
+"Cloud Pipeline": "Bioinformatics",
+"Med3web": "Bioinformatics",
 "Miew": "Bioinformatics",
 "NGB": "Bioinformatics"
 }
