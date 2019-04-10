@@ -5,7 +5,8 @@ Life Sciences Open Source
     :hidden:
 
     Bingo <bingo/index>
-    Web3D DICOM Viewer <mri/index>
+    Cloud Pipeline <cloud/index>
+    Med3web <mri/index>
     Miew <miew/index>
     NGB <ngb/index>
     Indigo Toolkit <indigo/index>
@@ -17,6 +18,17 @@ Life Sciences Open Source
 
 Bioinformatics
 --------------
+
+-  `Cloud Pipeline <cloud/>`__ Genomics analysis and Scientific computing in the Cloud of your choice |image11|
+
+   -  Provides the ability to build & run the customized scripts and workflows
+      that support genomics analysis, modeling & simulation, and machine
+      learning activities that are required to accelerate drug discovery research.
+
+   -  Wraps Cloud compute and storage resources into a single service, providing
+      an easy and scalable approach to accomplish a wide range of scientific tasks.
+
+   -  Supports three main Cloud platforms: Amazon, Azure, Google.
 
 -  `Med3web Viewer and Editor <mri/>`__ High performance web tool for advanced visualization and manipulation of medical images: MRI, CT, etc. |image10|
 
@@ -143,5 +155,4 @@ Software development
 .. |image8| image:: themes/lifescience-theme/static/images/pics/NGB3.JPG
 .. |image9| image:: themes/lifescience-theme/static/images/pics/miew.jpg
 .. |image10| image:: themes/lifescience-theme/static/images/pics/mri.jpg
-
-
+.. |image11| image:: themes/lifescience-theme/static/images/pics/cloud.jpg
