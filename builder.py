@@ -11,8 +11,9 @@ else:
     sys.path.insert(0, dll_full_path)
 
 builder = 'html'    
+source = 'rst'
     
-lst = [fn, '-c', 'source', '-b', builder, 'source', 'build/' + builder]
+lst = [fn, '-c', source, '-b', builder, source, 'build/' + builder]
 
 images_dir = 'build/' + builder + '/_images'
 if not os.path.exists(images_dir):
