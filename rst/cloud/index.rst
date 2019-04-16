@@ -120,15 +120,27 @@ Cloud Pipeline is an Open Source platform that provides the following features a
     :align: center
 
 - Users can build custom pipelines using a mixture of languages (including shell script, Python, R,
-  Java, Perl, etc.), and save them to a built-in, version-controlled GitLab repository.
+  Java, Perl, WDL, etc.), and save them to a built-in, version-controlled GitLab repository.
+
+..  image:: ../assets/cloud/cloud-wdl.png
+    :align: center
+
 - Ability to create cloud storage units that upload and download data using a Web UI, Command Line
   interface (CLI) or by mounting storage folders to local Windows/Linux/Mac workstations.
 - Ability to store and process data in multiple cloud regions.
+
+..  image:: ../assets/cloud/cloud-region.png
+    :align: center
+
 - Management of data access permissions for both internal and external users.
 - Support for thousands of users, utilizing thousands of nodes, and tens thousands of cores
   simultaneously. 
 - Support for single/multiple computation node configurations, as well as auto-scaled SGE clusters,
   MPI-based clusters, various CPU/GPU/Memory/Disks configurations.
+
+..  image:: ../assets/cloud/cloud-config.png
+    :align: center
+
 - Protecting data using data-at-rest and data-in-motion encryption.
 
 Cloud Pipeline's Innovative Technology
