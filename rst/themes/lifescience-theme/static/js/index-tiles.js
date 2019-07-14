@@ -3,7 +3,7 @@ $(document).ready(function() {
     if (!indexBody) return;
     var data = getTiles(indexBody);
 
-    console.log(data);
+    //console.log(data);
 
     var htmlstring =
         '{{#each items}}' +
