@@ -17,25 +17,13 @@
     <script src="{{ pathto('_static/js/lib/jquery-3.4.1.min.js', 1) }}"></script>
 
     <!--Sphinx files-->
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:    './',
-            VERSION:     '0.3.0',
-            COLLAPSE_INDEX: false,
-            FILE_SUFFIX: '.html',
-            HAS_SOURCE:  false
-        };
-    </script>
+    
     <script src="{{ pathto('_static/underscore.js', 1) }}"></script>
     <script src="{{ pathto('_static/doctools.js', 1) }}"></script>
 
     {% if pagename == "search" %}
     <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
-    <script type="text/javascript">
-        jQuery(function () {
-            Search.loadIndex("{{ pathto('searchindex.js', 1) }}");
-        });
-    </script>
+    <script src="{{ pathto('_static/js/search-load.js', 1) }}"></script>
     {% endif %}
 
     <!-- Bootstrap Core -->
@@ -67,13 +55,6 @@
     <script src="{{ pathto('_static/js/index-tiles.js', 1) }}"></script>
     {% endif %}
 
-    <script type="text/javascript">
-        $(window).on('load',function () {
-            //document.title = "{{ title }}"
-            UUI.Navigation.init();
-            UUI.Global_Search.init();
+    <script src="{{ pathto('_static/js/doc-load.js', 1) }}"></script>
 
-            $('.news').height($('#main-tiles').height())
-        });
-    </script>
 </head>
