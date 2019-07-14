@@ -29,3 +29,10 @@ function paginationClick(number, offset) {
     if (number == firstDisabledPage-1 || currentPage == firstDisabledPage-1) $('#next-page').toggleClass('disable');
     currentPage = number;
 }
+
+$("#prev-page").on("click", paginationClick(null, -1));
+$("#next-page").on("click", paginationClick(null, 1));
+$("#pagination-0").on("click", paginationClick(0));
+$("#pagination-1").on("click", paginationClick(1));
+$("#pagination-2").on("click", paginationClick(2));
+$("#pagination-3").on("click", paginationClick(3));
