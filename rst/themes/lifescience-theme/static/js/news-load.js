@@ -30,9 +30,9 @@ function paginationClick(number, offset) {
     currentPage = number;
 }
 
-$("#prev-page").click(paginationClick(null, -1));
-$("#next-page").click( paginationClick(null, 1));
-$("#pagination-0").click( paginationClick(0));
-$("#pagination-1").click( paginationClick(1));
-$("#pagination-2").click( paginationClick(2));
-$("#pagination-3").click( paginationClick(3));
+$("#prev-page").click(function(){paginationClick(null, -1);});
+$("#next-page").click( function(){paginationClick(null, 1);});
+$("#pagination-0").click( function(){paginationClick(0);});
+$("#pagination-1").click( function(){paginationClick(1);});
+$("#pagination-2").click( function(){paginationClick(2);});
+$("#pagination-3").click( function(){paginationClick(3);});

@@ -1,3 +1,3 @@
 jQuery(function () {
-    Search.loadIndex("{{ pathto('searchindex.js', 1) }}");
+    Search.loadIndex("searchindex.js");
 });
