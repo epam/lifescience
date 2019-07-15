@@ -8,7 +8,7 @@ $(document).ready(function() {
     var htmlstring =
         '{{#each items}}' +
         '   <div class="col-xs-12 col-sm-6">' +
-        '       <div class="tile" onclick="location.href=\'{{href}}\'">' +
+        '       <div class="tile tile-click-{{path}}">' +
         '           <div class="tile-image">' +
         '           <img src="{{image}}" alt="">' +
         '           </div>' +
@@ -28,6 +28,10 @@ $(document).ready(function() {
 
     var template = Handlebars.compile(htmlstring);
     $('#index-tiles').append(template({items: data}));
+    data.forEach(function(tile){
+        // console.log(tile);
+        $(".tile-click-"+tile["path"]).click(function(){location.href=tile["href"]});
+     });
 
     function getTiles(current) {
         var tiles = [];
@@ -60,6 +64,7 @@ $(document).ready(function() {
         tile['href'] = tmp.childNodes[0].href;
         tile['title'] = tmp.childNodes[0].innerText;
         tile['text'] = '';
+        tile['path'] = tmp.childNodes[0].innerText.split(" ").join("");
         for (var index = 1; index < tmp.childNodes.length; index++) {
             var elem = tmp.childNodes[index];
             if (elem.localName == 'ul') {
