@@ -3,25 +3,7 @@ EPAM Cloud Pipeline
 
 ..  raw:: html
 
-    <style>
-    img.align-center, .figure.align-center img { display: block; margin: 1em auto }
-    .figure.align-center { text-align: center }
-    .section:target h2 {
-        padding: 16px;
-        margin: 10px -16px 0;
-        animation: highlight 3s;
-    }
-    .section:target h3 {
-        padding: 10px;
-        margin: -10px -10px 0;
-        animation: highlight 3s;
-    }
-    @keyframes highlight {
-        0% { background-color: #c1e6ee; color: white }
-        20% { color: #333 }
-        100% { background-color: none; }
-    }
-    </style>
+    <link rel="stylesheet" href="../_static/css/bio-custom.css"/>
 
 
 .. toctree::

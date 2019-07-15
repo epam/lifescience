@@ -3,25 +3,7 @@ Miew – 3D Molecular Viewer
 
 ..  raw:: html
 
-    <style>
-    img.align-center, .figure.align-center img { display: block; margin: 1em auto }
-    .figure.align-center { text-align: center }
-    .section:target h2 {
-        padding: 16px;
-        margin: 10px -16px 0;
-        animation: highlight 3s;
-    }
-    .section:target h3 {
-        padding: 10px;
-        margin: -10px -10px 0;
-        animation: highlight 3s;
-    }
-    @keyframes highlight {
-        0% { background-color: #c1e6ee; color: white }
-        20% { color: #333 }
-        100% { background-color: none; }
-    }
-    </style>
+    <link rel="stylesheet" href="../_static/css/bio-custom.css"/>
 
 
 .. toctree::
@@ -167,29 +149,7 @@ and analyzing molecular structures.
 
 ..  raw:: html
 
-    <style>
-    /* https://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio */
-    .aspect-ratio-wrapper {
-      max-width: 720px;
-      width: 100%;
-      display: block;
-      position: relative;
-      margin: 1em auto;
-    }
-    .aspect-ratio-wrapper:after {
-      padding-top: 56.25%; /* = 100%/(640/360) */
-      display: block;
-      content: '';
-    }
-    .aspect-ratio-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    </style>
+    <link rel="stylesheet" href="../_static/css/bio-custom.css"/>
     <div class="aspect-ratio-wrapper"><iframe src="https://www.youtube.com/embed/NhOl9mxTOMM"></iframe></div>
 
 Even a web browser application can take advantage of AR/VR algorithms.
