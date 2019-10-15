@@ -8,6 +8,32 @@ News
     release-notes/index
 
 
+Change license for Indigo and Bingo
+-----------------------------------
+
+*15 October 2019*
+
+We are glad to announce that the license was changed for Indigo toolkit and Bingo cartridges to *Apache License v2*. The new license should allow for the Indigo to be used in more products and utilities.
+Please find terms and conditions for the license at the |al_v2_license| . All the latest releases can be found at the download page. The new versions also contain some enhancements and bug fixes.
+
+* |al_v2_github|
+
+* |al_v2_indigo_downloads|
+
+.. |al_v2_github| raw:: html
+
+   <a href="https://github.com/epam/indigo" target="_blank">Github page</a>
+
+.. |al_v2_indigo_downloads| raw:: html
+
+   <a href="download/indigo/index.html" target="_blank">Downloads</a>
+
+.. |al_v2_license| raw:: html
+
+   <a href="https://github.com/epam/Indigo/blob/master/LICENSE" target="_blank">Github page</a>
+
+   
+
 
 Miew recent updates
 -------------------
