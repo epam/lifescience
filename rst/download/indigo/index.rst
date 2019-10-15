@@ -86,7 +86,7 @@ Just add ``Indigo.Net`` as a dependency into the project.
 
 **PyPi package**
 
-Indigo python SDK can be found at `PyPi <https://pypi.org/project/epam.indigo/>`
+Indigo python SDK can be found at `PyPi <https://pypi.org/project/epam.indigo/>`__
 
 One can install the Indigo library using *pip* utility
 
