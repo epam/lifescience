@@ -302,10 +302,10 @@ Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.3.html>`_
 `Repository on GitHub <https://github.com/epam/Indigo>`__
 
 
-**Maven Central Repository**
+**Maven Repository**
 ----------------------------
 
-All the Indigo Java packages are uploaded to `The Central Repository <http://search.maven.org/#search|ga|1|g%3A%22com.epam.indigo%22>`_.
+All the Indigo Java packages are uploaded to `The Maven Central Repository <http://search.maven.org/#search|ga|1|g%3A%22com.epam.indigo%22>`_.
 
 ======================   ===============
 GroupId                  ArtifactId
