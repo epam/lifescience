@@ -7,11 +7,7 @@
 
     examples
     report
-    imago-gui
-    imago_console
-    c
-    java
-    dependencies
+    installation
     changelog
     Downloads <../download/imago>
 
