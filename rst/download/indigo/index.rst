@@ -5,7 +5,7 @@ Download Indigo Toolkit
 .. toctree::
     :includehidden:
 
-    Release Notes <../indigo/release-notes/index>
+    Release Notes <../../indigo/release-notes/index>
 
 
 
