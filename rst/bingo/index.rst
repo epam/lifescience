@@ -138,22 +138,15 @@ tips <performance-tips-oracle.html>`__.
 License
 -------
 
-Copyright © 2009-2014 LifeSciences unit of EPAM Systems, Inc.
+Copyright © 2009-2019 LifeSciences unit of EPAM Systems, Inc.
+
+Bingo version 1.0.0 was released under GNU General Public License v3.0
+Bingo version 1.9.0 was re-licensed under Apache License, Version 2.
 
 This program is free software: You can redistribute it and/or modify it
-under the terms of the GNU General Public License as published by the
-Free Software Foundation; version 3 of the License.
+under the terms of the the Apache License, Version 2.0.
 
-This program is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
-Public License for more details.
-
-You should have received a copy of the GNU General Public License along
-with this program. If you did not not, please see
-http://www.gnu.org/licenses/.
-
-**Additional permissions under GNU GPL version 3 section 7.** If you
+**Additional permissions** If you
 modify this program, or any covered work, by linking or combining it
 with an Oracle Database, containing parts covered by the terms of the
 `Oracle Technology Network Developer
@@ -167,6 +160,10 @@ Express Edition, containing parts covered by the terms of the
 appropriate Microsoft SQL Server End User License Agreement, the
 licensors of this program grant you additional permission to convey the
 resulting work.
+
+You should have received a copy of the Apache License along
+with this program. If you did not not, please see
+https://www.apache.org/licenses/LICENSE-2.0
 
 Feedback
 --------
@@ -189,14 +186,13 @@ indigo-general@googlegroups.com to get your message posted.
 Commercial Availability
 -----------------------
 
-
-If the GPL-licensed Bingo does not fit your needs, please contact us to discuss the purchase of a commercial license.
+The Apache License v2.0 allows Bingo to be used as a component in proprietary software products.
+If the Apache License v2.0 does not fit your needs, please contact us to discuss the purchase of a commercial license.
 You may need the commercial license if you want to:
 
 -  Receive ongoing support and maintenance
--  Include Bingo as a component in your proprietary software product
--  Use Bingo with Oracle licensed not with OTN Developer License, or
-   with MS SQL Server Enterprise Edition
+-  Design and implement custom changes for the cartridge
+-  Do any other development/testing required for a proprietary software product
 
 
 
