@@ -2,11 +2,6 @@
 Download Indigo Toolkit
 =======================
 
-.. toctree::
-    :includehidden:
-
-    Release Notes <../../indigo/release-notes/index>
-
 
 
 ----
@@ -420,6 +415,18 @@ Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.1.html>`_
 `Source code <https://github.com/epam/Indigo/archive/indigo-1.2.1.zip>`__
 
 `Repository on GitHub <https://github.com/epam/Indigo>`__
+
+
+
+-------------
+Release Notes
+-------------
+
+
+.. toctree::
+    :includehidden:
+
+    Release Notes <../../indigo/release-notes/index>
 
 
 --------------

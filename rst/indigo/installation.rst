@@ -2,12 +2,16 @@
 SDK Installation
 ================
 
+
+-----
+Build
+-----
+
 .. toctree::
     :includehidden:
 
     Build <../indigo/build.rst>
 
-This example demonstrates how to install Indigo SDK to all supported languages.
 
 ----
 Java
@@ -26,17 +30,22 @@ If your project use Maven, you can add Indigo dependency to your pom.xml:
         <dependency>
             <groupId>com.epam.indigo</groupId>
             <artifactId>indigo</artifactId>
-            <version>1.3.0beta.r16</version>
+            <version>1.4.0-beta.r0</version>
         </dependency>
         <dependency>
             <groupId>com.epam.indigo</groupId>
             <artifactId>indigo-inchi</artifactId>
-            <version>1.3.0beta.r16</version>
+            <version>1.4.0-beta.r0</version>
         </dependency>
         <dependency>
             <groupId>com.epam.indigo</groupId>
             <artifactId>indigo-renderer</artifactId>
-            <version>1.3.0beta.r16</version>
+            <version>1.4.0-beta.r0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.epam.indigo</groupId>
+            <artifactId>bingo-nosql</artifactId>
+            <version>1.4.0-beta.r0</version>
         </dependency>
         ...
     </dependencies>
@@ -52,20 +61,15 @@ On Debian starting from Wheezy and Ubuntu starting from 12.10 you can install st
 Python
 ------
 
-On Debian starting from Wheezy and Ubuntu starting from 12.10 you can install stable version of Indigo SDK with the following-command:
+Indigo python SDK can be found at `PyPi <https://pypi.org/project/epam.indigo/>`__
 
-::
+One can install the Indigo library using *pip* utility
 
-	sudo apt-get install python-indigo
 
-Otherwise you have to use one of this ways [#python]_:
+.. code-block:: xml
 
-- add path to content of Indigo archive to environment variable ``PYTHONPATH``.
-- copy content of Indigo archive to folder ``site-packages`` in Python installation directory.
-- copy content of Indigo archive to your project folder.
-- append path to Indigo to ``sys.path``.
+    pip install epam.indigo
 
-We also plan to add Indigo to Python Package Index.
 
 ----
 .NET
