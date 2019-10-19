@@ -2,6 +2,11 @@
 SDK Installation
 ================
 
+.. toctree::
+    :includehidden:
+
+    Build <../indigo/build.rst>
+
 This example demonstrates how to install Indigo SDK to all supported languages.
 
 ----

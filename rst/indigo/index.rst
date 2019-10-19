@@ -6,15 +6,12 @@ Indigo Toolkit
     :includehidden:
 
     API <api/index>
-    API Reference <api/reference>
     Concepts <concepts/index>
     utilities
-    Downloads <../download/indigo/index>
-    Build <../indigo/build.rst>
     installation
     options/index
-    release-notes/index
     examples/index
+    Downloads <../download/indigo/index>
 
 .. meta::
    :description: Indigo is a universal molecular toolkit that can be used for molecular fingerprinting, substructure search, and molecular visualization. Also capable of performing a molecular similarity search, it is 100% open source and provides enhanced stereochemistry support for end users, as well as a documented API for developers.

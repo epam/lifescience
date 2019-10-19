@@ -1,6 +1,12 @@
 API
 ===
 
+.. toctree::
+    :includehidden:
+
+    API Reference <reference>
+
+
 Overview
 --------
 

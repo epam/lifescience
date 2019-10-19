@@ -2,6 +2,12 @@
 Download Indigo Toolkit
 =======================
 
+.. toctree::
+    :includehidden:
+
+    Release Notes <../indigo/release-notes/index>
+
+
 
 ----
 Beta
