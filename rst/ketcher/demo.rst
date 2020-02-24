@@ -6,7 +6,7 @@
 
 .. raw:: html
 
-    <iframe class="ketcher-demo" src="http://indigoweb.epm-lsop.projects.epam.com/ketcher/?api_path=/v2"/>
+    <iframe class="ketcher-demo" src="https://lifescience.opensource.epam.com/content/ketcher/ketcher.html"/>
 
 
 
