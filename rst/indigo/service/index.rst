@@ -84,9 +84,22 @@ Indigo service can be installed as a Docker image. Please see Downloads() sectio
    }
 
 
+Run from Docker Hub
+===================
 
+Run Docker container by the following command
+
+.. code-block:: sh
+
+    docker run --restart=always -d -p 8002:8002 -e "INDIGO_UWSGI_RUN_PARAMETERS=--plugin python3 --py-autoreload=1" 
+    -e "PYTHONPATH=/srv/indigo-python" -e "PYTHONDONTWRITEBYTECODE=1" --name=indigo_service  
+    epmlsop/indigo_service:latest /bin/sh -c "supervisord -n"
+
+
+Run from Local Image
+====================
     
-4. Import docker image
+1. Import docker image
 
 
 
@@ -95,7 +108,7 @@ Indigo service can be installed as a Docker image. Please see Downloads() sectio
     cat indigo_service_${version}.tar.gz | docker import -  indigo_service:${version}
 
 
-4. Run Docker container by the following command
+2. Run Docker container by the following command
 
 
 .. code-block:: sh
