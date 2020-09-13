@@ -83,6 +83,8 @@ env:
 	$(ENVDIR)/bin/pip install -r requirements.txt
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	cp .nojekyll $(BUILDDIR)/html/
+	cp google46a3b136091a8a82.html $(BUILDDIR)/html/
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
