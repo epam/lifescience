@@ -14,18 +14,10 @@
     <link rel="icon" type="image/png" href="../../_static/images/icons/favicon-16.png">
 
     <!-- jQuery Core -->
-    <script src="../../_static/js/lib/jquery-1.12.0.min.js"></script>
+    <script src="../../_static/js/lib/jquery-3.4.1.min.js"></script>
 
     <!--Sphinx files-->
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:    './',
-            VERSION:     '0.3.0',
-            COLLAPSE_INDEX: false,
-            FILE_SUFFIX: '.html',
-            HAS_SOURCE:  false
-        };
-    </script>
+    <script src="../../_static/js/doc-load.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
 
@@ -34,6 +26,7 @@
     <!-- Bootstrap Core -->
     <link rel="stylesheet" href="../../_static/bootstrap/css/bootstrap.min.css"/>
     <script src="../../_static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap/js/popper.min.js"></script>
 
     <!-- EPAM UUI JavaScript Core -->
     <script src="../../_static/js/uui-core.min.js" type="text/javascript"></script>
@@ -57,15 +50,8 @@
 
     
 
-    <script type="text/javascript">
-        $(window).load(function () {
-            //document.title = "Calculating Properties"
-            UUI.Navigation.init();
-            UUI.Global_Search.init();
+    
 
-            $('.news').height($('#main-tiles').height())
-        });
-    </script>
 </head>
 
 <body>
@@ -122,7 +108,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../download/bingo.html">Downloads</a></li>
 </ul>
 </li>
-<li class="sub-menu"><a class="reference internal" href="../../mri/index.html">Web3D DICOM Viewer<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="sub-menu"><a class="reference internal" href="../../cloud/index.html">Cloud Pipeline</a><ul class="simple">
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../../mri/index.html">Med3web<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
 <li class="toctree-l2"><a class="reference internal" href="../../mri/papers.html">Research and Development</a></li>
 </ul>
 </li>
@@ -134,15 +123,12 @@
 <li class="sub-menu"><a class="reference internal" href="../../ngb/index.html">NGB</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Indigo Toolkit<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
 <li class="toctree-l2"><a class="reference internal" href="../api/index.html">API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/reference.html">API Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../utilities.html">Indigo Utilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../download/indigo/index.html">Downloads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../build.html">Build</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation.html">SDK Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../options/index.html">Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release-notes/index.html">Release Notes</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/indigo/index.html">Downloads</a></li>
 </ul>
 </li>
 <li class="sub-menu"><a class="reference internal" href="../../ketcher/index.html">Ketcher<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
@@ -161,11 +147,7 @@
 <li class="sub-menu"><a class="reference internal" href="../../imago/index.html">Imago OCR<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
 <li class="toctree-l2"><a class="reference internal" href="../../imago/examples.html">Features and Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../imago/report.html">Comparison Report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../imago/imago-gui.html">Imago OCR Visual Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../imago/imago_console.html">Imago Console Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../imago/c.html">C Library Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../imago/java.html">Java Bindings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../imago/dependencies.html">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../imago/installation.html">Imago Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../imago/changelog.html">Changelog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../download/imago.html">Downloads</a></li>
 </ul>
@@ -221,7 +203,7 @@
                         
 
 <div class="dropdown-menu" role="menu">
-    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="../../bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="../../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="../../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="../../bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="../../download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="../api/index.html">API</a></li><li><a class="reference internal" href="../api/reference.html">API Reference</a></li><li><a class="reference internal" href="../concepts/index.html">Concepts</a></li><li><a class="reference internal" href="../utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="../../download/indigo/index.html">Downloads</a></li><li><a class="reference internal" href="../build.html">Build</a></li><li><a class="reference internal" href="../installation.html">SDK Installation</a></li><li><a class="reference internal" href="../options/index.html">Options</a></li><li><a class="reference internal" href="../release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="index.html">Examples</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="../../ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="../../ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="../../ketcher/help.html">Help</a></li><li><a class="reference internal" href="../../ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="../../ketcher/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="../../download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="../eln/changelog.html">Indigo ELN Changelog</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="../../imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="../../imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="../../imago/imago-gui.html">Imago OCR Visual Tool</a></li><li><a class="reference internal" href="../../imago/imago_console.html">Imago Console Application</a></li><li><a class="reference internal" href="../../imago/c.html">C Library Reference</a></li><li><a class="reference internal" href="../../imago/java.html">Java Bindings</a></li><li><a class="reference internal" href="../../imago/dependencies.html">Dependencies</a></li><li><a class="reference internal" href="../../imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="../../download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../mri/index.html">Web3D DICOM Viewer &raquo;</a></span><ul><li><a class="reference internal" href="../../mri/papers.html">Research and Development</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../miew/index.html">Miew &raquo;</a></span><ul><li><a class="reference internal" href="../../miew/embed.html">Embedding the Viewer</a></li><li><a class="reference internal" href="../../miew/selectors.html">Selection Language</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../ngb/index.html">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="../../parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../../download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
+    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="../../bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="../../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="../../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="../../bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="../../download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="../api/index.html">API</a></li><li><a class="reference internal" href="../concepts/index.html">Concepts</a></li><li><a class="reference internal" href="../utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="../installation.html">SDK Installation</a></li><li><a class="reference internal" href="../options/index.html">Options</a></li><li><a class="reference internal" href="index.html">Examples</a></li><li><a class="reference internal" href="../../download/indigo/index.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="../../ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="../../ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="../../ketcher/help.html">Help</a></li><li><a class="reference internal" href="../../ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="../../ketcher/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="../../download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="../eln/changelog.html">Indigo ELN Changelog</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="../../imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="../../imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="../../imago/installation.html">Imago Installation</a></li><li><a class="reference internal" href="../../imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="../../download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../cloud/index.html">Cloud Pipeline &raquo;</a></span><ul></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../mri/index.html">Med3web &raquo;</a></span><ul><li><a class="reference internal" href="../../mri/papers.html">Research and Development</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../miew/index.html">Miew &raquo;</a></span><ul><li><a class="reference internal" href="../../miew/embed.html">Embedding the Viewer</a></li><li><a class="reference internal" href="../../miew/selectors.html">Selection Language</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../ngb/index.html">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="../../parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../../download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
 </div>
                     </li>
                     <li><a href="../../resources.html"><span>Resources</span></a></li>
@@ -244,17 +226,7 @@
         </nav>
     </div>
     
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-20662471-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+<script src="../../_static/js/google-analytics-load.js"></script>
 </header>
 
         <div class="uui-main-container">
@@ -286,7 +258,7 @@
     <section class="uui-accordion" id="accordion1">
 
         <!-- Filled in static/js/custom-sidenav.js -->
-        <div id="local-toc" style="display: none;"><ul>
+        <div id="local-toc" class="invisible"><ul>
 <li><a class="reference internal" href="#">Calculating Properties</a><ul>
 <li><a class="reference internal" href="#canonical-smiles">Canonical Smiles</a></li>
 <li><a class="reference internal" href="#enumeration-of-tautomers">Enumeration of Tautomers</a></li>
@@ -317,7 +289,7 @@
 <span class="n">mol</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMolecule</span><span class="p">(</span><span class="s1">&#39;CC1=C(Cl)C=CC2=C1NS(=O)S2&#39;</span><span class="p">)</span>
 
 <span class="c1">#print canonical smiles for the molecule</span>
-<span class="k">print</span><span class="p">(</span><span class="n">mol</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mol</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">())</span>
 </pre></div>
 </div>
 <div class="line"><br /></div>
@@ -331,7 +303,7 @@ Output:<div class="output highlight-default"><div class="highlight"><pre><span><
 <span class="n">rxn</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadReaction</span><span class="p">(</span><span class="s1">&#39;[CH2:1]=[CH:2][CH:3]=[CH:4][CH2:5][H:6]&gt;&gt;[H:6][CH2:1][CH:2]=[CH:3][CH:4]=[CH2:5]&#39;</span><span class="p">)</span>
 
 <span class="c1">#print canonical smiles for the reaction</span>
-<span class="k">print</span><span class="p">(</span><span class="n">rxn</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rxn</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">())</span>
 </pre></div>
 </div>
 <div class="line"><br /></div>
@@ -361,12 +333,12 @@ Output:<div class="output highlight-default"><div class="highlight"><pre><span><
     <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">lst</span><span class="p">))</span>
+<span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">lst</span><span class="p">))</span>
 
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-margins&quot;</span><span class="p">,</span> <span class="s2">&quot;20, 10&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-offset&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-property&quot;</span><span class="p">,</span> <span class="s2">&quot;grid-comment&quot;</span><span class="p">)</span>
-<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/indigorenderer_fc243baf7f8fdbed66cf377264e9c87e13195acd.svg"><img alt="../../_images/indigorenderer_fc243baf7f8fdbed66cf377264e9c87e13195acd.svg" src="../../_images/indigorenderer_fc243baf7f8fdbed66cf377264e9c87e13195acd.svg" /></a>
@@ -404,12 +376,12 @@ Output:<div class="output highlight-default"><div class="highlight"><pre><span><
     <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">lst</span><span class="p">))</span>
+<span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">lst</span><span class="p">))</span>
 
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-margins&quot;</span><span class="p">,</span> <span class="s2">&quot;20, 10&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-offset&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-property&quot;</span><span class="p">,</span> <span class="s2">&quot;grid-comment&quot;</span><span class="p">)</span>
-<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/indigorenderer_2c90f4df5002473895e899ae4c03ffa810da31f2.svg"><img alt="../../_images/indigorenderer_2c90f4df5002473895e899ae4c03ffa810da31f2.svg" src="../../_images/indigorenderer_2c90f4df5002473895e899ae4c03ffa810da31f2.svg" /></a>
@@ -448,12 +420,12 @@ This happens because some aromatized forms could have different dearomatized rep
     <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
 
 <span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">lst</span><span class="p">))</span>
+<span class="nb">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) &quot;</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">lst</span><span class="p">))</span>
 
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-margins&quot;</span><span class="p">,</span> <span class="s2">&quot;20, 10&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-offset&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-property&quot;</span><span class="p">,</span> <span class="s2">&quot;grid-comment&quot;</span><span class="p">)</span>
-<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/indigorenderer_30af5691078187d43876f72d8d301b0e7f483e0c.svg"><img alt="../../_images/indigorenderer_30af5691078187d43876f72d8d301b0e7f483e0c.svg" src="../../_images/indigorenderer_30af5691078187d43876f72d8d301b0e7f483e0c.svg" /></a>
@@ -490,57 +462,57 @@ Output:<div class="output highlight-default"><div class="highlight"><pre><span><
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_TYPE&quot;</span><span class="p">,</span> <span class="s2">&quot;SUP&quot;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Superatom with label </span><span class="si">%s</span><span class="s2"> found&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">getSuperatom</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()))</span><span class="o">.</span><span class="n">getSGroupName</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Superatom with label </span><span class="si">%s</span><span class="s2"> found&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">getSuperatom</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()))</span><span class="o">.</span><span class="n">getSGroupName</span><span class="p">());</span>
 
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_LABEL&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroups with label Z:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroups with label Z:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
 
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_CLASS&quot;</span><span class="p">,</span> <span class="s2">&quot;AA&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroups with class AA:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroups with class AA:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
 
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_DISPLAY_OPTION&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroups expanded:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroups expanded:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
 
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_BRACKET_STYLE&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroups with square brackets:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroups with square brackets:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
 
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_DATA&quot;</span><span class="p">,</span> <span class="s2">&quot;Selection&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroups with data contains Selection:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroups with data contains Selection:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
 
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_DATA_NAME&quot;</span><span class="p">,</span> <span class="s2">&quot;comment&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroups with data field name comment:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroups with data field name comment:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
 
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_DATA_DISPLAY&quot;</span><span class="p">,</span> <span class="s2">&quot;detached&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroups with detached data field:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroups with detached data field:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
 
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_DATA_LOCATION&quot;</span><span class="p">,</span> <span class="s2">&quot;relative&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroups with relative data field:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroups with relative data field:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
 
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_ATOMS&quot;</span><span class="p">,</span> <span class="s2">&quot;103, 104&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroups with atoms 103 and 104:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroups with atoms 103 and 104:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
 
 <span class="n">sgs</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">findSGroups</span><span class="p">(</span><span class="s2">&quot;SG_BONDS&quot;</span><span class="p">,</span> <span class="s2">&quot;249, 245&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroups with bonds 245 and 249:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroups with bonds 245 and 249:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">sg</span> <span class="ow">in</span> <span class="n">sgs</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SGroup Index = </span><span class="si">%d</span><span class="s2"> &quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupIndex</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;, SGroup Type = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sg</span><span class="o">.</span><span class="n">getSGroupType</span><span class="p">());</span>
 </pre></div>
 </div>
 Input:     <a class="reference download internal" href="../../_downloads/all_features_mol.mol" download=""><code class="docutils literal"><span class="pre">data/all_features_mol.mol</span></code></a>     <div class="line"><br /></div>
@@ -591,8 +563,8 @@ mol file generation.</p>
 <span class="c1"># indigoRenderer = IndigoRenderer(indigo)</span>
 <span class="c1">#</span>
 <span class="c1"># Load structure</span>
-<span class="nb">file</span> <span class="o">=</span> <span class="s2">&quot;data/RS-example.mol&quot;</span>
-<span class="n">mol1</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMoleculeFromFile</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+<span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;data/RS-example.mol&quot;</span>
+<span class="n">mol1</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMoleculeFromFile</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 <span class="n">mol2</span> <span class="o">=</span> <span class="n">mol1</span><span class="o">.</span><span class="n">clone</span><span class="p">();</span>
 
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;molfile-saving-add-stereo-desc&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">);</span>
@@ -610,7 +582,7 @@ mol file generation.</p>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-margins&quot;</span><span class="p">,</span> <span class="s2">&quot;20, 10&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-offset&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
 
-<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 Input:     <a class="reference download internal" href="../../_downloads/RS-example.mol" download=""><code class="docutils literal"><span class="pre">data/RS-example.mol</span></code></a>     <div class="line"><br /></div>
@@ -619,8 +591,8 @@ Input:     <a class="reference download internal" href="../../_downloads/RS-exam
 <span class="c1"># indigoRenderer = IndigoRenderer(indigo)</span>
 <span class="c1">#</span>
 <span class="c1"># Load structure</span>
-<span class="nb">file</span> <span class="o">=</span> <span class="s2">&quot;data/ZE-example.mol&quot;</span>
-<span class="n">mol1</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMoleculeFromFile</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+<span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;data/ZE-example.mol&quot;</span>
+<span class="n">mol1</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMoleculeFromFile</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 <span class="n">mol2</span> <span class="o">=</span> <span class="n">mol1</span><span class="o">.</span><span class="n">clone</span><span class="p">();</span>
 
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;molfile-saving-add-stereo-desc&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">);</span>
@@ -638,7 +610,7 @@ Input:     <a class="reference download internal" href="../../_downloads/RS-exam
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-margins&quot;</span><span class="p">,</span> <span class="s2">&quot;20, 10&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-offset&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
 
-<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 Input:     <a class="reference download internal" href="../../_downloads/ZE-example.mol" download=""><code class="docutils literal"><span class="pre">data/ZE-example.mol</span></code></a>     <div class="line"><br /></div>
@@ -647,8 +619,8 @@ Input:     <a class="reference download internal" href="../../_downloads/ZE-exam
 <span class="c1"># indigoRenderer = IndigoRenderer(indigo)</span>
 <span class="c1">#</span>
 <span class="c1"># Load structure</span>
-<span class="nb">file</span> <span class="o">=</span> <span class="s2">&quot;data/Z-example.mol&quot;</span>
-<span class="n">mol1</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMoleculeFromFile</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+<span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;data/Z-example.mol&quot;</span>
+<span class="n">mol1</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMoleculeFromFile</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 <span class="n">mol2</span> <span class="o">=</span> <span class="n">mol1</span><span class="o">.</span><span class="n">clone</span><span class="p">();</span>
 
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;molfile-saving-add-stereo-desc&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">);</span>
@@ -666,7 +638,7 @@ Input:     <a class="reference download internal" href="../../_downloads/ZE-exam
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-margins&quot;</span><span class="p">,</span> <span class="s2">&quot;20, 10&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-offset&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
 
-<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 Input:     <a class="reference download internal" href="../../_downloads/Z-example.mol" download=""><code class="docutils literal"><span class="pre">data/Z-example.mol</span></code></a>     <div class="line"><br /></div>
@@ -699,7 +671,7 @@ CIP stereo descriptors estimations:</p>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-margins&quot;</span><span class="p">,</span> <span class="s2">&quot;20, 10&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-offset&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
 
-<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 Input:     <a class="reference download internal" href="../../_downloads/C14_R_iso.mol" download=""><code class="docutils literal"><span class="pre">data/C14_R_iso.mol</span></code></a>     <a class="reference download internal" href="../../_downloads/C14_R_iso_2.mol" download=""><code class="docutils literal"><span class="pre">data/C14_R_iso_2.mol</span></code></a>     <div class="line"><br /></div>
@@ -730,7 +702,7 @@ Input:     <a class="reference download internal" href="../../_downloads/C14_R_i
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-margins&quot;</span><span class="p">,</span> <span class="s2">&quot;20, 10&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">setOption</span><span class="p">(</span><span class="s2">&quot;render-grid-title-offset&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
 
-<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 Input:     <a class="reference download internal" href="../../_downloads/P-92_2_1_3_ex1.mol" download=""><code class="docutils literal"><span class="pre">data/P-92_2_1_3_ex1.mol</span></code></a>     <a class="reference download internal" href="../../_downloads/P-92_2_1_3_ex2.mol" download=""><code class="docutils literal"><span class="pre">data/P-92_2_1_3_ex2.mol</span></code></a>     <div class="line"><br /></div>
@@ -753,7 +725,7 @@ Input:     <a class="reference download internal" href="../../_downloads/P-92_2_
             <div class="epam-logo">
                 <img src="../../_static/images/Logo_Epam_Color.svg" alt="" />
             </div>
-            <p class="copyright">© 2017, EPAM Systems. All Rights Reserved.</p>
+            <p class="copyright">© 2020, EPAM Systems. All Rights Reserved.</p>
         </div>
         <div class="footer-navigation">
             <ul class="uui-footer-navigation">
@@ -767,17 +739,7 @@ Input:     <a class="reference download internal" href="../../_downloads/P-92_2_
 </footer>
     </div>
     
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-20662471-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+<script src="../../_static/js/google-analytics-load.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>EPAM Cloud Pipeline</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    
+
+    <link rel="stylesheet" href="../_static/fonts/font-awesome/css/font-awesome.min.css"/>
+    
+    <link rel="icon" type="image/png" href="../_static/images/icons/favicon-16.png">
+
+    <!-- jQuery Core -->
+    <script src="../_static/js/lib/jquery-3.4.1.min.js"></script>
+
+    <!--Sphinx files-->
+    <script src="../_static/js/doc-load.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+
+    
+
+    <!-- Bootstrap Core -->
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css"/>
+    <script src="../_static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap/js/popper.min.js"></script>
+
+    <!-- EPAM UUI JavaScript Core -->
+    <script src="../_static/js/uui-core.min.js" type="text/javascript"></script>
+    <script src="../_static/js/uui-global-search.min.js" type="text/javascript"></script>
+
+    <!-- EPAM UUI Styles Core -->
+    <link rel="stylesheet" href="../_static/css/uui-styles.css"/>
+
+    <!-- Scroll for UUI Sidebar -->
+    <link rel="stylesheet" href="../_static/css/lib/jquery.mCustomScrollbar.min.css"/>
+    <script src="../_static/js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Handlebars -->
+    <script src="../_static/js/handlebars.js"></script>
+
+    <!-- Custom sidenav -->
+    <script src="../_static/js/custom-sidenav.js"></script>
+
+    <!-- Pygments -->
+    <link rel="stylesheet" href="../_static/css/pygments.css"/>
+
+    
+
+    
+
+</head>
+
+<body>
+    
+    <div class="wrapper">
+
+        <header>
+    <div class="uui-header">
+        <nav>
+            <!--Responsive html-layout-->
+            <div class="uui-responsive-header">
+                <div class="responsive-header">
+                    <div class="responsive-toggle-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="responsive-hide-menu">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="../index.html" class="responsive-brand-logo">
+                        <span class="arrow fa fa-angle-left"></span>
+                        <span class="logo">
+                        <img src="../_static/images/Logo_Epam_Color.svg" alt=""/>
+                    </span>
+                        <span class="title">Life Sciences</span>
+                    </a>
+                    <ul class="responsive-header-tools nav navbar-nav">
+                        <li class="responsive-header-icon search-icon">
+                            <a href="#" onclick="return false">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="responsive-menu">
+                    <div class="menu-wrapper">
+                        <div class="menu-scroll">
+                            <ul class="nav navbar-nav">
+                                <li class="sub-menu active">
+                                    <a href="../index.html">
+                                        <span>Products</span>
+                                        <div class="arrow fa fa-angle-right"></div>
+                                    </a>
+                                    
+
+<ul class="sub">
+<li class="sub-menu"><a class="reference internal" href="../bingo/index.html">Bingo<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-oracle.html">Bingo Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bingo/bingo-nosql.html">Bingo NoSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/bingo.html">Downloads</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cloud Pipeline</a><ul class="simple">
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../mri/index.html">Med3web<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../mri/papers.html">Research and Development</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../miew/index.html">Miew<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../miew/embed.html">Embedding the Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miew/selectors.html">Selection Language</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../ngb/index.html">NGB</a></li>
+<li class="sub-menu"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../indigo/api/index.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/utilities.html">Indigo Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/installation.html">SDK Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/options/index.html">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../indigo/examples/index.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/indigo/index.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../ketcher/index.html">Ketcher<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/developers-manual.html">Developers Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/help.html">Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/demo.html">Ketcher 2.0 Demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ketcher/release-notes/index.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ketcher.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../indigo/eln/changelog.html">Indigo ELN Changelog</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../imago/index.html">Imago OCR<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../imago/examples.html">Features and Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/report.html">Comparison Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/installation.html">Imago Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../imago/changelog.html">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/imago.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../parso.html">Parso<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="toctree-l2"><a class="reference internal" href="../parso/changelog.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/parso.html">Downloads</a></li>
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../selenium.html">Selenium Framework</a></li>
+</ul>
+
+                                </li>
+                                <li><a href="../resources.html"><span>Resources</span></a></li>
+                                <li><a href="../download/index.html"><span>Downloads</span></a></li>
+                                <li><a href="../contact.html"><span>Contact Info</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-global-search">
+                    <div class="search-header">
+                        <div class="header-wrapper">
+                            <div class="search-field">
+                                <label></label>
+                                <form action="../search.html" method="get">
+    <input type="search" name="q" class="uui-search" placeholder="Search"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+</form>
+                            </div>
+                            <div class="hide-search">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="header-container">
+                <a href="../index.html" class="brand-logo">
+                    <span class="logo">
+                        <img src="../_static/images/Logo_Epam_Color.svg" alt=""/>
+                    </span>
+                    <span class="title">
+                      Life Sciences Open Source
+                    </span>
+                </a>
+                <ul class="uui-navigation nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Products</a>
+                        
+
+<div class="dropdown-menu" role="menu">
+    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="../bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="../bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="../download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../indigo/index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="../indigo/api/index.html">API</a></li><li><a class="reference internal" href="../indigo/concepts/index.html">Concepts</a></li><li><a class="reference internal" href="../indigo/utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="../indigo/installation.html">SDK Installation</a></li><li><a class="reference internal" href="../indigo/options/index.html">Options</a></li><li><a class="reference internal" href="../indigo/examples/index.html">Examples</a></li><li><a class="reference internal" href="../download/indigo/index.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="../ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="../ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="../ketcher/help.html">Help</a></li><li><a class="reference internal" href="../ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="../ketcher/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="../download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../indigo/eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="../indigo/eln/changelog.html">Indigo ELN Changelog</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="../imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="../imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="../imago/installation.html">Imago Installation</a></li><li><a class="reference internal" href="../imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="../download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="#">Cloud Pipeline &raquo;</a></span><ul></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../mri/index.html">Med3web &raquo;</a></span><ul><li><a class="reference internal" href="../mri/papers.html">Research and Development</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../miew/index.html">Miew &raquo;</a></span><ul><li><a class="reference internal" href="../miew/embed.html">Embedding the Viewer</a></li><li><a class="reference internal" href="../miew/selectors.html">Selection Language</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../ngb/index.html">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="../parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
+</div>
+                    </li>
+                    <li><a href="../resources.html"><span>Resources</span></a></li>
+                    <li><a href="../download/index.html"><span>Downloads</span></a></li>
+                    <li><a href="../contact.html"><span>Contact Info</span></a></li>
+                </ul>
+                <ul class="uui-header-tools nav navbar-nav">
+                    <li class="uui-global-search">
+                        <div class="search-field">
+                            <label></label>
+                            <form action="../search.html" method="get">
+    <input type="search" name="q" class="uui-search" placeholder="Search"/>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+</form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+<script src="../_static/js/google-analytics-load.js"></script>
+</header>
+
+        <div class="uui-main-container">
+            <main>
+                
+                <section class="uui-breadcrumbs-container">
+                    <div class="container">
+                        <div class="row">
+                            <ol class="uui-breadcrumbs">
+                                <li><a href="../index.html">Home</a></li>
+                                
+                                <li class="active"><a href="#">EPAM Cloud Pipeline</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                <section class="promo-section">
+                    <div class="container">
+                        <div class="row">
+                            
+                                
+                                <div class="col-xs-12 col-md-3" role="complementary">
+                                    <div class="sidenav hidden-print hidden-xs hidden-sm affix-top" data-spy="affix" data-offset-top="0"
+     data-offset-bottom="0">
+    <section class="uui-accordion" id="accordion1">
+
+        <!-- Filled in static/js/custom-sidenav.js -->
+        <div id="local-toc" class="invisible"><ul>
+<li><a class="reference internal" href="#">EPAM Cloud Pipeline</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#problems-addressed-by-cloud-pipeline">Problems Addressed by Cloud Pipeline</a></li>
+<li><a class="reference internal" href="#product-description">Product Description</a></li>
+<li><a class="reference internal" href="#cloud-pipeline-s-innovative-technology">Cloud Pipeline’s Innovative Technology</a></li>
+<li><a class="reference internal" href="#source-code">Source code</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#feedback">Feedback</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+    </section>
+</div>
+                                </div>
+                                
+                            
+                            
+                                <div class="col-xs-12 col-md-9" role="main">
+                            
+  <div class="section" id="epam-cloud-pipeline">
+<h1>EPAM Cloud Pipeline<a class="headerlink" href="#epam-cloud-pipeline" title="Permalink to this headline">¶</a></h1>
+<link rel="stylesheet" href="../_static/css/bio-custom.css"/><div class="toctree-wrapper compound">
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>EPAM Cloud Pipeline is a web-based Cloud environment that provides the ability to build &amp; run the
+customized scripts &amp; workflows that support genomics analysis, modeling &amp; simulation, and machine
+learning activities that are required to accelerate drug discovery research.</p>
+<p>Cloud Pipeline supports three main Cloud platforms:</p>
+<ul class="simple">
+<li>Amazon</li>
+<li>Azure</li>
+<li>Google</li>
+</ul>
+<img alt="../_images/cloud-platf.png" class="align-center" src="../_images/cloud-platf.png" />
+<p>Cloud Pipeline solution wraps Cloud compute and storage resources into a single service, providing
+an easy and scalable approach to accomplish a wide range of scientific tasks.</p>
+<ul class="simple">
+<li>Genomics data processing: create data processing pipelines and run them in the Cloud in the
+automated way. Each pipeline represents a workflow script with versioned source code,
+documentation, and configuration. Users can create such scripts in the Cloud Pipeline environment
+or upload them from the local machine.</li>
+<li>Data storage management: create data storage, download or upload data, edit files right in the
+Cloud Pipeline user interface. File version control is supported.</li>
+<li>Tools management: create and deploy shared and personal computation environment using Docker’s
+container concept. Almost every pipeline requires a specific package of software to run it, which
+is defined in a docker image. So when user starts a pipeline, Cloud Pipeline starts a new cloud
+instance (node) and runs a docker image at it.</li>
+<li>Scientific computing GUI applications: launch and run GUI-based applications using self-service
+Web interface. It is possible to choose cloud instance configuration, or even use a cluster.
+Applications are launched as Docker containers exposing Web endpoints or a remote desktop
+connection (noVNC, NoMachine).</li>
+</ul>
+<p>Cloud Pipeline provides a Web-based GUI and also supports CLI, which exposes most of the GUI
+features.</p>
+</div>
+<div class="section" id="problems-addressed-by-cloud-pipeline">
+<h2>Problems Addressed by Cloud Pipeline<a class="headerlink" href="#problems-addressed-by-cloud-pipeline" title="Permalink to this headline">¶</a></h2>
+<p>Many tasks in the Pharmaceutical R&amp;D process require significant and constantly increasing
+computational power and storage capacity. These tasks include:</p>
+<ul class="simple">
+<li>Genomic, transcriptomic, and other “omics” analysis</li>
+<li>PK/PD, QSP, and other types of modeling</li>
+<li>Clinical trials simulation</li>
+<li>AI/ML analysis in various areas, including the ones listed above, and many others.</li>
+</ul>
+<p>Moving data storage and processing to the cloud is an obvious option, however certain challenges
+specific to R&amp;D processes must be addressed:</p>
+<ul class="simple">
+<li>Many R&amp;D users, most of whom are scientists and not IT specialists, are not comfortable using
+cloud facilities directly (e.g. using command line interfaces and scripting languages).</li>
+<li>A few cloud-based offerings are available that offer Web UI to access data storage and pipeline
+building tools, however migrating pipelines from on premise to these platforms requires
+significant rework of existing workflows/scripts.</li>
+<li>3rd party cloud-based offerings are often not flexible enough to support the wide variety of
+tools, frameworks and scripting languages found in build analytical/modeling pipelines</li>
+<li>Integration of cloud applications with on premise applications (hybrid architecture) is often
+required; for example, when a database for annotating genes and pathways, or a license server for
+certain software is installed on premise.</li>
+<li>Integration with an enterprise’s user management/authentication system is usually a requirement,
+and using SSO (Single Sign-On) mechanism is a great benefit for users.</li>
+<li>Scientists and researchers need access to a scalable computational cluster to solve their most
+compute intensive tasks, while at the same time reliable mechanisms are needed to control cloud
+spending.</li>
+</ul>
+</div>
+<div class="section" id="product-description">
+<h2>Product Description<a class="headerlink" href="#product-description" title="Permalink to this headline">¶</a></h2>
+<p>Cloud Pipeline is an Open Source platform that provides the following features and capabilities:</p>
+<ul class="simple">
+<li>Powerful, user-friendly Web interface</li>
+</ul>
+<img alt="../_images/cloud-dash.png" class="align-center" src="../_images/cloud-dash.png" />
+<ul class="simple">
+<li>Support for multiple bioinformatics and modeling/simulation tools from an extensive library of
+Docker container images that are executed on cloud instances or clusters.</li>
+<li>Users can access active instances via Web based SSH connection, execute scripts, modify images by
+installing software packages, and commit modified images to the user’s personal repository.</li>
+</ul>
+<img alt="../_images/cloud-stop.png" class="align-center" src="../_images/cloud-stop.png" />
+<ul class="simple">
+<li>Ability to launch and manage interactive tools and applications with Web or Linux Desktop UIs.</li>
+</ul>
+<img alt="../_images/cloud-files.png" class="align-center" src="../_images/cloud-files.png" />
+<ul class="simple">
+<li>Users can build custom pipelines using a mixture of languages (including shell script, Python, R,
+Java, Perl, WDL, etc.), and save them to a built-in, version-controlled GitLab repository.</li>
+</ul>
+<img alt="../_images/cloud-wdl.png" class="align-center" src="../_images/cloud-wdl.png" />
+<ul class="simple">
+<li>Ability to create cloud storage units that upload and download data using a Web UI, Command Line
+interface (CLI) or by mounting storage folders to local Windows/Linux/Mac workstations.</li>
+<li>Ability to store and process data in multiple cloud regions.</li>
+</ul>
+<img alt="../_images/cloud-region.png" class="align-center" src="../_images/cloud-region.png" />
+<ul class="simple">
+<li>Management of data access permissions for both internal and external users.</li>
+<li>Support for thousands of users, utilizing thousands of nodes, and tens thousands of cores
+simultaneously.</li>
+<li>Support for single/multiple computation node configurations, as well as auto-scaled SGE clusters,
+MPI-based clusters, various CPU/GPU/Memory/Disks configurations.</li>
+</ul>
+<img alt="../_images/cloud-config.png" class="align-center" src="../_images/cloud-config.png" />
+<ul class="simple">
+<li>Protecting data using data-at-rest and data-in-motion encryption.</li>
+</ul>
+</div>
+<div class="section" id="cloud-pipeline-s-innovative-technology">
+<h2>Cloud Pipeline’s Innovative Technology<a class="headerlink" href="#cloud-pipeline-s-innovative-technology" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/cloud-scheme.png" class="align-center" src="../_images/cloud-scheme.png" />
+<ul class="simple">
+<li>A key innovation is providing users with a self-service environment where they can flexibly build
+and execute their own pipelines/models, while preserving the highest levels of safety for the
+data and application.</li>
+<li>Users can choose the cloud instance configuration and region and request launching a regular or
+auto-scaled cluster without being a cloud or IT expert.</li>
+<li>Cloud Pipeline has a cloud-independent architecture, which makes it simple to port the solution
+to various cloud platforms. Currently AWS, Azure, and GCP are supported.</li>
+<li>Cloud Pipeline uses Docker containers and the Kubernetes engine to orchestrate the execution of
+containerized applications.</li>
+<li>Cloud Pipeline has been implemented as a Virtual Private Cloud solution, that retains control
+over network connections and provides security and integration mechanisms for the enterprise’s
+IT/Security team.</li>
+<li>Integration with on premise clusters and applications, as well as with external clouds is fully
+supported.</li>
+<li>The platform also can host/execute Web-based applications tightly integrated with computation and
+storage facilities, and security mechanisms.</li>
+<li>A powerful API allows external applications to leverage Cloud Pipeline’s tools, storage, clusters
+and instances to perform the computational work and retrieve the result data for further
+processing.</li>
+</ul>
+</div>
+<div class="section" id="source-code">
+<h2>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
+<p>Cloud Pipeline source code, documentation, guides how to build and start are accessible
+<a class="reference external" href="https://github.com/epam/cloud-pipeline">at GitHub.</a></p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Copyright 2017-2019 <a class="reference external" href="https://www.epam.com/">EPAM Systems, Inc.</a></p>
+<p>Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<blockquote>
+<div><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></div></blockquote>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+</div>
+<div class="section" id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h2>
+<p>Do you need help in implementing Cloud Pipeline? Do you need a feature? Did you find a bug?
+<a class="reference external" href="https://github.com/epam/cloud-pipeline/issues">Report issues at GitHub</a>
+or contact us: <a class="reference external" href="mailto:ECP&#37;&#52;&#48;epam&#46;com">ECP<span>&#64;</span>epam<span>&#46;</span>com</a></p>
+</div>
+</div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+
+        <footer>
+    <div class="uui-promo-footer">
+        <div class="footer-logo-copyright">
+            <div class="epam-logo">
+                <img src="../_static/images/Logo_Epam_Color.svg" alt="" />
+            </div>
+            <p class="copyright">© 2020, EPAM Systems. All Rights Reserved.</p>
+        </div>
+        <div class="footer-navigation">
+            <ul class="uui-footer-navigation">
+                <li><a href="../index.html">Products</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../download/index.html">Downloads</a></li>
+                <li><a href="../contact.html">Contact Info</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+<script src="../_static/js/google-analytics-load.js"></script>
+    
+</body>
+</html>

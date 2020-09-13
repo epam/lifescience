@@ -14,18 +14,10 @@
     <link rel="icon" type="image/png" href="_static/images/icons/favicon-16.png">
 
     <!-- jQuery Core -->
-    <script src="_static/js/lib/jquery-1.12.0.min.js"></script>
+    <script src="_static/js/lib/jquery-3.4.1.min.js"></script>
 
     <!--Sphinx files-->
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:    './',
-            VERSION:     '0.3.0',
-            COLLAPSE_INDEX: false,
-            FILE_SUFFIX: '.html',
-            HAS_SOURCE:  false
-        };
-    </script>
+    <script src="_static/js/doc-load.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
 
@@ -34,6 +26,7 @@
     <!-- Bootstrap Core -->
     <link rel="stylesheet" href="_static/bootstrap/css/bootstrap.min.css"/>
     <script src="_static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="_static/bootstrap/js/popper.min.js"></script>
 
     <!-- EPAM UUI JavaScript Core -->
     <script src="_static/js/uui-core.min.js" type="text/javascript"></script>
@@ -57,15 +50,8 @@
 
     
 
-    <script type="text/javascript">
-        $(window).load(function () {
-            //document.title = "News"
-            UUI.Navigation.init();
-            UUI.Global_Search.init();
+    
 
-            $('.news').height($('#main-tiles').height())
-        });
-    </script>
 </head>
 
 <body>
@@ -74,6 +60,42 @@
     <div class="news-content" id="news">
 <div class="news-heading">News<a class="headerlink" href="#news" title="Permalink to this headline">¶</a></div>
 <div class="toctree-wrapper compound">
+</div>
+<div class="news-article" id="bingo-1-9-1-released">
+<h2>Bingo 1.9.1 released<a class="headerlink" href="#bingo-1-9-1-released" title="Permalink to this headline">¶</a></h2>
+<div class="news-date">13 Sep 2020</div>
+<p>New Bingo was released with PostgreSQL 11 and 12 support.</p>
+<ul class="uui-inline-list">
+<li><a href="bingo/changelog.html" target="_blank">Release Notes</a></li>
+<li><a href="download/bingo.html" target="_blank">Downloads</a></li>
+</ul>
+</div>
+<div class="news-article" id="change-license-for-indigo-and-bingo">
+<h2>Change license for Indigo and Bingo<a class="headerlink" href="#change-license-for-indigo-and-bingo" title="Permalink to this headline">¶</a></h2>
+<div class="news-date">15 October 2019</div>
+<p>We are glad to announce that the license was changed for Indigo toolkit and Bingo cartridges to <em>Apache License v2</em>. The new license should allow for the Indigo to be used in more products and utilities.
+Please find terms and conditions for the license at the <a href="https://github.com/epam/Indigo/blob/master/LICENSE" target="_blank">Github page</a> . All the latest releases can be found at the download page. The new versions also contain some enhancements and bug fixes.</p>
+<ul class="uui-inline-list">
+<li><a href="https://github.com/epam/indigo" target="_blank">Github page</a></li>
+<li><a href="download/indigo/index.html" target="_blank">Downloads</a></li>
+</ul>
+</div>
+<div class="news-article" id="miew-recent-updates">
+<h2>Miew recent updates<a class="headerlink" href="#miew-recent-updates" title="Permalink to this headline">¶</a></h2>
+<div class="news-date">5 April 2019</div>
+<p>In recent months, we have significantly improved our 3D Molecular Viewer, both in terms of quality and quantity. More file formats are supported now, not to mention the further development of volumetric rendering (electron density maps).</p>
+<ul class="uui-inline-list">
+<li><a href="https://github.com/epam/miew/releases" target="_blank">Release Notes</a></li>
+<li><a href="https://epa.ms/miew-app/" target="_blank">Demo</a></li>
+</ul>
+</div>
+<div class="news-article" id="med3web-has-got-new-features">
+<h2>Med3web has got new features<a class="headerlink" href="#med3web-has-got-new-features" title="Permalink to this headline">¶</a></h2>
+<div class="news-date">7 Feb 2019</div>
+<p>Automatic segmentation methods support lungs data and brain separation from skull tissues. Semi-automatic methods can clear volumetric data, as well as separate the area of interest from the source volume using deformable 3D triangle mesh. Also Med3web supports HDR files format now.</p>
+<ul class="uui-inline-list">
+<li><a href="https://epa.ms/mri/" target="_blank">Demo</a></li>
+</ul>
 </div>
 <div class="news-article" id="indigo-eln-v2-0-released">
 <h2>Indigo ELN v2.0 released<a class="headerlink" href="#indigo-eln-v2-0-released" title="Permalink to this headline">¶</a></h2>
@@ -239,22 +261,22 @@
             <li class="actions-wrapper">
                 <ul class="pagination-items">
                     <li id="prev-page" class="prev-page disable">
-                        <a onclick="paginationClick(null, -1)"><i class="fa fa-angle-left"></i></a>
+                        <a><i class="fa fa-angle-left"></i></a>
                     </li>
                 </ul>
             </li>
             <li class="pages-wrapper">
                 <ul class="pagination-items">
-                    <li id="pagination-0" class="active"><a onclick="paginationClick(0)">1</a></li>
-                    <li id="pagination-1"><a onclick="paginationClick(1)">2</a></li>
-                    <li id="pagination-2"><a onclick="paginationClick(2)">3</a></li>
-                    <li id="pagination-3"><a onclick="paginationClick(3)">4</a></li>
+                    <li id="pagination-0" class="active"><a>1</a></li>
+                    <li id="pagination-1"><a>2</a></li>
+                    <li id="pagination-2"><a>3</a></li>
+                    <li id="pagination-3"><a>4</a></li>
                 </ul>
             </li>
             <li class="actions-wrapper">
                 <ul class="pagination-items">
                     <li id="next-page" class="next-page">
-                        <a onclick="paginationClick(null, 1)"><i class="fa fa-angle-right"></i></a>
+                        <a><i class="fa fa-angle-right"></i></a>
                     </li>
                 </ul>
             </li>
@@ -262,39 +284,7 @@
     </div>
 </div>
 
-<script>
-    var currentPage = 0;
-    var articles = [];
-    var firstDisabledPage;
-    var newsContent = document.getElementsByClassName("news-content")[0];
-    for (var i = 0; i < newsContent.children.length; i++) {
-        if (newsContent.children[i].localName == 'div' && newsContent.children[i].classList.contains('news-article')) {
-            articles.push(newsContent.children[i]);
-            if (articles.indexOf(newsContent.children[i]) >= 3)
-                newsContent.children[i].classList.toggle('invisible');
-        }
-    }
-    firstDisabledPage = (articles.length / 3).toFixed();
-    for (i = firstDisabledPage; i < 3; i++) {
-        $('#pagination-' + i).toggleClass('disable');
-    }
-
-    function paginationClick(number, offset) {
-        if (number == currentPage) return;
-        if (number == null) number = currentPage + offset;
-
-        $('#pagination-' + currentPage).toggleClass('active');
-        $('#pagination-' + number).toggleClass('active');
-        for (var i = 0; i < articles.length; i++) {
-            if (i >= currentPage * 3 && i < currentPage * 3 + 3
-                || i >= number * 3 && i < number * 3 + 3)
-                articles[i].classList.toggle('invisible')
-        }
-        if (number == 0 || currentPage == 0) $('#prev-page').toggleClass('disable');
-        if (number == firstDisabledPage-1 || currentPage == firstDisabledPage-1) $('#next-page').toggleClass('disable');
-        currentPage = number;
-    }
-</script>
+<script src="_static/js/news-load.js"></script>
     
 </body>
 </html>

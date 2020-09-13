@@ -14,18 +14,10 @@
     <link rel="icon" type="image/png" href="../../_static/images/icons/favicon-16.png">
 
     <!-- jQuery Core -->
-    <script src="../../_static/js/lib/jquery-1.12.0.min.js"></script>
+    <script src="../../_static/js/lib/jquery-3.4.1.min.js"></script>
 
     <!--Sphinx files-->
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:    './',
-            VERSION:     '0.3.0',
-            COLLAPSE_INDEX: false,
-            FILE_SUFFIX: '.html',
-            HAS_SOURCE:  false
-        };
-    </script>
+    <script src="../../_static/js/doc-load.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
 
@@ -34,6 +26,7 @@
     <!-- Bootstrap Core -->
     <link rel="stylesheet" href="../../_static/bootstrap/css/bootstrap.min.css"/>
     <script src="../../_static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap/js/popper.min.js"></script>
 
     <!-- EPAM UUI JavaScript Core -->
     <script src="../../_static/js/uui-core.min.js" type="text/javascript"></script>
@@ -57,15 +50,8 @@
 
     
 
-    <script type="text/javascript">
-        $(window).load(function () {
-            //document.title = "API"
-            UUI.Navigation.init();
-            UUI.Global_Search.init();
+    
 
-            $('.news').height($('#main-tiles').height())
-        });
-    </script>
 </head>
 
 <body>
@@ -122,7 +108,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../download/bingo.html">Downloads</a></li>
 </ul>
 </li>
-<li class="sub-menu"><a class="reference internal" href="../../mri/index.html">Web3D DICOM Viewer<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="sub-menu"><a class="reference internal" href="../../cloud/index.html">Cloud Pipeline</a><ul class="simple">
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="../../mri/index.html">Med3web<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
 <li class="toctree-l2"><a class="reference internal" href="../../mri/papers.html">Research and Development</a></li>
 </ul>
 </li>
@@ -134,15 +123,12 @@
 <li class="sub-menu"><a class="reference internal" href="../../ngb/index.html">NGB</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Indigo Toolkit<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference.html">API Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../concepts/index.html">Concepts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../utilities.html">Indigo Utilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../download/indigo/index.html">Downloads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../build.html">Build</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation.html">SDK Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../options/index.html">Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release-notes/index.html">Release Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../examples/index.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../download/indigo/index.html">Downloads</a></li>
 </ul>
 </li>
 <li class="sub-menu"><a class="reference internal" href="../../ketcher/index.html">Ketcher<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
@@ -161,11 +147,7 @@
 <li class="sub-menu"><a class="reference internal" href="../../imago/index.html">Imago OCR<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
 <li class="toctree-l2"><a class="reference internal" href="../../imago/examples.html">Features and Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../imago/report.html">Comparison Report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../imago/imago-gui.html">Imago OCR Visual Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../imago/imago_console.html">Imago Console Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../imago/c.html">C Library Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../imago/java.html">Java Bindings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../imago/dependencies.html">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../imago/installation.html">Imago Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../imago/changelog.html">Changelog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../download/imago.html">Downloads</a></li>
 </ul>
@@ -221,7 +203,7 @@
                         
 
 <div class="dropdown-menu" role="menu">
-    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="../../bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="../../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="../../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="../../bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="../../download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="#">API</a></li><li><a class="reference internal" href="reference.html">API Reference</a></li><li><a class="reference internal" href="../concepts/index.html">Concepts</a></li><li><a class="reference internal" href="../utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="../../download/indigo/index.html">Downloads</a></li><li><a class="reference internal" href="../build.html">Build</a></li><li><a class="reference internal" href="../installation.html">SDK Installation</a></li><li><a class="reference internal" href="../options/index.html">Options</a></li><li><a class="reference internal" href="../release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="../examples/index.html">Examples</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="../../ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="../../ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="../../ketcher/help.html">Help</a></li><li><a class="reference internal" href="../../ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="../../ketcher/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="../../download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="../eln/changelog.html">Indigo ELN Changelog</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="../../imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="../../imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="../../imago/imago-gui.html">Imago OCR Visual Tool</a></li><li><a class="reference internal" href="../../imago/imago_console.html">Imago Console Application</a></li><li><a class="reference internal" href="../../imago/c.html">C Library Reference</a></li><li><a class="reference internal" href="../../imago/java.html">Java Bindings</a></li><li><a class="reference internal" href="../../imago/dependencies.html">Dependencies</a></li><li><a class="reference internal" href="../../imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="../../download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../mri/index.html">Web3D DICOM Viewer &raquo;</a></span><ul><li><a class="reference internal" href="../../mri/papers.html">Research and Development</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../miew/index.html">Miew &raquo;</a></span><ul><li><a class="reference internal" href="../../miew/embed.html">Embedding the Viewer</a></li><li><a class="reference internal" href="../../miew/selectors.html">Selection Language</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../ngb/index.html">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="../../parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../../download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
+    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="../../bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="../../bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="../../bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="../../bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="../../download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="#">API</a></li><li><a class="reference internal" href="../concepts/index.html">Concepts</a></li><li><a class="reference internal" href="../utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="../installation.html">SDK Installation</a></li><li><a class="reference internal" href="../options/index.html">Options</a></li><li><a class="reference internal" href="../examples/index.html">Examples</a></li><li><a class="reference internal" href="../../download/indigo/index.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="../../ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="../../ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="../../ketcher/help.html">Help</a></li><li><a class="reference internal" href="../../ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="../../ketcher/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="../../download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="../eln/changelog.html">Indigo ELN Changelog</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="../../imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="../../imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="../../imago/installation.html">Imago Installation</a></li><li><a class="reference internal" href="../../imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="../../download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../cloud/index.html">Cloud Pipeline &raquo;</a></span><ul></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../mri/index.html">Med3web &raquo;</a></span><ul><li><a class="reference internal" href="../../mri/papers.html">Research and Development</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../miew/index.html">Miew &raquo;</a></span><ul><li><a class="reference internal" href="../../miew/embed.html">Embedding the Viewer</a></li><li><a class="reference internal" href="../../miew/selectors.html">Selection Language</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../ngb/index.html">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="../../parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="../../download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="../../selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
 </div>
                     </li>
                     <li><a href="../../resources.html"><span>Resources</span></a></li>
@@ -244,17 +226,7 @@
         </nav>
     </div>
     
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-20662471-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+<script src="../../_static/js/google-analytics-load.js"></script>
 </header>
 
         <div class="uui-main-container">
@@ -284,7 +256,7 @@
     <section class="uui-accordion" id="accordion1">
 
         <!-- Filled in static/js/custom-sidenav.js -->
-        <div id="local-toc" style="display: none;"><ul>
+        <div id="local-toc" class="invisible"><ul>
 <li><a class="reference internal" href="#">API</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
 <li><a class="reference internal" href="#basics">Basics</a><ul>
@@ -418,6 +390,24 @@
                             
   <div class="section" id="api">
 <h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#python">Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reference.html#indigo">Indigo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference.html#indigoobject">IndigoObject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference.html#indigorenderer">IndigoRenderer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference.html#indigoinchi">IndigoInchi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#plain-c">Plain C</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reference.html#core-indigo-api">Core Indigo API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>This page describes the API of Indigo library and its rendering plugin.
@@ -464,9 +454,9 @@ API</a> page.</p>
 <div class="section" id="indigo-constructor">
 <h3>Indigo Constructor<a class="headerlink" href="#indigo-constructor" title="Permalink to this headline">¶</a></h3>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.epam.indigo.*</span><span class="o">;</span>
-<span class="o">...</span>
-<span class="n">Indigo</span> <span class="n">indigo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Indigo</span><span class="o">();</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.epam.indigo.*</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="n">Indigo</span> <span class="n">indigo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Indigo</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -490,7 +480,7 @@ binaries are unpacked automatically into the system temporary folder.</p>
 <p>You can use the <code class="docutils literal"><span class="pre">Indigo.version</span></code> method to get the string containing
 the Indigo library version number.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Indigo version &quot;</span> <span class="o">+</span> <span class="n">indigo</span><span class="o">.</span><span class="na">version</span><span class="o">());</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Indigo version &quot;</span> <span class="o">+</span> <span class="n">indigo</span><span class="p">.</span><span class="na">version</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -498,7 +488,7 @@ the Indigo library version number.</p>
 </pre></div>
 </div>
 <p>Python:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="s2">&quot;Indigo version &quot;</span> <span class="o">+</span> <span class="n">indigo</span><span class="o">.</span><span class="n">version</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;Indigo version &quot;</span> <span class="o">+</span> <span class="n">indigo</span><span class="o">.</span><span class="n">version</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -741,12 +731,12 @@ single/double/triple/aromatic)</li>
 an atom. Also, these “neighbor” objects respond to the <code class="docutils literal"><span class="pre">bond</span></code> method,
 which returns the bond connecting the atom with the neighbor.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
-<span class="o">{</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;atom %d: %d neighbors\n&quot;</span><span class="o">,</span> <span class="n">atom</span><span class="o">.</span><span class="na">index</span><span class="o">(),</span> <span class="n">atom</span><span class="o">.</span><span class="na">degree</span><span class="o">());</span>
-  <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">nei</span> <span class="o">:</span> <span class="n">atom</span><span class="o">.</span><span class="na">iterateNeighbors</span><span class="o">())</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;neighbor atom %d is connected by bond %d\n&quot;</span><span class="o">,</span> <span class="n">nei</span><span class="o">.</span><span class="na">index</span><span class="o">(),</span> <span class="n">nei</span><span class="o">.</span><span class="na">bond</span><span class="o">().</span><span class="na">index</span><span class="o">());</span>
-<span class="o">}</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">iterateAtoms</span><span class="p">())</span>
+<span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;atom %d: %d neighbors\n&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="p">.</span><span class="na">index</span><span class="p">(),</span> <span class="n">atom</span><span class="p">.</span><span class="na">degree</span><span class="p">());</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">nei</span> <span class="p">:</span> <span class="n">atom</span><span class="p">.</span><span class="na">iterateNeighbors</span><span class="p">())</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;neighbor atom %d is connected by bond %d\n&quot;</span><span class="p">,</span> <span class="n">nei</span><span class="p">.</span><span class="na">index</span><span class="p">(),</span> <span class="n">nei</span><span class="p">.</span><span class="na">bond</span><span class="p">().</span><span class="na">index</span><span class="p">());</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -762,9 +752,9 @@ which returns the bond connecting the atom with the neighbor.</p>
 </div>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
-  <span class="k">print</span> <span class="s2">&quot;atom </span><span class="si">%d</span><span class="s2">: </span><span class="si">%d</span><span class="s2"> neighbors&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">atom</span><span class="o">.</span><span class="n">degree</span><span class="p">())</span>
+  <span class="nb">print</span> <span class="s2">&quot;atom </span><span class="si">%d</span><span class="s2">: </span><span class="si">%d</span><span class="s2"> neighbors&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">atom</span><span class="o">.</span><span class="n">degree</span><span class="p">())</span>
   <span class="k">for</span> <span class="n">nei</span> <span class="ow">in</span> <span class="n">atom</span><span class="o">.</span><span class="n">iterateNeighbors</span><span class="p">():</span>
-    <span class="k">print</span> <span class="s2">&quot;neighbor atom </span><span class="si">%d</span><span class="s2"> is connected by bond </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">nei</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">nei</span><span class="o">.</span><span class="n">bond</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">())</span>
+    <span class="nb">print</span> <span class="s2">&quot;neighbor atom </span><span class="si">%d</span><span class="s2"> is connected by bond </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">nei</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">nei</span><span class="o">.</span><span class="n">bond</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -775,15 +765,15 @@ which returns the bond connecting the atom with the neighbor.</p>
 Each of the R-groups has a collection of possible “R-group fragments”,
 which in turn can be accessed via the <code class="docutils literal"><span class="pre">iterateRGroupFragments</span></code> method.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">rg</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateRGroups</span><span class="o">())</span>
-<span class="o">{</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;RGROUP #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
-  <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">frag</span> <span class="o">:</span> <span class="n">rg</span><span class="o">.</span><span class="na">iterateRGroupFragments</span><span class="o">())</span>
-  <span class="o">{</span>
-     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;  FRAGMENT #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
-     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">frag</span><span class="o">.</span><span class="na">molfile</span><span class="o">());</span>
-  <span class="o">}</span>
-<span class="o">}</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">rg</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">iterateRGroups</span><span class="p">())</span>
+<span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;RGROUP #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">frag</span> <span class="p">:</span> <span class="n">rg</span><span class="p">.</span><span class="na">iterateRGroupFragments</span><span class="p">())</span>
+  <span class="p">{</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  FRAGMENT #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">frag</span><span class="p">.</span><span class="na">molfile</span><span class="p">());</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -800,10 +790,10 @@ which in turn can be accessed via the <code class="docutils literal"><span class
 </div>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">rg</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateRGroups</span><span class="p">():</span>
-  <span class="k">print</span> <span class="s2">&quot;RGROUP #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+  <span class="nb">print</span> <span class="s2">&quot;RGROUP #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
   <span class="k">for</span> <span class="n">frag</span> <span class="ow">in</span> <span class="n">rg</span><span class="o">.</span><span class="n">iterateRGroupFragments</span><span class="p">():</span>
-     <span class="k">print</span> <span class="s2">&quot;  FRAGMENT #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
-     <span class="k">print</span> <span class="n">frag</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
+     <span class="nb">print</span> <span class="s2">&quot;  FRAGMENT #&quot;</span> <span class="o">+</span> <span class="n">rg</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+     <span class="nb">print</span> <span class="n">frag</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -942,9 +932,9 @@ Molfile, while <code class="docutils literal"><span class="pre">IndigoObject.cml
 representation. <code class="docutils literal"><span class="pre">IndigoObject.saveMolfile</span></code> and
 <code class="docutils literal"><span class="pre">IndigoObject.saveCml</span></code> methods save Molfile and CML to disk.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">mol1</span><span class="o">.</span><span class="na">molfile</span><span class="o">());</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">mol2</span><span class="o">.</span><span class="na">smiles</span><span class="o">());</span>
-<span class="n">qmol1</span><span class="o">.</span><span class="na">saveMolfile</span><span class="o">(</span><span class="s">&quot;query.mol&quot;</span><span class="o">);</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mol1</span><span class="p">.</span><span class="na">molfile</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mol2</span><span class="p">.</span><span class="na">smiles</span><span class="p">());</span>
+<span class="n">qmol1</span><span class="p">.</span><span class="na">saveMolfile</span><span class="p">(</span><span class="s">&quot;query.mol&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -954,8 +944,8 @@ representation. <code class="docutils literal"><span class="pre">IndigoObject.sa
 </pre></div>
 </div>
 <p>Python:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">mol1</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">mol2</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">mol1</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
+<span class="nb">print</span> <span class="n">mol2</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
 <span class="n">qmol1</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s2">&quot;query.mol&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1009,12 +999,12 @@ molecules in the reaction</li>
 <p>You can also call the <code class="docutils literal"><span class="pre">IndigoObject.remove</span></code> method of the reaction
 molecule to remove it from the reaction.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">rxn</span><span class="o">.</span><span class="na">countMolecules</span><span class="o">());</span>
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="o">:</span> <span class="n">rxn</span><span class="o">.</span><span class="na">iterateReactants</span><span class="o">())</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">molfile</span><span class="o">());</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rxn</span><span class="p">.</span><span class="na">countMolecules</span><span class="p">());</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="p">:</span> <span class="n">rxn</span><span class="p">.</span><span class="na">iterateReactants</span><span class="p">())</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">molfile</span><span class="p">());</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="o">:</span> <span class="n">rxn</span><span class="o">.</span><span class="na">iterateCatalysts</span><span class="o">())</span>
-   <span class="n">item</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="p">:</span> <span class="n">rxn</span><span class="p">.</span><span class="na">iterateCatalysts</span><span class="p">())</span>
+   <span class="n">item</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1027,9 +1017,9 @@ molecule to remove it from the reaction.</p>
 </pre></div>
 </div>
 <p>Python:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">countMolecules</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">countMolecules</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">rxn</span><span class="o">.</span><span class="n">iterateReactants</span><span class="p">():</span>
-   <span class="k">print</span> <span class="n">item</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
+   <span class="nb">print</span> <span class="n">item</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">rxn</span><span class="o">.</span><span class="n">iterateCatalysts</span><span class="p">():</span>
    <span class="n">item</span><span class="o">.</span><span class="n">remove</span><span class="p">();</span>
@@ -1043,9 +1033,9 @@ reaction SMILES string. Similarly, the <code class="docutils literal"><span clas
 a string with an Rxnfile. The <code class="docutils literal"><span class="pre">IndigoObject.saveRxnfile</span></code> method saves
 the Rxnfile to disk.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">rxn</span><span class="o">.</span><span class="na">smiles</span><span class="o">());</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">rxn</span><span class="o">.</span><span class="na">rxnfile</span><span class="o">());</span>
-<span class="n">rxn</span><span class="o">.</span><span class="na">saveRxnfile</span><span class="o">(</span><span class="s">&quot;reaction.rxn&quot;</span><span class="o">);</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rxn</span><span class="p">.</span><span class="na">smiles</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rxn</span><span class="p">.</span><span class="na">rxnfile</span><span class="p">());</span>
+<span class="n">rxn</span><span class="p">.</span><span class="na">saveRxnfile</span><span class="p">(</span><span class="s">&quot;reaction.rxn&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1055,8 +1045,8 @@ the Rxnfile to disk.</p>
 </pre></div>
 </div>
 <p>Python:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">rxnfile</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+<span class="nb">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">rxnfile</span><span class="p">()</span>
 <span class="n">rxn</span><span class="o">.</span><span class="n">saveRxnfile</span><span class="p">(</span><span class="s2">&quot;reaction.rxn&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1077,10 +1067,10 @@ supports the following types of reacting centers:</p>
 <code class="docutils literal"><span class="pre">IndigoObject.reactingCenter</span></code> and <code class="docutils literal"><span class="pre">IndigoObject.setReactingCenter</span></code>
 are the getter and setter of the bond reacting center property.</p>
 <p>Python:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;reacting centers:&quot;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;reacting centers:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">rxn</span><span class="o">.</span><span class="n">iterateMolecules</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">():</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">rxn</span><span class="o">.</span><span class="n">reactingCenter</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">rxn</span><span class="o">.</span><span class="n">reactingCenter</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">rxn</span><span class="o">.</span><span class="n">iterateMolecules</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">():</span>
         <span class="n">rxn</span><span class="o">.</span><span class="n">setReactingCenter</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">Indigo</span><span class="o">.</span><span class="n">RC_CENTER</span> <span class="o">|</span> <span class="n">Indigo</span><span class="o">.</span><span class="n">RC_UNCHANGED</span><span class="p">)</span>
@@ -1126,7 +1116,7 @@ reaction but may change the existing mapping</li>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">rxn</span><span class="o">.</span><span class="n">automap</span><span class="p">(</span><span class="s2">&quot;alter ignore_charges&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="ow">in</span> <span class="n">rxn</span><span class="o">.</span><span class="n">iterateMolecules</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Atom </span><span class="si">%d</span><span class="s2"> </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">atom</span><span class="o">.</span><span class="n">atomMappingNumber</span><span class="p">())</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Atom </span><span class="si">%d</span><span class="s2"> </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">atom</span><span class="o">.</span><span class="n">atomMappingNumber</span><span class="p">())</span>
 <span class="n">rxn</span><span class="o">.</span><span class="n">automap</span><span class="p">(</span><span class="s2">&quot;alter ignore_charges ignore_valence&quot;</span><span class="p">)</span>
 <span class="o">...</span>
 </pre></div>
@@ -1207,23 +1197,23 @@ used as molecules. If you want to have a separate molecule representing
 a connected component, you should <code class="docutils literal"><span class="pre">clone</span></code> it.</p>
 <p><strong>Note:</strong> The numbering of the components in zero-based.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%d components\n&quot;</span><span class="o">,</span> <span class="n">mol</span><span class="o">.</span><span class="na">countComponents</span><span class="o">());</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%d components\n&quot;</span><span class="p">,</span> <span class="n">mol</span><span class="p">.</span><span class="na">countComponents</span><span class="p">());</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">comp</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateComponents</span><span class="o">())</span>
-<span class="o">{</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">comp</span><span class="o">.</span><span class="na">clone</span><span class="o">().</span><span class="na">smiles</span><span class="o">());</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;component %d: %d atoms, %d bonds\n&quot;</span><span class="o">,</span> <span class="n">comp</span><span class="o">.</span><span class="na">index</span><span class="o">(),</span> <span class="n">comp</span><span class="o">.</span><span class="na">countAtoms</span><span class="o">(),</span> <span class="n">comp</span><span class="o">.</span><span class="na">countBonds</span><span class="o">());</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">comp</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">iterateComponents</span><span class="p">())</span>
+<span class="p">{</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">comp</span><span class="p">.</span><span class="na">clone</span><span class="p">().</span><span class="na">smiles</span><span class="p">());</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;component %d: %d atoms, %d bonds\n&quot;</span><span class="p">,</span> <span class="n">comp</span><span class="p">.</span><span class="na">index</span><span class="p">(),</span> <span class="n">comp</span><span class="p">.</span><span class="na">countAtoms</span><span class="p">(),</span> <span class="n">comp</span><span class="p">.</span><span class="na">countBonds</span><span class="p">());</span>
 
-   <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">comp</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">atom</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">comp</span><span class="p">.</span><span class="na">iterateAtoms</span><span class="p">())</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">atom</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
 
-<span class="o">}</span>
+<span class="p">}</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">atom</span><span class="o">.</span><span class="na">componentIndex</span><span class="o">());</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">iterateAtoms</span><span class="p">())</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">atom</span><span class="p">.</span><span class="na">componentIndex</span><span class="p">());</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">component</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">iterateAtoms</span><span class="o">())</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">atom</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">component</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="na">iterateAtoms</span><span class="p">())</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">atom</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1246,19 +1236,19 @@ a connected component, you should <code class="docutils literal"><span class="pr
 </pre></div>
 </div>
 <p>Python:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">countComponents</span><span class="p">(),</span> <span class="s1">&#39;components&#39;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">countComponents</span><span class="p">(),</span> <span class="s1">&#39;components&#39;</span>
 
 <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateComponents</span><span class="p">():</span>
-  <span class="k">print</span> <span class="n">comp</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
-  <span class="k">print</span> <span class="s2">&quot;component </span><span class="si">%d</span><span class="s2">: </span><span class="si">%d</span><span class="s2"> atoms, </span><span class="si">%d</span><span class="s2"> bonds</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">comp</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">comp</span><span class="o">.</span><span class="n">countAtoms</span><span class="p">(),</span> <span class="n">comp</span><span class="o">.</span><span class="n">countBonds</span><span class="p">())</span>
+  <span class="nb">print</span> <span class="n">comp</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+  <span class="nb">print</span> <span class="s2">&quot;component </span><span class="si">%d</span><span class="s2">: </span><span class="si">%d</span><span class="s2"> atoms, </span><span class="si">%d</span><span class="s2"> bonds</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">comp</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">comp</span><span class="o">.</span><span class="n">countAtoms</span><span class="p">(),</span> <span class="n">comp</span><span class="o">.</span><span class="n">countBonds</span><span class="p">())</span>
   <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">comp</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
-    <span class="k">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+    <span class="nb">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
-  <span class="k">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">compomentIndex</span><span class="p">()</span>
+  <span class="nb">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">compomentIndex</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">component</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
-  <span class="k">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+  <span class="nb">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1267,8 +1257,8 @@ a connected component, you should <code class="docutils literal"><span class="pr
 <p><code class="docutils literal"><span class="pre">IndigoObject.canonicalSmiles</span></code> method computes the canonical SMILES
 (also known as absolute SMILES) string for either molecule or reaction.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">mol</span><span class="o">.</span><span class="na">canonicalSmiles</span><span class="o">());</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">rxn</span><span class="o">.</span><span class="na">canonicalSmiles</span><span class="o">());</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mol</span><span class="p">.</span><span class="na">canonicalSmiles</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rxn</span><span class="p">.</span><span class="na">canonicalSmiles</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1277,8 +1267,8 @@ a connected component, you should <code class="docutils literal"><span class="pr
 </pre></div>
 </div>
 <p>Python:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">()</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">()</span>
+<span class="nb">print</span> <span class="n">rxn</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Please see the <a class="reference internal" href="../examples/calculating-properties.html#indigo-example-canonical-smiles"><span class="std std-ref">Canonical Smiles</span></a> for detailed examples</p>
@@ -1298,10 +1288,10 @@ attachment points with the same specified order.</li>
 </ul>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">countAttachmentPoints</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Number of attachment points: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Number of attachment points: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateAttachmentPoints</span><span class="p">(</span><span class="n">order</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">   Index: </span><span class="si">%d</span><span class="s2">. Order </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">order</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">   Index: </span><span class="si">%d</span><span class="s2">. Order </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="n">order</span><span class="p">))</span>
  <span class="n">mol</span><span class="o">.</span><span class="n">clearAttachmentPoints</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1401,23 +1391,23 @@ that have no cis-trans configuration in SMILES will not have a
 cis-trans configuration in the resulting Molfile.</li>
 </ul>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">mol</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">loadMolecule</span><span class="o">(</span><span class="s">&quot;chiral.mol&quot;</span><span class="o">);</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">mol</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">loadMolecule</span><span class="p">(</span><span class="s">&quot;chiral.mol&quot;</span><span class="p">);</span>
 
-<span class="n">System</span><span class="o">.</span><span class="na">output</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;%d chiral atoms\n&quot;</span><span class="o">,</span> <span class="n">mol</span><span class="o">.</span><span class="na">countStereocenters</span><span class="o">());</span>
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateStereocenters</span><span class="o">())</span>
-<span class="o">{</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;atom %d -- stereocenter type %d\n&quot;</span><span class="o">,</span> <span class="n">atom</span><span class="o">.</span><span class="na">index</span><span class="o">(),</span> <span class="n">atom</span><span class="o">.</span><span class="na">stereocenterType</span><span class="o">());</span>
-   <span class="n">atom</span><span class="o">.</span><span class="na">invertStereo</span><span class="o">();</span>
-<span class="o">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">output</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;%d chiral atoms\n&quot;</span><span class="p">,</span> <span class="n">mol</span><span class="p">.</span><span class="na">countStereocenters</span><span class="p">());</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">iterateStereocenters</span><span class="p">())</span>
+<span class="p">{</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;atom %d -- stereocenter type %d\n&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="p">.</span><span class="na">index</span><span class="p">(),</span> <span class="n">atom</span><span class="p">.</span><span class="na">stereocenterType</span><span class="p">());</span>
+   <span class="n">atom</span><span class="p">.</span><span class="na">invertStereo</span><span class="p">();</span>
+<span class="p">}</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">bond</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateBonds</span><span class="o">())</span>
-   <span class="k">if</span> <span class="o">(</span><span class="n">bond</span><span class="o">.</span><span class="na">bondStereo</span><span class="o">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span>
-     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;bond %d -- stereo type %d\n&quot;</span><span class="o">,</span> <span class="n">bond</span><span class="o">.</span><span class="na">index</span><span class="o">(),</span> <span class="n">bond</span><span class="o">.</span><span class="na">bondStereo</span><span class="o">());</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">bond</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">iterateBonds</span><span class="p">())</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">bond</span><span class="p">.</span><span class="na">bondStereo</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;bond %d -- stereo type %d\n&quot;</span><span class="p">,</span> <span class="n">bond</span><span class="p">.</span><span class="na">index</span><span class="p">(),</span> <span class="n">bond</span><span class="p">.</span><span class="na">bondStereo</span><span class="p">());</span>
 
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">mol</span><span class="o">.</span><span class="na">smiles</span><span class="o">());</span>
-<span class="n">mol</span><span class="o">.</span><span class="na">clearStereocenters</span><span class="o">();</span>
-<span class="n">mol</span><span class="o">.</span><span class="na">clearCisTrans</span><span class="o">();</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">mol</span><span class="o">.</span><span class="na">smiles</span><span class="o">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mol</span><span class="p">.</span><span class="na">smiles</span><span class="p">());</span>
+<span class="n">mol</span><span class="p">.</span><span class="na">clearStereocenters</span><span class="p">();</span>
+<span class="n">mol</span><span class="p">.</span><span class="na">clearCisTrans</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mol</span><span class="p">.</span><span class="na">smiles</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1443,19 +1433,19 @@ cis-trans configuration in the resulting Molfile.</li>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">mol</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMolecule</span><span class="p">(</span><span class="s2">&quot;chiral.mol&quot;</span><span class="p">);</span>
 
-<span class="k">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">countStereocenters</span><span class="p">(),</span> <span class="s2">&quot;chiral atoms&quot;</span>
+<span class="nb">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">countStereocenters</span><span class="p">(),</span> <span class="s2">&quot;chiral atoms&quot;</span>
 <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateStereocenters</span><span class="p">():</span>
-   <span class="k">print</span> <span class="s2">&quot;atom&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;-- stereocenter type&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="o">.</span><span class="n">stereocenterType</span><span class="p">()</span>
+   <span class="nb">print</span> <span class="s2">&quot;atom&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;-- stereocenter type&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="o">.</span><span class="n">stereocenterType</span><span class="p">()</span>
    <span class="n">atom</span><span class="o">.</span><span class="n">invertStereo</span><span class="p">();</span>
 
 <span class="k">for</span> <span class="n">bond</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">():</span>
    <span class="k">if</span> <span class="n">bond</span><span class="o">.</span><span class="n">bondStereo</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-     <span class="k">print</span> <span class="s2">&quot;bond&quot;</span><span class="p">,</span> <span class="n">bond</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;-- stereo type&quot;</span><span class="p">,</span> <span class="n">bond</span><span class="o">.</span><span class="n">bondStereo</span><span class="p">()</span>
+     <span class="nb">print</span> <span class="s2">&quot;bond&quot;</span><span class="p">,</span> <span class="n">bond</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;-- stereo type&quot;</span><span class="p">,</span> <span class="n">bond</span><span class="o">.</span><span class="n">bondStereo</span><span class="p">()</span>
 
-<span class="k">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+<span class="nb">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
 <span class="n">mol</span><span class="o">.</span><span class="n">clearStereocenters</span><span class="p">()</span>
 <span class="n">mol</span><span class="o">.</span><span class="n">clearCisTrans</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+<span class="nb">print</span> <span class="n">mol</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">stereocenterGroup</span></code> and <code class="docutils literal"><span class="pre">setStereocenterGroup</span></code> method to get/set stereocenter group:</p>
@@ -1465,7 +1455,7 @@ cis-trans configuration in the resulting Molfile.</li>
 <span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderToFile</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s1">&#39;result_1.png&#39;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">iterateStereocenters</span><span class="p">():</span>
-    <span class="k">print</span> <span class="s2">&quot;atom index =&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;group =&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">stereocenterGroup</span><span class="p">()</span>
+    <span class="nb">print</span> <span class="s2">&quot;atom index =&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;group =&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">stereocenterGroup</span><span class="p">()</span>
 
 <span class="n">m</span><span class="o">.</span><span class="n">getAtom</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">changeStereocenterType</span><span class="p">(</span><span class="n">Indigo</span><span class="o">.</span><span class="n">OR</span><span class="p">)</span>
 <span class="n">m</span><span class="o">.</span><span class="n">getAtom</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">setStereocenterGroup</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -1517,16 +1507,16 @@ calls. However, they can not be used as molecules. If you want to have a
 separate molecule representing the obtained submolecule, you should
 <code class="docutils literal"><span class="pre">clone</span></code> it.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">submol</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateEdgeSubmolecules</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">mol</span><span class="o">.</span><span class="na">countBonds</span><span class="o">())</span>
-<span class="o">{</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;submolecule #%d: %s\n&quot;</span><span class="o">,</span> <span class="n">submol</span><span class="o">.</span><span class="na">index</span><span class="o">(),</span> <span class="n">submol</span><span class="o">.</span><span class="na">clone</span><span class="o">().</span><span class="na">smiles</span><span class="o">());</span>
-  <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">item</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%d &quot;</span><span class="o">,</span> <span class="n">atom</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;\n&quot;</span><span class="o">);</span>
-  <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">bond</span> <span class="o">:</span> <span class="n">item</span><span class="o">.</span><span class="na">iterateBonds</span><span class="o">())</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%d &quot;</span><span class="o">,</span> <span class="n">bond</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;\n&quot;</span><span class="o">);</span>
-<span class="o">}</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">submol</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">iterateEdgeSubmolecules</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mol</span><span class="p">.</span><span class="na">countBonds</span><span class="p">())</span>
+<span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;submolecule #%d: %s\n&quot;</span><span class="p">,</span> <span class="n">submol</span><span class="p">.</span><span class="na">index</span><span class="p">(),</span> <span class="n">submol</span><span class="p">.</span><span class="na">clone</span><span class="p">().</span><span class="na">smiles</span><span class="p">());</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">item</span><span class="p">.</span><span class="na">iterateAtoms</span><span class="p">())</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">atom</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">bond</span> <span class="p">:</span> <span class="n">item</span><span class="p">.</span><span class="na">iterateBonds</span><span class="p">())</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span> <span class="n">bond</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1544,9 +1534,9 @@ separate molecule representing the obtained submolecule, you should
 </div>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">submol</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateEdgeSubmolecules</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mol</span><span class="o">.</span><span class="n">countBonds</span><span class="p">()):</span>
-  <span class="k">print</span> <span class="s2">&quot;submolecule&quot;</span><span class="p">,</span> <span class="n">submol</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">submol</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
-  <span class="k">print</span> <span class="p">[</span><span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span> <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">()]</span>
-  <span class="k">print</span> <span class="p">[</span><span class="n">bond</span><span class="o">.</span><span class="n">index</span><span class="p">()</span> <span class="k">for</span> <span class="n">bond</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">()]</span>
+  <span class="nb">print</span> <span class="s2">&quot;submolecule&quot;</span><span class="p">,</span> <span class="n">submol</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">submol</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+  <span class="nb">print</span> <span class="p">[</span><span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span> <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">()]</span>
+  <span class="nb">print</span> <span class="p">[</span><span class="n">bond</span><span class="o">.</span><span class="n">index</span><span class="p">()</span> <span class="k">for</span> <span class="n">bond</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">()]</span>
 </pre></div>
 </div>
 </div>
@@ -1557,10 +1547,10 @@ Currently there are two algorithms to enumerate tautomers: based on InChI code a
 <p>The <code class="docutils literal"><span class="pre">iterateTautomers</span></code> method returns an iterator for tautomers. It accepts a molecule and options as parameters.
 There are two possible options: <code class="docutils literal"><span class="pre">INCHI</span></code> to use method based on <a class="reference external" href="../../resources.html#inchi-code">InChI code</a>, and <code class="docutils literal"><span class="pre">RSMARTS</span></code> to use <a class="reference external" href="../../resources.html#rsmarts-rules">reaction SMARTS templates</a>:</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">tautomer</span> <span class="o">:</span> <span class="n">indigo</span><span class="o">.</span><span class="na">iterateTautomers</span><span class="o">(</span><span class="n">molecule</span><span class="o">,</span> <span class="s">&quot;RSMARTS&quot;</span><span class="o">)</span>
-<span class="o">{</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;tautomer %d: %s\n&quot;</span><span class="o">,</span> <span class="n">tautomer</span><span class="o">.</span><span class="na">index</span><span class="o">(),</span> <span class="n">tautomer</span><span class="o">.</span><span class="na">clone</span><span class="o">().</span><span class="na">smiles</span><span class="o">());</span>
-<span class="o">}</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">tautomer</span> <span class="p">:</span> <span class="n">indigo</span><span class="p">.</span><span class="na">iterateTautomers</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="s">&quot;RSMARTS&quot;</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;tautomer %d: %s\n&quot;</span><span class="p">,</span> <span class="n">tautomer</span><span class="p">.</span><span class="na">index</span><span class="p">(),</span> <span class="n">tautomer</span><span class="p">.</span><span class="na">clone</span><span class="p">().</span><span class="na">smiles</span><span class="p">());</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1572,7 +1562,7 @@ There are two possible options: <code class="docutils literal"><span class="pre"
 </div>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">tautomer</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateTautomers</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="s1">&#39;RSMARTS&#39;</span><span class="p">):</span>
-  <span class="k">print</span> <span class="s2">&quot;tautomer&quot;</span><span class="p">,</span> <span class="n">tautomer</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">tautomer</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+  <span class="nb">print</span> <span class="s2">&quot;tautomer&quot;</span><span class="p">,</span> <span class="n">tautomer</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">tautomer</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Please see the <a class="reference internal" href="../examples/calculating-properties.html#indigo-example-tautomer-enumeration"><span class="std std-ref">Enumeration of Tautomers</span></a> for detailed examples</p>
@@ -1619,12 +1609,12 @@ molecule’s groups:</p>
 responds to <code class="docutils literal"><span class="pre">IndigoObject.iterateAtoms</span></code> and
 <code class="docutils literal"><span class="pre">IndigoObject.iterateBonds</span></code> methods.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">dsg</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateDataSGroups</span><span class="o">())</span>
-<span class="o">{</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;data sgroup &quot;</span> <span class="o">+</span> <span class="n">dsg</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
-   <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">dsg</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;  atom &quot;</span> <span class="o">+</span> <span class="n">atom</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
-<span class="o">}</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">dsg</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">iterateDataSGroups</span><span class="p">())</span>
+<span class="p">{</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;data sgroup &quot;</span> <span class="o">+</span> <span class="n">dsg</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">dsg</span><span class="p">.</span><span class="na">iterateAtoms</span><span class="p">())</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  atom &quot;</span> <span class="o">+</span> <span class="n">atom</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1638,9 +1628,9 @@ responds to <code class="docutils literal"><span class="pre">IndigoObject.iterat
 </div>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">dsg</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateDataSGroups</span><span class="p">():</span>
-   <span class="k">print</span> <span class="s2">&quot;data sgroup&quot;</span><span class="p">,</span> <span class="n">dsg</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+   <span class="nb">print</span> <span class="s2">&quot;data sgroup&quot;</span><span class="p">,</span> <span class="n">dsg</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
    <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">dsg</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
-      <span class="k">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
+      <span class="nb">print</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>You can also add data SGroups to an existing structure using
@@ -1660,12 +1650,12 @@ You can create new S-group using “mapping” object received from matcher:</p>
 <li><code class="docutils literal"><span class="pre">IndigoObject.createSGroup</span></code></li>
 </ul>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">substructureMatcher</span><span class="o">(</span><span class="n">mol</span><span class="o">).</span><span class="na">match</span><span class="o">(</span><span class="n">query</span><span class="o">);</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">substructureMatcher</span><span class="p">(</span><span class="n">mol</span><span class="p">).</span><span class="na">match</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
 
-<span class="k">if</span> <span class="o">(</span><span class="n">match</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-<span class="o">{</span>
-   <span class="n">IndigoObject</span> <span class="n">sgroup</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="na">createSGroup</span><span class="o">(</span><span class="s">&quot;SUP&quot;</span><span class="o">,</span> <span class="n">match</span><span class="o">,</span> <span class="s">&quot;Asx&quot;</span><span class="o">);</span>
-<span class="o">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">match</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">IndigoObject</span> <span class="n">sgroup</span> <span class="o">=</span> <span class="n">mol</span><span class="p">.</span><span class="na">createSGroup</span><span class="p">(</span><span class="s">&quot;SUP&quot;</span><span class="p">,</span> <span class="n">match</span><span class="p">,</span> <span class="s">&quot;Asx&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1717,10 +1707,10 @@ You can create new S-group using “mapping” object received from matcher:</p>
 <p><strong>Note</strong>: All properties and its values correspond to Molfile format.</p>
 <p>Python examples:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sg</span><span class="o">.</span><span class="n">setSGroupClass</span><span class="p">(</span><span class="s2">&quot;AA&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupName</span><span class="p">())</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupClass</span><span class="p">())</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupNumCrossBonds</span><span class="p">())</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupDisplayOption</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupName</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupClass</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupNumCrossBonds</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sg</span><span class="o">.</span><span class="n">getSGroupDisplayOption</span><span class="p">())</span>
 <span class="n">sg</span><span class="o">.</span><span class="n">setSGroupName</span><span class="p">(</span><span class="s2">&quot;As&quot;</span><span class="p">)</span>
 <span class="n">sg</span><span class="o">.</span><span class="n">setSGroupDisplayOption</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
@@ -1795,26 +1785,26 @@ of atom indices and a float array of desired coordinates (three times
 bigger that the array of indices, storing resired x,y,z coordinates for
 each atom).</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">query</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">loadSmarts</span><span class="o">(</span><span class="s">&quot;[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2&quot;</span><span class="o">);</span>
-<span class="kt">int</span><span class="o">[]</span> <span class="n">atoms</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">query</span><span class="o">.</span><span class="na">countAtoms</span><span class="o">()];</span>
-<span class="kt">float</span><span class="o">[]</span> <span class="n">xyz</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[</span><span class="n">query</span><span class="o">.</span><span class="na">countAtoms</span><span class="o">()</span> <span class="o">*</span> <span class="mi">3</span><span class="o">];</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">query</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">loadSmarts</span><span class="p">(</span><span class="s">&quot;[#7]1~[#6]~[#6]~[#7]~[#6]~[#6]2~[#6]~[#6]~[#6]~[#6]~[#6]~1~2&quot;</span><span class="p">);</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">atoms</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">query</span><span class="p">.</span><span class="na">countAtoms</span><span class="p">()</span><span class="o">]</span><span class="p">;</span>
+<span class="kt">float</span><span class="o">[]</span> <span class="n">xyz</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[</span><span class="n">query</span><span class="p">.</span><span class="na">countAtoms</span><span class="p">()</span> <span class="o">*</span> <span class="mi">3</span><span class="o">]</span><span class="p">;</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">structure</span> <span class="o">:</span> <span class="n">indigo</span><span class="o">.</span><span class="na">iterateSDFile</span><span class="o">(</span><span class="s">&quot;structures.sdf.gz&quot;</span><span class="o">))</span>
-<span class="o">{</span>
-   <span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">substructureMatcher</span><span class="o">(</span><span class="n">structure</span><span class="o">).</span><span class="na">match</span><span class="o">(</span><span class="n">query</span><span class="o">);</span>
-   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">structure</span> <span class="p">:</span> <span class="n">indigo</span><span class="p">.</span><span class="na">iterateSDFile</span><span class="p">(</span><span class="s">&quot;structures.sdf.gz&quot;</span><span class="p">))</span>
+<span class="p">{</span>
+   <span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">substructureMatcher</span><span class="p">(</span><span class="n">structure</span><span class="p">).</span><span class="na">match</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-   <span class="k">if</span> <span class="o">(</span><span class="n">structure</span><span class="o">.</span><span class="na">index</span><span class="o">()</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
-      <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">query</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
-         <span class="n">System</span><span class="o">.</span><span class="na">arraycopy</span><span class="o">(</span><span class="n">match</span><span class="o">.</span><span class="na">mapAtom</span><span class="o">(</span><span class="n">atom</span><span class="o">).</span><span class="na">xyz</span><span class="o">(),</span> <span class="mi">0</span><span class="o">,</span> <span class="n">xyz</span><span class="o">,</span> <span class="n">i</span><span class="o">++</span> <span class="o">*</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">structure</span><span class="p">.</span><span class="na">index</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">query</span><span class="p">.</span><span class="na">iterateAtoms</span><span class="p">())</span>
+         <span class="n">System</span><span class="p">.</span><span class="na">arraycopy</span><span class="p">(</span><span class="n">match</span><span class="p">.</span><span class="na">mapAtom</span><span class="p">(</span><span class="n">atom</span><span class="p">).</span><span class="na">xyz</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xyz</span><span class="p">,</span> <span class="n">i</span><span class="o">++</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
    <span class="k">else</span>
-   <span class="o">{</span>
-      <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">query</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
-         <span class="n">atoms</span><span class="o">[</span><span class="n">i</span><span class="o">++]</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="na">mapAtom</span><span class="o">(</span><span class="n">atom</span><span class="o">).</span><span class="na">index</span><span class="o">();</span>
+   <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">query</span><span class="p">.</span><span class="na">iterateAtoms</span><span class="p">())</span>
+         <span class="n">atoms</span><span class="o">[</span><span class="n">i</span><span class="o">++]</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="na">mapAtom</span><span class="p">(</span><span class="n">atom</span><span class="p">).</span><span class="na">index</span><span class="p">();</span>
 
-      <span class="n">structure</span><span class="o">.</span><span class="na">alignAtoms</span><span class="o">(</span><span class="n">atoms</span><span class="o">,</span> <span class="n">xyz</span><span class="o">);</span>
-   <span class="o">}</span>
-<span class="o">}</span>
+      <span class="n">structure</span><span class="p">.</span><span class="na">alignAtoms</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">xyz</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1866,14 +1856,14 @@ molecule, and <code class="docutils literal"><span class="pre">IndigoInchi.getIn
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">indigo_inchi</span> <span class="o">=</span> <span class="n">IndigoInchi</span><span class="p">(</span><span class="n">indigo</span><span class="p">);</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">version</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">version</span><span class="p">())</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">indigo_inchi</span><span class="o">.</span><span class="n">loadMolecule</span><span class="p">(</span><span class="s2">&quot;InChI=1S/C10H20N2O2/c11-7-1-5-2-8(12)10(14)4-6(5)3-9(7)13/h5-10,13-14H,1-4,11-12H2&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">())</span>
-<span class="k">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">getInchi</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">getWarning</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">canonicalSmiles</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">getInchi</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">getWarning</span><span class="p">())</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMolecule</span><span class="p">(</span><span class="s2">&quot;C1CCCCCCC1&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">getInchi</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">indigo_inchi</span><span class="o">.</span><span class="n">getInchi</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="section" id="options">
@@ -1958,8 +1948,8 @@ files with multiple molecules/reactions:</p>
 <li><code class="docutils literal"><span class="pre">iterateCDXFile</span></code></li>
 </ul>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="o">:</span> <span class="n">indigo</span><span class="o">.</span><span class="na">iterateSDFile</span><span class="o">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="o">))</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">grossFormula</span><span class="o">());</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="p">:</span> <span class="n">indigo</span><span class="p">.</span><span class="na">iterateSDFile</span><span class="p">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="p">))</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">grossFormula</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -1969,7 +1959,7 @@ files with multiple molecules/reactions:</p>
 </div>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateSDFile</span><span class="p">(</span><span class="s2">&quot;structures.sdf&quot;</span><span class="p">):</span>
-   <span class="k">print</span> <span class="n">item</span><span class="o">.</span><span class="n">grossFormula</span><span class="p">()</span>
+   <span class="nb">print</span> <span class="n">item</span><span class="o">.</span><span class="n">grossFormula</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2017,9 +2007,9 @@ object, or does nothing in case the object does not have it.</li>
 <li><strong>Note:</strong> currently CDX annotations are used as CDX properties</li>
 </ul>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="o">:</span> <span class="n">indigo</span><span class="o">.</span><span class="na">iterateSDFile</span><span class="o">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="o">))</span>
-   <span class="k">if</span> <span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">hasProperty</span><span class="o">(</span><span class="s">&quot;cdbregno&quot;</span><span class="o">))</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;cdbregno&quot;</span><span class="o">));</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="p">:</span> <span class="n">indigo</span><span class="p">.</span><span class="na">iterateSDFile</span><span class="p">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="p">))</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">hasProperty</span><span class="p">(</span><span class="s">&quot;cdbregno&quot;</span><span class="p">))</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;cdbregno&quot;</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -2031,15 +2021,15 @@ object, or does nothing in case the object does not have it.</li>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateSDFile</span><span class="p">(</span><span class="s2">&quot;structures.sdf&quot;</span><span class="p">):</span>
    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">hasProperty</span><span class="p">(</span><span class="s2">&quot;cdbregno&quot;</span><span class="p">):</span>
-      <span class="k">print</span> <span class="n">item</span><span class="o">.</span><span class="n">getProperty</span><span class="p">(</span><span class="s2">&quot;cdbregno&quot;</span><span class="p">)</span>
+      <span class="nb">print</span> <span class="n">item</span><span class="o">.</span><span class="n">getProperty</span><span class="p">(</span><span class="s2">&quot;cdbregno&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It is also possible to iterate over all properties of a particular
 record in SDF or RDF or CDX file.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="o">:</span> <span class="n">indigo</span><span class="o">.</span><span class="na">iterateRDfile</span><span class="o">(</span><span class="s">&quot;reactions.rdf&quot;</span><span class="o">))</span>
-   <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">prop</span> <span class="o">:</span> <span class="n">item</span><span class="o">.</span><span class="na">iterateProperties</span><span class="o">())</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">prop</span><span class="o">.</span><span class="na">name</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot; : &quot;</span> <span class="o">+</span> <span class="n">prop</span><span class="o">.</span><span class="na">rawData</span><span class="o">())</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="p">:</span> <span class="n">indigo</span><span class="p">.</span><span class="na">iterateRDfile</span><span class="p">(</span><span class="s">&quot;reactions.rdf&quot;</span><span class="p">))</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">prop</span> <span class="p">:</span> <span class="n">item</span><span class="p">.</span><span class="na">iterateProperties</span><span class="p">())</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">prop</span><span class="p">.</span><span class="na">name</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; : &quot;</span> <span class="o">+</span> <span class="n">prop</span><span class="p">.</span><span class="na">rawData</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -2051,7 +2041,7 @@ record in SDF or RDF or CDX file.</p>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateRDFile</span><span class="p">(</span><span class="s2">&quot;reactions.rdf&quot;</span><span class="p">):</span>
    <span class="k">for</span> <span class="n">prop</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">iterateProperties</span><span class="p">():</span>
-      <span class="k">print</span> <span class="n">prop</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">prop</span><span class="o">.</span><span class="n">rawData</span><span class="p">()</span>
+      <span class="nb">print</span> <span class="n">prop</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">prop</span><span class="o">.</span><span class="n">rawData</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2165,18 +2155,18 @@ automatically.</p>
 and a string with the desired format, which is “sdf”, “rdf”, “cml”, or
 “smi”.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">saver</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">saver</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 <span class="k">try</span>
-<span class="o">{</span>
-  <span class="n">saver</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">createFileSaver</span><span class="o">(</span><span class="s">&quot;reactions.cml&quot;</span><span class="o">,</span> <span class="s">&quot;cml&quot;</span><span class="o">);</span>
-  <span class="n">saver</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">rxn1</span><span class="o">);</span>
-  <span class="n">saver</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">rxn2</span><span class="o">);</span>
-<span class="o">}</span>
+<span class="p">{</span>
+  <span class="n">saver</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">createFileSaver</span><span class="p">(</span><span class="s">&quot;reactions.cml&quot;</span><span class="p">,</span> <span class="s">&quot;cml&quot;</span><span class="p">);</span>
+  <span class="n">saver</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">rxn1</span><span class="p">);</span>
+  <span class="n">saver</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">rxn2</span><span class="p">);</span>
+<span class="p">}</span>
 <span class="k">finally</span>
-<span class="o">{</span>
-  <span class="k">if</span> <span class="o">(</span><span class="n">saver</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-    <span class="n">saver</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-<span class="o">}</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">saver</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+    <span class="n">saver</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -2265,10 +2255,10 @@ fingerprint types included</li>
 <p>The size of the fingerprint can be controlled via a number of
 <a class="reference external" href="../options/fingerprints.html">fingerprinting options</a>.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">fp1</span> <span class="o">=</span> <span class="n">mol1</span><span class="o">.</span><span class="na">fingerprint</span><span class="o">(</span><span class="s">&quot;sim&quot;</span><span class="o">);</span>
-<span class="n">fp2</span> <span class="o">=</span> <span class="n">mol2</span><span class="o">.</span><span class="na">fingerprint</span><span class="o">(</span><span class="s">&quot;sim&quot;</span><span class="o">);</span>
-<span class="n">String</span> <span class="n">fp1string</span> <span class="o">=</span> <span class="n">fp1</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
-<span class="kt">byte</span><span class="o">[]</span> <span class="n">fp2bytes</span> <span class="o">=</span> <span class="n">fp1</span><span class="o">.</span><span class="na">toBuffer</span><span class="o">();</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">fp1</span> <span class="o">=</span> <span class="n">mol1</span><span class="p">.</span><span class="na">fingerprint</span><span class="p">(</span><span class="s">&quot;sim&quot;</span><span class="p">);</span>
+<span class="n">fp2</span> <span class="o">=</span> <span class="n">mol2</span><span class="p">.</span><span class="na">fingerprint</span><span class="p">(</span><span class="s">&quot;sim&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">fp1string</span> <span class="o">=</span> <span class="n">fp1</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+<span class="kt">byte</span><span class="o">[]</span> <span class="n">fp2bytes</span> <span class="o">=</span> <span class="n">fp1</span><span class="p">.</span><span class="na">toBuffer</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Python: the same with <code class="docutils literal"><span class="pre">IndigoObject</span></code> and <code class="docutils literal"><span class="pre">String</span></code> omitted.</p>
@@ -2578,14 +2568,14 @@ only bonds and molecules respectively, and not their indices.</p>
 <div class="section" id="example-1-mapping-query-molecule-atoms">
 <h4>Example 1 (mapping query molecule atoms)<a class="headerlink" href="#example-1-mapping-query-molecule-atoms" title="Permalink to this headline">¶</a></h4>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">substructureMatcher</span><span class="o">(</span><span class="n">mol</span><span class="o">).</span><span class="na">match</span><span class="o">(</span><span class="n">query</span><span class="o">);</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">substructureMatcher</span><span class="p">(</span><span class="n">mol</span><span class="p">).</span><span class="na">match</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
 
-<span class="k">if</span> <span class="o">(</span><span class="n">match</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-<span class="o">{</span>
-   <span class="n">match</span><span class="o">.</span><span class="na">highlightedTarget</span><span class="o">().</span><span class="na">saveMolfile</span><span class="o">(</span><span class="s">&quot;highlighted.mol&quot;</span><span class="o">);</span>
-   <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">qmol2</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;atom %d mapped to atom %d\n&quot;</span><span class="o">,</span> <span class="n">atom</span><span class="o">.</span><span class="na">index</span><span class="o">(),</span> <span class="n">match</span><span class="o">.</span><span class="na">mapAtom</span><span class="o">(</span><span class="n">atom</span><span class="o">).</span><span class="na">index</span><span class="o">());</span>
-<span class="o">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">match</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">match</span><span class="p">.</span><span class="na">highlightedTarget</span><span class="p">().</span><span class="na">saveMolfile</span><span class="p">(</span><span class="s">&quot;highlighted.mol&quot;</span><span class="p">);</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">qmol2</span><span class="p">.</span><span class="na">iterateAtoms</span><span class="p">())</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;atom %d mapped to atom %d\n&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="p">.</span><span class="na">index</span><span class="p">(),</span> <span class="n">match</span><span class="p">.</span><span class="na">mapAtom</span><span class="p">(</span><span class="n">atom</span><span class="p">).</span><span class="na">index</span><span class="p">());</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -2605,19 +2595,19 @@ only bonds and molecules respectively, and not their indices.</p>
 <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
    <span class="n">match</span><span class="o">.</span><span class="n">highlightedTarget</span><span class="p">()</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s2">&quot;highlighted.mol&quot;</span><span class="p">)</span>
    <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">qmol2</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
-      <span class="k">print</span> <span class="s2">&quot;atom&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;mapped to atom&quot;</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">mapAtom</span><span class="p">(</span><span class="n">atom</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">())</span>
+      <span class="nb">print</span> <span class="s2">&quot;atom&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;mapped to atom&quot;</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">mapAtom</span><span class="p">(</span><span class="n">atom</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-2-getting-the-highlighted-target-molecule">
 <h4>Example 2 (getting the highlighted target molecule)<a class="headerlink" href="#example-2-getting-the-highlighted-target-molecule" title="Permalink to this headline">¶</a></h4>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">substructureMatcher</span><span class="o">(</span><span class="n">mol</span><span class="o">);</span>
-<span class="n">IndigoObject</span> <span class="n">query</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">loadSmarts</span><span class="o">(</span><span class="s">&quot;O=[!C;R]&quot;</span><span class="o">);</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">substructureMatcher</span><span class="p">(</span><span class="n">mol</span><span class="p">);</span>
+<span class="n">IndigoObject</span> <span class="n">query</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">loadSmarts</span><span class="p">(</span><span class="s">&quot;O=[!C;R]&quot;</span><span class="p">);</span>
 
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">matcher</span><span class="o">.</span><span class="na">countMatches</span><span class="o">(</span><span class="n">query</span><span class="o">);</span>
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">:</span> <span class="n">matcher</span><span class="o">.</span><span class="na">iterateMatches</span><span class="o">(</span><span class="n">query</span><span class="o">))</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">match</span><span class="o">.</span><span class="na">highlightedTarget</span><span class="o">().</span><span class="na">smiles</span><span class="o">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">matcher</span><span class="p">.</span><span class="na">countMatches</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">match</span> <span class="p">:</span> <span class="n">matcher</span><span class="p">.</span><span class="na">iterateMatches</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">match</span><span class="p">.</span><span class="na">highlightedTarget</span><span class="p">().</span><span class="na">smiles</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -2633,32 +2623,32 @@ only bonds and molecules respectively, and not their indices.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">matcher</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">substructureMatcher</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
 <span class="n">query</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadSmarts</span><span class="p">(</span><span class="s2">&quot;O=[!C;R]&quot;</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="n">matcher</span><span class="o">.</span><span class="n">countMatches</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">matcher</span><span class="o">.</span><span class="n">countMatches</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">matcher</span><span class="o">.</span><span class="n">iterateMatches</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
-   <span class="k">print</span> <span class="n">match</span><span class="o">.</span><span class="n">highlightedTarget</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+   <span class="nb">print</span> <span class="n">match</span><span class="o">.</span><span class="n">highlightedTarget</span><span class="p">()</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-3-exact-match-between-reactions">
 <h4>Example 3 (exact match between reactions)<a class="headerlink" href="#example-3-exact-match-between-reactions" title="Permalink to this headline">¶</a></h4>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">exactMatch</span><span class="o">(</span><span class="n">rxn1</span><span class="o">,</span> <span class="n">rxn2</span><span class="o">,</span> <span class="s">&quot;ALL -AAM&quot;</span><span class="o">);</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">exactMatch</span><span class="p">(</span><span class="n">rxn1</span><span class="p">,</span> <span class="n">rxn2</span><span class="p">,</span> <span class="s">&quot;ALL -AAM&quot;</span><span class="p">);</span>
 
-<span class="k">if</span> <span class="o">(</span><span class="n">match</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-<span class="o">{</span>
-   <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">mol</span> <span class="o">:</span> <span class="n">rxn1</span><span class="o">.</span><span class="na">iterateMolecules</span><span class="o">())</span>
-   <span class="o">{</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;molecule #&quot;</span> <span class="o">+</span> <span class="n">mol</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">match</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">mol</span> <span class="p">:</span> <span class="n">rxn1</span><span class="p">.</span><span class="na">iterateMolecules</span><span class="p">())</span>
+   <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;molecule #&quot;</span> <span class="o">+</span> <span class="n">mol</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
 
-      <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">match</span><span class="o">.</span><span class="na">mapAtom</span><span class="o">(</span><span class="n">atom</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-           <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;atom #%d matched\n&quot;</span><span class="o">,</span> <span class="n">atom</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">atom</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">iterateAtoms</span><span class="p">())</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">match</span><span class="p">.</span><span class="na">mapAtom</span><span class="p">(</span><span class="n">atom</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;atom #%d matched\n&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
 
-      <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">bond</span> <span class="o">:</span> <span class="n">mol</span><span class="o">.</span><span class="na">iterateBonds</span><span class="o">())</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">match</span><span class="o">.</span><span class="na">mapBond</span><span class="o">(</span><span class="n">atom</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-           <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;bond #%d matched\n&quot;</span><span class="o">,</span> <span class="n">bond</span><span class="o">.</span><span class="na">index</span><span class="o">());</span>
-   <span class="o">}</span>
-<span class="o">}</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">bond</span> <span class="p">:</span> <span class="n">mol</span><span class="p">.</span><span class="na">iterateBonds</span><span class="p">())</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">match</span><span class="p">.</span><span class="na">mapBond</span><span class="p">(</span><span class="n">atom</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;bond #%d matched\n&quot;</span><span class="p">,</span> <span class="n">bond</span><span class="p">.</span><span class="na">index</span><span class="p">());</span>
+   <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -2687,14 +2677,14 @@ only bonds and molecules respectively, and not their indices.</p>
 
 <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
   <span class="n">foreach</span> <span class="n">mol</span> <span class="ow">in</span> <span class="n">rxn1</span><span class="o">.</span><span class="n">iterateMolecules</span><span class="p">():</span>
-    <span class="k">print</span> <span class="s2">&quot;molecule #&quot;</span> <span class="o">+</span> <span class="n">mol</span><span class="o">.</span><span class="n">index</span><span class="p">();</span>
+    <span class="nb">print</span> <span class="s2">&quot;molecule #&quot;</span> <span class="o">+</span> <span class="n">mol</span><span class="o">.</span><span class="n">index</span><span class="p">();</span>
     <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateAtoms</span><span class="p">():</span>
       <span class="k">if</span> <span class="n">match</span><span class="o">.</span><span class="n">mapAtom</span><span class="p">(</span><span class="n">atom</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">&quot;atom #&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;matched&quot;</span>
+        <span class="nb">print</span> <span class="s2">&quot;atom #&quot;</span><span class="p">,</span> <span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;matched&quot;</span>
 
     <span class="k">for</span> <span class="n">bond</span> <span class="ow">in</span> <span class="n">mol</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">():</span>
       <span class="k">if</span> <span class="n">match</span><span class="o">.</span><span class="n">mapBond</span><span class="p">(</span><span class="n">bond</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">&quot;bond #&quot;</span><span class="p">,</span> <span class="n">bond</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;matched&quot;</span>
+        <span class="nb">print</span> <span class="s2">&quot;bond #&quot;</span><span class="p">,</span> <span class="n">bond</span><span class="o">.</span><span class="n">index</span><span class="p">(),</span> <span class="s2">&quot;matched&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -2765,30 +2755,30 @@ You can check if object is highlighted using
 on a substructure matcher’s target, along with explicit hydrogens
 attached to the matched atoms.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">substructureMatcher</span><span class="o">(</span><span class="n">target</span><span class="o">);</span>
-<span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">matcher</span><span class="o">.</span><span class="na">match</span><span class="o">(</span><span class="n">query</span><span class="o">);</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">substructureMatcher</span><span class="p">(</span><span class="n">target</span><span class="p">);</span>
+<span class="n">IndigoObject</span> <span class="n">match</span> <span class="o">=</span> <span class="n">matcher</span><span class="p">.</span><span class="na">match</span><span class="p">(</span><span class="n">query</span><span class="p">);</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="o">:</span> <span class="n">query</span><span class="o">.</span><span class="na">iterateAtoms</span><span class="o">())</span>
-<span class="o">{</span>
-   <span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="na">mapAtom</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
-   <span class="n">atom</span><span class="o">.</span><span class="na">highlight</span><span class="o">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="p">:</span> <span class="n">query</span><span class="p">.</span><span class="na">iterateAtoms</span><span class="p">())</span>
+<span class="p">{</span>
+   <span class="n">IndigoObject</span> <span class="n">atom</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="na">mapAtom</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+   <span class="n">atom</span><span class="p">.</span><span class="na">highlight</span><span class="p">();</span>
 
-   <span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">nei</span> <span class="o">:</span> <span class="n">atom</span><span class="o">.</span><span class="na">iterateNeighbors</span><span class="o">())</span>
-   <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(!</span><span class="n">nei</span><span class="o">.</span><span class="na">isPseudoatom</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">nei</span><span class="o">.</span><span class="na">isRSite</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="n">nei</span><span class="o">.</span><span class="na">atomicNumber</span><span class="o">()</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span>
-      <span class="o">{</span>
-         <span class="n">nei</span><span class="o">.</span><span class="na">highlight</span><span class="o">();</span>
-         <span class="n">nei</span><span class="o">.</span><span class="na">bond</span><span class="o">().</span><span class="na">highlight</span><span class="o">();</span>
-      <span class="o">}</span>
-   <span class="o">}</span>
-<span class="o">}</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">nei</span> <span class="p">:</span> <span class="n">atom</span><span class="p">.</span><span class="na">iterateNeighbors</span><span class="p">())</span>
+   <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">nei</span><span class="p">.</span><span class="na">isPseudoatom</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">nei</span><span class="p">.</span><span class="na">isRSite</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">nei</span><span class="p">.</span><span class="na">atomicNumber</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="p">{</span>
+         <span class="n">nei</span><span class="p">.</span><span class="na">highlight</span><span class="p">();</span>
+         <span class="n">nei</span><span class="p">.</span><span class="na">bond</span><span class="p">().</span><span class="na">highlight</span><span class="p">();</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">bond</span> <span class="o">:</span> <span class="n">query</span><span class="o">.</span><span class="na">iterateBonds</span><span class="o">())</span>
-   <span class="n">match</span><span class="o">.</span><span class="na">mapBond</span><span class="o">(</span><span class="n">bond</span><span class="o">).</span><span class="na">highlight</span><span class="o">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">bond</span> <span class="p">:</span> <span class="n">query</span><span class="p">.</span><span class="na">iterateBonds</span><span class="p">())</span>
+   <span class="n">match</span><span class="p">.</span><span class="na">mapBond</span><span class="p">(</span><span class="n">bond</span><span class="p">).</span><span class="na">highlight</span><span class="p">();</span>
 
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">target</span><span class="o">.</span><span class="na">smiles</span><span class="o">());</span>
-<span class="n">target</span><span class="o">.</span><span class="na">unhighlight</span><span class="o">();</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">target</span><span class="o">.</span><span class="na">smiles</span><span class="o">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">target</span><span class="p">.</span><span class="na">smiles</span><span class="p">());</span>
+<span class="n">target</span><span class="p">.</span><span class="na">unhighlight</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">target</span><span class="p">.</span><span class="na">smiles</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -2834,9 +2824,9 @@ attached to the matched atoms.</p>
 <span class="k">for</span> <span class="n">bond</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">iterateBonds</span><span class="p">():</span>
   <span class="n">match</span><span class="o">.</span><span class="n">mapBond</span><span class="p">(</span><span class="n">bond</span><span class="p">)</span><span class="o">.</span><span class="n">highlight</span><span class="p">()</span>
 
-<span class="k">print</span> <span class="n">target</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+<span class="nb">print</span> <span class="n">target</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
 <span class="n">target</span><span class="o">.</span><span class="n">unhighlight</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">target</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+<span class="nb">print</span> <span class="n">target</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2882,12 +2872,12 @@ in grid specified by its number of columns. Some
 <a class="reference external" href="../options/rendering-options.html">options</a> are available for placing
 titles under (or above) the items.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">createArray</span><span class="o">();</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">createArray</span><span class="p">();</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="o">:</span> <span class="n">indigo</span><span class="o">.</span><span class="na">iterateSDFile</span><span class="o">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="o">))</span>
-   <span class="n">arr</span><span class="o">.</span><span class="na">arrayAdd</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="p">:</span> <span class="n">indigo</span><span class="p">.</span><span class="na">iterateSDFile</span><span class="p">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="p">))</span>
+   <span class="n">arr</span><span class="p">.</span><span class="na">arrayAdd</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
 
-<span class="n">renderer</span><span class="o">.</span><span class="na">renderGridToFile</span><span class="o">(</span><span class="n">collection</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="s">&quot;structures.png&quot;</span><span class="o">);</span>
+<span class="n">renderer</span><span class="p">.</span><span class="na">renderGridToFile</span><span class="p">(</span><span class="n">collection</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">&quot;structures.png&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -2905,7 +2895,7 @@ titles under (or above) the items.</p>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">indigo</span><span class="o">.</span><span class="n">iterateSDFile</span><span class="p">(</span><span class="s2">&quot;structures.sdf&quot;</span><span class="p">):</span>
    <span class="n">arr</span><span class="o">.</span><span class="n">arrayAdd</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
 
-<span class="n">renderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">collection</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;structures.png&quot;</span><span class="p">)</span>
+<span class="n">renderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">collection</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;structures.png&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The second parameter of the <code class="docutils literal"><span class="pre">IndigoRenderer.renderGridToFile</span></code> and
@@ -2958,18 +2948,18 @@ molecules array (all the maximum common submolecules) can be iterated by
 the <code class="docutils literal"><span class="pre">allScaffolds()</span></code> method. The <code class="docutils literal"><span class="pre">IndigoObject.allScaffolds()</span></code>
 method returns an array object.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">createArray</span><span class="o">();</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">createArray</span><span class="p">();</span>
 
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="o">:</span> <span class="n">indigo</span><span class="o">.</span><span class="na">iterateSDFile</span><span class="o">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="o">))</span>
-   <span class="n">arr</span><span class="o">.</span><span class="na">arrayAdd</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="p">:</span> <span class="n">indigo</span><span class="p">.</span><span class="na">iterateSDFile</span><span class="p">(</span><span class="s">&quot;structures.sdf&quot;</span><span class="p">))</span>
+   <span class="n">arr</span><span class="p">.</span><span class="na">arrayAdd</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
 
-<span class="n">IndigoObject</span> <span class="n">scaf</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">extractCommonScaffold</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="s">&quot;exact&quot;</span><span class="o">);</span>
+<span class="n">IndigoObject</span> <span class="n">scaf</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">extractCommonScaffold</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="s">&quot;exact&quot;</span><span class="p">);</span>
 
-<span class="k">if</span> <span class="o">(</span><span class="n">scaf</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;max scaffold: &quot;</span> <span class="o">+</span> <span class="n">scaf</span><span class="o">.</span><span class="na">smiles</span><span class="o">());</span>
-  <span class="k">for</span><span class="o">(</span><span class="n">IndigoObject</span> <span class="n">scaffold</span><span class="o">:</span> <span class="n">scaf</span><span class="o">.</span><span class="na">allScaffolds</span><span class="o">().</span><span class="na">iterateArray</span><span class="o">())</span>
-     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;current scaffold: &quot;</span> <span class="o">+</span> <span class="n">scaffold</span><span class="o">.</span><span class="na">smiles</span><span class="o">());</span>
-<span class="o">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">scaf</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;max scaffold: &quot;</span> <span class="o">+</span> <span class="n">scaf</span><span class="p">.</span><span class="na">smiles</span><span class="p">());</span>
+  <span class="k">for</span><span class="p">(</span><span class="n">IndigoObject</span> <span class="n">scaffold</span><span class="p">:</span> <span class="n">scaf</span><span class="p">.</span><span class="na">allScaffolds</span><span class="p">().</span><span class="na">iterateArray</span><span class="p">())</span>
+     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;current scaffold: &quot;</span> <span class="o">+</span> <span class="n">scaffold</span><span class="p">.</span><span class="na">smiles</span><span class="p">());</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -2996,10 +2986,10 @@ method returns an array object.</p>
 <span class="n">scaf</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">extractCommonScaffold</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="s2">&quot;exact 1000&quot;</span><span class="p">);</span>
 
 <span class="k">if</span> <span class="n">scaf</span><span class="p">:</span>
-  <span class="k">print</span> <span class="s2">&quot;max scaffold:&quot;</span> <span class="o">+</span> <span class="n">scaf</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+  <span class="nb">print</span> <span class="s2">&quot;max scaffold:&quot;</span> <span class="o">+</span> <span class="n">scaf</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
 
   <span class="k">for</span> <span class="n">scaffold</span> <span class="ow">in</span> <span class="n">scaf</span><span class="o">.</span><span class="n">allScaffolds</span><span class="p">()</span><span class="o">.</span><span class="n">iterateArray</span><span class="p">():</span>
-    <span class="k">print</span> <span class="s2">&quot;current scaffold:&quot;</span> <span class="o">+</span> <span class="n">scaffold</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
+    <span class="nb">print</span> <span class="s2">&quot;current scaffold:&quot;</span> <span class="o">+</span> <span class="n">scaffold</span><span class="o">.</span><span class="n">smiles</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -3119,18 +3109,18 @@ moment.</p>
    <span class="n">rg_mol</span> <span class="o">=</span> <span class="n">q_match</span><span class="o">.</span><span class="n">decomposedMoleculeWithRGroups</span><span class="p">()</span>
 
    <span class="c1"># print molfile</span>
-   <span class="k">print</span><span class="p">(</span><span class="n">rg_mol</span><span class="o">.</span><span class="n">molfile</span><span class="p">())</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">rg_mol</span><span class="o">.</span><span class="n">molfile</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>In the example above there will be two matches: (R1)C1CCCC(R2)C1, R1=OH,
 R2=NH2 (R1)C1CCCC(R2)C1, R1=NH2, R2=OH</p>
 <p><strong>Note</strong>: the following code is deprecated:</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">deco</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">decomposeMolecules</span><span class="o">(</span><span class="n">scaf</span><span class="o">,</span> <span class="n">arr</span><span class="o">);</span>
-<span class="n">deco</span><span class="o">.</span><span class="na">decomposedMoleculeHighlighted</span><span class="o">().</span><span class="na">saveMolfile</span><span class="o">(</span><span class="s">&quot;highlighted.mol&quot;</span><span class="o">);</span>
-<span class="n">IndigoObject</span> <span class="n">scaffold</span> <span class="o">=</span> <span class="n">deco</span><span class="o">.</span><span class="na">decomposedMoleculeScaffold</span><span class="o">();</span>
-<span class="k">for</span> <span class="o">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="o">:</span> <span class="n">deco</span><span class="o">.</span><span class="na">iterateDecomposedMolecules</span><span class="o">())</span>
-   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">decomposedMoleculeWithRGroups</span><span class="o">().</span><span class="na">molfile</span><span class="o">());</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">deco</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">decomposeMolecules</span><span class="p">(</span><span class="n">scaf</span><span class="p">,</span> <span class="n">arr</span><span class="p">);</span>
+<span class="n">deco</span><span class="p">.</span><span class="na">decomposedMoleculeHighlighted</span><span class="p">().</span><span class="na">saveMolfile</span><span class="p">(</span><span class="s">&quot;highlighted.mol&quot;</span><span class="p">);</span>
+<span class="n">IndigoObject</span> <span class="n">scaffold</span> <span class="o">=</span> <span class="n">deco</span><span class="p">.</span><span class="na">decomposedMoleculeScaffold</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">IndigoObject</span> <span class="n">item</span> <span class="p">:</span> <span class="n">deco</span><span class="p">.</span><span class="na">iterateDecomposedMolecules</span><span class="p">())</span>
+   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">decomposedMoleculeWithRGroups</span><span class="p">().</span><span class="na">molfile</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>C#:</p>
@@ -3146,7 +3136,7 @@ R2=NH2 (R1)C1CCCC(R2)C1, R1=NH2, R2=OH</p>
 <span class="n">deco</span><span class="o">.</span><span class="n">decomposedMoleculeHighlighted</span><span class="p">()</span><span class="o">.</span><span class="n">saveMolfile</span><span class="p">(</span><span class="s2">&quot;highlighted.mol&quot;</span><span class="p">);</span>
 <span class="n">scaffold</span> <span class="o">=</span> <span class="n">deco</span><span class="o">.</span><span class="n">decomposedMoleculeScaffold</span><span class="p">();</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">deco</span><span class="o">.</span><span class="n">iterateDecomposedMolecules</span><span class="p">():</span>
-   <span class="k">print</span> <span class="n">item</span><span class="o">.</span><span class="n">decomposedMoleculeWithRGroups</span><span class="p">()</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
+   <span class="nb">print</span> <span class="n">item</span><span class="o">.</span><span class="n">decomposedMoleculeWithRGroups</span><span class="p">()</span><span class="o">.</span><span class="n">molfile</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -3155,17 +3145,17 @@ R2=NH2 (R1)C1CCCC(R2)C1, R1=NH2, R2=OH</p>
 <h2>Reaction Products Enumeration<a class="headerlink" href="#reaction-products-enumeration" title="Permalink to this headline">¶</a></h2>
 <p>General API for the combinatorial chemistry capabilities of Indigo. More examples can be found <a class="reference external" href="../concepts/combichem.html">here</a>. Also some examples available at <a class="reference external" href="../options/reaction-product-enumeration.html">options</a> page.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">reaction</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">loadQueryReaction</span><span class="o">(</span><span class="s">&quot;Cl[C:1]([*:3])=O.[OH:2][*:4]&gt;&gt;[*:4][O:2][C:1]([*:3])=O&quot;</span><span class="o">);</span>
-<span class="n">IndigoObject</span> <span class="n">monomers_table</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">createArray</span><span class="o">();</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">reaction</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">loadQueryReaction</span><span class="p">(</span><span class="s">&quot;Cl[C:1]([*:3])=O.[OH:2][*:4]&gt;&gt;[*:4][O:2][C:1]([*:3])=O&quot;</span><span class="p">);</span>
+<span class="n">IndigoObject</span> <span class="n">monomers_table</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">createArray</span><span class="p">();</span>
 
-<span class="n">monomers_table</span><span class="o">.</span><span class="na">arrayAdd</span><span class="o">(</span><span class="n">indigo</span><span class="o">.</span><span class="na">createArray</span><span class="o">());</span>
-<span class="n">monomers_table</span><span class="o">.</span><span class="na">at</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">arrayAdd</span><span class="o">(</span><span class="n">indigo</span><span class="o">.</span><span class="na">loadMolecule</span><span class="o">(</span><span class="s">&quot;CC(Cl)=O&quot;</span><span class="o">));</span>
-<span class="n">monomers_table</span><span class="o">.</span><span class="na">at</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">arrayAdd</span><span class="o">(</span><span class="n">indigo</span><span class="o">.</span><span class="na">loadMolecule</span><span class="o">(</span><span class="s">&quot;OC1CCC(CC1)C(Cl)=O&quot;</span><span class="o">));</span>
+<span class="n">monomers_table</span><span class="p">.</span><span class="na">arrayAdd</span><span class="p">(</span><span class="n">indigo</span><span class="p">.</span><span class="na">createArray</span><span class="p">());</span>
+<span class="n">monomers_table</span><span class="p">.</span><span class="na">at</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="na">arrayAdd</span><span class="p">(</span><span class="n">indigo</span><span class="p">.</span><span class="na">loadMolecule</span><span class="p">(</span><span class="s">&quot;CC(Cl)=O&quot;</span><span class="p">));</span>
+<span class="n">monomers_table</span><span class="p">.</span><span class="na">at</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="na">arrayAdd</span><span class="p">(</span><span class="n">indigo</span><span class="p">.</span><span class="na">loadMolecule</span><span class="p">(</span><span class="s">&quot;OC1CCC(CC1)C(Cl)=O&quot;</span><span class="p">));</span>
 
-<span class="n">monomers_table</span><span class="o">.</span><span class="na">arrayAdd</span><span class="o">(</span><span class="n">indigo</span><span class="o">.</span><span class="na">createArray</span><span class="o">());</span>
-<span class="n">monomers_table</span><span class="o">.</span><span class="na">at</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="na">arrayAdd</span><span class="o">(</span><span class="n">indigo</span><span class="o">.</span><span class="na">loadMolecule</span><span class="o">(</span><span class="s">&quot;O[C@H]1[C@H](O)[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O&quot;</span><span class="o">));</span>
+<span class="n">monomers_table</span><span class="p">.</span><span class="na">arrayAdd</span><span class="p">(</span><span class="n">indigo</span><span class="p">.</span><span class="na">createArray</span><span class="p">());</span>
+<span class="n">monomers_table</span><span class="p">.</span><span class="na">at</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="na">arrayAdd</span><span class="p">(</span><span class="n">indigo</span><span class="p">.</span><span class="na">loadMolecule</span><span class="p">(</span><span class="s">&quot;O[C@H]1[C@H](O)[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O&quot;</span><span class="p">));</span>
 
-<span class="n">IndigoObject</span> <span class="n">output_reactions</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">reactionProductEnumerate</span><span class="o">(</span><span class="n">reaction</span><span class="o">,</span> <span class="n">monomers_table</span><span class="o">);</span>
+<span class="n">IndigoObject</span> <span class="n">output_reactions</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">reactionProductEnumerate</span><span class="p">(</span><span class="n">reaction</span><span class="p">,</span> <span class="n">monomers_table</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Python:</p>
@@ -3188,7 +3178,7 @@ R2=NH2 (R1)C1CCCC(R2)C1, R1=NH2, R2=OH</p>
     <span class="n">rxn</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">clone</span><span class="p">();</span>
     <span class="n">rxn_array</span><span class="o">.</span><span class="n">arrayAdd</span><span class="p">(</span><span class="n">rxn</span><span class="p">)</span>
 
-<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">rxn_array</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result_rpe.png&#39;</span><span class="p">)</span>
+<span class="n">indigoRenderer</span><span class="o">.</span><span class="n">renderGridToFile</span><span class="p">(</span><span class="n">rxn_array</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;result_rpe.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/indigorenderer_8ea7fcead360b2449a4ba6fc1941fc59b5654ca4rpe.svg"><img alt="../../_images/indigorenderer_8ea7fcead360b2449a4ba6fc1941fc59b5654ca4rpe.svg" src="../../_images/indigorenderer_8ea7fcead360b2449a4ba6fc1941fc59b5654ca4rpe.svg" /></a>
@@ -3196,17 +3186,17 @@ R2=NH2 (R1)C1CCCC(R2)C1, R1=NH2, R2=OH</p>
 <h3>Reaction-based Molecule Transformations<a class="headerlink" href="#reaction-based-molecule-transformations" title="Permalink to this headline">¶</a></h3>
 <p>Usage examples are available <a class="reference external" href="../concepts/transformation.html">here</a>.</p>
 <p>Java:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">reaction</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">loadQueryReaction</span><span class="o">(</span><span class="s">&quot;[*+:1][*-:2]&gt;&gt;[*:2]=[*:1]&quot;</span><span class="o">);</span>
-<span class="n">IndigoObject</span> <span class="n">molecule</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="na">loadMolecule</span><span class="o">(</span><span class="s">&quot;[O-][C+]1CCCC1[N+]([O-])=O&quot;</span><span class="o">);</span>
-<span class="n">indigo</span><span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="n">reaction</span><span class="o">,</span> <span class="n">molecule</span><span class="o">);</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">molecule</span><span class="o">.</span><span class="na">smiles</span><span class="o">());</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">IndigoObject</span> <span class="n">reaction</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">loadQueryReaction</span><span class="p">(</span><span class="s">&quot;[*+:1][*-:2]&gt;&gt;[*:2]=[*:1]&quot;</span><span class="p">);</span>
+<span class="n">IndigoObject</span> <span class="n">molecule</span> <span class="o">=</span> <span class="n">indigo</span><span class="p">.</span><span class="na">loadMolecule</span><span class="p">(</span><span class="s">&quot;[O-][C+]1CCCC1[N+]([O-])=O&quot;</span><span class="p">);</span>
+<span class="n">indigo</span><span class="p">.</span><span class="na">transform</span><span class="p">(</span><span class="n">reaction</span><span class="p">,</span> <span class="n">molecule</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">molecule</span><span class="p">.</span><span class="na">smiles</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>Python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">reaction</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadQueryReaction</span><span class="p">(</span><span class="s2">&quot;[*+:1][*-:2]&gt;&gt;[*:2]=[*:1]&quot;</span><span class="p">)</span>
 <span class="n">molecule</span> <span class="o">=</span> <span class="n">indigo</span><span class="o">.</span><span class="n">loadMolecule</span><span class="p">(</span><span class="s2">&quot;[O-][C+]1CCCC1[N+]([O-])=O&quot;</span><span class="p">)</span>
 <span class="n">indigo</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">reaction</span><span class="p">,</span> <span class="n">molecule</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">molecule</span><span class="o">.</span><span class="n">smiles</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">molecule</span><span class="o">.</span><span class="n">smiles</span><span class="p">())</span>
 </pre></div>
 </div>
 <div class="line"><br /></div>
@@ -3232,7 +3222,7 @@ Output:<div class="output highlight-default"><div class="highlight"><pre><span><
             <div class="epam-logo">
                 <img src="../../_static/images/Logo_Epam_Color.svg" alt="" />
             </div>
-            <p class="copyright">© 2017, EPAM Systems. All Rights Reserved.</p>
+            <p class="copyright">© 2020, EPAM Systems. All Rights Reserved.</p>
         </div>
         <div class="footer-navigation">
             <ul class="uui-footer-navigation">
@@ -3246,17 +3236,7 @@ Output:<div class="output highlight-default"><div class="highlight"><pre><span><
 </footer>
     </div>
     
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-20662471-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+<script src="../../_static/js/google-analytics-load.js"></script>
     
 </body>
 </html>

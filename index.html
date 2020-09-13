@@ -14,18 +14,10 @@
     <link rel="icon" type="image/png" href="_static/images/icons/favicon-16.png">
 
     <!-- jQuery Core -->
-    <script src="_static/js/lib/jquery-1.12.0.min.js"></script>
+    <script src="_static/js/lib/jquery-3.4.1.min.js"></script>
 
     <!--Sphinx files-->
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:    './',
-            VERSION:     '0.3.0',
-            COLLAPSE_INDEX: false,
-            FILE_SUFFIX: '.html',
-            HAS_SOURCE:  false
-        };
-    </script>
+    <script src="_static/js/doc-load.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
 
@@ -34,6 +26,7 @@
     <!-- Bootstrap Core -->
     <link rel="stylesheet" href="_static/bootstrap/css/bootstrap.min.css"/>
     <script src="_static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="_static/bootstrap/js/popper.min.js"></script>
 
     <!-- EPAM UUI JavaScript Core -->
     <script src="_static/js/uui-core.min.js" type="text/javascript"></script>
@@ -59,15 +52,8 @@
     <script src="_static/js/index-tiles.js"></script>
     
 
-    <script type="text/javascript">
-        $(window).load(function () {
-            //document.title = "Life Sciences Open Source"
-            UUI.Navigation.init();
-            UUI.Global_Search.init();
+    
 
-            $('.news').height($('#main-tiles').height())
-        });
-    </script>
 </head>
 
 <body>
@@ -124,7 +110,10 @@
 <li class="toctree-l2"><a class="reference internal" href="download/bingo.html">Downloads</a></li>
 </ul>
 </li>
-<li class="sub-menu"><a class="reference internal" href="mri/index.html">Web3D DICOM Viewer<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
+<li class="sub-menu"><a class="reference internal" href="cloud/index.html">Cloud Pipeline</a><ul class="simple">
+</ul>
+</li>
+<li class="sub-menu"><a class="reference internal" href="mri/index.html">Med3web<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
 <li class="toctree-l2"><a class="reference internal" href="mri/papers.html">Research and Development</a></li>
 </ul>
 </li>
@@ -136,15 +125,12 @@
 <li class="sub-menu"><a class="reference internal" href="ngb/index.html">NGB</a></li>
 <li class="sub-menu"><a class="reference internal" href="indigo/index.html">Indigo Toolkit<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
 <li class="toctree-l2"><a class="reference internal" href="indigo/api/index.html">API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="indigo/api/reference.html">API Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="indigo/concepts/index.html">Concepts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="indigo/utilities.html">Indigo Utilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="download/indigo/index.html">Downloads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="indigo/build.html">Build</a></li>
 <li class="toctree-l2"><a class="reference internal" href="indigo/installation.html">SDK Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="indigo/options/index.html">Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="indigo/release-notes/index.html">Release Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="indigo/examples/index.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download/indigo/index.html">Downloads</a></li>
 </ul>
 </li>
 <li class="sub-menu"><a class="reference internal" href="ketcher/index.html">Ketcher<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
@@ -163,11 +149,7 @@
 <li class="sub-menu"><a class="reference internal" href="imago/index.html">Imago OCR<div class="arrow fa fa-angle-right"></div></a><ul class="sub">
 <li class="toctree-l2"><a class="reference internal" href="imago/examples.html">Features and Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="imago/report.html">Comparison Report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imago/imago-gui.html">Imago OCR Visual Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imago/imago_console.html">Imago Console Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imago/c.html">C Library Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imago/java.html">Java Bindings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="imago/dependencies.html">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imago/installation.html">Imago Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="imago/changelog.html">Changelog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download/imago.html">Downloads</a></li>
 </ul>
@@ -223,7 +205,7 @@
                         
 
 <div class="dropdown-menu" role="menu">
-    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="indigo/index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="indigo/api/index.html">API</a></li><li><a class="reference internal" href="indigo/api/reference.html">API Reference</a></li><li><a class="reference internal" href="indigo/concepts/index.html">Concepts</a></li><li><a class="reference internal" href="indigo/utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="download/indigo/index.html">Downloads</a></li><li><a class="reference internal" href="indigo/build.html">Build</a></li><li><a class="reference internal" href="indigo/installation.html">SDK Installation</a></li><li><a class="reference internal" href="indigo/options/index.html">Options</a></li><li><a class="reference internal" href="indigo/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="indigo/examples/index.html">Examples</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="ketcher/help.html">Help</a></li><li><a class="reference internal" href="ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="ketcher/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="indigo/eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="indigo/eln/changelog.html">Indigo ELN Changelog</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="imago/imago-gui.html">Imago OCR Visual Tool</a></li><li><a class="reference internal" href="imago/imago_console.html">Imago Console Application</a></li><li><a class="reference internal" href="imago/c.html">C Library Reference</a></li><li><a class="reference internal" href="imago/java.html">Java Bindings</a></li><li><a class="reference internal" href="imago/dependencies.html">Dependencies</a></li><li><a class="reference internal" href="imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="mri/index.html">Web3D DICOM Viewer &raquo;</a></span><ul><li><a class="reference internal" href="mri/papers.html">Research and Development</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="miew/index.html">Miew &raquo;</a></span><ul><li><a class="reference internal" href="miew/embed.html">Embedding the Viewer</a></li><li><a class="reference internal" href="miew/selectors.html">Selection Language</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="ngb/index.html">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
+    <div class="container"><h2>Cheminformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="bingo/index.html">Bingo &raquo;</a></span><ul><li><a class="reference internal" href="bingo/bingo-oracle.html">Bingo Oracle</a></li><li><a class="reference internal" href="bingo/bingo-postgres.html">Bingo PostgreSQL</a></li><li><a class="reference internal" href="bingo/bingo-sqlserver.html">Bingo SQL Server</a></li><li><a class="reference internal" href="bingo/bingo-nosql.html">Bingo NoSQL</a></li><li><a class="reference internal" href="download/bingo.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="indigo/index.html">Indigo Toolkit &raquo;</a></span><ul><li><a class="reference internal" href="indigo/api/index.html">API</a></li><li><a class="reference internal" href="indigo/concepts/index.html">Concepts</a></li><li><a class="reference internal" href="indigo/utilities.html">Indigo Utilities</a></li><li><a class="reference internal" href="indigo/installation.html">SDK Installation</a></li><li><a class="reference internal" href="indigo/options/index.html">Options</a></li><li><a class="reference internal" href="indigo/examples/index.html">Examples</a></li><li><a class="reference internal" href="download/indigo/index.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="ketcher/index.html">Ketcher &raquo;</a></span><ul><li><a class="reference internal" href="ketcher/editing-tips.html">Editing Tips</a></li><li><a class="reference internal" href="ketcher/developers-manual.html">Developers Manual</a></li><li><a class="reference internal" href="ketcher/help.html">Help</a></li><li><a class="reference internal" href="ketcher/demo.html">Ketcher 2.0 Demo</a></li><li><a class="reference internal" href="ketcher/release-notes/index.html">Release Notes</a></li><li><a class="reference internal" href="download/ketcher.html">Downloads</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="indigo/eln/index.html">Indigo ELN &raquo;</a></span><ul><li><a class="reference internal" href="indigo/eln/changelog.html">Indigo ELN Changelog</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="imago/index.html">Imago OCR &raquo;</a></span><ul><li><a class="reference internal" href="imago/examples.html">Features and Examples</a></li><li><a class="reference internal" href="imago/report.html">Comparison Report</a></li><li><a class="reference internal" href="imago/installation.html">Imago Installation</a></li><li><a class="reference internal" href="imago/changelog.html">Changelog</a></li><li><a class="reference internal" href="download/imago.html">Downloads</a></li></ul></div></div><h2>Bioinformatics</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="cloud/index.html">Cloud Pipeline &raquo;</a></span><ul></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="mri/index.html">Med3web &raquo;</a></span><ul><li><a class="reference internal" href="mri/papers.html">Research and Development</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="miew/index.html">Miew &raquo;</a></span><ul><li><a class="reference internal" href="miew/embed.html">Embedding the Viewer</a></li><li><a class="reference internal" href="miew/selectors.html">Selection Language</a></li></ul></div><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="ngb/index.html">NGB &raquo;</a></span></div></div><h2>Data processing</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="parso.html">Parso &raquo;</a></span><ul><li><a class="reference internal" href="parso/changelog.html">Release Notes</a></li><li><a class="reference internal" href="download/parso.html">Downloads</a></li></ul></div></div><h2>Software development</h2><hr><div class="dropdown-menu-row"><div class="dropdown-menu-column"><span class="nav-subtitle"><a class="reference internal" href="selenium.html">Selenium Framework &raquo;</a></span></div></div></div>
 </div>
                     </li>
                     <li><a href="resources.html"><span>Resources</span></a></li>
@@ -246,17 +228,7 @@
         </nav>
     </div>
     
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-20662471-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+<script src="_static/js/google-analytics-load.js"></script>
 </header>
 
         <div class="uui-main-container">
@@ -275,13 +247,22 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-8" id="main-tiles">
                                 <div class="row" id="index-tiles">
-                                    <div style="display: none;"><div class="section" id="life-sciences-open-source">
+                                    <div class="invisible"><div class="section" id="life-sciences-open-source">
 <h1>Life Sciences Open Source<a class="headerlink" href="#life-sciences-open-source" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <div class="section" id="bioinformatics">
 <h2>Bioinformatics<a class="headerlink" href="#bioinformatics" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><a class="reference external" href="cloud/">Cloud Pipeline</a> Genomics analysis and Scientific computing in the Cloud of your choice <img alt="image11" src="_images/cloud.jpg" /><ul>
+<li>Provides the ability to build &amp; run the customized scripts and workflows
+that support genomics analysis, modeling &amp; simulation, and machine
+learning activities that are required to accelerate drug discovery research.</li>
+<li>Wraps Cloud compute and storage resources into a single service, providing
+an easy and scalable approach to accomplish a wide range of scientific tasks.</li>
+<li>Supports three main Cloud platforms: Amazon, Azure, Google.</li>
+</ul>
+</li>
 <li><a class="reference external" href="mri/">Med3web Viewer and Editor</a> High performance web tool for advanced visualization and manipulation of medical images: MRI, CT, etc. <img alt="image10" src="_images/mri.jpg" /><ul>
 <li>Med3web Viewer creates a 3D model of a body part based on the set
 of plane images. It provides a crucial means for performing visual
@@ -290,7 +271,7 @@ and surgical training.</li>
 <li>Unique rendering algorithms and GPU processing approach provide high
 performance, smooth interaction and ability to convenient working
 regardless location and time.</li>
-<li>Try the <a class="reference external" href="http://epa.ms/mri">Med3web demo</a> online.</li>
+<li>Try the <a class="reference external" href="https://epa.ms/mri">Med3web demo</a> online.</li>
 </ul>
 </li>
 <li><a class="reference external" href="miew/">Miew – 3D Molecular Viewer</a> High performance web tool for advanced visualization and manipulation of molecular structures <img alt="image9" src="_images/miew.jpg" /><ul>
@@ -298,10 +279,9 @@ regardless location and time.</li>
 editing of small molecules as well as large molecular complexes,
 including abilities to view, analyze, and modify the 3D structure of a
 molecule.</li>
-<li>Miew functions as a standalone HTML5 web application or integrates as a
-component into your pages. The latest versions of WebGL-enabled desktop
+<li>Miew integrates as a component into your pages or functions as a standalone HTML5 web application. The latest versions of WebGL-enabled desktop
 and mobile browsers are supported.</li>
-<li>Try the <a class="reference external" href="http://miew.opensource.epam.com/">Miew demo</a> online.</li>
+<li>Try the <a class="reference external" href="https://epa.ms/miew-app">Miew demo</a> online.</li>
 </ul>
 </li>
 <li><a class="reference external" href="ngb/index.html">New Genome Browser</a> Web at a speed and functionality of desktop <img alt="image8" src="_images/NGB3.JPG" /><ul>
@@ -418,7 +398,7 @@ substantial test development instead of tiresome testware maintenance.</li>
             <div class="epam-logo">
                 <img src="_static/images/Logo_Epam_Color.svg" alt="" />
             </div>
-            <p class="copyright">© 2017, EPAM Systems. All Rights Reserved.</p>
+            <p class="copyright">© 2020, EPAM Systems. All Rights Reserved.</p>
         </div>
         <div class="footer-navigation">
             <ul class="uui-footer-navigation">
@@ -432,17 +412,7 @@ substantial test development instead of tiresome testware maintenance.</li>
 </footer>
     </div>
     
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-20662471-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+<script src="_static/js/google-analytics-load.js"></script>
     
 </body>
 </html>
