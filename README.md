@@ -4,11 +4,11 @@
 
 The repository contains sources for the EPAM Lifeciences Open Source portal.
 
-http://lifescience.opensource.epam.com
+https://lifescience.opensource.epam.com
 
 ## Build using Docker
 
-`docker-compose up'
+`U=$UID docker-compose up'
 
 ## Build instructions
 
