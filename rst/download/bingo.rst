@@ -1,7 +1,7 @@
 Download Bingo
 ==============
 
-Bingo 1.9.0beta
+Bingo 1.9.1
 ---------------
 
 The changelog is available `on this page <../bingo/changelog.html>`__
@@ -16,24 +16,28 @@ The changelog is available `on this page <../bingo/changelog.html>`__
      - |image1| Windows
      - |image2| Mac OS
    * - Oracle
-     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_0/bingo-oracle-1.9.0-beta.r10-linux64.zip>`__
-     - `64-bit <>`__
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-oracle-1.9.1.r1-linux64.zip>`__
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-oracle-1.9.1.r0-win64.zip>`__
      - binaries upon request.
-   * - PostgreSQL 10.1
-     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_0/bingo-postgres10.1-1.9.0-beta.r10-linux64.zip>`__
-     - `64-bit <>`__
-     - `10.13 <>`__  
+   * - PostgreSQL 12
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-postgres12-1.9.1.r1-linux64.zip>`__
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-postgres12-1.9.1.r0-win64.zip>`__
+     - \-  
+   * - PostgreSQL 11
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-postgres11-1.9.1.r1-linux64.zip>`__
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-postgres11-1.9.1.r0-win64.zip>`__
+     - \-
+   * - PostgreSQL 10
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-postgres10-1.9.1.r1-linux64.zip>`__
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-postgres10-1.9.1.r0-win64.zip>`__
+     - \-   
    * - PostgreSQL 9.6
-     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_0/bingo-postgres9.6-1.9.0-beta.r10-linux64.zip>`__
-     - `64-bit <>`__
-     - `10.13 <>`__
-   * - PostgreSQL 9.5
-     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_0/bingo-postgres9.5-1.9.0-beta.r10-linux64.zip>`__
-     - `64-bit <>`__
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-postgres9.6-1.9.1.r1-linux64.zip>`__
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-postgres9.6-1.9.1.r0-win64.zip>`__
      - \-   
    * - Microsoft SQL Server
      - \-
-     - `2005 \- 2017 <>`__
+     - \-
      - \-
 
 

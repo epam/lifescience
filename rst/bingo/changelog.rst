@@ -8,12 +8,25 @@ Bingo Changelog
     changelog
 
 
+Bingo 1.9.1
+----------------
+
+*13 September 2020*
+
+We are glad to announce a new version for Bingo cartridges. Installation artifacts can be found at `Downloads <../download/bingo.html>`__
+
+- PostgreSQL 11 and 12 versions support was added and tested
+- Bug was fixed with tautomer fingerprints
+- Indigo-core changes and bugfixes. 
+
+
+
 Bingo 1.8.0 beta
 ----------------
 
 *12 January 2018*
 
-We are glad to announce a new version for Bingo cartridges. As always, installation artifacts can be found in `Downloads <../download/bingo.html>`__
+We are glad to announce a new version for Bingo cartridges. As always, installation artifacts can be found at `Downloads <../download/bingo.html>`__
 
 **General changes:**
 

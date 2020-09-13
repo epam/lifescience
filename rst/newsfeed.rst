@@ -8,6 +8,27 @@ News
     release-notes/index
 
 
+Bingo 1.9.1 released
+--------------------
+
+*13 Sep 2020*
+
+New Bingo was released with PostgreSQL 11 and 12 support.
+
+* |bingo_1_9_1_notes|
+
+* |bingo_1_9_1_downloads|
+
+.. |bingo_1_9_1_notes| raw:: html
+
+   <a href="bingo/changelog.html" target="_blank">Release Notes</a>
+
+.. |bingo_1_9_1_downloads| raw:: html
+
+   <a href="download/bingo.html" target="_blank">Downloads</a>
+
+
+
 Change license for Indigo and Bingo
 -----------------------------------
 
