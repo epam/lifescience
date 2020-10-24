@@ -2159,7 +2159,7 @@ float value — the similarity measure between the two given items. There
 are three available metrics, which are calculated in the following way:
 
 -  ``tanimoto`` (the default) : c / (a + b - c)
--  ``tversky <alpha> <beta>``: c / ((a - c) \* alpha + (b - c) \* beta)
+-  ``tversky <alpha> <beta>``: c / ((a - c) \* alpha + (b - c) \* beta + c)
    (if alpha and beta are omitted, they are taken for alpha = beta =
    0.5)
 -  ``euclid-sub``: c / a

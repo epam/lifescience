@@ -3,3 +3,4 @@
 /build
 /indigo-python
 *.pyc
+.idea
