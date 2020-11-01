@@ -5,6 +5,12 @@ Download Indigo Service
 Indigo service
 --------------
 
+Source code
+~~~~~~~~~~~
+
+Source code can be found at `Indigo GitHub <https://github.com/epam/Indigo/tree/master/utils/indigo-service>`__
+
+
 Current version
 ~~~~~~~~~~~~~~~
 
