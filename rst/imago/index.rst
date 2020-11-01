@@ -122,8 +122,8 @@ Supported Data Formats
 ----------------------
 
 Both the Imago OCR project and the ``imago_console`` tool are supporting
-the most popular raster image formats: ``PNG``, ``JPEG``, ``BMP``,
-``DIB``, ``TIFF``, ``PBM``, ``RAS`` and others (depending on platform).
+the most popular raster image formats: ``PNG``, ``JPEG``, ``BMP (using RGB 24bpp)``,
+``DIB (using RGB 24bpp)``, ``TIFF``, ``PBM`` and others (depending on platform).
 Imago OCR Visual Tool users can also open ``PDF`` files, choose the
 needed document page (if it is ``PDF`` or ``TIFF``), and select a
 fragment that should be recognized.
