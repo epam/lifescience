@@ -8,6 +8,27 @@ News
     release-notes/index
 
 
+Ketcher 2.1.0 beta is now available
+-----------------------------------
+
+*26 Nov 2020*
+
+We are glad to announce that a new version of Ketcher is released. In scope of this release transition to React was done and now Ketcher is available as NPM package. For more details please look at release notes.
+
+* |ketcher_2_1_0_b_notes|
+
+* |ketcher_2_1_0_b_downloads|
+
+.. |ketcher_2_1_0_b_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.1.0b.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_1_0_b_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
+
+
 Bingo 1.9.1 released
 --------------------
 
