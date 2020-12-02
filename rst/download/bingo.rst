@@ -37,7 +37,7 @@ The changelog is available `on this page <../bingo/changelog.html>`__
      - \-   
    * - Microsoft SQL Server
      - \-
-     - \-
+     - `64-bit <http://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/bingo-1_9_1/bingo-sqlserver-1.9.1.r24.zip>`__
      - \-
 
 
