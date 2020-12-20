@@ -169,10 +169,10 @@ Look at the `Build <../indigo/build.html>`__ page for the building manual.
 License
 -------
 
-Copyright © 2009-2019 LifeSciences unit of EPAM Systems, Inc.
+Copyright © 2009-2020 LifeSciences unit of EPAM Systems, Inc.
 
-Indigo version 1.0.0 was released under GNU General Public License v3.0
-Indigo version 1.4.0 was re-licensed under Apache License, Version 2.
+- Indigo version 1.0.0 was released under GNU General Public License v3.0
+- Indigo version 1.4.0 was re-licensed under Apache License, Version 2.
 
 This program is free software: You can redistribute it and/or modify it
 under the terms of the Apache License, Version 2.0.
@@ -185,18 +185,14 @@ Feedback
 --------
 
 Do you need assistance using our tools? Do you need a feature? Do you
-want to send a patch to us? Did you find a bug? Please write to one of
-the following newsgroups and let us know:
+want to send a patch to us? Did you find a bug? Please use Github tickets package:
 
--  http://groups.google.com/group/indigo-bugs : for bug reports on all
-   open-source projects.
--  http://groups.google.com/group/indigo-dev : for development topics.
--  http://groups.google.com/group/indigo-general : for any other
-   discussions.
+https://github.com/epam/Indigo/issues
 
-No registration is required: you can write from your ordinary e-mail
-account to indigo-bugs@googlegroups.com, indigo-dev@googlegroups.com, or
-indigo-general@googlegroups.com to get your message posted.
+For any other questions please use the following e-mail:
+
+`lifescience.opensource@epam.com <mailto:lifescience.opensource@epam.com>`__
+
 
 Commercial Availability
 -----------------------
@@ -210,4 +206,4 @@ You may need the commercial license if you want to:
 -  Design and implement custom changes for the SDK
 -  Do any other development/testing required for a proprietary software product
 
-
+Visit our `SolutionsHub page <https://solutionshub.epam.com/solution/indigo>`__   for more details
