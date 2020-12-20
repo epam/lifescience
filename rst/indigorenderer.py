@@ -102,6 +102,8 @@ class IndigoRendererDirective(images.Figure):
 
         text = '\n'.join(self.content)
 
+        # print("---------------- start process", self.lineno)
+
         if 'codename' in indigorenderer_options:
             registerCodeDict(indigorenderer_options['codename'], text)
 
@@ -109,7 +111,7 @@ class IndigoRendererDirective(images.Figure):
         if isinstance(image_node, nodes.system_message):
             return [image_node, ]
 
-        image_node.indigorenderer = dict(text=text, options=indigorenderer_options)
+        image_node.indigorenderer = dict(text=text, options=indigorenderer_options, lineno=self.lineno, content=self.block_text)
 
         blocks = []
 
@@ -153,7 +155,10 @@ def render_indigorenderer_images(app, doctree):
         if not hasattr(img, 'indigorenderer'):
             continue
 
+
         text = img.indigorenderer['text']
+        print("------------- view {}:{} {}".format(doctree.attributes['source'], img.indigorenderer['lineno'], img.indigorenderer['content']))
+
         options = img.indigorenderer['options']
         try:
             res = render_indigorenderer(app, text, options, os.path.dirname(doctree.attributes['source']), os.path.abspath(os.curdir))
@@ -166,6 +171,7 @@ def render_indigorenderer_images(app, doctree):
                 for relative_path in relative_paths:
                     newimg = img.copy()
                     newimg['uri'] = relative_path.replace('\\', '/')
+                    print('uri {}'.format(newimg['uri']))
                     newimg['scale'] = 1.0 / float(len(relative_paths))
                     imgnodes.append(newimg)
                     #span = img.copy()

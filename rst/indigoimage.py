@@ -45,6 +45,7 @@ def render_indigoimage_images(app, doctree):
         options = img.indigoimage['options']
         try:
             relative_path = get_relative_path(app, text, options)
+            # print("-----------------------------", relative_path)
             if relative_path:
                 relative_path = relative_path.replace('\\', '/')
             img['uri'] = relative_path
