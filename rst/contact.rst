@@ -50,29 +50,31 @@ Feedback on Open-source Software
 
 Do you need assistance using our tools? Do you need a feature? Do you
 want to send a patch to us? Did you find a bug? Please write to one of
-the following newsgroups and let us know:
+the following Github repo and let us know:
 
--  http://groups.google.com/group/indigo-bugs : for bug reports on all
-   open-source projects.
--  http://groups.google.com/group/indigo-dev : for development topics.
--  http://groups.google.com/group/indigo-general : for any other
-   discussions.
+-  https://github.com/epam/Indigo/issues : Indigo toolkit, Bingo
+-  https://github.com/epam/Indigo-ELN-v.-2.0/issues : Indigo ELN
+-  https://github.com/epam/ketcher/issues : Ketcher
+-  https://github.com/epam/cloud-pipeline/issues : Cloud Pipeline
+-  https://github.com/epam/parso/issues : Parso
+-  https://github.com/epam/NGB/issues : NGB
+-  https://github.com/epam/miew/issues : Miew
+-  https://github.com/epam/med3web/issues : Med3Web
+-  https://github.com/epam/JDI/issues: JDI
 
-No registration is required: you can write from your ordinary e-mail
-account to indigo-bugs@googlegroups.com, indigo-dev@googlegroups.com, or
-indigo-general@googlegroups.com to get your message posted.
+
 
 Commercial Availability
 -----------------------
 
-We have dual-licensed our organic chemistry products. If the
-GPL-licensed Bingo, Imago, or Indigo, or AGPL-licensed Ketcher do not
-fit your needs, please contact us to discuss the
-purchase of a commercial license. You may need the commercial license if
-you want to:
+Most of the products are licensed under the Apache License v2.0.
+The Apache License v2.0 allows a product to be used as a component in proprietary software products.
 
--  Receive ongoing support and maintenance of our products
--  Include our products as components in your proprietary software
-   product
--  Use Bingo with Oracle that is licensed with a license other than the
-   OTN Developer License, or with MS SQL Server Enterprise Edition
+If the Apache License v2.0 does not fit your needs, please contact us to discuss the purchase of a commercial license.
+You may need the commercial license if you want to:
+
+-  Receive ongoing support and maintenance
+-  Design and implement custom changes for the SDK
+-  Do any other development/testing required for a proprietary software product
+
+Contact us or visit `EPAN SolutionsHub <https://solutionshub.epam.com>`__   for more details
