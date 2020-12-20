@@ -150,7 +150,7 @@ to execute Imago OCR Visual Tool.
 License
 -------
 
-Copyright © 2009-2014 LifeSciences unit of EPAM Systems, Inc.
+Copyright © 2009-2020 LifeSciences unit of EPAM Systems, Inc.
 
 This program is free software: You can redistribute it and/or modify it
 under the terms of the GNU General Public License as published by the
@@ -169,18 +169,9 @@ Feedback
 --------
 
 Do you need assistance using our tools? Do you need a feature? Do you
-want to send a patch to us? Did you find a bug? Please write to one of
-the following newsgroups and let us know:
+want to send a patch to us? Did you find a bug? Please write to the following e-mail and let us know:
 
--  http://groups.google.com/group/indigo-bugs : for bug reports on all
-   Open-Source projects.
--  http://groups.google.com/group/indigo-dev : for development topics.
--  http://groups.google.com/group/indigo-general : for any other
-   discussions.
-
-No registration is required: you can write from your ordinary e-mail
-account to indigo-bugs@googlegroups.com, indigo-dev@googlegroups.com, or
-indigo-general@googlegroups.com to get your message posted.
+`lifescience.opensource@epam.com <mailto:lifescience.opensource@epam.com>`__
 
 Commercial Availability
 -----------------------
@@ -190,6 +181,9 @@ You may need the commercial license if you want to:
 
 -  Receive ongoing support and maintenance
 -  Include Imago as a component in your proprietary software product
+-  Do any other development/testing required for a proprietary software product
+
+Visit our `SolutionsHub page <https://solutionshub.epam.com/solution/ketcher>`__   for more details
 
 .. |image2| image:: ../assets/imago/4_source_USRE039991-20080101-C00100.*
 .. |image3| image:: ../assets/imago/4_result_USRE039991-20080101-C00100.png.imago-2.0.*
