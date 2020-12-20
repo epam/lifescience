@@ -46,27 +46,27 @@ Core Indigo ELN v2.0 Package
 
 The core Indigo ELN package includes:
 
-- Database tier - MongoDB (In addition, Indigo ELN supports EPAM`s open-source molecular search service BingoDB).
+- Database tier - MongoDB (In addition, Indigo ELN supports EPAM's open-source molecular search service BingoDB).
 - Core user interface for creation of Projects, Notebooks, Experiment templates and Experiments.
-- Integrated Ketcher (EPAM`s open-source editor) for structure editing
+- Integrated Ketcher (EPAM's open-source editor) for structure editing
 
 Major services:
 ~~~~~~~~~~~~~~~
 
 - Basic functionality and user interfaces for creating, describing, searching and managing entities: template, experiments, notebook, projects.
-- Reaction rendering and chemical properties calculation based on EPAM`s open-source cheminformatics engine Indigo.
+- Reaction rendering and chemical properties calculation based on EPAM's open-source cheminformatics engine Indigo.
 - Integration with External Compound registration and structure search services
 - APIs to integrate with existing customer services and databases 
 - API to integrate with existing customer signature service ( if needed we can provide EPAM open-source signature service with web-based  UI)
 
 
-EPAM`s Open-Source Products to Complement Indigo ELN
+EPAM Open-Source Products to Complement Indigo ELN
 ----------------------------------------------------
 
 EPAM is available to integrate EPAM's open-source products and other open-source products with the core functionality of Indigo ELN. In this way, Indigo ELN becomes a full-featured solution:
 
-- Search in the Indigo ELN database by using EPAM`s molecular search service BingoDB
-- Integration with EPAM`s chemistry drawing tool Ketcher.
+- Search in the Indigo ELN database by using EPAM's molecular search service BingoDB
+- Integration with EPAM's chemistry drawing tool Ketcher.
 - Basic compound and batch registration service (These can be adapted to meet your requirements). 
 - Service for integration with Signature application to sign and witness experiments using internal certificate. Integration with service   used SAFE BioPharma standard for signature  is also possible.
 
@@ -98,7 +98,8 @@ Indigo ELN v2.0 supports User Access Management that allows refined customizatio
 Create Projects and Notebooks
 --------------------------------
 
-Hierarchy of entities consisting of projects, notebooks and experiments allows users to systemize their research work, provide additional information about ongoing projects and separate different topics inside one study.
+Hierarchy of entities consisting of projects, notebooks and experiments allows users to systemize their research work, provide additional 
+information about ongoing projects and separate different topics inside one study.
 
 
 ..  image:: ../../assets/eln/Indigo_Project_Notebook.png
@@ -107,7 +108,11 @@ Hierarchy of entities consisting of projects, notebooks and experiments allows u
 Flexible Experiment structure
 -----------------------------------
 
-Indigo ELN provides users with the ability to create custom templates for experiments to be able to suit numerous chemical research designs. Templates become available for many users to apply to their experiments. Experiment may include only experiment design or just a concept record, or both - all depends on the users` choice. Experiment Template can be constructed using components. The current components library allows supporting single step chemical reaction, future synthesis idea, including chemical structure information, or just a textual description. The list of components is expandable without the need to change the core code or architecture.
+Indigo ELN provides users with the ability to create custom templates for experiments to be able to suit numerous chemical research designs. 
+Templates become available for many users to apply to their experiments. Experiment may include only experiment design or just a concept record, 
+or both - all depends on the users' choice. Experiment Template can be constructed using components. The current components library allows 
+supporting single step chemical reaction, future synthesis idea, including chemical structure information, or just a textual description. 
+The list of components is expandable without the need to change the core code or architecture.
 
 ..  image:: ../../assets/eln/Indigo_Template.png
     :align: center
@@ -121,7 +126,7 @@ Search within system
 
 Entities search by attributes and Structure/Reaction search.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Indigo ELN`s advanced algorithm for searching inside the system offers a wide range of queries: entity type and attribute, entity domain, experiment status. Integration with Bingo DB enables Experiment search by Product structure or Reaction scheme.
+Indigo ELN's advanced algorithm for searching inside the system offers a wide range of queries: entity type and attribute, entity domain, experiment status. Integration with Bingo DB enables Experiment search by Product structure or Reaction scheme.
 
 
 ..  image:: ../../assets/eln/Indigo_System_search.png
