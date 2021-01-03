@@ -7,12 +7,6 @@ services:
     volumes:
       - ./:/opt
     command:
-      # bash -c "useradd -m -s /bin/bash $USER || true && 
-      #           cp -R /srv/indigo-python/ /opt/ && 
-      #           cp /srv/indigo-src/api/indigo.h /opt/indigo/ &&
-      #           chown -R $USER:$USER /opt/indigo/indigo.h &&
-      #           chown -R $USER:$USER /opt/indigo-python/ && 
-      #           make html"
       bash -c "cp /srv/* /opt/indigo/ &&
       make html"
 
