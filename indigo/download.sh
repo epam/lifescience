@@ -1,3 +1,7 @@
 #!/bin/sh
 indigo_head=`cat HEAD`
-wget http://github.com/epam/Indigo/archive/$indigo_head.zip -O indigo.zip 
+
+wget https://github.com/epam/Indigo/raw/$indigo_head/api/indigo.h
+wget https://github.com/epam/Indigo/raw/$indigo_head/api/python/indigo.py
+wget https://github.com/epam/Indigo/raw/$indigo_head/api/plugins/renderer/python/indigo_renderer.py
+wget https://github.com/epam/Indigo/raw/$indigo_head/api/plugins/inchi/python/indigo_inchi.py
