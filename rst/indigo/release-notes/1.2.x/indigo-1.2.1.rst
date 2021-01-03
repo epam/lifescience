@@ -74,9 +74,7 @@ Standardize
 ``standardize`` method can be used to the “standardizing” of the molecule or query (stereo, 
 charges, geometry, valences, atoms and bonds properties) in accordance with requirements. The list of applied modifications is defined by options activated in Indigo (full list of available standardize options is described in the corresponding `Options <../../../indigo/options/standardize.html>`__ section). 
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     indigo.setOption("standardize-stereo", True);
 
@@ -99,6 +97,9 @@ charges, geometry, valences, atoms and bonds properties) in accordance with requ
 
     indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
 
+.. image:: ../../../assets/indigo/render/indigorenderer_527964ef842912c52f81607c9069f8eb49b9ea7f.svg
+    :scale: 100
+
 See `examples <../../../indigo/examples/standardize.html>`__ page to find more usage examples.
 
 .. _indigo-1.2.1-cdx:
@@ -119,18 +120,8 @@ Stereo better support
 Improvements and fixes were applied for the stereo algorithm. 
 Now Indigo restores stereo configurations according to the given information. Here is an example where stereo configuration is defined *incorrectly*. But for SMARTS pattern it is required to find all molecules with *any* stereo-center, thus no errors should be raised while SMARTS loading.  
 
-.. indigorenderer::
-   :indigoobjecttype: code
-   :indigoloadertype: code
-   :nocode: 
-    
-   # Load structure
-   q = indigo.loadSmarts('[*@H](~*)~*')
-
-   indigo.setOption("render-comment", "SMARTS = [*@H](~*)~*")
-
-   #render query molecule
-   indigoRenderer.renderToFile(q, 'result.png')
+.. image:: ../../../assets/indigo/render/indigorenderer_74eb5f6fb86cb61ee72d740216b1cbc54ddbcb41.svg
+    :scale: 100
 
 Release includes also other stereo and cis/trans improvements: loading/serialization, bidirection mode, haworth projection, etc. 
 

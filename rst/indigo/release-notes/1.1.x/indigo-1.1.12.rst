@@ -66,15 +66,22 @@ Smiles cis-trans flags
 
 Cis-trans bonds in rings are saved using SMILES extension with "c" and "t" fields.
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     m = indigo.loadMoleculeFromFile('data/macro.mol')
 
     indigoRenderer.renderToFile(m, "result.png")
 
     print(m.canonicalSmiles())
+
+.. image:: ../../../assets/indigo/render/indigorenderer_183a4eab0bd10c4ab060ccb44b71ce55909e3fa1.svg
+    :scale: 100
+
+Output:
+
+.. code-block:: text
+
+    C1C=CC=CCC=CC=CC=CC=C1 |c:1,3,8,12,t:6,10|
 
 .. _indigo-1.1.12-bold-bonds:
 
@@ -84,10 +91,7 @@ Bold bonds detection and rendering
 
 To depict Sugars Indigo can automatically detect where bold bond should be drawn:
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :downloads: data/bold-bond2.mol
+.. code-block:: python
 
     m = indigo.loadMoleculeFromFile('data/bold-bond2.mol')
 
@@ -99,6 +103,14 @@ To depict Sugars Indigo can automatically detect where bold bond should be drawn
     indigo.setOption("render-comment", "Original")
     indigoRenderer.renderToFile(m, "result_2.png")
 
+Input: :download:`data/bold-bond2.mol`
+
+.. image:: ../../../assets/indigo/render/indigorenderer_b785e84c4c703e4bfa2242fbc7675e5869a6eea11.svg
+    :scale: 50
+
+.. image:: ../../../assets/indigo/render/indigorenderer_b785e84c4c703e4bfa2242fbc7675e5869a6eea12.svg
+    :scale: 50
+
 .. _indigo-1.1.12-saver:
 
 =============
@@ -107,9 +119,7 @@ Generic saver
 
 Python bindings has a new method `createSaver` that can be used to save chemical structures into buffers.
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     # Create molecules and set their names
     m1 = indigo.loadMolecule('[H][C@](C)(N)O')
@@ -126,6 +136,12 @@ Python bindings has a new method `createSaver` that can be used to save chemical
 
     print(buffer.toString())
 
+Output:
+
+.. code-block:: text
+
+    [H][C@@](O)(N)C
+    C1C=CC=CC=1
 
 .. _indigo-1.1.12-build:
 
