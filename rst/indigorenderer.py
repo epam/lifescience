@@ -35,6 +35,14 @@ indigoInchi = None
 absolutePaths = {}
 outputData = defaultdict(str)
 
+
+with open("/opt/log.out", "w") as f:
+    f.write("\n")
+
+def write_to_log(data):
+    with open("/opt/log.out", "a") as f:
+        f.write(data)
+
 class Logger(object):
     def __init__(self):
         self.terminal = sys.stdout
@@ -157,7 +165,7 @@ def render_indigorenderer_images(app, doctree):
 
 
         text = img.indigorenderer['text']
-        print("------------- view {}:{} {}".format(doctree.attributes['source'], img.indigorenderer['lineno'], img.indigorenderer['content']))
+        write_to_log("\n------------- view {}:{}\n{}".format(doctree.attributes['source'], img.indigorenderer['lineno'], img.indigorenderer['content']))
 
         options = img.indigorenderer['options']
         try:
@@ -171,8 +179,8 @@ def render_indigorenderer_images(app, doctree):
                 for relative_path in relative_paths:
                     newimg = img.copy()
                     newimg['uri'] = relative_path.replace('\\', '/')
-                    print('uri {}'.format(newimg['uri']))
                     newimg['scale'] = 1.0 / float(len(relative_paths))
+                    write_to_log('\n.. image:: {}\n    :scale: {}\n\n'.format(newimg['uri'], int (newimg['scale'] * 100)).replace('_images', 'assets/indigo/render'))
                     imgnodes.append(newimg)
                     #span = img.copy()
                     #span['uri'] = relative_uri(app.builder.env.docname, '_static') + '/span.png'
