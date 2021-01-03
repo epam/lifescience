@@ -20,8 +20,7 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 sys.path.append(os.path.abspath(os.curdir))
-sys.path.append('indigo-python')
-
+sys.path.append('indigo')
 
 # -- General configuration ------------------------------------------------
 
