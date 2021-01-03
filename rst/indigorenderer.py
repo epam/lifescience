@@ -175,12 +175,16 @@ def render_indigorenderer_images(app, doctree):
 
             relative_paths, output = res
             imgnodes = []
+            if 'nocode' not in options:
+                write_to_log('\n\n.. code-block:: python\n\n')
+            if 'downloads' in options:
+                write_to_log('\nInput: :download:`{}`\n'.format(options['downloads']))
             if 'noimage' not in options:
                 for relative_path in relative_paths:
                     newimg = img.copy()
                     newimg['uri'] = relative_path.replace('\\', '/')
                     newimg['scale'] = 1.0 / float(len(relative_paths))
-                    write_to_log('\n.. image:: {}\n    :scale: {}\n\n'.format(newimg['uri'], int (newimg['scale'] * 100)).replace('_images', 'assets/indigo/render'))
+                    write_to_log('\n.. image:: {}\n    :scale: {}\n'.format(newimg['uri'], int (newimg['scale'] * 100)).replace('_images', 'assets/indigo/render'))
                     imgnodes.append(newimg)
                     #span = img.copy()
                     #span['uri'] = relative_uri(app.builder.env.docname, '_static') + '/span.png'
@@ -194,6 +198,8 @@ def render_indigorenderer_images(app, doctree):
                     imgnodes.append(title)
                 literal = nodes.literal_block(output, output)
                 literal['classes'] += ['output']
+                write_to_log('\nOutput:\n\n.. code-block:: text\n\n{}\n'.format(output))
+                
                 imgnodes.append(literal)
             img.replace_self(imgnodes)
         except IndigoRendererError, exc:

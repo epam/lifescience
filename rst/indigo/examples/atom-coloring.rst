@@ -68,10 +68,7 @@ For a specified molecule one can fine all the embeddings of fragment patterns, a
 
 The following code prints activity value for a given structure:
         
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :includecode: ac-getAtomsActivity
+.. code-block:: python
     
     # Load structure
     m = indigo.loadMolecule('CC1=C(Cl)C=CC2=C1NS(=O)S2')
@@ -85,7 +82,24 @@ The following code prints activity value for a given structure:
     indigo.setOption("render-atom-ids-visible", "true"); 
     
     indigoRenderer.renderToFile(m, 'result.png')
-     
+
+.. image:: ../../assets/indigo/render/indigorenderer_9f8804e09c28a4040adf6394af3496e7a41d6dfd.svg
+    :scale: 100
+
+Output:
+
+.. code-block:: text
+
+    Atom 1: 1.00
+    Atom 2: 0.50
+    Atom 3: -0.50
+    Atom 4: 1.00
+    Atom 5: 1.00
+    Atom 6: 1.00
+    Atom 7: 0.50
+    Atom 8: -0.50
+
+
 Let's assign a color for each atom based on its activity: negative values are 
 colored from blue to black, and positive values are colored from black to red. Indigo 
 Renderer interprets data s-groups with a specified name as a color for the atoms. 
@@ -139,10 +153,7 @@ For the visualizations below we are going to use the following options:
                     
 Wrapping all these method one can color and render an arbitrary molecule:
        
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :includecode: ac-patterns,ac-assignColorGroups,ac-rendering
+.. code-block:: python
     
     # Load structure
     m = indigo.loadMolecule('[O-][N+](=O)C1=CN2CC3(CCN(CC3)C(=O)OCC3=CC=C(C=C3)C(F)(F)F)OC2=N1')
@@ -150,7 +161,10 @@ Wrapping all these method one can color and render an arbitrary molecule:
     assignColorGroups(m)
     
     indigoRenderer.renderToFile(m, 'result.png')
-    
+
+.. image:: ../../assets/indigo/render/indigorenderer_bc73703f76a1d6a3ec77e0e3cf326a4d18f89ab9.svg
+    :scale: 100
+
 ---------
 Color bar
 ---------
@@ -183,23 +197,19 @@ following code adds a color bar atoms right to the molecule:
 
 Standalone color bar looks in the following way:
         
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :includecode: ac-colorbar,ac-rendering
+.. code-block:: python
     
     # Load structure
     m = indigo.createMolecule()
     addAtomColorbar(m, -2.0, 3.0)
     indigoRenderer.renderToFile(m, 'result.png')
-    
+
+.. image:: ../../assets/indigo/render/indigorenderer_c4599ab8d315b7f9fac0e658a1c631a2ff537a68.svg
+    :scale: 100
+
 Overall example for a single molecule:
     
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :includecode: ac-assignColorGroups,ac-rendering,ac-colorbar
-    :imagename: atom-coloring-main
+.. code-block:: python
     
     # Load structure CID=23081329
     m = indigo.loadMolecule('CCN1C(SC(C)C(=O)NCC2=CC=C(F)C=C2)=NN=C1C1=CC=CC=C1OC')
@@ -210,17 +220,16 @@ Overall example for a single molecule:
     indigo.setOption('render-comment', "CID=23081329")
     indigoRenderer.renderToFile(m, 'result.png')
 
+.. image:: ../../assets/indigo/render/atom-coloring-main.svg
+    :scale: 100
+
 --------------------------------------
 Rendering a set of molecules in a grid
 --------------------------------------
 
 Atom coloring works not only for a single structure but for grid rendering too.
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :includecode: ac-assignColorGroups,ac-rendering,ac-colorbar
-    :downloads: data/pubchem-9-rand.smi
+.. code-block:: python
     
     # Load structure
     file = "data/pubchem-9-rand.smi"
@@ -240,6 +249,11 @@ Atom coloring works not only for a single structure but for grid rendering too.
     indigo.setOption("render-grid-title-property", "grid-comment")
         
     indigoRenderer.renderGridToFile(array, None, 3, 'result.png')
+
+Input: :download:`data/pubchem-9-rand.smi`
+
+.. image:: ../../assets/indigo/render/indigorenderer_4d1088f16de9fb363ef48aa35c0b366ef7d2e9a7.svg
+    :scale: 100
 
 Content of the file :download:`data/pubchem-9-rand.smi` with 9 randomly selected molecules that is used in the example above:
     
