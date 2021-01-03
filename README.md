@@ -12,7 +12,7 @@ https://lifescience.opensource.epam.com
 
 ## Build instructions
 
-To compile site install [Sphinx](http://sphinx-doc.org/) v1.3.1
+To compile site install [Sphinx](http://sphinx-doc.org/)
 
     sudo pip install -r requirements.txt
 
