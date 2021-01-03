@@ -52,14 +52,11 @@ General
 
         If not set, is calculated automatically according to ``render-bond-length``. To reset this setting, you can set the values of width and height to -1. This options defines both width and height that can be set independently via ``render-image-width`` and ``render-image-height`` options.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_3c11ad279c390a28ce067ee73041a6b87ade9e3f0.svg
+        :scale: 50
 
-        indigo.setOption("render-bond-length", -1)
-        renderMolfileWithOptions('data/render_example1.mol', 'render-image-size', [ "300, 200", "210, 100" ])
+    .. image:: ../../assets/indigo/render/indigorenderer_3c11ad279c390a28ce067ee73041a6b87ade9e3f1.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-bond-length
@@ -70,13 +67,14 @@ General
 
         The actual average bond length may be less if the ``render-image-size`` option is set. To reset this setting, you can set its value to -1. This option scales label size as well.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_f7be387e6db7f616aa9ba3ab3958a118e3313dea0.svg
+        :scale: 33
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-bond-length', [ 10, 20, 40 ])
+    .. image:: ../../assets/indigo/render/indigorenderer_f7be387e6db7f616aa9ba3ab3958a118e3313dea1.svg
+        :scale: 33
+
+    .. image:: ../../assets/indigo/render/indigorenderer_f7be387e6db7f616aa9ba3ab3958a118e3313dea2.svg
+        :scale: 33
 
 .. indigo_option::
     :name: render-relative-thickness
@@ -85,13 +83,14 @@ General
     :short:
         Set the thickness of bonds and atom labels to X/30 of the average bond length.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_a07a656adc406186148b2958a3995aaeef6abc570.svg
+        :scale: 33
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-relative-thickness', [ 0.5, 1, 2 ])
+    .. image:: ../../assets/indigo/render/indigorenderer_a07a656adc406186148b2958a3995aaeef6abc571.svg
+        :scale: 33
+
+    .. image:: ../../assets/indigo/render/indigorenderer_a07a656adc406186148b2958a3995aaeef6abc572.svg
+        :scale: 33
 
 
 .. indigo_option::
@@ -132,13 +131,11 @@ General
     :short:
         Turn on atom coloring, e.g. nitrogen is blue, oxygen is red, etc.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_4c2f2f8b5b88aaa0cde640208fc5f2006c87a4c80.svg
+        :scale: 50
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-coloring', [ True, False ])
+    .. image:: ../../assets/indigo/render/indigorenderer_4c2f2f8b5b88aaa0cde640208fc5f2006c87a4c81.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-base-color
@@ -147,13 +144,11 @@ General
     :short:
         The default color for atoms and bonds.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_217893bd7c00aa95187cef8027eebbc6d77030ce0.svg
+        :scale: 50
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-base-color', [ "0, 0, 1", "0.1, 0.7, 0.4" ])
+    .. image:: ../../assets/indigo/render/indigorenderer_217893bd7c00aa95187cef8027eebbc6d77030ce1.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-background-color
@@ -162,19 +157,15 @@ General
     :short:
         Background color.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_dfbba4ab12e62b149d2d445a353832a6d4bd28d60.svg
+        :scale: 50
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-background-color', [ "0.8, 0.8, 0.8", "0.7, 1, 1" ])
+    .. image:: ../../assets/indigo/render/indigorenderer_dfbba4ab12e62b149d2d445a353832a6d4bd28d61.svg
+        :scale: 50
 
     Combination of both ``render-background-color`` and ``render-base-color`` can be used to get negative:
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
+    .. code-block:: python
 
         m = indigo.loadMoleculeFromFile('data/render_example1.mol')
 
@@ -182,6 +173,9 @@ General
         indigo.setOption("render-base-color", "1, 1, 1")
 
         indigoRenderer.renderToFile(m, "result.png")
+
+    .. image:: ../../assets/indigo/render/indigorenderer_5afc363772e39448d1cd4d5adbf562adbc786795.svg
+        :scale: 100
 
 .. indigo_option::
     :name: render-label-mode
@@ -202,13 +196,17 @@ General
     **none**
         hide all labels, show only bonds
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_56e221e816798873127eae5ff474f83b47516fb30.svg
+        :scale: 25
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-label-mode', [ "all", "terminal-hetero", "hetero", "none" ])
+    .. image:: ../../assets/indigo/render/indigorenderer_56e221e816798873127eae5ff474f83b47516fb31.svg
+        :scale: 25
+
+    .. image:: ../../assets/indigo/render/indigorenderer_56e221e816798873127eae5ff474f83b47516fb32.svg
+        :scale: 25
+
+    .. image:: ../../assets/indigo/render/indigorenderer_56e221e816798873127eae5ff474f83b47516fb33.svg
+        :scale: 25
 
 .. indigo_option::
     :name: render-hdc-offset
@@ -216,13 +214,11 @@ General
     :default: 0, 0
     :short: Offset for the rendering area
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_5f464c2e2487526b06b2a1470d133836ea5045a80.svg
+        :scale: 50
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-hdc-offset', [ '0, 0', '30, 5' ])
+    .. image:: ../../assets/indigo/render/indigorenderer_5f464c2e2487526b06b2a1470d133836ea5045a81.svg
+        :scale: 50
 
 Comments
 ========
@@ -240,13 +236,8 @@ Comments
 
      Comment can have multiple line:
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-
-        renderMolfileWithOptions('data/render_example1.mol', 'render-comment', [ "multiline\ncomment" ])
+    .. image:: ../../assets/indigo/render/indigorenderer_bd0d6512e3230e62589572a289adf0ba004904ac0.svg
+        :scale: 100
 
 .. indigo_option::
     :name: render-comment-font-size
@@ -255,13 +246,14 @@ Comments
     :short:
         Font size for the comment in absolute units, roughly equal to the height in pixels.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_466f5b8ed55a03de5496ec9ad39de337c9b72cbd0.svg
+        :scale: 33
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-comment-font-size', [ 15, 20, 25 ])
+    .. image:: ../../assets/indigo/render/indigorenderer_466f5b8ed55a03de5496ec9ad39de337c9b72cbd1.svg
+        :scale: 33
+
+    .. image:: ../../assets/indigo/render/indigorenderer_466f5b8ed55a03de5496ec9ad39de337c9b72cbd2.svg
+        :scale: 33
 
 .. indigo_option::
     :name: render-comment-alignment
@@ -271,13 +263,17 @@ Comments
 
     Supported values: left, right, center, center-left
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_d85affdde4f867d5960bde527951095797c1d58d0.svg
+        :scale: 25
 
-        renderMolfileWithOptions('data/render_example4.mol', 'render-comment-alignment', [ 'left', 'right', 'center', 'center-left' ], separator='=\n')
+    .. image:: ../../assets/indigo/render/indigorenderer_d85affdde4f867d5960bde527951095797c1d58d1.svg
+        :scale: 25
+
+    .. image:: ../../assets/indigo/render/indigorenderer_d85affdde4f867d5960bde527951095797c1d58d2.svg
+        :scale: 25
+
+    .. image:: ../../assets/indigo/render/indigorenderer_d85affdde4f867d5960bde527951095797c1d58d3.svg
+        :scale: 25
 
 
 .. indigo_option::
@@ -287,13 +283,11 @@ Comments
     :short:
         Color to use for the comment.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_fb119fbd66421752aca14a7c74518a6781b6133b0.svg
+        :scale: 50
 
-        renderMolfileWithOptions('data/render_example3.mol', 'render-comment-color', [ "0, 0, 0", "0, 0.4, 0.5" ])
+    .. image:: ../../assets/indigo/render/indigorenderer_fb119fbd66421752aca14a7c74518a6781b6133b1.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-bond-line-width
@@ -302,13 +296,14 @@ Comments
     :short:
         Relative bond line width
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_76584355aaca4915a4e67d873c0b81ab9ce6b5f00.svg
+        :scale: 33
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-bond-line-width', [ 0.5, 1, 2 ])
+    .. image:: ../../assets/indigo/render/indigorenderer_76584355aaca4915a4e67d873c0b81ab9ce6b5f01.svg
+        :scale: 33
+
+    .. image:: ../../assets/indigo/render/indigorenderer_76584355aaca4915a4e67d873c0b81ab9ce6b5f02.svg
+        :scale: 33
 
 .. indigo_option::
     :name: render-comment-position
@@ -317,13 +312,11 @@ Comments
     :short:
         top or bottom.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_720c541ef1469ab19d2838f359b7d5e75f9ef98e0.svg
+        :scale: 50
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-comment-position', [ "top", "bottom" ])
+    .. image:: ../../assets/indigo/render/indigorenderer_720c541ef1469ab19d2838f359b7d5e75f9ef98e1.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-comment-offset
@@ -332,13 +325,14 @@ Comments
     :short:
         Vertical space (in pixels) between the comment and the rendered structure or reaction.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_a29812dee01a7255f847acd27a8db84445731a580.svg
+        :scale: 33
 
-        renderMolfileWithOptions('data/render_example1.mol', 'render-comment-offset', [ 0, 10, 20 ])
+    .. image:: ../../assets/indigo/render/indigorenderer_a29812dee01a7255f847acd27a8db84445731a581.svg
+        :scale: 33
+
+    .. image:: ../../assets/indigo/render/indigorenderer_a29812dee01a7255f847acd27a8db84445731a582.svg
+        :scale: 33
 
 Chemistry
 =========
@@ -350,13 +344,11 @@ Chemistry
     :short:
         Show implicit hydrogens on visible atoms.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_bb170c86f5ee1dc585166e5390269a0d475c29bf0.svg
+        :scale: 50
 
-        renderMolfileWithOptions('data/render_example2.mol', 'render-implicit-hydrogens-visible', [ True, False ])
+    .. image:: ../../assets/indigo/render/indigorenderer_bb170c86f5ee1dc585166e5390269a0d475c29bf1.svg
+        :scale: 50
 
 
 .. indigo_option::
@@ -366,13 +358,11 @@ Chemistry
     :short:
         Show atom numbers (for debugging purposes only).
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_6f053b6acb6a81d303b625911c85a649227eac310.svg
+        :scale: 50
 
-        renderMolfileWithOptions('data/render_example3.mol', 'render-atom-ids-visible', [ True, False ])
+    .. image:: ../../assets/indigo/render/indigorenderer_6f053b6acb6a81d303b625911c85a649227eac311.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-bond-ids-visible
@@ -381,13 +371,11 @@ Chemistry
     :short:
         Show bond numbers (for debugging purposes only).
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_a7b5ecc20c2aab239e409dc68c7c3ec162cd0b2e0.svg
+        :scale: 50
 
-        renderMolfileWithOptions('data/render_example3.mol', 'render-bond-ids-visible', [ True, False ])
+    .. image:: ../../assets/indigo/render/indigorenderer_a7b5ecc20c2aab239e409dc68c7c3ec162cd0b2e1.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-atom-bond-ids-from-one
@@ -403,15 +391,8 @@ Chemistry
     :default: black
     :short: Atom-by-atom mapping indices color in reactions.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-
-        rxn = indigo.loadReactionFromFile("data/amiderxn2.rxn")
-        rxn.automap()
-        renderWithOptions(rxn, "render-aam-color", ["0.1, 0.5, 0.7"] )
+    .. image:: ../../assets/indigo/render/indigorenderer_2d4b51b4095d744294e0a4b18dd40230c8e664f30.svg
+        :scale: 100
 
 .. indigo_option::
     :name: render-atom-color-property
@@ -421,9 +402,7 @@ Chemistry
 
     Indigo can use a specified color for each atom and interpolate these colors for bond rendering.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
+    .. code-block:: python
 
         # Load structure
         m = indigo.loadMolecule('CC(=C)C1=C(C)C(C)=CC(O)=C1NCCCCC=O')
@@ -436,6 +415,9 @@ Chemistry
         indigo.setOption('render-coloring', False)
         indigoRenderer.renderToFile(m, 'result.png')
 
+    .. image:: ../../assets/indigo/render/indigorenderer_bfb81f9acd9910b65776d216ac99637f46e02283.svg
+        :scale: 100
+
     See :ref:`indigo-example-atom-coloring` for a larger example.
 
 .. indigo_option::
@@ -444,14 +426,13 @@ Chemistry
     :default: true
     :short: Detect and draw bold bond for Haworth projection
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-        :downloads: data/bold-bond.mol
+    Input: :download:`data/bold-bond.mol`
 
-        renderMolfileWithOptions('data/bold-bond.mol', 'render-bold-bond-detection', [ True, False ])
+    .. image:: ../../assets/indigo/render/indigorenderer_1bc28b16c239ff2c4e4bd87858d8743f2b4a13cd0.svg
+        :scale: 50
+
+    .. image:: ../../assets/indigo/render/indigorenderer_1bc28b16c239ff2c4e4bd87858d8743f2b4a13cd1.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-catalysts-placement
@@ -459,14 +440,13 @@ Chemistry
     :default: above-and-below
     :short: Reaction catalysts place relative to the reaction arrow
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-        :downloads: data/catalysts3000.rxn
+    Input: :download:`data/catalysts3000.rxn`
 
-        renderRxnfileWithOptions('data/catalysts3000.rxn', 'render-catalysts-placement', [ "above", "above-and-below" ])
+    .. image:: ../../assets/indigo/render/indigorenderer_b6c60f30bd0cc1572a0865431b90994855115fa80.svg
+        :scale: 50
+
+    .. image:: ../../assets/indigo/render/indigorenderer_b6c60f30bd0cc1572a0865431b90994855115fa81.svg
+        :scale: 50
 
 
 .. indigo_option::
@@ -475,14 +455,11 @@ Chemistry
     :default: false
     :short: Center double done if there is an attached stereobond
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_e40818900fba8c7e8b4bf18e05a6552c536ce6a10.svg
+        :scale: 50
 
-        indigo.setOption("ignore-stereochemistry-errors", True)
-        renderMolfileWithOptions('data/render-center-double-bond-when-stereo-adjacent.mol', 'render-center-double-bond-when-stereo-adjacent', [ True, False ])
+    .. image:: ../../assets/indigo/render/indigorenderer_e40818900fba8c7e8b4bf18e05a6552c536ce6a11.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-data-sgroup-color
@@ -490,14 +467,13 @@ Chemistry
     :default: black
     :short: Color for data-sgroups
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-        :downloads: data/render_example-sgroup.mol
+    Input: :download:`data/render_example-sgroup.mol`
 
-        renderMolfileWithOptions('data/render_example-sgroup.mol', 'render-data-sgroup-color', [ '0.5, 0.3, 0.5', '0.1, 0.1, 0.9' ])
+    .. image:: ../../assets/indigo/render/indigorenderer_e18eb2e98d5eea2b76442abaa014b5f81ef12eb80.svg
+        :scale: 50
+
+    .. image:: ../../assets/indigo/render/indigorenderer_e18eb2e98d5eea2b76442abaa014b5f81ef12eb81.svg
+        :scale: 50
 
 
 
@@ -514,25 +490,29 @@ Chemistry
     **none**:
         Hide all the information about the stereogroups.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-        :downloads: data/stereo-chiral.mol
+    Input: :download:`data/stereo-chiral.mol`
 
-        renderMolfileWithOptions('data/stereo-chiral.mol', 'render-stereo-style', [ 'old', 'ext', 'none' ])
+    .. image:: ../../assets/indigo/render/indigorenderer_45bbf8dc3fd3f1a657d113e5f8290004b699a5fe0.svg
+        :scale: 33
+
+    .. image:: ../../assets/indigo/render/indigorenderer_45bbf8dc3fd3f1a657d113e5f8290004b699a5fe1.svg
+        :scale: 33
+
+    .. image:: ../../assets/indigo/render/indigorenderer_45bbf8dc3fd3f1a657d113e5f8290004b699a5fe2.svg
+        :scale: 33
 
     `Old` style of rendering is used only with ordinary stereocenters, and enhanced stereocenters with `and` and `or` groups are rendered the same in the `old` and `ext` mode:
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-        :downloads: data/stereo-chiral2.mol
+    Input: :download:`data/stereo-chiral2.mol`
 
-        renderMolfileWithOptions('data/stereo-chiral2.mol', 'render-stereo-style', [ 'old', 'ext', 'none' ])
+    .. image:: ../../assets/indigo/render/indigorenderer_2ffd17f6774edd33a8e5c7622aa0a8180955981a0.svg
+        :scale: 33
+
+    .. image:: ../../assets/indigo/render/indigorenderer_2ffd17f6774edd33a8e5c7622aa0a8180955981a1.svg
+        :scale: 33
+
+    .. image:: ../../assets/indigo/render/indigorenderer_2ffd17f6774edd33a8e5c7622aa0a8180955981a2.svg
+        :scale: 33
 
 
 .. indigo_option::
@@ -541,14 +521,13 @@ Chemistry
     :default: expand
     :short: Superatoms rendering mode
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-        :downloads: data/abbr.mol
+    Input: :download:`data/abbr.mol`
 
-        renderMolfileWithOptions('data/abbr.mol', 'render-superatom-mode', [ 'expand', 'collapse' ])
+    .. image:: ../../assets/indigo/render/indigorenderer_47ecde5d4f564604570713bf01f4aa9513aee8a80.svg
+        :scale: 50
+
+    .. image:: ../../assets/indigo/render/indigorenderer_47ecde5d4f564604570713bf01f4aa9513aee8a81.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-valences-visible
@@ -556,13 +535,11 @@ Chemistry
     :default: true
     :short: Render explicit valences
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
+    .. image:: ../../assets/indigo/render/indigorenderer_0353c45c93208719837a25cd05e68583a4e2a73f0.svg
+        :scale: 50
 
-        renderMolfileWithOptions('data/render_example-valence.mol', 'render-valences-visible', [ True, False ])
+    .. image:: ../../assets/indigo/render/indigorenderer_0353c45c93208719837a25cd05e68583a4e2a73f1.svg
+        :scale: 50
 
 Highlighting
 ============
@@ -573,14 +550,13 @@ Highlighting
     :default: red
     :short: The color to be used for highlighting.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-        :downloads: data/highlighting.mol
+    Input: :download:`data/highlighting.mol`
 
-        renderMolfileWithOptions('data/highlighting.mol', 'render-highlight-color', [ '1, 0, 0', '0, 0, 1' ])
+    .. image:: ../../assets/indigo/render/indigorenderer_e905816881c8d623ce00c9e36c772bfd193700890.svg
+        :scale: 50
+
+    .. image:: ../../assets/indigo/render/indigorenderer_e905816881c8d623ce00c9e36c772bfd193700891.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-highlight-color-enabled
@@ -588,14 +564,13 @@ Highlighting
     :default: true
     :short: Enable highlighting with color.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-        :downloads: data/highlighting.mol
+    Input: :download:`data/highlighting.mol`
 
-        renderMolfileWithOptions('data/highlighting.mol', 'render-highlight-color-enabled', [ True, False ])
+    .. image:: ../../assets/indigo/render/indigorenderer_3d437ca521688ef7272f242d9f7139493fec3f110.svg
+        :scale: 50
+
+    .. image:: ../../assets/indigo/render/indigorenderer_3d437ca521688ef7272f242d9f7139493fec3f111.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-highlight-thickness-enabled
@@ -603,14 +578,13 @@ Highlighting
     :default: false
     :short: Enable highlighting with thick bonds and bold atom labels.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-        :downloads: data/highlighting.mol
+    Input: :download:`data/highlighting.mol`
 
-        renderMolfileWithOptions('data/highlighting.mol', 'render-highlight-thickness-enabled', [ True, False ])
+    .. image:: ../../assets/indigo/render/indigorenderer_c31cb16e30c5cc90f32e10593163cb2a0448691d0.svg
+        :scale: 50
+
+    .. image:: ../../assets/indigo/render/indigorenderer_c31cb16e30c5cc90f32e10593163cb2a0448691d1.svg
+        :scale: 50
 
 .. indigo_option::
     :name: render-highlighted-labels-visible
@@ -619,11 +593,10 @@ Highlighting
     :short:
         Always show labels of highlighted atoms.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :includecode: render-with-different-options
-        :nocode:
-        :downloads: data/highlighting.mol
+    Input: :download:`data/highlighting.mol`
 
-        renderMolfileWithOptions('data/highlighting.mol', 'render-highlighted-labels-visible', [ True, False ])
+    .. image:: ../../assets/indigo/render/indigorenderer_684946bb4d432e3399d9428862c423b9e7e9e1580.svg
+        :scale: 50
+
+    .. image:: ../../assets/indigo/render/indigorenderer_684946bb4d432e3399d9428862c423b9e7e9e1581.svg
+        :scale: 50

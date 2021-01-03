@@ -16,10 +16,7 @@ Grid rendering options
 
     If not defined, no titles are shown. The special value "^NAME" means to use the molecule's name as its title.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :downloads: data/pubchem-subset.sdf
+    .. code-block:: python
 
         array = indigo.createArray()
         for m in indigo.iterateSDFile('data/pubchem-subset.sdf'):
@@ -38,6 +35,13 @@ Grid rendering options
         indigo.setOption("render-comment", "PUBCHEM_COORDINATE_TYPE")
         indigoRenderer.renderGridToFile(array, None, 2, "result_1.png")
 
+    Input: :download:`data/pubchem-subset.sdf`
+
+    .. image:: ../../assets/indigo/render/indigorenderer_f2c0953e4d94d496be0b86e91d17c3081f9a4ced2.svg
+        :scale: 50
+
+    .. image:: ../../assets/indigo/render/indigorenderer_f2c0953e4d94d496be0b86e91d17c3081f9a4ced1.svg
+        :scale: 50
 
 
 .. indigo_option::
@@ -48,10 +52,7 @@ Grid rendering options
 
     Supported values: left, right, center, center-left
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :downloads: data/pubchem-subset.sdf
+    .. code-block:: python
 
         array = indigo.createArray()
         for m in indigo.iterateSDFile('data/pubchem-subset.sdf'):
@@ -66,6 +67,11 @@ Grid rendering options
         indigo.setOption("render-grid-title-property", "PUBCHEM_COORDINATE_TYPE")
         indigo.setOption("render-comment", "render-grid-title-alignment=center-left")
         indigoRenderer.renderGridToFile(array, None, 2, "result_1.png")
+    
+    Input: :download:`data/pubchem-subset.sdf`
+
+    .. image:: ../../assets/indigo/render/indigorenderer_1f76fdbc2b15e2ce3e18489cad7cfb7e9ed273b61.svg
+        :scale: 100
 
 .. indigo_option::
     :name: render-grid-title-font-size

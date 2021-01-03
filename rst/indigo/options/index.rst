@@ -4,9 +4,7 @@ Options
 
 Indigo instance represents an environment for IndigoObjects. Many methods in Indigo has additional options that can be set via Indigo.setOption method:
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     indigo.setOption("render-comment", "text comment")
     indigo.setOption("render-comment-color", "0, 0.4, 0.5")

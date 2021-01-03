@@ -14,20 +14,20 @@ Generic options
 
     Indigo has two kind of molecule object: molecule and query molecule. Query molecules represent patterns for ordinary molecules and they are used in substructure search. Many properties are not defined for query molecules, for example, implicit hydrogens count, because query molecule is a pattern. 
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :downloads: data/noncritial_query.mol
+    .. code-block:: python
 
         # Load structure and get exception about stereocenters
         query = indigo.loadQueryMoleculeFromFile('data/noncritial_query.mol')
         indigoRenderer.renderToFile(query, 'result.png')
 
+    Input: :download:`data/noncritial_query.mol`
+
+    .. image:: ../../assets/indigo/render/indigorenderer_8fe6c82dcb7a4d85e0a6fde70abbde2ec24951d9.svg
+        :scale: 100
+
     When such query molecule is loaded as ordinary molecule Indigo throws an exception about query features:
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
+    .. code-block:: python
 
         # Load structure and get exception about query features
         try:
@@ -35,15 +35,22 @@ Generic options
         except IndigoException, ex:
             print("Exception: " + str(ex))
 
+    Output:
+
+    .. code-block:: text
+
+        Exception: molfile loader: only a query can have stereo care box
+
     To load such structure we have to set ``ignore-noncritical-query-features`` option.
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
+    .. code-block:: python
 
         indigo.setOption("ignore-noncritical-query-features", True)
         m = indigo.loadMoleculeFromFile('data/noncritial_query.mol')
         indigoRenderer.renderToFile(m, 'result.png')
+    
+    .. image:: ../../assets/indigo/render/indigorenderer_6c03f317d6242e8caddd68ef4bbf55839a561d6b.svg
+        :scale: 100
 
 .. indigo_option::
     :name: treat-x-as-pseudoatom
@@ -61,10 +68,7 @@ Generic options
 
     Indigo automatically reconstructs stereocenters when loading structures from chemical files with 3D coordinates. 
 
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
-        :downloads: data/3d-chiral.mol
+    .. code-block:: python
 
         m = indigo.loadMoleculeFromFile('data/3d-chiral.mol')
         indigo.setOption("render-comment", "3D coordinates")
@@ -73,6 +77,14 @@ Generic options
         m.layout()
         indigo.setOption("render-comment", "2D coordinates")
         indigoRenderer.renderToFile(m, 'result_2.png')
+
+    Input: :download:`data/3d-chiral.mol`
+
+    .. image:: ../../assets/indigo/render/indigorenderer_063f599b02154411b51fb6c54491bba80d8092081.svg
+        :scale: 50
+
+    .. image:: ../../assets/indigo/render/indigorenderer_063f599b02154411b51fb6c54491bba80d8092082.svg
+        :scale: 50
 
 .. indigo_option::
     :name: molfile-saving-mode
@@ -111,9 +123,7 @@ Generic options
     :short: 
         Write names when saving via generic saver interface in SMILES mode
         
-    .. indigorenderer::
-        :indigoobjecttype: code
-        :indigoloadertype: code
+    .. code-block:: python
 
         # Create molecules and set their names
         m1 = indigo.loadMolecule('[H][C@](C)(N)O')
@@ -130,6 +140,13 @@ Generic options
         saver.append(m2)
 
         print(buffer.toString())
+    
+    Output:
+
+    .. code-block:: text
+
+        [H][C@@](O)(N)C Molecule 1
+        C1C=CC=CC=1 Molecule 2
 
 .. indigo_option::
     :name: filename-encoding
