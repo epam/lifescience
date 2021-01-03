@@ -9,9 +9,7 @@ Use nameToStructure
 Converting to structure using ``nameToStructure`` method
 
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     names = ["methane", "butene",
              "3-ethyl-octane", "3,5-diethyl-octane",
@@ -31,15 +29,16 @@ Converting to structure using ``nameToStructure`` method
     
     indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
 
+.. image:: ../../assets/indigo/render/indigorenderer_863263b92b3f49faadb8f7599c15b7a6510eb0c1.svg
+    :scale: 100
+
 Use loadMolecule
 ----------------
 
 Converting to structure using ``loadMolecule`` method (automatic detection)
 
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     names = ["8-thia-2,4,6-trisiladecane", "C[SiH2]C[SiH2]C[SiH2]CSCC"]
 
@@ -55,3 +54,6 @@ Converting to structure using ``loadMolecule`` method (automatic detection)
     indigo.setOption("render-grid-title-offset", "5")
     
     indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
+
+.. image:: ../../assets/indigo/render/indigorenderer_e49f8cb71d69f1726a88c41ad770ad4584080551.svg
+    :scale: 100

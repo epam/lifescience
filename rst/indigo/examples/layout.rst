@@ -10,10 +10,7 @@ Smart and simple layout
 
 This examples shows difference between "smart" and "simple" layout:
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :downloads: data/smart-simple-compare.smi
+.. code-block:: python
     
     # Load structure
     file = "data/smart-simple-compare.smi"
@@ -35,6 +32,11 @@ This examples shows difference between "smart" and "simple" layout:
     indigo.setOption("render-grid-title-offset", "5")
     
     indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
+
+Input: :download:`data/smart-simple-compare.smi`
+
+.. image:: ../../assets/indigo/render/indigorenderer_480f85be1418d3d012b0aaa65bad63a64a6a2893.svg
+    :scale: 100
 
 Content of the file :download:`data/smart-simple-compare.smi` with 6 molecules that is used in the example above:
     
