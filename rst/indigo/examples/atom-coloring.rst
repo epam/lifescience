@@ -4,8 +4,8 @@
 Atom Coloring
 =============
 
-.. indigoimage::
-    :imagename: atom-coloring-main
+.. image:: ../../assets/indigo/render/atom-coloring-main.svg
+    :scale: 100
 
 This example shows how to highlight different molecule atom based on the set of functional groups and their activities. 
 For example, we have functional groups with positive and negative activity and want to color molecule according to this activity. 

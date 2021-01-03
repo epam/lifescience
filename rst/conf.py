@@ -35,9 +35,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.autodoc',
     'sphinx.ext.ifconfig',
-    'indigorenderer',
     'codeblockimport',
-    'indigoimage',
     'options_node',
     'custom_templates'
     #    'sphinx.ext.mathjax',
