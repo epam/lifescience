@@ -1,6 +1,6 @@
 /env
 /extra
 /build
-/indigo-python
+/indigo/indigo*
 *.pyc
 .idea
