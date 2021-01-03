@@ -85,10 +85,7 @@ Stereocenters methods
 
 There are new ``stereocenterGroup`` and ``setStereocenterGroup`` method to get/set stereocenter group:
  
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :downloads: data/stereogroups.mol
+.. code-block:: python
 
     # Load structure
     m = indigo.loadMoleculeFromFile('data/stereogroups.mol')
@@ -103,13 +100,26 @@ There are new ``stereocenterGroup`` and ``setStereocenterGroup`` method to get/s
     m.getAtom(5).setStereocenterGroup(1)
     indigo.setOption('render-comment', 'Stereocenter groups and types were changed')
     indigoRenderer.renderToFile(m, 'result_2.png')
-    
+
+Input: :download:`data/stereogroups.mol`
+
+.. image:: ../../../assets/indigo/render/indigorenderer_2704cb623d86b84ea79bef672ccd152b3b955a1b1.svg
+    :scale: 50
+
+.. image:: ../../../assets/indigo/render/indigorenderer_2704cb623d86b84ea79bef672ccd152b3b955a1b2.svg
+    :scale: 50
+
+Output:
+
+.. code-block:: text
+
+    atom index = 1 group = 0
+    atom index = 2 group = 1
+    atom index = 5 group = 2
+
 The ``markStereobonds`` method set up/down bond marks if a stereoconfiguration were changed manually, or if it should be reset [#fstereo]_:
     
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :downloads: data/stereobonds.mol
+.. code-block:: python
 
     m = indigo.loadMoleculeFromFile('data/stereobonds.mol')
     indigo.setOption('render-comment', 'Before')
@@ -120,6 +130,13 @@ The ``markStereobonds`` method set up/down bond marks if a stereoconfiguration w
     indigo.setOption('render-comment', 'After')
     indigoRenderer.renderToFile(m, 'result_2.png')
 
+Input: :download:`data/stereobonds.mol`
+
+.. image:: ../../../assets/indigo/render/indigorenderer_3a20ff5ecc9af6a5b8ed1d2fca28c05156928b771.svg
+    :scale: 50
+
+.. image:: ../../../assets/indigo/render/indigorenderer_3a20ff5ecc9af6a5b8ed1d2fca28c05156928b772.svg
+    :scale: 50
 
 .. _indigo-1.1.11-chirality-validation:
 
@@ -130,9 +147,7 @@ Chirality validation
 Molecule can have a chirality flag even if it not chiral. There is a new ``validateChirality`` that checks 
 if a molecule matches to its mirror and clears chirality flag in this case [#fchiral]_.
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     m = indigo.loadMolecule("C[C@@H]1C[C@H](C)C[C@@H](C)C1")
     indigo.setOption('render-comment', 'Before')
@@ -145,6 +160,19 @@ if a molecule matches to its mirror and clears chirality flag in this case [#fch
     indigoRenderer.renderToFile(m, 'result_2.png')
     print("After:  " + m.smiles())
 
+.. image:: ../../../assets/indigo/render/indigorenderer_71e6960fdccca03b196f4a3c8032ea24fb6902f51.svg
+    :scale: 50
+
+.. image:: ../../../assets/indigo/render/indigorenderer_71e6960fdccca03b196f4a3c8032ea24fb6902f52.svg
+    :scale: 50
+
+Output:
+
+.. code-block:: text
+
+    Before: C[C@H]1C[C@H](C)C[C@@H](C)C1
+    After:  C[C@H]1C[C@H](C)C[C@@H](C)C1 |&1:1,3,6,r|
+
 .. _indigo-1.1.11-sgroups:
 
 --------------
@@ -156,10 +184,7 @@ There are 5 s-groups are support by Indigo, but several methods were missing [#f
     * There are new ``getGenericSGroup``, ``getMultipleGroup``, ``getRepeatingUnit`` methods along with already existing ``getDataSGroup`` and ``getSuperatom``:
     * ``data()`` returns SGroup data information  
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :downloads: data/rep-dat.mol
+.. code-block:: python
 
     m = indigo.loadMoleculeFromFile("data/rep-dat.mol")
     indigo.setOption("render-atom-ids-visible", "true"); 
@@ -178,7 +203,32 @@ There are 5 s-groups are support by Indigo, but several methods were missing [#f
     data_group = m.getDataSGroup(0)
     print "data s-group description =", data_group.description()
     print "data s-group data =", data_group.data()
-  
+
+Input: :download:`data/rep-dat.mol`
+
+.. image:: ../../../assets/indigo/render/indigorenderer_4bd0fd7dec77550babcc1df588415c36b8cd141b1.svg
+    :scale: 50
+
+.. image:: ../../../assets/indigo/render/indigorenderer_4bd0fd7dec77550babcc1df588415c36b8cd141b2.svg
+    :scale: 50
+
+Output:
+
+.. code-block:: text
+
+    Multiple group # 1 atoms:
+    2
+    3
+    4
+    11
+    12
+    13
+    8
+    9
+    10
+    data s-group description = dataname
+    data s-group data = datavalue
+
 .. _indigo-1.1.11-buffers:
 
 -------
@@ -190,10 +240,7 @@ There are standard methods to load structures from files like ``loadMoleculeFrom
  * ``loadBuffer``, ``loadString`` - methods to create stream from a buffer or a string
  * ``iterateSDF``, ``iterateSmiles``, ``iterateCML`` - methods to iterate structures from a stream
  
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :noimage:
+.. code-block:: python
 
     data = "S(C1C=CC(=CC=1)F)C1C=C(C=CN=1)CN 43528886\n"
     data += "BrC1(C=CC=CC1)S(NC1C=CC(C)=CC=1)(=O)=O 504161"
@@ -202,6 +249,12 @@ There are standard methods to load structures from files like ``loadMoleculeFrom
     for molecule in indigo.iterateSmiles(stream):
         print molecule.name(), molecule.canonicalSmiles(), molecule.molecularWeight()
 
+Output:
+
+.. code-block:: text
+
+    43528886 NCC1=CC(=NC=C1)SC1C=CC(F)=CC=1 234.292544603
+    504161 CC1=CC=C(C=C1)NS(=O)(=O)C1(Br)CC=CC=C1 328.224761486
 
 .. _indigo-1.1.11-cdxml:
 
@@ -213,11 +266,7 @@ There is a new CDXML export functionality via rendering a grid of structures
 with ``renderGridToFile`` method. This method automatically aligns structures, adds text 
 comments, and splits the whole document on pages.
         
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :downloads: data/pubchem-slice.smi
-    :noimage:
+.. code-block:: python
     
     arr = indigo.createArray()
     for m in indigo.iterateSmilesFile("data/pubchem-slice.smi"):
@@ -229,7 +278,9 @@ comments, and splits the whole document on pages.
     
     indigoRenderer.renderGridToFile(arr, None, 3, "result.cdxml")
     
-.. #TODO# automatically parse "result.cdxml" and insert downloads link
+Input: :download:`data/pubchem-slice.smi`
+Output: :download:`data/result.cdxml`
+
 
 .. _indigo-1.1.11-removeBonds:
 
@@ -239,9 +290,7 @@ removeBonds method
   
 There is a new method ``removeBonds`` that can remove a set of bonds specified by indices. This method is similar to ``removeAtoms`` method [#fremovebonds]_.
   
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     m = indigo.loadMolecule('OCCC1CNCCN1C')
     m.layout()
@@ -253,7 +302,13 @@ There is a new method ``removeBonds`` that can remove a set of bonds specified b
     # remove bonds by indices
     m.removeBonds([1, 3, 6])
     indigoRenderer.renderToFile(m, 'result_2.png')
-  
+
+.. image:: ../../../assets/indigo/render/indigorenderer_02edf78d175f7f784201028979bb013c8bb41dac1.svg
+    :scale: 50
+
+.. image:: ../../../assets/indigo/render/indigorenderer_02edf78d175f7f784201028979bb013c8bb41dac2.svg
+    :scale: 50
+
 ================
 Rendering module
 ================
@@ -266,9 +321,7 @@ Atom coloring
 
 Indigo can use a specified color for each atom and interpolate these colors for bond rendering.
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     # Load structure
     m = indigo.loadMolecule('CC(=C)C1=C(C)C(C)=CC(O)=C1NCCCCC=O')
@@ -281,6 +334,9 @@ Indigo can use a specified color for each atom and interpolate these colors for 
     indigo.setOption('render-coloring', False)
     indigoRenderer.renderToFile(m, 'result.png')
 
+.. image:: ../../../assets/indigo/render/indigorenderer_bfb81f9acd9910b65776d216ac99637f46e02283.svg
+    :scale: 100
+
 For a larger example see :ref:`indigo-example-atom-coloring`.
 
 .. _indigo-1.1.11-bond-width:
@@ -289,9 +345,7 @@ For a larger example see :ref:`indigo-example-atom-coloring`.
 Bond line width
 ---------------
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     m = indigo.loadMolecule('CC1=C(Cl)C=CC2=C1NS(=O)S2')
     
@@ -308,6 +362,15 @@ Bond line width
     indigo.setOption('render-bond-line-width', 0.5)
     indigo.setOption('render-comment', 'render-bond-line-width=0.5')
     indigoRenderer.renderToFile(m, 'result_3.png')
+
+.. image:: ../../../assets/indigo/render/indigorenderer_0926707e5a499b69dc1620dd06fb591327ca96391.svg
+    :scale: 33
+
+.. image:: ../../../assets/indigo/render/indigorenderer_0926707e5a499b69dc1620dd06fb591327ca96392.svg
+    :scale: 33
+
+.. image:: ../../../assets/indigo/render/indigorenderer_0926707e5a499b69dc1620dd06fb591327ca96393.svg
+    :scale: 33
 
 .. rubric:: Footnotes
 
