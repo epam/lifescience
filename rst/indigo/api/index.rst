@@ -1165,9 +1165,7 @@ Python:
 
 ``stereocenterGroup`` and ``setStereocenterGroup`` method to get/set stereocenter group:
  
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     # Load structure
     m = indigo.loadMoleculeFromFile('../release-notes/1.1.x/data/stereogroups.mol')
@@ -1182,12 +1180,25 @@ Python:
     m.getAtom(5).setStereocenterGroup(1)
     indigo.setOption('render-comment', 'Stereocenter groups and types were changed')
     indigoRenderer.renderToFile(m, 'result_2.png')
-    
+
+.. image:: ../../assets/indigo/render/indigorenderer_e2b61a77b9a68f5aeeca12da245bb3baef011f881.svg
+    :scale: 50
+
+.. image:: ../../assets/indigo/render/indigorenderer_e2b61a77b9a68f5aeeca12da245bb3baef011f882.svg
+    :scale: 50
+
+Output:
+
+.. code-block:: text
+
+    atom index = 1 group = 0
+    atom index = 2 group = 1
+    atom index = 5 group = 2
+
+
 The ``markStereobonds`` method set up/down bond marks if a stereoconfiguration were changed manually, or if it should be reset:
     
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     m = indigo.loadMoleculeFromFile('../release-notes/1.1.x/data/stereobonds.mol')
     indigo.setOption('render-comment', 'Before')
@@ -1197,6 +1208,12 @@ The ``markStereobonds`` method set up/down bond marks if a stereoconfiguration w
     
     indigo.setOption('render-comment', 'After')
     indigoRenderer.renderToFile(m, 'result_2.png')
+
+.. image:: ../../assets/indigo/render/indigorenderer_b49732821eb4b39738446ec8bd0d91f726c22c591.svg
+    :scale: 50
+
+.. image:: ../../assets/indigo/render/indigorenderer_b49732821eb4b39738446ec8bd0d91f726c22c592.svg
+    :scale: 50
 
 Enumeration of Submolecules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3132,9 +3149,7 @@ Java:
 
 Python:
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
 
     reaction = indigo.loadQueryReaction("Cl[C:1]([*:3])=O.[OH:2][*:4]>>[*:4][O:2][C:1]([*:3])=O")
     
@@ -3157,6 +3172,8 @@ Python:
         
     indigoRenderer.renderGridToFile(rxn_array, None, 2, 'result_rpe.png')
 
+.. image:: ../../assets/indigo/render/indigorenderer_8ea7fcead360b2449a4ba6fc1941fc59b5654ca4rpe.svg
+    :scale: 100
 
 Reaction-based Molecule Transformations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3174,11 +3191,15 @@ Java:
       
 Python:
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
+.. code-block:: python
     
     reaction = indigo.loadQueryReaction("[*+:1][*-:2]>>[*:2]=[*:1]")
     molecule = indigo.loadMolecule("[O-][C+]1CCCC1[N+]([O-])=O")
     indigo.transform(reaction, molecule)
     print(molecule.smiles())
+
+Output:
+
+.. code-block:: text
+
+    O=N(C1CCCC1=O)=O
