@@ -8,10 +8,7 @@ SCSR Transformations
 Transform SCSR into full CTAB representation
 --------------------------------------------
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :downloads: data/scsr-example1.mol
+.. code-block:: python
     
     # Load structure
     file = "data/scsr-example1.mol"
@@ -35,15 +32,17 @@ Transform SCSR into full CTAB representation
 
     indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
 
+Input: :download:`data/scsr-example1.mol`
+
+.. image:: ../../assets/indigo/render/indigorenderer_c0ccb92117fa480d9a8dfdf0fe374a201c5f039e.svg
+    :scale: 100
+
 
 ------------------------
 Transform CTAB into SCSR
 ------------------------
 
-.. indigorenderer::
-    :indigoobjecttype: code
-    :indigoloadertype: code
-    :downloads: data/scsr-example2.mol,data/scsr-templates.mol
+.. code-block:: python
     
     # Load structure
     file1 = "data/scsr-example2.mol"
@@ -68,3 +67,8 @@ Transform CTAB into SCSR
     indigo.setOption("render-grid-title-offset", "10")
 
     indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
+
+Input: :download:`data/scsr-example2.mol`, :download:`data/scsr-templates.mol`
+
+.. image:: ../../assets/indigo/render/indigorenderer_ac7056efbe09096e375b51339911ffff8bb43a85.svg
+    :scale: 100
