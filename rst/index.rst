@@ -21,8 +21,8 @@ Bioinformatics
 
 -  `Cloud Pipeline <cloud/>`__ Genomics analysis and Scientific computing in the Cloud of your choice |image11|
 
-   -  Provides the ability to build & run the customized scripts and workflows
-      that support genomics analysis, modeling & simulation, and machine
+   -  Provides the ability to build and run the customized scripts and workflows
+      that support genomics analysis, modeling and simulation, and machine
       learning activities that are required to accelerate drug discovery research.
 
    -  Wraps Cloud compute and storage resources into a single service, providing
