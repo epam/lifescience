@@ -35,7 +35,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.ifconfig',
     'options_node',
-    'custom_templates'
+    'custom_templates',
+    'index_tiles'
     #    'sphinx.ext.mathjax',
 ]
 
