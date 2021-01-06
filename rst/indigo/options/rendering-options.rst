@@ -5,28 +5,6 @@ Rendering options
 General
 =======
 
-.. code::
-    :name: render-with-different-options
-    :hidden:
-
-    def renderWithOptions (mol, name, optvalues, draw_default=False, separator='='):
-        if draw_default:
-            indigo.setOption("render-comment", "default")
-            indigoRenderer.renderToFile(mol, 'result.png')
-
-        for idx, value in enumerate(optvalues):
-            indigo.setOption("render-comment", "%s%s%s" % (name, separator, value))
-            indigo.setOption(name, value)
-            indigoRenderer.renderToFile(mol, 'result_%d.png' % (idx))
-
-    def renderMolfileWithOptions (molfile, name, optvalues, draw_default=False, separator='='):
-        mol = indigo.loadMoleculeFromFile(molfile)
-        renderWithOptions(mol, name, optvalues, draw_default=draw_default, separator=separator)
-
-    def renderRxnfileWithOptions (rxnfile, name, optvalues):
-        rxn = indigo.loadReactionFromFile(rxnfile)
-        renderWithOptions(rxn, name, optvalues)
-
 .. indigo_option::
     :name: render-output-format
     :type: string

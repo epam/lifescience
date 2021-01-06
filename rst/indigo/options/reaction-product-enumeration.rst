@@ -2,51 +2,6 @@
 Reaction Products Enumeration and Transformation
 ################################################
 
-.. code::
-    :name: rpe-run-and-render
-    :hidden:
-    
-    def loadSdf (sdf_path):
-      sdfiterator = indigo.iterateSDFile(sdf_path)
-      result = [m.clone() for m in sdfiterator]
-      sdfiterator.dispose()
-      return result
-    
-    def performReaction (reaction, mons) :
-       indigo.setOption("render-comment", "Input reaction")
-       indigoRenderer.renderToFile(reaction, 'result_reaction.png')
-       
-       indigo.setOption("render-grid-margins", "20, 10")
-       indigo.setOption("render-grid-title-offset", "5")
-       indigo.setOption("render-grid-title-property", "grid-comment")
-       #indigo.setOption("render-comment", "grid-comment")
-
-       idx = 0
-       for rct_mons in mons:
-          mon_array = indigo.createArray();
-          
-          alph_idx = 0
-          for mon in rct_mons:
-              mon.setName(chr(ord('A') + idx) + chr(ord('1') + alph_idx))
-              mon.setProperty("grid-comment", mon.name())
-              mon_array.arrayAdd(mon)
-              alph_idx += 1
-              
-          idx += 1
-          indigo.setOption("render-comment", 'Input monomers for reactant %d' % (idx))
-          indigoRenderer.renderGridToFile(mon_array, None, 3, 'result_monomers_%d.png' % (idx))
-       
-       rpe_reactions = indigo.reactionProductEnumerate(reaction, mons) 
-       
-       indigo.setOption("render-comment", "Results")
-       rxn_array = indigo.createArray();
-       for elem in rpe_reactions.iterateArray():
-           rxn = elem.clone();
-           rxn.setProperty("grid-comment", rxn.name())
-           rxn_array.arrayAdd(rxn)
-           
-       indigoRenderer.renderGridToFile(rxn_array, None, 2, 'result_%d.png' % (idx))
-
 
 .. indigo_option::
     :name: rpe-max-depth

@@ -22,7 +22,7 @@ Functional groups highlighting
 
 First, we can define an arbitrary set of functional group patterns and assign activity for each of them:
 
-.. code::
+.. code-block:: python
     :name: ac-patterns
 
     # Active fragment patterns
@@ -40,9 +40,8 @@ First, we can define an arbitrary set of functional group patterns and assign ac
 
 For a specified molecule one can fine all the embeddings of fragment patterns, and accumulate activity for each atom that was matched:
 
-.. code::
+.. code-block:: python
     :name: ac-getAtomsActivity
-    :includecode: ac-patterns
 
     import collections
     
@@ -104,7 +103,7 @@ Let's assign a color for each atom based on its activity: negative values are
 colored from blue to black, and positive values are colored from black to red. Indigo 
 Renderer interprets data s-groups with a specified name as a color for the atoms. 
         
-.. code::
+.. code-block:: python
     :name: ac-addColorSGroups
     
     def addColorSGroups (m, atom_values):
@@ -126,9 +125,8 @@ Renderer interprets data s-groups with a specified name as a color for the atoms
         
 Previous two methods can be wrapped into a single method that computes atom activities and colors molecule atoms according to these activities:
         
-.. code::
+.. code-block:: python
     :name: ac-assignColorGroups
-    :includecode: ac-getAtomsActivity,ac-addColorSGroups
     
     def assignColorGroups (m):
         atom_values = getAtomsActivity(m)
@@ -143,7 +141,7 @@ Previous two methods can be wrapped into a single method that computes atom acti
 
 For the visualizations below we are going to use the following options:
 
-.. code::
+.. code-block:: python
     :name: ac-rendering
     
     indigo.setOption("render-atom-color-property", "color")
@@ -173,7 +171,7 @@ Annotations, color bars, axis grid and other additional graphics are out of scop
 can make a trick and render a color bar as tree connected pseudoatoms with a numeric label and with assigned colors. The 
 following code adds a color bar atoms right to the molecule:
     
-.. code::
+.. code-block:: python
     :name: ac-colorbar
     
     def addAtomColorbar(m, min_value, max_value):

@@ -34,7 +34,6 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.autodoc',
     'sphinx.ext.ifconfig',
-    'codeblockimport',
     'options_node',
     'custom_templates'
     #    'sphinx.ext.mathjax',
