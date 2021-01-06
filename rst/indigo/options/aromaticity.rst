@@ -85,13 +85,6 @@ Aromaticity options
 
     Molfile format doesn't store information about hydrogens in aromatic rings and this leads to a situation when two different (tautomers) structure has the same aromatization.
 
-    .. code::
-        :hidden:
-        :name: code-unique-dearomatization
-
-        m1 = indigo.loadMoleculeFromFile('data/ambiguous_arom1.mol')
-        m2 = indigo.loadMoleculeFromFile('data/ambiguous_arom2.mol')
-
     .. image:: ../../assets/indigo/render/indigorenderer_92997ca46105f8d8f120747a8852eaa2a02fba521.svg
         :scale: 50
 
