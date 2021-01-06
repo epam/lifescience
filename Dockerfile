@@ -1,13 +1,13 @@
-FROM debian:buster
+FROM debian:bullseye
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -qq
 
 RUN apt-get install -y --no-install-recommends \
-    wget python-pip make
+    wget python3-pip make
 
-RUN pip install Sphinx==1.6.3
+RUN pip3 install Sphinx==3.4.2
 
 # Build indigo
 RUN mkdir -p /opt/indigo

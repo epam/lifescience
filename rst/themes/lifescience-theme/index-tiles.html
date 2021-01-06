@@ -1,0 +1,21 @@
+{% set items = body | index_tiles %}
+
+{% for doc in items %}
+<div class="col-xs-12 col-sm-6">
+    <div class="tile tile-click-{{doc.path}}">
+        <div class="tile-image">
+            <img src="{{doc.image}}" alt="">
+        </div>
+        <div class="tile-content">
+            <div class="tile-text">
+                <div class="tile-label">{{doc.label}}</div>
+                <h3>{{doc.title}}</h3>
+                <p>{{doc.text}}</p>
+                <ul class="tile-description">
+                    {{doc.description}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

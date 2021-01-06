@@ -26,6 +26,9 @@ GROUP_MAP = {
 
 
 def lifesciences_menu(s):
+    # print(s)
+    # with open ('in2.xml', 'w') as f:
+    #     f.write(s)
     ins = s.encode("utf-8")
     root = ET.fromstring(ins)
 
@@ -68,8 +71,12 @@ def lifesciences_menu(s):
                     a2 = ET.SubElement(li, 'a', attrib={'class':"reference internal",
                                                          'href': r['href']})
                     a2.text = r['name']
-
-    res = ET.tostring(flat_root, encoding="UTF-8", method="html").replace('&amp;', '&')
+    # print('res1')
+    res = ET.tostring(flat_root, encoding="UTF-8", method="html")
+    # print('res2')
+    # res = ET.tostring(flat_root, encoding="UTF-8", method="html").replace('&amp;', '&')
+    
+    # res = ''
     return res
 
 
@@ -80,7 +87,7 @@ def setup(app):
     app.connect("builder-inited", add_filters)
 
 def local_test():
-    with open('/opt/repo/lifescience/in2.xml', 'r') as f:
+    with open('in2.xml', 'r') as f:
         s = lifesciences_menu(f.read())
         print(s)
 
