@@ -27,7 +27,7 @@ GROUP_MAP = {
 
 def lifesciences_menu(s):
     # print(s)
-    # with open ('in2.xml', 'w') as f:
+    # with open ('menu.xml', 'w') as f:
     #     f.write(s)
     ins = s.encode("utf-8")
     root = ET.fromstring(ins)
@@ -39,7 +39,10 @@ def lifesciences_menu(s):
 
     for elem in root:
         product_ref = elem.find('a')
-        g = GROUP_MAP[product_ref.text]
+        if product_ref.text in GROUP_MAP:
+            g = GROUP_MAP[product_ref.text]
+        else:
+            g = "Software development"
         p = {"name": product_ref.text + " &raquo;", "href": product_ref.attrib["href"]}
         group_products[g].append(p)
         p_refs = elem.find('ul')
@@ -49,35 +52,13 @@ def lifesciences_menu(s):
         for elem_sub in p_refs:
             elem_sub_ref = elem_sub.find('a')
             p['refs'].append({"name": elem_sub_ref.text, "href": elem_sub_ref.attrib["href"]})
+        
+    res_items = []
 
-    flat_root = ET.fromstring('<div class="container"></div>')
+    for group in GROUPS:
+        res_items.append({"name": group, "products": group_products[group]})
 
-    for g in GROUPS:
-        h = ET.SubElement(flat_root, 'h2')
-        h.text = g
-        ET.SubElement(flat_root, 'hr')
-        div_row = ET.SubElement(flat_root, 'div', attrib={'class':'dropdown-menu-row'} )
-
-        prods = group_products[g]
-        for p in prods:
-            div = ET.SubElement(div_row, 'div', attrib={'class':'dropdown-menu-column'} )
-            span = ET.SubElement(div, 'span', attrib={'class':'nav-subtitle'} )
-            a = ET.SubElement(span, 'a', attrib={'class':"reference internal", 'href': p['href']} )
-            a.text = p['name']
-            if 'refs' in p:
-                ul = ET.SubElement(div, 'ul')
-                for r in p['refs']:
-                    li = ET.SubElement(ul, 'li')
-                    a2 = ET.SubElement(li, 'a', attrib={'class':"reference internal",
-                                                         'href': r['href']})
-                    a2.text = r['name']
-    # print('res1')
-    res = ET.tostring(flat_root, encoding="UTF-8", method="html")
-    # print('res2')
-    # res = ET.tostring(flat_root, encoding="UTF-8", method="html").replace('&amp;', '&')
-    
-    # res = ''
-    return res
+    return res_items
 
 
 def add_filters(app):
@@ -87,7 +68,7 @@ def setup(app):
     app.connect("builder-inited", add_filters)
 
 def local_test():
-    with open('in2.xml', 'r') as f:
+    with open('menu.xml', 'r') as f:
         s = lifesciences_menu(f.read())
         print(s)
 
