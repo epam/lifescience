@@ -1,6 +1,4 @@
-import os
 import xml.etree.ElementTree as ET
-import xml.sax.saxutils as saxutils
 
 GROUPS = [
     "Cheminformatics",
