@@ -1,5 +1,27 @@
-{% set tree = toctree(titles_only=true, maxdepth=2, collapse=False, includehidden=true) %}
+{% set ls_menu = toctree(titles_only=true, maxdepth=2, collapse=False, includehidden=true) | lifesciences_menu %}
+
 
 <div class="dropdown-menu" role="menu">
-    {{ tree | lifesciences_menu }}
+    <div class="container">
+        {% for group in ls_menu %}
+        <h2>{{group.name}}</h2>
+        <hr>
+        <div class="dropdown-menu-row">
+            {% for product in group.products %}
+            <div class="dropdown-menu-column">
+                <span class="nav-subtitle">
+                    <a class="reference internal" href="{{product.href}}">{{product.name}}</a>
+                </span>
+                <ul>
+                    {% for item in product.refs %}
+                    <li>
+                        <a class="reference internal" href="{{item.href}}">{{item.name}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
 </div>
