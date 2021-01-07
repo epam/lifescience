@@ -3,7 +3,8 @@ var DOCUMENTATION_OPTIONS = {
     VERSION:     '0.3.0',
     COLLAPSE_INDEX: false,
     FILE_SUFFIX: '.html',
-    HAS_SOURCE:  false
+    HAS_SOURCE:  false,
+    LINK_SUFFIX: '.html'
 };
 
 $(window).on('load',function () {
