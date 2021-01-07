@@ -4,3 +4,4 @@
 /indigo/indigo*
 *.pyc
 .idea
+.vscode
