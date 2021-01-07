@@ -2,7 +2,10 @@
 
 {% for doc in items %}
 <div class="col-xs-12 col-sm-6">
-    <div class="tile tile-click-{{doc.path}}">
+    <div class="tile tile-click">
+        <div style="display: none;">
+            <a class="tile-click-url" href="{{doc.path}}"></a>
+        </div>
         <div class="tile-image">
             <img src="{{doc.image}}" alt="">
         </div>
