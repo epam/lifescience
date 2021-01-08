@@ -24,35 +24,49 @@ Downloads
 -  `Parso <parso.html>`__: Open-Source SAS7BDAT datasets reader
 -  `Indigo Service <service.html>`__: RESTful API for Indigo toolkit
 
-Manual
-======
+SolutionsHub
+------------
 
-First time download
--------------------
+Visit SolutionHub pages if you need additional services or if you have any questions
 
-Open required project page. Select appropriate product, operating system and architecture. The download will redirect to the EPAM standard form
+Cheminformatics
+^^^^^^^^^^^^^^^
 
-  .. image:: ../assets/downloads/help/form1.jpg
+-  `Bingo SolutionsHub <https://solutionshub.epam.com/solution/bingo>`__
+-  `Ketcher SolutionsHub <https://solutionshub.epam.com/solution/ketcher>`__
+-  `Indigo Toolkit SolutionsHub <https://solutionshub.epam.com/solution/indigo>`__
+-  `Indigo ELN SolutionsHub <https://solutionshub.epam.com/solution/indigo-eln-2-0>`__
+-  `Imago OCR SolutionsHub <https://solutionshub.epam.com/solution/imago>`__
 
+Bioinformatics
+^^^^^^^^^^^^^^
 
-Fill the form, enter a *security code* and press **Submit**. After some time the **URL** will be sent to the specified e-mail.
+-  `NGB SolutionsHub <https://solutionshub.epam.com/solution/new-genome-browser-ngb>`__
+-  `Miew SolutionsHub <https://solutionshub.epam.com/solution/miew>`__
+-  `Med3web SolutionsHub <https://solutionshub.epam.com/solution/med-3-web>`__
+-  `Cloud Pipeline SolutionsHub <https://solutionshub.epam.com/solution/cloud-pipeline>`__
 
-  ``Note``: EPAM form uses cookies to store user information. The URL from e-mail should be opened in the **same browser** which was used to fulfill the form. 
+Data processing
+^^^^^^^^^^^^^^^
 
+-  `Parso SolutionsHub <https://solutionshub.epam.com/solution/parso>`__
 
-Repeat download
----------------
+Software development
+^^^^^^^^^^^^^^^^^^^^
 
-If you download a product second time or if you want to download a new product, you do not have to submit the form second time. After selecting URL the completed form will appear. And the **Download** button will be added.
+-  `JDI Light SolutionsHub <https://solutionshub.epam.com/solution/jdi-light>`__
+-  `JDI Dark SolutionsHub <https://solutionshub.epam.com/solution/jdi-dark>`__
 
-  .. image:: ../assets/downloads/help/form2.jpg
+Open an appropriate product page and press **Request Solution** button
 
-A file download process should be started once the **Download** button is pressed (no e-mails will be sent)
+.. image:: ../assets/downloads/help/solutionshub_form1.png
 
-  ``Note``: please note that the second time the *Submit* button will send an e-mail **only** if the specified e-mail differs from the e-mail in the pre-filled form.
+|
+
+Fill the form, select additional services, enter a *security code* and press **Send**. After some time all the necessary information will be sent to the specified e-mail.
 
 In case of problems
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 If you have any issues please contact us by lifescience.opensource@epam.com
 
