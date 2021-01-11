@@ -1,5 +1,14 @@
 Download Ketcher
 ================
+Ketcher 2.1.0
+-------------
+
+`Ketcher 2.1.0 <https://www.epam.com/download?downloadParam=/content/dam/epam/library/open-source/ketcher/ketcher-2.1.0.zip>`__
+
+`NPM package <https://www.npmjs.com/package/ketcher-react/v/2.1.0>`__
+
+`Source code on GitHub <https://github.com/epam/ketcher/releases/tag/v2.1.0>`__
+
 Ketcher 2.1.0 Beta
 ------------------
 

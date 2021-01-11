@@ -8,6 +8,26 @@ News
     release-notes/index
 
 
+Ketcher 2.1.0 released
+----------------------
+
+*11 Jan 2021*
+
+We are glad to announce that a new stable version of Ketcher is released. For more details please look at release notes.
+
+* |ketcher_2_1_0_notes|
+
+* |ketcher_2_1_0_downloads|
+
+.. |ketcher_2_1_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.1.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_1_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
+
 Ketcher 2.1.0 beta is now available
 -----------------------------------
 
