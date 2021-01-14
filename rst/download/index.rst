@@ -65,8 +65,25 @@ Open an appropriate product page and press **Request Solution** button
 
 Fill the form, select additional services, enter a *security code* and press **Send**. After some time all the necessary information will be sent to the specified e-mail.
 
+|
+
+First time download
+-------------------
+Open required project page. Select appropriate product, operating system and architecture. The download will redirect to the EPAM standard form
+
+.. image:: ../assets/downloads/help/form1.jpg
+
+Fill the form, enter a *security code* and press **Submit**. After some time the **URL** will be sent to the specified e-mail.
+``Note``: EPAM form uses cookies to store user information. The URL from e-mail should be opened in the **same browser** which was used to fulfill the form. 
+If you download a product second time or if you want to download a new product, you do not have to submit the form second time. After selecting URL the completed form will appear. And the **Download** button will be added.
+
+.. image:: ../assets/downloads/help/form2.jpg
+
+A file download process should be started once the **Download** button is pressed (no e-mails will be sent)
+``Note``: please note that the second time the *Submit* button will send an e-mail **only** if the specified e-mail differs from the e-mail in the pre-filled form.
+
 In case of problems
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 If you have any issues please contact us by lifescience.opensource@epam.com
 
