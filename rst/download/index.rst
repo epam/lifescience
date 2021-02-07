@@ -24,10 +24,10 @@ Downloads
 -  `Parso <parso.html>`__: Open-Source SAS7BDAT datasets reader
 -  `Indigo Service <service.html>`__: RESTful API for Indigo toolkit
 
-SolutionsHub
-------------
+Additional Services
+-------------------
 
-Visit SolutionHub pages if you need additional services or if you have any questions
+Visit the following pages if you need additional services or if you have any questions
 
 Cheminformatics
 ^^^^^^^^^^^^^^^
@@ -57,6 +57,9 @@ Software development
 -  `JDI Light SolutionsHub <https://solutionshub.epam.com/solution/jdi-light>`__
 -  `JDI Dark SolutionsHub <https://solutionshub.epam.com/solution/jdi-dark>`__
 
+User guide
+----------
+
 Open an appropriate product page and press **Request Solution** button
 
 .. image:: ../assets/downloads/help/solutionshub_form1.png
@@ -69,6 +72,8 @@ Fill the form, select additional services, enter a *security code* and press **S
 
 First time download
 -------------------
+
+
 Open required project page. Select appropriate product, operating system and architecture. The download will redirect to the EPAM standard form
 
 .. image:: ../assets/downloads/help/form1.jpg

@@ -17,8 +17,8 @@ Parso 1.2.1
 
 `Parso <https://lifescience.opensource.epam.com/content/downloads/parso-1.x/parso-1.2.1.jar>`__
 
-SolutionsHub
-------------
+Additional Services
+-------------------
 
 Visit `Parso SolutionsHub <https://solutionshub.epam.com/solution/parso>`__  if you need additional services or if you have any questions 
 
