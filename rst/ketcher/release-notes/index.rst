@@ -11,3 +11,4 @@ Contents:
     ketcher-2.0.0b
     ketcher-2.1.0b
     ketcher-2.1.0
+    ketcher-2.2.0
