@@ -6,17 +6,17 @@ Installation
 
 The installation package contains all required sources.
 
--  To run Ketcher in a separate page, use ``ketcher/ketcher.html``:
+-  To run Ketcher in a separate page, use ``ketcher/index.html``:
 
    ::
 
-       <a href="ketcher/ketcher.html">Ketcher</a>
+       <a href="ketcher/index.html">Ketcher</a>
 
 -  To embed Ketcher in another page, use IFrame:
 
    ::
 
-       <iframe id="ifKetcher" src="ketcher/ketcher.html" width="800" height="600"></iframe>
+       <iframe id="ifKetcher" src="ketcher/index.html" width="800" height="600"></iframe>
 
 Access Ketcher
 --------------
