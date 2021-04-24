@@ -8,7 +8,7 @@ Downloads
     bingo
     ketcher
     Indigo <indigo/index>
-    Indigo ELN <indigo/eln>
+    Indigo ELN <indigo-eln>
     imago
     parso
     service
@@ -18,7 +18,7 @@ Downloads
 -  `Ketcher <ketcher.html>`__: Web-based molecule sketcher
 -  `Indigo Toolkit <indigo/index.html>`__: Universal cheminformatics
    toolkit and API
--  `Indigo ELN <indigo/eln.html>`__: Open-Source Chemistry Electronic
+-  `Indigo ELN <indigo-eln.html>`__: Open-Source Chemistry Electronic
    Lab Notebook
 -  `Imago OCR <imago.html>`__: Chemical optical recognition toolkit
 -  `Parso <parso.html>`__: Open-Source SAS7BDAT datasets reader
