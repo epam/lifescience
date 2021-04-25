@@ -109,7 +109,7 @@ Please find terms and conditions for the license at the |al_v2_license| . All th
 
 .. |al_v2_indigo_downloads| raw:: html
 
-   <a href="download/indigo/index.html" target="_blank">Downloads</a>
+   <a href="download/indigo.html" target="_blank">Downloads</a>
 
 .. |al_v2_license| raw:: html
 
@@ -289,7 +289,7 @@ New Indigo version was released.
 
 .. |indigo_1_3_0b_downloads| raw:: html
 
-   <a href="download/indigo/index.html#indigo-1-3-0-beta" target="_blank">Downloads</a>
+   <a href="download/indigo.html#indigo-1-3-0-beta" target="_blank">Downloads</a>
 
 
 Indigo 1.2.3 released
@@ -311,7 +311,7 @@ The version includes small bugfixes and improvements
 
 .. |indigo_1_2_3_downloads| raw:: html
 
-   <a href="download/indigo/index.html#indigo-1-2-3" target="_blank">Downloads</a>
+   <a href="download/indigo.html#indigo-1-2-3" target="_blank">Downloads</a>
 
 
 Parso 2.0
@@ -438,7 +438,7 @@ New Indigo stable version is available. It includes bugfixes and enhancements.
 
 .. |indigo_1_2_1_downloads| raw:: html
 
-   <a href="download/indigo/index.html#indigo-1-2-1" target="_blank">Downloads</a>
+   <a href="download/indigo.html#indigo-1-2-1" target="_blank">Downloads</a>
 
 
 
@@ -507,7 +507,7 @@ We are releasing Indigo 1.1.12 that is the last version in the 1.1.x series. New
 
 .. |indigo_1_1_12_downloads| raw:: html
 
-   <a href="download/indigo/index.html#indigo-1-1-12" target="_blank">Downloads</a>
+   <a href="download/indigo.html#indigo-1-1-12" target="_blank">Downloads</a>
 
 
 

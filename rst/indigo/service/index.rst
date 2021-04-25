@@ -61,7 +61,7 @@ Installation
 Indigo service can be installed as a Docker image. Please see Downloads() section to find a latest version
 
 1. Install `Docker <https://www.docker.com/>`__
-2. Download image with indigo service from `Downloads <../../download/indigo/index.html>`__ 
+2. Download image with indigo service from `Downloads <../../download/indigo.html>`__ 
 3. Add the following configuration for nginx server
 
 .. code-block:: sh
