@@ -1,13 +1,23 @@
-﻿Ketcher 2.0 Demo
-================
+﻿Ketcher Demo
+============
 
-.. note::
-    The Ketcher is under development. Please keep in touch for the updates.
+Remote
+------
 
-.. raw:: html
+Remote version uses  `Indigo Service <../indigo/aervice/index.html>`__ as a backend server to convert structure formats and calculate some chemistry properties
 
-    <iframe class="ketcher-demo" src="https://lifescience.opensource.epam.com/content/ketcher-2.1/ketcher.html"/>
+.. toctree::
+    demo/ketcher_2_2_remote
+    demo/ketcher_2_1_remote
+    demo/ketcher_2_0_remote
+    
 
+Standalone
+----------
 
+Starting from version 2.2 Ketcher supports standalone mode. Ketcher can be run as client-only javascript application without a backend.
+
+.. toctree::
+    demo/ketcher_2_2_standalone
 
 
