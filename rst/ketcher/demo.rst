@@ -8,9 +8,6 @@ Remote version uses  `Indigo Service <../indigo/aervice/index.html>`__ as a back
 
 .. toctree::
     demo/ketcher_2_2_remote
-    demo/ketcher_2_1_remote
-    demo/ketcher_2_0_remote
-    
 
 Standalone
 ----------
