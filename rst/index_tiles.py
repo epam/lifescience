@@ -7,7 +7,6 @@ def index_tiles(data: str):
 
     data_root = ET.fromstring(data.encode('utf-8'))
     res_items = []
-    breakpoint()
 
     for elem in data_root:
         if True:

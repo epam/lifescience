@@ -18,7 +18,7 @@ COPY ./indigo/download.sh /srv/
 
 RUN cd /srv && \
     ./download.sh && \
-    rm /srv/HEAD && \
+    rm /srv/HEAD && html_theme\
     rm /srv/download.sh
 
 WORKDIR /opt
