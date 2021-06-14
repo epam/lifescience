@@ -9,13 +9,15 @@ def index_tiles(data: str):
     res_items = []
 
     for elem in data_root:
-        if 'class' in elem.attrib and elem.attrib['class'] == 'section':
+        if True:
+        # This block is never True on dev and AWS env
+        #if 'class' in elem.attrib and elem.attrib['class'] == 'section':
             label_name = ''
-            
+
             for section in elem:
                 if section.tag == 'h2':
                     label_name = section.text
-                    
+
                 if section.tag == 'ul':
                     for product in section:
                         title = ''
@@ -36,7 +38,7 @@ def index_tiles(data: str):
                             product_img = product_p.find('img')
                             if product_img is not None:
                                 image = product_img.attrib['src']
-                        
+
 
                         product_ul = product.find('ul')
                         if product_ul is not None:

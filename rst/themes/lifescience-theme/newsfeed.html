@@ -2,8 +2,9 @@
     {{ body
         | replace('<h1>', '<div class="news-heading">')
         | replace('</h1>', '</div>')
-        | replace('div class="section"', 'div class="news-content"', 1)
-        | replace('div class="section"', 'div class="news-article"')
+        | replace('<section id="news">', '<div class="news-content">', 1)
+        | replace('<section', '<div class="news-article" ')
+        | replace('</section>', '</div>')
         | replace('ul class="simple"', 'ul class="uui-inline-list"')
         | replace('<p><em>', '<div class="news-date">')
         | replace('</em></p>', '</div>') }}
