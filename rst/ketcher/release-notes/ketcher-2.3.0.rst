@@ -86,7 +86,7 @@ The main features implemented in scope of this release are support of enhanced s
 
 * Redo does not work for simple object "Shape line" after moving its dots `#635 <https://github.com/epam/ketcher/issues/635>`__
 
-* IE: Save as *.svg file does not work `#627 <https://github.com/epam/ketcher/issues/627>`__
+* IE: Save as \*.svg file does not work `#627 <https://github.com/epam/ketcher/issues/627>`__
 
 * Atom is not underlined in red after adding to the template `#636 <https://github.com/epam/ketcher/issues/636>`__
 
@@ -160,11 +160,11 @@ The main features implemented in scope of this release are support of enhanced s
 
 * 'Add text'- 'Cut'/'Copy' buttons are disabled when a text object is added to the canvas `#522 <https://github.com/epam/ketcher/issues/522>`__
 
-* Error message when trying to open *.ket files with stereochemistry features `#532 <https://github.com/epam/ketcher/issues/532>`__
+* Error message when trying to open \*.ket files with stereochemistry features `#532 <https://github.com/epam/ketcher/issues/532>`__
 
 * 3D Viewer - The light mode doesn't work `#531 <https://github.com/epam/ketcher/issues/531>`__
 
-* Stereo flags are confused with stereo marks in *.ket files `#544 <https://github.com/epam/ketcher/issues/544>`__
+* Stereo flags are confused with stereo marks in \*.ket files `#544 <https://github.com/epam/ketcher/issues/544>`__
 
 * Unable to paste the text objects after cut/copy `#551 <https://github.com/epam/ketcher/issues/551>`__
 
