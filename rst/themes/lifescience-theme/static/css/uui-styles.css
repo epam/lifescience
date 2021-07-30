@@ -4990,7 +4990,7 @@ div.note {
   display: block;
   border: 0;
   height: 700px;
-  width: 1050px;
+  width: 100%;
   margin-top: 40px;
 }
 @media (max-width: 1200px) {
