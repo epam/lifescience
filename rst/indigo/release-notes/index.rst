@@ -7,6 +7,7 @@ Contents:
 .. toctree::
     :maxdepth: 2
 
+    indigo-1.5.0
     1.3.x/indigo-1.3.0b
     knime/indigo_knime_2_nodes
     1.2.x/indigo-1.2.3

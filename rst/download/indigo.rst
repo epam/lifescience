@@ -8,6 +8,93 @@ Download Indigo Toolkit
   ../indigo/release-notes/index.rst
 
 
+Indigo 1.5.0
+------------
+
+TODO general description
+
+
+Language Bindings
+~~~~~~~~~~~~~~~~~
+
+.. list-table:: 
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 28 24 24 24 24
+
+   * - 
+     - |image0| Linux
+     - |image1| Windows
+     - |image2| Mac OS
+     - Universal
+   * - |p-icon| Python 
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-python-1.4.0-beta.r0-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-python-1.4.0-beta.r0-win.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-python-1.4.0-beta.r0-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-python-1.4.0-beta.r0-universal.zip>`__
+   * - |j-icon| Java 
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-java-1.4.0-beta.r0-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-java-1.4.0-beta.r0-win.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-java-1.4.0-beta.r0-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-java-1.4.0-beta.r0-universal.zip>`__
+   * - |c-icon| .NET 
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-dotnet-1.4.0-beta.r0-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-dotnet-1.4.0-beta.r0-win.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-dotnet-1.4.0-beta.r0-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-dotnet-1.4.0-beta.r0-universal.zip>`__
+   * - |n-icon| C Shared Libraries 
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-linux-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.4.0-beta.r0-win-shared.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.4.0-beta.r0-mac-shared.zip>`__
+     - \-
+
+Source code
+~~~~~~~~~~~
+
+`Source code zip <https://github.com/epam/Indigo/archive/indigo-1.5.0.zip>`__
+
+`Repository on GitHub <https://github.com/epam/Indigo>`__
+
+
+Maven Repository
+~~~~~~~~~~~~~~~~
+
+All the Indigo Java packages are uploaded to `Maven Central Repository <https://search.maven.org/search?q=g:com.epam.indigo>`__.
+
+
+Just add a dependency to your Maven project to download Indigo Java API automatically:
+
+.. code-block:: xml
+
+    <dependencies>
+      ...
+        <dependency>
+          <groupId>com.epam.indigo</groupId>
+          <artifactId>indigo</artifactId>
+          <version>1.5.0</version>
+        </dependency>
+        ...
+    </dependencies>
+
+
+NuGet Repository
+~~~~~~~~~~~~~~~~
+
+Indigo .NET packages available at `Nuget <https://www.nuget.org/packages/Indigo.Net/>`__
+
+Just add ``Indigo.Net`` as a dependency into the project.
+
+PyPi package
+~~~~~~~~~~~~
+
+Indigo python SDK can be found at `PyPi <https://pypi.org/project/epam.indigo/>`__
+
+One can install the Indigo library using *pip* utility
+
+
+.. code-block:: xml
+
+    pip install epam.indigo
 
 
 Indigo 1.4.0 beta
