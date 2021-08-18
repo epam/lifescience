@@ -7,6 +7,29 @@ News
     newsfeed
     release-notes/index
 
+
+Indigo 1.5.0 released
+---------------------
+
+*18 Aug 2021*
+
+We are glad to announce that a new stable version of Indigo 1.5.0 is released. 
+The main features TODO
+For more details please look at release notes.
+
+* |indigo_1_5_0_notes|
+
+* |indigo_1_5_0_downloads|
+
+.. |indigo_1_5_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/indigo-1.5.0.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_5_0_downloads| raw:: html
+
+   <a href="download/indigo.html" target="_blank">Downloads</a>
+
+
 Ketcher 2.3.0 released
 ----------------------
 
