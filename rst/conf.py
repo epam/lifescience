@@ -36,12 +36,17 @@ extensions = [
     'sphinx.ext.ifconfig',
     'options_node',
     'ls_menu',
-    'index_tiles'
+    'index_tiles',
+    'myst_parser'
     #    'sphinx.ext.mathjax',
 ]
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+# source_suffix = '.rst'
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
