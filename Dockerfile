@@ -7,7 +7,7 @@ RUN apt-get update -qq
 RUN apt-get install -y --no-install-recommends \
     wget python3-pip make
 
-RUN pip3 install Sphinx==3.4.2
+RUN pip3 install Sphinx==3.4.2 myst-parser==0.15.1
 
 # Build indigo
 RUN mkdir -p /opt/indigo
