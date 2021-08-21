@@ -23,7 +23,7 @@ For more details please look at release notes.
 
 .. |indigo_1_5_0_notes| raw:: html
 
-   <a href="ketcher/release-notes/indigo-1.5.0.html" target="_blank">Release Notes</a>
+   <a href="indigo/release-notes/indigo-1.5.0.html" target="_blank">Release Notes</a>
 
 .. |indigo_1_5_0_downloads| raw:: html
 
