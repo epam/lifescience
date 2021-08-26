@@ -3,7 +3,12 @@
 
 *18 Aug 2021*
 
-### New features and improvements
+## Summary
+
+Indigo chemistry API now can be distributed in web browsers by using WebAssembly builds. Also new format was added to support modern web applications. Indigo Core parts and libraries were stabilized and improved. 
+
+
+## New features and improvements
 
 * Added WebAssembly support to run Indigo in a web browser. See [how to build](https://github.com/epam/Indigo#how-to-build-indigo-wasm). [[milestone]](https://github.com/epam/Indigo/milestone/8).
 * Implemented NodeJS API for Indigo [[implemented]](https://github.com/epam/Indigo/issues/245).
@@ -23,7 +28,7 @@
 * Implemented context manager and iterator for Bingo object [[improvement]](https://github.com/epam/Indigo/pull/241).
 * Added Bingo CI for Postgres 9.6 [[improvement]](https://github.com/epam/Indigo/pull/411).
 
-### Bug fixes
+## Bug fixes
 
 * Incorrect calculation and check on partially selected structure [[fix]](https://github.com/epam/Indigo/pull/353).
 * PNG rendering crash [[fix]](https://github.com/epam/Indigo/pull/342).
