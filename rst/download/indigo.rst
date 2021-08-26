@@ -11,7 +11,7 @@ Download Indigo Toolkit
 Indigo 1.5.0
 ------------
 
-TODO general description
+Changelog available `here <../indigo/release-notes/indigo-1.5.0.html>`__
 
 
 Language Bindings
@@ -28,25 +28,31 @@ Language Bindings
      - |image2| Mac OS
      - Universal
    * - |p-icon| Python 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-python-1.4.0-beta.r0-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-python-1.4.0-beta.r0-win.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-python-1.4.0-beta.r0-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-python-1.4.0-beta.r0-universal.zip>`__
-   * - |j-icon| Java 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-java-1.4.0-beta.r0-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-java-1.4.0-beta.r0-win.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-java-1.4.0-beta.r0-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-java-1.4.0-beta.r0-universal.zip>`__
-   * - |c-icon| .NET 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-dotnet-1.4.0-beta.r0-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-dotnet-1.4.0-beta.r0-win.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-dotnet-1.4.0-beta.r0-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-dotnet-1.4.0-beta.r0-universal.zip>`__
-   * - |n-icon| C Shared Libraries 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-linux-x86_64.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.4.0-beta.r0-win-shared.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.4.0-beta.r0-mac-shared.zip>`__
      - \-
+     - \-
+     - \-
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-python-1.5.0.zip>`__
+   * - |j-icon| Java 
+     - \-
+     - \-
+     - \-
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-java-1.5.0.zip>`__
+   * - |c-icon| .NET 
+     - \-
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-dotnet-1.5.0.zip>`__
+     - \-
+     - \-
+   * - |n-icon| C Shared Libraries 
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.5.0-linux-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.5.0-windows-x86_64.zip>`__, `zip-mingw <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.5.0-windows-mingw-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.5.0-macos-x86_64.zip>`__
+     - \-
+   * - |c-icon| Utilities
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-utils-1.5.0-linux-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-utils-1.5.0-windows-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-utils-1.5.0-macos-x86_64.zip>`__
+     - \-
+
 
 Source code
 ~~~~~~~~~~~
