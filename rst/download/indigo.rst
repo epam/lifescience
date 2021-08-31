@@ -62,27 +62,6 @@ Source code
 `Repository on GitHub <https://github.com/epam/Indigo>`__
 
 
-Maven Repository
-~~~~~~~~~~~~~~~~
-
-All the Indigo Java packages are uploaded to `Maven Central Repository <https://search.maven.org/search?q=g:com.epam.indigo>`__.
-
-
-Just add a dependency to your Maven project to download Indigo Java API automatically:
-
-.. code-block:: xml
-
-    <dependencies>
-      ...
-        <dependency>
-          <groupId>com.epam.indigo</groupId>
-          <artifactId>indigo</artifactId>
-          <version>1.5.0</version>
-        </dependency>
-        ...
-    </dependencies>
-
-
 NuGet Repository
 ~~~~~~~~~~~~~~~~
 

@@ -11,7 +11,7 @@ News
 Indigo 1.5.0 released
 ---------------------
 
-*26 Aug 2021*
+*31 Aug 2021*
 
 We are glad to announce that a new stable version of Indigo 1.5.0 was released. 
 Indigo chemistry API now can be distributed in web browsers by using WebAssembly builds. 
