@@ -7,6 +7,5 @@ services:
     volumes:
       - ./:/opt
     command:
-      bash -c "cp /srv/* /opt/indigo/ &&
+      bash -c "cd /opt/indigo/ && sh download.sh && cd /opt &&
       make html"
-
