@@ -4,7 +4,8 @@ API
 .. toctree::
     :includehidden:
 
-    API Reference <reference>
+    Python API Reference <python_ref>
+    C API Reference <plain_c_ref>
 
 
 Overview
