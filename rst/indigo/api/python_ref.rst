@@ -1,8 +1,5 @@
-Indigo API Reference
-********************
-
 Python
-======
+******
 
 Indigo
 ------
@@ -39,13 +36,4 @@ IndigoInchi
    :members:
    :undoc-members:
 
-
-Plain C
-=======
-
-Core Indigo API
----------------
-
-.. literalinclude:: ../../../indigo/indigo.h
-    :language: c
 
