@@ -18,6 +18,13 @@ IndigoObject
    :members:
    :undoc-members:
 
+IndigoException
+---------------
+
+.. autoclass:: indigo.IndigoException
+   :members:
+   :undoc-members:
+
 IndigoRenderer
 --------------
 

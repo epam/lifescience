@@ -37,7 +37,8 @@ extensions = [
     'options_node',
     'ls_menu',
     'index_tiles',
-    'myst_parser'
+    'myst_parser',
+    'sphinx.ext.napoleon'
     #    'sphinx.ext.mathjax',
 ]
 
