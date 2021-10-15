@@ -120,7 +120,7 @@ Embedded molecular viewer showing proteins that correspond to genes/transcripts 
 Try in one click
 ----------------
 
-You can try the `NGB demo <http://ngb.opensource.epam.com/catgenome>`__
+You can try the `NGB demo <https://ngb.opensource.epam.com/catgenome>`__
 But please be informed, that not all browsers are supported
 
 License

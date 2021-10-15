@@ -57,7 +57,7 @@ Bioinformatics
    -  Embedded Protein structure viewer 
    -  Integration with ENSEMBL, UniPROT, etc. and internal databases
    -  Fast access to huge (500 Gb and more) data files and to cloud data (Amazon S3, Hadoop, etc.)
-   -  Try the `NGB demo <http://ngb.opensource.epam.com/catgenome>`__: Analize genome online
+   -  Try the `NGB demo <https://ngb.opensource.epam.com/catgenome>`__: Analize genome online
 
 Cheminformatics
 ---------------
