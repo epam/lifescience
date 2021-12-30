@@ -37,7 +37,7 @@ Language/Platform Bindings
      - \-
      - \-
    * - |c-icon| .NET 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-dotnet.zip>`__
+     - `all.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-dotnet.zip>`__
      - \-
      - \-
      - \-
