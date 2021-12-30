@@ -7,6 +7,26 @@ News
     newsfeed
     release-notes/index
 
+Indigo 1.6.1 released
+---------------------
+
+*28 Dec 2021*
+
+We are happy to announce that new version 1.6.1 of Indigo toolkit has been released.
+Source code and verbose changelog could be found here: <a href="https://github.com/epam/Indigo/releases/tag/indigo-1.6.1">Indigo 1.6.1</a>.
+
+* |indigo_1_6_1_notes|
+
+* |indigo_1_6_1_downloads|
+
+.. |indigo_1_6_1_notes| raw:: html
+
+   <a href="indigo/release-notes/indigo-1.6.1.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_6_1_downloads| raw:: html
+
+   <a href="download/indigo.html" target="_blank">Downloads</a>
+
 
 Ketcher 2.4.0 released
 ----------------------
