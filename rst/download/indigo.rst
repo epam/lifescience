@@ -8,6 +8,60 @@ Download Indigo Toolkit
   ../indigo/release-notes/index.rst
 
 
+Indigo 1.6.1
+------------
+
+Changelog available `here <../indigo/release-notes/indigo-1.6.1.html>`__
+
+Language/Platform Bindings
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table:: 
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 28 24 24 24 24
+
+   * - 
+     - Universal
+     - |image0| Linux
+     - |image1| Windows
+     - |image2| Mac OS
+   * - |p-icon| Python 
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-python.zip>`__
+     - \-
+     - \-
+     - \-
+   * - |j-icon| Java 
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-java.zip>`__
+     - \-
+     - \-
+     - \-
+   * - |c-icon| .NET 
+     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-dotnet.zip>`__
+     - \-
+     - \-
+     - \-
+   * - |n-icon| C Shared Libraries 
+     - `all.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-native-shared-libs.zip>`__
+     - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-linux-x86_64.zip>`__, `aarch64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-linux-aarch64.zip>`__
+     - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-windows-x86_64.zip>`__, `win32.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-windows-i386.zip>`__, `mingwx64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-windows-mingw-x86_64.zip>`__
+     - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-macos-x86_64.zip>`__, `aarch64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-macos-aarch64.zip>`__
+   * - |c-icon| Utilities
+     - \-
+     - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-utils-linux-x86_64.zip>`__
+     - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-utils-windows-x86_64.zip>`__
+     - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-utils-macos-x86_64.zip>`__
+
+
+Source code
+~~~~~~~~~~~
+
+`Source code zip <https://github.com/epam/Indigo/archive/indigo-1.6.1.zip>`__
+
+`Repository on GitHub <https://github.com/epam/Indigo>`__
+
+
+
 Indigo 1.5.0
 ------------
 
