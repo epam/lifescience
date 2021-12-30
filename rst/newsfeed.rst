@@ -13,7 +13,7 @@ Indigo 1.6.1 released
 *28 Dec 2021*
 
 We are happy to announce that new version 1.6.1 of Indigo toolkit has been released.
-Source code and verbose changelog could be found here: `Indigo 1.6.1 <https://github.com/epam/Indigo/releases/tag/indigo-1.6.1`__.
+Source code and verbose changelog could be found here: `Indigo 1.6.1 <https://github.com/epam/Indigo/releases/tag/indigo-1.6.1>`__.
 
 * |indigo_1_6_1_notes|
 
