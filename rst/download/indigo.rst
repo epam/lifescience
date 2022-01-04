@@ -22,7 +22,7 @@ Language/Platform Bindings
    :widths: 28 24 24 24 24
 
    * - 
-     - Universal
+     - |image3| Universal
      - |image0| Linux
      - |image1| Windows
      - |image2| Mac OS
@@ -470,6 +470,7 @@ Visit `Indigo SolutionsHub <https://solutionshub.epam.com/solution/indigo>`__  i
 .. |image0| image:: ../assets/Linux.png
 .. |image1| image:: ../assets/Windows.png
 .. |image2| image:: ../assets/AppleSZ.png
+.. |image3| image:: ../assets/globe.png
 .. |p-icon| image:: ../assets/indigo/python-icon.png
 .. |j-icon| image:: ../assets/indigo/java-icon.png
 .. |c-icon| image:: ../assets/indigo/csharp-icon.png
