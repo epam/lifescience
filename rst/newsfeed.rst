@@ -7,26 +7,6 @@ News
     newsfeed
     release-notes/index
 
-Indigo 1.6.1 released
----------------------
-
-*28 Dec 2021*
-
-We are happy to announce that a new version 1.6.1 of Indigo toolkit is released.
-
-* |indigo_1_6_1_notes|
-
-* |indigo_1_6_1_downloads|
-
-.. |indigo_1_6_1_notes| raw:: html
-
-   <a href="indigo/release-notes/indigo-1.6.1.html" target="_blank">Release Notes</a>
-
-.. |indigo_1_6_1_downloads| raw:: html
-
-   <a href="download/indigo.html" target="_blank">Downloads</a>
-
-
 Ketcher 2.4.0 released
 ----------------------
 
@@ -45,6 +25,26 @@ We are glad to announce that a new stable version of Ketcher 2.4.0 is released.
 .. |ketcher_2_4_0_downloads| raw:: html
 
    <a href="download/ketcher.html" target="_blank">Downloads</a>
+
+
+Indigo 1.6.1 released
+---------------------
+
+*28 Dec 2021*
+
+We are happy to announce that a new version 1.6.1 of Indigo toolkit is released.
+
+* |indigo_1_6_1_notes|
+
+* |indigo_1_6_1_downloads|
+
+.. |indigo_1_6_1_notes| raw:: html
+
+   <a href="indigo/release-notes/indigo-1.6.1.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_6_1_downloads| raw:: html
+
+   <a href="download/indigo.html" target="_blank">Downloads</a>
 
 
 Indigo 1.5.0 released
