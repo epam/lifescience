@@ -61,6 +61,25 @@ Source code
 `Repository on GitHub <https://github.com/epam/Indigo>`__
 
 
+NuGet Repository
+~~~~~~~~~~~~~~~~
+
+Indigo .NET packages available at `Nuget <https://www.nuget.org/packages/Indigo.Net/>`__
+
+Just add ``Indigo.Net`` as a dependency into the project.
+
+PyPi package
+~~~~~~~~~~~~
+
+Indigo Python SDK can be found at `PyPi <https://pypi.org/project/epam.indigo/>`__
+
+One can install the Indigo library using *pip* utility
+
+
+.. code-block:: xml
+
+    pip install epam.indigo
+
 
 Indigo 1.5.0
 ------------
