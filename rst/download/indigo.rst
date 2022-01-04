@@ -46,7 +46,7 @@ Language/Platform Bindings
      - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-linux-x86_64.zip>`__, `aarch64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-linux-aarch64.zip>`__
      - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-windows-x86_64.zip>`__, `win32.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-windows-i386.zip>`__, `mingwx64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-windows-mingw-x86_64.zip>`__
      - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-macos-x86_64.zip>`__, `aarch64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-libs-macos-aarch64.zip>`__
-   * - |c-icon| Utilities
+   * - |n-icon| Utilities
      - \-
      - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-utils-linux-x86_64.zip>`__
      - `x64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.6.1/indigo-utils-windows-x86_64.zip>`__
