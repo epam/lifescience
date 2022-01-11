@@ -157,18 +157,11 @@ Feedback
 --------
 
 Do you need assistance using our tools? Do you need a feature? Do you
-want to send a patch to us? Did you find a bug? Please write to one of
-the following newsgroups and let us know:
+want to send a patch to us? Did you find a bug? Please use Github tickets package:
 
--  http://groups.google.com/group/indigo-bugs : for bug reports on all
-   open-source projects.
--  http://groups.google.com/group/indigo-dev : for development topics.
--  http://groups.google.com/group/indigo-general : for any other
-   discussions.
+-  https://github.com/epam/ketcher/issues
+-  https://github.com/epam/ketcher/discussions
 
-No registration is required: you can write from your ordinary e-mail
-account to indigo-bugs@googlegroups.com, indigo-dev@googlegroups.com, or
-indigo-general@googlegroups.com to get your message posted.
 
 Commercial Availability
 -----------------------
@@ -181,6 +174,8 @@ You may need the commercial license if you want to:
 -  Receive ongoing support and maintenance
 -  Design and implement custom changes for the structure editor
 -  Do any other development/testing required for a proprietary software product
+
+Visit our `SolutionsHub page <https://solutionshub.epam.com/solution/ketcher>`__   for more details
 
 .. |image0| image:: ../assets/ketcher/ketcher_2.png
    :target: demo.html
