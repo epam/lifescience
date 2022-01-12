@@ -169,16 +169,17 @@ Look at the `Build <../indigo/build.html>`__ page for the building manual.
 License
 -------
 
-Copyright © 2009-2020 LifeSciences unit of EPAM Systems, Inc.
+Copyright © 2009-2021 LifeSciences unit of EPAM Systems, Inc.
 
 - Indigo version 1.0.0 was released under GNU General Public License v3.0
 - Indigo version 1.4.0 was re-licensed under Apache License, Version 2.
+- Current version of Indigo is distributed under Apache License, Version 2.
 
 This program is free software: You can redistribute it and/or modify it
 under the terms of the Apache License, Version 2.0.
 
 You should have received a copy of the Apache License along
-with this program. If you did not not, please see
+with this program. If you have not, please see
 https://www.apache.org/licenses/LICENSE-2.0
 
 Feedback
