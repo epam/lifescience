@@ -26,7 +26,7 @@ We are happy to announce that new version `2.4.0 <https://github.com/epam/ketche
 * Update Ketcher API to allow to download structure in any formats `#737 <https://github.com/epam/ketcher/issues/737>`__
 * Hiding buttons on the left menu `#713 <https://github.com/epam/ketcher/issues/713>`__
 * Add global error handling `#726 <https://github.com/epam/ketcher/issues/726>`__
-*Transform dialogs global css styles into css modules `#277 <https://github.com/epam/ketcher/issues/277>`__
+* Transform dialogs global css styles into css modules `#277 <https://github.com/epam/ketcher/issues/277>`__
 * Styles are not component based `#699 <https://github.com/epam/ketcher/issues/699>`__
 * Add the ability to turn off the auto fade of AND/OR stereo labels `#689 <https://github.com/epam/ketcher/issues/689>`__
 * Make decomposition of arrow tool `#696 <https://github.com/epam/ketcher/issues/696>`__
