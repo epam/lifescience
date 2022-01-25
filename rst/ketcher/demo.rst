@@ -4,7 +4,7 @@
 Remote
 ------
 
-Remote version uses  `Indigo Service <../indigo/aervice/index.html>`__ as a backend server to convert structure formats and calculate some chemistry properties
+Remote version uses  `Indigo Service <../indigo/service/index.html>`__ as a backend server to convert structure formats and calculate some chemistry properties
 
 .. toctree::
     demo/ketcher_2_3_remote
