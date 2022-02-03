@@ -17,5 +17,6 @@ Starting from version 2.2 Ketcher supports standalone mode. Ketcher can be run a
 
 .. toctree::
     demo/ketcher_2_3_standalone
+    demo/ketcher_2_4_standalone
 
 
