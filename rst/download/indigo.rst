@@ -24,8 +24,6 @@ Language Bindings
      - `indigo-java.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-java.zip>`__
    * - |c-icon| .NET 
      - `indigo-dotnet.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-dotnet.zip>`__
-   * - |w-icon| WASM 
-     - `indigo-wasm.zip  <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-wasm.zip>`__
    * - |n-icon| Native Libraries in one archive
      - `indigo-native-shared-libs.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-native-shared-libs.zip>`__
 
