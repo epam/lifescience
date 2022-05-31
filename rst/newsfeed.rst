@@ -7,6 +7,26 @@ News
     newsfeed
     release-notes/index
 
+Ketcher 2.4.0 released
+----------------------
+
+*30 May 2022*
+
+We are glad to announce that a new stable version of Ketcher 2.5.0 is released. 
+
+* |ketcher_2_5_0_notes|
+
+* |ketcher_2_5_0_downloads|
+
+.. |ketcher_2_4_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.5.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_4_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+   
+
 Indigo 1.7.0 released
 ---------------------
 
