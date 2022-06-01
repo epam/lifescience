@@ -24,7 +24,7 @@ We are happy to announce that a new version 1.7.0 of Indigo toolkit is released.
 
 .. |indigo_1_7_0_downloads| raw:: html
 
-   <a href="download/indigo.html" target="_blank">Downloads</a>
+   <a href="download/indigo-1.7.0.html" target="_blank">Downloads</a>
 
 
 Ketcher 2.4.0 released
@@ -64,7 +64,7 @@ We are happy to announce that a new version 1.6.1 of Indigo toolkit is released.
 
 .. |indigo_1_6_1_downloads| raw:: html
 
-   <a href="download/indigo.html" target="_blank">Downloads</a>
+   <a href="download/indigo-1.6.1.html" target="_blank">Downloads</a>
 
 
 Indigo 1.5.0 released
@@ -88,7 +88,7 @@ For more details please look at release notes.
 
 .. |indigo_1_5_0_downloads| raw:: html
 
-   <a href="download/indigo.html" target="_blank">Downloads</a>
+   <a href="download/indigo-1.5.0.html" target="_blank">Downloads</a>
 
 
 Ketcher 2.3.0 released
@@ -395,7 +395,7 @@ New Indigo version was released.
 
 .. |indigo_1_3_0b_downloads| raw:: html
 
-   <a href="download/indigo.html#indigo-1-3-0-beta" target="_blank">Downloads</a>
+   <a href="download/indigo-1.3.0-beta.html" target="_blank">Downloads</a>
 
 
 Indigo 1.2.3 released
@@ -417,7 +417,7 @@ The version includes small bugfixes and improvements
 
 .. |indigo_1_2_3_downloads| raw:: html
 
-   <a href="download/indigo.html#indigo-1-2-3" target="_blank">Downloads</a>
+   <a href="download/indigo-1.2.3.html" target="_blank">Downloads</a>
 
 
 Parso 2.0
