@@ -1,13 +1,6 @@
 Indigo Service
 ==============
 
-.. toctree::
-    :hidden:
-    :includehidden:
-
-    index
-
-
 Summary
 -------
 

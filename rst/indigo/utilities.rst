@@ -11,6 +11,20 @@ Indigo Utilities
     indigo-cano
     indigo-deco
     chemdiff
+    service/index
+
+Indigo service
+--------------
+
+Indigo service provides RESTful API for the following operations:
+- Aromatize, dearomatize molecules and reactions
+- 2D Layout for structures
+- Converting formats in all directions (Molfile,Smiles,Inchi,IUPAC name,CML,etc.)
+- Rendering structures from text format into images (PNG,PDF)
+- Image recognition toolkit
+- Calculating molecular and reaction properties
+
+Use following `guides <service/index.html>`__ to run the service.
 
 KNIME Nodes
 -----------
