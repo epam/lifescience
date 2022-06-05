@@ -7,7 +7,7 @@ News
     newsfeed
     release-notes/index
 
-Ketcher 2.4.0 released
+Ketcher 2.5.0 released
 ----------------------
 
 *30 May 2022*
