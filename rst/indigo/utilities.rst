@@ -17,6 +17,7 @@ Indigo service
 --------------
 
 Indigo service provides RESTful API for the following operations:
+
 - Aromatize, dearomatize molecules and reactions
 - 2D Layout for structures
 - Converting formats in all directions (Molfile,Smiles,Inchi,IUPAC name,CML,etc.)
