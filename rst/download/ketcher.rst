@@ -4,9 +4,9 @@ Download Ketcher
 Ketcher 2.5.0
 -------------
 
-`Ketcher 2.5.0 standalone <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-standalone-2.5.0.zip>`__
+`Ketcher 2.5.0 standalone <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-standalone-2.5.0.zip>`__
 
-`Ketcher 2.5.0 remote <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-remote-2.5.0.zip>`__
+`Ketcher 2.5.0 remote <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-remote-2.5.0.zip>`__
 
 `NPM package <https://www.npmjs.com/package/ketcher-react/v/2.5.0>`__
 
@@ -16,9 +16,9 @@ Ketcher 2.5.0
 Ketcher 2.4.0
 -------------
 
-`Ketcher 2.4.0 standalone <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-standalone-2.4.0.zip>`__
+`Ketcher 2.4.0 standalone <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-standalone-2.4.0.zip>`__
 
-`Ketcher 2.4.0 remote <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-remote-2.4.0.zip>`__
+`Ketcher 2.4.0 remote <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-remote-2.4.0.zip>`__
 
 `NPM package <https://www.npmjs.com/package/ketcher-react/v/2.4.0>`__
 
@@ -28,9 +28,9 @@ Ketcher 2.4.0
 Ketcher 2.3.1
 -------------
 
-`Ketcher 2.3.1 standalone <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-standalone-2.3.1.zip>`__
+`Ketcher 2.3.1 standalone <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-standalone-2.3.1.zip>`__
 
-`Ketcher 2.3.1 remote <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-remote-2.3.1.zip>`__
+`Ketcher 2.3.1 remote <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-remote-2.3.1.zip>`__
 
 `NPM package <https://www.npmjs.com/package/ketcher-react/v/2.3.1>`__
 
@@ -39,9 +39,9 @@ Ketcher 2.3.1
 Ketcher 2.3.0
 -------------
 
-`Ketcher 2.3.0 standalone <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-standalone-2.3.0.zip>`__
+`Ketcher 2.3.0 standalone <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-standalone-2.3.0.zip>`__
 
-`Ketcher 2.3.0 remote <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-remote-2.3.0.zip>`__
+`Ketcher 2.3.0 remote <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-remote-2.3.0.zip>`__
 
 `NPM package <https://www.npmjs.com/package/ketcher-react/v/2.3.0>`__
 
@@ -50,9 +50,9 @@ Ketcher 2.3.0
 Ketcher 2.2.0
 -------------
 
-`Ketcher 2.2.0 standalone <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-standalone-2.2.0.zip>`__
+`Ketcher 2.2.0 standalone <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-standalone-2.2.0.zip>`__
 
-`Ketcher 2.2.0 remote <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-remote-2.2.0.zip>`__
+`Ketcher 2.2.0 remote <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-remote-2.2.0.zip>`__
 
 `NPM package <https://www.npmjs.com/package/ketcher-react/v/2.2.0>`__
 
@@ -61,7 +61,7 @@ Ketcher 2.2.0
 Ketcher 2.1.0
 -------------
 
-`Ketcher 2.1.0 <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-2.1.0.zip>`__
+`Ketcher 2.1.0 <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-2.1.0.zip>`__
 
 `NPM package <https://www.npmjs.com/package/ketcher-react/v/2.1.0>`__
 
@@ -70,14 +70,14 @@ Ketcher 2.1.0
 Ketcher 2.0.0
 -------------
 
-`Ketcher 2.0 <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-2.0.0.zip>`__
+`Ketcher 2.0 <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-2.0.0.zip>`__
 
 `Source code on GitHub <http://github.com/epam/ketcher>`__
 
 Ketcher 1.0 Beta5
 -----------------
 
-`Source code <https://lifescience.opensource.epam.com/content/downloads/ketcher/ketcher-1.0-beta5.zip>`__
+`Source code <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-1.0-beta5.zip>`__
 
 `Source code on GitHub <http://github.com/ggasoftware/ketcher>`__
 

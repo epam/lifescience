@@ -29,26 +29,26 @@ Language Bindings
      - \-
      - \-
      - \-
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-python-1.5.0.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_5_0/indigo-python-1.5.0.zip>`__
    * - |j-icon| Java 
      - \-
      - \-
      - \-
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-java-1.5.0.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_5_0/indigo-java-1.5.0.zip>`__
    * - |c-icon| .NET 
      - \-
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-dotnet-1.5.0.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_5_0/indigo-dotnet-1.5.0.zip>`__
      - \-
      - \-
    * - |n-icon| C Shared Libraries 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.5.0-linux-x86_64.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.5.0-windows-x86_64.zip>`__, `zip-mingw <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.5.0-windows-mingw-x86_64.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-libs-1.5.0-macos-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_5_0/indigo-libs-1.5.0-linux-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_5_0/indigo-libs-1.5.0-windows-x86_64.zip>`__, `zip-mingw <https://lifescience.opensource.epam.com/downloads/indigo-1_5_0/indigo-libs-1.5.0-windows-mingw-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_5_0/indigo-libs-1.5.0-macos-x86_64.zip>`__
      - \-
    * - |c-icon| Utilities
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-utils-1.5.0-linux-x86_64.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-utils-1.5.0-windows-x86_64.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_5_0/indigo-utils-1.5.0-macos-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_5_0/indigo-utils-1.5.0-linux-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_5_0/indigo-utils-1.5.0-windows-x86_64.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_5_0/indigo-utils-1.5.0-macos-x86_64.zip>`__
      - \-
 
 

@@ -26,24 +26,24 @@ Language Bindings
      - |image2| Mac OS
      - |image3| Universal
    * - |p-icon| Python 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-python-1.4.0-beta.r0-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-python-1.4.0-beta.r0-win.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-python-1.4.0-beta.r0-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-python-1.4.0-beta.r0-universal.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-python-1.4.0-beta.r0-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-python-1.4.0-beta.r0-win.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-python-1.4.0-beta.r0-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-python-1.4.0-beta.r0-universal.zip>`__
    * - |j-icon| Java 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-java-1.4.0-beta.r0-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-java-1.4.0-beta.r0-win.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-java-1.4.0-beta.r0-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-java-1.4.0-beta.r0-universal.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-java-1.4.0-beta.r0-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-java-1.4.0-beta.r0-win.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-java-1.4.0-beta.r0-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-java-1.4.0-beta.r0-universal.zip>`__
    * - |c-icon| .NET 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-dotnet-1.4.0-beta.r0-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-dotnet-1.4.0-beta.r0-win.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-dotnet-1.4.0-beta.r0-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-dotnet-1.4.0-beta.r0-universal.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-dotnet-1.4.0-beta.r0-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-dotnet-1.4.0-beta.r0-win.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-dotnet-1.4.0-beta.r0-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-dotnet-1.4.0-beta.r0-universal.zip>`__
    * - |n-icon| C Shared Libraries 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-libs-1.4.0-beta.r0-linux-shared.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-libs-1.4.0-beta.r0-win-shared.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1_4_0-beta_r0/indigo-libs-1.4.0-beta.r0-mac-shared.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-libs-1.4.0-beta.r0-linux-shared.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-libs-1.4.0-beta.r0-win-shared.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1_4_0-beta_r0/indigo-libs-1.4.0-beta.r0-mac-shared.zip>`__
      - \-
 
 Source code

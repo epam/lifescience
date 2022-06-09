@@ -17,13 +17,13 @@ Language Bindings
    :stub-columns: 1
 
    * - |p-icon| Python 
-     - `indigo-python.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-python.zip>`__
+     - `indigo-python.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-python.zip>`__
    * - |j-icon| Java 
-     - `indigo-java.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-java.zip>`__
+     - `indigo-java.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-java.zip>`__
    * - |c-icon| .NET 
-     - `indigo-dotnet.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-dotnet.zip>`__
+     - `indigo-dotnet.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-dotnet.zip>`__
    * - |n-icon| Native Libraries in one archive
-     - `indigo-native-shared-libs.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-native-shared-libs.zip>`__
+     - `indigo-native-shared-libs.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-native-shared-libs.zip>`__
 
 
 Platform/CPU Bindings
@@ -38,25 +38,25 @@ Platform/CPU Bindings
      - |image1| Windows
      - |image2| Mac OS
    * - |n-icon| Native Libraries x64
-     - `indigo-libs-linux-x86_64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-libs-linux-x86_64.zip>`__
-     - `indigo-libs-windows-x86_64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-libs-windows-x86_64.zip>`__
-     - `indigo-libs-macos-x86_64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-libs-macos-x86_64.zip>`__
+     - `indigo-libs-linux-x86_64.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-libs-linux-x86_64.zip>`__
+     - `indigo-libs-windows-x86_64.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-libs-windows-x86_64.zip>`__
+     - `indigo-libs-macos-x86_64.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-libs-macos-x86_64.zip>`__
    * - 
      -
-     - `indigo-libs-windows-mingw-x86_64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-libs-windows-mingw-x86_64.zip>`__
+     - `indigo-libs-windows-mingw-x86_64.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-libs-windows-mingw-x86_64.zip>`__
      -
    * - |n-icon| Native Libraries ARM64
-     - `indigo-libs-linux-aarch64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-libs-linux-aarch64.zip>`__
+     - `indigo-libs-linux-aarch64.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-libs-linux-aarch64.zip>`__
      - \-
-     - `indigo-libs-macos-aarch64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-libs-macos-aarch64.zip>`__
+     - `indigo-libs-macos-aarch64.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-libs-macos-aarch64.zip>`__
    * - |n-icon| Native Libraries i386
      - \-
-     - `indigo-libs-windows-i386.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-libs-windows-i386.zip>`__
+     - `indigo-libs-windows-i386.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-libs-windows-i386.zip>`__
      - \-
    * - |n-icon| Utilities x64
-     - `indigo-utils-linux-x86_64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-utils-linux-x86_64.zip>`__
-     - `indigo-utils-windows-x86_64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-utils-windows-x86_64.zip>`__
-     - `indigo-utils-macos-x86_64.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.7.0/indigo-utils-macos-x86_64.zip>`__
+     - `indigo-utils-linux-x86_64.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-utils-linux-x86_64.zip>`__
+     - `indigo-utils-windows-x86_64.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-utils-windows-x86_64.zip>`__
+     - `indigo-utils-macos-x86_64.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.7.0/indigo-utils-macos-x86_64.zip>`__
 
 Source code
 ~~~~~~~~~~~

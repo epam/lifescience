@@ -26,24 +26,24 @@ Language Bindings
      - |image2| Mac OS
      - |image3| Universal
    * - |p-icon| Python 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-python-1.2.3.r0-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-python-1.2.3.r0-win.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-python-1.2.3.r0-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-python-1.2.3.r0-universal.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-python-1.2.3.r0-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-python-1.2.3.r0-win.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-python-1.2.3.r0-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-python-1.2.3.r0-universal.zip>`__
    * - |j-icon| Java 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-java-1.2.3.r0-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-java-1.2.3.r0-win.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-java-1.2.3.r0-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-java-1.2.3.r0-universal.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-java-1.2.3.r0-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-java-1.2.3.r0-win.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-java-1.2.3.r0-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-java-1.2.3.r0-universal.zip>`__
    * - |c-icon| .NET 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-dotnet-1.2.3.r0-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-dotnet-1.2.3.r0-win.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-dotnet-1.2.3.r0-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-dotnet-1.2.3.r0-universal.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-dotnet-1.2.3.r0-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-dotnet-1.2.3.r0-win.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-dotnet-1.2.3.r0-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-dotnet-1.2.3.r0-universal.zip>`__
    * - |n-icon| C Shared Libraries 
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-libs-1.2.3.r0-linux-shared.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-libs-1.2.3.r0-win-shared.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-libs-1.2.3.r0-mac-shared.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-libs-1.2.3.r0-linux-shared.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-libs-1.2.3.r0-win-shared.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-libs-1.2.3.r0-mac-shared.zip>`__
      - \-
 
 Utilities
@@ -60,24 +60,24 @@ Utilities
      - |image2| Mac OS
      - Universal
    * - `Cano <../indigo/indigo-cano.html>`__, `Deco <../indigo/indigo-deco.html>`__ and `Depict <../indigo/indigo-depict.html>`__
-     - `32bit <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-linux32.zip>`__,
-       `64bit <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-linux64.zip>`__
-     - `32bit <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-win32.zip>`__,
-       `64bit <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-win64.zip>`__
-     - `mac10.7.zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-mac10.7.zip>`__
+     - `32bit <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-linux32.zip>`__,
+       `64bit <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-linux64.zip>`__
+     - `32bit <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-win32.zip>`__,
+       `64bit <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-win64.zip>`__
+     - `mac10.7.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-mac10.7.zip>`__
      - \-
    * - `ChemDiff <../indigo/chemdiff.html>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-win.zip>`__,
-       `installer <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-win-installer.exe>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-universal.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-win.zip>`__,
+       `installer <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-win-installer.exe>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-universal.zip>`__
    * - `Legio <../indigo/legio.html>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/legio-1.2.3.r6-linux.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/legio-1.2.3.r6-win.zip>`__,
-       `installer <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/legio-1.2.3.r6-win-installer.exe>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/legio-1.2.3.r6-mac.zip>`__
-     - `zip <https://lifescience.opensource.epam.com/content/downloads/indigo-1.2.3/legio-1.2.3.r6-universal.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/legio-1.2.3.r6-linux.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/legio-1.2.3.r6-win.zip>`__,
+       `installer <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/legio-1.2.3.r6-win-installer.exe>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/legio-1.2.3.r6-mac.zip>`__
+     - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/legio-1.2.3.r6-universal.zip>`__
 
 
 
