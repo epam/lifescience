@@ -43,7 +43,7 @@ Bioinformatics
 
 -  `NGB SolutionsHub <https://solutionshub.epam.com/solution/new-genome-browser-ngb>`__
 -  `Miew SolutionsHub <https://solutionshub.epam.com/solution/miew>`__
--  `Med3web SolutionsHub <https://solutionshub.epam.com/solution/med-3-web>`__
+-  `MRI Viewer SolutionsHub <https://solutionshub.epam.com/solution/med-3-web>`__
 -  `Cloud Pipeline SolutionsHub <https://solutionshub.epam.com/solution/cloud-pipeline>`__
 
 Data processing

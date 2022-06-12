@@ -30,7 +30,7 @@ the following Github repo and let us know:
 -  Parso : https://github.com/epam/parso/issues
 -  NGB : https://github.com/epam/NGB/issues
 -  Miew : https://github.com/epam/miew/issues
--  Med3Web : https://github.com/epam/med3web/issues
+-  MRI Viewer : https://github.com/epam/med3web/issues
 -  JDI : https://github.com/epam/JDI/issues
 
 

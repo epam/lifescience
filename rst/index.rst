@@ -6,7 +6,7 @@ Life Sciences Open Source
 
     Bingo <bingo/index>
     Cloud Pipeline <cloud/index>
-    Med3web <mri/index>
+    MRI Viewer <mri/index>
     Miew <miew/index>
     NGB <ngb/index>
     Indigo Toolkit <indigo/index>
@@ -30,16 +30,16 @@ Bioinformatics
 
    -  Supports three main Cloud platforms: Amazon, Azure, Google.
 
--  `Med3web Viewer and Editor <mri/>`__ High performance web tool for advanced visualization and manipulation of medical images: MRI, CT, etc. |image10|
+-  `MRI Viewer and Editor <mri/>`__ High performance web tool for advanced visualization and manipulation of medical images: MRI, CT, etc. |image10|
 
-   -  Med3web Viewer creates a 3D model of a body part based on the set
+   -  MRI Viewer creates a 3D model of a body part based on the set
       of plane images. It provides a crucial means for performing visual
       analysis of a patient’s anatomy for diagnosis, preoperative planning,
       and surgical training.
    -  Unique rendering algorithms and GPU processing approach provide high
       performance, smooth interaction and ability to convenient working
       regardless location and time.
-   -  Try the `Med3web demo <https://epa.ms/mri>`__ online.
+   -  Try the `MRI Viewer demo <https://epa.ms/mri>`__ online.
 
 -  `Miew – 3D Molecular Viewer <miew/>`__ High performance web tool for advanced visualization and manipulation of molecular structures |image9|
 

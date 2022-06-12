@@ -267,12 +267,12 @@ In recent months, we have significantly improved our 3D Molecular Viewer, both i
 
 
 
-Med3web has got new features
-----------------------------
+MRI Viewer has got new features
+-------------------------------
 
 *7 Feb 2019*
 
-Automatic segmentation methods support lungs data and brain separation from skull tissues. Semi-automatic methods can clear volumetric data, as well as separate the area of interest from the source volume using deformable 3D triangle mesh. Also Med3web supports HDR files format now. 
+Automatic segmentation methods support lungs data and brain separation from skull tissues. Semi-automatic methods can clear volumetric data, as well as separate the area of interest from the source volume using deformable 3D triangle mesh. Also MRI Viewer supports HDR files format now. 
 
 * |mri_app|
 
@@ -337,8 +337,8 @@ New Ketcher version was released. It includes lot of bugfixes and improvements
    <a href="ketcher/release-notes/ketcher-2.0.0b.html" target="_blank">Release Notes</a>
 
 
-Med3Web is available on GitHub
-------------------------------
+MRI Viewer is available on GitHub
+---------------------------------
 
 *25 Dec 2017*
 

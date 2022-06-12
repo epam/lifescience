@@ -1,4 +1,4 @@
-Med3web Viewer and Editor
+MRI Viewer and Editor
 =========================
 
 ..  raw:: html
@@ -16,17 +16,17 @@ Med3web Viewer and Editor
 Overview
 --------
 
-Med3web is a web-based viewer for DICOM and other formats.
+MRI Viewer is a web-based viewer for DICOM and other formats.
 It creates a 3D model of a body part based on a set of plane images (DICOM, NIfTI, HDR, KTX, etc. file formats)
-and shows 2D/3D views via a web browser without any installations. Med3web will please you with speed and
+and shows 2D/3D views via a web browser without any installations. MRI Viewer will please you with speed and
 convenience in comparison even with desktop analogues. Fast smooth 3D visualization is based on unique rendering algorithms
 developed at EPAM. These algorithms do not require data preprocessing, thus visualization starts right after data loading.
 
-Med3web can edit volumetric data in order to select areas of interest.
+MRI Viewer can edit volumetric data in order to select areas of interest.
 This functionality is implemented with automatic and semi-automatic segmentation methods.
 
 The viewer is a `free and open-source <#license>`__ software.
-Try Med3web demo online --- `epa.ms/mri <http://epa.ms/mri>`__.
+Try MRI Viewer demo online --- `epa.ms/mri <http://epa.ms/mri>`__.
 
 **We did not find a similar web-tool.** We have developed `a unique optimization of isosurface rendering algorithm <papers.html>`__.
 
@@ -157,7 +157,7 @@ Special automatic segmentation methods are implemented for the lungs data and sk
 Semi-automatic Methods for Opening Areas of Interest
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Med3web has two methods for opening/selection areas of interest.
+MRI Viewer has two methods for opening/selection areas of interest.
 The first one allows to clear volumetric data, which obstructs area of interest.
 
 ..  image:: ../assets/mri/mri-clear.jpg
@@ -172,7 +172,7 @@ The second method allows to cut the area of interest from the source volume usin
 Try in One Click
 ----------------
 
-You can try the `Med3web demo <http://epa.ms/mri>`__ online. Please note that not all browsers
+You can try the `MRI Viewer demo <http://epa.ms/mri>`__ online. Please note that not all browsers
 and video cards are supported yet.
 
 The product is under development. More features are planned for future releases: automated segmentation, volume cut,
@@ -182,7 +182,7 @@ automated ROI detection, complex colored transfer functions, etc.
 Source Code
 -----------
 
-Med3web is under active development and its source code is available at `GitHub <https://github.com/epam/med3web>`__.
+MRI Viewer is under active development and its source code is available at `GitHub <https://github.com/epam/med3web>`__.
 
 
 License

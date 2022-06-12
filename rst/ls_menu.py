@@ -16,7 +16,7 @@ GROUP_MAP = {
 "Parso": "Data processing",
 "Selenium Framework": "Software development",
 "Cloud Pipeline": "Bioinformatics",
-"Med3web": "Bioinformatics",
+"MRI Viewer": "Bioinformatics",
 "Miew": "Bioinformatics",
 "NGB": "Bioinformatics"
 }
