@@ -15,26 +15,25 @@
 Overview
 --------
 
-Ketcher is a web-based chemical structure editor.
+Ketcher is an open-source web-based chemical structure editor. Ketcher is designed for chemists, laboratory scientists and technicians who draw structures and reactions.
 
 |image0|
 
-Since Ketcher is written in pure Javascript, it incorporates high
-performance, good portability and light weight. You will not need any
-Java or Flash plugins to use it in your browser. Ketcher is completely
-free and open-source, while also available on a commercial basis.
+Ketcher is developed using pure JavaScript and incorporates high performance, good portability and light weight. You will not need any Java or Flash plugins to use it in your browser. 
 
-You can easily integrate Ketcher into your web application. The process
-of integration is very simple and
-`well-documented <developers-manual.html>`__.
+Ketcher is completely free and open-source, while also available on a commercial basis.
 
-Note
-~~~~
+You can easily integrate Ketcher into your web application. Ketcher is actively developed and improved by the dedicated team. 
+Explore the installation & integration information in our `repository <https://github.com/epam/ketcher#ketcher--->`__.
 
-Ketcher is under active development. You can post us your `comments and
-suggestions <../contact.html#feedback-on-open-source-products>`__ and
-get timely replies from the developers' team.
+Provide your comments and suggestions and get timely replies from the developers’ team.
 
+Other products & 3-rd party code
+--------
+
+Ketcher uses `Indigo Service <https://lifescience.opensource.epam.com/indigo/service/index.html>`__ for some of the functions. 
+
+Ketcher leverages `Raphael <http://raphaeljs.com/>`_ framework to support objects rendering and representation.
 
 Features
 --------
