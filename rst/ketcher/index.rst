@@ -31,103 +31,74 @@ Provide your comments and suggestions and get timely replies from the developers
 Other products & 3-rd party code
 --------
 
-Ketcher uses `Indigo Service <https://lifescience.opensource.epam.com/indigo/service/index.html>`__ for some of the functions. 
+Ketcher uses `Indigo Service <https://lifescience.opensource.epam.com/indigo/service/index.html>`__ for computationally intensive procedures.  
 
-Ketcher leverages `Raphael <http://raphaeljs.com/>`_ framework to support objects rendering and representation.
+Ketcher leverages `Raphael <http://raphaeljs.com/>`_ framework to support objects rendering and representation on the canvas.
 
-Features
+Standalone & Remote modes
 --------
 
-Standalone mode
-~~~~~~~~~~~~~~~
+Ketcher is provided in 2 modes: *Standalone* and *Remote*. 
 
-Ketcher supports the standalone mode in which no server support is
-required. In this mode, SMILES loading, automatic layout and automatic
-atom-atom mapping are not available.
+The *Standalone* mode incorporates Indigo backend services in the Ketcher build. It allows for Ketcher to work in browser with no server and even without the Internet connection. In this mode the pictures recognition provided by Indigo service is not available. 
 
-Scalable Vector Graphics (SVG) for rendering
+The *Remote* mode requires Indigo server deployed and connected. It will provide all the Ketcher abilities leveraging Indigo. 
+
+Main features
+------------------------
+
+**Fast and convenient editing.** We strive to make Ketcher as easy to use and as fast as the state-of-the-art desktop structure editing tools. Here are some highlights:
+
+- Lasso     and Rectangle selection tools, plus a special Fragment selection tool to     deal with connected components, rather than single atoms/bonds.
+- A     variety of `hotkeys <https://lifescience.opensource.epam.com/ketcher/editing-tips.html#hotkeys>`_
+- Undo/Redo.
+- Copy/Paste     for the canvas objects
+
+**Atoms & Bonds**. Ketcher supports basic properties and query features, adding aliases and Generic group usage.
+
+**Stereochemistry.** Ketcher provides complete stereochemistry support during the editing, loading, and saving of chemical structures.
+
+**Reactions.** Full-featured reaction support including reacting centers, atom flags and AAM.
+
+**S-groups.** All major S-group types are supported including generic, SRU polymers, multiple groups, superatoms and data S-groups.
+
+**R-groups.** R-site and R-fragment assignment is supported, as well as attachment point specification and R-logic.
+
+**Template library** (including custom and user's templates) & Functional groups support 
+
+File formats supported
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ketcher uses `Raphael <http://raphaeljs.com/>`__ as a backend, which
-means that `SVG <../resources.html#web-standards>`__ or
-`VML <../resources.html#web-standards>`__ (Vector Markup Language) is
-used for rendering, depending on the browser.
+Ketcher provides the ability to load and save structures and reactions in:
 
-Automatic layout (clean up), AAM (atom-to-atom mapping) and (de)aromatization
+-  DL Molfile (v2000 and v3000)
+-  RXN file format
+-  InChI String
+-  ChemAxon Extended SMILES
+-  ChemAxon Extended CML file formats
+
+Indigo service is used to provide the following computational tools for the canvas content:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ketcher delegates these computationally intensive procedures to the
-`Indigo <../indigo/index.html>`__ toolkit on the server side.
-
-Supported file formats
-~~~~~~~~~~~~~~~~~~~~~~
-
-Ketcher can import and export
-`Molfile/Rxnfile <../resources.html#file-formats>`__, as well as
-`SMILES <../resources.html#file-formats>`__. Server is required to
-import a `SMILES <../resources.html#file-formats>`__ string, since
-layout is needed to obtain the coordinates.
-
-Other features
-~~~~~~~~~~~~~~
-
-**Fast and convenient editing.** We strive to make Ketcher as easy to
-use and as fast as the state-of-the-art desktop structure editing tools.
-See `Editing Tips <editing-tips.html>`__ for details. Here are some
-highlights:
-
--  Lasso and Rectangle selection tools, plus a special Fragment
-   selection tool to deal with connected components, rather than single
-   atoms/bonds.
--  A variety of `hotkeys <editing-tips.html#hotkeys>`__.
--  Undo/Redo.
-
-**Stereochemistry.** Ketcher provides complete stereochemistry support
-during the editing, loading, and saving of chemical structures.
-
-**Reactions.** Full-featured reaction support including reacting
-centers, atom flags and AAM.
-
-**S-groups.** All major S-group types are supported including generic,
-SRU polymers, multiple groups, superatoms and data S-groups.
-
-**R-groups.** R-site and R-fragment assignment is supported, as well as
-attachment point specification and R-logic.
+• Aromatize/De-aromatize Tool
+• Calculate CIP Descriptors Tool
+• Structure Check Tool
+• MW and Structure Parameters Calculate Tool
+• Advanced Structure Clean up Tool (+ stereochemistry checking and structure layout)
+• Simple Structure Clean up Tool (checks bonds length, angles and spatial arrangement of atoms)
 
 Supported browsers
 ------------------
+Ketcher is supported and tested in the majority of the modern browsers:
 
-The complete functionality of Ketcher has been tested on the following
-browsers:
+• Microsoft Edge 
+• Mozilla Firefox
+• Safari
+• Chrome
 
--  Internet Explorer 6+
--  Firefox 3.5+
--  Safari 4+
--  Opera 9.6+
--  Chrome 2+
-
-Third-party code
-----------------
-
-Ketcher makes use of `Raphael <http://raphaeljs.com/>`__ and
-`Prototype <http://prototypejs.org/>`__.
-
-The current icon set was taken from `Tango Desktop
-Project <http://tango.freedesktop.org/Tango_Icon_Library>`__
-
-Ketcher 2.0
------------
-
-Right now the new version of Ketcher is developed. It includes modern interface, good performance 
-and lot of useful features. 
-
-|ketcher2|
-
-On the backend Ketcher 2.0 uses `Indigo Service <../indigo/service/index.html>`__
-
-You can already try the `Ketcher 2.0 demo <demo.html>`__
-But please be informed, that it is unstable and not all browsers are supported
-
+Try Ketcher!
+---------------
+Explore Ketcher on the `demo <https://lifescience.opensource.epam.com/ketcher/demo.html>`__ page. 
 
 Download
 --------
@@ -140,7 +111,7 @@ implementation.
 License
 -------
 
-Copyright © 2010-2019 LifeSciences unit of EPAM Systems, Inc.
+Copyright © 2010-2022 LifeSciences unit of EPAM Systems, Inc.
 
 Ketcher version 1.0 was released under GNU Affero General Public License v3.0
 Ketcher version 2.0 was re-licensed under Apache License, Version 2.
