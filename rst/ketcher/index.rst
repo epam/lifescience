@@ -147,7 +147,7 @@ You may need the commercial license if you want to:
 
 Visit our `SolutionsHub page <https://solutionshub.epam.com/solution/ketcher>`__   for more details
 
-.. |image0| image:: ../assets/ketcher/ketcher_2.png
+.. |image0| image:: ../assets/ketcher/ketcher_overview_25.png
    :target: demo.html
 
 .. |ketcher2| image:: ../assets/ketcher/2.0.0-alpha.1+r78.png 
