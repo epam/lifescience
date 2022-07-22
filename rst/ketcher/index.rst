@@ -151,3 +151,4 @@ Visit our `SolutionsHub page <https://solutionshub.epam.com/solution/ketcher>`__
    :target: demo.html
 
 .. |ketcher2| image:: ../assets/ketcher/2.0.0-alpha.1+r78.png 
+.. |lasso1| image:: ../assets/ketcher/ket_lasso.png
