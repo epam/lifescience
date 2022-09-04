@@ -29,14 +29,14 @@ Explore the installation & integration information in our `repository <https://g
 Provide your comments and suggestions and get timely replies from the developers’ team.
 
 Other products & 3-rd party code
---------
+--------------------------------
 
 Ketcher uses `Indigo Service <https://lifescience.opensource.epam.com/indigo/service/index.html>`__ for computationally intensive procedures.  
 
 Ketcher leverages `Raphael <http://raphaeljs.com/>`_ framework to support objects rendering and representation on the canvas.
 
 Standalone & Remote modes
---------
+-------------------------
 
 Ketcher is provided in 2 modes: *Standalone* and *Remote*. 
 
@@ -45,7 +45,7 @@ The *Standalone* mode incorporates Indigo backend services in the Ketcher build.
 The *Remote* mode requires Indigo server deployed and connected. It will provide all the Ketcher abilities leveraging Indigo. 
 
 Main features
-------------------------
+-------------
 
 **Fast and convenient editing.** We strive to make Ketcher as easy to use and as fast as the state-of-the-art desktop structure editing tools. Here are some highlights:
 
@@ -67,7 +67,7 @@ Main features
 **Template library** (including custom and user's templates) & Functional groups support 
 
 File formats supported
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 Ketcher provides the ability to load and save structures and reactions in:
 
@@ -78,7 +78,7 @@ Ketcher provides the ability to load and save structures and reactions in:
 -  ChemAxon Extended CML file formats
 
 Indigo service is used to provide the following computational tools for the canvas content:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 • Aromatize/De-aromatize Tool
 • Calculate CIP Descriptors Tool
@@ -97,7 +97,8 @@ Ketcher is supported and tested in the majority of the modern browsers:
 • Chrome
 
 Try Ketcher!
----------------
+------------
+
 Explore Ketcher on the `demo <https://lifescience.opensource.epam.com/ketcher/demo.html>`__ page. 
 
 Download
