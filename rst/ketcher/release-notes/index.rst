@@ -15,3 +15,4 @@ Contents:
     ketcher-2.3.0
     ketcher-2.4.0
     ketcher-2.5.0
+    ketcher-2.5.2

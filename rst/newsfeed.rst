@@ -7,6 +7,25 @@ News
     newsfeed
     release-notes/index
 
+Ketcher 2.5.2 released
+----------------------
+
+*17 August 2022*
+
+We are glad to announce that a new stable version of Ketcher 2.5.2 is released. 
+
+* |ketcher_2_5_2_notes|
+
+* |ketcher_2_5_2_downloads|
+
+.. |ketcher_2_5_2_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.5.1.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_5_2_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
 Ketcher 2.5.0 released
 ----------------------
 
