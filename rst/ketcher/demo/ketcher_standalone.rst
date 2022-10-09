@@ -1,13 +1,16 @@
 ﻿Ketcher 2.5 Standalone
 ======================
 
-.. raw:: html
-
-   <script type="text/javascript">
-   window.location.href = "/KetcherDemoSA/index.html"
-   </script>
-
 .. toctree::
    :hidden:
 
    ketcher_standalone.rst
+
+
+Ketcher demo page was moved. Please use the following link
+
+.. raw:: html
+
+   <a href="/KetcherDemoSA/index.html" target="_blank">Ketcher 2.5 Standalone</a> 
+
+
