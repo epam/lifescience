@@ -7,6 +7,25 @@ News
     newsfeed
     release-notes/index
 
+Ketcher 2.6.2 released
+----------------------
+
+*18 November 2022*
+
+We are glad to announce that a new stable version of Ketcher 2.6.2 is released. 
+
+* |ketcher_2_6_2_notes|
+
+* |ketcher_2_6_2_downloads|
+
+.. |ketcher_2_6_2_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.6.2.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_6_2_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
 Indigo 1.7.0 released
 ---------------------
 
@@ -25,6 +44,25 @@ We are happy to announce that a new version 1.7.0 of Indigo toolkit is released.
 .. |indigo_1_8_0_downloads| raw:: html
 
    <a href="download/indigo-1.8.0.html" target="_blank">Downloads</a>
+
+Ketcher 2.6.1 released
+----------------------
+
+*15 November 2022*
+
+We are glad to announce that a new stable version of Ketcher 2.6.1 is released. 
+
+* |ketcher_2_6_1_notes|
+
+* |ketcher_2_6_1_downloads|
+
+.. |ketcher_2_6_1_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.6.1.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_6_1_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
 
 Ketcher 2.6.0 released
 ----------------------
