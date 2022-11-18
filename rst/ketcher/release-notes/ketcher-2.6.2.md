@@ -1,3 +1,4 @@
+# Ketcher 2.6.2
 ## What's Changed
 Release 2.6.2 is live!
 In this release we have implemented some minor improvements for development process and fixed bugs.

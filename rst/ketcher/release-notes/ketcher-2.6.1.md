@@ -1,3 +1,4 @@
+# Ketcher 2.6.1
 ## What's Changed
 New version of Ketcher 2.6.1 was released!
 In this release we were focused on bug fixes and improvements of user experience.
