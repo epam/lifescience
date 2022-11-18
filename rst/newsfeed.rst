@@ -7,6 +7,25 @@ News
     newsfeed
     release-notes/index
 
+Indigo 1.7.0 released
+---------------------
+
+*17 Nov 2022*
+
+We are happy to announce that a new version 1.7.0 of Indigo toolkit is released.
+
+* |indigo_1_8_0_notes|
+
+* |indigo_1_8_0_downloads|
+
+.. |indigo_1_8_0_notes| raw:: html
+
+   <a href="indigo/release-notes/indigo-1.8.0.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_8_0_downloads| raw:: html
+
+   <a href="download/indigo-1.8.0.html" target="_blank">Downloads</a>
+
 Ketcher 2.6.1 released
 ----------------------
 
