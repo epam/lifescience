@@ -7,6 +7,25 @@ News
     newsfeed
     release-notes/index
 
+Indigo 1.8.2 released
+---------------------
+
+*28 November 2022*
+
+We are happy to announce that a new version 1.8.2 of Indigo toolkit is released.
+
+* |indigo_1_8_2_notes|
+
+* |indigo_1_8_2_downloads|
+
+.. |indigo_1_8_2_notes| raw:: html
+
+   <a href="indigo/release-notes/indigo-1.8.2.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_8_2_downloads| raw:: html
+
+   <a href="download/indigo-1.8.2.html" target="_blank">Downloads</a>
+
 Ketcher 2.6.2 released
 ----------------------
 
