@@ -1,6 +1,17 @@
 Download Ketcher
 ================
 
+Ketcher 2.6.4
+-------------
+
+`Ketcher 2.6.4 standalone <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-standalone-2.6.4.zip>`__
+
+`Ketcher 2.6.4 remote <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-remote-2.6.4.zip>`__
+
+`NPM package <https://www.npmjs.com/package/ketcher-react/v/2.6.4>`__
+
+`Source code on GitHub <https://github.com/epam/ketcher/releases/tag/v2.6.4>`__
+
 Ketcher 2.6.3
 -------------
 
@@ -141,4 +152,4 @@ Ketcher 1.0 Beta5
 Additional Services
 -------------------
 
-Visit `Ketcher SolutionsHub <https://solutionshub.epam.com/solution/ketcher>`__  if you need additional services or if you have any questions 
+Visit `Ketcher SolutionsHub <https://solutionshub.epam.com/solution/ketcher>`__  if you need additional services or if you have any questions
