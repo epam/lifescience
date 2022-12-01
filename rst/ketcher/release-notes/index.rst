@@ -19,3 +19,4 @@ Contents:
     ketcher-2.6.0
     ketcher-2.6.1
     ketcher-2.6.2
+    ketcher-2.6.3

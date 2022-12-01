@@ -7,6 +7,25 @@ News
     newsfeed
     release-notes/index
 
+Ketcher 2.6.3 released
+----------------------
+
+*29 November 2022*
+
+We are glad to announce that a new stable version of Ketcher 2.6.3 is released. 
+
+* |ketcher_2_6_3_notes|
+
+* |ketcher_2_6_3_downloads|
+
+.. |ketcher_2_6_3_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.6.3.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_6_3_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
 Indigo 1.8.2 released
 ---------------------
 
