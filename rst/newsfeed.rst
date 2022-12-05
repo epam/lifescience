@@ -7,12 +7,31 @@ News
     newsfeed
     release-notes/index
 
+Ketcher 2.6.4 released
+----------------------
+
+*1 December 2022*
+
+We are glad to announce that a new stable version of Ketcher 2.6.4 is released.
+
+* |ketcher_2_6_3_notes|
+
+* |ketcher_2_6_3_downloads|
+
+.. |ketcher_2_6_3_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.6.4.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_6_3_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
 Ketcher 2.6.3 released
 ----------------------
 
 *29 November 2022*
 
-We are glad to announce that a new stable version of Ketcher 2.6.3 is released. 
+We are glad to announce that a new stable version of Ketcher 2.6.3 is released.
 
 * |ketcher_2_6_3_notes|
 
@@ -50,7 +69,7 @@ Ketcher 2.6.2 released
 
 *18 November 2022*
 
-We are glad to announce that a new stable version of Ketcher 2.6.2 is released. 
+We are glad to announce that a new stable version of Ketcher 2.6.2 is released.
 
 * |ketcher_2_6_2_notes|
 
@@ -88,7 +107,7 @@ Ketcher 2.6.1 released
 
 *15 November 2022*
 
-We are glad to announce that a new stable version of Ketcher 2.6.1 is released. 
+We are glad to announce that a new stable version of Ketcher 2.6.1 is released.
 
 * |ketcher_2_6_1_notes|
 
@@ -107,7 +126,7 @@ Ketcher 2.6.0 released
 
 *4 November 2022*
 
-We are glad to announce that a new stable version of Ketcher 2.6.0 is released. 
+We are glad to announce that a new stable version of Ketcher 2.6.0 is released.
 
 * |ketcher_2_6_0_notes|
 
@@ -126,7 +145,7 @@ Ketcher 2.5.2 released
 
 *17 August 2022*
 
-We are glad to announce that a new stable version of Ketcher 2.5.2 is released. 
+We are glad to announce that a new stable version of Ketcher 2.5.2 is released.
 
 * |ketcher_2_5_2_notes|
 
@@ -145,7 +164,7 @@ Ketcher 2.5.0 released
 
 *30 May 2022*
 
-We are glad to announce that a new stable version of Ketcher 2.5.0 is released. 
+We are glad to announce that a new stable version of Ketcher 2.5.0 is released.
 
 * |ketcher_2_5_0_notes|
 
@@ -158,7 +177,7 @@ We are glad to announce that a new stable version of Ketcher 2.5.0 is released.
 .. |ketcher_2_5_0_downloads| raw:: html
 
    <a href="download/ketcher.html" target="_blank">Downloads</a>
-   
+
 
 Indigo 1.7.0 released
 ---------------------
@@ -185,7 +204,7 @@ Ketcher 2.4.0 released
 
 *30 Dec 2021*
 
-We are glad to announce that a new stable version of Ketcher 2.4.0 is released. 
+We are glad to announce that a new stable version of Ketcher 2.4.0 is released.
 
 * |ketcher_2_4_0_notes|
 
@@ -225,9 +244,9 @@ Indigo 1.5.0 released
 
 *31 Aug 2021*
 
-We are glad to announce that a new stable version of Indigo 1.5.0 was released. 
-Indigo chemistry API now can be distributed in web browsers by using WebAssembly builds. 
-Also new format was added to support modern web applications. 
+We are glad to announce that a new stable version of Indigo 1.5.0 was released.
+Indigo chemistry API now can be distributed in web browsers by using WebAssembly builds.
+Also new format was added to support modern web applications.
 Indigo Core parts and libraries were stabilized and improved.
 For more details please look at release notes.
 
@@ -249,7 +268,7 @@ Ketcher 2.3.0 released
 
 *22 Jul 2021*
 
-We are glad to announce that a new stable version of Ketcher 2.3.0 is released. 
+We are glad to announce that a new stable version of Ketcher 2.3.0 is released.
 The main features implemented in scope of this release are support of enhanced stereochemistry, ability to save structure as an image file, text tool, and support of multiple reaction arrows.
 For more details please look at release notes.
 
@@ -271,9 +290,9 @@ Ketcher 2.2.0 released
 
 *15 Apr 2021*
 
-We are glad to announce that a new stable version of Ketcher 2.2.0 is released. 
-The main goal of current release was adding support of standalone mode. 
-The list of changes related to this functionality can be found `here <https://github.com/epam/ketcher/milestone/3>`__. 
+We are glad to announce that a new stable version of Ketcher 2.2.0 is released.
+The main goal of current release was adding support of standalone mode.
+The list of changes related to this functionality can be found `here <https://github.com/epam/ketcher/milestone/3>`__.
 
 * |ketcher_2_2_0_notes|
 
@@ -374,7 +393,7 @@ Please find terms and conditions for the license at the |al_v2_license| . All th
 
    <a href="https://github.com/epam/Indigo/blob/master/LICENSE" target="_blank">Github page</a>
 
-   
+
 
 
 Miew recent updates
@@ -405,7 +424,7 @@ MRI Viewer has got new features
 
 *7 Feb 2019*
 
-Automatic segmentation methods support lungs data and brain separation from skull tissues. Semi-automatic methods can clear volumetric data, as well as separate the area of interest from the source volume using deformable 3D triangle mesh. Also MRI Viewer supports HDR files format now. 
+Automatic segmentation methods support lungs data and brain separation from skull tissues. Semi-automatic methods can clear volumetric data, as well as separate the area of interest from the source volume using deformable 3D triangle mesh. Also MRI Viewer supports HDR files format now.
 
 * |mri_app|
 
@@ -461,7 +480,7 @@ Ketcher 2.0.0 beta is released
 
 *29 Dec 2017*
 
-New Ketcher version was released. It includes lot of bugfixes and improvements 
+New Ketcher version was released. It includes lot of bugfixes and improvements
 
 * |ketcher_2_0_0_b_notes|
 
@@ -644,7 +663,7 @@ Indigo is available on GitHub
 
 *5 Nov 2015*
 
-Finally we moved our source code development on GitHub. 
+Finally we moved our source code development on GitHub.
 
 |indigo_1_2_x_github_url|
 
@@ -685,7 +704,7 @@ Indigo 1.2.1 released
 
 *30 April 2015*
 
-New Indigo stable version is available. It includes bugfixes and enhancements. 
+New Indigo stable version is available. It includes bugfixes and enhancements.
 
 * |indigo_1_2_1_notes|
 
