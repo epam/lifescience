@@ -26,6 +26,25 @@ We are happy to announce that a new version 1.9.0 of Indigo toolkit is released.
 
    <a href="download/indigo-1.9.0.html" target="_blank">Downloads</a>
 
+Ketcher 2.7.0 released
+----------------------
+
+*31 January 2023*
+
+We are glad to announce that a new stable version of Ketcher 2.7.0 is released.
+
+* |ketcher_2_7_0_notes|
+
+* |ketcher_2_7_0_downloads|
+
+.. |ketcher_2_7_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.7.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_7_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
 Ketcher 2.6.4 released
 ----------------------
 
