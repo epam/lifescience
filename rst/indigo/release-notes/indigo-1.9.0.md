@@ -5,6 +5,8 @@
 ## Features
 * Add support of R-groups to the CDX loader. by @even1024 [#36](https://github.com/epam/Indigo/issues/36)
 * cdx import in scope of current KET/CDXML features support by @even1024 [#885](https://github.com/epam/Indigo/issues/885)
+* core: replace MultiMap in MoleculeRGroupsComposition class by @loimu [#521](https://github.com/epam/Indigo/issues/521)
+* core: replace MultiMap in MolfileLoader class by @loimu [#521](https://github.com/epam/Indigo/issues/521)
 
 ## Bugfixes
 * MDL Molfile v3000 encoding: Automatic selection of MDL Molfile v3000 encoding doesn't work if the structure contains Enhanced stereochemistry by @mkviatkovskii [#924](https://github.com/epam/Indigo/issues/924)
@@ -23,3 +25,6 @@
 * CDXML import: nodes with radicals are not getting parsed by @even1024 [#990](https://github.com/epam/Indigo/issues/990)
 * CDXML import: fails to import some cdxml files with multiple text objects related to different fragments by @even1024 [#992](https://github.com/epam/Indigo/issues/992)
 * CDXML import: 'superscript' and 'subscript' is not displayed correctly [#962](https://github.com/epam/Indigo/issues/962)
+* Improve ssl bingo elastic by @MysterionRise [#863](https://github.com/epam/Indigo/issues/863)
+* bingo: postgres: add support for Postgres 15, drop support for Postgres 10 by @mkviatkovskii
+* fix auto-saving to CTAB v3000 by @mkviatkovskii [#929](https://github.com/epam/Indigo/issues/929)
