@@ -9,19 +9,20 @@
     bingo-postgres
     bingo-sqlserver
     bingo-nosql
+    bingo-elastic
     Downloads <../download/bingo>
 
 Overview
 --------
 
-Bingo is a RDBMS data cartridge that provides the industry’s
+Bingo is a data cartridge that provides the industry’s
 next-generation, fast, scalable, and efficient storage and searching
 solution for chemical information.
 
 Bingo seamlessly integrates the chemistry into Oracle, Microsoft SQL
-Server and PostgreSQL databases. Its extensible indexing is designed to
-enable scientists to store, index, and search chemical moieties
-alongside numbers and text within one underlying relational database
+Server, PostgreSQL databases and Elastic-based NoSQL storages. Its extensible
+indexing is designed to enable scientists to store, index, and search
+chemical moieties alongside numbers and text within one underlying database
 server.
 
 Bingo sets the industry standard in structure and reaction registration

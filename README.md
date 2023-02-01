@@ -1,8 +1,8 @@
-# Lifesciences Open Source portal documentation
+# Lifescience Open Source portal documentation
 
 ## Overview
 
-The repository contains sources for the EPAM Lifeciences Open Source portal.
+The repository contains sources for the EPAM Lifescience Open Source portal.
 
 https://lifescience.opensource.epam.com
 
@@ -21,5 +21,5 @@ and then run:
     make html
 
 
-Optionaly you could also install the [livereload](https://livereload.readthedocs.org/en/latest/) package, run
+Optionally you could also install the [livereload](https://livereload.readthedocs.org/en/latest/) package, run
 `python watch.py` and see how the documentation recompiles/updates as you modify sources.
