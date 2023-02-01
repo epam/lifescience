@@ -7,6 +7,26 @@ News
     newsfeed
     release-notes/index
 
+Ketcher 2.7.1 released
+----------------------
+
+*31 January 2023*
+
+We are glad to announce that a new stable version of Ketcher 2.7.1 is released.
+
+* |ketcher_2_7_1_notes|
+
+* |ketcher_2_7_1_downloads|
+
+.. |ketcher_2_7_1_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.7.1.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_7_1_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
+
 Indigo 1.9.0 released
 ---------------------
 
