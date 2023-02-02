@@ -1,8 +1,8 @@
-# Lifescience Open Source portal documentation
+# Lifesciences Open Source portal documentation
 
 ## Overview
 
-The repository contains sources for the EPAM Lifescience Open Source portal.
+The repository contains sources for the EPAM Lifesciences Open Source portal.
 
 https://lifescience.opensource.epam.com
 
