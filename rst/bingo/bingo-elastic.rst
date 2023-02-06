@@ -1,9 +1,9 @@
-***********
+*************
 Bingo Elastic
-***********
+*************
 
 Overview
-========
+--------
 
 Bingo Elastic is a set of APIs available in Java and Python for efficient chemistry search in Elasticsearch-based engines. It provides methods for storing chemical information and searching through it. With this API you can create indices, read SDF and mol files, index them and later use different types of searches such as substructure, exact, similarity.
 
@@ -24,7 +24,7 @@ Scalability
 Bingo Elastic relies on scalability options of Elastic-based engines such as including additional nodes to the cluster and increasing number of shards and replicas to cope with additional load
 
 Python API
------------
+----------
 
 Installation
 ~~~~~~~~~~~~
@@ -283,7 +283,7 @@ You could also use similarly wildcard and range queries
 
 
 Java API
------------
+--------
 
 Installation
 ~~~~~~~~~~~~
