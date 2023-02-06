@@ -28,15 +28,15 @@ Explore the installation & integration information in our `repository <https://g
 
 Provide your comments and suggestions and get timely replies from the developers’ team.
 
-Other products & 3-rd party code
---------------------------------
+Other products and 3-rd party code
+----------------------------------
 
 Ketcher uses `Indigo Service <https://lifescience.opensource.epam.com/indigo/service/index.html>`__ for computationally intensive procedures.  
 
 Ketcher leverages `Raphael <http://raphaeljs.com/>`_ framework to support objects rendering and representation on the canvas.
 
-Standalone & Remote modes
--------------------------
+Standalone and Remote modes
+---------------------------
 
 Ketcher is provided in 2 modes: *Standalone* and *Remote*. 
 
