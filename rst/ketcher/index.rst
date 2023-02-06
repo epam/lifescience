@@ -26,12 +26,12 @@ Ketcher is completely free and open-source, while also available on a commercial
 You can easily integrate Ketcher into your web application. Ketcher is actively developed and improved by the dedicated team. 
 Explore the installation & integration information in our `repository <https://github.com/epam/ketcher#ketcher--->`__.
 
-Provide your comments and suggestions and get timely replies from the developers’ team.
+Provide your comments and suggestions and get timely replies from the developers' team.
 
 Other products and 3-rd party code
 ----------------------------------
 
-Ketcher uses `Indigo Service <https://lifescience.opensource.epam.com/indigo/service/index.html>`__ for computationally intensive procedures.  
+Ketcher uses `Indigo Service <https://lifescience.opensource.epam.com/indigo/service/index.html>`__ for computationally intensive procedures.
 
 Ketcher leverages `Raphael <http://raphaeljs.com/>`_ framework to support objects rendering and representation on the canvas.
 
@@ -49,10 +49,10 @@ Main features
 
 **Fast and convenient editing.** We strive to make Ketcher as easy to use and as fast as the state-of-the-art desktop structure editing tools. Here are some highlights:
 
-- Lasso     and Rectangle selection tools, plus a special Fragment selection tool to     deal with connected components, rather than single atoms/bonds.
-- A     variety of `hotkeys <https://lifescience.opensource.epam.com/ketcher/editing-tips.html#hotkeys>`_
+- Lasso and Rectangle selection tools, plus a special Fragment selection tool to deal with connected components, rather than single atoms/bonds.
+- A variety of `hotkeys <https://lifescience.opensource.epam.com/ketcher/editing-tips.html#hotkeys>`_
 - Undo/Redo.
-- Copy/Paste     for the canvas objects
+- Copy/Paste for the canvas objects
 
 **Atoms & Bonds**. Ketcher supports basic properties and query features, adding aliases and Generic group usage.
 
