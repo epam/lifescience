@@ -4,6 +4,7 @@
 
 ## Features
 * [#941](https://github.com/epam/Indigo/issues/941) CDX export
+* PostgreSQL 14 and 15 support
 
 ## Bugfixes
 * [#1003](https://github.com/epam/Indigo/issues/1003) Some texts are not rendered and may lead to Indigo crash
