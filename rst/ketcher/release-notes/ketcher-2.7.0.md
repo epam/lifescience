@@ -1,3 +1,4 @@
+# Ketcher 2.7.0
 ## What's Changed
 
 Release 2.7.0 is now available.

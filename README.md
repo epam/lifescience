@@ -10,6 +10,10 @@ https://lifescience.opensource.epam.com
 
     U=$UID docker-compose up
 
+## Build using epmlsop builder
+
+    sh build.sh
+
 ## Build instructions
 
 To compile site install [Sphinx](http://sphinx-doc.org/)
