@@ -5,4 +5,5 @@ docker run --rm  -v $(pwd)/:/opt epmlsop/lifescience-build:$IMAGE_TAG bash -c "c
 if [ -s "err.txt" ]; then
     echo "::error file=err.txt::Errors while building portal"
     cat err.txt
+    exit 1
 fi
