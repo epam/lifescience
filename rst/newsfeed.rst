@@ -8,7 +8,7 @@ News
     release-notes/index
 
 Indigo 1.10.0 released
----------------------
+----------------------
 
 *22 March 2023*
 
