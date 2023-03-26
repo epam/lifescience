@@ -26,3 +26,8 @@ Older releases
 
     bingo/bingo-1.8.0beta.rst
     bingo/bingo-1.7.9.rst
+
+Additional Services
+-------------------
+
+Visit `Bingo SolutionsHub <https://solutionshub.epam.com/solution/bingo>`__  if you need additional services or if you have any questions 

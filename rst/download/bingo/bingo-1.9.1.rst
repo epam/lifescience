@@ -40,12 +40,6 @@ The changelog is available `on this page <../bingo/changelog.html>`__
 `Source code on GitHub <http://github.com/epam/indigo>`__
 
 
-Additional Services
--------------------
-
-Visit `Bingo SolutionsHub <https://solutionshub.epam.com/solution/bingo>`__  if you need additional services or if you have any questions 
-
-
 .. |image0| image:: ../assets/Linux.png
 .. |image1| image:: ../assets/Windows.png
 .. |image2| image:: ../assets/AppleSZ.png
