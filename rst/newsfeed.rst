@@ -91,15 +91,15 @@ Ketcher 2.6.4 released
 
 We are glad to announce that a new stable version of Ketcher 2.6.4 is released.
 
-* |ketcher_2_6_3_notes|
+* |ketcher_2_6_4_notes|
 
-* |ketcher_2_6_3_downloads|
+* |ketcher_2_6_4_downloads|
 
-.. |ketcher_2_6_3_notes| raw:: html
+.. |ketcher_2_6_4_notes| raw:: html
 
    <a href="ketcher/release-notes/ketcher-2.6.4.html" target="_blank">Release Notes</a>
 
-.. |ketcher_2_6_3_downloads| raw:: html
+.. |ketcher_2_6_4_downloads| raw:: html
 
    <a href="download/ketcher.html" target="_blank">Downloads</a>
 
