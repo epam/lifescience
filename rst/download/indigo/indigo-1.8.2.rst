@@ -3,7 +3,7 @@
   :hidden:
   :includehidden:
 
-  ../indigo/release-notes/index.rst
+  ../../indigo/release-notes/index.rst
 
 
 Indigo 1.8.2

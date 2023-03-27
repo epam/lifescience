@@ -3,13 +3,13 @@
   :hidden:
   :includehidden:
 
-  ../indigo/release-notes/index.rst
+  ../../indigo/release-notes/index.rst
 
 
 Indigo 1.5.0
 ------------
 
-Changelog available `here <../indigo/release-notes/indigo-1.5.0.html>`__
+Changelog available `here <../../indigo/release-notes/indigo-1.5.0.html>`__
 
 
 Language Bindings

@@ -3,13 +3,13 @@
   :hidden:
   :includehidden:
 
-  ../indigo/release-notes/index.rst
+  ../../indigo/release-notes/index.rst
 
 
 Indigo 1.3.0 beta
 -----------------
 
-Changelog available `here <../indigo/release-notes/1.3.x/indigo-1.3.0b.html>`__
+Changelog available `here <../../indigo/release-notes/1.3.x/indigo-1.3.0b.html>`__
 
 
 Language Bindings
@@ -59,20 +59,20 @@ Utilities
      - |image1| Windows
      - |image2| Mac OS
      - Universal
-   * - `Cano <../indigo/indigo-cano.html>`__, `Deco <../indigo/indigo-deco.html>`__ and `Depict <../indigo/indigo-depict.html>`__
+   * - `Cano <../../indigo/indigo-cano.html>`__, `Deco <../../indigo/indigo-deco.html>`__ and `Depict <../../indigo/indigo-depict.html>`__
      - `32bit <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-linux32.zip>`__,
        `64bit <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-linux64.zip>`__
      - `32bit <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-win32.zip>`__,
        `64bit <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-win64.zip>`__
      - `mac10.7.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/indigo-utils-1.3.0beta.r16-mac10.7.zip>`__
      - \-
-   * - `ChemDiff <../indigo/chemdiff.html>`__
+   * - `ChemDiff <../../indigo/chemdiff.html>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-linux.zip>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-win.zip>`__,
        `installer <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-win-installer.exe>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-mac.zip>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/chemdiff-1.3.0beta.r16-universal.zip>`__
-   * - `Legio <../indigo/legio.html>`__
+   * - `Legio <../../indigo/legio.html>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-linux.zip>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-win.zip>`__,
        `installer <https://lifescience.opensource.epam.com/downloads/indigo-1.3.0beta.r16/legio-1.3.0beta.r16-win-installer.exe>`__
