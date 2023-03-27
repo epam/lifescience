@@ -4,6 +4,7 @@
 
 ## Features
 * [#941](https://github.com/epam/Indigo/issues/941) CDX export
+* PostgreSQL 14 and 15 support
 
 ## Bugfixes
 * [#1003](https://github.com/epam/Indigo/issues/1003) Some texts are not rendered and may lead to Indigo crash
@@ -16,4 +17,4 @@
 * [#1063](https://github.com/epam/Indigo/issues/1063) Structure saved in CDX and Base64CDX with reaction arrow cannot be opened 
 * [#1068](https://github.com/epam/Indigo/issues/1068) CDX-loader crash 
 
-**Full Changelog**:https://github.com/epam/Indigo/compare/release/1.9...release/1.10
+**Full Changelog**: [View on GitHub](https://github.com/epam/Indigo/compare/release/1.9...release/1.10)

@@ -7,16 +7,18 @@ News
     newsfeed
     release-notes/index
 
-Indigo 1.10.0 released
-----------------------
+Indigo and Bingo 1.10.0 released
+--------------------------------
 
 *22 March 2023*
 
-We are happy to announce that a new version 1.10.0 of Indigo toolkit is released.
+We are happy to announce that a new version 1.10.0 of Indigo toolkit and Bingo is released.
 
 * |indigo_1_10_0_notes|
 
 * |indigo_1_10_0_downloads|
+
+* |bingo_1_10_0_downloads|
 
 .. |indigo_1_10_0_notes| raw:: html
 
@@ -24,7 +26,11 @@ We are happy to announce that a new version 1.10.0 of Indigo toolkit is released
 
 .. |indigo_1_10_0_downloads| raw:: html
 
-   <a href="download/indigo-1.10.0.html" target="_blank">Downloads</a>
+   <a href="download/indigo/indigo-1.10.0.html" target="_blank">Indigo Downloads</a>
+
+.. |bingo_1_10_0_downloads| raw:: html
+
+   <a href="download/bingo/bingo-1.10.0.html" target="_blank">Bingo Downloads</a>
 
 Ketcher 2.7.2 released
 ----------------------
@@ -82,7 +88,7 @@ We are happy to announce that a new version 1.9.0 of Indigo toolkit is released.
 
 .. |indigo_1_9_0_downloads| raw:: html
 
-   <a href="download/indigo-1.9.0.html" target="_blank">Downloads</a>
+   <a href="download/indigo/indigo-1.9.0.html" target="_blank">Downloads</a>
 
 Ketcher 2.7.0 released
 ----------------------
@@ -158,7 +164,7 @@ We are happy to announce that a new version 1.8.2 of Indigo toolkit is released.
 
 .. |indigo_1_8_2_downloads| raw:: html
 
-   <a href="download/indigo-1.8.2.html" target="_blank">Downloads</a>
+   <a href="download/indigo/indigo-1.8.2.html" target="_blank">Downloads</a>
 
 Ketcher 2.6.2 released
 ----------------------
@@ -196,7 +202,7 @@ We are happy to announce that a new version 1.8.0 of Indigo toolkit is released.
 
 .. |indigo_1_8_0_downloads| raw:: html
 
-   <a href="download/indigo-1.8.0.html" target="_blank">Downloads</a>
+   <a href="download/indigo/indigo-1.8.0.html" target="_blank">Downloads</a>
 
 Ketcher 2.6.1 released
 ----------------------
@@ -292,7 +298,7 @@ We are happy to announce that a new version 1.7.0 of Indigo toolkit is released.
 
 .. |indigo_1_7_0_downloads| raw:: html
 
-   <a href="download/indigo-1.7.0.html" target="_blank">Downloads</a>
+   <a href="download/indigo/indigo-1.7.0.html" target="_blank">Downloads</a>
 
 
 Ketcher 2.4.0 released
@@ -332,7 +338,7 @@ We are happy to announce that a new version 1.6.1 of Indigo toolkit is released.
 
 .. |indigo_1_6_1_downloads| raw:: html
 
-   <a href="download/indigo-1.6.1.html" target="_blank">Downloads</a>
+   <a href="download/indigo/indigo-1.6.1.html" target="_blank">Downloads</a>
 
 
 Indigo 1.5.0 released
@@ -663,7 +669,7 @@ New Indigo version was released.
 
 .. |indigo_1_3_0b_downloads| raw:: html
 
-   <a href="download/indigo-1.3.0-beta.html" target="_blank">Downloads</a>
+   <a href="download/indigo/indigo-1.3.0-beta.html" target="_blank">Downloads</a>
 
 
 Indigo 1.2.3 released

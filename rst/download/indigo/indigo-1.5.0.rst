@@ -3,13 +3,13 @@
   :hidden:
   :includehidden:
 
-  ../indigo/release-notes/index.rst
+  ../../indigo/release-notes/index.rst
 
 
 Indigo 1.5.0
 ------------
 
-Changelog available `here <../indigo/release-notes/indigo-1.5.0.html>`__
+Changelog available `here <../../indigo/release-notes/indigo-1.5.0.html>`__
 
 
 Language Bindings
@@ -80,12 +80,12 @@ One can install the Indigo library using *pip* utility
     pip install epam.indigo
 
 
-.. |image0| image:: ../assets/Linux.png
-.. |image1| image:: ../assets/Windows.png
-.. |image2| image:: ../assets/AppleSZ.png
-.. |image3| image:: ../assets/globe.png
-.. |p-icon| image:: ../assets/indigo/python-icon.png
-.. |j-icon| image:: ../assets/indigo/java-icon.png
-.. |c-icon| image:: ../assets/indigo/csharp-icon.png
-.. |n-icon| image:: ../assets/indigo/native-icon.png
+.. |image0| image:: ../../assets/Linux.png
+.. |image1| image:: ../../assets/Windows.png
+.. |image2| image:: ../../assets/AppleSZ.png
+.. |image3| image:: ../../assets/globe.png
+.. |p-icon| image:: ../../assets/indigo/python-icon.png
+.. |j-icon| image:: ../../assets/indigo/java-icon.png
+.. |c-icon| image:: ../../assets/indigo/csharp-icon.png
+.. |n-icon| image:: ../../assets/indigo/native-icon.png
 

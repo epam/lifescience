@@ -3,13 +3,13 @@
   :hidden:
   :includehidden:
 
-  ../indigo/release-notes/index.rst
+  ../../indigo/release-notes/index.rst
 
 
 Indigo 1.2.3
 ------------
 
-Changelog available `here <../indigo/release-notes/1.2.x/indigo-1.2.3.html>`__
+Changelog available `here <../../indigo/release-notes/1.2.x/indigo-1.2.3.html>`__
 
 
 Language Bindings
@@ -59,20 +59,20 @@ Utilities
      - |image1| Windows
      - |image2| Mac OS
      - Universal
-   * - `Cano <../indigo/indigo-cano.html>`__, `Deco <../indigo/indigo-deco.html>`__ and `Depict <../indigo/indigo-depict.html>`__
+   * - `Cano <../../indigo/indigo-cano.html>`__, `Deco <../../indigo/indigo-deco.html>`__ and `Depict <../../indigo/indigo-depict.html>`__
      - `32bit <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-linux32.zip>`__,
        `64bit <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-linux64.zip>`__
      - `32bit <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-win32.zip>`__,
        `64bit <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-win64.zip>`__
      - `mac10.7.zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/indigo-utils-1.2.3.r6-mac10.7.zip>`__
      - \-
-   * - `ChemDiff <../indigo/chemdiff.html>`__
+   * - `ChemDiff <../../indigo/chemdiff.html>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-linux.zip>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-win.zip>`__,
        `installer <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-win-installer.exe>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-mac.zip>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/chemdiff-1.2.3.r6-universal.zip>`__
-   * - `Legio <../indigo/legio.html>`__
+   * - `Legio <../../indigo/legio.html>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/legio-1.2.3.r6-linux.zip>`__
      - `zip <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/legio-1.2.3.r6-win.zip>`__,
        `installer <https://lifescience.opensource.epam.com/downloads/indigo-1.2.3/legio-1.2.3.r6-win-installer.exe>`__
@@ -129,12 +129,12 @@ Just add ``Indigo.Net`` as a dependency into the project.
 **Note**: if you upgrade your existing Indigo.Net package please note that the package path was changed to ``com.epam.indigo.*``
 
 
-.. |image0| image:: ../assets/Linux.png
-.. |image1| image:: ../assets/Windows.png
-.. |image2| image:: ../assets/AppleSZ.png
-.. |image3| image:: ../assets/globe.png
-.. |p-icon| image:: ../assets/indigo/python-icon.png
-.. |j-icon| image:: ../assets/indigo/java-icon.png
-.. |c-icon| image:: ../assets/indigo/csharp-icon.png
-.. |n-icon| image:: ../assets/indigo/native-icon.png
+.. |image0| image:: ../../assets/Linux.png
+.. |image1| image:: ../../assets/Windows.png
+.. |image2| image:: ../../assets/AppleSZ.png
+.. |image3| image:: ../../assets/globe.png
+.. |p-icon| image:: ../../assets/indigo/python-icon.png
+.. |j-icon| image:: ../../assets/indigo/java-icon.png
+.. |c-icon| image:: ../../assets/indigo/csharp-icon.png
+.. |n-icon| image:: ../../assets/indigo/native-icon.png
 
