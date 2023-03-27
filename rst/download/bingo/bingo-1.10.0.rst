@@ -1,7 +1,7 @@
 Bingo 1.10.0
 ------------
 
-The changelog is available `on this page <../bingo/changelog.html>`__
+The changelog is available `on this page <../../indigo/release-notes/indigo-1.10.0.html>`__
 
 .. list-table:: 
    :header-rows: 1
