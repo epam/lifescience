@@ -40,6 +40,6 @@ The changelog is available `on this page <../bingo/changelog.html>`__
 `Source code on GitHub <http://github.com/epam/indigo>`__
 
 
-.. |image0| image:: ../assets/Linux.png
-.. |image1| image:: ../assets/Windows.png
-.. |image2| image:: ../assets/AppleSZ.png
+.. |image0| image:: ../../assets/Linux.png
+.. |image1| image:: ../../assets/Windows.png
+.. |image2| image:: ../../assets/AppleSZ.png

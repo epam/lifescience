@@ -119,12 +119,12 @@ Just add ``Indigo.Net`` as a dependency into the project.
 
 
 
-.. |image0| image:: ../assets/Linux.png
-.. |image1| image:: ../assets/Windows.png
-.. |image2| image:: ../assets/AppleSZ.png
-.. |image3| image:: ../assets/globe.png
-.. |p-icon| image:: ../assets/indigo/python-icon.png
-.. |j-icon| image:: ../assets/indigo/java-icon.png
-.. |c-icon| image:: ../assets/indigo/csharp-icon.png
-.. |n-icon| image:: ../assets/indigo/native-icon.png
+.. |image0| image:: ../../assets/Linux.png
+.. |image1| image:: ../../assets/Windows.png
+.. |image2| image:: ../../assets/AppleSZ.png
+.. |image3| image:: ../../assets/globe.png
+.. |p-icon| image:: ../../assets/indigo/python-icon.png
+.. |j-icon| image:: ../../assets/indigo/java-icon.png
+.. |c-icon| image:: ../../assets/indigo/csharp-icon.png
+.. |n-icon| image:: ../../assets/indigo/native-icon.png
 
