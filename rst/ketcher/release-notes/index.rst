@@ -24,3 +24,5 @@ Contents:
     ketcher-2.7.0
     ketcher-2.7.1
     ketcher-2.7.2
+    ketcher-2.8.0
+    ketcher-2.9.0
