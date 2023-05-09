@@ -7,18 +7,6 @@ News
     newsfeed
     release-notes/index
     
-MRI Viewer 2.2.0 released
---------------------------------
-
-*27 April 2023*
-
-We would like to introduce a major release of MRI Viewer with fabulous new UI.
-
-* |MRI_Viewer_2_0_0_notes|
-
-.. |MRI_Viewer_2_0_0_notes| raw:: html
-
-   <a href="https://github.com/epam/mriviewer/releases/tag/v2.0.0" target="_blank">Release Notes</a>
 
 Ketcher 2.9.0 released
 ----------------------
@@ -38,6 +26,21 @@ We are glad to announce that a new stable version of Ketcher 2.9.0 is released.
 .. |ketcher_2_9_0_downloads| raw:: html
 
    <a href="download/ketcher.html" target="_blank">Downloads</a>
+
+
+MRI Viewer 2.2.0 released
+-------------------------
+
+*27 April 2023*
+
+We would like to introduce a major release of MRI Viewer with fabulous new UI.
+
+* |MRI_Viewer_2_0_0_notes|
+
+.. |MRI_Viewer_2_0_0_notes| raw:: html
+
+   <a href="https://github.com/epam/mriviewer/releases/tag/v2.0.0" target="_blank">Release Notes</a>
+
 
 Ketcher 2.8.0 released
 ----------------------
