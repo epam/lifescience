@@ -28,7 +28,7 @@ We are glad to announce that a new stable version of Ketcher 2.9.0 is released.
    <a href="download/ketcher.html" target="_blank">Downloads</a>
 
 
-MRI Viewer 2.2.0 released
+MRI Viewer 2.0.0 released
 -------------------------
 
 *27 April 2023*
