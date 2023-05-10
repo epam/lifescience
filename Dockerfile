@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM public.ecr.aws/debian/debian:bullseye
 
 ENV DEBIAN_FRONTEND noninteractive
 
