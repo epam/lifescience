@@ -10,7 +10,7 @@ Remote version uses  `Indigo Service <../indigo/service/index.html>`__ as a back
 
 .. |ketcher_remote_url| raw:: html
 
-   <a href="/KetcherDemo/index.html?api_path=/v2" target="_blank">Ketcher 2.6 Remote</a>    
+   <a href="/KetcherDemo/index.html?api_path=/v2" target="_blank">Ketcher Remote Latest</a>    
 
 Standalone
 ----------
@@ -21,7 +21,7 @@ Starting from version 2.2 Ketcher supports standalone mode. Ketcher can be run a
 
 .. |ketcher_standalone_url| raw:: html
 
-   <a href="/KetcherDemoSA/index.html" target="_blank">Ketcher 2.6 Standalone</a>    
+   <a href="/KetcherDemoSA/index.html" target="_blank">Ketcher Standalone Lastest</a>    
 
 
 
