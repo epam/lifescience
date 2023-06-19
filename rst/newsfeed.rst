@@ -7,6 +7,31 @@ News
     newsfeed
     release-notes/index
     
+Indigo and Bingo 1.11.0 released
+--------------------------------
+
+*19 June 2023*
+
+We are happy to announce that a new version 1.11.0 of Indigo toolkit and Bingo is released.
+
+* |indigo_1_11_0_notes|
+
+* |indigo_1_11_0_downloads|
+
+* |bingo_1_11_0_downloads|
+
+.. |indigo_1_11_0_notes| raw:: html
+
+   <a href="indigo/release-notes/indigo-1.11.0.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_11_0_downloads| raw:: html
+
+   <a href="download/indigo/indigo-1.11.0.html" target="_blank">Indigo Downloads</a>
+
+.. |bingo_1_10_0_downloads| raw:: html
+
+   <a href="download/bingo/bingo-1.11.0.html" target="_blank">Bingo Downloads</a>
+
 Ketcher 2.10.0 released
 -----------------------
 
