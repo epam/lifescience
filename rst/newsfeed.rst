@@ -28,7 +28,7 @@ We are happy to announce that a new version 1.11.0 of Indigo toolkit and Bingo i
 
    <a href="download/indigo/indigo-1.11.0.html" target="_blank">Indigo Downloads</a>
 
-.. |bingo_1_10_0_downloads| raw:: html
+.. |bingo_1_11_0_downloads| raw:: html
 
    <a href="download/bingo/bingo-1.11.0.html" target="_blank">Bingo Downloads</a>
 
