@@ -10,7 +10,7 @@ News
 Indigo and Bingo 1.12.0 released
 --------------------------------
 
-*9 July 2023*
+*10 July 2023*
 
 We are happy to announce that a new version 1.12.0 of Indigo toolkit and Bingo is released.
 
