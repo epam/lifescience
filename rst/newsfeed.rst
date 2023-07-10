@@ -7,6 +7,25 @@ News
     newsfeed
     release-notes/index
     
+Ketcher 2.11.0 released
+-----------------------
+
+*10 July 2023*
+
+We are glad to announce that a new stable version of Ketcher 2.11.0 is released.
+
+* |ketcher_2_11_0_notes|
+
+* |ketcher_2_11_0_downloads|
+
+.. |ketcher_2_11_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.11.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_11_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
 Indigo and Bingo 1.11.0 released
 --------------------------------
 
