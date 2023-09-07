@@ -13,8 +13,8 @@ thus being compatible with the most popular module loading schemes:
 
 Please note that Miew doesn't work under
 `Node.js <https://nodejs.org/>`__ directly since the major viewer
-requirement is WebGL rendering. However, it still can be installed via
-`NPM <https://www.npmjs.com/>`__ and ``require``-ed in your browserify
+requirement is WebGL rendering. However, you still can install it via
+`NPM <https://www.npmjs.com/>`__ and ``require`` it in your browserify
 or webpack-based projects.
 
 Browser Globals
@@ -30,20 +30,19 @@ Browser Globals
       <meta charset="UTF-8">
       <title>Miew via Global</title>
       
-      <link rel="stylesheet" href="Miew.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
-      <script src="Miew.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/miew@0.9.0/dist/Miew.min.css">
+      <script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>
+      <script src="https://unpkg.com/lodash@4.17.15/lodash.js"></script>
+      <script src="https://unpkg.com/three@0.112.1/build/three.min.js"></script>
+      <script src="https://unpkg.com/miew@0.9.0/dist/Miew.min.js"></script>
     </head>
     <body>
+      <h1>Use Miew via browser globals</h1>
       <div class="miew-container" style="width:640px; height:480px"></div>
 
       <script>
         (function() {
-          var viewer = new Miew({
-            container: document.getElementsByClassName('miew-container')[0],
-            load: '1CRN',
-          });
-
+          var viewer = new Miew({ load: '1CRN' });
           if (viewer.init()) {
             viewer.run();
           }
@@ -65,20 +64,23 @@ Require.js Module
       <meta charset="UTF-8">
       <title>Miew via Require.js</title>
 
-      <link rel="stylesheet" href="Miew.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/miew@0.9.0/dist/Miew.min.css">
+      <script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     </head>
     <body>
+      <h1>Use Miew via Require.js</h1>
       <div class="miew-container" style="width:640px; height:480px"></div>
 
       <script>
-        require(['Miew.min'], function(Miew) {
-          var viewer = new Miew({
-            container: document.getElementsByClassName('miew-container')[0],
-            load: '1CRN',
-          });
-
+        require.config({
+          paths: {
+            'lodash': 'https://unpkg.com/lodash@^4.17.15/lodash',
+            'three': 'https://unpkg.com/three@0.112.0/build/three.min',
+          }
+        });
+        require(['https://unpkg.com/miew@0.9.0/dist/Miew.min.js'], function(Miew) {
+          var viewer = new Miew({ load: '1CRN' });
           if (viewer.init()) {
             viewer.run();
           }
@@ -87,8 +89,8 @@ Require.js Module
     </body>
     </html>
 
-Node.js
--------
+Node.js Limited Support
+-----------------------
 
 *index.js*
 
@@ -96,6 +98,16 @@ Node.js
 
     var Miew = require('miew');
     console.log(Miew.VERSION);
+
+*package.json*
+
+.. code-block:: json
+
+    {
+      "dependencies": {
+        "miew": "0.9.0"
+      }
+    }
 
 Browserify
 ----------
@@ -110,11 +122,12 @@ Browserify
       <meta charset="UTF-8">
       <title>Miew via Browserify</title>
 
-      <link rel="stylesheet" href="Miew.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/miew@0.9.0/dist/Miew.min.css">
+      <script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>
       <script src="bundle.js"></script>
     </head>
     <body>
+      <h1>Use Miew via Browserify</h1>
       <div class="miew-container" style="width:640px; height:480px"></div>
     </body>
     </html>
@@ -125,16 +138,22 @@ Browserify
 
     var Miew = require('miew');
 
-    window.onload = function() {
-      var viewer = new Miew({
-        container: document.getElementsByClassName('miew-container')[0],
-        load: '1CRN',
-      });
-
+    window.onload = function () {
+      var viewer = new Miew({ load: '1CRN' });
       if (viewer.init()) {
         viewer.run();
       }
     };
+
+*package.json*
+
+.. code-block:: json
+
+    {
+      "dependencies": {
+        "miew": "0.9.0"
+      }
+    }
 
 Webpack
 -------
@@ -149,10 +168,11 @@ Webpack
       <meta charset="UTF-8">
       <title>Miew via Webpack</title>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
-      <script src="bundle.js"></script>
+      <script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>
+      <script src="dist/main.js"></script>
     </head>
     <body>
+      <h1>Use Miew via Webpack</h1>
       <div class="miew-container" style="width:640px; height:480px"></div>
     </body>
     </html>
@@ -161,20 +181,21 @@ Webpack
 
 .. code-block:: js
 
-    require('Miew.min.css');
+    import Miew from 'miew';
+    import './index.css';
 
-    var Miew = require('miew');
-
-    window.onload = function() {
-      var viewer = new Miew({
-        container: document.getElementsByClassName('miew-container')[0],
-        load: '1CRN',
-      });
-
+    window.onload = function () {
+      var viewer = new Miew({ load: '1CRN' });
       if (viewer.init()) {
         viewer.run();
       }
     };
+
+*index.css*
+
+.. code-block:: css
+
+    @import "miew";
 
 *webpack.config.js*
 
@@ -182,9 +203,6 @@ Webpack
 
     module.exports = {
       entry: './index.js',
-      output: {
-        filename: 'bundle.js'
-      },
       module: {
         rules: [{
           test: /\.css$/,
@@ -192,3 +210,17 @@ Webpack
         }],
       },
     };
+
+*package.json*
+
+.. code-block:: json
+
+    {
+      "dependencies": {
+        "css-loader": "6.8.1",
+        "miew": "0.9.0",
+        "style-loader": "3.3.3",
+        "webpack": "5.88.2",
+        "webpack-cli": "5.1.4"
+      }
+    }
