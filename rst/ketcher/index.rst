@@ -112,8 +112,6 @@ implementation.
 License
 -------
 
-Copyright © 2010-2022 LifeSciences unit of EPAM Systems, Inc.
-
 Ketcher version 1.0 was released under GNU Affero General Public License v3.0
 Ketcher version 2.0 was re-licensed under Apache License, Version 2.
 

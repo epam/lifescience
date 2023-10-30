@@ -139,8 +139,6 @@ tips <performance-tips-oracle.html>`__.
 License
 -------
 
-Copyright © 2009-2020 LifeSciences unit of EPAM Systems, Inc.
-
 - Bingo version 1.0.0 was released under GNU General Public License v3.0
 - Bingo version 1.9.0 was re-licensed under Apache License, Version 2.
 

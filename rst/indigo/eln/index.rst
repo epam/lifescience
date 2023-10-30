@@ -192,8 +192,6 @@ Report `issues <https://github.com/epam/Indigo-ELN-v.-2.0/issues>`__  or contact
 License
 -------
 
-Copyright © 2010-2018 LifeSciences unit of EPAM Systems, Inc.
-
 Indigo ELN v2.0 is free software: You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 3 of the License.
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 You should receive a copy of the GNU General Public License along with this program. If you did not, please see http://www.gnu.org/licenses/

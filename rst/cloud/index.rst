@@ -162,8 +162,6 @@ Cloud Pipeline source code, documentation, guides how to build and start are acc
 License
 -------
 
-Copyright 2017-2019 `EPAM Systems, Inc. <https://www.epam.com/>`__
-
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at

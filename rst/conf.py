@@ -57,7 +57,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Life Sciences'
-copyright = u'2020, EPAM Systems'
+copyright = u'2023, EPAM Systems'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
