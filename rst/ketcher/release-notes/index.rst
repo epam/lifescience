@@ -31,3 +31,4 @@ Contents:
     ketcher-2.12.0
     ketcher-2.13.0
     ketcher-2.14.0
+    ketcher-2.15.0
