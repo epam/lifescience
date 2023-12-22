@@ -7,6 +7,19 @@ News
     newsfeed
     release-notes/index
 
+MRI Viewer 2.3.0 released
+-------------------------
+
+*20 December 2023*
+
+We are happy to introduce a new release of MRI Viewer with AI capabilities.
+
+* |MRI_Viewer_2_3_0_notes|
+
+.. |MRI_Viewer_2_3_0_notes| raw:: html
+
+   <a href="https://github.com/epam/mriviewer/releases/tag/v2.3.0" target="_blank">Release Notes</a>
+
 Indigo and Bingo 1.14.0 released
 --------------------------------
 
