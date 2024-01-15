@@ -59,7 +59,7 @@ across multiple threads is prohibited.
 
 From now on, only the Python, Java, and C# interfaces are explained. For
 those who are interested in plain C interface, please read the `C
-API <reference.html#plain-c>`__ page.
+API <plain_c_ref.html>`__ page.
 
 Indigo Constructor
 ~~~~~~~~~~~~~~~~~~
