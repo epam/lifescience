@@ -6,7 +6,7 @@
   ../../indigo/release-notes/index.rst
 
 
-Indigo 1.14.0
+Indigo 1.16.0
 -------------
 
 Language Bindings
