@@ -14,7 +14,7 @@ The changelog is available `on this page <../../indigo/release-notes/indigo-1.18
      - |image2| Mac OS
    * - Oracle
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.18.0/bingo-oracle-linux-x86_64.zip>`__
-     - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.18.0/bingo-oracle-windows-x86_64.zip>`__
+     - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.18.0/bingo-oracle-windows-msvc-x86_64.zip>`__
      - binaries upon request.
    * - PostgreSQL 15
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.18.0/bingo-postgres-15-linux-x86_64.zip>`__
