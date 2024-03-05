@@ -4,9 +4,9 @@ Ketcher 2.16.0
 Ketcher distributions
 ^^^^^^^^^^^^^^^^^^^^^
 
-`Ketcher 2.16.0 standalone <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-v2.16.0/ketcher-standalone-v2.16.0.zip>`__
+`Ketcher 2.16.0 standalone <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-v2.16.0/ketcher-standalone-2.16.0.zip>`__
 
-`Ketcher 2.16.0 remote <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-v2.16.0/ketcher-remote-v2.16.0.zip>`__
+`Ketcher 2.16.0 remote <https://lifescience.opensource.epam.com/downloads/ketcher/ketcher-v2.16.0/ketcher-remote-2.16.0.zip>`__
 
 
 NPM packages
