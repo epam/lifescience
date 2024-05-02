@@ -7,7 +7,7 @@ News
     newsfeed
     release-notes/index
 
-Indigo and Bingo 1.18.0 released
+Indigo and Bingo 1.19.0 released
 --------------------------------
 
 *2 May 2024*
