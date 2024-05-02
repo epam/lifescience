@@ -32,13 +32,9 @@ The changelog is available `on this page <../../indigo/release-notes/indigo-1.19
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.19.0/bingo-postgres-12-linux-x86_64.zip>`__
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.19.0/bingo-postgres-12-windows-x86_64.zip>`__
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.19.0/bingo-postgres-12-macos-x86_64.zip>`__   
-   * - PostgreSQL 11
-     - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.19.0/bingo-postgres-11-linux-x86_64.zip>`__
-     - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.19.0/bingo-postgres-11-windows-x86_64.zip>`__
-     - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.19.0/bingo-postgres-11-macos-x86_64.zip>`__   
    * - Microsoft SQL Server
      - \-
-     - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.19.0/bingo-sqlserver-windows-x86_64.zip>`__
+     - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.19.0/bingo-sqlserver-windows-latest-x86_64.zip>`__
      - \-
 
 `Source code on GitHub <http://github.com/epam/indigo>`__
