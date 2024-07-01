@@ -27,6 +27,31 @@ We are glad to announce that a new stable version of Ketcher 2.21.0 is released.
    <a href="download/ketcher.html" target="_blank">Downloads</a>
 
 
+Indigo and Bingo 1.20.0 released
+--------------------------------
+
+*1 July 2024*
+
+We are happy to announce that a new version 1.20.0 of Indigo toolkit and Bingo is released.
+
+* |indigo_1_20_0_notes|
+
+* |indigo_1_20_0_downloads|
+
+* |bingo_1_20_0_downloads|
+
+.. |indigo_1_20_0_notes| raw:: html
+
+   <a href="indigo/release-notes/indigo-1.20.0.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_20_0_downloads| raw:: html
+
+   <a href="download/indigo/indigo-1.20.0.html" target="_blank">Indigo Downloads</a>
+
+.. |bingo_1_20_0_downloads| raw:: html
+
+   <a href="download/bingo/bingo-1.20.0.html" target="_blank">Bingo Downloads</a>
+
 Indigo and Bingo 1.19.0 released
 --------------------------------
 
