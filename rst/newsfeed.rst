@@ -7,6 +7,63 @@ News
     newsfeed
     release-notes/index
 
+Ketcher 2.24.0 released
+-----------------------
+
+*10 September 2024*
+
+We are glad to announce that a new stable version of Ketcher 2.24.0 is released.
+
+* |ketcher_2_24_0_notes|
+
+* |ketcher_2_24_0_downloads|
+
+.. |ketcher_2_24_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.24.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_24_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
+Ketcher 2.23.0 released
+-----------------------
+
+*10 September 2024*
+
+We are glad to announce that a new stable version of Ketcher 2.23.0 is released.
+
+* |ketcher_2_23_0_notes|
+
+* |ketcher_2_23_0_downloads|
+
+.. |ketcher_2_23_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.23.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_23_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
+Ketcher 2.22.0 released
+-----------------------
+
+*3 September 2024*
+
+We are glad to announce that a new stable version of Ketcher 2.22.0 is released.
+
+* |ketcher_2_22_0_notes|
+
+* |ketcher_2_22_0_downloads|
+
+.. |ketcher_2_22_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-2.22.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_2_22_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
 Indigo and Bingo 1.20.0 released
 --------------------------------
 
