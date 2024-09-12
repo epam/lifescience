@@ -8,37 +8,6 @@ News
     release-notes/index
 
 
-Miew 0.11.0 released
---------------------------------
-
-*26 August 2024*
-
-Welcome a new Miew 0.11.0 release!
-
-* |miew_0_11_0_notes|
-
-* |miew_0_11_0_demo|
-
-* |miew_0_11_0_npm|
-
-* |miew_0_11_0_npm-react|
-
-.. |miew_0_11_0_notes| raw:: html
-
-   <a href="https://github.com/epam/miew/releases/tag/v0.11.0" target="_blank">Release Notes</a>
-
-.. |miew_0_11_0_demo| raw:: html
-
-   <a href="https://miew.app/" target="_blank">Miew Demo</a>
-
-.. |miew_0_11_0_npm| raw:: html
-
-   <a href="https://www.npmjs.com/package/miew" target="_blank">Miew NPM</a>
-
-.. |miew_0_11_0_npm-react| raw:: html
-
-   <a href="https://www.npmjs.com/package/miew-react" target="_blank">Miew NPM-REACT</a>
-
 
 Ketcher 2.24.0 released
 -----------------------
@@ -171,6 +140,39 @@ We are happy to announce that a new version 1.21.0 of Indigo toolkit and Bingo i
 .. |bingo_1_21_0_downloads| raw:: html
 
    <a href="download/bingo/bingo-1.21.0.html" target="_blank">Bingo Downloads</a>
+
+
+Miew 0.11.0 released
+--------------------
+
+*26 August 2024*
+
+Welcome a new Miew 0.11.0 release!
+
+* |miew_0_11_0_notes|
+
+* |miew_0_11_0_demo|
+
+* |miew_0_11_0_npm|
+
+* |miew_0_11_0_npm-react|
+
+.. |miew_0_11_0_notes| raw:: html
+
+   <a href="https://github.com/epam/miew/releases/tag/v0.11.0" target="_blank">Release Notes</a>
+
+.. |miew_0_11_0_demo| raw:: html
+
+   <a href="https://miew.app/" target="_blank">Miew Demo</a>
+
+.. |miew_0_11_0_npm| raw:: html
+
+   <a href="https://www.npmjs.com/package/miew" target="_blank">Miew NPM</a>
+
+.. |miew_0_11_0_npm-react| raw:: html
+
+   <a href="https://www.npmjs.com/package/miew-react" target="_blank">Miew NPM-REACT</a>
+
 
 Indigo and Bingo 1.20.0 released
 --------------------------------
