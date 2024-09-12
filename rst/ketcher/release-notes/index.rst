@@ -38,3 +38,6 @@ Contents:
     ketcher-2.19.0
     ketcher-2.20.0
     ketcher-2.21.0
+    ketcher-2.22.0
+    ketcher-2.23.0
+    ketcher-2.24.0
