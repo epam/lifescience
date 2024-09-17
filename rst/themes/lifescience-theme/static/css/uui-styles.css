@@ -4787,9 +4787,6 @@ header .dropdown-menu li > a:hover {
   left: 0;
 }
 .tile-description {
-  position: absolute;
-  left: 0;
-  bottom: 16px;
   margin: 0;
   padding: 0 16px;
   list-style-type: none;
