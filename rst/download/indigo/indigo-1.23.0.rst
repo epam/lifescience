@@ -85,6 +85,16 @@ One can install the Indigo library using *pip* utility
 
     pip install epam.indigo
 
+NPM WASM package |w-icon|
+~~~~~~~~~~~~
+
+Indigo-ketcher WASM module can be found at `NPM <https://pypi.org/project/epam.indigo/>`__
+
+One can install the Indigo-ketcher using *npm* utility
+
+.. code-block:: xml
+
+    npm i indigo-ketcher
 
 
 .. |image0| image:: ../../assets/Linux.png
