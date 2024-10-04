@@ -9,6 +9,31 @@ News
 
 
 
+Indigo and Bingo 1.24.0 released
+--------------------------------
+
+*4 October 2024*
+
+We are happy to announce that a new version 1.24.0 of Indigo toolkit and Bingo is released.
+
+* |indigo_1_24_0_notes|
+
+* |indigo_1_24_0_downloads|
+
+* |bingo_1_24_0_downloads|
+
+.. |indigo_1_24_0_notes| raw:: html
+
+   <a href="indigo/release-notes/indigo-1.24.0.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_24_0_downloads| raw:: html
+
+   <a href="download/indigo/indigo-1.24.0.html" target="_blank">Indigo Downloads</a>
+
+.. |bingo_1_24_0_downloads| raw:: html
+
+   <a href="download/bingo/bingo-1.24.0.html" target="_blank">Bingo Downloads</a>
+
 Ketcher 2.24.0 released
 -----------------------
 
