@@ -1,5 +1,5 @@
-﻿Ketcher 2.5 Standalone
-======================
+﻿Ketcher 2.25.0 Standalone
+=========================
 
 .. toctree::
    :hidden:
@@ -11,6 +11,6 @@ Ketcher demo page was moved. Please use the following link
 
 .. raw:: html
 
-   <a href="/KetcherDemoSA/index.html" target="_blank">Ketcher 2.5 Standalone</a> 
+   <a href="/KetcherDemoSA/index.html" target="_blank">Ketcher 2.25.0 Standalone</a>
 
 
