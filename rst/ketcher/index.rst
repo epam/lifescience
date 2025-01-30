@@ -71,7 +71,7 @@ File formats supported
 
 Ketcher provides the ability to load and save structures and reactions in:
 
--  DL Molfile (v2000 and v3000)
+-  MDL Molfile (v2000 and v3000)
 -  RXN file format
 -  InChI String
 -  ChemAxon Extended SMILES
