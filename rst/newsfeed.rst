@@ -7,6 +7,31 @@ News
     newsfeed
     release-notes/index
 
+Indigo and Bingo 1.28.0 released
+--------------------------------
+
+*13 February 2025*
+
+We are happy to announce that a new version 1.28.0 of Indigo toolkit and Bingo is released.
+
+* |indigo_1_28_0_notes|
+
+* |indigo_1_28_0_downloads|
+
+* |bingo_1_28_0_downloads|
+
+.. |indigo_1_28_0_notes| raw:: html
+
+   <a href="indigo/release-notes/indigo-1.28.0.html" target="_blank">Release Notes</a>
+
+.. |indigo_1_28_0_downloads| raw:: html
+
+   <a href="download/indigo/indigo-1.28.0.html" target="_blank">Indigo Downloads</a>
+
+.. |bingo_1_28_0_downloads| raw:: html
+
+   <a href="download/bingo/bingo-1.28.0.html" target="_blank">Bingo Downloads</a>
+   
 Indigo and Bingo 1.27.0 released
 --------------------------------
 
