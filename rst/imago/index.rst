@@ -173,14 +173,16 @@ want to send a patch to us? Did you find a bug? Please write to the following e-
 Commercial Availability
 -----------------------
 
-If the GPL-licensed Imago does not fit your needs, please contact us to discuss the purchase of a commercial license.
+The Apache License v2.0 allows Imago to be used as a component in proprietary software products.
+
+If the Apache License v2.0 does not fit your needs, please contact us to discuss the purchase of a commercial license.
 You may need the commercial license if you want to:
 
 -  Receive ongoing support and maintenance
--  Include Imago as a component in your proprietary software product
+-  Design and implement custom changes for the image recognition tool
 -  Do any other development/testing required for a proprietary software product
 
-Visit our `SolutionsHub page <https://solutionshub.epam.com/solution/ketcher>`__   for more details
+Visit our `SolutionsHub page <https://solutionshub.epam.com/solution/imago>`__   for more details
 
 .. |image2| image:: ../assets/imago/4_source_USRE039991-20080101-C00100.*
 .. |image3| image:: ../assets/imago/4_result_USRE039991-20080101-C00100.png.imago-2.0.*
