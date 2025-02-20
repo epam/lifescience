@@ -4,12 +4,12 @@
 Indigo ELN v2.1
 ---------------
 
-*18 Februraty 2025*
+*18 February 2025*
 
 The major changes are the following:
 
 - Self-sufficient local deployment by running all services and databases with docker-compose
-- Hot-fixes: server-side Ketcher functions fix, refactored back-end queries routing.
+- Hot-fixes: server-side Ketcher functions fix, refactored back-end queries routing
 
 Indigo ELN v2.0
 ---------------
