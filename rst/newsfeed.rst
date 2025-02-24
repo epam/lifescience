@@ -7,6 +7,15 @@ News
     newsfeed
     release-notes/index
 
+Indigo ELN 2.1 released
+-----------------------
+
+*20 February 2025*
+
+We are glad to announce that Indigo ELN 2.1 released.
+
+<a href="indigo/eln/changelog.html" target="_blank">Release Notes</a>
+
 Ketcher 3.0.0 released
 -----------------------
 
