@@ -1374,7 +1374,7 @@ Indigo ELN is a viable free-of-charge alternative to commercial electronic noteb
 
 .. |indigo_eln_2_0_notes| raw:: html
 
-   <a href="indigo/eln/changelog.html" target="_blank">Release Notes</a>
+   <a href="indigo-eln/release-notes/index.html" target="_blank">Release Notes</a>
 
 
 
