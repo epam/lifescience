@@ -14,7 +14,13 @@ Indigo ELN 2.1 released
 
 We are glad to announce that Indigo ELN 2.1 released.
 
-<a href="indigo/eln/changelog.html" target="_blank">Release Notes</a>
+* |indigo_eln_2_1_notes|
+
+.. |indigo_eln_2_1_notes| raw:: html
+
+   <a href="indigo/eln/changelog.html" target="_blank">Release Notes</a>
+
+
 
 Ketcher 3.0.0 released
 -----------------------
