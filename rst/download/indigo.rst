@@ -23,7 +23,7 @@ Older releases
 .. toctree::
     :maxdepth: 1
 
-    indigo/indigo-1.29.0.rst
+    indigo/indigo-1.28.0.rst
     indigo/indigo-1.27.0.rst
     indigo/indigo-1.26.0.rst
     indigo/indigo-1.25.0.rst
