@@ -17,5 +17,4 @@ Released 2025-04-17
 * [2818](https://github.com/epam/Indigo/issues/2818) Library ambiguius RNA bases loaded from HELM as bases with % label
 * [2826](https://github.com/epam/Indigo/issues/2826) Unable to load ambiguous RNA and ambiguous DNA monomers with same name from HELM
 
-
-**Full Changelog**: https://github.com/epam/Indigo/compare/indigo-1.29.0...indigo-1.31.1
+**Full Changelog**: https://github.com/epam/Indigo/compare/indigo-1.29.0...indigo-1.30.1
