@@ -126,7 +126,7 @@ But please be informed, that not all browsers are supported
 License
 -------
 
-Copyright © 2010-2017 LifeSciences unit of EPAM Systems, Inc.
+Copyright © 2010-present LifeSciences unit of EPAM Systems, Inc.
 
 EPAM NGB is licensed under the MIT License.
 A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
