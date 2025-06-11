@@ -19,15 +19,12 @@ The changelog is available `on this page <../../indigo/release-notes/indigo-1.29
    * - PostgreSQL 15
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-15-linux-x86_64.zip>`__
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-15-windows-x86_64.zip>`__
-     - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-15-macos-x86_64.zip>`__  
    * - PostgreSQL 14
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-14-linux-x86_64.zip>`__
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-14-windows-x86_64.zip>`__
-     - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-14-macos-x86_64.zip>`__  
    * - PostgreSQL 13
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-13-linux-x86_64.zip>`__
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-13-windows-x86_64.zip>`__
-     - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-13-macos-x86_64.zip>`__
    * - PostgreSQL 12
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-12-linux-x86_64.zip>`__
      - `64-bit <https://lifescience.opensource.epam.com/downloads/bingo-1.29.0/bingo-postgres-12-windows-x86_64.zip>`__

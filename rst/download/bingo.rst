@@ -15,7 +15,7 @@ Latest release
 .. toctree::
     :maxdepth: 1
 
-    bingo/bingo-1.29.0.rst
+    bingo/bingo-1.30.1.rst
 
 
 Older releases
@@ -24,6 +24,7 @@ Older releases
 .. toctree::
     :maxdepth: 1
 
+    bingo/bingo-1.29.0.rst
     bingo/bingo-1.28.0.rst
     bingo/bingo-1.27.0.rst
     bingo/bingo-1.26.0.rst
