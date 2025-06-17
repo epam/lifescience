@@ -7,7 +7,7 @@ News
     newsfeed
     release-notes/index
 
-Indigo and Bingo 1.30.1 released
+Indigo and Bingo 1.31.0 released
 --------------------------------
 
 *17 June 2025*
