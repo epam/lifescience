@@ -80,7 +80,7 @@ Cheminformatics
       performance, good portability and light weight. You will not need any
       Java or Flash plugins to use it in your browser. Ketcher is completely
       free and open-source, while also available on a commercial basis.
-   -  `Ketcher 2.0 demo <ketcher/demo.html>`__: Edit molecules online
+   -  `Ketcher demo <ketcher/demo.html>`__: Edit molecules online
 
 -  `Indigo Toolkit <indigo/index.html>`__ Universal cheminformatics
    toolkit and API |image3|
