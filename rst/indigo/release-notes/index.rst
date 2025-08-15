@@ -7,6 +7,7 @@ Contents:
 .. toctree::
     :maxdepth: 2
 
+    indigo-1.33.0
     indigo-1.32.0
     indigo-1.31.0
     indigo-1.30.1
