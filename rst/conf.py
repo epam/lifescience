@@ -20,7 +20,15 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 # sys.path.insert(0, os.path.abspath('.'))
 sys.path.append(os.path.abspath(os.curdir))
-sys.path.append('indigo')
+# sys.path.append('indigo')
+nitpicky = True
+nitpick_ignore = [
+    ('py:class', '..'),
+    ('py:class', 'array of floats'),
+    ('py:class', 'Indigo'),
+    ('py:class', 'indigo.indigo.indigo.Indigo'),
+    ('py:class', 'indigo.indigo.indigo_object.IndigoObject'),
+]
 
 # -- General configuration ------------------------------------------------
 

@@ -26,15 +26,20 @@ IndigoException
 IndigoRenderer
 --------------
 
-.. autoclass:: indigo_renderer.IndigoRenderer
+.. autoclass:: indigo.renderer.IndigoRenderer
    :members:
    :undoc-members:
 
 IndigoInchi
 -----------
 
-.. autoclass:: indigo_inchi.IndigoInchi
+.. autoclass:: indigo.inchi.IndigoInchi
    :members:
    :undoc-members:
 
+Hybridization
+-------------
 
+.. autoclass:: indigo.Hybridization
+   :members:
+   :undoc-members:
