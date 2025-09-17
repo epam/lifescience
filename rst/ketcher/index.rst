@@ -74,4 +74,19 @@ You must include the original copyright notice and disclaimer in any distributio
 Useful links
 -------------
 
+`Try Ketcher on the demo page <https://lifescience.opensource.epam.com/KetcherDemo/index.html>`_
+
+`Download Ketcher <https://lifescience.opensource.epam.com/download/ketcher.html>`_
+
+`User manual <https://github.com/epam/ketcher/blob/master/documentation/help.md>`_
+
+`Video tutorials <https://www.youtube.com/watch?v=Op-9YDmXqF8&list=PLuQ7Yv7o3G4erGKNIr0vWXmod14yTUOKv>`_
+
+`API documentation <https://github.com/epam/ketcher/blob/master/README.md#ketcher-api>`_
+
+`Report a bug or suggest a feature on GitHub <https://github.com/epam/ketcher/issues>`_
+
+`Contact us <mailto:EPAMketcher_team@epam.com>`_
+
+
 
