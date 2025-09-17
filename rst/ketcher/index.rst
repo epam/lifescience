@@ -54,6 +54,25 @@ Main features
 
 - **Ease of integration into your web-application** - There are two main integration options: as a React component library or as a ready-to-run application that can be embedded using an IFrame or a separate page.
 
+.. list-table::
+   :widths: 500 500
+   :header-rows: 0
+   :class: no-borders
+
+   * - **Support for Reactions** - Ketcher offers full-featured reaction support including reaction centers, reaction flags, reaction mapping, ability to add catalysts, reaction conditions, and other information.  
+     - .. image:: https://github.com/epam/lifescience/blob/master/rst/assets/ketcher/ket_lasso_fragment.png
+          :width: 500px
+
+.. list-table::
+   :widths: 400 600
+   :header-rows: 0
+   :class: no-borders
+
+   * - .. image:: https://github.com/epam/lifescience/blob/master/rst/assets/ketcher/ket_lasso_fragment.png
+          :width: 500px 
+     - **Stereochemistry Support** - Stereocenters can automatically be assigned a stereo-label of R/S, r/s, or E/Z, or in case of ambiguous configuration, marked with AND and OR groups. 
+
+
 Licence
 ---------------------------
 
@@ -92,5 +111,7 @@ Useful links
 
 .. |image0| image:: ../assets/ketcher/Ketcher-Introduction.png
 
+.. |image1| image:: ../assets/ketcher/Support%20for%20Reactions.png
 
+.. |image2| image:: ../assets/ketcher/Stereochemistry%20Support.png
 
