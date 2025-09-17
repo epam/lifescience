@@ -23,6 +23,8 @@ Ketcher is an open-source web-based chemical structure editor designed for drawi
 
 `Try Ketcher! <https://lifescience.opensource.epam.com/KetcherDemo/index.html>`_
 
+|image0|
+
 Main features
 ----------------------------------
 
@@ -87,6 +89,8 @@ Useful links
 `Report a bug or suggest a feature on GitHub <https://github.com/epam/ketcher/issues>`_
 
 `Contact us <mailto:EPAMketcher_team@epam.com>`_
+
+.. |image0| image:: ../assets/ketcher/Ketcher-Introduction.png
 
 
 
