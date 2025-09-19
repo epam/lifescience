@@ -1,4 +1,4 @@
-﻿Ketcher 3.4.0 Remote
+﻿Ketcher 3.7.0 Remote
 =====================
 
 .. toctree::
@@ -10,6 +10,6 @@ Ketcher demo page was moved. Please use the following link
 
 .. raw:: html
 
-   <a href="/KetcherDemo/index.html?api_path=/v2" target="_blank">Ketcher 3.4.0 Remote</a>
+   <a href="/KetcherDemo/index.html?api_path=/v2" target="_blank">Ketcher 3.7.0 Remote</a>
 
 
