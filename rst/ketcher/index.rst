@@ -5,149 +5,113 @@
     :hidden:
     :includehidden:
 
-    editing-tips
-    developers-manual
-    help
-    demo
-    release-notes/index
-    Downloads <../download/ketcher>
+    Introduction
+    Main features
+    Licence
+    Useful links
 
-Overview
+Introduction
 --------
 
-Ketcher is an open-source web-based chemical structure editor. Ketcher is designed for chemists, laboratory scientists and technicians who draw structures and reactions.
+Ketcher is an open-source web-based chemical structure editor designed for drawing small molecules, biomolecules, and chemical reactions. Using Ketcher, chemists, biochemists, technicians, academics, students, and any other chemistry aficionados, are able to easily:
+
+- Draw small molecules, reactions, and biomolecules in-browser;
+
+- Export their drawing into all common file formats for storing and sharing;
+
+- Export as PNG/SVG for use in publications and presentations.
+
+`Try Ketcher! <https://lifescience.opensource.epam.com/KetcherDemo/index.html>`_
 
 |image0|
 
-Ketcher is developed using pure JavaScript and incorporates high performance, good portability and light weight. You will not need any Java or Flash plugins to use it in your browser. 
-
-Ketcher is completely free and open-source, while also available on a commercial basis.
-
-You can easily integrate Ketcher into your web application. Ketcher is actively developed and improved by the dedicated team. 
-Explore the installation & integration information in our `repository <https://github.com/epam/ketcher#ketcher--->`__.
-
-Provide your comments and suggestions and get timely replies from the developers' team.
-
-Other products and 3-rd party code
+Main features
 ----------------------------------
 
-Ketcher uses `Indigo Service <https://lifescience.opensource.epam.com/indigo/service/index.html>`__ for computationally intensive procedures.
+- **Support for Reactions** - Ketcher offers full-featured reaction support including reaction centers, reaction flags, reaction mapping, ability to add catalysts, reaction conditions, and other information. 
 
-Ketcher leverages `Raphael <http://raphaeljs.com/>`_ framework to support objects rendering and representation on the canvas.
+- **Stereochemistry Support** – Stereocenters can automatically be assigned a stereo-label of R/S, r/s, or E/Z, or in case of ambiguous configuration, marked with AND and OR groups. 
 
-Standalone and Remote modes
+- **Support for S-groups and R-groups** - All major S-Group types are supported including generic, SRU polymers, multiple groups, superatoms, and data S-Groups. R-Site and R-Fragment  assignment are supported, as well as attachment point specification and R-Logic.
+
+- **Structure Appearance Customization** – Easy way of changing the drawing style from the Ketcher default to the American Chemical Society (ACS) standard. Users can modify the appearance of their drawing by highlighting elements, or by changing parameters such as bond length, atom colour, etc. 
+
+- **Support for all Common File Formats** – In addition to Ketcher’s own file format – KET, many others are supported: MDL Molfiles/SCSR (v2000 and v3000), SDF, RDF, SMARTS, SMILES, ChemAxon Extended SMILES, InChi, CDXML, Sequence, FASTA, IDT, HELM, etc. 
+
+- **Molecules and Macromolecules modes** – Two modes – molecules and macromolecules – are available with dedicated toolbars for drawing small and biomolecules. 
+
+- **Modality Agnostic Nature** - Ability to draw, view, edit, and save both small molecules and biomolecules in a single drawing.
+
+- **Template and Monomer Libraries** – The template library in molecules mode contains more than 450 structures divided into Template, Functional Groups, and Salts and Solvents sections. The monomer library in macromolecules mode is divided into Peptide, RNA (Presets, Sugars, Bases, Phosphates, etc.), and CHEM sections.
+
+- **Antisense Strand Creation and RNA Builder** – Using RNA builder, new nucleotides can be assembled from monomers available in library and saved in browser cache for future uses, and nucleotides already present on canvas can be modified, thus simplifying the work with modified oligonucleotides. Both DNA and RNA antisense strands can be created for a selected sense strand.
+
+- **Macromolecules Properties Calculation** – Molecular mass and formula are available for all structures in macromolecules mode, while peptide specific properties are: isoelectric point, extinction coefficient, hydrophobicity, and amino-acid count, and nucleic acid specific properties are: melting temperature and base count.
+
+- **Integration with Other EPAM Cheminformatics Products** – Using Imago OCR (link) users are able to load a structure directly from PNG, PDF and similar formats. Miew (link) allows viewing of structures in 3D, while Indigo (link) handles features such as export/import, layout, and properties calculation.
+
+- **Extensive   API** - Ketcher API covers most of the functionality available in Ketcher and provides programmatic access to import/export from different data formats, chemical structure layout, analysis and calculations.
+
+- **Ease of integration into your web-application** - There are two main integration options: as a React component library or as a ready-to-run application that can be embedded using an IFrame or a separate page.
+
+.. list-table::
+   :widths: 500 500
+   :header-rows: 0
+   :class: no-borders
+
+   * - **Support for Reactions** - Ketcher offers full-featured reaction support including reaction centers, reaction flags, reaction mapping, ability to add catalysts, reaction conditions, and other information.  
+     - .. image:: https://github.com/epam/lifescience/blob/master/rst/assets/ketcher/ket_lasso_fragment.png
+          :width: 500px
+
+.. list-table::
+   :widths: 400 600
+   :header-rows: 0
+   :class: no-borders
+
+   * - .. image:: https://github.com/epam/lifescience/blob/master/rst/assets/ketcher/ket_lasso_fragment.png
+          :width: 500px 
+     - **Stereochemistry Support** - Stereocenters can automatically be assigned a stereo-label of R/S, r/s, or E/Z, or in case of ambiguous configuration, marked with AND and OR groups. 
+
+
+Licence
 ---------------------------
 
-Ketcher is provided in 2 modes: *Standalone* and *Remote*. 
+This program is free software licensed under the `Apache License, Version 2.0. <https://www.apache.org/licenses/LICENSE-2.0>`_ the license allows:
 
-The *Standalone* mode incorporates Indigo backend services in the Ketcher build. It allows for Ketcher to work in browser with no server and even without the Internet connection. In this mode the pictures recognition provided by Indigo service is not available. 
+- **Commercial use** – Integrate into products or services;
 
-The *Remote* mode requires Indigo server deployed and connected. It will provide all the Ketcher abilities leveraging Indigo. 
+- **Modification** – Adapt and improve the code;
 
-Main features
+- **Distribution** – Share original or modified versions;
+
+- **Patent use** – Use included patented technologies;
+
+- **Private use** – Personal or internal projects;
+
+- **Sublicensing** – Grant others the same rights.
+
+You must include the original copyright notice and disclaimer in any distribution.
+
+Useful links
 -------------
 
-**Fast and convenient editing.** We strive to make Ketcher as easy to use and as fast as the state-of-the-art desktop structure editing tools. Here are some highlights:
+`Try Ketcher on the demo page <https://lifescience.opensource.epam.com/KetcherDemo/index.html>`_
 
-- Lasso and Rectangle selection tools, plus a special Fragment selection tool to deal with connected components, rather than single atoms/bonds.
-- A variety of `hotkeys <https://lifescience.opensource.epam.com/ketcher/editing-tips.html#hotkeys>`_
-- Undo/Redo.
-- Copy/Paste for the canvas objects
+`Download Ketcher <https://lifescience.opensource.epam.com/download/ketcher.html>`_
 
-**Atoms & Bonds**. Ketcher supports basic properties and query features, adding aliases and Generic group usage.
+`User manual <https://github.com/epam/ketcher/blob/master/documentation/help.md>`_
 
-**Stereochemistry.** Ketcher provides complete stereochemistry support during the editing, loading, and saving of chemical structures.
+`Video tutorials <https://www.youtube.com/watch?v=Op-9YDmXqF8&list=PLuQ7Yv7o3G4erGKNIr0vWXmod14yTUOKv>`_
 
-**Reactions.** Full-featured reaction support including reacting centers, atom flags and AAM.
+`API documentation <https://github.com/epam/ketcher/blob/master/README.md#ketcher-api>`_
 
-**S-groups.** All major S-group types are supported including generic, SRU polymers, multiple groups, superatoms and data S-groups.
+`Report a bug or suggest a feature on GitHub <https://github.com/epam/ketcher/issues>`_
 
-**R-groups.** R-site and R-fragment assignment is supported, as well as attachment point specification and R-logic.
+`Contact us <mailto:EPAMketcher_team@epam.com>`_
 
-**Template library** (including custom and user's templates) & Functional groups support 
+.. |image0| image:: ../assets/ketcher/Ketcher-Introduction.png
 
-File formats supported
-~~~~~~~~~~~~~~~~~~~~~~
+.. |image1| image:: ../assets/ketcher/Support%20for%20Reactions.png
 
-Ketcher provides the ability to load and save structures and reactions in:
+.. |image2| image:: ../assets/ketcher/Stereochemistry%20Support.png
 
--  MDL Molfile (v2000 and v3000)
--  RXN file format
--  InChI String
--  ChemAxon Extended SMILES
--  ChemAxon Extended CML file formats
-
-Indigo service is used to provide the following computational tools for the canvas content:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-• Aromatize/De-aromatize Tool
-• Calculate CIP Descriptors Tool
-• Structure Check Tool
-• MW and Structure Parameters Calculate Tool
-• Advanced Structure Clean up Tool (+ stereochemistry checking and structure layout)
-• Simple Structure Clean up Tool (checks bonds length, angles and spatial arrangement of atoms)
-
-Supported browsers
-------------------
-Ketcher is supported and tested in the majority of the modern browsers:
-
-• Microsoft Edge 
-• Mozilla Firefox
-• Safari
-• Chrome
-
-Try Ketcher!
-------------
-
-Explore Ketcher on the `demo <https://lifescience.opensource.epam.com/ketcher/demo.html>`__ page. 
-
-Download
---------
-
-Look at the `Downloads <../download/ketcher.html>`__ page for the
-`installation <developers-manual.html#installation>`__ package and a
-sample `Server v1 <developers-manual.html#ketcher-server>`__ , `Server v2 <../indigo/service/index.html>`__
-implementation.
-
-License
--------
-
-Ketcher version 1.0 was released under GNU Affero General Public License v3.0
-Ketcher version 2.0 was re-licensed under Apache License, Version 2.
-
-This program is free software: You can redistribute it and/or modify it
-under the terms of the the Apache License, Version 2.0.
-
-You should have received a copy of the Apache License along
-with this program. If you did not not, please see
-https://www.apache.org/licenses/LICENSE-2.0
-
-Feedback
---------
-
-Do you need assistance using our tools? Do you need a feature? Do you
-want to send a patch to us? Did you find a bug? Please use Github tickets package:
-
--  https://github.com/epam/ketcher/issues
--  https://github.com/epam/ketcher/discussions
-
-
-Commercial Availability
------------------------
-
-The Apache License v2.0 allows Ketcher to be used as a component in proprietary software products.
-
-If the Apache License v2.0 does not fit your needs, please contact us to discuss the purchase of a commercial license.
-You may need the commercial license if you want to:
-
--  Receive ongoing support and maintenance
--  Design and implement custom changes for the structure editor
--  Do any other development/testing required for a proprietary software product
-
-Visit our `SolutionsHub page <https://solutionshub.epam.com/solution/ketcher>`__   for more details
-
-.. |image0| image:: ../assets/ketcher/ketcher_overview_25.png
-   :target: demo.html
-
-.. |ketcher2| image:: ../assets/ketcher/2.0.0-alpha.1+r78.png 
-.. |lasso1| image:: ../assets/ketcher/ket_lasso.png
