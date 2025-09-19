@@ -50,3 +50,6 @@ Contents:
     ketcher-3.2.0
     ketcher-3.3.0
     ketcher-3.4.0
+    ketcher-3.5.0
+    ketcher-3.6.0
+    ketcher-3.7.0
