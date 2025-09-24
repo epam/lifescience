@@ -1,6 +1,12 @@
 ﻿Ketcher
 =======
 
+.. toctree::
+  :hidden:
+  :includehidden:
+
+  release-notes/index
+
 Ketcher is an open-source web-based chemical structure editor designed for drawing small molecules, biomolecules, and chemical reactions. Using Ketcher, chemists, biochemists, technicians, academics, students, and any other chemistry aficionados, are able to easily:
 
 - Draw small molecules, reactions, and biomolecules in-browser;
