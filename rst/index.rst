@@ -75,12 +75,9 @@ Cheminformatics
 
 -  `Ketcher <ketcher/index.html>`__ Web-based molecule sketcher |image2|
 
-   -  Ketcher is a web-based chemical structure editor.
-   -  Since Ketcher is written in pure Javascript, it incorporates high
-      performance, good portability and light weight. You will not need any
-      Java or Flash plugins to use it in your browser. Ketcher is completely
-      free and open-source, while also available on a commercial basis.
-   -  `Ketcher demo <ketcher/demo.html>`__: Edit molecules online
+   -  Ketcher is an open-source web-based chemical structure editor designed 
+      for drawing small molecules, biomolecules, and chemical reactions.
+   -  `Try Ketcher! <https://lifescience.opensource.epam.com/KetcherDemo/index.html>`_
 
 -  `Indigo Toolkit <indigo/index.html>`__ Universal cheminformatics
    toolkit and API |image3|
