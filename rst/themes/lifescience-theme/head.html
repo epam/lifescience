@@ -57,6 +57,9 @@
     <script src="{{ pathto('_static/js/index-tiles.js', 1) }}"></script>
     {% endif %}
 
-    
+    {% if pagename == "ketcher/index" %}
+    <!-- Ketcher JSON-LD -->
+    {% include "json-ld_ketcher.html" %}
+    {% endif %}
 
 </head>
