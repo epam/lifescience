@@ -78,7 +78,7 @@ You must include the original copyright notice and disclaimer in any distributio
 Useful links
 -------------
 
-`Try Ketcher on the demo page <https://lifescience.opensource.epam.com/KetcherDemo/index.html>`_
+`Try Ketcher on the demo page <https://lifescience.opensource.epam.com/KetcherDemoSA/index.html>`_
 
 `Download Ketcher <https://lifescience.opensource.epam.com/download/ketcher.html>`_
 
