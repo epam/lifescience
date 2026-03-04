@@ -186,7 +186,7 @@ We are happy to announce that a new version 1.37.0 of Indigo toolkit and Bingo i
 Ketcher 3.8.0 released
 ----------------------
 
-*17 October 2026*
+*17 October 2025*
 
 We are glad to announce that a new stable version of Ketcher 3.8.0 is released.
 
