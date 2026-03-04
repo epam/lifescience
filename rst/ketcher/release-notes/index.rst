@@ -53,3 +53,8 @@ Contents:
     ketcher-3.5.0
     ketcher-3.6.0
     ketcher-3.7.0
+    ketcher-3.8.0
+    ketcher-3.9.0
+    ketcher-3.10.0
+    ketcher-3.11.0
+    ketcher-3.12.0

@@ -7,7 +7,7 @@ Latest release
 .. toctree::
     :maxdepth: 1
 
-    ketcher/ketcher-3.7.0.rst
+    ketcher/ketcher-3.12.0.rst
 
 
 Older releases
@@ -16,6 +16,11 @@ Older releases
 .. toctree::
     :maxdepth: 1
 
+    ketcher/ketcher-3.11.0.rst
+    ketcher/ketcher-3.10.0.rst
+    ketcher/ketcher-3.9.0.rst
+    ketcher/ketcher-3.8.0.rst
+    ketcher/ketcher-3.7.0.rst
     ketcher/ketcher-3.6.0.rst
     ketcher/ketcher-3.5.0.rst
     ketcher/ketcher-3.4.0.rst

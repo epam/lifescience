@@ -7,6 +7,82 @@ News
     newsfeed
     release-notes/index
 
+Ketcher 3.12.0 released
+-----------------------
+
+*4 March 2026*
+
+We are glad to announce that a new stable version of Ketcher 3.12.0 is released.
+
+* |ketcher_3_12_0_notes|
+
+* |ketcher_3_12_0_downloads|
+
+.. |ketcher_3_12_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-3.12.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_3_12_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
+Ketcher 3.11.0 released
+-----------------------
+
+*4 March 2026*
+
+We are glad to announce that a new stable version of Ketcher 3.11.0 is released.
+
+* |ketcher_3_11_0_notes|
+
+* |ketcher_3_11_0_downloads|
+
+.. |ketcher_3_11_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-3.11.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_3_11_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
+Ketcher 3.10.0 released
+-----------------------
+
+*27 February 2026*
+
+We are glad to announce that a new stable version of Ketcher 3.10.0 is released.
+
+* |ketcher_3_10_0_notes|
+
+* |ketcher_3_10_0_downloads|
+
+.. |ketcher_3_10_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-3.10.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_3_10_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
+Ketcher 3.9.0 released
+----------------------
+
+*27 February 2026*
+
+We are glad to announce that a new stable version of Ketcher 3.9.0 is released.
+
+* |ketcher_3_9_0_notes|
+
+* |ketcher_3_9_0_downloads|
+
+.. |ketcher_3_9_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-3.9.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_3_9_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
+
 Indigo and Bingo 1.40.0 released
 --------------------------------
 
@@ -106,6 +182,25 @@ We are happy to announce that a new version 1.37.0 of Indigo toolkit and Bingo i
 .. |bingo_1_37_0_downloads| raw:: html
 
    <a href="download/bingo/bingo-1.37.0.html" target="_blank">Bingo Downloads</a>
+
+Ketcher 3.8.0 released
+----------------------
+
+*17 October 2026*
+
+We are glad to announce that a new stable version of Ketcher 3.8.0 is released.
+
+* |ketcher_3_8_0_notes|
+
+* |ketcher_3_8_0_downloads|
+
+.. |ketcher_3_8_0_notes| raw:: html
+
+   <a href="ketcher/release-notes/ketcher-3.8.0.html" target="_blank">Release Notes</a>
+
+.. |ketcher_3_8_0_downloads| raw:: html
+
+   <a href="download/ketcher.html" target="_blank">Downloads</a>
 
 Indigo and Bingo 1.36.0 released
 --------------------------------
