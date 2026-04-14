@@ -15,7 +15,7 @@ Ketcher is an open-source web-based chemical structure editor designed for drawi
 
 - Export as PNG/SVG for use in publications and presentations.
 
-`Try Ketcher! <https://lifescience.opensource.epam.com/KetcherDemo/index.html>`_
+`Try Ketcher <https://lifescience.opensource.epam.com/KetcherDemoSA/index.html>`_
 
 |Ketcher-Introduction|
 
