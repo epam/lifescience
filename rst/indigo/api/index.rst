@@ -1352,9 +1352,13 @@ molecule's groups:
 -  ``getSuperatom(index)``
 -  ``getDataSGroup(index)``
 
-The iterator methods return "group" objects. Each "group" object
-responds to ``IndigoObject.iterateAtoms`` and
-``IndigoObject.iterateBonds`` methods.
+All S-group objects support ``IndigoObject.iterateAtoms``,
+``IndigoObject.iterateBonds``, ``IndigoObject.countAtoms``, and
+``IndigoObject.countBonds`` methods, regardless of S-group type.
+
+**Note**: For ``DAT``-type S-groups, bond-related methods refer to containment
+bonds (both endpoints inside the group). For all other S-group types,
+they refer to crossing bonds (one endpoint inside, one outside the group).
 
 Java:
 
@@ -1443,7 +1447,7 @@ You can get and set different S-group's properties using the next methods:
 -  ``getSGroupType`` - returns S-group type
 -  ``getSGroupIndex`` - returns S-group index
 -  ``setSGroupData`` - accepts S-group data (for S-groups of "DAT" type)
--  ``setSGroupCoords`` accepts S-group coordinates, x and y values (for S-groups of "DAT" type)
+-  ``setSGroupCoords`` - accepts S-group coordinates, x and y values (for S-groups of "DAT" type)
 -  ``setSGroupDescription``- accepts S-group data field units or format (for S-groups of "DAT" type)
 -  ``setSGroupFieldName`` - accepts S-group data name (for S-groups of "DAT" type)
 -  ``setSGroupQueryCode`` - accepts S-group data query code (for S-groups of "DAT" type)
@@ -1467,6 +1471,8 @@ You can get and set different S-group's properties using the next methods:
 -  ``getSGroupMultiplier`` - returns multiplier value for sgroup (for S-groups of "MUL" type)
 -  ``setSGroupMultiplier`` - accepts multiplier value for sgroup (for S-groups of "MUL" type)
 -  ``setSGroupBrackets`` - accepts bracket style and brackets coordinates for sgroup (for S-groups of "GEN","MUL" and "SRU" types)
+-  ``createCrossBonds`` - automatically detects and adds crossing bonds based on the current S-group atoms (for S-groups of "SUP" type)
+-  ``clearSGroupCrossBonds`` - removes all crossing bonds from the S-group (for S-groups of "SUP" type)
 
 **Note**: All properties and its values correspond to Molfile format.
 
