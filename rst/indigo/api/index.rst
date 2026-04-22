@@ -1462,6 +1462,10 @@ You can get and set different S-group's properties using the next methods:
 -  ``getSGroupNumCrossBonds`` - returns number of crossing bonds for sgroup
 -  ``addSGroupAttachmentPoint`` - accepts attachment point's description and creates it (for S-groups of "SUP" type)
 -  ``deleteSGroupAttachmentPoint`` - accepts attachment point's index and removes it (for S-groups of "SUP" type)
+-  ``iterateSGroupAttachmentPoints`` - iterates attachment points of sgroup (for S-groups of "SUP" type)
+-  ``getSGroupAttachmentPointAtomIdx`` - returns the attachment atom index (for S-groups of "SUP" type)
+-  ``getSGroupAttachmentPointLeaveAtom`` - returns the leaving atom index (for S-groups of "SUP" type)
+-  ``getSGroupAttachmentPointLabel`` - returns the attachment point label (for S-groups of "SUP" type)
 -  ``getSGroupDisplayOption`` - returns display option for sgroup (for S-groups of "SUP" type)
 -  ``setSGroupDisplayOption`` - accepts display option for sgroup (for S-groups of "SUP" type)
 -  ``getSGroupMultiplier`` - returns multiplier value for sgroup (for S-groups of "MUL" type)
