@@ -180,9 +180,10 @@ For any other questions please use the following e-mail:
 Commercial Availability
 -----------------------
 
-The Apache License v2.0 allows Bingo to be used as a component in proprietary software products.
-If the Apache License v2.0 does not fit your needs, please contact us to discuss the purchase of a commercial license.
-You may need the commercial license if you want to:
+Bingo is distributed under the **Apache License, Version 2.0**, which permits its use,
+modification, and inclusion in both open-source and proprietary software products.
+If your organization requires **custom development, priority support, or feature 
+enhancements** for Bingo, please contact us to discuss available **commercial support options**.
 
 -  Receive ongoing support and maintenance
 -  Design and implement custom changes for the cartridge
