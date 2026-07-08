@@ -46,7 +46,8 @@ extensions = [
     'ls_menu',
     'index_tiles',
     'myst_parser',
-    'sphinx.ext.napoleon'
+    'sphinx.ext.napoleon',
+    'sidenav_precompile',
     #    'sphinx.ext.mathjax',
 ]
 

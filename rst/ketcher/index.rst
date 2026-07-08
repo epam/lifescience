@@ -20,7 +20,7 @@ Ketcher is an open-source web-based chemical structure editor designed for drawi
 |Ketcher-Introduction|
 
 Main features
-----------------------------------
+-------------
 
 - **Support for Reactions** - Full-featured reaction support including reaction centers, reaction flags, reaction mapping, ability to add catalysts, reaction conditions, and other information.
 
@@ -57,7 +57,7 @@ Main features
 - **Ease of integration into your web-application** - There are two main integration options: as a React component library or as a ready-to-run application that can be embedded using an IFrame or a separate page. 
 
 License
----------------------------
+-------
 
 This program is free software licensed under the `Apache License, Version 2.0. <https://www.apache.org/licenses/LICENSE-2.0>`_ the license allows:
 
@@ -76,7 +76,7 @@ This program is free software licensed under the `Apache License, Version 2.0. <
 You must include the original copyright notice and disclaimer in any distribution.
 
 Useful links
--------------
+------------
 
 `Try Ketcher on the demo page <https://lifescience.opensource.epam.com/KetcherDemoSA/index.html>`_
 

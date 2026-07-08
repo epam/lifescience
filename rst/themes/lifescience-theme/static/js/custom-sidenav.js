@@ -5,36 +5,7 @@ $(document).ready(function() {
     if (!data.ul) return;
     data = data.ul.length > 1 ? data : data.ul[0];
 
-    var htmlstring =
-        '{{#each ul}}' +
-        '<div class="panel accordion-item">' +
-        '    {{#if ul}}' +
-        '    <div class="accordion-heading">' +
-        '        <p class="accordion-title">' +
-        '           <a data-toggle="collapse" data-parent="#accordion1"' +
-        '               class="accordion-toggle collapsed" href="#item{{@index}}">{{text}}</a>' +
-        '        </p>' +
-        '    </div>' +
-        '    <div class="accordion-collapse collapse" id="item{{@index}}">' +
-        '        <div class="accordion-body">' +
-        '            <ul>' +
-        '                {{#each ul}}' +
-        '                <li><a href="{{href}}">{{text}}</a></li>' +
-        '                {{/each}}' +
-        '            </ul>' +
-        '        </div>' +
-        '    </div>' +
-        '    {{else}}' +
-        '    <div class="accordion-heading">' +
-        '        <p class="accordion-title">' +
-        '            <a data-parent="#accordion1" class="accordion-toggle" href="{{href}}">{{text}}</a>' +
-        '        </p>' +
-        '    </div>' +
-        '    {{/if}}' +
-        '</div>' +
-        '{{/each}}';
-
-    var template = Handlebars.compile(htmlstring);
+    var template = Handlebars.templates['sidenav'];
     $('#accordion1').append(template(data));
 
     function getTocObject(current) {
