@@ -28,11 +28,11 @@ Here are the updated release notes with links to the corresponding issues:
 * [#3004](https://github.com/epam/ketcher/issues/3004) - Allow to select items from the Favorites tab
 * [#3088](https://github.com/epam/ketcher/issues/3088) - Rotate monomer attachment point to bond direction
 * [#3174](https://github.com/epam/ketcher/issues/3174) - RNA Bases are filtered wrong
-* [#3339](https://github.com/epam/ketcher/issues/3339) - Add empty options for atom charges and isotops
+* [#3339](https://github.com/epam/ketcher/issues/3339) - Add empty options for atom charges and isotopes
 * [#3387](https://github.com/epam/ketcher/issues/3387) - Save atom properties for atom list in ket format
-* [#3398](https://github.com/epam/ketcher/issues/3398) - When you save atom in ket format with substitutionCount greater then 6 , it is impossible to open it
+* [#3398](https://github.com/epam/ketcher/issues/3398) - When you save atom in ket format with substitutionCount greater than 6 , it is impossible to open it
 * [#3293](https://github.com/epam/ketcher/issues/3293) - Reduce the amount of flaky and failed tests
-* [#3408](https://github.com/epam/ketcher/issues/3408) - When insert a smarts with two query groups after inserting smarts with one query group error appear
+* [#3408](https://github.com/epam/ketcher/issues/3408) - When inserting a smarts with two query groups after inserting smarts with one query group error appear
 * [#3445](https://github.com/epam/ketcher/issues/3445) - Atom properties "Substitution count" and "Ring bond count" convert incorrectly to custom query
 * [#3431](https://github.com/epam/ketcher/issues/3431) – warnings appear while saving any structure as daylight smarts
 * [#3250](https://github.com/epam/ketcher/issues/3250) - Rna monomer accordion library should open from top to bottom
