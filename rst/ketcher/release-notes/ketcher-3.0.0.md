@@ -23,12 +23,12 @@ Here are the updated release notes with links to the corresponding issues:
 - [#6127](https://github.com/epam/ketcher/issues/6127) – Hover mouse over ambiguous monomer on Micromolecules canvas causes app crash
 - [#5476](https://github.com/epam/ketcher/issues/5476) – Copy/Cut and Paste using Ctrl+C/X and Ctrl+V doesn't work for static elements in Mozilla Firefox
 - [#5317](https://github.com/epam/ketcher/issues/5317) – Some side chain bonds are not shown in Sequence mode for bases, CHEMs, phosphates and sugars
-- [#5796](https://github.com/epam/ketcher/issues/5796) – Indigo functions doesn't work if monomer on micro canvas - system throws an error: Error: Cannot deserialize input JSON.
+- [#5796](https://github.com/epam/ketcher/issues/5796) – Indigo functions don't work if monomer on micro canvas - system throws an error: Error: Cannot deserialize input JSON.
 - [#5032](https://github.com/epam/ketcher/issues/5032) – Selection of monomers should disappear when the user moves the cursor
 - [#5139](https://github.com/epam/ketcher/issues/5139) – After pressing the Clear Canvas button in sequence-editing view, the Enter button does not start a new sequence but erases it
 - [#5231](https://github.com/epam/ketcher/issues/5231) – Canvas should remain in edit mode if we insert monomer from the library
 - [#5795](https://github.com/epam/ketcher/issues/5795) – Undo operation doesn't work for monomer at micro mode if it was deleted - system throws exception in console
-- [#6112](https://github.com/epam/ketcher/issues/6112) – System opens "intellisence"-like dropdown control in unnecessary case
+- [#6112](https://github.com/epam/ketcher/issues/6112) – System opens "IntelliSense"-like dropdown control in unnecessary case
 - [#5663](https://github.com/epam/ketcher/issues/5663) – Movement of microstructures on Sequence mode doesn't work
 - [#4533](https://github.com/epam/ketcher/issues/4533) – After inserting a nucleotide in the Text-editing mode, the cursor blinks in the wrong place
 - [#6026](https://github.com/epam/ketcher/issues/6026) – Bond length is different for monomers loaded from HELM and from the library

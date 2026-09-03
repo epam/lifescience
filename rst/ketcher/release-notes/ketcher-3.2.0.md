@@ -20,14 +20,14 @@ Here are the updated release notes with links to the corresponding issues:
 - [#6219](https://github.com/epam/ketcher/issues/6219) – Unable to save to HELM hydrogen connection between micromolecule (with AP) and monomer
 - [#6005](https://github.com/epam/ketcher/issues/6005) – Move the dot indicating a modified phosphate in sequence mode
 - [#4145](https://github.com/epam/ketcher/issues/4145) – Implement popup versions of Ketcher (and routing)
-- [#5700](https://github.com/epam/ketcher/issues/5700) – System allow to establish infinit number of bonds from monomer to microstructure
+- [#5700](https://github.com/epam/ketcher/issues/5700) – System allow to establish infinite number of bonds from monomer to microstructure
 - [#6534](https://github.com/epam/ketcher/issues/6534) – Adding nucleotide to the last position having phosphate in antisense causes exception: ReferenceError: process is not defined
 - [#6402](https://github.com/epam/ketcher/issues/6402) – Hydrogen bonds misaligned due to antisense strand direction change when opening or pasting a structure in Macro Mode
 - [#6464](https://github.com/epam/ketcher/issues/6464) – Splitting chain with Enter key doesn't work
 - [#6425](https://github.com/epam/ketcher/issues/6425) – Hiding of number indicators while in sync editing mode when the triangle overlaps with the number
 - [#6535](https://github.com/epam/ketcher/issues/6535) – Unable to add nucleoside to the end of sequence if hanging antisense monomer present
 - [#6561](https://github.com/epam/ketcher/issues/6561) – Switching to macromolecules changes CSS in the page
-- [#6369](https://github.com/epam/ketcher/issues/6369) – System doesn't switch Library tab to proper one if user changes typing type using keboard shortcuts
+- [#6369](https://github.com/epam/ketcher/issues/6369) – System doesn't switch Library tab to proper one if user changes typing type using keyboard shortcuts
 - [#6627](https://github.com/epam/ketcher/issues/6627) – Fix invisible snapping drawings after switching to micro mode
 - [#6621](https://github.com/epam/ketcher/issues/6621) – Fix monomer snapping wiping monomer labels
 - [#6608](https://github.com/epam/ketcher/issues/6608) – API setMolecule moves molecule off-canvas on second call
@@ -37,11 +37,11 @@ Here are the updated release notes with links to the corresponding issues:
 - [#6632](https://github.com/epam/ketcher/issues/6632) – New sequence appears gray after clearing the canvas in non-sync mode
 - [#6631](https://github.com/epam/ketcher/issues/6631) – Sync mode causes incorrect letter input after adding a monomer in non-sync mode
 - [#6606](https://github.com/epam/ketcher/issues/6606) – Adding nucleotide to the last position having phosphate in antisense works wrong
-- [#6531](https://github.com/epam/ketcher/issues/6531) – System can't add nucleotide between phosphate and nucleotide in antisence chain
+- [#6531](https://github.com/epam/ketcher/issues/6531) – System can't add nucleotide between phosphate and nucleotide in antisense chain
 - [#6617](https://github.com/epam/ketcher/issues/6617) – Empty element appears after undoing line deletion in Sequence mode and switching to Flex/Snake mode
-- [#6609](https://github.com/epam/ketcher/issues/6609) – System creates ambiguous RNA nucleotides instead of DNA ones in case of DNA antisense stand creation
+- [#6609](https://github.com/epam/ketcher/issues/6609) – System creates ambiguous RNA nucleotides instead of DNA ones in case of DNA antisense strand creation
 - [#6615](https://github.com/epam/ketcher/issues/6615) – Missing warning message when deleting all hydrogen bonds between two chains
-- [#6619](https://github.com/epam/ketcher/issues/6619) – System doesn't create antisense phosphate if it sistuated to the left from nubleotide
+- [#6619](https://github.com/epam/ketcher/issues/6619) – System doesn't create antisense phosphate if it situated to the left from nucleotide
 - [#6623](https://github.com/epam/ketcher/issues/6623) – Sense and antisense chains switch places during editing based on monomer count
 - [#6443](https://github.com/epam/ketcher/issues/6443) – System allow to select single antisense symbol that causes an error if it got deleted
 - [#4002](https://github.com/epam/ketcher/issues/4002) – getSmiles and getSmarts on query feature containing aromatic ring raises an error
