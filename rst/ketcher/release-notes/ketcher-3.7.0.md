@@ -28,12 +28,12 @@
 - [#7152](https://github.com/epam/ketcher/issues/7152) – Copy keyboard shortcut works wrong for text content
 - [#7423](https://github.com/epam/ketcher/issues/7423) – It is possible to drag monomer from library and drop it to sequence canvas
 - [#7512](https://github.com/epam/ketcher/issues/7512) – Library doesn't fit view port in Sequence mode in Popup mode
-- [#7513](https://github.com/epam/ketcher/issues/7513) – "Ghost image" doesn't positioned below mouse cursor if dragged from Library to canvas in popup mode
+- [#7513](https://github.com/epam/ketcher/issues/7513) – "Ghost image" isn't positioned below mouse cursor if dragged from Library to canvas in popup mode
 - [#7531](https://github.com/epam/ketcher/issues/7531) – Arrow icon appears in Sequence mode, violating requirement for Snake and Flex modes only
 - [#7538](https://github.com/epam/ketcher/issues/7538) – Unable to add ambiguous monomers via arrow button - no preview and errors in console
 - [#7539](https://github.com/epam/ketcher/issues/7539) – No tooltip shown and invalid attachment allowed when adding a monomer without R1 to selected monomer with free R2
 - [#7548](https://github.com/epam/ketcher/issues/7548) – Tooltip not shown and addition allowed when multiple monomers with free R2 are selected
-- [#7551](https://github.com/epam/ketcher/issues/7551) – Monomer drag-n-drop from Library to the canvas doesn't work for peptides it they were clicked on Sequence canvas
+- [#7551](https://github.com/epam/ketcher/issues/7551) – Monomer drag-n-drop from Library to the canvas doesn't work for peptides if they were clicked on Sequence canvas
 - [#7562](https://github.com/epam/ketcher/issues/7562) – Tooltip overlaps monomers when hovering over arrow button on monomer card
 - [#7575](https://github.com/epam/ketcher/issues/7575) – Monomer creation wizard opens despite selection being connected via non simple bond
 - [#7576](https://github.com/epam/ketcher/issues/7576) – Create monomer wizard is available for structures containing S-groups, R-groups, or extended table atoms

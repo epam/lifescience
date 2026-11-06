@@ -31,11 +31,11 @@
 - [#7152](https://github.com/epam/ketcher/issues/7152) – Copy keyboard shortcut works wrong for text content
 - [#7837](https://github.com/epam/ketcher/issues/7837) – Unable to create monomer if molecule loaded from KET
 - [#7846](https://github.com/epam/ketcher/issues/7846) – Connection between created monomer and the rest of molecule got lost after monomer creation
-- [#7814](https://github.com/epam/ketcher/issues/7814) – Connection point enumeration is wrong if they are already enumerated form range [3-8]
+- [#7814](https://github.com/epam/ketcher/issues/7814) – Connection point enumeration is wrong if they are already enumerated from range [3-8]
 - [#7688](https://github.com/epam/ketcher/issues/7688) – Attached groups are lost when saving and reopening monomer created via Monomer Wizard in KET format
-- [#7828](https://github.com/epam/ketcher/issues/7828) – Unable to assign atom as a leaving group event if it is eligable
+- [#7828](https://github.com/epam/ketcher/issues/7828) – Unable to assign atom as a leaving group even if it is eligible
 - [#7806](https://github.com/epam/ketcher/issues/7806) – Problematic points are not highlighted in red when validation is failed
-- [#7877](https://github.com/epam/ketcher/issues/7877) – Ketcher losts attachment point name on loading s-group from mol v3000
+- [#7877](https://github.com/epam/ketcher/issues/7877) – Ketcher loses attachment point name on loading s-group from mol v3000
 - [#7786](https://github.com/epam/ketcher/issues/7786) – In Snake mode after Undo bonds remain on canvas and cause console errors
 - [#7777](https://github.com/epam/ketcher/issues/7777) – Incorrect shortcut displayed for selection tools in Macro mode
 - [#7854](https://github.com/epam/ketcher/issues/7854) – Ketcher api doesn't work in proper order
@@ -48,7 +48,7 @@
 - [#7821](https://github.com/epam/ketcher/issues/7821) – Connection point enumeration is wrong R-groups outside [3-8] range
 - [#7813](https://github.com/epam/ketcher/issues/7813) – System should not allow to create monomer if atom with many R-groups in the selection
 - [#7815](https://github.com/epam/ketcher/issues/7815) – System changes right connection point (R2) to left one (R1) if no R1 group defined
-- [#7816](https://github.com/epam/ketcher/issues/7816) – System swaps left connection point (R2) and right connection point (R1) if R2 group was created early that R1
+- [#7816](https://github.com/epam/ketcher/issues/7816) – System swaps left connection point (R2) and right connection point (R1) if R2 group was created earlier than R1
 - [#7606](https://github.com/epam/ketcher/issues/7606) – Pasting text into Symbol or Name fields in Monomer Wizard triggers unrelated "Convert error"
 - [#7801](https://github.com/epam/ketcher/issues/7801) – Incorrect edit dialog behaviour when right-clicking on attachment atom
 - [#7798](https://github.com/epam/ketcher/issues/7798) – Atom label is not correct in attributes panel for leaving atoms different from hydrogen

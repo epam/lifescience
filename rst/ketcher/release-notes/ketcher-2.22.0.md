@@ -24,7 +24,7 @@ Here are the updated release notes with links to the corresponding issues:
 * [#5391](https://github.com/epam/ketcher/issues/5391) – Migrate to Indigo 1.21.0 in-browser module
 
 ### Bugfixes and improvements
-* [#3943](https://github.com/epam/ketcher/issues/3943) – System allow to create atoms with Charge value out or range
+* [#3943](https://github.com/epam/ketcher/issues/3943) – System allow to create atoms with Charge value out of range
 * [#3501](https://github.com/epam/ketcher/issues/3501) – 3d mol files appear as 2D in Miew
 * [#4349](https://github.com/epam/ketcher/issues/4349) – Selection does not work in sequence editing with Shift+Up/Down arrow combination
 * [#4508](https://github.com/epam/ketcher/issues/4508) – In the Text-editing mode, when selecting nucleotides linked through phosphates R2-R2, an error appears in the Console
@@ -43,7 +43,7 @@ Here are the updated release notes with links to the corresponding issues:
 * [#4693](https://github.com/epam/ketcher/issues/4693) – Incorrect bond alignment to tBu S-group
 * [#4730](https://github.com/epam/ketcher/issues/4730) – System doubles number of pasted monomers after switching from flex to sequence
 * [#4734](https://github.com/epam/ketcher/issues/4734) – Monomers from macro mode are not erased by Erase tool in micro mode
-* [#4690](https://github.com/epam/ketcher/issues/4690) – Undo problem while layout is changed on the Snack of Flex modes and switch through modes
+* [#4690](https://github.com/epam/ketcher/issues/4690) – Undo problem while layout is changed on the Snake of Flex modes and switch through modes
 * [#4744](https://github.com/epam/ketcher/issues/4744) – When changing zoom level in macro mode, there is no percentage indication
 * [#4739](https://github.com/epam/ketcher/issues/4739) – Pasting IDT structures via clipboard does not work
 * [#4740](https://github.com/epam/ketcher/issues/4740) – Delete of cycled sequence from the canvas causes delete of another cycled sequence bond that makes it non-cycled
