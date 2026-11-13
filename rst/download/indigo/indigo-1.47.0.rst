@@ -80,17 +80,17 @@ Indigo Python SDK can be found at `PyPi <https://pypi.org/project/epam.indigo/>`
 
 One can install the Indigo library using *pip* utility
 
+
+.. code-block:: xml
+
+    pip install epam.indigo
+
 Maven Repository
 ~~~~~~~~~~~~~~~~
 
 Indigo Java packages available at `Maven Central <https://central.sonatype.com/artifact/com.epam.indigo>`__ and `MVNRepository <https://mvnrepository.com/artifact/com.epam.indigo>`__.
 
 Just add ``com.epam.indigo:indigo`` as a dependency into the project.
-
-
-.. code-block:: xml
-
-    pip install epam.indigo
 
 
 
