@@ -26,6 +26,7 @@ Older releases
 
     bingo/bingo-1.48.0.rst
     bingo/bingo-1.47.0.rst
+    bingo/bingo-1.46.0.rst
     bingo/bingo-1.45.0.rst
     bingo/bingo-1.44.0.rst
     bingo/bingo-1.43.0.rst
