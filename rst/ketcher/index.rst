@@ -6,6 +6,7 @@
   :includehidden:
 
   release-notes/index
+  KET format specification <ket-specification/index>
 
 Ketcher is an open-source web-based chemical structure editor designed for drawing small molecules, biomolecules, and chemical reactions. Using Ketcher, chemists, biochemists, technicians, academics, students, and any other chemistry aficionados, are able to easily:
 
@@ -34,7 +35,7 @@ Main features
 
 |ACS|
 
-- **Support for all Common File Formats** – In addition to Ketcher’s own file format – KET that supports all available features, many other formats are supported: MDL Molfiles/SCSR (v2000 and v3000), SDF, RDF, SMARTS, SMILES, ChemAxon Extended SMILES, InChi, CDXML, Sequence, FASTA, IDT, HELM, etc.
+- **Support for all Common File Formats** – In addition to Ketcher’s own file format – :doc:`KET <ket-specification/index>` that supports all available features, many other formats are supported: MDL Molfiles/SCSR (v2000 and v3000), SDF, RDF, SMARTS, SMILES, ChemAxon Extended SMILES, InChi, CDXML, Sequence, FASTA, IDT, HELM, etc.
 
 - **Modality Agnostic Nature** - Ability to draw, view, edit, and save both small molecules and biomolecules in a single drawing.
 
@@ -87,6 +88,8 @@ Useful links
 `Video tutorials <https://www.youtube.com/watch?v=Op-9YDmXqF8&list=PLuQ7Yv7o3G4erGKNIr0vWXmod14yTUOKv>`_
 
 `API documentation <https://github.com/epam/ketcher/blob/master/README.md#ketcher-api>`_
+
+:doc:`KET format specification <ket-specification/index>`
 
 `Report a bug or suggest a feature on GitHub <https://github.com/epam/ketcher/issues>`_
 

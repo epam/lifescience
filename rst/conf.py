@@ -48,6 +48,7 @@ extensions = [
     'myst_parser',
     'sphinx.ext.napoleon',
     'sidenav_precompile',
+    'ket_specification',
     #    'sphinx.ext.mathjax',
 ]
 
@@ -57,6 +58,10 @@ source_suffix = {
     '.rst': 'restructuredtext',
     '.md': 'markdown',
 }
+
+# Without heading anchors MyST writes a "page.md#section" link out as it is: a 404 and no warning. With them it
+# resolves a link to a heading up to this level, and a link to a deeper one is a build warning.
+myst_heading_anchors = 3
 
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'

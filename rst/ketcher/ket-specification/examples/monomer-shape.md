@@ -1,0 +1,118 @@
+---
+kind: example
+shows: [monomer-shape]
+---
+
+# Monomer shape
+
+The dipeptide Ala–Cys with a generic shape that stands for both monomers.
+
+```json
+{
+  "ket_version": "2.0.0",
+  "root": {
+    "nodes": [{"$ref": "monomer0"}, {"$ref": "monomer1"}, {"$ref": "monomerShape-0"}],
+    "connections": [
+      {
+        "connectionType": "single",
+        "endpoint1": {"monomerId": "monomer0", "attachmentPointId": "R2"},
+        "endpoint2": {"monomerId": "monomer1", "attachmentPointId": "R1"}
+      }
+    ],
+    "templates": [{"$ref": "monomerTemplate-A___Alanine"}, {"$ref": "monomerTemplate-C___Cysteine"}]
+  },
+  "monomer0": {
+    "type": "monomer",
+    "id": "0",
+    "position": {"x": 1.25, "y": -1.25},
+    "alias": "A",
+    "templateId": "A___Alanine"
+  },
+  "monomer1": {
+    "type": "monomer",
+    "id": "1",
+    "position": {"x": 2.75, "y": -1.25},
+    "alias": "C",
+    "templateId": "C___Cysteine"
+  },
+  "monomerTemplate-A___Alanine": {
+    "type": "monomerTemplate",
+    "atoms": [
+      {"label": "N", "location": [-0.866, -0.25, 0]},
+      {"label": "C", "location": [0, 0.25, 0], "stereoLabel": "abs"},
+      {"label": "H", "location": [-1.732, 0.25, 0]},
+      {"label": "C", "location": [0.866, -0.25, 0]},
+      {"label": "O", "location": [1.732, 0.25, 0]},
+      {"label": "O", "location": [0.866, -1.25, 0]},
+      {"label": "C", "location": [0, 1.25, 0]}
+    ],
+    "bonds": [
+      {"type": 1, "atoms": [0, 1]},
+      {"type": 1, "atoms": [0, 2]},
+      {"type": 1, "atoms": [1, 3]},
+      {"type": 1, "atoms": [3, 4]},
+      {"type": 2, "atoms": [3, 5]},
+      {"type": 1, "atoms": [1, 6], "stereo": 1}
+    ],
+    "class": "AminoAcid",
+    "classHELM": "PEPTIDE",
+    "id": "A___Alanine",
+    "fullName": "Alanine",
+    "alias": "A",
+    "aliasHELM": "A",
+    "aliasBILN": "A",
+    "attachmentPoints": [
+      {"attachmentAtom": 0, "leavingGroup": {"atoms": [2]}, "type": "left"},
+      {"attachmentAtom": 3, "leavingGroup": {"atoms": [4]}, "type": "right"}
+    ],
+    "naturalAnalogShort": "A",
+    "modificationTypes": ["Natural amino acid"]
+  },
+  "monomerTemplate-C___Cysteine": {
+    "type": "monomerTemplate",
+    "atoms": [
+      {"label": "N", "location": [-0.866, -1, 0]},
+      {"label": "C", "location": [0, -0.5, 0], "stereoLabel": "abs"},
+      {"label": "H", "location": [-1.732, -0.5, 0]},
+      {"label": "C", "location": [0.866, -1, 0]},
+      {"label": "O", "location": [1.732, -0.5, 0]},
+      {"label": "O", "location": [0.866, -2, 0]},
+      {"label": "C", "location": [0, 0.5, 0]},
+      {"label": "S", "location": [-0.866, 1, 0]},
+      {"label": "H", "location": [-0.866, 2, 0]}
+    ],
+    "bonds": [
+      {"type": 1, "atoms": [0, 1]},
+      {"type": 1, "atoms": [0, 2]},
+      {"type": 1, "atoms": [1, 3]},
+      {"type": 1, "atoms": [3, 4]},
+      {"type": 2, "atoms": [3, 5]},
+      {"type": 1, "atoms": [1, 6], "stereo": 1},
+      {"type": 1, "atoms": [6, 7]},
+      {"type": 1, "atoms": [7, 8]}
+    ],
+    "class": "AminoAcid",
+    "classHELM": "PEPTIDE",
+    "id": "C___Cysteine",
+    "fullName": "Cysteine",
+    "alias": "C",
+    "aliasHELM": "C",
+    "aliasBILN": "C",
+    "attachmentPoints": [
+      {"attachmentAtom": 0, "leavingGroup": {"atoms": [2]}, "type": "left"},
+      {"attachmentAtom": 3, "leavingGroup": {"atoms": [4]}, "type": "right"},
+      {"attachmentAtom": 7, "leavingGroup": {"atoms": [8]}, "type": "side"}
+    ],
+    "naturalAnalogShort": "C",
+    "modificationTypes": ["Natural amino acid"]
+  },
+  "monomerShape-0": {
+    "type": "monomerShape",
+    "id": "0",
+    "shape": "generic",
+    "collapsed": false,
+    "position": {"x": 2, "y": -2.5},
+    "monomers": ["monomer0", "monomer1"]
+  }
+}
+```
