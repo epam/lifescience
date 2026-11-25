@@ -13,4 +13,7 @@ $(window).on('load',function () {
     UUI.Global_Search.init();
 
     $('.news').height($('#main-tiles').height())
+    $(document).on('click', 'a.no-action', function(e) {
+        e.preventDefault();
+    });
 });
