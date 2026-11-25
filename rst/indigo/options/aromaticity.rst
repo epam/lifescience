@@ -35,13 +35,10 @@ Aromaticity options
     indigoRenderer.renderToFile(m, "result_3.png")
 
 .. image:: ../../assets/indigo/render/indigorenderer_210b033a455bb5265098a7d10aa011a7f7aa8b061.svg
-    :scale: 33
 
 .. image:: ../../assets/indigo/render/indigorenderer_210b033a455bb5265098a7d10aa011a7f7aa8b062.svg
-    :scale: 33
 
 .. image:: ../../assets/indigo/render/indigorenderer_210b033a455bb5265098a7d10aa011a7f7aa8b063.svg
-    :scale: 33
 
 .. indigo_option::
     :name: dearomatize-verification
@@ -68,13 +65,10 @@ Aromaticity options
     indigoRenderer.renderToFile(m, "result_3.png")
 
 .. image:: ../../assets/indigo/render/indigorenderer_64a205b625eac91606167f67326e4b4634dd73ca1.svg
-    :scale: 33
 
 .. image:: ../../assets/indigo/render/indigorenderer_64a205b625eac91606167f67326e4b4634dd73ca2.svg
-    :scale: 33
 
 .. image:: ../../assets/indigo/render/indigorenderer_64a205b625eac91606167f67326e4b4634dd73ca3.svg
-    :scale: 33
 
 
 .. indigo_option::
@@ -86,18 +80,14 @@ Aromaticity options
     Molfile format doesn't store information about hydrogens in aromatic rings and this leads to a situation when two different (tautomers) structure has the same aromatization.
 
     .. image:: ../../assets/indigo/render/indigorenderer_92997ca46105f8d8f120747a8852eaa2a02fba521.svg
-        :scale: 50
 
     .. image:: ../../assets/indigo/render/indigorenderer_92997ca46105f8d8f120747a8852eaa2a02fba522.svg
-        :scale: 50
 
     Molecules (A) and (B) are different, and aromatic forms are the following:
 
     .. image:: ../../assets/indigo/render/indigorenderer_fd2b85cebb2428032323245bf285c71d33a012761.svg
-        :scale: 50
 
     .. image:: ../../assets/indigo/render/indigorenderer_fd2b85cebb2428032323245bf285c71d33a012762.svg
-        :scale: 50
 
     Such aromatic molecules can be dearomatized, all atoms has specific number of implicit hydrogens and we can compute canonical SMILES:
 
@@ -111,7 +101,6 @@ Aromaticity options
     Let's consider that we loaded a molecule (A) or (B) in an aromatic form from molfile. If explicit hydrogens are not saved into molfile then we get the following structure:
 
     .. image:: ../../assets/indigo/render/indigorenderer_2d8db7fdcd7c9c858037d63ee71e35b7bcaa202a3.svg
-        :scale: 100
 
     Canonical SMILES computation throws an exception on such molecule because we cannot decided if it is (A) or (B).
 
@@ -126,7 +115,6 @@ Aromaticity options
         indigoRenderer.renderToFile(m3, "result_3.png")
 
     .. image:: ../../assets/indigo/render/indigorenderer_13e298caf26dc7b9374b1fbacd3f211a9e8c46d03.svg
-        :scale: 100
 
     But such check it can be set explicitly if needed, and dearomatize method will throw an exception in this case:
 
@@ -162,7 +150,5 @@ Aromaticity options
     Input: :download:`data/ambiguous_arom4.mol`
 
     .. image:: ../../assets/indigo/render/indigorenderer_8162f487b65b5186515d86c663c78d3546a4d5301.svg
-        :scale: 50
 
     .. image:: ../../assets/indigo/render/indigorenderer_8162f487b65b5186515d86c663c78d3546a4d5302.svg
-        :scale: 50

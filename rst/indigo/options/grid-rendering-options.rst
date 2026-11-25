@@ -38,10 +38,8 @@ Grid rendering options
     Input: :download:`data/pubchem-subset.sdf`
 
     .. image:: ../../assets/indigo/render/indigorenderer_f2c0953e4d94d496be0b86e91d17c3081f9a4ced2.svg
-        :scale: 50
 
     .. image:: ../../assets/indigo/render/indigorenderer_f2c0953e4d94d496be0b86e91d17c3081f9a4ced1.svg
-        :scale: 50
 
 
 .. indigo_option::
@@ -71,7 +69,6 @@ Grid rendering options
     Input: :download:`data/pubchem-subset.sdf`
 
     .. image:: ../../assets/indigo/render/indigorenderer_1f76fdbc2b15e2ce3e18489cad7cfb7e9ed273b61.svg
-        :scale: 100
 
 .. indigo_option::
     :name: render-grid-title-font-size

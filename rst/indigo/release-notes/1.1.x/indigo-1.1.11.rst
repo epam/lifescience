@@ -104,10 +104,8 @@ There are new ``stereocenterGroup`` and ``setStereocenterGroup`` method to get/s
 Input: :download:`data/stereogroups.mol`
 
 .. image:: ../../../assets/indigo/render/indigorenderer_2704cb623d86b84ea79bef672ccd152b3b955a1b1.svg
-    :scale: 50
 
 .. image:: ../../../assets/indigo/render/indigorenderer_2704cb623d86b84ea79bef672ccd152b3b955a1b2.svg
-    :scale: 50
 
 Output:
 
@@ -133,10 +131,8 @@ The ``markStereobonds`` method set up/down bond marks if a stereoconfiguration w
 Input: :download:`data/stereobonds.mol`
 
 .. image:: ../../../assets/indigo/render/indigorenderer_3a20ff5ecc9af6a5b8ed1d2fca28c05156928b771.svg
-    :scale: 50
 
 .. image:: ../../../assets/indigo/render/indigorenderer_3a20ff5ecc9af6a5b8ed1d2fca28c05156928b772.svg
-    :scale: 50
 
 .. _indigo-1.1.11-chirality-validation:
 
@@ -161,10 +157,8 @@ if a molecule matches to its mirror and clears chirality flag in this case [#fch
     print("After:  " + m.smiles())
 
 .. image:: ../../../assets/indigo/render/indigorenderer_71e6960fdccca03b196f4a3c8032ea24fb6902f51.svg
-    :scale: 50
 
 .. image:: ../../../assets/indigo/render/indigorenderer_71e6960fdccca03b196f4a3c8032ea24fb6902f52.svg
-    :scale: 50
 
 Output:
 
@@ -207,10 +201,8 @@ There are 5 s-groups are support by Indigo, but several methods were missing [#f
 Input: :download:`data/rep-dat.mol`
 
 .. image:: ../../../assets/indigo/render/indigorenderer_4bd0fd7dec77550babcc1df588415c36b8cd141b1.svg
-    :scale: 50
 
 .. image:: ../../../assets/indigo/render/indigorenderer_4bd0fd7dec77550babcc1df588415c36b8cd141b2.svg
-    :scale: 50
 
 Output:
 
@@ -304,10 +296,8 @@ There is a new method ``removeBonds`` that can remove a set of bonds specified b
     indigoRenderer.renderToFile(m, 'result_2.png')
 
 .. image:: ../../../assets/indigo/render/indigorenderer_02edf78d175f7f784201028979bb013c8bb41dac1.svg
-    :scale: 50
 
 .. image:: ../../../assets/indigo/render/indigorenderer_02edf78d175f7f784201028979bb013c8bb41dac2.svg
-    :scale: 50
 
 ================
 Rendering module
@@ -335,7 +325,6 @@ Indigo can use a specified color for each atom and interpolate these colors for 
     indigoRenderer.renderToFile(m, 'result.png')
 
 .. image:: ../../../assets/indigo/render/indigorenderer_bfb81f9acd9910b65776d216ac99637f46e02283.svg
-    :scale: 100
 
 For a larger example see :ref:`indigo-example-atom-coloring`.
 
@@ -364,13 +353,10 @@ Bond line width
     indigoRenderer.renderToFile(m, 'result_3.png')
 
 .. image:: ../../../assets/indigo/render/indigorenderer_0926707e5a499b69dc1620dd06fb591327ca96391.svg
-    :scale: 33
 
 .. image:: ../../../assets/indigo/render/indigorenderer_0926707e5a499b69dc1620dd06fb591327ca96392.svg
-    :scale: 33
 
 .. image:: ../../../assets/indigo/render/indigorenderer_0926707e5a499b69dc1620dd06fb591327ca96393.svg
-    :scale: 33
 
 .. rubric:: Footnotes
 

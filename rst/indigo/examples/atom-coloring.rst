@@ -5,7 +5,6 @@ Atom Coloring
 =============
 
 .. image:: ../../assets/indigo/render/atom-coloring-main.svg
-    :scale: 100
 
 This example shows how to highlight different molecule atom based on the set of functional groups and their activities. 
 For example, we have functional groups with positive and negative activity and want to color molecule according to this activity. 
@@ -83,7 +82,6 @@ The following code prints activity value for a given structure:
     indigoRenderer.renderToFile(m, 'result.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_9f8804e09c28a4040adf6394af3496e7a41d6dfd.svg
-    :scale: 100
 
 Output:
 
@@ -161,7 +159,6 @@ Wrapping all these method one can color and render an arbitrary molecule:
     indigoRenderer.renderToFile(m, 'result.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_bc73703f76a1d6a3ec77e0e3cf326a4d18f89ab9.svg
-    :scale: 100
 
 ---------
 Color bar
@@ -203,7 +200,6 @@ Standalone color bar looks in the following way:
     indigoRenderer.renderToFile(m, 'result.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_c4599ab8d315b7f9fac0e658a1c631a2ff537a68.svg
-    :scale: 100
 
 Overall example for a single molecule:
     
@@ -219,7 +215,6 @@ Overall example for a single molecule:
     indigoRenderer.renderToFile(m, 'result.png')
 
 .. image:: ../../assets/indigo/render/atom-coloring-main.svg
-    :scale: 100
 
 --------------------------------------
 Rendering a set of molecules in a grid
@@ -251,7 +246,6 @@ Atom coloring works not only for a single structure but for grid rendering too.
 Input: :download:`data/pubchem-9-rand.smi`
 
 .. image:: ../../assets/indigo/render/indigorenderer_4d1088f16de9fb363ef48aa35c0b366ef7d2e9a7.svg
-    :scale: 100
 
 Content of the file :download:`data/pubchem-9-rand.smi` with 9 randomly selected molecules that is used in the example above:
     

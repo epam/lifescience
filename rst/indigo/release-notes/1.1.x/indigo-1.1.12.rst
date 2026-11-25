@@ -75,7 +75,6 @@ Cis-trans bonds in rings are saved using SMILES extension with "c" and "t" field
     print(m.canonicalSmiles())
 
 .. image:: ../../../assets/indigo/render/indigorenderer_183a4eab0bd10c4ab060ccb44b71ce55909e3fa1.svg
-    :scale: 100
 
 Output:
 
@@ -106,10 +105,8 @@ To depict Sugars Indigo can automatically detect where bold bond should be drawn
 Input: :download:`data/bold-bond2.mol`
 
 .. image:: ../../../assets/indigo/render/indigorenderer_b785e84c4c703e4bfa2242fbc7675e5869a6eea11.svg
-    :scale: 50
 
 .. image:: ../../../assets/indigo/render/indigorenderer_b785e84c4c703e4bfa2242fbc7675e5869a6eea12.svg
-    :scale: 50
 
 .. _indigo-1.1.12-saver:
 

@@ -1354,23 +1354,18 @@ And for reaction SMARTS:
 The output depends on the set of tautomers found by the selected enumeration procedure. For example for the following molecule/query the output differs:
 
 .. image:: ../assets/indigo/render/indigorenderer_160ab50b9117ce610b1bce00abfa14905e0fdaad.svg
-    :scale: 100
 
 Below is the set of possible tautomers for ``INCHI`` option and query mappings:
 
 .. image:: ../assets/indigo/render/indigorenderer_e739e1ae93afea9c4e8a60e0562f2b0a1adc8757.svg
-    :scale: 100
 
 .. image:: ../assets/indigo/render/indigorenderer_2b43659dafd6589a846d9e28d3c4e55330dcc54e.svg
-    :scale: 100
 
 The result for ``RSMARTS`` option (same molecule and query):
 
 .. image:: ../assets/indigo/render/indigorenderer_0014bb4abb2b3ceb6fc77f4f996af8811b0667b4.svg
-    :scale: 100
 
 .. image:: ../assets/indigo/render/indigorenderer_4296e286328892f415b039db518f8b67a0812a9e.svg
-    :scale: 100
 
 
 Similarity Search

@@ -98,7 +98,6 @@ charges, geometry, valences, atoms and bonds properties) in accordance with requ
     indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
 
 .. image:: ../../../assets/indigo/render/indigorenderer_527964ef842912c52f81607c9069f8eb49b9ea7f.svg
-    :scale: 100
 
 See `examples <../../../indigo/examples/standardize.html>`__ page to find more usage examples.
 
@@ -121,7 +120,6 @@ Improvements and fixes were applied for the stereo algorithm.
 Now Indigo restores stereo configurations according to the given information. Here is an example where stereo configuration is defined *incorrectly*. But for SMARTS pattern it is required to find all molecules with *any* stereo-center, thus no errors should be raised while SMARTS loading.  
 
 .. image:: ../../../assets/indigo/render/indigorenderer_74eb5f6fb86cb61ee72d740216b1cbc54ddbcb41.svg
-    :scale: 100
 
 Release includes also other stereo and cis/trans improvements: loading/serialization, bidirection mode, haworth projection, etc. 
 

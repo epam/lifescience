@@ -35,7 +35,6 @@ Transform SCSR into full CTAB representation
 Input: :download:`data/scsr-example1.mol`
 
 .. image:: ../../assets/indigo/render/indigorenderer_c0ccb92117fa480d9a8dfdf0fe374a201c5f039e.svg
-    :scale: 100
 
 
 ------------------------
@@ -71,4 +70,3 @@ Transform CTAB into SCSR
 Input: :download:`data/scsr-example2.mol`, :download:`data/scsr-templates.mol`
 
 .. image:: ../../assets/indigo/render/indigorenderer_ac7056efbe09096e375b51339911ffff8bb43a85.svg
-    :scale: 100

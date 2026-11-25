@@ -25,4 +25,7 @@ $(document).ready(function() {
         }
         return newNode;
     }
+    $(document).on('contextmenu', '.mCSB_buttonUp, .mCSB_buttonDown, .mCSB_buttonLeft, .mCSB_buttonRight', function(e) {
+        e.preventDefault();
+    });
 });

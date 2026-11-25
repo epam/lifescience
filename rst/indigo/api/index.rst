@@ -1183,10 +1183,8 @@ Python:
     indigoRenderer.renderToFile(m, 'result_2.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_e2b61a77b9a68f5aeeca12da245bb3baef011f881.svg
-    :scale: 50
 
 .. image:: ../../assets/indigo/render/indigorenderer_e2b61a77b9a68f5aeeca12da245bb3baef011f882.svg
-    :scale: 50
 
 Output:
 
@@ -1211,10 +1209,8 @@ The ``markStereobonds`` method set up/down bond marks if a stereoconfiguration w
     indigoRenderer.renderToFile(m, 'result_2.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_b49732821eb4b39738446ec8bd0d91f726c22c591.svg
-    :scale: 50
 
 .. image:: ../../assets/indigo/render/indigorenderer_b49732821eb4b39738446ec8bd0d91f726c22c592.svg
-    :scale: 50
 
 Enumeration of Submolecules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3184,7 +3180,6 @@ Python:
     indigoRenderer.renderGridToFile(rxn_array, None, 2, 'result_rpe.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_8ea7fcead360b2449a4ba6fc1941fc59b5654ca4rpe.svg
-    :scale: 100
 
 Reaction-based Molecule Transformations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
