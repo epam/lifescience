@@ -36,7 +36,6 @@ This examples shows difference between "smart" and "simple" layout:
 Input: :download:`data/smart-simple-compare.smi`
 
 .. image:: ../../assets/indigo/render/indigorenderer_480f85be1418d3d012b0aaa65bad63a64a6a2893.svg
-    :scale: 100
 
 Content of the file :download:`data/smart-simple-compare.smi` with 6 molecules that is used in the example above:
     

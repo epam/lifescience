@@ -85,7 +85,6 @@ The following code prints the list of tautomers for a given molecule:
     indigoRenderer.renderGridToFile(array, None, 4, 'result.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_fc243baf7f8fdbed66cf377264e9c87e13195acd.svg
-    :scale: 100
 
 Output:
 
@@ -135,7 +134,6 @@ If the molecule is aromatized before enumeration, the list of tautomers will be 
     indigoRenderer.renderGridToFile(array, None, 4, 'result.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_2c90f4df5002473895e899ae4c03ffa810da31f2.svg
-    :scale: 100
 
 Output:
 
@@ -186,7 +184,6 @@ The following code uses reaction SMARTS algorithm (may give different set of tau
     indigoRenderer.renderGridToFile(array, None, 4, 'result.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_30af5691078187d43876f72d8d301b0e7f483e0c.svg
-    :scale: 100
 
 Output:
 
@@ -362,7 +359,6 @@ mol file generation.
 Input: :download:`data/RS-example.mol`
 
 .. image:: ../../assets/indigo/render/indigorenderer_a11f5612124e3f20e97042077ba45271dec84e04.svg
-    :scale: 100
 
 .. code-block:: python
     
@@ -394,7 +390,6 @@ Input: :download:`data/RS-example.mol`
 Input: :download:`data/ZE-example.mol`
 
 .. image:: ../../assets/indigo/render/indigorenderer_b5d4da9a52ff2a8e8e5c6d507e60e5bdf717a529.svg
-    :scale: 100
 
 .. code-block:: python
     
@@ -426,7 +421,6 @@ Input: :download:`data/ZE-example.mol`
 Input: :download:`data/Z-example.mol`
 
 .. image:: ../../assets/indigo/render/indigorenderer_8aed5a13a2f543ef8cf2e508b672a72c19b8231b.svg
-    :scale: 100
 
 There are also several examples for complicated structures when different software provides different
 CIP stereo descriptors estimations:
@@ -465,7 +459,6 @@ The first case is the molecule with isotope inclusion.
 Input: :download:`data/C14_R_iso.mol`, :download:`data/C14_R_iso_2.mol`
 
 .. image:: ../../assets/indigo/render/indigorenderer_24ad54f604eff1be4c07b95fd60e607fae100e55.svg
-    :scale: 100
 
 The second case is the molecule with cyclic ligands and heterocycles.
 
@@ -501,4 +494,3 @@ The second case is the molecule with cyclic ligands and heterocycles.
 Input: :download:`data/P-92_2_1_3_ex1.mol`, :download:`data/P-92_2_1_3_ex2.mol`
 
 .. image:: ../../assets/indigo/render/indigorenderer_e785f179a232809bccec3d2e9207be0064ddca50.svg
-    :scale: 100

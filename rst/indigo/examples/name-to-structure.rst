@@ -30,7 +30,6 @@ Converting to structure using ``nameToStructure`` method
     indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_863263b92b3f49faadb8f7599c15b7a6510eb0c1.svg
-    :scale: 100
 
 Use loadMolecule
 ----------------
@@ -56,4 +55,3 @@ Converting to structure using ``loadMolecule`` method (automatic detection)
     indigoRenderer.renderGridToFile(array, None, 2, 'result.png')
 
 .. image:: ../../assets/indigo/render/indigorenderer_e49f8cb71d69f1726a88c41ad770ad4584080551.svg
-    :scale: 100

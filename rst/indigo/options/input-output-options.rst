@@ -23,7 +23,6 @@ Generic options
     Input: :download:`data/noncritial_query.mol`
 
     .. image:: ../../assets/indigo/render/indigorenderer_8fe6c82dcb7a4d85e0a6fde70abbde2ec24951d9.svg
-        :scale: 100
 
     When such query molecule is loaded as ordinary molecule Indigo throws an exception about query features:
 
@@ -50,7 +49,6 @@ Generic options
         indigoRenderer.renderToFile(m, 'result.png')
     
     .. image:: ../../assets/indigo/render/indigorenderer_6c03f317d6242e8caddd68ef4bbf55839a561d6b.svg
-        :scale: 100
 
 .. indigo_option::
     :name: treat-x-as-pseudoatom
@@ -81,10 +79,8 @@ Generic options
     Input: :download:`data/3d-chiral.mol`
 
     .. image:: ../../assets/indigo/render/indigorenderer_063f599b02154411b51fb6c54491bba80d8092081.svg
-        :scale: 50
 
     .. image:: ../../assets/indigo/render/indigorenderer_063f599b02154411b51fb6c54491bba80d8092082.svg
-        :scale: 50
 
 .. indigo_option::
     :name: molfile-saving-mode

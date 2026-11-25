@@ -32,16 +32,12 @@ Reaction Products Enumeration and Transformation
     performReaction(reaction, mons)
 
 .. image:: ../../assets/indigo/render/indigorenderer_1a61f4d79f7235f339f19077ab30d5f4991ee7fareaction.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_1a61f4d79f7235f339f19077ab30d5f4991ee7famonomers_1.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_1a61f4d79f7235f339f19077ab30d5f4991ee7famonomers_2.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_1a61f4d79f7235f339f19077ab30d5f4991ee7fa2.svg
-    :scale: 25
 
 .. indigo_option::
     :name: rpe-mode
@@ -72,17 +68,13 @@ Reaction Products Enumeration and Transformation
     performReaction(reaction, mons)
 
 .. image:: ../../assets/indigo/render/indigorenderer_7834e1712f1fb80a558b8e476aef20a9b6d77854reaction.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_7834e1712f1fb80a558b8e476aef20a9b6d77854monomers_1.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_7834e1712f1fb80a558b8e476aef20a9b6d77854monomers_2.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_7834e1712f1fb80a558b8e476aef20a9b6d778542.svg
-    :scale: 25
-   
+
 .. code-block:: python
        
     reaction = indigo.loadQueryReactionFromFile('data/rpe/mode/reaction.rxn')
@@ -100,16 +92,12 @@ Reaction Products Enumeration and Transformation
     performReaction(reaction, mons)
 
 .. image:: ../../assets/indigo/render/indigorenderer_e429ea8e132ac97d7659820fd3a254ebb383d2a4reaction.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_e429ea8e132ac97d7659820fd3a254ebb383d2a4monomers_1.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_e429ea8e132ac97d7659820fd3a254ebb383d2a4monomers_2.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_e429ea8e132ac97d7659820fd3a254ebb383d2a42.svg
-    :scale: 25
 
 .. indigo_option::
     :name: rpe-self-reaction
@@ -135,16 +123,12 @@ Reaction Products Enumeration and Transformation
     performReaction(reaction, mons)
 
 .. image:: ../../assets/indigo/render/indigorenderer_c1233cd3aa11ecd6fef27d2aa4434a4a96d964d8reaction.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_c1233cd3aa11ecd6fef27d2aa4434a4a96d964d8monomers_1.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_c1233cd3aa11ecd6fef27d2aa4434a4a96d964d8monomers_2.svg
-    :scale: 25
 
 .. image:: ../../assets/indigo/render/indigorenderer_c1233cd3aa11ecd6fef27d2aa4434a4a96d964d82.svg
-    :scale: 25
 
 .. indigo_option::
     :name: rpe-max-products-count
