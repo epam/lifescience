@@ -14,7 +14,6 @@ Stereocenters options
     Input: :download:`data/stereoerrors.mol`
 
     .. image:: ../../assets/indigo/render/indigorenderer_c233d91eab44d2961f49a49b722bbb4fd7f19beb.svg
-        :scale: 100
 
     Stereobond near Oxygen atom is probably set in a wrong direction bny mistake, and when loaded with Indigo one gets an exception about invalid stereobonds configuration:
 
@@ -60,13 +59,10 @@ Stereocenters options
         indigoRenderer.renderToFile(m, 'result_3.png')
 
     .. image:: ../../assets/indigo/render/indigorenderer_ccdb476c0abec6500124086d93594adf7b28c9701.svg
-        :scale: 33
 
     .. image:: ../../assets/indigo/render/indigorenderer_ccdb476c0abec6500124086d93594adf7b28c9702.svg
-        :scale: 33
 
     .. image:: ../../assets/indigo/render/indigorenderer_ccdb476c0abec6500124086d93594adf7b28c9703.svg
-        :scale: 33
 
     Output:
 
@@ -101,10 +97,8 @@ Stereocenters options
     Input: :download:`data/bidirect.mol`
 
     .. image:: ../../assets/indigo/render/indigorenderer_ebec709332c1a380896746827e2e84b7104290b11.svg
-        :scale: 50
 
     .. image:: ../../assets/indigo/render/indigorenderer_ebec709332c1a380896746827e2e84b7104290b12.svg
-        :scale: 50
 
     Output:
 
@@ -146,10 +140,8 @@ Stereocenters options
     Input: :download:`data/projection_ordinary.mol`, :download:`data/projection_haworth.mol`
 
     .. image:: ../../assets/indigo/render/indigorenderer_714a92369463ccdd051549b975978e6d927d14c91.svg
-        :scale: 50
 
     .. image:: ../../assets/indigo/render/indigorenderer_714a92369463ccdd051549b975978e6d927d14c92.svg
-        :scale: 50
 
     Output:
 
