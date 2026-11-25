@@ -1,6 +1,19 @@
 ﻿Indigo ELN Changelog
 ====================
 
+Indigo ELN 3.0
+---------------
+
+*25 November 2026*
+
+- Complete rewrite — backend, frontend, and database layer were rebuilt from the ground up on current libraries.
+- Modern look and UX — fully redesigned interface with a modern look and a streamlined user experience.
+- Audit log — changes to projects, notebooks, and experiments are recorded and can be reviewed.
+- Undo/Redo — user can undo and redo experiment edits to easily fix mistakes.
+- Single Sign On — uses AWS Cognito (for AWS deployments) or Keycloak (for local deployments)
+
+Data storage was completely changed, if you need help with migrating data from previous version, please contact us at indigoeln@epam.com
+
 Indigo ELN 2.1
 ---------------
 

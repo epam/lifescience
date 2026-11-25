@@ -24,7 +24,7 @@ want to send a patch to us? Did you find a bug? Please write to one of
 the following Github repo and let us know:
 
 -  Indigo toolkit, Bingo : https://github.com/epam/Indigo/issues
--  Indigo ELN : https://github.com/epam/Indigo-ELN-v.-2.0/issues
+-  Indigo ELN : https://github.com/epam/IndigoELN/issues
 -  Ketcher : https://github.com/epam/ketcher/issues
 -  Cloud Pipeline : https://github.com/epam/cloud-pipeline/issues
 -  Parso : https://github.com/epam/parso/issues
