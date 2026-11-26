@@ -87,10 +87,7 @@ Manage Access Level
 
 Indigo ELN supports User Access Management that allows refined customization of access levels for users and groups inside the whole system and to individual Projects, Notebooks and Experiments. To ensure this flexibility, Indigo ELN supports a User-Role-Authority model on application level and ACL (Access Control List) for entities (Project, Notebook, or Experiment) that contains User Permissions for a user. This means that Administrator can define which actions are allowed for a user on the application level. Users can share entities with various permission levels, and the visibility of such shared entities depends on user roles. Each user is assigned a role or a set of roles each containing a set of Authorities. The final set of privileges for a user is formed from a distinct set of authorities coping from all user's roles.
 
-..  image:: ../../assets/eln/Indigo_Role_User.png
-    :align: center
-
-..  image:: ../../assets/eln/Indigo_Project_Members.png
+..  image:: ../../assets/eln/ELN_Experiment_Users.png
     :align: center
 
 
@@ -101,23 +98,19 @@ Hierarchy of entities consisting of projects, notebooks and experiments allows u
 information about ongoing projects and separate different topics inside one study.
 
 
-..  image:: ../../assets/eln/Indigo_Project_Notebook.png
+..  image:: ../../assets/eln/ELN_Notebook_Description.png
     :align: center
 
 Flexible Experiment structure
 -----------------------------------
 
-Indigo ELN provides users with the ability to create custom templates for experiments to be able to suit numerous chemical research designs. 
+Indigo ELN provides users with the ability to create custom templates for experiments to be able to suit numerous chemical research designs.
 Templates become available for many users to apply to their experiments. Experiment may include only experiment design or just a concept record, 
 or both - all depends on the users' choice. Experiment Template can be constructed using components. The current components library allows 
 supporting single step chemical reaction, future synthesis idea, including chemical structure information, or just a textual description. 
 The list of components is expandable without the need to change the core code or architecture.
 
-..  image:: ../../assets/eln/Indigo_Template.png
-    :align: center
-
-..  image:: ../../assets/eln/Indigo_Experiment.png
-    :align: center
+NB: template administration and editing functionality is coming in the next update to 3.0 line
 
 
 Search within system
@@ -128,16 +121,16 @@ Entities search by attributes and Structure/Reaction search.
 Indigo ELN's advanced algorithm for searching inside the system offers a wide range of queries: entity type and attribute, entity domain, experiment status. Integration with Bingo DB enables Experiment search by Product structure or Reaction scheme.
 
 
-..  image:: ../../assets/eln/Indigo_System_search.png
+..  image:: ../../assets/eln/ELN_Global_Search.png
     :align: center
 
 
 Reagent search in internal and external databases.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Stoichiometry Table Component has Reagents Lookup Catalog functionality that provides search for Reactants, Reagents or Solvents created inside Indigo ELN database or in External databases integrated with Indigo ELN. Reagent search can be done by compound attributes such as IDs, compound state or by Structure. "My Reagent list" functionality is avaiable to ensure fast access to frequently used reagents in future experiments.
+Stoichiometry Table Component has Reagents Lookup Catalog functionality that provides search for Reactants, Reagents or Solvents created inside Indigo ELN database or in External databases integrated with Indigo ELN. Reagent search can be done by compound attributes such as IDs, compound state or by Structure. "My Reagent list" functionality is available to ensure fast access to frequently used reagents in future experiments.
 
-..  image:: ../../assets/eln/Indigo_Catalog_search.png
+..  image:: ../../assets/eln/ELN_PubChem_Search.png
     :align: center
 
 
@@ -146,7 +139,7 @@ Create, describe and edit Batches. Compound Registration Service
 
 Indigo ELN allows users to review, create, and edit Batches and Batch details:  Total Amount Made, Yield%, Stereoisomer code, Purity, Solubility, Hazards, etc. Batches can be added in several ways including Import from SDf option. Batches have unique IDs within the system and can be registered using Compound Registration Service, in which they are assigned Compound IDs.  EPAM can provide Compound Registration Service  along with Indigo ELN package or integrate the application with a customer service and its database. 
 
-..  image:: ../../assets/eln/Indigo_Batches.png
+..  image:: ../../assets/eln/ELN_Batches.png
     :align: center
 
 
@@ -159,12 +152,12 @@ Users can print out the content of Project, Notebook and Experiment pages. Users
     :align: center
 
 
-Create Dictionaries and customize your version of  Indigo ELN
+Customize Dictionaries for your Version of  Indigo ELN
 ----------------------------------------------------------------
 
-Dictionaries collect items that appear in the drop-down lists of the application. Users can create and edit dictionaries in the Dictionaries tab. Dictionaries management is restricted by the corresponding authority in the user Role.
+Dictionaries collect items that appear in the drop-down lists of the application. Users can edit dictionaries in the Dictionaries section. Dictionaries management is restricted by the corresponding authority in the user Role.
 
-..  image:: ../../assets/eln/Indigo_Dictionaries.png
+..  image:: ../../assets/eln/ELN_Edit_Dictionary.png
     :align: center
 
 
