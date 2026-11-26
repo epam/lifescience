@@ -2,7 +2,7 @@
 =====================
 
 Indigo ELN 3.0: Rebuilt for the Way Chemists Work Today
-========================================================
+--------------------------------------------------------
 
 *25 November 2026*
 
@@ -112,7 +112,7 @@ it.* 🧬
 
 
 Indigo ELN 2.1
-===============
+---------------
 
 *18 February 2025*
 
@@ -122,7 +122,7 @@ The major changes are the following:
 - Hot-fixes: server-side Ketcher functions fix, refactored back-end queries routing
 
 Indigo ELN 2.0
-===============
+---------------
 
 *23 July 2018*
 
@@ -136,7 +136,7 @@ The major changes are the following:
 
 
 Indigo ELN 1.2
-===============
+---------------
 
 *08 May 2015*
 
@@ -150,7 +150,7 @@ The major changes are the following
  - (Compound Registration Service) Spring Remoting instead of WebServices
 
 Indigo ELN 1.1.3
-=================
+-----------------
 
 *15 December 2014*
 
@@ -163,7 +163,7 @@ The major changes are the following
 -  All EJB 2 components substituted with EJB 3 ones
 
 Indigo ELN 1.1.1
-=================
+-----------------
 
 *30 April 2013*
 
@@ -175,7 +175,7 @@ The major changes are the following
 -  Bug fixes
 
 Indigo ELN 1.1
-===============
+---------------
 
 *5 February 2013*
 
