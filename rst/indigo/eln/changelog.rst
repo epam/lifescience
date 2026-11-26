@@ -1,12 +1,14 @@
-﻿Indigo ELN Changelog
+﻿:tocdepth: 2
+
+Indigo ELN Changelog
 =====================
 
-Indigo ELN 3.0: Rebuilt for the Way Chemists Work Today
+Indigo ELN 3.0
 --------------------------------------------------------
 
 *25 November 2026*
 
-Indigo ELN 3.0 is here, and it's a whole new lab notebook
+Rebuilt for the Way Chemists Work Today
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We didn't just add features to the old system. We rebuilt Indigo ELN from
