@@ -94,12 +94,12 @@ Cheminformatics
 
    -  Indigo ELN allows scientists to prepare, plan,manage and access relevant 
       information regarding research work. Application  helps to analyze and share 
-      research information. Flexiable experiment template allows to support various 
+      research information. Flexible experiment template allows to support various
       experiment type. New components can be included in the application without 
       the need to change the core code.
 
-   -  Indigo ELN v 2.0 is the next version of EPAM open-source Indigo ELN based 
-      on a completely different technology stack than v.1.0 and providing a new 
+   -  Indigo ELN v 3.0 is the next version of EPAM open-source Indigo ELN based
+      on a completely different technology stack than v.2.0 and providing a new
       interface, new features, at the same time retaining all the functionality 
       previously implemented.
 

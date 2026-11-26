@@ -7,6 +7,19 @@ News
     newsfeed
     release-notes/index
 
+Indigo ELN 3.0 released
+-----------------------
+
+*25 November 2026*
+
+We are glad to announce that Indigo ELN 3.0 released.
+
+* |indigo_eln_3_0_notes|
+
+.. |indigo_eln_3_0_notes| raw:: html
+
+   <a href="indigo/eln/changelog.html" target="_blank">Release Notes</a>
+
 Ketcher 3.21.0 released
 -----------------------
 

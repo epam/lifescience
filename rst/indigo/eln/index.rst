@@ -1,4 +1,4 @@
-Indigo ELN v2.0: The Open-Source Electronic Lab Notebook
+Indigo ELN: The Open-Source Electronic Lab Notebook
 ========================================================
 
 .. toctree::
@@ -14,8 +14,7 @@ Overview
 --------
 
 Indigo ELN provides scientists with a proven way to create, store, retrieve, and share electronic records of chemistry information in ways that meet all legal, regulatory, technical, and scientific requirements.
-The new Indigo ELN provides rich capabilities for customization and integration with customer services. An important new feature is the flexibility to adjust Indigo ELN to custom needs in terms of user access policy, integration with existing databases, and registration with electronic signature services. The new mechanism of templates allows creating various types of experiments using the current component library. New components can be included in the application without the need to change the core code.
-Indigo ELN v 2.0 is the next version of EPAM open-source Indigo ELN based on a completely different technology stack than v.1.0 and providing a new interface, new features, at the same time retaining all the functionality previously implemented.
+The new Indigo ELN provides rich capabilities for customization and integration with customer services. An important new feature is the flexibility to adjust Indigo ELN to custom needs in terms of user access policy, integration with existing databases, and registration with electronic signature services. Indigo ELN v 3.0 is the next version of EPAM open-source Indigo ELN based on a completely different technology stack than v.2.x and providing a new interface, new features, at the same time retaining all the functionality previously implemented.
 
 Indigo ELN is a viable free-of-charge alternative to commercial electronic notebooks providing the same set of functionality.
 
@@ -25,28 +24,28 @@ Why Select Indigo ELN as Your ELN?
 Cost benefits
 ~~~~~~~~~~~~~~~
 
-- The core Indigo ELN product is free of charge, as it is distributed under open-source GNU General Public License, Version 3.
+- The core Indigo ELN product is free of charge, as it is distributed under open-source MIT License.
 - Total integration costs are much less than the licensing costs of commercial products.
 - Indigo ELN represents a leading cost-effective alternative to commercial ELN products.
 
 Modern technologies
 ~~~~~~~~~~~~~~~~~~~
 
-- Indigo ELN v2.0 is a Web-based solution with a multi-tier architecture. 
+- Indigo ELN is a Web-based solution with a multi-tier architecture.
 
 Integration with external systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- The core Indigo ELN v2.0 product is shipped with basic services included. Integration with any  external service  requires just develop new component without   need to change core code and architecture.
+- The core Indigo ELN product is shipped with basic services included. Integration with any  external service  requires just develop new component without   need to change core code and architecture.
 - EPAM is available to implement any requested components, services and to integrate the solution into your infrastructure.
-- Docker image is avaiable
+- Docker images are available
 
-Core Indigo ELN v2.0 Package
+Core Indigo ELN v3.0 Package
 ----------------------------
 
 The core Indigo ELN package includes:
 
-- Database tier - MongoDB (In addition, Indigo ELN supports EPAM's open-source molecular search service BingoDB).
+- Database tier - Postgres (In addition, Indigo ELN supports EPAM's open-source molecular search service BingoDB).
 - Core user interface for creation of Projects, Notebooks, Experiment templates and Experiments.
 - Integrated Ketcher (EPAM's open-source editor) for structure editing
 
@@ -57,7 +56,7 @@ Major services:
 - Reaction rendering and chemical properties calculation based on EPAM's open-source cheminformatics engine Indigo.
 - Integration with External Compound registration and structure search services
 - APIs to integrate with existing customer services and databases 
-- API to integrate with existing customer signature service ( if needed we can provide EPAM open-source signature service with web-based  UI)
+- API to integrate with existing customer signature service. If you don't use a third-party signature service, Indigo ELN includes a basic signature service integrated with Indigo ELN
 
 
 EPAM Open-Source Products to Complement Indigo ELN
@@ -73,12 +72,12 @@ EPAM is available to integrate EPAM's open-source products and other open-source
 Key Features
 -----------------------------------
 
-Indigo ELN v2.0 provides the following immediate functionality:
+Indigo ELN provides the following immediate functionality:
 
 - Web-based ELN functionality without using any proprietary services or commercial third-party products
 - Extended user management system (users and roles, entities sharing)
 - Hierarchy of logical and database entities (projects, notebooks, experiments, components)
-- Mechanism of templates to create different types of experiments without the need to change the code
+- Mechanism of templates to create different types of experiments without the need to change the code (NB: UI for editing templates is coming in next update to a 3.0 line)
 - Ability to prepare, plan, analyze experiments, access relevant information, export the information (print to PDF, export/import SDf)
 - System search by different criteria including Product structure and reaction schema
 - Integration with internal services and databases as well as with CRO/vendor/partner services
@@ -86,12 +85,9 @@ Indigo ELN v2.0 provides the following immediate functionality:
 Manage Access Level
 -------------------
 
-Indigo ELN v2.0 supports User Access Management that allows refined customization of access levels for users and groups inside the whole system and to individual Projects, Notebooks and Experiments. To ensure this flexibility, Indigo ELN supports a User-Role-Authority model on application level and ACL (Access Control List) for entities (Project, Notebook, or Experiment) that contains User Permissions for a user. This means that Administrator can define which actions are allowed for a user on the application level. Users can share entities with various permission levels, and the visibility of such shared entities depends on user roles. Each user is assigned a role or a set of roles each containing a set of Authorities. The final set of privileges for a user is formed from a distinct set of authorities coping from all user's roles.
+Indigo ELN supports User Access Management that allows refined customization of access levels for users and groups inside the whole system and to individual Projects, Notebooks and Experiments. To ensure this flexibility, Indigo ELN supports a User-Role-Authority model on application level and ACL (Access Control List) for entities (Project, Notebook, or Experiment) that contains User Permissions for a user. This means that Administrator can define which actions are allowed for a user on the application level. Users can share entities with various permission levels, and the visibility of such shared entities depends on user roles. Each user is assigned a role or a set of roles each containing a set of Authorities. The final set of privileges for a user is formed from a distinct set of authorities coping from all user's roles.
 
-..  image:: ../../assets/eln/Indigo_Role_User.png
-    :align: center
-
-..  image:: ../../assets/eln/Indigo_Project_Members.png
+..  image:: ../../assets/eln/ELN_Experiment_Users.png
     :align: center
 
 
@@ -102,23 +98,19 @@ Hierarchy of entities consisting of projects, notebooks and experiments allows u
 information about ongoing projects and separate different topics inside one study.
 
 
-..  image:: ../../assets/eln/Indigo_Project_Notebook.png
+..  image:: ../../assets/eln/ELN_Notebook_Description.png
     :align: center
 
 Flexible Experiment structure
 -----------------------------------
 
-Indigo ELN provides users with the ability to create custom templates for experiments to be able to suit numerous chemical research designs. 
+Indigo ELN provides users with the ability to create custom templates for experiments to be able to suit numerous chemical research designs.
 Templates become available for many users to apply to their experiments. Experiment may include only experiment design or just a concept record, 
 or both - all depends on the users' choice. Experiment Template can be constructed using components. The current components library allows 
 supporting single step chemical reaction, future synthesis idea, including chemical structure information, or just a textual description. 
 The list of components is expandable without the need to change the core code or architecture.
 
-..  image:: ../../assets/eln/Indigo_Template.png
-    :align: center
-
-..  image:: ../../assets/eln/Indigo_Experiment.png
-    :align: center
+NB: template administration and editing functionality is coming in the next update to 3.0 line
 
 
 Search within system
@@ -129,16 +121,16 @@ Entities search by attributes and Structure/Reaction search.
 Indigo ELN's advanced algorithm for searching inside the system offers a wide range of queries: entity type and attribute, entity domain, experiment status. Integration with Bingo DB enables Experiment search by Product structure or Reaction scheme.
 
 
-..  image:: ../../assets/eln/Indigo_System_search.png
+..  image:: ../../assets/eln/ELN_Global_Search.png
     :align: center
 
 
 Reagent search in internal and external databases.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Stoichiometry Table Component has Reagents Lookup Catalog functionality that provides search for Reactants, Reagents or Solvents created inside Indigo ELN database or in External databases integrated with Indigo ELN. Reagent search can be done by compound attributes such as IDs, compound state or by Structure. "My Reagent list" functionality is avaiable to ensure fast access to frequently used reagents in future experiments.
+Stoichiometry Table Component has Reagents Lookup Catalog functionality that provides search for Reactants, Reagents or Solvents created inside Indigo ELN database or in External databases integrated with Indigo ELN. Reagent search can be done by compound attributes such as IDs, compound state or by Structure. "My Reagent list" functionality is available to ensure fast access to frequently used reagents in future experiments.
 
-..  image:: ../../assets/eln/Indigo_Catalog_search.png
+..  image:: ../../assets/eln/ELN_PubChem_Search.png
     :align: center
 
 
@@ -147,7 +139,7 @@ Create, describe and edit Batches. Compound Registration Service
 
 Indigo ELN allows users to review, create, and edit Batches and Batch details:  Total Amount Made, Yield%, Stereoisomer code, Purity, Solubility, Hazards, etc. Batches can be added in several ways including Import from SDf option. Batches have unique IDs within the system and can be registered using Compound Registration Service, in which they are assigned Compound IDs.  EPAM can provide Compound Registration Service  along with Indigo ELN package or integrate the application with a customer service and its database. 
 
-..  image:: ../../assets/eln/Indigo_Batches.png
+..  image:: ../../assets/eln/ELN_Batches.png
     :align: center
 
 
@@ -160,12 +152,12 @@ Users can print out the content of Project, Notebook and Experiment pages. Users
     :align: center
 
 
-Create Dictionaries and customize your version of  Indigo ELN
+Customize Dictionaries for your Version of  Indigo ELN
 ----------------------------------------------------------------
 
-Dictionaries collect items that appear in the drop-down lists of the application. Users can create and edit dictionaries in the Dictionaries tab. Dictionaries management is restricted by the corresponding authority in the user Role.
+Dictionaries collect items that appear in the drop-down lists of the application. Users can edit dictionaries in the Dictionaries section. Dictionaries management is restricted by the corresponding authority in the user Role.
 
-..  image:: ../../assets/eln/Indigo_Dictionaries.png
+..  image:: ../../assets/eln/ELN_Edit_Dictionary.png
     :align: center
 
 
@@ -180,18 +172,16 @@ Major factors affecting the service pricing include:
 Download and Installation
 --------------------------
 
-Please visit the  `GitHub page <https://github.com/epam/Indigo-ELN-v.-2.0>`__ for the installation package and documents.
+Please visit the  `GitHub page <https://github.com/epam/IndigoELN>`__ for the installation package and documents.
 For installation instructions, see the Installation Guide. For user manual, see User Guide.
 
 Feedback
 --------
 
 Do you need assistance using our tools? Do you need a integration set up or new component development? Do you want to send a patch to us? Did you find a bug? 
-Report `issues <https://github.com/epam/Indigo-ELN-v.-2.0/issues>`__  or contact us: indigoeln@epam.com
+Report `issues <https://github.com/epam/IndigoELN/issues>`__  or contact us: indigoeln@epam.com
 
 License
 -------
 
-Indigo ELN v2.0 is free software: You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 3 of the License.
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-You should receive a copy of the GNU General Public License along with this program. If you did not, please see http://www.gnu.org/licenses/
+Indigo ELN is free software available under MIT License. See https://raw.githubusercontent.com/epam/IndigoELN/main/LICENSE for details.
